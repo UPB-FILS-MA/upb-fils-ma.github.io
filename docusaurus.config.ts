@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Microprocessor Architecture',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Use software to control hardware',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -57,7 +57,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/docusaurus-social-card.png',
     navbar: {
       title: 'Microprocessor Architecture',
       logo: {
@@ -88,6 +88,10 @@ const config: Config = {
             {
               label: 'Lab',
               to: '/docs/category/lab',
+            },
+            {
+              label: 'Project',
+              to: '/docs/category/project',
             },
           ],
         },

@@ -10,32 +10,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Raspberry Pi Pico W',
+    Svg: require('@site/static/img/pi-pico-w.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Use the RP2040 processor, one of the most affordable and easy to use
+        MCUs, on the Raspberry Pi Pico W.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Hardware Device',
+    Svg: require('@site/static/img/device.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Design an implement hardware devices using the Raspberry Pi Pico W.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Embedded Rust 101',
+    Svg: require('@site/static/img/rust_logo.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Use Rust, a new modern and safe programming language, that is set to
+        replace C/C++. Did you know that Rust is the most ❤️ language on GitHub?
+        
       </>
     ),
   },
