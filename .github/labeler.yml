@@ -13,6 +13,6 @@ workflow:
 website:
   - src/**/*
   - static/**/*
-  - ./*.js
-  - ./*.json
-  - ./*.ts
+  - '*.js'
+  - '*.json'
+  - '*.ts'

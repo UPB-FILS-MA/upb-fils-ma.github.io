@@ -15,7 +15,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'UPB-FILS-ALF', // Usually your GitHub org/user name.
+  organizationName: 'UPB-FILS-MA', // Usually your GitHub org/user name.
   projectName: 'upb-fils-ma.github.io', // Usually your repo name.
   trailingSlash: false,
 
@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/UPB-FILS-alf/upb-fils-ma.github.io/edit/main',
+            'https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/edit/main',
         },
         // blog: {
         //   showReadingTime: true,
@@ -69,7 +69,7 @@ const config: Config = {
         {to: '/docs/category/lab', label: 'Lab', position: 'left'},
         {to: '/docs/project', label: 'Project', position: 'left'},
         {
-          href: 'https://github.com/UPB-FILS-alf/upb-fils-ma.github.io',
+          href: 'https://github.com/UPB-FILS-MA/upb-fils-ma.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -113,7 +113,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/upb-fils-alf',
+              href: 'https://github.com/upb-fils-ma',
             },
           ],
         },
