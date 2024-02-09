@@ -1,0 +1,18 @@
+cours:
+  - docs/cours/**/*
+
+tp:
+  - docs/tp/**/*
+
+devoir:
+  - docs/devoir/**/*
+
+workflow:
+  - .github/**/*
+
+website:
+  - src/**/*
+  - static/**/*
+  - ./*.js
+  - ./*.json
+  - ./*.ts

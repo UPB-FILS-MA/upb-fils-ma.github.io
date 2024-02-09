@@ -1,0 +1,9 @@
+{
+    "label": "Lecture",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "The lecture materials"
+    }
+  }
+  
