@@ -122,7 +122,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} UNST Politehnica Bucharest.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Wyliodrin SRL`,
     },
     prism: {
       theme: prismThemes.github,
