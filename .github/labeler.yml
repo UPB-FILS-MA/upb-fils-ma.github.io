@@ -1,11 +1,11 @@
-cours:
-  - docs/cours/**/*
+lecture:
+  - docs/lecture/**/*
 
-tp:
-  - docs/tp/**/*
+lab:
+  - docs/lab/**/*
 
-devoir:
-  - docs/devoir/**/*
+homework:
+  - docs/homework/**/*
 
 workflow:
   - .github/**/*
