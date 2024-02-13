@@ -62,6 +62,6 @@ TBD
 
 **A:** No, the main focus of the project is to learn to work with microprocessors using Rust.
 
-**Q:** Can I use another programming language, not Rust?
+**Q:** What if the PCB comes after the hardware milestone?
 
-**A:** No, the main focus of the project is to learn to work with microprocessors using Rust.
+**A:** You will only present the diagram for the hardware part and if there is a prototype using breadboard, but at the end of the project you must necessarily have the PCB printed and functional.
