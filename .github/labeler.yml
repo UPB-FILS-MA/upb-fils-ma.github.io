@@ -4,8 +4,9 @@ lecture:
 lab:
   - docs/lab/**/*
 
-homework:
-  - docs/homework/**/*
+project:
+  - docs/project/**/*
+  - docs/project.md
 
 workflow:
   - .github/**/*
