@@ -24,7 +24,7 @@ The purpose of the project is to build a hardware device that runs software writ
 ## Hardware Rules
 
 1. It is not allowed to use processors (eg Broadcom BCM2711, Broadcom BCM2712), you can only use microprocessors. Examples of microprocessors: RP2040, nRF52, STM32 or ESP32 (RISC-V)
-2. The hardware part may be designed either using a breadboard and jumper wires, a solder breadboard or a printed PCBs.
+2. The hardware part may be designed either using a breadboard and jumper wires, a protoboard(solder breadboard) or a PCBs.
 
 ## Software Rules
 It has to run software written in Rust. Students can you:
