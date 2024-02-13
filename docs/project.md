@@ -37,7 +37,7 @@ It has to run software written in Rust. Students can you:
 
 ## Project Rules
 
-1. It is not allowed to copy both the code and the electronic schemes from the internet.
+1. It is not allowed to copy the code or the electronic schemes from the internet.
 2. Help from external sources is not allowed, the student can be asked by the coordinator about implementation details during the development period.
 3. Students are strongly encouraged to ask the lab assistant questions about the project.
 4. Presentation of milestones is mandatory.
