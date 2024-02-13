@@ -23,7 +23,7 @@ The purpose of the project is to build a hardware device that runs software writ
 
 ## Hardware Rules
 
-1. It is not allowed to use processors (eg Broadcom BCM2711, Broadcom BCM2712), you can only use microprocessors. Examples of microprocessors: RP2040, nRF52, STM32 or ESP32 (RISC-V)
+1. It is not allowed to use processors/microprocessors (eg Broadcom BCM2711, Broadcom BCM2712), you can only use microcontrollers. Examples of microcontrollers: RP2040, nRF52, STM32 or ESP32 (RISC-V)
 2. The hardware part may be designed either using a breadboard and jumper wires, a protoboard(solder breadboard) or a PCBs.
 
 ## Software Rules
