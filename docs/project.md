@@ -60,7 +60,7 @@ TBD
 ## F.A.Q
 **Q:** Can I use another programming language, not Rust?
 
-**A:** No, the main focus of the project is to learn to work with microprocessors using Rust.
+**A:** No, the main focus of the project is to learn to work with microcontrollers using Rust.
 
 **Q:** What if the PCB comes after the hardware milestone?
 
