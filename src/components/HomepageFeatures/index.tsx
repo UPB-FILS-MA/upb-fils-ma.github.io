@@ -15,16 +15,18 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Use the RP2040 processor, one of the most affordable and easy to use
-        MCUs, on the Raspberry Pi Pico W.
+        MCUs, on the Raspberry Pi Pico W to design and implement hardware devices.
       </>
     ),
   },
   {
-    title: 'Hardware Device',
-    Svg: require('@site/static/img/device.svg').default,
+    title: 'Hardware Design',
+    Svg: require('@site/static/img/kicad.svg').default,
     description: (
       <>
-        Design an implement hardware devices using the Raspberry Pi Pico W.
+        Learn how to use KiCad EDA to design the schematics, the 
+        bill of materials (BOM) and the PCB for
+        of hardware device.
       </>
     ),
   },
