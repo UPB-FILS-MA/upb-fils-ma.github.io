@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Learn how to use KiCad EDA to design the schematics, the 
-        bill of materials (BOM) and the PCB for
+        bill of materials (*BOM*) and the printed circuit board (*PCB*) for
         of hardware device.
       </>
     ),
