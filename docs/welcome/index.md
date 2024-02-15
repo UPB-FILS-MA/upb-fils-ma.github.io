@@ -86,7 +86,6 @@ teodor.dicu@wyliodrin.com
 | Group | Day | Hour | Room |
 |-------|------|-------|-------|
 | Lecture | Friday | 10 - 12 | AN024 |
-| IoT | Thursday | 10 - 12 | ED 217 |
 | 1221A 1/2 | Thursday | 8 - 10 | ED 218 |
 | 1221A 2/2 | Thursday | 8 - 10 | ED 217 |
 | 1221B 1/2 | Thursday | 10 - 12 | ED 218 |
