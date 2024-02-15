@@ -83,15 +83,15 @@ teodor.dicu@wyliodrin.com
 
 ## Timetable
 
-| Group | Day | Hour | Room |
-|-------|------|-------|-------|
+| Activity | Group | Day | Hour | Room |
+|----------|-------|------|-------|-------|
 | Lecture | Friday | 10 - 12 | AN024 |
-| 1221A 1/2 | Thursday | 8 - 10 | ED 218 |
-| 1221A 2/2 | Thursday | 8 - 10 | ED 217 |
-| 1221B 1/2 | Thursday | 10 - 12 | ED 218 |
-| 1221B 2/2 | Thursday | 14 - 16 | ED 217 |
-| 1222A | Thursday | 14 - 16 | ED 218 |
-| 1222B | Thursday | 12 - 14 | ED 218 |
+| Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 |
+| Lab | 1221A - second half | Thursday | 8 - 10 | ED 217 |
+| Lab | 1221B - first half | Thursday | 10 - 12 | ED 218 |
+| Lab | 1221B - second half | Thursday | 14 - 16 | ED 217 |
+| Lab | 1222A | Thursday | 14 - 16 | ED 218 |
+| Lab | 1222B | Thursday | 12 - 14 | ED 218 |
 
 ## Grading
 
