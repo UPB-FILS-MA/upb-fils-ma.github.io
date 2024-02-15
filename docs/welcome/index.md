@@ -10,7 +10,7 @@ Welcome to the *Microprocessor Architecture* class.
 During the class you will learn how to design and implement a hardware device. 
 
 You takeaways from the course are:
-  - learning how a microporcessor (*MCU*) works, using as an example the RP2040 MCU from the [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/);
+  - learning how a microprocessor (*MCU*) works, using as an example the RP2040 MCU from the [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/);
   - learning how to design your hardware schematics using [KiCad](https://www.kicad.org/) and how to create the bill of materials (*BOM*) for it;
   - building the hardware device either using a breadboard, a prototyping board or a printed circuit board (*PCB*);
   - learning how to develop the software that controls hardware in [Rust](https://www.rust-lang.org/);
