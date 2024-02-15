@@ -19,47 +19,67 @@ You takeaways from the course are:
 
 ## Team
 
-### Alexandru Radovici
+<table>
+<tr valign="top">
+<td>
+**Alexandru Radovici**
 ![Alexandru Radovici](images/alexandru_radovici.jpg)
 
 Course Professor \
 GitHub: [alexandruradovici](https://github.com/alexandruradovici) \
-Email: alexandru.radovici@upb.ro
+alexandru.radovici@upb.ro
+</td>
 
-### Irina Niță
+<td>
+**Irina Niță**
 ![Irina Nita](images/irina_nita.jpg)
  
 Lab Professor \
 GitHub: [irina-nita](https://github.com/irina-nita) \
-Email: irina.nita@oxidos.io
+irina.nita@oxidos.io
+</td>
 
-### Irina Bradu
+<td>
+**Irina Bradu**
 ![Irina Bradu](images/irina_bradu.jpg)
  
 Lab Professor \
 GitHub: [Irina Bradu](https://github.com/irina-b-dev) \
-Email: irina.bradu@wyliodrin.com
+irina.bradu@wyliodrin.com
+</td>
+</tr>
 
-### Dănuț Aldea
+<tr valign="top">
+<td>
+**Dănuț Aldea**
 ![Danut Aldea](images/danut_aldea.jpg)
  
 Lab Professor \
 GitHub: [danutaldea](https://github.com/danutaldea) \
-Email: danut.aldeaa@oxidos.io
+danut.aldeaa@oxidos.io
+</td>
 
-### Andrei Zamfir
+<td>
+**Andrei Zamfir**
 ![Andrei Zamfir](images/andrei_zamfir.jpg)
  
 Lab Professor \
+Responsable for hardware \
 GitHub: [ZamfirAndreiPaul](https://github.com/ZamfirAndreiPaul) \
-Email: andrei.zamfir@wyliodrin.com
+andrei.zamfir@wyliodrin.com
+</td>
 
-### Teodor Dicu
+<td>
+**Teodor Dicu**
 ![Teodor Dicu](images/teodor_dicu.jpg)
  
-Lab Professor \
+Lab Professor\
+Responsable for hardware\
 GitHub: [DTeodor-Alexaandru](https://github.com/DTeodor-Alexaandru) \
-Email: teodor.dicu@wyliodrin.com
+teodor.dicu@wyliodrin.com
+</td>
+</tr>
+</table>
 
 ## Timetable
 
