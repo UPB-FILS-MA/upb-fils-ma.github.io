@@ -85,7 +85,7 @@ teodor.dicu@wyliodrin.com
 
 | Activity | Group | Day | Hour | Room |
 |----------|-------|------|-------|-------|
-| Lecture | Friday | 10 - 12 | AN024 |
+| Lecture | *all students* | Friday | 10 - 12 | AN024 |
 | Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 |
 | Lab | 1221A - second half | Thursday | 8 - 10 | ED 217 |
 | Lab | 1221B - first half | Thursday | 10 - 12 | ED 218 |
