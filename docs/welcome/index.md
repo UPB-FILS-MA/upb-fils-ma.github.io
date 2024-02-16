@@ -56,7 +56,7 @@ irina.bradu@wyliodrin.com
  
 Lab Professor \
 GitHub: [danutaldea](https://github.com/danutaldea) \
-danut.aldeaa@oxidos.io
+george_danut.aldea@stud.acs.upb.ro
 </td>
 
 <td>
