@@ -122,7 +122,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Wyliodrin SRL`,
+      copyright: `Copyright © ${new Date().getFullYear()} Wyliodrin SRL, licensed under CC BY-SA 4.0.`,
     },
     prism: {
       theme: prismThemes.github,
