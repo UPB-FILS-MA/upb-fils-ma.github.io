@@ -27,7 +27,7 @@ The purpose of the project is to build a hardware device that runs software writ
 2. The hardware part may be designed either using a breadboard and jumper wires, a protoboard(solder breadboard) or a PCBs.
 
 ## Software Rules
-It has to run software written in Rust. Students can you:
+It has to run software written in Rust. Students can use:
 - [embassy-rs](https://embassy.dev/)
 - [RTIC](https://rtic.rs/2/book/en/)
 - [bare metal](https://crates.io/crates/cortex-r) - the cortex-r-rt crate
