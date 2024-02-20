@@ -46,7 +46,7 @@ It has to run software written in Rust. Students can use:
 ## Project Rules
 
 1. Copying schematics or source code from the Internet is not allowed.
-2. Help from external sources is not allowed, the student can be asked by the coordinator about implementation details during the development period.
+2. Each project is considered individual work, students can ask the lab assistant (lab) about implementation details during the development period.
 3. Students are strongly encouraged to ask the lab assistant questions about the project.
 4. Presentation of milestones is mandatory.
 
