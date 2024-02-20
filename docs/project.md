@@ -23,7 +23,15 @@ The purpose of the project is to build a hardware device that runs software writ
 
 ## Hardware Rules
 
-1. It is not allowed to use processors/microprocessors (eg Broadcom BCM2711, Broadcom BCM2712), you can only use microcontrollers. Examples of microcontrollers: RP2040, nRF52, STM32 or ESP32 (RISC-V)
+1. Projects have to use a microcontroller (MCU) that is capable of running Rust code. Examples of MCUs are *nRF52*, *RP2024*, *ESP32* (RISC-V version). 
+2. Usage of a development board is encouraged, but not required, a custom PCB can be built. Example of development boards are:
+  - [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) (RP2024) or [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) for WiFi
+  - [Adafruit Trinkey QT2040](https://www.adafruit.com/product/5056) (RP2040)
+  - [Arduino Nano RP2040 Connect](https://store.arduino.cc/products/arduino-nano-rp2040-connect) (RP2040) - ⚠️ [^arduino_nano_rp2040_connect]
+  - [micro:bit v2](https://microbit.org/) (nRF52833)
+  - [nRF52 DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk) (nRF52810)
+  - [STM32 NUCLEO-F401RE](https://ro.mouser.com/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMuqBwn8WqcFUv%2FX0DKhApUpi46qP7WpjrffIid8Wo1rTg%3D%3D)
+  - [ESP32-C3-DevKit-RUST-1](https://www.espressif.com/en/dev-board/esp32-c3-devkit-rust-1-en) (ESP32-C3) - ⚠️ [^esp32_riscv]
 2. The hardware part may be designed either using a breadboard and jumper wires, a protoboard(solder breadboard) or a PCBs.
 
 ## Software Rules
