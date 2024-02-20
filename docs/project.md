@@ -32,7 +32,7 @@ The purpose of the project is to build a hardware device that runs software writ
   - [nRF52 DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk) (nRF52810)
   - [STM32 NUCLEO-F401RE](https://ro.mouser.com/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMuqBwn8WqcFUv%2FX0DKhApUpi46qP7WpjrffIid8Wo1rTg%3D%3D)
   - [ESP32-C3-DevKit-RUST-1](https://www.espressif.com/en/dev-board/esp32-c3-devkit-rust-1-en) (ESP32-C3) - ⚠️ [^esp32_riscv]
-2. The hardware part may be designed either using a breadboard and jumper wires, a protoboard(solder breadboard) or a PCBs.
+3. The hardware part may be designed either using a breadboard and jumper wires, a prototype board (solder breadboard) or a PCB.
 
 ## Software Rules
 It has to run software written in Rust. Students can use:
