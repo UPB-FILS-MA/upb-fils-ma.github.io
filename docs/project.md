@@ -38,7 +38,7 @@ The purpose of the project is to build a hardware device that runs software writ
 It has to run software written in Rust. Students can use:
 - [embassy-rs](https://embassy.dev/)
 - [RTIC](https://rtic.rs/2/book/en/)
-- [bare metal](https://crates.io/crates/cortex-r) - the cortex-r-rt crate
+- [bare metal](https://docs.rs/cortex-m-rt/latest/cortex_m_rt) - the cortex-r-rt crate
 - [Tock](https://www.tockos.org)
 - any other software framework that is written in Rust
 
