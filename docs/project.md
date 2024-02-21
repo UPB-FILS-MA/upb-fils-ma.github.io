@@ -48,7 +48,7 @@ It has to run software written in Rust. Students can use:
 1. Copying schematics or source code from the Internet is not allowed.
 2. Each project is considered individual work, students can ask the lab assistant (lab) about implementation details during the development period.
 3. Students are strongly encouraged to ask the lab assistant questions about the project.
-4. The presentation of milestones is mandatory.
+4. The presentation of all the milestones is mandatory.
 
 ## Requirements
 1. Block diagram - how the components communicate with each other
