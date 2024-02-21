@@ -76,8 +76,7 @@ It has to run software written in Rust. Students can use:
 **A:** Yes, we suggest taking a look at [RTIC](https://rtic.rs/2/book/en/) or [Tock](https://github.com/tock/tock).
 
 
-**Q:** What if the PCB comes after the hardware milestone?
-
+**Q:** What if the PCB arrives after the hardware milestone?\
 **A:** You will only present the diagram for the hardware part and if there is a prototype using breadboard, but at the end of the project you must necessarily have the PCB printed and functional.
 
 [^arduino_nano_rp2040_connect]: There is no Rust WiFi support for this board
