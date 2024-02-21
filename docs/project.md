@@ -62,7 +62,7 @@ It has to run software written in Rust. Students can use:
 1. https://ocw.cs.pub.ro/courses/pm/prj2022
 2. https://ocw.cs.pub.ro/courses/pm/prj2023
 
-**Outstanding Projects:**
+### Outstanding Projects
 1. [POV - DAVIC picTronics](https://ocw.cs.pub.ro/courses/pm/prj2023/gpatru/376)
 2. [Ryobo - Computer Vision & Object Following](https://ocw.cs.pub.ro/courses/pm/prj2023/gpatru/483)
 3. [Plug & Play ChatGPT](https://ocw.cs.pub.ro/courses/pm/prj2023/ncaroi/plug)
