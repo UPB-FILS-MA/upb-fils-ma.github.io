@@ -54,7 +54,7 @@ It has to run software written in Rust. Students can use:
 1. Block diagram - how the components communicate with each other
 2. Electrical schematic - Kicad
 3. Complexity: use knowledge of at least 3 laboratories excluding Tour of Rust and Hardware Introduction Depending on the situation, there might be complex projects that don't use 3 laboratories and simple project that use 4-5 laboratories. The assistant role is to make sure the project is suited and to give ideas to make it more complex if needed, but the rule of 3 laboratories should guide them to a suited project.
-4. Hardware totally functional.
+4. Hardware fully functional.
 
 ## Example Projects
 
