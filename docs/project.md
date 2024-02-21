@@ -58,7 +58,7 @@ It has to run software written in Rust. Students can use:
 
 ## Example Projects
 
-**Examples of projects from past years:**
+### Examples of projects from past years
 1. https://ocw.cs.pub.ro/courses/pm/prj2022
 2. https://ocw.cs.pub.ro/courses/pm/prj2023
 
