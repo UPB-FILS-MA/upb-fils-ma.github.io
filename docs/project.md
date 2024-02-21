@@ -73,6 +73,10 @@ It has to run software written in Rust. Students can use:
 
 **A:** No, the main focus of the project is to learn to work with microcontrollers using Rust.
 
+**Q:** Can I use a different framework than [embassy-rs](https://github.com/embassy-rs/embassy)?\
+**A:** Yes, we suggest taking a look at [RTIC](https://rtic.rs/2/book/en/) or [Tock](https://github.com/tock/tock).
+
+
 **Q:** What if the PCB comes after the hardware milestone?
 
 **A:** You will only present the diagram for the hardware part and if there is a prototype using breadboard, but at the end of the project you must necessarily have the PCB printed and functional.
