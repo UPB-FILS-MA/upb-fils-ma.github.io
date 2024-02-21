@@ -14,7 +14,7 @@ The purpose of the project is to build a hardware device that runs software writ
 - documentation - we will provide a template `README.md` file in the template repository
   - short description of functionality
   - requirements (hardware and software)
-  - hardware design - use fritzing, tinkercad (if the board exists) or an EDA to design it
+  - hardware design - use [KiCad EDA](https://www.kicad.org/) or a similar tool for the schematics
   - software design
     - detail design
     - functional diagram
