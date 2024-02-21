@@ -69,8 +69,7 @@ It has to run software written in Rust. Students can use:
 4. [VENDING MACHINE](https://ocw.cs.pub.ro/courses/pm/prj2023/drtranca/vending.machine)
 
 ## F.A.Q
-**Q:** Can I use another programming language, not Rust?
-
+**Q:** Can I use another programming language, not Rust?\
 **A:** No, the main focus of the project is to learn to work with microcontrollers using Rust.
 
 **Q:** Can I use a different framework than [embassy-rs](https://github.com/embassy-rs/embassy)?\
