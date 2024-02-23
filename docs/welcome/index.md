@@ -79,19 +79,36 @@ GitHub: [DTeodor-Alexaandru](https://github.com/DTeodor-Alexaandru) \
 teodor.dicu@wyliodrin.com
 </td>
 </tr>
+
+<tr valign="top">
+<td>
+**Teodora Miu**
+![Teodora Miu](images/teodora_miu.jpg)
+
+Lab Professor \
+GitHub: [TeodoraMiu](https://github.com/TeodoraMiu) \
+teodora.miu@stud.fils.upb.ro
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+</tr>
 </table>
 
 ## Timetable
 
-| Activity | Group | Day | Hour | Room |
-|----------|-------|------|-------|-------|
-| Lecture | *all students* | Friday | 10 - 12 | AN024 |
-| Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 |
-| Lab | 1221A - second half | Thursday | 8 - 10 | ED 217 |
-| Lab | 1221B - first half | Thursday | 10 - 12 | ED 218 |
-| Lab | 1221B - second half | Thursday | 14 - 16 | ED 217 |
-| Lab | 1222A | Thursday | 14 - 16 | ED 218 |
-| Lab | 1222B | Thursday | 12 - 14 | ED 218 |
+| Activity | Group | Day | Hour | Room | Professor |
+|----------|-------|-----|------|-------|----------|
+| Lecture | *all students* | Friday | 10 - 12 | AN024 | Alexandru Radovici |
+| Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 | |
+| Lab | 1221A - second half | Thursday | 8 - 10 | ED 217 | |
+| Lab | 1221B - first half | Thursday | 10 - 12 | ED 218 | |
+| Lab | 1221B - second half | Thursday | 14 - 16 | ED 217 | Teodora Miu |
+| Lab | 1222A | Thursday | 14 - 16 | ED 218 | Irina Bradu |
+| Lab | 1222B | Thursday | 12 - 14 | ED 218 | Teodor Dicu |
 
 ## Grading
 
