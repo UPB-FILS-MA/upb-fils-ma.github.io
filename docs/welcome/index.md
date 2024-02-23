@@ -135,7 +135,9 @@ teodora.miu@stud.fils.upb.ro
 
 ### Hardware
 1. **Joseph Yiu**, *The Definitive Guide to ARM® Cortex®-M0 and Cortex-M0+ Processors, 2nd Edition* 
-2. [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
+2. **Charles Platt**, *Encyclopedia of Electronic Components*, Volumes 1, 2, 3 
+3. **Paul Scherz, Simon Monk**, *Practical Electronics for Inventors, 2nd edition*
+4. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
 
 ### Software
 1. [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)
