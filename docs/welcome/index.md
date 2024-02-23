@@ -140,8 +140,10 @@ teodora.miu@stud.fils.upb.ro
 4. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
 
 ### Software
-1. **Raspberry Pi Ltd**, *[Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)*
-2. [embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) crate documentation
-3. [embassy_rp examples](https://github.com/embassy-rs/embassy/tree/main/examples/rp/src/bin)
-4. [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
-5. [Connecting to the Internet with Raspberry Pi Pico W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)
+1. **Steve Klabnik, Carol Nichols**, *[The Rust Programming Language](https://doc.rust-lang.org/stable/book/)*
+2. **Rust Team**, *[Rust Embedded, The Discovery book](https://docs.rust-embedded.org/discovery/microbit/)*
+3. **Raspberry Pi Ltd**, *[Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)*
+4. [embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) crate documentation
+5. [embassy_rp examples](https://github.com/embassy-rs/embassy/tree/main/examples/rp/src/bin)
+6. [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
+7. [Connecting to the Internet with Raspberry Pi Pico W](https://datasheets.raspberrypi.com/picow/connecting-to-the-internet-with-pico-w.pdf)
