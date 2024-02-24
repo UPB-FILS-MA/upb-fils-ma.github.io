@@ -52,7 +52,8 @@ It has to run software written in Rust. Students can use:
 
 ## Requirements
 1. Complexity: use knowledge of at least 3 laboratories excluding Tour of Rust and Hardware Introduction Depending on the situation, there might be complex projects that don't use 3 laboratories and simple project that use 4-5 laboratories. The assistant role is to make sure the project is suited and to give ideas to make it more complex if needed, but the rule of 3 laboratories should guide them to a suited project.
-2. Hardware fully functional.
+2. Complete documentation of the implementation both from the hardware and software point of view.
+3. Hardware fully functional.
 
 ## Example Projects
 
@@ -68,13 +69,13 @@ It has to run software written in Rust. Students can use:
 
 ## Grading
 
-| Part | Description | Points |
-|--------|-------------|--------|
-| [Lecture](/docs/category/lecture) tests | You will have a test at every class with subjects from the previous class. | 2p |
-| [Lab](/docs/category/lab) | Your work at every lab will be graded. | 2p |
-| [Project](/docs/project) | You will have to design and implement a hardware device. Grading will be done for the documentation, hardware design and software development. | 5p |
-| Exam | You will have to take an exam during the session. | 2p |
-| **Total** | *You will need at least 4,5 points to pass the subject.* | **11p** |
+| Part | Deadline | Points |
+|--------|--------|--------|
+| Documentation Milestone | Lab 9 | 1p |
+| Hardware Milestone | Lab 11 | 1p |
+| Software Milestone | Lab 12 | 1p |
+| PM Faire | TBD | 2p |
+| **Total** |  | **5p** |
 
 ## F.A.Q
 **Q:** Can I use another programming language, not Rust?\
