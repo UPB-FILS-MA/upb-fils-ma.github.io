@@ -2,10 +2,6 @@
 sidebar_position: 3
 ---
 
----
-sidebar_position: 3
----
-
 # Project
 
 The purpose of the project is to build a hardware device that runs software written in Rust.
