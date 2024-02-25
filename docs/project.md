@@ -18,7 +18,8 @@ The repository contains:
     - detail design
     - functional diagram
 - software source code
-- hardware
+
+Students will have to build and showcase the hardware with the running software at PM Fair.
 
 ## Hardware Rules
 
