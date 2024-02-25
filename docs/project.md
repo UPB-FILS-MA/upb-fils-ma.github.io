@@ -7,7 +7,10 @@ sidebar_position: 3
 The purpose of the project is to build a hardware device that runs software written in Rust.
 
 ## Deliverables
-- documentation - we will provide a template `README.md` file in the template repository
+All the deliverables will be published in a GitHub repository that each student will be assigned to.
+
+The repository contains:
+- documentation - the reposiotry's `README.md` file
   - short description of functionality
   - requirements (hardware and software)
   - hardware design - use [KiCad EDA](https://www.kicad.org/) or a similar tool for the schematics
