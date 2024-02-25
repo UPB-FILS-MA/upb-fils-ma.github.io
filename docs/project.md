@@ -53,7 +53,7 @@ It has to run software written in Rust. Students can use:
 ## Requirements
 1. *Complexity:* use knowledge of at least 3 labs **excluding** [00 - Rust](/docs/lab/00) and [01 - Hardware Introduction](/docs/lab/01).
 2. *Documentation:* Complete documentation of the implementation for both hardware and software.
-3. Hardware fully functional.
+3. *Functionality:* the hardware device has to be fully functional.
 
 ## Example Projects
 
