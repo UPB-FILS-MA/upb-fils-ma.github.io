@@ -17,7 +17,7 @@ The repository contains:
   - software design
     - detail design
     - functional diagram
-- software
+- software source code
 - hardware
 
 ## Hardware Rules
