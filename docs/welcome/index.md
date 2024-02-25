@@ -103,7 +103,7 @@ teodora.miu@stud.fils.upb.ro
 | Activity | Group | Day | Hour | Room | Professor |
 |----------|-------|-----|------|-------|----------|
 | Lecture | *all students* | Friday | 10 - 12 | AN024 | Alexandru Radovici |
-| Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 | |
+| Lab | 1221A - first half | Thursday | 8 - 10 | ED 218 | Dănuț Aldea |
 | Lab | 1221A - second half | Thursday | 8 - 10 | ED 217 | |
 | Lab | 1221B - first half | Thursday | 10 - 12 | ED 218 | Irina Niță |
 | Lab | 1221B - second half | Thursday | 14 - 16 | ED 217 | Teodora Miu |
