@@ -51,7 +51,7 @@ It has to run software written in Rust. Students can use:
 4. The presentation of all the milestones is mandatory.
 
 ## Requirements
-1. *Complexity:* use knowledge of at least 3 labs **excluding** [00 - Rust](/docs/lab/00) and [01 - Hardware Introduction](/docs/lab/01).
+1. *Complexity:* use knowledge of at least 3 labs, **excluding** [00 - Rust](https://embedded-rust-101.wyliodrin.com/docs/lab/00), [01 - Hardware Introduction](https://embedded-rust-101.wyliodrin.com/docs/lab/01) and [02 - Setting up the Raspberry Pi Pico + GPIO](https://embedded-rust-101.wyliodrin.com/docs/lab/02)
 2. *Documentation:* Complete documentation of the implementation for both hardware and software.
 3. *Functionality:* the hardware device has to be fully functional.
 
