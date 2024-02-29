@@ -3,12 +3,9 @@ theme: seriph
 # background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
-lineNumbers: false
+lineNumbers: true
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Introduction to microprocessors
 drawings:
   persist: false
 defaults:
@@ -27,4 +24,44 @@ exportFilename: ma-01.pdf
 
 ---
 
-# Course
+# Welcome
+to the *Microprocessor Architecture* engineering class
+
+## You will learn
+
+- how hardware works
+- how to actually build your own hardware device
+- the Rust programming Language
+
+## We expect
+- to come to class
+- ask a lot of questions
+
+<!-- Team -->
+---
+src: ./team.md
+---
+
+<!-- Admin -->
+
+---
+src: ./admin.md
+---
+
+<!-- Subjects -->
+
+---
+src: ./subjects.md
+---
+
+<!-- AGC -->
+
+---
+src: ./agc/slides.md
+---
+
+<!-- Processor -->
+
+---
+src: ./processor/slides.md
+---
