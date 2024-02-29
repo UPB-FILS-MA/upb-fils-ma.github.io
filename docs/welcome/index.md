@@ -118,7 +118,7 @@ teodora.miu@stud.fils.upb.ro
 | [Lab](/docs/category/lab) | Your work at every lab will be graded. | 2p |
 | [Project](/docs/project) | You will have to design and implement a hardware device. Grading will be done for the documentation, hardware design and software development. | 5p |
 | Exam | You will have to take an exam during the session. | 2p |
-| **Total** | *You will need at least 4,5 points to pass the subject.* | **11p** |
+| **Total** | *You will need at least 4.5 points to pass the subject.* | **11p** |
 
 ## Rules
 
