@@ -88,7 +88,7 @@ Click the `+` icon and give your footprint the same nickname as the symbol and t
 Giving the footprint and symbol the same nickname will automatically link them, in most cases. In some cases, due to the `.kicad_sym` configuration, the symbol is linked with a predefined footprint that probably is not in your footprint library. In these cases you have to manually link them.
 :::
 
-### Manual link
+#### Manual link
 
 In KiCad Project Manager click on `Symbol editor` and search for your symbol.
 
