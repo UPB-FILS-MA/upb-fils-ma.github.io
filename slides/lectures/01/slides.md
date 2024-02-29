@@ -18,9 +18,11 @@ themeConfig:
   primary: '#0060df'
 download: true
 exportFilename: ma-01.pdf
+background:
 ---
 
 # Introduction
+Lecture 1
 
 ---
 
@@ -45,7 +47,7 @@ src: ./team.md
 <!-- Admin -->
 
 ---
-src: ./admin.md
+src: ./admin/slides.md
 ---
 
 <!-- Subjects -->
@@ -65,3 +67,26 @@ src: ./agc/slides.md
 ---
 src: ./processor/slides.md
 ---
+
+<!-- MCUs -->
+
+---
+src: ./mcu/slides.md
+---
+
+<!-- RP2040 -->
+
+---
+src: ./rp2040/slides.md
+---
+
+---
+---
+# Conclusion
+we discussed about
+
+- How a processor functions
+- Microcontrollers (MCU) / Microprocessors (CPU)
+- Microcontroller architectures
+- ARM Cortex-M
+- RP2040

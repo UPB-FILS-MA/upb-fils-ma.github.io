@@ -6,7 +6,7 @@ layout: section
 ---
 layout: two-cols
 ---
-# Microprocessor
+# Microcontroller (MCU)
 controls hardware
 
 - low operating frequency (MHz)
@@ -20,16 +20,16 @@ controls hardware
 
 :: right ::
 
-# Computer
+# Microprocessor (CPU)
 computes
 
 - high operating frequency (GHz)
 - limited number of I/O ports
-- performs a lot of computations
+- runs application and server software
 - usually requires an Operating System
 
 <img src="/processor/pi5.jpg" class="m-10 h-50">
-
+---
 ---
 # How a microprocessor (MCU) works
 This is a simple processor
@@ -68,7 +68,7 @@ fn start() {
 
 :: right ::
 
-## MCU's Language - Assembly
+## Assembly
 
 <v-click>
 

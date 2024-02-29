@@ -18,4 +18,10 @@ layout: section
 ---
 # Practical
 - How to use the Raspberry Pi Pico
+  - Affordable
+  - Powerful processor
+  - Good documentation
 - How to program in Rust
+  - Memory Safe
+  - *Java-like features, without Java's penalties*
+  - Defines an embedded standard interface *embedded-hal*

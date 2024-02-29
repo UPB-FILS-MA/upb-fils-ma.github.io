@@ -208,7 +208,7 @@ Also, HTML elements are valid:
 -->
 
 ---
-class: px-20
+class: px-10
 ---
 
 # Themes

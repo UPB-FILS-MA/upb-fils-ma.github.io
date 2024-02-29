@@ -1,7 +1,9 @@
 ---
-layout: image-right
 ---
 # Outline
+
+<div grid="~ cols-2 gap-5">
+<div>
 
 ## Lectures
   - 12 lectures
@@ -15,7 +17,11 @@ layout: image-right
 - Will cost around 150 RON
 - Presented at PM Fair during the last week of the semester
 
-TODO add picture from PM Fair
+</div>
+
+<img src="/admin/pm_fair.png" class="w-60">
+
+</div>
 
 ---
 ---
