@@ -11,13 +11,13 @@ drawings:
 defaults:
   foo: true
 transition: slide-left
-title: Welcome to Slidev
+title: MA - 01 - Introduction
 mdc: true
 layout: cover
 themeConfig:
   primary: '#0060df'
 download: true
-exportFilename: ma-01.pdf
+exportFilename: ma-01
 background:
 ---
 
