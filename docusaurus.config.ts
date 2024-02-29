@@ -68,6 +68,7 @@ const config: Config = {
         {to: '/docs/category/lecture', label: 'Lecture', position: 'left'},
         {to: '/docs/category/lab', label: 'Lab', position: 'left'},
         {to: '/docs/project', label: 'Project', position: 'left'},
+        {to: '/docs/category/tutorials', label: 'Tutorials', position: 'left'},
         {
           href: 'https://github.com/UPB-FILS-MA/upb-fils-ma.github.io',
           label: 'GitHub',
