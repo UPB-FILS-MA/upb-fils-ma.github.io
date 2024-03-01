@@ -31,7 +31,7 @@ for this section
 
 </div>
 
-<img src="/mcu/intel_8051.jpg" class="h-80" />
+<img src="/mcu/intel_8051.jpg" class="h-80 rounded" />
 
 </div>
 
@@ -56,8 +56,9 @@ probably *Alf and Vegard's RISC processor*
 </div>
 
 <div>
-    <img src="/mcu/atmega_328.jpg" class="h-50" />
-    <img src="/mcu/arduino_uno.jpg" class="h-50" />
+    <img src="/mcu/atmega_328.jpg" class="h-50 rounded" />
+    Board
+    <img src="/mcu/arduino_uno.jpg" class="h-45 rounded" />
 </div>
 
 </div>
@@ -81,7 +82,7 @@ Peripheral Interface Controller / Programmable Intelligent Computer
 
 </div>
 
-<img src="/mcu/pic.jpg" class="h-50" />
+<img src="/mcu/pic.jpg" class="h-50 rounded" />
 
 </div>
 

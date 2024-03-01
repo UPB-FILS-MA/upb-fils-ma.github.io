@@ -38,11 +38,11 @@ that use RP2040
 
 ### Raspberry Pi Pico (W)
 
-<img src="/processor/pico.jpg" class="w-60" />
+<img src="/processor/pico.jpg" class="w-60 rounded" />
 
 ### Arduino Nano RP2040 Connect
 
-<img src="/rp2040/arduino_nano_rp2040_connect.jpg" class="w-60" />
+<img src="/rp2040/arduino_nano_rp2040_connect.jpg" class="w-60 rounded" />
 
 ---
 layout: two-cols
@@ -50,7 +50,7 @@ layout: two-cols
 # The Chip
 
 <div align="center">
-<img src="/rp2040/rp2040_chip.png" class="h-80" />
+<img src="/rp2040/rp2040_chip.png" class="h-80 rounded" />
 </div align="center">
 
 *GPIO*: General Purpose Input/Output\
@@ -78,12 +78,12 @@ layout: two-cols
 # Pins
 have multiple functions
 
-![pins](/rp2040/pin_functions.png)
+<img src="/rp2040/pin_functions.png" class="rounded">
 ...
 
 ::right::
 
-![pins](/rp2040/rp2040_pins.png)
+<img src="/rp2040/rp2040_pins.png" class="rounded">
 
 ---
 ---
@@ -91,5 +91,5 @@ have multiple functions
 that interconnects the cores with the peripherals
 
 <div align="center">
-<img src="/rp2040/rp2040_bus.png" class="h-100" />
+<img src="/rp2040/rp2040_bus.png" class="h-100 rounded" />
 </div align="center">

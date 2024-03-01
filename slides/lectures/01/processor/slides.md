@@ -16,7 +16,7 @@ Integrated in embedded systems for certain tasks
 - costs $0.1 - $25
 - annual demand is billions
 
-<img src="/processor/pico.jpg" class="m-5 h-30">
+<img src="/processor/pico.jpg" class="m-5 h-30 rounded">
 
 
 :: right ::
@@ -30,7 +30,7 @@ General purpose, for PC & workstations
 - costs $75 - $500
 - annual demand is tens of millions
 
-<img src="/processor/pi5.jpg" class="m-5 h-50">
+<img src="/processor/pi5.jpg" class="m-5 h-50 rounded">
 ---
 ---
 # How a microprocessor (MCU) works
