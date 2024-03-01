@@ -17,3 +17,6 @@ website:
   - '*.js'
   - '*.json'
   - '*.ts'
+
+slides:
+  - slides/**/*
