@@ -13,7 +13,7 @@
   - 12 labs
 
 ## Project
-- You have to build a project
+- You have to build a hardware a device that runs software written in Rust
 - Will cost around 150 RON
 - Presented at PM Fair during the last week of the semester
 
