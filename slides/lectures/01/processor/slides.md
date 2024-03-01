@@ -7,13 +7,14 @@ layout: section
 layout: two-cols
 ---
 # Microcontroller (MCU)
-controls hardware
+Integrated in embedded systems for certain tasks
 
 - low operating frequency (MHz)
 - a lot of I/O ports
-- runs simple software
 - controls hardware
 - does not require an Operating System
+- cost $0.1 - $25
+- annual demand: billions
 
 <img src="/processor/pico.jpg" class="m-10 h-30">
 
@@ -21,12 +22,13 @@ controls hardware
 :: right ::
 
 # Microprocessor (CPU)
-computes
+General purpose, for PC & workstations
 
 - high operating frequency (GHz)
 - limited number of I/O ports
-- runs application and server software
 - usually requires an Operating System
+- cost $75 - $500
+- annual demand tens of millions
 
 <img src="/processor/pi5.jpg" class="m-10 h-50">
 ---
