@@ -93,9 +93,3 @@ that interconnects the cores with the peripherals
 <div align="center">
 <img src="/rp2040/rp2040_bus.png" class="h-100" />
 </div align="center">
-
-
-| Function | Meaning |
-|----------|---------|
-| GPIO | General Purpose Input/Output |
-

@@ -13,8 +13,8 @@
   - 12 labs
 
 ## Project
-- You have to build a hardware a device that runs software written in Rust
-- The cost for the hardware components will be around 150 RON
+- Build a hardware device running software written in Rust
+- The cost for the hardware is around 150 RON
 - Presented at PM Fair during the last week of the semester
 
 </div>
