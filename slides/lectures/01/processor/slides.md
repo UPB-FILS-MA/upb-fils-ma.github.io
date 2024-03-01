@@ -13,8 +13,8 @@ Integrated in embedded systems for certain tasks
 - a lot of I/O ports
 - controls hardware
 - does not require an Operating System
-- cost $0.1 - $25
-- annual demand: billions
+- costs $0.1 - $25
+- annual demand is billions
 
 <img src="/processor/pico.jpg" class="m-5 h-30">
 
@@ -27,8 +27,8 @@ General purpose, for PC & workstations
 - high operating frequency (GHz)
 - limited number of I/O ports
 - usually requires an Operating System
-- cost $75 - $500
-- annual demand tens of millions
+- costs $75 - $500
+- annual demand is tens of millions
 
 <img src="/processor/pi5.jpg" class="m-5 h-50">
 ---
