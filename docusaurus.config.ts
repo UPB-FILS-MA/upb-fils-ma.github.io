@@ -123,7 +123,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Wyliodrin SRL, licensed under CC BY-SA 4.0.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://wyliodrin.com" target="_blank">Wyliodrin SRL</a>, licensed under CC BY-SA 4.0.`,
     },
     prism: {
       theme: prismThemes.github,
