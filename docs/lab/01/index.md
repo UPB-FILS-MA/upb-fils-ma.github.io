@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /lab/01
 ---
 
 # 01 - Hardware Introduction
@@ -397,7 +398,7 @@ KiCad is a free and open-source electronics design automation (EDA) suite. It fe
 
 ### KiCad setup
 
-For setting up KiCad, tackle the [tutorial](../tutorials/kicad.md).
+For setting up KiCad, tackle the [tutorial](../../tutorials/kicad.md).
 
 ### How to use KiCad
 
@@ -463,7 +464,7 @@ You will get an error because for the resistor $$R1$$ and LED $$D1$$ there are n
 Footprint error 
 </div>
 
-Go back to the Schematic and assign footprints for resistor $$R1$$ and LED $$D1$$ like in the setup [tutorial](../tutorials/kicad.md). You can pick any footprint, or just paste these on footprint field in symbol properties.
+Go back to the Schematic and assign footprints for resistor $$R1$$ and LED $$D1$$ like in the setup [tutorial](../../tutorials/kicad.md). You can pick any footprint, or just paste these on footprint field in symbol properties.
 - resistor: Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical
 - LED: LED_THT:LED_D3.0mm
 
