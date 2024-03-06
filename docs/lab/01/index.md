@@ -63,7 +63,7 @@ $$
 
 ### Ohm's law
 
-The intensity(I) of the electric current passing through a resistor is directly proportional to the voltage(U) applied to the resistor and inversely proportional to its resistance value(R).
+The intensity(I) of the electric current passing through a resistor is directly proportional to the voltage(V) applied to the resistor and inversely proportional to its resistance value(R).
 
 <div align="center">
 ![Ohm's Law](images/ohm.png)
@@ -496,7 +496,11 @@ For a better understanding, please read [Getting Started in KiCad](https://docs.
 ## Exercises
 
 1. Complete the given exercise sheet.(**3p**)
-2. The microcontroller is already running a predefined program. Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
+
+2. The microcontroller will be running these precompiled programs for [Pico W](../../../assets/lab01/firmware/pico_w.uf2) and [Pico H](../../../assets/lab01/firmware/pico_h.uf2). Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
+:::info
+To flash the board, you will need to connect the boards to your PC while holding down the `BOOTSEL` button. This should *"mount"* it as a an external drive. The next step is to copy and paste the `.uf2` files in the `RPI-RP2` drive.
+:::
 - Connect a status LED that is ON as long as the microcontroller has power supplied. The pin that determines the status of the microcontroller is GP1.
 :::warning
 Make sure you connect a resistor in series wit the LED.
