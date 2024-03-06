@@ -29,7 +29,7 @@ use embedded_graphics::text::renderer::CharacterStyle;
 use embedded_graphics::text::Text;
 use heapless::String;
 use panic_probe as _;
-use source::SPIDeviceInterface;
+use lab01::SPIDeviceInterface;
 use st7789::{Orientation, ST7789};
 use static_cell::make_static;
 
