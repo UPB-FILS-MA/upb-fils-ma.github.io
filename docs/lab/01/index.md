@@ -497,9 +497,18 @@ For a better understanding, please read [Getting Started in KiCad](https://docs.
 
 1. Complete the given exercise sheet.(**3p**)
 2. The microcontroller is already running a predefined program. Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
-- A status LED is ON as long as the microcontroller is supplied. The pin that determines the status of the LED is GP1.
-- A button is used to toggle the LED integrated on the development board. The pin reading the state of the button is GP2.
-- On the screen is displayed an analog value read by the microcontroller on pin ADC0. Create a circuit in order to display the value $$1.65V$$ on the screen.
+- Connect a status LED that is ON as long as the microcontroller has power supplied. The pin that determines the status of the microcontroller is GP1.
+:::warning
+Make sure you connect a resistor in series wit the LED.
+:::
+- A button is used to toggle the integrated LED of the development board. Connect the button to the GP2 pin. 
+:::note
+Make sure you use a pull-up resistor.
+:::
+- The screen displays an analog value read by the microcontroller on pin ADC0. Create a circuit and connect it to ADC0 so that the display shows the value $$1.65V$$.
+:::tip
+Use a voltage divider.
+:::
 
 :::danger
 Do not supply power to the microcontroller before the lab teacher checks the circuit.
