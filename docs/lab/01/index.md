@@ -74,7 +74,7 @@ I = \frac{V}{R};
 $$
 
 I = intensity of electric current(A)   
-V = electrical voltage(V)   
+V = electric voltage(V)   
 R = circuit's resistance(&ohm;)
 
 ### Kirchhoff's First Law
