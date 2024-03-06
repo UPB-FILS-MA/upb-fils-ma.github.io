@@ -510,7 +510,7 @@ Make sure you use a pull-up resistor.
 Use a voltage divider.
 :::
 
-If you are curious, you can find the source code of the firmware running [here](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/tree/main/firmware/lab01).
+If you are curious, you can find the source code of the firmware running in the [repository](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/tree/main/firmware/lab01).
 
 :::danger
 Do not supply power to the microcontroller before the lab teacher checks the circuit.
