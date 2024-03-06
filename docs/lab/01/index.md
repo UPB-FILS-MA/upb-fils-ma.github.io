@@ -497,7 +497,7 @@ For a better understanding, please read [Getting Started in KiCad](https://docs.
 
 1. Complete the given exercise sheet.(**3p**)
 
-2. The microcontroller will be running these precompiled programs for [Pico W](../../../assets/lab01_firmware/pico_w.uf2) and [Pico H](../../../assets/lab01_firmware/pico_h.uf2). Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
+2. The microcontroller will be running these precompiled programs for [Pico W](../../../assets/lab01/firmware/pico_w.uf2) and [Pico H](../../../assets/lab01/firmware/pico_h.uf2). Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
 :::info
 To flash the board, you will need to connect the boards to your PC while holding down the `BOOTSEL` button. This should *"mount"* it as a an external drive. The next step is to copy and paste the `.uf2` files in the `RPI-RP2` drive.
 :::
