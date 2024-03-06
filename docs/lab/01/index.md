@@ -15,19 +15,19 @@ We will use [KiCad](https://www.kicad.org/) Electronics Design Suite for the ele
 
 ### Definitions
 
-#### Electronic voltage
+#### Electric voltage
 
-Electronic voltage represents the potential difference between two points in a circuit and it's proportional to the energy required to move an electric charge between the two points.
+The electric voltage represents the potential difference between two points in a circuit and it's proportional to the energy required to move an electric charge between the two points.
 
 $$
 V = \frac{W}{Q}
 $$
 
 V = Electromotive voltage (U in romanian);  
-W = Mechanical work of electric force(L in romanian);  
+W = Mechanical work of the electric force (L in romanian);  
 Q = Electric charge; 
 
-The unit of measurement of electric voltage in the SI[^si] is the **Volt**(V)
+The unit of measurement of the electric voltage in the SI[^si] is the **Volt**(V)
 
 $$
 [V]_{SI} = V(Volt)
@@ -41,7 +41,7 @@ $$
 
 :::info
 
-Electronic voltage is always measured between two points in a circuit. In general, voltages are measured against a reference point called circuit mass **(GND)**. Circuit mass is a convention and represents the point which potential is consider null. 
+Electric voltage is always measured between two points in a circuit. In general, voltages are measured against a reference point called circuit mass **(GND)**. Circuit mass is a convention and represents the point which potential is consider null. 
 
 :::
 
@@ -126,7 +126,7 @@ V_{out} = V_{in} * \frac{R_{2}}{R_{1} + R_{2}};
 $$
 
 :::warning
-Voltage divider can be considered a power source only if it operates in the empty state. It is **not recommended** to use a voltage divider to supply a circuit as the internal resistance is high and energy is lost due to heating. It can be used to provide reference points.
+The voltage divider can be considered a power source only if it operates in the empty state. It is **not recommended** to use a voltage divider to supply a circuit as the internal resistance is high and energy is lost due to heating. It can be used to provide reference points.
 :::
 #### What happens if we use the voltage divider to supply a circuit.
 
