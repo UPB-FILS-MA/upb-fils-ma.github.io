@@ -63,7 +63,7 @@ $$
 
 ### Ohm's law
 
-The intensity(I) of the electric current passing through a resistor is directly proportional to the voltage(U) applied to the resistor and inversely proportional to its resistance value(R).
+The intensity(I) of the electric current passing through a resistor is directly proportional to the voltage(V) applied to the resistor and inversely proportional to its resistance value(R).
 
 <div align="center">
 ![Ohm's Law](images/ohm.png)
