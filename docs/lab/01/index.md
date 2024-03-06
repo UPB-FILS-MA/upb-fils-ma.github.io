@@ -496,7 +496,10 @@ For a better understanding, please read [Getting Started in KiCad](https://docs.
 ## Exercises
 
 1. Complete the given exercise sheet.(**3p**)
-2. The microcontroller is already running a predefined program. Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
+2. The microcontroller will be running these precompiled programs for [Pico W](/firmware/pico_w.uf2) and [Pico H](/firmware/pico_h.uf2). Assemble a circuit surrounding the microcontroller in order to perform the next tasks:(**3p**)
+:::info
+To flash the board, you will need to connect the boards to your PC while holding down the `BOOTSEL` button. This should *"mount"* it as a an external drive. The next step is to copy and paste the `.uf2` files in the `RPI-RP2` drive.
+:::
 - Connect a status LED that is ON as long as the microcontroller has power supplied. The pin that determines the status of the microcontroller is GP1.
 :::warning
 Make sure you connect a resistor in series wit the LED.
@@ -509,8 +512,6 @@ Make sure you use a pull-up resistor.
 :::tip
 Use a voltage divider.
 :::
-
-If you are curious, you can find the source code of the firmware running in the [repository](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/tree/main/firmware/lab01).
 
 :::danger
 Do not supply power to the microcontroller before the lab teacher checks the circuit.
