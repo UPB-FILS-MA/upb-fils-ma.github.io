@@ -27,8 +27,7 @@ A real MCU
 
 ::right::
 
-![Exceptions](/cortex-m0-plus/stm32_mmio.png)
-
+<img src="/mmio/stm32_mmio.png" class="rounded">
 
 ---
 layout: two-cols
