@@ -172,7 +172,7 @@ they do stuff
   - might ask the peripheral to do something
   
 - Write
-  - reads the value to a register
+  - writes the value to a register
   - might ask the peripheral to do something
     - SYSRESETREQ
 

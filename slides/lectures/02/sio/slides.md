@@ -81,7 +81,7 @@ layout: two-cols
 ##### GPIO_IN
 <img src="/sio/sio_gpio_in.png" class="rounded">
 
-```rust{all|4,8|9|4,10|5,7,11,12}
+```rust{all|4,8|4,9|10|4,11|5,7,12,13}
 use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
@@ -89,10 +89,11 @@ const GPIO_OE: *mut u32 = 0xd000_0020 as *mut u32;
 const GPIO_IN: *const u32 = 0xd000_0004 as *const u32;
 
 let value = unsafe { 
+    // write_volatile(GPIO_OE, 1 << pin);
     let gpio_oe = read_volatile(GPIO_OE);
     gpio_oe = gpio_oe | (1 << pin);
     write_volatile(GPIO_OE, gpio_oe);
-    read_volatile(GPIO_IN) >> pin * 0b1
+    read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
 
@@ -120,7 +121,7 @@ const GPIO_IN: *const u32 = 0xd000_0004 as *const u32;
 
 let value = unsafe { 
     write_volatile(GPIO_OE_SET, 1 << pin);
-    read_volatile(GPIO_IN) >> pin * 0b1
+    read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
 
@@ -147,11 +148,11 @@ const GPIO_OE_CRL: *mut u32= 0xd000_0028 as *mut u32;
 const GPIO_OUT: *mut u32 = 0xd000_0010 as *mut u32;
 
 unsafe { 
-    write_volatile(GPIO_OE_CLR, 1 << pin);
-    // write_volatile(GPIO_OUT, value << pin);
-    let gpio_out = read_volatile(GPIO_OUT);
-    gpio_out = value | (value << pin);
-    write_volatile(GPIO_OUT, gpio_out);
+  write_volatile(GPIO_OE_CLR, 1 << pin);
+  // write_volatile(GPIO_OUT, (value & 0b1) << pin);
+  let gpio_out = read_volatile(GPIO_OUT);
+  gpio_out = gpio_out | (value & 0b1) << pin;
+  write_volatile(GPIO_OUT, gpio_out);
 };
 ```
 
@@ -225,7 +226,7 @@ let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
 let value = unsafe { 
     write_volatile(gpio_ctrl, 5);
     write_volatile(GPIO_OE_SET, 1 << pin);
-    read_volatile(GPIO_IN) >> pin * 0b1
+    read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
 
