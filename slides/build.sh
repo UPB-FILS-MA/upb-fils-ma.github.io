@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for slides in $(basename $(find lectures/* -maxdepth 0 -type d)); do
+for slides in $(basename -a $(find lectures/* -maxdepth 0 -type d)); do
     if [ $slides != "assets" ]; then
         echo "Building slides $slides"
         ln -s ../assets/global-bottom.vue lectures/$slides/global-bottom.vue
