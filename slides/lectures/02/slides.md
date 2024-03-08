@@ -40,6 +40,12 @@ Lecture 2
 src: ./mmio/slides.md
 ---
 
+<!-- Bitwise -->
+
+---
+src: ./bitwise/slides.md
+---
+
 <!-- SIO -->
 
 ---

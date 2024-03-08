@@ -113,7 +113,6 @@ pub fn panic(_info: &PanicInfo) -> ! {
 </div>
 
 ---
----
 
 # Bare metal without PAC & HAL
 This is how a Rust application would look like
@@ -128,7 +127,7 @@ use core::ptr::{read_volatile, write_volatile};
 use cortex_m_rt::entry;
 
 const GPIOX_CTRL: u32 = 0x4001_4004;
-const GPIO_OE_CLR: *mut u32= 0xd000_0020 as *mut u32;
+const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
 const GPIO_OUT_SET:*mut u32= 0xd000_0014 as *mut u32;
 const GPIO_OUT_CLR:*mut u32= 0xd000_0018 as *mut u32;
 
@@ -144,7 +143,7 @@ fn main() -> ! {
     let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
     unsafe { 
         write_volatile(gpio_ctrl, 5);
-        write_volatile(GPIO_OE_CLR, 1 << pin);
+        write_volatile(GPIO_OE_SET, 1 << pin);
         let reg = match value {
         0 => GPIO_OUT_CLR,
         _ => GPIO_OUT_SET

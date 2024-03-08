@@ -13,13 +13,14 @@ a simple 8 bit processor with a text display
 ---
 layout: two-cols
 ---
+
 # STM32L0x2
 A real MCU
 
 | | |
 |-|-|
 | Cortex-M0+ Peripherals | MCU's *settings* and internal peripherals, available at the same address on all M0+ |
-| Peripherals | GPIO, UART, SPI, I2C, US, etc |
+| Peripherals | GPIO, UART, SPI, I2C, USB, etc |
 | Flash | The storage space |
 | SRAM | RAM memory |
 | @0x0000_0000 | Alias for SRAM or Flash |
@@ -28,9 +29,11 @@ A real MCU
 
 ![Exceptions](/cortex-m0-plus/stm32_mmio.png)
 
+
 ---
 layout: two-cols
 ---
+
 # System Control Registers
 @0xe000_0000
 
@@ -39,11 +42,11 @@ Compute the actual address
 
 Examples:
 - SYST_CSR: **0xe000_e010** (*0xe000_0000 + 0xe010*)
-- CPUID: **0xe000_ed04** (*0xe000_0000 + 0xed04*)
+- CPUID: **0xe000_ed00** (*0xe000_0000 + 0xed00*)
 
 ```rust{all|1-2|4|5}
 const SYS_CTRL: usize = 0xe000_0000;
-const CPUID: usize = 0xed04;
+const CPUID: usize = 0xed00;
 
 let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
 let cpuid_value = unsafe { *cpuid_reg };
@@ -57,6 +60,7 @@ let cpuid_value = unsafe { *cpuid_reg };
 
 ![SysCtrl Registers](/mmio/sysctrl_registers.png)
 
+
 ---
 ---
 # 8 bit processor
@@ -67,15 +71,16 @@ with cache
 ---
 layout: two-cols
 ---
+
 # Cache Write-Trough
 
-CPUID: **0xe000_ed04** (*0xe000_0000 + 0xed04*)
+CPUID: **0xe000_ed00** (*0xe000_0000 + 0xed00*)
 
 ```rust{all|1|3-4|6|7-9}
 use core::ptr::read_volatile;
     
 const SYS_CTRL: usize = 0xe000_0000;
-const CPUID: usize = 0xed04;
+const CPUID: usize = 0xed00;
 
 let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
 unsafe {
@@ -92,26 +97,35 @@ unsafe {
 
 ![SysCtrl Registers](/mmio/sysctrl_registers.png)
 
+
 ---
 layout: two-cols
 ---
+
 # Read the CPUID
 About the MCU
 
-```rust{all|1|3-4|6|7-9|11|12|13|14}
+```rust{all|1|3-4|6|7-9|11,12|14,15|17,18|20,21}
 use core::ptr::read_volatile;
 
 const SYS_CTRL: usize = 0xe000_0000;
-const CPUID: usize = 0xed04;
+const CPUID: usize = 0xed00;
 
 let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
 let cpuid_value = unsafe {
     read_volatile(cpuid_reg)
 };
 
+// shift right 24 bits and keep only the last 8 bits
 let variant = (cpuid_value >> 24) & 0b1111_1111;
+
+// shift right 16 bits and keep only the last 4 bits
 let architecture = (cpuid_value >> 16) & 0b1111;
+
+// shift right 4 bits and keep only the last 12 bits
 let part_no = (cpuid_value >> 4) & 0b11_1111_1111;
+
+// shift right 0 bits and keep only the last 4 bits
 let revision = (cpuid_value >> 0) & 0b1111;
 ```
 
@@ -122,9 +136,11 @@ Offset: 0xed04
 
 ![CPUID Register](/mmio/cpuid_register.png)
 
+
 ---
 layout: two-cols
 ---
+
 # AIRCR
 Application Interrupt and Reset Control Register
 
@@ -143,7 +159,7 @@ let mut aircr_value = unsafe {
     read_volatile(aircr_register) 
 };
 
-aircr_value = aircr_value & (0x0000 << VECTKEY); 
+aircr_value = aircr_value & ~(0x1111 << VECTKEY); 
 aircr_value = aircr_value | (0x05fa << VECTKEY);
 aircr_value = aircr_value | (1 << SYSRESETREQ);
 
@@ -160,6 +176,7 @@ Offset: 0xed0c
 
 ![AIRCR Register 1](/mmio/aircr_register_1.png)
 ![AIRCR Register 2](/mmio/aircr_register_2.png)
+
 
 ---
 layout: two-cols

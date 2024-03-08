@@ -20,13 +20,14 @@ for this section
 ---
 layout: two-cols
 ---
+
 # GPIO
 
 <div align="center">
 <img src="/sio/rp2040_chip.png" class="h-80 rounded" />
 </div align="center">
 
-*GPIO*: Use the correct MUX function (F5)\
+*IO Bank (GPIO)*: Use the correct MUX function (F5)\
 *SIO*: Set the pin as Input or Output
 
 ::right::
@@ -40,6 +41,7 @@ layout: two-cols
 
 <img src="/sio/pin_functions.png" class="rounded">
 <arrow x1="50" y1="180" x2="214" y2="220" color="#0060df" width="2" arrowSize="1" />
+
 
 ---
 layout: two-cols
@@ -69,6 +71,7 @@ layout: two-cols
 ---
 layout: two-cols
 ---
+
 # SIO Input
 
 <img src="/sio/sio_registers.png" class="rounded">
@@ -81,53 +84,59 @@ layout: two-cols
 ##### GPIO_IN
 <img src="/sio/sio_gpio_in.png" class="rounded">
 
-```rust{all|4,8|4,9|10|4,11|5,7,12,13}
+```rust{all|4,8|4,9|10,11|4,12|5,7,13,14}
 use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
 const GPIO_OE: *mut u32 = 0xd000_0020 as *mut u32;
-const GPIO_IN: *const u32 = 0xd000_0004 as *const u32;
+const GPIO_IN: *const u32= 0xd000_0004 as *const u32;
 
 let value = unsafe { 
-    // write_volatile(GPIO_OE, 1 << pin);
+    // write_volatile(GPIO_OE, !(1 << pin));
     let gpio_oe = read_volatile(GPIO_OE);
-    gpio_oe = gpio_oe | (1 << pin);
+    // set bin `pin` of `gpio_oe` to 0 (input)
+    gpio_oe = gpio_oe & !(1 << pin);
     write_volatile(GPIO_OE, gpio_oe);
     read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
 
+
 ---
 layout: two-cols
 ---
+
 # SIO Input
 
 <img src="/sio/sio_registers.png" class="rounded">
 
 ##### GPIO_OE_SET
-<img src="/sio/sio_gpio_oe_set.png" class="rounded">
+<img src="/sio/sio_gpio_oe_clr.png" class="rounded">
 
 :: right ::
 
 ##### GPIO_IN
 <img src="/sio/sio_gpio_in.png" class="rounded">
 
-```rust{all|4,8|5,7,9,10}
+```rust{all|4,8,9|5,7,10,11}
 use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
-const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
-const GPIO_IN: *const u32 = 0xd000_0004 as *const u32;
+const GPIO_OE_CLR: *mut u32= 0xd000_0028 as *mut u32;
+const GPIO_IN: *const u32= 0xd000_0004 as *const u32;
 
 let value = unsafe { 
-    write_volatile(GPIO_OE_SET, 1 << pin);
+	// set bit `pin` of `GPIO_OE` to 0 (input)
+    write_volatile(GPIO_OE_CLR, 1 << pin);
     read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
 
+
 ---
 layout: two-cols
 ---
+
 # SIO Output
 
 <img src="/sio/sio_registers.png" class="rounded">
@@ -140,15 +149,16 @@ layout: two-cols
 ##### GPIO_OUT
 <img src="/sio/sio_gpio_out.png" class="rounded">
 
-```rust{all|4,8|5,9|5,10|11|5,12}
+```rust{all|4,8,9|5,10|5,11|12|5,13}
 use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
-const GPIO_OE_CRL: *mut u32= 0xd000_0028 as *mut u32;
+const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
 const GPIO_OUT: *mut u32 = 0xd000_0010 as *mut u32;
 
-unsafe { 
-  write_volatile(GPIO_OE_CLR, 1 << pin);
+unsafe {
+  // set bit `pin` of GPIO_OE to 1 (output)
+  write_volatile(GPIO_OE_SET, 1 << pin);
   // write_volatile(GPIO_OUT, (value & 0b1) << pin);
   let gpio_out = read_volatile(GPIO_OUT);
   gpio_out = gpio_out | (value & 0b1) << pin;
@@ -156,9 +166,11 @@ unsafe {
 };
 ```
 
+
 ---
 layout: two-cols
 ---
+
 # SIO Output
 efficient
 
@@ -170,18 +182,18 @@ efficient
 :: right ::
 
 ##### GPIO_OUT_CLR
-<img src="/sio/sio_gpio_out_clear.png" class="rounded">
+<img src="/sio/sio_gpio_out_clr.png" class="rounded">
 
 ```rust{all|4,9|5,6,10-13|14}
 use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
-const GPIO_OE_CLR: *mut u32= 0xd000_0028 as *mut u32;
+const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
 const GPIO_OUT_SET:*mut u32= 0xd000_0014 as *mut u32;
 const GPIO_OUT_CLR:*mut u32= 0xd000_0018 as *mut u32;
 
 unsafe { 
-    write_volatile(GPIO_OE_CLR, 1 << pin);
+    write_volatile(GPIO_OE_SET, 1 << pin);
     let reg = match value {
       0 => GPIO_OUT_CLR,
       _ => GPIO_OUT_SET
@@ -189,6 +201,7 @@ unsafe {
     write_volatile(reg, 1 << pin);
 };
 ```
+
 
 ---
 layout: two-cols
@@ -209,6 +222,7 @@ Offset: 0x004, 0x00c, ... 0x0ec (0x4 + 8*x)
 ---
 layout: two-cols
 ---
+
 # IO Bank Input
 
 <img src="/sio/gpio_status_ctrl.png" class="rounded">
@@ -218,14 +232,14 @@ use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
 const GPIOX_CTRL: u32 = 0x4001_4004;
-const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
+const GPIO_OE_CLR: *mut u32= 0xd000_0028 as *mut u32;
 const GPIO_IN: *const u32= 0xd000_0004 as *const u32;
 
 let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
 
 let value = unsafe { 
     write_volatile(gpio_ctrl, 5);
-    write_volatile(GPIO_OE_SET, 1 << pin);
+    write_volatile(GPIO_OE_CLR, 1 << pin);
     read_volatile(GPIO_IN) >> pin & 0b1
 };
 ```
@@ -236,9 +250,11 @@ let value = unsafe {
 Offset: 0x004, 0x00c, ... 0x0ec (0x4 + 8*x)
 <img src="/sio/gpio_ctrl_register.png" class="rounded">
 
+
 ---
 layout: two-cols
 ---
+
 # IO Bank Output
 
 <img src="/sio/gpio_status_ctrl.png" class="rounded">
@@ -248,14 +264,14 @@ use core::ptr::read_volatile;
 use core::ptr::write_volatile;
 
 const GPIOX_CTRL: u32 = 0x4001_4004;
-const GPIO_OE_CLR: *mut u32= 0xd000_0020 as *mut u32;
+const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
 const GPIO_OUT_SET:*mut u32= 0xd000_0014 as *mut u32;
 const GPIO_OUT_CLR:*mut u32= 0xd000_0018 as *mut u32;
 
 let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
 unsafe { 
     write_volatile(gpio_ctrl, 5);
-    write_volatile(GPIO_OE_CLR, 1 << pin);
+    write_volatile(GPIO_OE_SET, 1 << pin);
     let reg = match value {
       0 => GPIO_OUT_CLR,
       _ => GPIO_OUT_SET
@@ -269,6 +285,7 @@ unsafe {
 ##### GPIOx_CTRL
 Offset: 0x004, 0x00c, ... 0x0ec (0x4 + 8*x)
 <img src="/sio/gpio_ctrl_register.png" class="rounded">
+
 
 ---
 layout: two-cols
@@ -288,11 +305,12 @@ Offset: 0x004, 0x008, ... 0x078 (0x4 + 4*x)
 ---
 layout: two-cols
 ---
+
 # Input
 read the value from pin `x`
 
 - set the `FUNCSEL` field of `GPIOx_CTRL` to `5`
-- set the `GPIO_OE_SET` bit `x` to `1`
+- set the `GPIO_OE_CLR` bit `x` to `1`
 - read the `GPIO_IN` bit `x`
 - *adjust the `GPIOx` fields to set the pull up/down resistor*
 
@@ -304,11 +322,10 @@ read the value from pin `x`
 write a value to pin `x`
 
 - set the `FUNCSEL` field of `GPIOx_CTRL` to `5`
-- set the `GPIO_OE_CLR` bit `x` to `1`
+- set the `GPIO_OE_SET` bit `x` to `1`
 - if the value 
   - is `0`, set the `GPIO_OUT_CLR` bit `x` to `1`
   - is `1`, set the `GPIO_OUT_SET` bit `x` to `1` 
 - *adjust the `GPIOx` fields to set the output current*
 
 <img src="/sio/pin_output.png" class="w-50 rounded">
-
