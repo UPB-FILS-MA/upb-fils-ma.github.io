@@ -41,6 +41,35 @@ Examples:
 - SYST_CSR: **0xe000_e010** (*0xe000_0000 + 0xe010*)
 - CPUID: **0xe000_ed04** (*0xe000_0000 + 0xed04*)
 
+```rust{all|1-2|4|5}
+const SYS_CTRL: usize = 0xe000_0000;
+const CPUID: usize = 0xed04;
+
+let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
+let cpuid_value = unsafe { *cpuid_reg };
+```
+
+<v-click>
+⚠️ Processors use cache!
+</v-click>
+
+::right::
+
+![SysCtrl Registers](/mmio/sysctrl_registers.png)
+
+---
+---
+# 8 bit processor
+with cache
+
+![8 Bit Processor](/mmio/8-bit-processor-with-cache.svg)
+
+---
+layout: two-cols
+---
+# Cache Write-Trough
+
+CPUID: **0xe000_ed04** (*0xe000_0000 + 0xed04*)
 
 ```rust{all|1|3-4|6|7-9}
 use core::ptr::read_volatile;
@@ -50,9 +79,14 @@ const CPUID: usize = 0xed04;
 
 let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
 unsafe {
-    read_volatile(cpuid_reg)
+    read_volatile(cpuid_reg) // avoid cache
 }
 ```
+
+|  |  |
+|----------|-------------|
+| `read_volatile`, `write_volatile` | **no** cache or compiler **optimization** |
+| `read`, `write`, `*p` | **use** cache and compiler **optimization**  |
 
 ::right::
 
@@ -64,7 +98,7 @@ layout: two-cols
 # Read the CPUID
 About the MCU
 
-```rust{all|1|3-4|6|7-9|11|12|13|14|15}
+```rust{all|1|3-4|6|7-9|11|12|13|14}
 use core::ptr::read_volatile;
 
 const SYS_CTRL: usize = 0xe000_0000;
@@ -79,7 +113,6 @@ let variant = (cpuid_value >> 24) & 0b1111_1111;
 let architecture = (cpuid_value >> 16) & 0b1111;
 let part_no = (cpuid_value >> 4) & 0b11_1111_1111;
 let revision = (cpuid_value >> 0) & 0b1111;
-// use the values
 ```
 
 ::right::
@@ -131,7 +164,7 @@ Offset: 0xed0c
 ---
 layout: two-cols
 ---
-# Reads and Writes
+# Read and Write
 they do stuff
 
 - Read

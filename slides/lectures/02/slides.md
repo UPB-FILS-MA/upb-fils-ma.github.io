@@ -5,13 +5,13 @@ class: text-center
 highlighter: shiki
 lineNumbers: true
 info: |
-  ## Introduction to microprocessors
+  ## Memory Mapped IO for GPIO
 drawings:
   persist: false
 defaults:
   foo: true
 transition: slide-left
-title: MA - 02 - General Purpose Input and Output
+title: MA - 02 - Memory Mapped IO
 mdc: true
 layout: cover
 themeConfig:
@@ -21,7 +21,7 @@ exportFilename: ma-02
 background:
 ---
 
-# General Purpose Input and Output
+# Memory Mapped IO used for GPIO
 Lecture 2
 
 ---
