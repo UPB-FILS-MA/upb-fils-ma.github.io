@@ -4,38 +4,46 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ### Installation
 
-```
-$ yarn
+```bash
+npm install
+cd slides
+npm install
 ```
 
 ### Local Development
 
+#### Website
+
+```bash
+npm start
 ```
-$ yarn start
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+#### Slides
+
+```bash
+cd slides
+npm run dev -- lectures/$lecture/slides.md
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
 
-```
-$ yarn build
+#### Build Website
+
+```bash
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+#### Build Slides
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+```bash
+cd slides
+./build.sh
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This command generates static content into the `build/slides` directory and can be served using any static contents hosting service.
