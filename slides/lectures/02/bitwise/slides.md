@@ -48,7 +48,7 @@ fn clear_bit(register: usize, bit: u8) -> usize {
 ```rust
 fn clear_bits(register: usize, bits: usize) -> usize {
     // assume register is 0b1111, bits is 0b0111
-    //   ~bits = 0b1000
+    //   !bits = 0b1000
     //   0b1111 & 0b1000 is 0b1000
     register & !bits   
 }

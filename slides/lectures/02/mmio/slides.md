@@ -20,7 +20,7 @@ A real MCU
 | | |
 |-|-|
 | Cortex-M0+ Peripherals | MCU's *settings* and internal peripherals, available at the same address on all M0+ |
-| Peripherals | GPIO, UART, SPI, I2C, USB, etc |
+| Peripherals | GPIO, USART, SPI, I2C, USB, etc |
 | Flash | The storage space |
 | SRAM | RAM memory |
 | @0x0000_0000 | Alias for SRAM or Flash |
