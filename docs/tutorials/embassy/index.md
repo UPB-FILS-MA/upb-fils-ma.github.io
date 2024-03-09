@@ -1,5 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+slug: /tutorials/embassy
+description: How to install the prerequisites for embassy
 ---
 
 # Laboratory Setup
@@ -8,7 +10,7 @@ Here, we will cover the steps needed in order to be able to compile and flash Ru
 
 ## Prerequisites
 
-### Rust
+### Rust Toolchain
 
 In order to install the tools needed to compile Rust code, follow the next steps, depending on your operating system.
 
@@ -71,7 +73,7 @@ This tool is an embedded debugging and target interaction toolkit. It enables it
 cargo install probe-rs --features cli --locked
 ```
 
-If you are on **Linux / WSL 2** you will also need to add this [`udev`](https://probe.rs/files/69-probe-rs.rules) file in `/etc/udev/rules.d`. Then, run:
+If you are on **Linux** you will also need to add this [`udev`](https://probe.rs/files/69-probe-rs.rules) file in `/etc/udev/rules.d`. Then, run:
 
 ```shell
 udevadm control --reload # to ensure the new rules are used.
@@ -106,7 +108,7 @@ cargo build --release --target thumbv6m-none-eabi
 
 To flash a program to the Pi Pico via USB, it needs to be in `USB mass storage device mode`. To put it in this mode, you need to **hold the `BOOTSEL` button down**  while connecting it to your PC. Connecting and disconnecting the USB can lead to the port getting damaged, so we conveniently attached a reset button on the breadboard included on the **Pico Explorer Base**. Now, to make it reflashable again, just press the two buttons simultaneously.
 
-After connecting the board to your PC and compiling the program, locate the binary in the `target/thumbv6m-none-eabi/release/` folder. then, run:
+After connecting the board to your PC and compiling the program, locate the binary in the `target/thumbv6m-none-eabi/release/` folder then, run:
 
 ```shell
 elf2uf-rs -d -s /path/to/your/binary
@@ -115,9 +117,7 @@ elf2uf-rs -d -s /path/to/your/binary
 * `-d` to automatically deploy to a mounted pico
 * `-s` to open the pico as a serial device after deploy and print serial output
   
-**Notes:**
-
-On `Windows`, you may need to run this command in a terminal that has **Admin Privileges**.
+> Note: On `Windows`, you may need to run this command in a terminal that has **Admin Privileges**.
 
 ## Debugging using `Raspberry Pi Debug Probe`
 
@@ -137,4 +137,12 @@ The connections must be:
 |GND (Black)|GND|
 |RX (Yellow)|SWDIO|
 
-Lastly, do not forget to connect both Probe and Pico to your PC.
+> Do not forget to connect both Probe and Pico to your PC.
+
+Now, you can either debug using the `cli` by running:
+
+```shell
+probe-rs run --chip RP2040 path/to/your/binary
+```
+
+Or you can use **Debug and Run** view in Visual Studio Code. You will need to modify the `programBinary` path in the `.vscode/launch.json` config file to point to your binary file.
