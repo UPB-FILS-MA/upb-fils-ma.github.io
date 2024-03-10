@@ -4,7 +4,7 @@ slug: /tutorials/embassy
 description: How to install the prerequisites for embassy
 ---
 
-# Laboratory Setup
+# Embassy-rs Setup
 
 Here, we will cover the steps needed in order to be able to compile and flash Rust applications for `RP2040`, the MCU (Microcontroller Unit) found in our **Raspberry Pi Pico W**s.
 
