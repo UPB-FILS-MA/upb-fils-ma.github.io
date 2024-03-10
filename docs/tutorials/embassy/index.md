@@ -119,7 +119,9 @@ elf2uf-rs -d -s /path/to/your/binary
 * `-d` to automatically deploy to a mounted pico
 * `-s` to open the pico as a serial device after deploy and print serial output
   
-> Note: On `Windows`, you may need to run this command in a terminal that has **Admin Privileges**.
+:::note
+On `Windows`, you may need to run this command in a terminal that has **Admin Privileges**.
+:::
 
 ## Debugging using `Raspberry Pi Debug Probe`
 
