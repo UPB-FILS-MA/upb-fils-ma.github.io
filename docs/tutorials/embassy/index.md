@@ -45,7 +45,7 @@ info: The currently active `rustc` version is `rustc 1.76.0 (07dca489a 2024-02-0
 
 ### `elf2uf2-rs`
 
-This tool is needed to be able to program the board over `USB`. In order to install it, run the following in your terminal:
+This tool is needed to be able to program the board over USB. In order to install it, run the following in your terminal:
 
 ```shell
 cargo install elf2uf2-rs
