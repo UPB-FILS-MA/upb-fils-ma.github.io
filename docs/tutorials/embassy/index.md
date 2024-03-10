@@ -123,7 +123,7 @@ elf2uf-rs -d -s /path/to/your/binary
 On `Windows`, you may need to run this command in a terminal that has **Admin Privileges**.
 :::
 
-## Debugging using `Raspberry Pi Debug Probe`
+## Debugging using Raspberry Pi Debug Probe
 
 In order to be able to debug the program running on the board, we will need to connect the **Raspberry Pi Debug Probe** to our **Raspberry Pi Pico W**. Below, you have a picture of the debug kit provided:
 
