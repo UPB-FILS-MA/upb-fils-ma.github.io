@@ -129,7 +129,7 @@ In order to be able to debug the program running on the board, we will need to c
 
 ![Raspberry Pi Debug probe](assets/the-probe.png)
 
-To connect them, we will use the `3-pin debug to 0.1-inch header (female)` cable. First, carefully insert the `3-pin debug` head in the **right side** connector. Then you will also need to connect it to the `Pico W`. You will find attached the pinout, take a closer look at the bottom of the image:
+To connect them, we will use the **3-pin debug to 0.1-inch header (female)** cable. First, carefully insert the **3-pin debug** head in the **right side** connector. Then you will also need to connect it to the Raspberry Pi Pico W. You will find attached the pinout, take a closer look at the bottom of the image:
 
 ![Raspberry Pi Pico W pinout](assets/picow-pinout.svg)
 
