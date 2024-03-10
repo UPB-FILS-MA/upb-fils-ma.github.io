@@ -85,7 +85,7 @@ udevadm trigger # to ensure the new rules are applied to already added devices.
 
 ### VSCode Extension (Optional)
 
-For a better experience, go ahead and install the **Debugger for probe-rs** extension in the Microsoft Extension Marketplace. This will make debugging the program running on the `RP2040` as easy as debugging a Rust program running on your host machine.
+For a better experience, go ahead and install the **Debugger for probe-rs** extension in the Microsoft Extension Marketplace. This will make debugging the program running on the RP2040 as easy as debugging a Rust program running on your host machine.
 
 ## Flashing over USB
 
