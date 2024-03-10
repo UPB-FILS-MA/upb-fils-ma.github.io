@@ -149,4 +149,4 @@ Now, you can either debug using the `cli` by running:
 probe-rs run --chip RP2040 path/to/your/binary
 ```
 
-Or you can use **Debug and Run** view in Visual Studio Code. You will need to modify the `programBinary` path in the `.vscode/launch.json` config file to point to your binary file.
+or you can use **Debug and Run** view in Visual Studio Code. You will need to modify the `programBinary` path in the `.vscode/launch.json` config file to point to your binary file.
