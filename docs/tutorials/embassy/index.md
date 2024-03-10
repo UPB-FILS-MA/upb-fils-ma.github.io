@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 slug: /tutorials/embassy
-description: How to install the prerequisites for embassy
+description: How to install the prerequisites for embassy-rs
 ---
 
 # Embassy-rs Setup
