@@ -141,7 +141,9 @@ The connections must be:
 |GND (Black)|GND|
 |RX (Yellow)|SWDIO|
 
-> Do not forget to connect both Probe and Pico to your PC.
+:::warning
+Do not forget to connect both the Debug Probe and Pico to your PC.
+:::
 
 Now, you can either debug using the command line by running:
 
