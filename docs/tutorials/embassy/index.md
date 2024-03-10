@@ -91,7 +91,7 @@ For a better experience, go ahead and install the **Debugger for probe-rs** exte
 
 ### Compiling
 
-You will need to compile your executable specifically for the `RP2040` chip. This chip is based on the **ARM Cortex M0+** architecture, so we will need to specify our target when compiling. We can do that in multiple ways:
+You will need to compile your executable specifically for the RP2040 chip. This chip is based on the **ARM Cortex M0+** architecture, so we will need to specify our target when compiling. We can do that in multiple ways:
 
 * using a `.cargo/config.toml` file:
 
