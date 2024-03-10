@@ -143,7 +143,7 @@ The connections must be:
 
 > Do not forget to connect both Probe and Pico to your PC.
 
-Now, you can either debug using the `cli` by running:
+Now, you can either debug using the command line by running:
 
 ```shell
 probe-rs run --chip RP2040 path/to/your/binary
