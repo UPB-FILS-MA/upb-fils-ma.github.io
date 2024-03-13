@@ -235,7 +235,7 @@ const GPIOX_CTRL: u32 = 0x4001_4004;
 const GPIO_OE_CLR: *mut u32= 0xd000_0028 as *mut u32;
 const GPIO_IN: *const u32= 0xd000_0004 as *const u32;
 
-let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
+let gpio_ctrl = (GPIOX_CTRL + 8 * pin) as *mut u32;
 
 let value = unsafe { 
     write_volatile(gpio_ctrl, 5);
@@ -268,7 +268,7 @@ const GPIO_OE_SET: *mut u32= 0xd000_0024 as *mut u32;
 const GPIO_OUT_SET:*mut u32= 0xd000_0014 as *mut u32;
 const GPIO_OUT_CLR:*mut u32= 0xd000_0018 as *mut u32;
 
-let gpio_ctrl = GPIOX_CTRL + 8 * pin as *mut u32;
+let gpio_ctrl = (GPIOX_CTRL + 8 * pin) as *mut u32;
 unsafe { 
     write_volatile(gpio_ctrl, 5);
     write_volatile(GPIO_OE_SET, 1 << pin);
