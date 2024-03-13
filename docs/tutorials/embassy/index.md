@@ -177,7 +177,7 @@ Due to the size constraints imposed on us (in our case, `2MB` of flash memory), 
 
 #### No `main` function
 
-Because we are using the **Embassy-rs** framework, we want to let it take care of entry point of our program (because it has to do some complex operations, like allocating the `task-arena` and `executor` structures). For the moment, all we will need to do is add the `#![no_main]` attribute to `src/main.rs`.
+Because we are using the **Embassy-rs** framework, we want to let it take care of the entry point of our program (because it has to do some complex operations, like allocating the `task-arena` and `executor` structures). For the moment, all we will need to do is add the `#![no_main]` attribute to `src/main.rs`.
 
 #### Toolchain setting
 
