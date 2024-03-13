@@ -208,7 +208,7 @@ We also need to take care of the memory layout of our program when writing code 
 
 ##### `memory.x`
 
-```.x
+```linker-script
 /* Memory regions for the linker script */
 /* Address map provided by datasheet: https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf */
 MEMORY {
