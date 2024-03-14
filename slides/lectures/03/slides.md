@@ -46,4 +46,4 @@ we discussed about
 
 - Exceptions
 - Interrupts
-- How the RP2040 boots
+- How the RP2040 boots and loads the software
