@@ -260,7 +260,7 @@ The RP2040 boot process
 ```mermaid
 flowchart LR
     S(PowerUp) --> I
-    subgraph Internal Boot Loader
+    subgraph I0[Internal Boot Loader]
         I{BOOTSEL
         Pressed} -- Yes --> U
         I -- NO --> R(Read 
@@ -294,6 +294,7 @@ flowchart LR
     classDef exception fill:#F8CECC,stroke:#B85450
     classDef error fill:#ff0000,stroke:#ae0000,color:#ffffff
     classDef start fill:#00ef00
+    classDef rom fill:#f7ffe7
 
     class A,E,E2,S2 instruction
     class R,F memory
@@ -301,6 +302,7 @@ flowchart LR
     class L error
     class E3 exception
     class S start
+    class I0 rom
 ```
 
 The internal boot loader cannot be overwritten and assures that bricking the device is difficult.
