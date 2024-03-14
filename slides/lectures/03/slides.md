@@ -31,7 +31,7 @@ used by RP2040
 
 - Exceptions
 - Interrupts
-- DMA
+- Boot
 
 <!-- Exceptions -->
 
@@ -44,8 +44,6 @@ src: ./exceptions/slides.md
 # Conclusion
 we discussed about
 
-- How a processor functions
-- Microcontrollers (MCU) / Microprocessors (CPU)
-- Microcontroller architectures
-- ARM Cortex-M
-- RP2040
+- Exceptions
+- Interrupts
+- How the RP2040 boots
