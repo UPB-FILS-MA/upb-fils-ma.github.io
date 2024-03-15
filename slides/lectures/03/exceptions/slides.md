@@ -1,4 +1,23 @@
 ---
+layout: section
+---
+# Exceptions
+for the ARM Cortex-M0+ processor
+
+---
+---
+# Bibliography
+for this section
+
+**Joseph Yiu**, *The Definitive Guide to ARM® Cortex®-M0 and Cortex-M0+ Processors, 2nd Edition* 
+   - Chapter 4 - *Architecture*
+     - Section 4.4 - *Stack Memory Operations*
+     - Section 4.5 - *Exceptions and Interrupts*
+   - Chapter 8 - *Exceptions and Interrupts*
+     - Section 8.1 - *What are Exceptions and Interrupts*
+     - Section 8.2 - *Exception types on Cortex-M0 and Cortex-M0+*
+
+---
 ---
 # Processor Exceptions
 what happens if something does not work as required
@@ -61,6 +80,29 @@ flowchart LR
 
 - the exception table of RP2040 at address 0x1000_0100 (start of the boot area + 4 bytes)
 - the processor generates a *Reset* exception when it starts
+
+---
+layout: section
+---
+# Interrupts
+for ARM Cortex-M0+
+
+---
+---
+# Bibliography
+for this section
+
+**Joseph Yiu**, *The Definitive Guide to ARM® Cortex®-M0 and Cortex-M0+ Processors, 2nd Edition* 
+   - Chapter 8 - *Exceptions and Interrupts*
+     - Section 8.1 - *What are Exceptions and Interrupts*
+     - Section 8.3 - *Brief Overview of the NVIC*
+     - Section 8.4 - *Definition of Exception Priority Levels*
+     - Section 8.5 - *Vector Table*
+     - Section 8.6 - *Exception Sequence Overview*
+   - Chapter 11 - *Fault Handling*
+     - Section 11.1 - *Fault Exception Overview*
+     - Section 11.2 - *What Can Cause a Fault*
+     - Section 11.7 - *Lockup*
 
 ---
 ---
@@ -204,6 +246,23 @@ flowchart LR
 ![RP2040 Interrupts](/exceptions/interrupts.png)
 
 </div>
+
+---
+layout: section
+---
+# Boot
+of the RP2040
+
+---
+---
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 2 - *System Description*
+     - Section 2.7 - *Boot sequence*
+     - Section 2.8 - *Bootrom*
+       - Subsection 2.8.1 - *Processor Controlled Boot Sequence*
 
 ---
 ---
