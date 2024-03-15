@@ -113,7 +113,7 @@ To flash a program to the Raspberry Pi Pico via USB, it needs to be in *USB mass
 After connecting the board to your PC and compiling the program, locate the binary in the `target/thumbv6m-none-eabi/release/` folder then, run:
 
 ```shell
-elf2uf-rs -d -s /path/to/your/binary
+elf2uf2-rs -d -s /path/to/your/binary
 ```
 
 * `-d` to automatically deploy to a mounted pico
