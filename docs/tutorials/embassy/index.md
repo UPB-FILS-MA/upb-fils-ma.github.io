@@ -24,10 +24,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 This downloads and runs `rustup-init.sh`, which in turn downloads and runs the correct version of the `rustup-init` executable for your platform.
 
-:::info Before installing elf2uf2-rs, you might need an additional package, called `libudev`. You can get it by running the following in your terminal. :::
+:::info 
+
+Before installing elf2uf2-rs, you might need an additional package, called `libudev`. You can get it by running the following in your terminal. 
 ```shell
 sudo apt-get install libudev-dev
-```
 
 #### Windows
 
