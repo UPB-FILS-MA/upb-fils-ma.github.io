@@ -66,7 +66,10 @@ Options:
   -s, --serial   Connect to serial after deploy
   -h, --help     Print help
 ```
-
+:::info Before installing elf2uf2-rs, you might need an additional package, called libudev. You can get it by running the following in your terminal. :::
+```shell
+sudo apt-get install libudev-dev
+```
 ### `probe-rs`
 
 This tool is an embedded debugging and target interaction toolkit. It enables its user to program and debug microcontrollers via a debug probe.
