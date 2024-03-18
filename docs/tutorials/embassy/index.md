@@ -30,6 +30,8 @@ Before installing elf2uf2-rs, you might need an additional package, called `libu
 ```shell
 sudo apt-get install libudev-dev
 
+:::
+
 #### Windows
 
 Download the respective executable:
