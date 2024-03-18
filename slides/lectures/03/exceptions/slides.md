@@ -34,7 +34,7 @@ what happens if something does not work as required
 ---
 ---
 # Exception (HardFault) Handling
-ARM Cortex-M0+ has one **actual expection**, *HardFault*
+ARM Cortex-M0+ has one **actual exception**, *HardFault*
 
 ```mermaid
 flowchart LR
