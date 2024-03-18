@@ -26,11 +26,10 @@ This downloads and runs `rustup-init.sh`, which in turn downloads and runs the c
 
 :::info 
 
-Before installing elf2uf2-rs, you might need an additional package, called `libudev`. You can get it by running the following in your terminal. 
+Before installing elf2uf2-rs, you might need an additional package, called `libudev`. You can get it by running the following in your terminal. :::
 ```shell
 sudo apt-get install libudev-dev
 ```
-:::
 
 #### Windows
 
