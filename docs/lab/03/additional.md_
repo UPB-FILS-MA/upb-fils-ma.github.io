@@ -1,0 +1,236 @@
+## How to setup an interrupt (or exception) -- bare metal approach
+
+The following steps won't be enough for full bare metal setup of the interrupts. It is only a model that's meant to help understanding this process which is abstracted in higher level frameworks like embassy.
+
+#### 1. Write an interrupt handler
+An interrupt handler is a function that should be executed when a the interrupt signal is triggered. This function must have the signature `fn()` without any arguments or return value.
+
+```rust
+extern "C" fn interrupt_0_handler() {
+    // Clear the irq
+    // Your interrupt handling code here
+}
+```
+
+Using **extern "C"** ensures the function uses the C calling convention, which is necessary for interrupt handlers.
+
+#### 2. Create the vector table array
+Make a type of entry for the interrupt vector table, which will contain a pointer to an interrupt handler function.
+
+``` rust
+pub union Vector {
+    handler: unsafe extern "C" fn(), //pointer to handler function
+}
+```
+Create the vector table array, populating it with the addresses of your handler functions. Use the **#[link_section]** attribute to place this table in the correct memory location.
+
+```rust
+#[link_section = ".vector_table"]
+pub static  VECTOR_TABLE: [Vector; 5] = [
+
+     Vector {handler: 0x2000_0000}, // initial_stack_pointer: Adjust this to your MCU's RAM start + size
+    Vector {handler: reset_handler}, //assuming this handler exits
+    Vector {handler: default_handler}, //assuming this handler exits
+    Vector {handler: hard_fault_handler}, //assuming this handler exits
+    // Other handlers...
+    Vector {handler: interrupt_0_handler},
+    // More interrupts...
+];
+```
+ #### 3. Direct the Linker
+
+Ensure your linker script (.ld file) places the .vector_table section at the correct start address expected by the microcontroller. 
+
+``` ld
+SECTIONS {
+    .text : {
+        *(.vector_table) /* Place the vector table at the start of flash memory */
+        *(.text)         /* Followed by the rest of the program code */
+    } > FLASH
+}
+```
+
+ #### 4. Enabling the interrupt 
+ 
+ This step binds the peripheral signal to the interrupt handler function. This is only needed for exceptions of interrupt type.
+
+ :::note 
+
+ Enabling an interrupt does not also set its main function. For example if we want to enable interrupt for a button (SIO) we need to first se it up as an input, add pull-up resistor etc.
+
+:::
+
+ For proc0 (core 0) the registers for enabling interrupts start at [PROC0_INTE0](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#reg-io_bank0-PROC0_INTE0).
+
+```rust
+const SET: u32 = 0x2000;
+//Interrupt Enable for proc0
+const PROC0_INTE0 : u32 = 0x0100; 
+
+const MASK_LEVEL_LOW : u32 = 0b000;
+const MASK_LEVEL_HIGH : u32 = 0b001;
+const MASK_EDGE_LOW : u32 = 0b0100;
+const MASK_EDGE_HIGH : u32 = 0b1000;
+
+let mask = MASK_EDGE_HIGH;
+let register = PROC_INTE0;
+let offset = pin_num /4; //take the pin we want to bind with the interrupt handler
+
+write_volatile((register as usize + SET) as *mut u32, mask << offset);
+```
+ 
+### Additional steps
+
+
+ #### Setup the priority
+The order in which the core execute each ISR is base on a priority queue. This not only stores the address of the handler function but also sets pointers for the other pending IRQ handlers.
+
+ To set the priority for a IRQ :
+
+``` rust
+let priority_for_interrupt_0 : u8 = prio;
+const NVIC_PRI4 = 0xe410;
+ NVIC_IPR4 = (priority_for_interrupt_3 << 24) |
+            (priority_for_interrupt_2 << 16) |
+            (priority_for_interrupt_1 << 8)  |
+            priority_for_interrupt_0;
+```
+
+## What is a timer?
+
+A timer is a type of peripheral can measure fixed time intervals and generate interrupts when the measured interval expires. A timer, once initialized will work independently of the processing unit. This allows delay loops to be removed from the main program.
+
+### What is a counter?
+A counter is a register or memory location that stores a numerical value which is incremented at a certain rate. This rate is usually determined by the timer's input clock frequency and a prescaler, which is a value that divides the input clock to slow down the counter increment rate. 
+
+![alt text](images/timer_counter.png)
+
+
+We will describe the external timer for the rp2040 in the next laboratory. For now we will use he processor internal timer which is bound to the **SysTick** exception. This internal timer is present for all arm cortex-m processors. 
+
+## Setting up SysTick -- bare metal approach
+
+Systick timer is configured on 24 bits which are divided as following :  
+![alt text](images/systick_regs.png)
+
+
+```rust
+
+const SYST: u32 = 0x00ff_ffff;
+
+//SYS_CSR is further divided in :
+const SYST_CSR_ENABLE: u32 = 1 << 0; //Enable SysTick counter
+const SYST_CSR_TICKINT: u32 = 1 << 1; //Enables SysTick exception request
+const SYST_CSR_CLKSOURCE: u32 = 1 << 2; //SysTick clock source. 
+const SYST_CSR_COUNTFLAG: u32 = 1 << 16; //Returns 1 if timer counted to 0 since last time this was read. 
+
+//SYS_RVR :
+const SYST_RVR_RELOAD: u32 = 1 << 24; //Value to load into the SysTick Current Value Register when the counter reaches 0.
+```
+
+### Enable SysTick exception
+To enable and configure SysTick we will use the first register.
+```rust
+write_volatile(SYST + SET, SYST_CSR_ENABLE); //enable counter
+write_volatile(SYST + SET, SYST_CSR_TICKINT); //enable exception
+write_volatile(SYST + SET, SYST_CSR_CLKSOURCE); //enable systick source
+```
+
+### Setup after how many ticks the exception will be raised
+To configure when the SysTick exception will happen we need to set the SYST_RVR register.
+```rust
+let number_of_ticks: u32 = 1000000;
+write_volatile(SYST + 24 /*RVR*/, number_of_ticks);
+```
+
+### Write the exception handler for SysTick
+
+```rust
+
+extern "C" fn handle_SysTick_Exception(){
+
+    //do something after number_of_ticks were counted
+  
+}
+
+//don't forget to link this function at the appropriate address in the vector table
+
+```
+
+## Setting up Systick using rp-hal
+
+
+### Enable the SysTick timer
+
+```rust
+let mut core = pac::CorePeripherals::take().unwrap();
+
+core.SYST.clear_current();
+core.SYST.enable_counter();
+core.SYST.enable_interrupt();
+```
+
+### Set the number of ticks need the raise the exception
+
+```rust
+/// Our Cortex-M systick goes from this value down to zero. For our timer maths
+/// to work, this value must be of the form `2**N - 1`.
+const SYSTICK_RELOAD: u32 = 0x00FF_FFFF;
+
+// Use systick as a count-down timer
+core.SYST.set_reload(SYSTICK_RELOAD);
+```
+
+### Write the exception handler
+
+```rust
+#[exception]
+fn SysTick() {
+ //do something
+
+ //reload timer
+ core.SYST.set_reload(SYSTICK_RELOAD);
+}
+
+```
+
+## Using Timers in Embassy
+
+### Import the Timer API 
+Include the necessary modules from Embassy that provide timer functionality.
+
+```rust
+use embassy_time::{Duration, Timer};
+```
+
+
+### Await the Timer 
+Use the await keyword on the timer's delay function to pause the execution of the current task until the timer expires. This is a non-blocking wait, so other async tasks can run during this time.
+```rust
+Timer::after(Duration::from_millis(100)).await;
+//wait in current task 100 milliseconds
+```
+
+Once the timer expires, the task that awaited the timer resumes execution from the point it awaited.
+
+### Passing states between tasks
+
+Sharing data safely between tasks can be done using shared resources that ensure access is synchronized to prevent race conditions and other concurrency issues. Rust's `core::sync::atomic` provides types such as `AtomicBool`, `AtomicIsize`, `AtomicUsize` that can make read and write operations to be executed atomically. This means that read and write operations cannot be interrupted by interrupts or other tasks. 
+
+```rust
+use core::sync::atomic::{AtomicU32, Ordering};
+
+static SHARED_VAL: AtomicU32 = AtomicU32::new(0 /*initial value*/);
+
+//read value in task
+let val = SHARED_VAL.load(Ordering::Relaxed);
+
+//write value in task
+SHARED_VAL.store(val, Ordering::Relaxed);
+```
+
+:::note
+
+For scenarios where atomic operations are not sufficient and you need to protect more complex interactions or data structures, using a Mutex from Embassy is more appropriate. Embassy's Mutex is designed to be used in asynchronous environments, allowing tasks to await the lock without blocking.
+
+:::
