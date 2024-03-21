@@ -8,8 +8,26 @@ layout: section
 # Clocks
 all peripherals and the MCU use a clock to execute at certain intervals
 
+<div grid="~ cols-2 gap-5">
+
+<div>
+
+| Source | Usage |
+|-|-|
+| *external crystal (XOSC)* | a stable frequency is required, for instance when using USB |
+| *internal ring (ROSC)* | low frequency, in between 1.8 - 12 MHz (varies) |
+
+Embassy initializes the Raspberry Pi Pico with the clock source from the 12 MHz crystal.
+```rust
+let p = embassy_rp::init(Default::default());
+```
+
+</div>
+
 <div align="center">
 <img src="/timers/clocks.png" class="rounded w-140">
+</div>
+
 </div>
 
 ---
@@ -17,9 +35,11 @@ all peripherals and the MCU use a clock to execute at certain intervals
 # Frequency divider
 stabilizing the signal and adjusting it
 
+<div align="center">
 <img src="/timers/clock_pipeline.png" class="rounded w-140">
 
 <img src="/timers/clock_divider.png" class="rounded w-140">
+</div>
 
 ---
 layout: two-cols
@@ -69,7 +89,7 @@ ARM Cortex-M time counter
 
 <v-click>
 $$
-[f]_{Hz} = \frac{1}{SYST{\_}RVR} * 1,000,000
+f = \frac{1}{SYST{\_}RVR} * 1,000,000 [Hz]_{SI}
 $$
 </v-click>
 
