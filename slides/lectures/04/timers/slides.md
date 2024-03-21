@@ -22,27 +22,56 @@ stabilizing the signal and adjusting it
 <img src="/timers/clock_divider.png" class="rounded w-140">
 
 ---
+layout: two-cols
 ---
 # Counter
 increments a register at every clock cycle
+
+| Registers | Description |
+|-----------|-------------|
+| `value` | the current value of the counter |
+| `direction` | set to count UP or DOWN |
+| `reset` | UP: the value at which the counter resets to `0` DOWN: the value to which the counter resets after getting to `0`  |
+
+<style>
+.two-columns {
+    grid-template-columns: 2fr 3fr;
+}
+</style>
+
+:: right ::
+
+<div align="center">
+<img src="/timers/counter.svg" class="rounded w-150">
+</div>
 
 ---
 layout: two-cols
 ---
 # SysTick
-ARM Cortex-M peripheral
+ARM Cortex-M time counter
 
 <img src="/timers/systick_registers.png" class="rounded w-140">
+<v-clicks>
 
 - decrements the value of `SYST_CVR` every μs
 - when `SYST_CVR` becomes `0`: 
   - triggers the `SysTick` the exception
   - next clock cycle sets the value of `SYST_CVR` to `SYST_RVR`
+- `SYST_CALIB` is the value of `SYST_RVR` for a 10ms interval (might not be available)
+
+</v-clicks>
 
 :: right ::
 
 ### `SYST_CSR` register
 <img src="/timers/systick_csr_register.png" class="rounded">
+
+<v-click>
+$$
+[f]_{Hz} = \frac{1}{SYST{\_}RVR} * 1,000,000
+$$
+</v-click>
 
 ---
 layout: two-cols
@@ -84,26 +113,64 @@ unsafe fn SysTick() {
 ```
 
 ---
+layout: two-cols
+---
+# Alarm
+counter that triggers interrupts after a time interval
+
+| Registers | Description |
+|-----------|-------------|
+| `value` | the current value of the counter |
+| `direction` | set to count UP or DOWN |
+| `reset` | UP: max value before `0` DOWN: value after `0`  |
+| `alarm_x` | when `value` == `alarm_x`, triggers an interrupt, `x` in `1` .. `n` |
+
+<style>
+.two-columns {
+    grid-template-columns: 2fr 3fr;
+}
+</style>
+
+:: right ::
+
+<div align="center">
+<img src="/timers/alarm.svg" class="rounded w-150">
+</div>
+
+---
 ---
 # Timer
 of the RP2040
 
-- stores a 64 bit number
-- starts with 0 at (the peripheral's) reset
-- increments the number every microsecond
+<div grid="~ cols-2 gap-5">
+
+<div>
+
+- stores a 64 bit number (`reset` is 2<sup>64-1</sup> )
+- starts with `0` at (the peripheral's) reset
+- increments the number every μs
 - in practice fully monotonic (cannot over flow)
 - allows 4 alarms that trigger interrupts
   - `TIMER_IRQ_0`
   - `TIMER_IRQ_1`
   - `TIMER_IRQ_2`
   - `TIMER_IRQ_3`
+- `alarm_0` ... `alarm_3` registers are only 32 bits wide
+
+</div>
+
+<div align="center">
+<img src="/timers/alarm.svg" class="rounded w-150">
+</div>
+
+</div>
 
 ---
 layout: two-cols
 ---
 
 # Timer
-registers
+read the number of elapsed μs since reset
 
 <img src="/timers/timer_registers_1.png" class="rounded w-100">
 
