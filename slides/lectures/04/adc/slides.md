@@ -99,7 +99,7 @@ $$
 </div>
 
 <div align="center">
-<img src="/../pwm/rp2040_adafruit_pinout.png" class="rounded w-80">
+<img src="/pwm/rp2040_adafruit_pinout.png" class="rounded w-80">
 </div>
 
 ---
