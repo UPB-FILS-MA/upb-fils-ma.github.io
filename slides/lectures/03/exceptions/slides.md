@@ -167,7 +167,7 @@ flowchart LR
 
 <div>
 
-- the interrupt vector (table) of RP3040 starts at address 0x1000_0040 (after the exceptions table with 15 interrupts)
+- the interrupt vector (table) of RP2040 starts at address 0x1000_0040 (after the exceptions table with 15 interrupts)
 - ARM Cortex-M0+ has a maximum of 32 interrupt requests (IRQs)
 
 </div>
