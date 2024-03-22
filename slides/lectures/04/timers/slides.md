@@ -101,7 +101,7 @@ ARM Cortex-M peripheral
 
 <img src="/timers/systick_registers.png" class="rounded w-140">
 
-```rust
+```rust{all|3,4|1,7,9|2,10|3,4,13}
 const SYST_RVR: *mut u32 = 0xe000_0014;
 const SYST_CVR: *mut u32 = 0xe000_0018;
 // + 0x2000 is bitwise set

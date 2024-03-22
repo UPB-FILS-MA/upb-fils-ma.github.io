@@ -148,8 +148,10 @@ layout: two-cols
 # Example
 using Embassy
 
-```rust{all|1|3|3,4|3,4,5|7-11|14|15|16,17|13,16,17,18}
+```rust{all|1|3|5|5,6|5,6,7|9-13|16|17|18,19|15,18,19,20}
 use embassy_rp::pwm::{Config, Pwm};
+
+let p = embassy_rp::init(Default::default());
 
 let mut c: Config = Default::default();
 c.top = 0x8000;

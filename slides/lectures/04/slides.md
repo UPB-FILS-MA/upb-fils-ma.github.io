@@ -28,10 +28,11 @@ Lecture 4
 
 # PWM and ADC
 
-- Timers
+- Counters
+- Timers and Alarms
 - About Analog and Digital Signals
-- Pulse Width Modulation (PWD)
-- Analog to Digital Converters
+- Pulse Width Modulation (PWM)
+- Analog to Digital Converters (ADC)
 
 <!-- Timers -->
 
@@ -62,8 +63,9 @@ src: ./adc/slides.md
 # Conclusion
 we discussed about
 
-- How a processor functions
-- Microcontrollers (MCU) / Microprocessors (CPU)
-- Microcontroller architectures
-- ARM Cortex-M
-- RP2040
+- Counters
+- SysTick
+- Timers and Alarms
+- PWM
+- Analog and Digital
+- ADC
