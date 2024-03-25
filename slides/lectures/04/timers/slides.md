@@ -46,7 +46,10 @@ let p = embassy_rp::init(Default::default());
 ---
 ---
 # Frequency divider
-divides down the clock signals used for the timer, giving reduced overflow rates. Its purpose is to allow the timer to be clocked at the rate a user desires.
+stabilizing the signal and adjusting it
+
+1. divides down the clock signals used for the timer, giving reduced overflow rates
+2. allows the timer to be clocked at a user desires the rate
 
 <div align="center">
 <img src="/timers/clock_pipeline.png" class="rounded w-140">

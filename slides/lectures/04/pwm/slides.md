@@ -75,17 +75,23 @@ $$
 }
 </style>
 
-## Usage examples
-
-- dimming an LED
-- controlling the rotation of a stepper motor
-
 :: right ::
 
 <div align="center">
 <img src="/pwm/pwm.svg" class="rounded w-150">
 </div>
 
+---
+---
+
+# Usage examples
+
+- dimming an LED
+<img src="/pwm/pwm_led.gif" class="rounded w-90">
+- controlling motors
+  - controlling the angle of a stepper motor
+  - controlling the RPM of a motor
+<img src="/pwm/pwm_voltage.gif" class="rounded w-90">
 ---
 layout: two-cols
 ---

@@ -39,6 +39,12 @@ sampling an analog signal to an array of values
 <img src="/adc/sampling_values.svg" class="rounded w-150">
 </div>
 
+<div align="center">
+
+Lower sample rates yield the *aliasing effect*.
+
+</div>
+
 ---
 ---
 # Nyquist–Shannon Sampling Theorem
@@ -51,7 +57,9 @@ $$
 sampling_f >= 2 \times max_{f}
 $$
 
-*The **sampling frequency** has to be at least **two times higher** than the **maximum frequency** of the signal.*
+*The **sampling frequency** has to be at least **two times higher** than the **maximum frequency** of the signal* to avoid frequency aliasing[^aliasing].
+
+[^aliasing]: Aliasing is the overlapping of frequency components. This overlap results in distortion or artifacts when the signal is reconstructed from samples which causes the **reconstructed signal to differ from the original** continuous signal.
 
 </div>
 
@@ -62,19 +70,31 @@ $$
 </div>
 
 ---
+layout: two-cols
 ---
 # Sampling
 how the ADC works
 
-<div align="center">
-<img src="/adc/adc.svg" class="rounded w-150">
-</div>
+<style>
+.two-columns {
+    grid-template-columns: 3fr 6fr;
+}
+</style>
 
 - assumes bit<sub>n-1</sub> of `compare_value` is `1`
 - compares the input signal with a generated analog signal from `compare_value`
   - if input is lower, bit<sub>n-1</sub> is `0`
   - if input if higher, bit<sub>n-1</sub> is `1`
-- repeats for bit<sub>n-2</sub> 
+- repeats for bit<sub>n-2</sub>, bit<sub>n-3</sub> ... bit<sub>0</sub>
+
+:: right ::
+
+<div align="center">
+<img src="/adc/adc.svg" class="rounded w-150">
+</div>
+
+There are different [types of ADCs](https://www.monolithicpower.com/en/analog-to-digital-converters/introduction-to-adcs/types-of-adcs) depending on the architecture. 
+The most common used is SAR (*Successive Approximation Register*) ADC[^adc_types], also integrated in RP2040.
 
 ---
 layout: two-cols
