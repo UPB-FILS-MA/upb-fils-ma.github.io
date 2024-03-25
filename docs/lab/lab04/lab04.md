@@ -25,6 +25,8 @@ A clock is a piece of hardware that provides us with that reference. Its purpose
 The most precise type of clock is the crystal oscillator (XOSC). The reason why it is so accurate is because it uses the crystal's natural vibration frequency to create the clock signal. This clock is usually external to the processor itself, but the processor also has an internal clock (ROSC) that is less accurate and that can be used in cases where small variations of clock  pulses are negligeable. When using the USB protocol, for instance, a more stable clock signal is required, therefore the XOSC is necessary.
 The crystal oscillator on the Raspberry Pi Pico board has a frequency of 12MHz. This clock signal is just a reference, and most of the time we need to adjust it to our needs. This is done by either multiplying or dividing the clock, or in other words, elevating or lowering the frequency of the clock. For example, the RP2040 itself runs on a 125MHz clock, so the crystal oscillator frequency of 12MHz is multiplied (this is done using a method called Phase-Locked Loop).
 
+![RPCrystal](images/rp_crystal.png)
+
 ### Counters
 
 A counter is a piece of hardware logic that counts, as its name suggests. Every clock cycle, it increments the value of a register, until it overflows and starts anew. 
@@ -33,12 +35,13 @@ A counter is a piece of hardware logic that counts, as its name suggests. Every 
 A regular counter on 8 bits would count up from 0 to 255, then loop back to 0 and continue counting. 
 :::
 
-TODO: insert image from GTKWave
-
 On the RP2040, the counter is associated with 3 registers:
-1. `value` - the current value of the counter
-2. `direction` - whether the counter is counting UP or DOWN
-3. `reset` - if the direction is UP, the value at which the counter resets to 0; if the direction is DOWN, the value at which the counter reset after reaching 0
+
+| Register | Description |
+|-----------|----------|
+| `value` | the current value of the counter |
+| `direction` | whether the counter is counting UP or DOWN |
+| `reset` | if the direction is UP, the value at which the counter resets to 0; if the direction is DOWN, the value at which the counter reset after reaching 0 |
 
 ![Counter](images/counter.svg)
 
@@ -101,7 +104,13 @@ duty\_cycle = \frac{time\_on}{period} \%
 
 $$
 
-For the RP2040, to generate this PWM signal, a *counter* is used. When the counter is reset, the value of the output signal is 1. The counter counts up until it reaches a certain value, after which the value of the output signal becomes 0. The counter continues to count until the top (or until it overflows), and then the signal becomes 1 again. This way, by choosing the value that the counter should compare to, we set the duty cycle of the PWM signal.
+For the RP2040, to generate this PWM signal, a *counter* is used. The PWM counter is controlled by these registers (`X` can be from 0-7, depending on the channel):
+
+- `CHX_CTR` - the actual value of the counter
+- `CHX_CC` - the value that the counter will compare to
+- `CHX_TOP` - the value at which the counter will reset (or *wrap*)
+
+When `CHX_CTR` is reset, the value of the output signal is 1. The counter counts up until it reaches `CHX_CC`, after which the value of the output signal becomes 0. The counter continues to count until it reaches `CHX_TOP`, and then the signal becomes 1 again. This way, by choosing the value of `CHX_CC`, we set the duty cycle of the PWM signal.
 
 ![PWMRP2040](images/pwm_rp2040_example.png)
 
@@ -111,6 +120,45 @@ On RP2040, all GPIO pins support PWM. Every two pins share a PWM slice, and each
 
 :::info
 This means that in order to use a pin as PWM, we need to know what channel it's on, and which output it uses (A or B).
+:::
+
+### Examples of hardware controlled through PWM
+
+- leds
+- motors
+- buzzers
+- RGB leds (what we will be using for this lab)
+
+An **RGB** led is a led that can emit any color, using a combination of red, green and blue light. On the inside, it's actually made up of 3 separate leds:
+- *R* led - to control the intensity of the *red* light
+- *G* led - to control the intensity of the *green* light
+- *B* led - to control the intensity of the *blue* light
+
+By using PWM on the R, G and B leds, we can control each of their intensity to represent any color.
+
+```info
+For example, if we wanted to create the color purple, we would set the intensity of red and blue to 100%, and the intensity of green to 0%.
+```
+
+There are two different types of RGB leds:
+
+- common cathode: all LED cathodes are connected together. A LOW signal means off, and a HIGH signal means on at max intensity.
+- common anode: all LED anodes are connected together. A LOW signal means on at max intensity, and a HIGH signal means off.
+
+![CommonAnodeCommonCathode](images/common_anode_common_cathode.png)
+
+:::warning
+For this lab, we will be using **common anode** RGB leds, which means that the PWM signal should be *opposite*. 0 will be 100% intensity, and 1 will be 0% intensity.
+:::
+
+#### How to wire an RGB
+
+For **common cathode** RGB, we must tie each of the 3 color led legs to GPIO pins in series with a *resistance*, and connect the fourth pin to **GND**. 
+
+For **common anode** RGB, we must also tie each of the 3 color led legs to GPIO pins in series with a *resistance*, but connect the fourth pin to **3V3** instead. 
+
+:::danger
+Do not forget to tie a resistance to each color pin of the RGB!
 :::
 
 ### PWM in Embassy-rs
@@ -168,17 +216,22 @@ pwm.set_config(&config); // set the new configuration for PWM
 Now we know how to represent an analog signal using digital signals. There are plenty of cases in which we need to know how to transform an analog signal into a digital one, for example a temperature reading, or the voice of a person. This means that we need to correctly represent a continuous wave of infinite values to a discrete wave of a finite set of values.
 For this, we need to sample the analog signal periodically, in other words to measure the analog signal at a fixed interval of time. This is done by using an **Analog-to-Digital converter**.
 
-The *sampling rate* is the frequency at which a new sample is read. The higher the sampling rate, the more samples we get, so the more accurate the representation of the signal.
+The ADC has two important parameters that define the quality of the signal representation:
 
-The *resolution* is the number of bits which we can use in order to store the value of the sample. The higher the resolution, the more values we can store, so the more accurate the representation.
+| Parameter | Description | Impact on quality |
+|-----------|-------------|-------------------|
+| Sampling Rate | Frequency at which a new sample is read | The higher the sampling rate, the more samples we get, so the more accurate the representation of the signal |
+| Resolution | Number of bits which we can use in order to store the value of the sample | The higher the resolution, the more values we can store, so the more accurate the representation |
 
 :::info
-For example, a resolution of 8 bits means that we can encode the analog signal to one in 256 levels.
+For example, a resolution of 8 bits means that we can approximate the analog signal to a value from 0 to 255.
 :::
 
 ![ADCSampling](images/sampling_values.svg)
 
 ### Nyquist-Shannon Sampling Theorem
+
+The Nyquist-Shannon sampling theorem serves as a bridge between continuous-time signals and discrete-time signals. It establishes a link between the frequency range of a signal and the sample rate required to avoid a type of distortion called *aliasing*. Aliasing occurs when a signal is not sampled fast enough to construct an accurate waveform representation.
 
 For an analog signal to be represented without loss of information, the conversion needs to satisfy the following formula:
 
@@ -191,11 +244,34 @@ In other words, we must sample at least twice per cycle.
 
 ![NyquistTheorem](images/nyquist_theorem.png)
 
-### Example of analog sensor
+Read more about it [here](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)
 
-A **photoresistor** (or photocell) is a sensor that measures the intensity of light around it. Its internal resistance varies depending on the light hitting its surface, therefore the more light there is, the lower the resistance will be. 
+### Examples of analog sensors
+
+- temperature sensor
+- potentiometer
+- photoresistor (what we will be using for this lab)
+
+A **photoresistor** (or photocell) is a sensor that measures the intensity of light around it. Its internal resistance varies depending on the light hitting its surface; therefore, the more light there is, the lower the resistance will be. 
 
 ![Photoresistor](images/photoresistor.png)
+
+#### How to wire a photoresistor
+
+To wire a photoresistor, we need to connect one leg to *GND* and the other leg to a voltage divider. We remember from [Lab1](../01/index.md#voltage-divider) that:
+$$
+V_{out} = V_{in} * \frac{R_{2}}{R_{1} + R_{2}};
+$$
+
+In our case:
+- $ V_{out} $ will be the voltage at the ADC pin on the MCU
+- $ V_{in} $ will be the voltage at the from the GPIO pin the photoresistor is tied to
+- $ R_{1} $ is the variable resistance of the photoresistor
+- $ R_{2} $ is a resistance compatible with our photoresistor (in our case, 10k $\Omega$)
+
+This way, the ADC pin measures the photoresistor's resistance, without the risk of a short-circuit.
+
+![PhotoresistorWiring](images/photoresistor_wiring.png)
 
 ### ADC in Embassy-rs
 
@@ -242,67 +318,20 @@ info!("Light sensor reading: {}", level); // print the value over serial
 Timer::after_secs(1).await; // wait a bit before reading and printing another value
 ```
 
-## Using channels in Embassy
-
-Up to this point, to be able to share peripherals across multiple tasks, we have been using global `Mutex`s. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
-
-**Channels** allow a unidirectional flow of information between two endpoints: the *Sender* and the *Receiver*. The sender sends a value through the channel, and the receiver receives this value once it is ready to do so. Until it is ready, the data will be stored inside a queue. Channels in Embassy are *Multiple Producer, Multiple Consumer*, which means that we can have a channel associated with multiple senders and multiple receivers. 
-
-To use a channel in Embassy, we first need to declare a static instance of the channel. 
-
-```rust
-static CHANNEL: Channel<ThreadModeRawMutex, bool, 64> = Channel::new();
-```
-
-The second generic argument of `Channel` is the type of data that we will be sending through the channel. The third argument is the maximum number of values that can be stored in the queue. 
-
-Let's say we spawn a task `task1` that runs a timer. Every second, we want to toggle a led in the `main` function, based on the timer running in `task1`. For this, `task1` would need to send a signal to the `main` program every time the 1 second alarm has fired, meaning the task and the main program would share the channel. `task1` would *send* over the channel, and `main` would *receive*.
-
-For this we need to pass a `Sender` endpoint to `task1` once we spawn it.
-
-```rust
-// ---- fn main() ----
-spawner.spawn(task1(CHANNEL.sender())).unwrap();
-```
-
-The `sender()` function returns a new sender for the given channel.
-
-Inside `task1`, we would just set a timer and wait until it fires. After it fires, we send a signal through the channel, to indicate that 1 second has elapsed.
-
-```rust
-#[embassy_executor::task]
-async fn task1(channel_sender: Sender<'static, ThreadModeRawMutex, bool, 64>) {
-    loop {
-        Timer::after_secs(1).await;
-        channel_sender.send(true).await;
-    }
-}
-```
-
-In the `main` function, we need to then wait for the signal, and once it's received, toggle the led.
-
-```rust
-// ---- fn main() ----
-loop {
-    let value = CHANNEL.receive().await;
-    match value {
-        true => led.toggle().unwrap(),
-        false => info!("We got something else")
-    }
-}
-```
-
-:::info
-The reason we need all of this is because Rust doesn't allow us to mutably borrow more than once. To use a peripheral (say PWM) inside multiple tasks, we would need to either move it inside the task entirely, or use a mutable reference to it. If we have multiple tasks, though, once we move our peripheral variable *inside* the first task, we can't pass it to another task, because the value was *moved* inside that task completely. And if we wanted to pass it as a mutable reference instead, we would quickly realize that Rust doesn't allow multiple mutable references at once, to avoid concurrent modifications. So this is why we need to either declare a global, static `Mutex` that any task can access, to ensure that the value cannot be modified concurrently by two different tasks, or use channels and keep the peripheral inside the `main` function.
-:::
-
 ## Exercises (not final version)
 
 1. Connect an LED to pin GP2 and a photo-resistor to ADC0. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
-2. Make the led light up at 25% intensity. (**1p**)
+2. Modify the provided working example (`lab04_ex2`) to light the led of your circuit to 25% intensity. (**1p**)
+3. Increase the led's intensity every second, until it reaches max intensity, when it stops. (**1p**)
 3. Read the value of the photo-resistor and print it to the console. (**2p**)
 
-TODO: how to see serial messages on computer
+:::info
+To see the console with messages from the Pico, use the flash command with an extra `-s` parameter. 
+Example:
+```bash
+elf2uf2-rs -s -d /target/thumbv6m-none-eabi/debug/<crate_name>
+```
+:::
 
 :::info
 To be able to print messages to the console, we need to send messages over a simulated serial port to the computer. For this, we will use the USB driver provided by Embassy.
@@ -345,17 +374,10 @@ async fn main(spawner: Spawner) {
 Notice that the USB driver also uses an `InterruptHandler` import that could be confused with the `InterruptHandler` used by ADC. Make sure to use different naming conventions for each one, as described in the warning [here](#adc-in-embassy-rs). 
 :::
 4. Depending on the value read from the photo-resistor, brighten or dim the led. The led should shine brighter when there is *less* light in the room. (**2p**)
-5. Remove the photoresistor from the circuit. Instead, put 2 buttons, button1 on GP0 and button2 on GP1. Make it so that when button1 is pressed, the led is dimmed, and when button2 is pressed, the led is brightened. (**3p**)
 :::tip
-Use a separate task when handling each button press. You could use channels to send a specific signal to the main function. Change the channel so that it carries data of this `enum` type:
-
-```rust
-enum Command {
-    INC_BRIGHTNESS,
-    DEC_BRIGHTNESS
-}
-```
+Use the serial console to debug your program!
 :::
+5. Remove the photoresistor and the led from the circuit. Instead, connect a button to GP0 and an RGB led to pins GP1, GP2 and GP3. Make the RGB switch from red -> yellow -> green every time the button is pressed. (**2p**)
 6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
 :::tip
 Setting up the `SysTick` counter:
