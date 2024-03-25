@@ -51,7 +51,7 @@ $$
 sampling_f >= 2 \times max_{f}
 $$
 
-*The **sampling frequency** has to be al least **two times higher** than the **maximum frequency** of the signal.*
+*The **sampling frequency** has to be at least **two times higher** than the **maximum frequency** of the signal.*
 
 </div>
 
