@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-description: PWM & ADC
+description: Pulse Width Modulation and Analog to Digital Converters
 ---
 
 # 04 - PWM & ADC
@@ -14,9 +14,10 @@ TBD
 
 ## Timing
 
+In embedded applications, keeping track of time is crucial. Even for the simple task of blinking a led at a certain time interval, we need a reference of time that is constant and precise. 
+
 ### Clocks
 
-In embedded applications, keeping track of time is crucial. Even for the simple task of blinking a led at a certain time interval, we need a reference of time that is constant and precise. 
 A clock is a piece of hardware that provides us with that reference. Its purpose is to oscillate at a fixed frequency and provide a signal that switches from high to low at a fixed interval.
 
 ![ClockSignal](images/clock_signal.png)
@@ -45,26 +46,24 @@ The way the counter works here is that it increments/decrements every clock cycl
 
 The ARM Cortex-M uses the SysTick time counter to keep track of time. This counter is decremented every microsecond, and when it reaches 0, it triggers an exception and then resets.
 
-`SYST_CVR` register = the value of the timer itself
-
-`SYST_RVR` register = the reset value
-
-`SYST_CSR_SET` register:
-	- `ENABLE` field = enable/disable the counter
-	- `TICKINT` field = enable/disable exception on reaching 0
+- `SYST_CVR` register - the value of the timer itself
+- `SYST_RVR` register - the reset value
+- `SYST_CSR_SET` register:
+	- `ENABLE` field - enable/disable the counter
+	- `TICKINT` field - enable/disable exception on reaching 0
 
 ### Timers
 
-Until now, we have been able to blink a led at a certain time interval, by waiting a while between each led toggle. The technique we used so far was asking the processor to skip a clock cycle a number of times, or by calling the processor instruction "nop" (no operation) in a loop. 
+Until now, we have been able to blink a led at a certain time interval, by busy waiting a while between each led toggle. The technique we used so far was asking the processor to skip a clock cycle a number of times, or by calling the processor instruction `nop` (no operation) in a loop. 
 :::info
-This method is not ideal, since the "nop" instruction stalls the processor and wastes valuable time that could otherwise be used to do other things in the meantime. To optimize this, we can use *alarms*.
+This method is not ideal, since the `nop` instruction stalls the processor and wastes valuable time that could otherwise be used to do other things in the meantime. To optimize this, we can use *alarms*.
 :::
 An **alarm** is a counter that triggers an interrupt every time it reaches a certain value. This way, an alarm can be set to trigger after a specific interval of time, and while it's waiting, the main program can continue executing instructions, and so it is not blocked. When the alarm reaches the chosen value, it goes off and triggers an interrupt that can then be handled in its specific ISR.
 
 ![Alarm](images/alarm.svg)
 
 :::info
-The RP2040 timer is fully monotomic, meaning it can never truly overflow. Its value is stored on 64 bits and increments every 1 microsecond, which means that the last value it can increment to before overflowing is 2^64-1, which the equivalent of roughly 500.000 years. This timer allows 4 different alarms, which can be used independently (TIMER_IRQ_0/1/2/3).
+The RP2040 timer is fully monotomic, meaning it can never truly overflow. Its value is stored on 64 bits and increments every 1 microsecond, which means that the last value it can increment to before overflowing is 2<sup>64-1</sup>, which the equivalent of roughly 500,000 years. This timer allows 4 different alarms, which can be used independently (`TIMER_IRQ_0/1/2/3`).
 :::
 
 ## Analog and Digital Signals
@@ -106,7 +105,7 @@ For the RP2040, to generate this PWM signal, a *counter* is used. When the count
 
 ![PWMRP2040](images/pwm_rp2040_example.png)
 
-On RP2040, all GPIO pins support PWM. Every 2 pins share a PWM slice, and each one of them is on a separate channel. 
+On RP2040, all GPIO pins support PWM. Every two pins share a PWM slice, and each one of them is on a separate channel. 
 
 ![RP2040PWMPins](images/pwm_rp2040_pins.png)
 
@@ -126,6 +125,8 @@ let peripherals = embassy_rp::init(Default::default());
 In order to modify the PWM counter configurations, we need to create a `Config` for our PWM.
 
 ```rust
+use embassy_rp::pwm::Config as ConfigPwm; // PWM config
+
 // Create config for PWM slice
 let mut config: Config = Default::default();
 // Set top value (value at which PWM counter will reset)
@@ -137,7 +138,7 @@ config.compare_a = config.top / 2;
 In the example above:
     - `top` is the field from `Config` that will define the value at which the counter will reset back to 0
     - `compare_a` is the field from `Config` that will define the value at which the PWM signal will switch from 1 to 0
-In this case, `compare_a` is half of `config.top`. This means that the duty cycle of the generated PWM signal will be 50%, or, in other words, that the PWM signal will switch from 1 to 0 halfway through each period.
+In this case, `config.compare_a` is half of `config.top`. This means that the duty cycle of the generated PWM signal will be 50%, or, in other words, that the PWM signal will switch from 1 to 0 halfway through each period.
 
 To select the pin that we want to use for PWM, we need to create a new PWM driver that uses the correct channel and output for our pin.
 
@@ -198,9 +199,10 @@ A **photoresistor** (or photocell) is a sensor that measures the intensity of li
 
 ### ADC in Embassy-rs
 
-On the RP2040, ADC uses an interrupt called `ADC_IRQ_FIFO` to signal whenever a new sample has been processed. This new sample will be stored inside a FIFO. In the Embassy library, this interrupt is already implemented, so all we need to do is bind it and use it in our ADC variable.
+On the RP2040, ADC uses an interrupt called `ADC_IRQ_FIFO` to signal whenever a new sample has been added to the ADCs' FIFO. This new sample will be stored inside a FIFO. In the Embassy library, this interrupt is already implemented, so all we need to do is bind it and use it in our ADC variable.
 
 ```rust
+// Vind the `ADC_IRQ_FIFO` interrupt to the Embassy's ADC handler
 bind_interrupts!(struct Irqs {
     ADC_IRQ_FIFO => InterruptHandler;
 });
@@ -218,7 +220,6 @@ let mut adc = Adc::new(peripherals.ADC, Irqs, Config::default());
 If we are using PWM and ADC in the same code, we will have two different `Config` imports with the same name. In order to avoid compilation errors, we need to separate the PWM config import from the ADC one. To do this, we can import the two `Config`s with different names.
 
 ```rust
-use embassy_rp::pwm::Config as ConfigPwm; // PWM config
 use embassy_rp::adc::Config as ConfigAdc; // ADC config
 
 // ---- fn main() ----
