@@ -1,0 +1,384 @@
+---
+sidebar_position: 5
+description: PWM & ADC
+---
+
+# 04 - PWM & ADC
+
+This lab will teach you the difference between digital and analog signals, how to simulate analog signals by using Pulse Width Modulation (PWM) and how to convert analog signals to digital ones using Analog-to-Digital Converters (ADC).
+
+
+## Resources
+
+TBD
+
+## Timing
+
+### Clocks
+
+In embedded applications, keeping track of time is crucial. Even for the simple task of blinking a led at a certain time interval, we need a reference of time that is constant and precise. 
+A clock is a piece of hardware that provides us with that reference. Its purpose is to oscillate at a fixed frequency and provide a signal that switches from high to low at a fixed interval.
+
+![ClockSignal](images/clock_signal.png)
+
+The most precise type of clock is the crystal oscillator (XOSC). The reason why it is so accurate is because it uses the crystal's natural vibration frequency to create the clock signal. This clock is usually external to the processor itself, but the processor also has an internal clock (ROSC) that is less accurate and that can be used in cases where small variations of clock  pulses are negligeable. When using the USB protocol, for instance, a more stable clock signal is required, therefore the XOSC is necessary.
+The crystal oscillator on the Raspberry Pi Pico board has a frequency of 12MHz. This clock signal is just a reference, and most of the time we need to adjust it to our needs. This is done by either multiplying or dividing the clock, or in other words, elevating or lowering the frequency of the clock. For example, the RP2040 itself runs on a 125MHz clock, so the crystal oscillator frequency of 12MHz is multiplied (this is done using a method called Phase-Locked Loop).
+
+### Counters
+
+A counter is a piece of hardware logic that counts, as its name suggests. Every clock cycle, it increments the value of a register, until it overflows and starts anew. 
+
+:::info
+A regular counter on 8 bits would count up from 0 to 255, then loop back to 0 and continue counting. 
+:::
+
+TODO: insert image from GTKWave
+
+On the RP2040, the counter is associated with 3 registers:
+1. `value` - the current value of the counter
+2. `direction` - whether the counter is counting UP or DOWN
+3. `reset` - if the direction is UP, the value at which the counter resets to 0; if the direction is DOWN, the value at which the counter reset after reaching 0
+
+![Counter](images/counter.svg)
+
+The way the counter works here is that it increments/decrements every clock cycle and checks whether or not it has reached its reset value. If is has, then it resets to its initial value and starts all over again.
+
+The ARM Cortex-M uses the SysTick time counter to keep track of time. This counter is decremented every microsecond, and when it reaches 0, it triggers an exception and then resets.
+
+`SYST_CVR` register = the value of the timer itself
+
+`SYST_RVR` register = the reset value
+
+`SYST_CSR_SET` register:
+	- `ENABLE` field = enable/disable the counter
+	- `TICKINT` field = enable/disable exception on reaching 0
+
+### Timers
+
+Until now, we have been able to blink a led at a certain time interval, by waiting a while between each led toggle. The technique we used so far was asking the processor to skip a clock cycle a number of times, or by calling the processor instruction "nop" (no operation) in a loop. 
+:::info
+This method is not ideal, since the "nop" instruction stalls the processor and wastes valuable time that could otherwise be used to do other things in the meantime. To optimize this, we can use *alarms*.
+:::
+An **alarm** is a counter that triggers an interrupt every time it reaches a certain value. This way, an alarm can be set to trigger after a specific interval of time, and while it's waiting, the main program can continue executing instructions, and so it is not blocked. When the alarm reaches the chosen value, it goes off and triggers an interrupt that can then be handled in its specific ISR.
+
+![Alarm](images/alarm.svg)
+
+:::info
+The RP2040 timer is fully monotomic, meaning it can never truly overflow. Its value is stored on 64 bits and increments every 1 microsecond, which means that the last value it can increment to before overflowing is 2^64-1, which the equivalent of roughly 500.000 years. This timer allows 4 different alarms, which can be used independently (TIMER_IRQ_0/1/2/3).
+:::
+
+## Analog and Digital Signals
+
+**Analog signals** are a representation of real-world data. They communicate information in a continuous function of time. They are smooth and time-varying waves, and contain an infinite number of values within the continuous range. An example of an analog signal would be sound, or the human voice.
+
+![AnalogSignal](images/analog_signal.png)
+
+**Digital signals** are a discrete representation of data. They are represented by a sequence of binary values, taken from a finite set of possible numbers. They are square and discrete waves. In most cases, they are represented by two values: 0 and 1 (or 0V and 5V). Digital representation of signals is usually used in hardware.
+
+![DigitalSignal](images/digital_signal.png)
+
+## Pulse-Width Modulation (PWM)
+Up to now, we learned to turn a led on and off, or in other words, set a led's intensity to 100% or 0%. What if we wanted to turn on the led only at 50% intensity? We only have a two-level digital value, 0 or 1, so technically a value of 0.5 is not possible. What we can do is simulate this analog signal, so that it *looks* like the led is at half intensity. 
+
+**Pulse-Width Modulation** is a method of simulating an analog signal using a digital one, by varying the width of the generated square wave. 
+
+![PWMExample](images/pulse-width-modulation-signal-diagrams-average.png)
+
+:::note
+We can think of the simulated analog signal being directly proportional to the change in digital signal pulse size. The larger the square wave at a given period T, the higher the average analog amplitude output for that period.
+:::
+
+The **duty cycle** of the signal is the percentage of time per period that the signal is high.
+
+![DutyCycle](images/duty_cycle.png)
+
+So if we wanted our led to be at 50% intensity, we would choose a duty cycle of 50%. By quickly switching between high and low, the led appears to the human eye as being at only 50% intensity, when in reality, it's only on at max intensity 50% of the time, and off the rest of the time.
+
+![PWMLed](images/pwm_led.gif)
+
+$$
+
+duty\_cycle = \frac{time\_on}{period} \%
+
+$$
+
+For the RP2040, to generate this PWM signal, a *counter* is used. When the counter is reset, the value of the output signal is 1. The counter counts up until it reaches a certain value, after which the value of the output signal becomes 0. The counter continues to count until the top (or until it overflows), and then the signal becomes 1 again. This way, by choosing the value that the counter should compare to, we set the duty cycle of the PWM signal.
+
+![PWMRP2040](images/pwm_rp2040_example.png)
+
+On RP2040, all GPIO pins support PWM. Every 2 pins share a PWM slice, and each one of them is on a separate channel. 
+
+![RP2040PWMPins](images/pwm_rp2040_pins.png)
+
+:::info
+This means that in order to use a pin as PWM, we need to know what channel it's on, and which output it uses (A or B).
+:::
+
+### PWM in Embassy-rs
+
+First, we need a reference to all peripherals, as usual. 
+
+```rust
+// Initialize peripherals
+let peripherals = embassy_rp::init(Default::default());
+```
+
+In order to modify the PWM counter configurations, we need to create a `Config` for our PWM.
+
+```rust
+// Create config for PWM slice
+let mut config: Config = Default::default();
+// Set top value (value at which PWM counter will reset)
+config.top = 0x8000; // in HEX, equals 32768 in decimal
+// Set compare value (counter value at which the PWM signal will change from 1 to 0)
+config.compare_a = config.top / 2;
+```
+
+In the example above:
+    - `top` is the field from `Config` that will define the value at which the counter will reset back to 0
+    - `compare_a` is the field from `Config` that will define the value at which the PWM signal will switch from 1 to 0
+In this case, `compare_a` is half of `config.top`. This means that the duty cycle of the generated PWM signal will be 50%, or, in other words, that the PWM signal will switch from 1 to 0 halfway through each period.
+
+To select the pin that we want to use for PWM, we need to create a new PWM driver that uses the correct channel and output for our pin.
+
+```rust
+// Create PWM driver for pin 0
+let mut pwm = Pwm::new_output_a( // output A
+    peripherals.PWM_CH0, // channel 0
+    peripherals.PIN_0, // pin 0
+    config.clone()
+);
+```
+
+:::warning
+1. The code above is an example for pin 0. You need to modify the channel, output and pin depending on the PWM pin you choose to use!
+2. The value of `compare_a` or `compare_b` must be changed depending on the desired duty cycle!
+:::
+
+If we decide to modify the value of `compare_a` or `compare_b`, we have to update the configuration for the PWM.
+
+```rust
+config.compare_a += 100; // modified value of `compare_a`
+pwm.set_config(&config); // set the new configuration for PWM
+```
+
+## Analog-to-Digital Converter (ADC)
+
+Now we know how to represent an analog signal using digital signals. There are plenty of cases in which we need to know how to transform an analog signal into a digital one, for example a temperature reading, or the voice of a person. This means that we need to correctly represent a continuous wave of infinite values to a discrete wave of a finite set of values.
+For this, we need to sample the analog signal periodically, in other words to measure the analog signal at a fixed interval of time. This is done by using an **Analog-to-Digital converter**.
+
+The *sampling rate* is the frequency at which a new sample is read. The higher the sampling rate, the more samples we get, so the more accurate the representation of the signal.
+
+The *resolution* is the number of bits which we can use in order to store the value of the sample. The higher the resolution, the more values we can store, so the more accurate the representation.
+
+:::info
+For example, a resolution of 8 bits means that we can encode the analog signal to one in 256 levels.
+:::
+
+![ADCSampling](images/sampling_values.svg)
+
+### Nyquist-Shannon Sampling Theorem
+
+For an analog signal to be represented without loss of information, the conversion needs to satisfy the following formula:
+
+$$
+sampling_f >= 2 \times max_{f}
+$$
+
+The analog signal needs to be sampled at a frequency greater than twice the *maximum frequency* of the signal.
+In other words, we must sample at least twice per cycle.
+
+![NyquistTheorem](images/nyquist_theorem.png)
+
+### Example of analog sensor
+
+A **photoresistor** (or photocell) is a sensor that measures the intensity of light around it. Its internal resistance varies depending on the light hitting its surface, therefore the more light there is, the lower the resistance will be. 
+
+![Photoresistor](images/photoresistor.png)
+
+### ADC in Embassy-rs
+
+On the RP2040, ADC uses an interrupt called `ADC_IRQ_FIFO` to signal whenever a new sample has been processed. This new sample will be stored inside a FIFO. In the Embassy library, this interrupt is already implemented, so all we need to do is bind it and use it in our ADC variable.
+
+```rust
+bind_interrupts!(struct Irqs {
+    ADC_IRQ_FIFO => InterruptHandler;
+});
+
+// ---- fn main() ----
+
+// Initialize peripherals
+let peripherals = embassy_rp::init(Default::default());
+
+// Create ADC driver
+let mut adc = Adc::new(peripherals.ADC, Irqs, Config::default());
+```
+
+:::warning
+If we are using PWM and ADC in the same code, we will have two different `Config` imports with the same name. In order to avoid compilation errors, we need to separate the PWM config import from the ADC one. To do this, we can import the two `Config`s with different names.
+
+```rust
+use embassy_rp::pwm::Config as ConfigPwm; // PWM config
+use embassy_rp::adc::Config as ConfigAdc; // ADC config
+
+// ---- fn main() ----
+let mut adc = Adc::new(peripherals.ADC, Irqs, ConfigAdc::default());
+```
+:::
+
+Now, we need to initialize the ADC pin we will be using. The Raspberry Pi Pico has 3 pins that support ADC: ADC0, ADC1, and ADC2.
+
+```rust
+// Initialize ADC pin
+let mut adc_pin = Channel::new_pin(peripherals.PIN_X, Pull::None); // where X should be replaced with a pin number
+```
+
+Once we have the ADC and pin set up, we can start reading values from the pin. 
+
+```rust
+let level = adc.read(&mut adc_pin).await.unwrap(); // read a value from the pin
+info!("Light sensor reading: {}", level); // print the value over serial
+Timer::after_secs(1).await; // wait a bit before reading and printing another value
+```
+
+## Using channels in Embassy
+
+Up to this point, to be able to share peripherals across multiple tasks, we have been using global `Mutex`s. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
+
+**Channels** allow a unidirectional flow of information between two endpoints: the *Sender* and the *Receiver*. The sender sends a value through the channel, and the receiver receives this value once it is ready to do so. Until it is ready, the data will be stored inside a queue. Channels in Embassy are *Multiple Producer, Multiple Consumer*, which means that we can have a channel associated with multiple senders and multiple receivers. 
+
+To use a channel in Embassy, we first need to declare a static instance of the channel. 
+
+```rust
+static CHANNEL: Channel<ThreadModeRawMutex, bool, 64> = Channel::new();
+```
+
+The second generic argument of `Channel` is the type of data that we will be sending through the channel. The third argument is the maximum number of values that can be stored in the queue. 
+
+Let's say we spawn a task `task1` that runs a timer. Every second, we want to toggle a led in the `main` function, based on the timer running in `task1`. For this, `task1` would need to send a signal to the `main` program every time the 1 second alarm has fired, meaning the task and the main program would share the channel. `task1` would *send* over the channel, and `main` would *receive*.
+
+For this we need to pass a `Sender` endpoint to `task1` once we spawn it.
+
+```rust
+// ---- fn main() ----
+spawner.spawn(task1(CHANNEL.sender())).unwrap();
+```
+
+The `sender()` function returns a new sender for the given channel.
+
+Inside `task1`, we would just set a timer and wait until it fires. After it fires, we send a signal through the channel, to indicate that 1 second has elapsed.
+
+```rust
+#[embassy_executor::task]
+async fn task1(channel_sender: Sender<'static, ThreadModeRawMutex, bool, 64>) {
+    loop {
+        Timer::after_secs(1).await;
+        channel_sender.send(true).await;
+    }
+}
+```
+
+In the `main` function, we need to then wait for the signal, and once it's received, toggle the led.
+
+```rust
+// ---- fn main() ----
+loop {
+    let value = CHANNEL.receive().await;
+    match value {
+        true => led.toggle().unwrap(),
+        false => info!("We got something else")
+    }
+}
+```
+
+:::info
+The reason we need all of this is because Rust doesn't allow us to mutably borrow more than once. To use a peripheral (say PWM) inside multiple tasks, we would need to either move it inside the task entirely, or use a mutable reference to it. If we have multiple tasks, though, once we move our peripheral variable *inside* the first task, we can't pass it to another task, because the value was *moved* inside that task completely. And if we wanted to pass it as a mutable reference instead, we would quickly realize that Rust doesn't allow multiple mutable references at once, to avoid concurrent modifications. So this is why we need to either declare a global, static `Mutex` that any task can access, to ensure that the value cannot be modified concurrently by two different tasks, or use channels and keep the peripheral inside the `main` function.
+:::
+
+## Exercises (not final version)
+
+1. Connect an LED to pin GP2 and a photo-resistor to ADC0. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
+2. Make the led light up at 25% intensity. (**1p**)
+3. Read the value of the photo-resistor and print it to the console. (**2p**)
+
+TODO: how to see serial messages on computer
+
+:::info
+To be able to print messages to the console, we need to send messages over a simulated serial port to the computer. For this, we will use the USB driver provided by Embassy.
+
+```rust
+use embassy_rp::usb::{Driver, InterruptHandler};
+use embassy_rp::{bind_interrupts, peripherals::USB};
+use log::info;
+
+// Use for the serial over USB driver
+bind_interrupts!(struct Irqs {
+    USBCTRL_IRQ => InterruptHandler<USB>;
+});
+
+
+// The task used by the serial port driver 
+// over USB
+#[embassy_executor::task]
+async fn logger_task(driver: Driver<'static, USB>) {
+    embassy_usb_logger::run!(1024, log::LevelFilter::Info, driver);
+}
+
+#[embassy_executor::main]
+async fn main(spawner: Spawner) {
+    let peripherals = embassy_rp::init(Default::default());
+
+    // Start the serial port over USB driver
+    let driver = Driver::new(peripherals.USB, Irqs);
+    spawner.spawn(logger_task(driver)).unwrap();
+
+    // ...
+
+    info!("message");
+}
+
+```
+:::
+
+:::warning
+Notice that the USB driver also uses an `InterruptHandler` import that could be confused with the `InterruptHandler` used by ADC. Make sure to use different naming conventions for each one, as described in the warning [here](#adc-in-embassy-rs). 
+:::
+4. Depending on the value read from the photo-resistor, brighten or dim the led. The led should shine brighter when there is *less* light in the room. (**2p**)
+5. Remove the photoresistor from the circuit. Instead, put 2 buttons, button1 on GP0 and button2 on GP1. Make it so that when button1 is pressed, the led is dimmed, and when button2 is pressed, the led is brightened. (**3p**)
+:::tip
+Use a separate task when handling each button press. You could use channels to send a specific signal to the main function. Change the channel so that it carries data of this `enum` type:
+
+```rust
+enum Command {
+    INC_BRIGHTNESS,
+    DEC_BRIGHTNESS
+}
+```
+:::
+6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
+:::tip
+Setting up the `SysTick` counter:
+```rust
+const SYST_RVR: *mut u32 = 0xe000_0014;
+const SYST_CVR: *mut u32 = 0xe000_0018;
+// + 0x2000 is bitwise set
+const SYST_CSR_SET: *mut u32 = 0xe000_0010 + 0x2000;
+
+// fire systick every 5 seconds
+let interval: u32 = 5_000_000;
+unsafe {
+    write_volatile(SYST_RVR, interval);
+    write_volatile(SYST_CVR, 0);
+
+    // set fields `ENABLE` and `TICKINT`
+    write_volatile(SYST_CSR_SET, 1 << 1 | 1);
+}
+```
+Registering the `SysTick` handler:
+```rust
+#[exception]
+unsafe fn SysTick() { 
+    /* systick fired */ 
+}
+```
+:::
