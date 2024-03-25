@@ -5,6 +5,19 @@ layout: section
 
 ---
 ---
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 2 - *System Description*
+     - Chapter 2.15 - * Clocks*
+       - Subchapter 2.15.1
+       - Subchapter 2.15.2
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.6 - *Timer*
+
+---
+---
 # Clocks
 all peripherals and the MCU use a clock to execute at certain intervals
 
@@ -96,12 +109,13 @@ $$
 ---
 layout: two-cols
 ---
+
 # SysTick
 ARM Cortex-M peripheral
 
 <img src="/timers/systick_registers.png" class="rounded w-140">
 
-```rust{all|3,4|1,7,9|2,10|3,4,13}
+```rust{all|1,7,9|2,10|3,4,12,13}
 const SYST_RVR: *mut u32 = 0xe000_0014;
 const SYST_CVR: *mut u32 = 0xe000_0018;
 // + 0x2000 is bitwise set
@@ -113,8 +127,8 @@ unsafe {
     write_volatile(SYST_RVR, interval);
     write_volatile(SYST_CVR, 0);
 
-    // set fields `ENABLE` and `TICKINT`
-    write_volatile(SYST_CSR_SET, 1 << 1 | 1);
+    // set fields `ENABLE`(<< 0) and `TICKINT`(<< 1)
+    write_volatile(SYST_CSR_SET, 1 << 1 | 1 << 0);
 }
 ```
 
@@ -131,6 +145,7 @@ unsafe fn SysTick() {
     /* systick fired */ 
 }
 ```
+
 
 ---
 layout: two-cols
@@ -158,9 +173,9 @@ counter that triggers interrupts after a time interval
 </div>
 
 ---
----
-# Timer
-of the RP2040
+
+# RP2040's Timer
+
 
 <div grid="~ cols-2 gap-5">
 
@@ -185,11 +200,12 @@ of the RP2040
 
 </div>
 
+
 ---
 layout: two-cols
 ---
 
-# Timer
+# RP2040's Timer
 read the number of elapsed μs since reset
 
 <img src="/timers/timer_registers_1.png" class="rounded w-100">
@@ -197,8 +213,8 @@ read the number of elapsed μs since reset
 ## Reading the time elapsed since restart
 
 ```rust{all|1,5|2,6|4,7,8}
-const TIMERHR: *const u32 = 0x4005_4008;
 const TIMERLR: *const u32 = 0x4005_400c;
+const TIMERHR: *const u32 = 0x4005_4008;
 
 let time: u64 = unsafe {
     let low = read_volatile(TIMERLR);
@@ -215,9 +231,11 @@ The reading order maters.
     <img src="/timers/timer_registers_2.png" class="rounded w-100">
 </div>
 
+
 ---
 layout: two-cols
 ---
+
 # Alarm
 triggering an interrupt at an interval
 
@@ -226,7 +244,7 @@ triggering an interrupt at an interval
 unsafe fn TIMER_IRQ_0() { /* alarm fired */ }
 ```
 
-```rust{all|3,4|1,10|2,11|3,4,12}
+```rust{all|1,10|2,11|3,4,12}
 const TIMERLR: *const u32 = 0x4005_400c;
 const ALARM0: *mut u32 = 0x4005_4010;
 // + 0x2000 is bitwise set

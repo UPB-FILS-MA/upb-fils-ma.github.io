@@ -5,6 +5,18 @@ layout: section
 Analog to Digital Converter
 
 ---
+---
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.9 - *ADC and Temperature Sensor*
+       - Subchapter 4.9.1
+       - Subchapter 4.9.2
+       - Subchapter 4.9.5
+
+---
 layout: two-cols
 ---
 # ADC
@@ -67,8 +79,8 @@ how the ADC works
 ---
 layout: two-cols
 ---
-# ADC 
-for the RP2040
+
+# RP2040's ADC 
 
 <style>
 .two-columns {
@@ -84,7 +96,7 @@ for the RP2040
 | *V<sub>max</sub>* | 3.3 V |
 
 - requires a 48 MHz clock signal
-- channel 4 internal temperature sensor
+- channel 4 is connected to the internal temperature sensor
 
 $$
 
@@ -101,6 +113,7 @@ $$
 <div align="center">
 <img src="/pwm/rp2040_adafruit_pinout.png" class="rounded w-80">
 </div>
+
 
 ---
 ---

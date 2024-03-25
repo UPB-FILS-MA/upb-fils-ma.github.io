@@ -5,6 +5,15 @@ layout: section
 Pulse Width Modulation
 
 ---
+---
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.5 - *PWM*
+
+---
 layout: two-cols
 ---
 # PWM
@@ -80,11 +89,14 @@ $$
 ---
 layout: two-cols
 ---
-# PWM
-of the RP2040
+
+# RP2040's PWM
 
 - generates square signals
 - counts the pulse with of input signals
+- 8 PWM units, each with 2 channels (A and B)
+- each PWM channel is connected to a certain pin
+- some channels are connected to two pins
 
 ## Registers
 
@@ -112,9 +124,10 @@ of the RP2040
 <img src="/pwm/rp2040_adafruit_pinout.png" class="rounded w-70">
 </div>
 
+
 ---
----
-# PWM Modes
+
+# RP2040's PWM Modes
 
 <div grid="~ cols-2 gap-5">
 
@@ -141,6 +154,7 @@ $$
 f = \frac{f_{sys}}{period} [Hz]_{SI}
 
 $$
+
 
 ---
 layout: two-cols

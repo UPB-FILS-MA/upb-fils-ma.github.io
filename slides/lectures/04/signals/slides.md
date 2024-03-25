@@ -66,7 +66,7 @@ Signal that what we actually generate
 </div>
 
 ---
----
+
 # Prevent Errors
 using digital signals
 
@@ -77,8 +77,8 @@ using digital signals
 - use higher voltage
   - high noise margin 
   - higher power consumption ...
-- lower noise by using better electronics circuits
-- every device samples and regenerates the signal
+- lower noise by using better electronic circuits
+- every device *samples and regenerates* the signal
 
 </div>
 
