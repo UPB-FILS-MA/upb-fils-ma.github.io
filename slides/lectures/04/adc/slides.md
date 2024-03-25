@@ -41,7 +41,7 @@ sampling an analog signal to an array of values
 
 ---
 ---
-# Nyquist Theorem
+# Nyquist–Shannon Sampling Theorem
 
 <div grid="~ cols-2 gap-5">
 
