@@ -236,7 +236,7 @@ For example, a resolution of 8 bits means that we can approximate the analog sig
 
 ### Nyquist-Shannon Sampling Theorem
 
-The [Nyquist-Shannon sampling theorem]((https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)) serves as a bridge between continuous-time signals and discrete-time signals. It establishes a link between the frequency range of a signal and the sample rate required to avoid a type of distortion called *aliasing*. Aliasing occurs when a signal is not sampled fast enough to construct an accurate waveform representation.
+The [Nyquist-Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem) serves as a bridge between continuous-time signals and discrete-time signals. It establishes a link between the frequency range of a signal and the sample rate required to avoid a type of distortion called *aliasing*. Aliasing occurs when a signal is not sampled fast enough to construct an accurate waveform representation.
 
 For an analog signal to be represented without loss of information, the conversion needs to satisfy the following formula:
 
@@ -322,7 +322,7 @@ info!("Light sensor reading: {}", level); // print the value over serial
 Timer::after_secs(1).await; // wait a bit before reading and printing another value
 ```
 
-## Exercises (not final version)
+## Exercises
 
 1. Connect an LED to pin GP2 and a photo-resistor to ADC0. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
 2. Modify the provided working example (`lab04_ex2`) to light the led of your circuit to 25% intensity. (**1p**)
