@@ -10,7 +10,18 @@ This lab will teach you the difference between digital and analog signals, how t
 
 ## Resources
 
-TBD
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+    - Chapter 2 - *System Description*
+     - Chapter 2.15 - *Clocks*
+       - Subchapter 2.15.1
+       - Subchapter 2.15.2
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.5 - *PWM*
+     - Chapter 4.6 - *Timer*
+     - Chapter 4.9 - *ADC and Temperature Sensor*
+       - Subchapter 4.9.1
+       - Subchapter 4.9.2
+       - Subchapter 4.9.5
 
 ## Timing
 
@@ -141,9 +152,9 @@ An **RGB** led is a led that can emit any color, using a combination of red, gre
 
 By using PWM on the R, G and B leds, we can control each of their intensity to represent any color.
 
-```info
+:::info
 For example, if we wanted to create the color purple, we would set the intensity of red and blue to 100%, and the intensity of green to 0%.
-```
+:::
 
 There are two different types of RGB leds:
 
@@ -282,7 +293,7 @@ This way, the ADC pin measures the photoresistor's resistance, without the risk 
 On the RP2040, ADC uses an interrupt called `ADC_IRQ_FIFO` to signal whenever a new sample has been added to the ADCs' FIFO. This new sample will be stored inside a FIFO. In the Embassy library, this interrupt is already implemented, so all we need to do is bind it and use it in our ADC variable.
 
 ```rust
-// Vind the `ADC_IRQ_FIFO` interrupt to the Embassy's ADC handler
+// Bind the `ADC_IRQ_FIFO` interrupt to the Embassy's ADC handler
 bind_interrupts!(struct Irqs {
     ADC_IRQ_FIFO => InterruptHandler;
 });
@@ -307,7 +318,7 @@ let mut adc = Adc::new(peripherals.ADC, Irqs, ConfigAdc::default());
 ```
 :::
 
-Now, we need to initialize the ADC pin we will be using. The Raspberry Pi Pico has 3 pins that support ADC: ADC0, ADC1, and ADC2.
+Now, we need to initialize the ADC pin we will be using. The Raspberry Pi Pico has 3 pins that support ADC: `ADC0`, `ADC1`, and `ADC2`.
 
 ```rust
 // Initialize ADC pin
@@ -331,7 +342,6 @@ Timer::after_secs(1).await; // wait a bit before reading and printing another va
 
 :::info
 To see the console with messages from the Pico, use the flash command with an extra `-s` parameter. 
-Example:
 ```bash
 elf2uf2-rs -s -d /target/thumbv6m-none-eabi/debug/<crate_name>
 ```
@@ -381,7 +391,10 @@ Notice that the USB driver also uses an `InterruptHandler` import that could be 
 :::tip
 Use the serial console to debug your program!
 :::
-5. Remove the photoresistor and the led from the circuit. Instead, connect an RGB LED to pins GP1, GP2 and GP3. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
+5. Remove the photoresistor and the led from the circuit. Instead, connect an RGB LED to pins GP1, GP2 and GP4. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
+:::note
+The reason why we can't use GP1, GP2 and GP3 is because GP2 and GP3 are both on PWM channel 1, therefore we can't independently control them with PWM.
+:::
 6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
 :::tip
 Setting up the `SysTick` counter:
@@ -407,5 +420,25 @@ Registering the `SysTick` handler:
 unsafe fn SysTick() { 
     /* systick fired */ 
 }
+```
+
+To safely share a bool value globally to keep track of the LED status, we need to use an `AtomicBool`.
+
+Creating a new `AtomicBool`
+```rust
+// imports 
+use core::sync::atomic::{AtomicBool, Ordering};
+
+let atomic_bool = AtomicBool::new(false);
+```
+
+Reading the value of an `AtomicBool`:
+```rust
+let atomic_bool_value = atomic_bool.load(Ordering::Relaxed);
+```
+
+Writing the value of an `AtomicBool`:
+```rust
+atomic_bool.store(true, Ordering::Relaxed);
 ```
 :::
