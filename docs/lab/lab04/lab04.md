@@ -422,9 +422,14 @@ unsafe fn SysTick() {
 }
 ```
 
+To blink the led in bare metal, use the code provided in [Lab3](../03/03.md).
+
+:::
+
+:::info
 To safely share a bool value globally to keep track of the LED status, we need to use an `AtomicBool`.
 
-Creating a new `AtomicBool`
+Creating a new `AtomicBool`:
 ```rust
 // imports 
 use core::sync::atomic::{AtomicBool, Ordering};
