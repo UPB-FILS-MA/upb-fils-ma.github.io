@@ -86,6 +86,7 @@ teodor.dicu@wyliodrin.com
 ![Teodora Miu](images/teodora_miu.jpg)
 
 Lab Professor \
+Responsable for labs\
 GitHub: [TeodoraMiu](https://github.com/TeodoraMiu) \
 teodora.miu@stud.fils.upb.ro
 </td>
