@@ -23,7 +23,9 @@ A clock is a piece of hardware that provides us with that reference. Its purpose
 ![ClockSignal](images/clock_signal.png)
 
 The most precise type of clock is the crystal oscillator (XOSC). The reason why it is so accurate is because it uses the crystal's natural vibration frequency to create the clock signal. This clock is usually external to the processor itself, but the processor also has an internal clock (ROSC) that is less accurate and that can be used in cases where small variations of clock  pulses are negligeable. When using the USB protocol, for instance, a more stable clock signal is required, therefore the XOSC is necessary.
-The crystal oscillator on the Raspberry Pi Pico board has a frequency of 12MHz. This clock signal is just a reference, and most of the time we need to adjust it to our needs. This is done by either multiplying or dividing the clock, or in other words, elevating or lowering the frequency of the clock. For example, the RP2040 itself runs on a 125MHz clock, so the crystal oscillator frequency of 12MHz is multiplied (this is done using a method called Phase-Locked Loop).
+The crystal oscillator on the Raspberry Pi Pico board has a frequency of 12MHz. 
+
+This clock signal is just a reference, and most of the time we need to adjust it to our needs. This is done by either multiplying or dividing the clock, or in other words, elevating or lowering the frequency of the clock. For example, the RP2040 itself runs on a 125MHz clock, so the crystal oscillator frequency of 12MHz is multiplied (this is done using a method called Phase-Locked Loop).
 
 ![RPCrystal](images/rp_crystal.png)
 
@@ -35,7 +37,7 @@ A counter is a piece of hardware logic that counts, as its name suggests. Every 
 A regular counter on 8 bits would count up from 0 to 255, then loop back to 0 and continue counting. 
 :::
 
-On the RP2040, the counter is associated with 3 registers:
+In theory a counter is associated with 3 registers:
 
 | Register | Description |
 |-----------|----------|
@@ -46,6 +48,9 @@ On the RP2040, the counter is associated with 3 registers:
 ![Counter](images/counter.svg)
 
 The way the counter works here is that it increments/decrements every clock cycle and checks whether or not it has reached its reset value. If is has, then it resets to its initial value and starts all over again.
+
+
+#### SysTick
 
 The ARM Cortex-M uses the SysTick time counter to keep track of time. This counter is decremented every microsecond, and when it reaches 0, it triggers an exception and then resets.
 
@@ -231,7 +236,7 @@ For example, a resolution of 8 bits means that we can approximate the analog sig
 
 ### Nyquist-Shannon Sampling Theorem
 
-The Nyquist-Shannon sampling theorem serves as a bridge between continuous-time signals and discrete-time signals. It establishes a link between the frequency range of a signal and the sample rate required to avoid a type of distortion called *aliasing*. Aliasing occurs when a signal is not sampled fast enough to construct an accurate waveform representation.
+The [Nyquist-Shannon sampling theorem]((https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)) serves as a bridge between continuous-time signals and discrete-time signals. It establishes a link between the frequency range of a signal and the sample rate required to avoid a type of distortion called *aliasing*. Aliasing occurs when a signal is not sampled fast enough to construct an accurate waveform representation.
 
 For an analog signal to be represented without loss of information, the conversion needs to satisfy the following formula:
 
@@ -244,7 +249,6 @@ In other words, we must sample at least twice per cycle.
 
 ![NyquistTheorem](images/nyquist_theorem.png)
 
-Read more about it [here](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)
 
 ### Examples of analog sensors
 
@@ -377,7 +381,7 @@ Notice that the USB driver also uses an `InterruptHandler` import that could be 
 :::tip
 Use the serial console to debug your program!
 :::
-5. Remove the photoresistor and the led from the circuit. Instead, connect a button to GP0 and an RGB led to pins GP1, GP2 and GP3. Make the RGB switch from red -> yellow -> green every time the button is pressed. (**2p**)
+5. Remove the photoresistor and the led from the circuit. Instead, connect an RGB LED to pins GP1, GP2 and GP3. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
 6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
 :::tip
 Setting up the `SysTick` counter:
