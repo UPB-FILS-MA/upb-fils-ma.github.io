@@ -404,10 +404,9 @@ The reason why we **can't** use GP1, GP2 and GP3 for the RGB LED, for example, i
 :::tip
 Setting up the `SysTick` counter:
 ```rust
-const SYST_RVR: *mut u32 = 0xe000_0014;
-const SYST_CVR: *mut u32 = 0xe000_0018;
-// + 0x2000 is bitwise set
-const SYST_CSR_SET: *mut u32 = 0xe000_0010 + 0x2000;
+const SYST_RVR: *mut u32 = 0xe000_e014 as *mut u32;
+const SYST_CVR: *mut u32 = 0xe000_e018 as *mut u32;
+const SYST_CSR: *mut u32 = 0xe000_e010 as *mut u32;
 
 // fire systick every 5 seconds
 let interval: u32 = 5_000_000;
@@ -416,7 +415,8 @@ unsafe {
     write_volatile(SYST_CVR, 0);
 
     // set fields `ENABLE` and `TICKINT`
-    write_volatile(SYST_CSR_SET, 1 << 1 | 1);
+    write_volatile(SYST_CSR, 0b011);
+    // we need to write the whole register, single bit modifications is not possible with the SYST_CSR register
 }
 ```
 Registering the `SysTick` handler:
