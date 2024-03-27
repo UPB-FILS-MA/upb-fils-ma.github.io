@@ -338,7 +338,7 @@ Timer::after_secs(1).await; // wait a bit before reading and printing another va
 
 1. Connect an LED to pin GP2, a photo-resistor to ADC0 and an RGB LED to pins GP1, GP3, GP4. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
 2. Take a look at `lab04_ex2` in the lab skeleton. It is a working example of lighting an LED using PWM at 50% intensity. The LED in the example is connected to GP0.
-    - Modify the provided example to light the led of *your circuit* to 25% intensity. (**1p**)
+    - Modify the provided example to light the LED of *your circuit* to 25% intensity. (**1p**)
     - Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
 3. Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
 4. Read the value of the photo-resistor and print it to the console. (**2p**)
@@ -399,6 +399,7 @@ Use the serial console to debug your program!
 The reason why we **can't** use GP1, GP2 and GP3 for the RGB LED, for example, is because GP2 and GP3 are both on PWM channel 1, therefore we can't independently control them with PWM.
 :::
 ![Colors](images/colors.png)
+
 6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
 :::tip
 Setting up the `SysTick` counter:
