@@ -193,7 +193,7 @@ In order to modify the PWM counter configurations, we need to create a `Config` 
 use embassy_rp::pwm::Config as ConfigPwm; // PWM config
 
 // Create config for PWM slice
-let mut config: Config = Default::default();
+let mut config: ConfigPwm = Default::default();
 // Set top value (value at which PWM counter will reset)
 config.top = 0x8000; // in HEX, equals 32768 in decimal
 // Set compare value (counter value at which the PWM signal will change from 1 to 0)
