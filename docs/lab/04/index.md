@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 description: Pulse Width Modulation and Analog to Digital Converters
+slug: /lab/04
 ---
 
 # 04 - PWM & ADC
