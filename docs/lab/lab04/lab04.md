@@ -145,7 +145,7 @@ This means that in order to use a pin as PWM, we need to know what channel it's 
 - buzzers
 - RGB leds (what we will be using for this lab)
 
-An **RGB** led is a led that can emit any color, using a combination of red, green and blue light. On the inside, it's actually made up of 3 separate leds:
+An **RGB** LED is a led that can emit any color, using a combination of red, green and blue light. On the inside, it's actually made up of 3 separate leds:
 - *R* led - to control the intensity of the *red* light
 - *G* led - to control the intensity of the *green* light
 - *B* led - to control the intensity of the *blue* light
@@ -156,7 +156,7 @@ By using PWM on the R, G and B leds, we can control each of their intensity to r
 For example, if we wanted to create the color purple, we would set the intensity of red and blue to 100%, and the intensity of green to 0%.
 :::
 
-There are two different types of RGB leds:
+There are two different types of RGB LEDs:
 
 - common cathode: all LED cathodes are connected together. A LOW signal means off, and a HIGH signal means on at max intensity.
 - common anode: all LED anodes are connected together. A LOW signal means on at max intensity, and a HIGH signal means off.
@@ -164,17 +164,17 @@ There are two different types of RGB leds:
 ![CommonAnodeCommonCathode](images/common_anode_common_cathode.png)
 
 :::warning
-For this lab, we will be using **common anode** RGB leds, which means that the PWM signal should be *opposite*. 0 will be 100% intensity, and 1 will be 0% intensity.
+For this lab, we will be using **common anode** RGB LEDs, which means that the PWM signal should be *opposite*. 0 will be 100% intensity, and 1 will be 0% intensity.
 :::
 
-#### How to wire an RGB
+#### How to wire an RGB LED
 
-For **common cathode** RGB, we must tie each of the 3 color led legs to GPIO pins in series with a *resistance*, and connect the fourth pin to **GND**. 
+For **common cathode** RGB LEDs, we must tie each of the 3 color led legs to GPIO pins in series with a *resistance*, and connect the fourth pin to **GND**. 
 
-For **common anode** RGB, we must also tie each of the 3 color led legs to GPIO pins in series with a *resistance*, but connect the fourth pin to **3V3** instead. 
+For **common anode** RGB LEDs, we must also tie each of the 3 color led legs to GPIO pins in series with a *resistance*, but connect the fourth pin to **3V3** instead. 
 
 :::danger
-Do not forget to tie a resistance to each color pin of the RGB!
+Do not forget to tie a resistance to each color pin of the RGB LED!
 :::
 
 ### PWM in Embassy-rs
@@ -273,7 +273,7 @@ A **photoresistor** (or photocell) is a sensor that measures the intensity of li
 
 #### How to wire a photoresistor
 
-To wire a photoresistor, we need to connect one leg to *GND* and the other leg to a voltage divider. We remember from [Lab1](../01/index.md#voltage-divider) that:
+To wire a photoresistor, we need to connect one leg to *GND* and the other leg to a voltage divider. We remember from [Lab 01 - Hardware Introduction](../01/index.md#voltage-divider) that:
 $$
 V_{out} = V_{in} * \frac{R_{2}}{R_{1} + R_{2}};
 $$
@@ -337,7 +337,7 @@ Timer::after_secs(1).await; // wait a bit before reading and printing another va
 
 1. Connect an LED to pin GP2 and a photo-resistor to ADC0. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
 2. Modify the provided working example (`lab04_ex2`) to light the led of your circuit to 25% intensity. (**1p**)
-3. Increase the led's intensity every second, until it reaches max intensity, when it stops. (**1p**)
+3. Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
 3. Read the value of the photo-resistor and print it to the console. (**2p**)
 
 :::info
@@ -422,19 +422,19 @@ unsafe fn SysTick() {
 }
 ```
 
-To blink the led in bare metal, use the code provided in [Lab3](../03/03.md).
+To blink the led in bare metal, use the code provided in [Lab 03 - Exceptions & Interrupts](../03/03.md).
 
 :::
 
 :::info
-To safely share a bool value globally to keep track of the LED status, we need to use an `AtomicBool`.
+To safely share a bool value globally to keep track of the LED status, we need to use an [`AtomicBool`](https://doc.rust-lang.org/std/sync/atomic/struct.AtomicBool.html). This requires less code than using a normal `bool` and a `Mutex`.
 
-Creating a new `AtomicBool`:
+Creating a new static `AtomicBool`:
 ```rust
 // imports 
 use core::sync::atomic::{AtomicBool, Ordering};
 
-let atomic_bool = AtomicBool::new(false);
+static atomic_bool: AtomicBool = AtomicBool::new(false);
 ```
 
 Reading the value of an `AtomicBool`:
