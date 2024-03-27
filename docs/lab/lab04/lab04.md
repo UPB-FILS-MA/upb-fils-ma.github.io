@@ -335,7 +335,7 @@ Timer::after_secs(1).await; // wait a bit before reading and printing another va
 
 ## Exercises
 
-1. Connect an LED to pin GP2 and a photo-resistor to ADC0. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
+1. Connect an LED to pin GP2, a photo-resistor to ADC0 and an RGB LED to pins GP1, GP3, GP4. Use [KiCad](https://www.kicad.org/) to draw the schematics. (**1p**)
 2. Modify the provided working example (`lab04_ex2`) to light the led of your circuit to 25% intensity. (**1p**)
 3. Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
 3. Read the value of the photo-resistor and print it to the console. (**2p**)
@@ -391,9 +391,9 @@ Notice that the USB driver also uses an `InterruptHandler` import that could be 
 :::tip
 Use the serial console to debug your program!
 :::
-5. Remove the photoresistor and the led from the circuit. Instead, connect an RGB LED to pins GP1, GP2 and GP4. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
+5. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
 :::note
-The reason why we can't use GP1, GP2 and GP3 is because GP2 and GP3 are both on PWM channel 1, therefore we can't independently control them with PWM.
+The reason why we can't use GP1, GP2 and GP3 for the RGB LED, for example, is because GP2 and GP3 are both on PWM channel 1, therefore we can't independently control them with PWM.
 :::
 6. Using the `SysTick` interrupt in *bare metal*, make the led blink at a 100ms delay. (**1p**)
 :::tip
