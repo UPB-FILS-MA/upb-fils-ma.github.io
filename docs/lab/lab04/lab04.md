@@ -391,7 +391,7 @@ Notice that the USB driver also uses an `InterruptHandler` import that could be 
 :::tip
 Use the serial console to debug your program!
 :::
-5. Make the RGB switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
+5. Make the RGB LED switch from red -> yellow -> green every time the switch A is pressed. (**2p**)
 :::note
 The reason why we can't use GP1, GP2 and GP3 for the RGB LED, for example, is because GP2 and GP3 are both on PWM channel 1, therefore we can't independently control them with PWM.
 :::
