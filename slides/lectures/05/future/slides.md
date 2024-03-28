@@ -240,7 +240,7 @@ impl Future for Blink {
 </v-click>
 
 ---
----
+
 # Async Rust
 
 - the Rust compiler rewrites `async` function into `Future`
@@ -258,12 +258,13 @@ async fn blink(mut led: Output<'static, PIN_X>) {
 }
 
 #[entry]
-fn main() {
+fn main() -> ! {
     blink(); // this returns the Blink future, but does not execute it
     blink().await; // does not work, as `main` is not an `async` function
     execute(blink()); // this works, as `execute` executes the Blink future
 }
 ```
+
 
 ---
 ---

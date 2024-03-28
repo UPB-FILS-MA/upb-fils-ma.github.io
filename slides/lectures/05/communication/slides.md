@@ -7,28 +7,24 @@ between tasks
 ---
 layout: two-cols
 ---
+
 # Synchronization
 safely share data between tasks
 
 - [`NoopMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/type.NoopMutex.html) - used for data shared between tasks within the **same executor** 
 - [`CriticalSectionMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/type.CriticalSectionMutex.html) - used for data shared between multiple executors, ISRs and cores 
-- [`ThreadModeMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/struct.ThreadModeMutex.html) - used for global data between tasks within the **same executor** 
+- [`ThreadModeMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/struct.ThreadModeMutex.html) - used for data shared between tasks within **low priority executors** (**not** running in **ISRs** mode)
 
 :: right ::
 
 <div align="center">
-<img src="/executor/executor.svg" class="rounded">
-</div>
-
-<hr>
-
-<div align="center">
-<img src="/executor/executor.svg" class="rounded">
+<img src="/executor/isr_executor.svg" class="rounded">
 </div>
 
 - ISRs are executed in parallel with tasks
-- embassy allows registering several executors, that run tasks in parallel
+- embassy allows registering priority executors, that run tasks in ISRs
 - some MCUs have multiple cores
+
 
 ---
 ---
