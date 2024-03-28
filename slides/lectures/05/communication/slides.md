@@ -31,7 +31,7 @@ safely share data between tasks
 # Channels
 send data from a task to another
 
-Embassy provides four types of channels 
+Embassy provides four types of channels synchronized using `Mutex`s
 | Type | Description |
 |-|-|
 | [`Channel`](https://docs.embassy.dev/embassy-sync/git/default/channel/struct.Channel.html) | A Multiple Producer Multiple Consumer (MPMC) channel. Each message is only received by a single consumer. |
@@ -41,10 +41,12 @@ Embassy provides four types of channels
 
 ---
 ---
-# Channel
-multiple produces multiple consumer
+# Channel and Signal
+sends data from one task to another
 
 [`Channel`](https://docs.embassy.dev/embassy-sync/git/default/channel/struct.Channel.html) - A Multiple Producer Multiple Consumer (MPMC) channel. Each message is only received by a single consumer.
+
+[`Signal`](https://docs.embassy.dev/embassy-sync/git/default/pubsub/struct.PubSubChannel.html) - Signalling latest value to a single consumer. 
 
 ```mermaid
 flowchart LR
@@ -59,6 +61,7 @@ flowchart LR
 ---
 ---
 # PriorityChannel
+sends data from one task to another with a priority
 
 [`PriorityChannel`](https://docs.embassy.dev/embassy-sync/git/default/priority_channel/struct.PriorityChannel.html) - A Multiple Producer Multiple Consumer (MPMC) channel. Each message is only received by a single |consumer. Higher priority items are sifted to the front of the channel. 
 
@@ -78,7 +81,7 @@ flowchart LR
 ---
 ---
 # PubSubChannel
-multiple produces multiple consumer
+sends data from one task to all receiver tasks
 
 [`PubSubChannel`](https://docs.embassy.dev/embassy-sync/git/default/signal/struct.Signal.html) - A broadcast channel (publish-subscribe) channel. Each message is received by all consumers.
 
