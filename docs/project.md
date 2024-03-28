@@ -86,3 +86,7 @@ It has to run software written in Rust. Students can use:
 
 **Q:** What if the PCB arrives after the hardware milestone?\
 **A:** You will only present the diagram for the hardware part and if there is a prototype using breadboard, but at the end of the project you must necessarily have the PCB printed and functional.
+
+[^arduino_nano_rp2040_connect]: Some function of this board, like WiFi, might not be supported in Rust.
+[^esp32_riscv]: ESP32 provides its own Rust SDK.
+
