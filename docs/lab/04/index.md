@@ -340,8 +340,7 @@ Timer::after_secs(1).await; // wait a bit before reading and printing another va
 2. Take a look at `lab04_ex2` in the lab skeleton. It is a working example of lighting an LED using PWM at 50% intensity. The LED in the example is connected to GP0.
     - Modify the provided example to light the LED of *your circuit* to 25% intensity. (**1p**)
     - Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
-3. Increase the LED's intensity by 10% every second, until it reaches max intensity, when it stops. (**1p**)
-4. Read the value of the photo-resistor and print it to the console. (**2p**)
+3. Read the value of the photo-resistor and print it to the console. (**2p**)
 
 :::info
 To see the console with messages from the Pico, use the flash command with an extra `-s` parameter. 
