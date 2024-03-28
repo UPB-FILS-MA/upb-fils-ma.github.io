@@ -64,7 +64,7 @@ george_danut.aldea@stud.acs.upb.ro
 ![Andrei Zamfir](images/andrei_zamfir.jpg)
  
 Lab Professor \
-Responsable for hardware \
+Responsible for hardware \
 GitHub: [ZamfirAndreiPaul](https://github.com/ZamfirAndreiPaul) \
 andrei.zamfir@wyliodrin.com
 </td>
@@ -74,7 +74,7 @@ andrei.zamfir@wyliodrin.com
 ![Teodor Dicu](images/teodor_dicu.jpg)
  
 Lab Professor\
-Responsable for hardware\
+Responsible for hardware\
 GitHub: [DTeodor-Alexaandru](https://github.com/DTeodor-Alexaandru) \
 teodor.dicu@wyliodrin.com
 </td>
@@ -86,7 +86,7 @@ teodor.dicu@wyliodrin.com
 ![Teodora Miu](images/teodora_miu.jpg)
 
 Lab Professor \
-Responsable for labs\
+Responsible for labs\
 GitHub: [TeodoraMiu](https://github.com/TeodoraMiu) \
 teodora.miu@stud.fils.upb.ro
 </td>
