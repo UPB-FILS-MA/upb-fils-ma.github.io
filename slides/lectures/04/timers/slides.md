@@ -118,7 +118,7 @@ ARM Cortex-M peripheral
 
 <img src="/timers/systick_registers.png" class="rounded w-140">
 
-```rust{all|1,7,9|2,10|3,4,12,13}
+```rust{all|1,7,8|2,9|3,10,11}
 const SYST_RVR: *mut u32 = 0xe000_e014 as *mut u32;
 const SYST_CVR: *mut u32 = 0xe000_e018 as *mut u32;
 const SYST_CSR: *mut u32 = 0xe000_e010 as *mut u32;
@@ -127,9 +127,9 @@ const SYST_CSR: *mut u32 = 0xe000_e010 as *mut u32;
 let interval: u32 = 5_000_000;
 unsafe {
     write_volatile(SYST_RVR, interval);
-        write_volatile(SYST_CVR, 0);
-        // set fields `ENABLE` and `TICKINT`
-        write_volatile(SYST_CSR, 0b11);
+    write_volatile(SYST_CVR, 0);
+    // set fields `ENABLE` and `TICKINT`
+    write_volatile(SYST_CSR, 0b11);
 }
 ```
 
