@@ -102,7 +102,7 @@ impl Future for Sleep {
                 Poll::Pending
             }
             SleepStatus::WaitForAlarm => {
-                if ALARM.exired {
+                if ALARM.expired() {
                     Poll::Ready(())
                 } else {
                     Poll::Pending
@@ -118,7 +118,7 @@ impl Future for Sleep {
 </div>
 
 ---
----
+
 # Executing Sleep
 
 <div grid="~ cols-2 gap-5">
@@ -135,7 +135,7 @@ impl Future for Sleep {
                 Poll::Pending
             }
             SleepStatus::WaitForAlarm => {
-                if ALARM.exired {
+                if ALARM.exired() {
                     Poll::Ready(())
                 } else {
                     Poll::Pending
@@ -169,6 +169,7 @@ sequenceDiagram
 ```
 
 </div>
+
 
 ---
 layout: two-cols

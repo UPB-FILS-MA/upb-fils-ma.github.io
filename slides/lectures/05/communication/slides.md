@@ -5,6 +5,35 @@ layout: section
 between tasks
 
 ---
+---
+# Simultaneous Access
+Rust forbids simultaneous writes access
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Task1 -->> +Resource: write
+    Task2 -->> +Resource: write
+    Resource -->> -Task1: done writing
+    Resource -->> -Task2: done writing
+```
+
+---
+---
+# Exclusive Access
+we want to sequentiality access the resource
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Task1 -->> +Resource: write
+    Task2 --x Resource: write
+    Resource -->> -Task1: done writing
+    Task2 -->> +Resource: write
+    Resource -->> -Task2: done writing
+```
+
+---
 layout: two-cols
 ---
 
@@ -25,6 +54,51 @@ safely share data between tasks
 - embassy allows registering priority executors, that run tasks in ISRs
 - some MCUs have multiple cores
 
+---
+---
+# Blocking Mutex
+
+no `.await` allowed while the mutex is held
+
+```rust{all|1|3-5|7-14|10-13}
+use embassy_sync::blocking_mutex::Mutex;
+
+struct Data {/* ... */ }
+
+static SHARED_DATA: Mutex<ThreadModeRawMutex, RefCell<Data>> = Mutex::new(RefCell::new(Data::new(/* ... */)));
+
+#[embassy_executor::task]
+async fn task1() {
+    // Load value from global context, modify and store
+    SHARED_DATA.lock(|f| {
+        let data = f.borrow_mut();
+        // edit data
+    });
+}
+```
+
+---
+---
+# Async Mutex
+`.await` is allowed while the Mutex is held, it will release the Mutex while `await`ing
+
+```rust{all|1|3-5|7-14|10-14}
+use embassy_sync::mutex::Mutex;
+
+struct Data {/* ... */ }
+
+static SHARED: Mutex<ThreadModeRawMutex, Data> = Mutex::new(Data::new(/* ... */));
+
+#[embassy_executor::task]
+async fn task1() {
+    // Load value from global context, modify and store
+    {
+        let mut data = SHARED_DATA.lock().await;
+        // edit *data
+        Timer::after(Duration::from_millis(1000)).await;
+    }
+}
+```
 
 ---
 ---
@@ -95,7 +169,7 @@ flowchart LR
 ```
 
 ---
----
+
 # Channel Example
 
 ```rust{all|1|2|5,7,14,17-25|5,8-14}
@@ -105,7 +179,7 @@ static CHANNEL: Channel<ThreadModeRawMutex, LedState, 64> = Channel::new();
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     // init led
-    spawner.spawn(toggle_led(CHANNEL.sender(), Duration::from_millis(500))));
+    spawner.spawn(execute_led(CHANNEL.sender(), Duration::from_millis(500))));
     loop {
         match CHANNEL.receive().await {
             LedState::On => led.on(),
@@ -115,7 +189,7 @@ async fn main(spawner: Spawner) {
 }
 
 #[embassy_executor::task]
-async fn execute_led(command: Sender<'static, ThreadModeRawMutex, LedState, 64>, delay: Duration) {
+async fn execute_led(control: Sender<'static, ThreadModeRawMutex, LedState, 64>, delay: Duration) {
     let mut ticker = Ticker::every(delay);
     loop {
         control.send(LedState::On).await;
