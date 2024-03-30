@@ -323,6 +323,7 @@ trait Future {
 
 - `Pin` to `mut self`, which means that `self` cannot be moved
 - `Context` which provides the `waker`
+  - tasks are polled only if they ask the executor (by using the `wake` function)
 - `embassy-rs` provides the execution engine
 
 </div>
