@@ -307,7 +307,7 @@ fn executor() {
 ---
 ---
 # The `Future` trait
-the Rust provides
+that Rust provides
 
 ```rust
 trait Future {
@@ -317,6 +317,16 @@ trait Future {
 }
 ```
 
+<div grid="~ cols-2 gap-2">
+
+<div>
+
 - `Pin` to `mut self`, which means that `self` cannot be moved
 - `Context` which provides the `waker`
 - `embassy-rs` provides the execution engine
+
+</div>
+
+<img src="/future/executor_w.svg" class="rounded">
+
+</div>
