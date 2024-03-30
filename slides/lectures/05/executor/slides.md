@@ -68,7 +68,7 @@ async fn main(spawner: Spawner) {
 <div>
 
 - unless awaited, `async` functions are not executed
-- tasks have to use `.await` in loops, otherwise the block the scheduler
+- tasks have to use `.await` in loops, otherwise they block the scheduler
 
 </div>
 
@@ -81,7 +81,7 @@ async fn led_blink(mut led:Output<'static, PIN_X>) {
         // this does not execute anything
         Timer::after_secs(1);
         // infinite loop without `.await`
-        // that never gives uo the MCU
+        // that never gives up the MCU
     }
 }
 

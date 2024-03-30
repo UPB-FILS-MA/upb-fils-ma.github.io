@@ -142,7 +142,7 @@ impl Future for Sleep {
                 Poll::Pending
             }
             SleepStatus::WaitForAlarm => {
-                if ALARM.exired() {
+                if ALARM.expired() {
                     Poll::Ready(())
                 } else {
                     Poll::Pending
