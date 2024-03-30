@@ -29,7 +29,7 @@ Lecture 5
 
 # Asynchronous Development
 
-- Multitasking & Concurrency
+- Concurrency
 - Asynchronous Executor
 - `Future`s
 - Communication between tasks
@@ -63,7 +63,7 @@ src: ./communication/slides.md
 # Conclusion
 we discussed about
 
-- Multitasking & Concurrency
+- Preemptive & Cooperative Concurrency
 - Asynchronous Executor
 - `Future`s and how Rust rewrites `async` function
 - Communication between tasks

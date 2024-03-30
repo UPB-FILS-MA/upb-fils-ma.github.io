@@ -6,6 +6,13 @@ between tasks
 
 ---
 ---
+# Bibliography
+for this section
+
+**Omar Hiari**, *[Sharing Data Among Tasks in Rust Embassy: Synchronization Primitives](https://dev.to/apollolabsbin/sharing-data-among-tasks-in-rust-embassy-synchronization-primitives-59hk)* 
+
+---
+---
 # Simultaneous Access
 Rust forbids simultaneous writes access
 
@@ -42,7 +49,7 @@ safely share data between tasks
 
 - [`NoopMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/type.NoopMutex.html) - used for data shared between tasks within the **same executor** 
 - [`CriticalSectionMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/type.CriticalSectionMutex.html) - used for data shared between multiple executors, ISRs and cores 
-- [`ThreadModeMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/struct.ThreadModeMutex.html) - used for data shared between tasks within **low priority executors** (**not** running in **ISRs** mode)
+- [`ThreadModeMutex`](https://docs.embassy.dev/embassy-sync/git/default/blocking_mutex/struct.ThreadModeMutex.html) - used for data shared between tasks within **low priority executors** (**not** running in **ISRs** mode) running on a **single core**
 
 :: right ::
 
@@ -55,12 +62,12 @@ safely share data between tasks
 - some MCUs have multiple cores
 
 ---
----
+
 # Blocking Mutex
 
 no `.await` allowed while the mutex is held
 
-```rust{all|1|3-5|7-14|10-13}
+```rust{all|1|3-5|7-14|10-14}
 use embassy_sync::blocking_mutex::Mutex;
 
 struct Data {/* ... */ }
@@ -73,9 +80,11 @@ async fn task1() {
     SHARED_DATA.lock(|f| {
         let data = f.borrow_mut();
         // edit data
+        f.replace(data);
     });
 }
 ```
+
 
 ---
 ---

@@ -6,6 +6,13 @@ of Embassy
 
 ---
 ---
+# Bibliography
+for this section
+
+**Embassy Documentation**, *[Embassy executor](https://embassy.dev/book/dev/runtime.html)* 
+
+---
+---
 # Tasks
 
 <div grid="~ cols-2 gap5">

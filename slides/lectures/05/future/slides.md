@@ -5,6 +5,13 @@ layout: section
 a.k.a `Promise` in other languages
 
 ---
+---
+# Bibliography
+for this section
+
+**Bert Peters**, *[How does async Rust work](https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html)* 
+
+---
 layout: two-cols
 ---
 # Future
@@ -174,6 +181,7 @@ sequenceDiagram
 ---
 layout: two-cols
 ---
+
 # Async Rust
 
 ```rust {lines: false}
@@ -184,9 +192,9 @@ async fn blink(mut led: Output<'static, PIN_X>) {
 }
 ```
 <v-click>
-Rust writes
+Rust rewrites
 
-```rust{1-7|1-3,7|1,4-7|13-15|all}{lines: false}
+```rust{1-7|1-3,7|1,4-7|8-12|13-15|all}{lines: false}
 struct Blink {
     // status
     status: BlinkStatus,
@@ -239,6 +247,7 @@ impl Future for Blink {
 ```
 
 </v-click>
+
 
 ---
 

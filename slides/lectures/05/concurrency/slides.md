@@ -1,12 +1,20 @@
 ---
 layout: section 
 ---
-# Multitasking & Concurrency
+# Concurrency
+Preemptive and Cooperative
+
+---
+---
+# Bibliography
+for this section
+
+**Brad Solomon**, *[Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)* 
 
 ---
 layout: two-cols
 ---
-# Multitasking
+# Preemptive Concurrency
 
 <style>
 .two-columns {
@@ -17,10 +25,8 @@ layout: two-cols
 - MCUs are usually *single core*[^rp2040]
 - Tasks in parallel require an OS[^interrupts]
 - Tasks can be suspended at any time
-  - requires expensive synchronization
 - **Switching** the task is **expensive**
-- Usually tasks that do a lot of I/O
-  - this makes the **switching time longer than** the actual **processing time**
+- Tasks that do a lot of I/O which makes the **switching time longer than** the actual **processing time**
 
 :: right ::
 
@@ -54,7 +60,7 @@ sequenceDiagram
 ---
 layout: two-cols
 ---
-# Concurrency
+# Cooperative Concurrency
 
 <style>
 .two-columns {
