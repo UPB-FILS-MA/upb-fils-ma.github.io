@@ -18,7 +18,7 @@ TBD
 Up to now, during the labs, we've seen that, in order to be able to do multiple different actions "at once", we would use *tasks*. We would let the `main` function run, while also doing another action seemingly "in parallel" inside of another task. 
 Let's take the following example: if we want to blink an LED every second while also waiting for a button press to do something else, we would need to spawn a new task in which we would wait for the button press, while blinking the LED in the `main` function. 
 
-When thinking of how exactly this works, you would probably think that the task is running on a separate *thread* than the `main` function. usually this would be the case when developing a normal computer application. Since only one thread can independently run per processor core, that means that, since we are using only one core of the RP2040 (which actually has only 2), we would only be able to run **one thread at a time**. And we don't have an OS to help us. So how exactly does the task wait for the button press in parallel with the LED blinking? 
+When thinking of how exactly this works, you would probably think that the task is running on a separate *thread* than the `main` function. Usually this would be the case when developing a normal computer application. Since only one thread can independently run per processor core (without a preemptive OS), that means that, since we are using only one core of the RP2040 (which actually has only 2), we would only be able to run **one thread at a time**. So how exactly does the task wait for the button press in parallel with the LED blinking? 
 Short answer is: it doesn't. In reality, both functions runs asynchronously. 
 
 ### Tasks
@@ -63,15 +63,15 @@ loop {
 
 ## `await` keyword
 
-After setting the timer, our main function would need to wait until the alarm fires after 200 ms. Instead of just waiting and blocking the current and *only* thread of execution, it could do another action in the meantime. This is where the `await` keyword comes into play.
-When using `.await` inside of an asynchronous function, we are telling the MCU that this action might take more time to finish, so *do something else* until it's ready. Basically, the execution flow of the asynchronous function function is halted exactly where `.await` is used, and the MCU starts running another task. In our case, it would halt the main function while waiting for the alarm to go off and it could start running the code inside the `button_pressed` task.
+After setting the timer, our `main` function would need to wait until the alarm fires after 200 ms. Instead of just waiting and blocking the current and *only* thread of execution, it could allow the thread to do another action in the meantime. This is where the `await` keyword comes into play.
+When using `.await` inside of an asynchronous function, we are telling a third party (called the **executor**, detailed later) that this action might take more time to finish, so *do something else* until it's ready. Basically, the execution flow of the asynchronous function function is halted exactly where `.await` is used, and the executor starts running another task. In our case, it would halt the main function while waiting for the alarm to go off and it could start running the code inside the `button_pressed` task.
 ```rust
 loop {
     info!("waiting for button press");
     button.wait_for_falling_edge().await;
 }
 ```
-We can see that here, we also use the `wait_for_falling_edge` function asynchronously, meaning that until we get a signal that a button has been pressed, the MCU can decide to do other stuff. If it has nothing else to do, it goes to sleep, until it receives a signal that either the button has been pressed, or the timer has run out. Then, it will resume execution of the function where the action has completed. 
+We can see that here, we also use the `wait_for_falling_edge` function asynchronously, meaning that until we get a signal that a button has been pressed, the executor can decide to do other stuff. If it has nothing else to do, it goes to sleep, until it receives a signal that either the button has been pressed, or the timer has run out. Then, it will resume execution of the function where the action has completed. 
 When the button is pressed the execution flow will resume inside of the `button_pressed` task, until it is interrupted by the next `.await` in that function. If the timer runs out before the `button_pressed` task execution reaches the next `.await`, the resuming of the `main` function will delayed until the `button_pressed` task `.await`s.
 This method of development allows our programs to run seemingly "in parallel", without the need of multiple threads. Each task *voluntarily* pauses its execution and passes control over to whatever other task needs it. This means that it's the task's business to allow other tasks to run while it's idly waiting for something to happen on its end.
 :::note
@@ -116,6 +116,7 @@ sequenceDiagram
     Future->>Hardware: read_value()
     Hardware-->>Future: value
     Future-->>-Executor: Poll::Ready(value)
+```
 
 :::note
 An efficient executor will not poll all tasks. Instead, tasks signal the executor that they are ready to make progress by using a `Waker`.
@@ -136,10 +137,6 @@ Read more about how async/await works in Rust [here](https://rust-lang.github.io
 Up to this point, to be able to share peripherals across multiple tasks, we have been using global `Mutex`s or passing them directly as parameters to the tasks. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
 
 **Channels** allow a unidirectional flow of information between two endpoints: the *Sender* and the *Receiver*. The sender sends a value through the channel, and the receiver receives this value once it is ready to do so. Until it is ready, the data will be stored inside a queue. Channels in Embassy are *Multiple Producer, Multiple Consumer*, which means that we can have a channel associated with multiple senders and multiple receivers. 
-
-:::info
-Executors actually internally use channels when dealing with tasks. (TODO: how?)
-:::
 
 To use a channel in Embassy, we first need to declare a static instance of the channel. 
 
@@ -193,6 +190,8 @@ we would need to either move it inside the task entirely, or use a mutable refer
 we can't pass it to another task, because the value was *moved* inside that task completely. And if we wanted to pass it as a mutable reference instead, we would quickly realize that Rust 
 doesn't allow multiple mutable references at once, to avoid concurrent modifications. So this is why we need to either declare a global, static `Mutex` that any task can access, to ensure 
 that the value cannot be modified concurrently by two different tasks, or use channels and keep the peripheral inside the `main` function.
+
+To better understand the concepts of ownership and borrowing in Rust, take a look at this [chapter](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) of the Rust Book.
 :::
 
 ## Potentiometer
