@@ -23,7 +23,7 @@ Short answer is: it doesn't. In reality, both functions runs asynchronously.
 
 ### Tasks
 
-Tasks in Embassy are what we call "asynchronous functions". Asynchronous functions are different from normal functions, in the sense that they allow asynchronous code execution. Let's take an example from the previous lab:
+A task in Embassy is represented by an *asynchronous function*. Asynchronous functions are different from normal functions, in the sense that they allow asynchronous code execution. Let's take an example from the previous lab:
 ```rust
 #[embassy_executor::task]
 async fn button_pressed(mut led: Output<'static, PIN_X>, mut button: Input<'static, PIN_X>) {
@@ -191,26 +191,26 @@ we can't pass it to another task, because the value was *moved* inside that task
 doesn't allow multiple mutable references at once, to avoid concurrent modifications. So this is why we need to either declare a global, static `Mutex` that any task can access, to ensure 
 that the value cannot be modified concurrently by two different tasks, or use channels and keep the peripheral inside the `main` function.
 
-To better understand the concepts of ownership and borrowing in Rust, take a look at this [chapter](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) of the Rust Book.
+To better understand the concepts of ownership and borrowing in Rust, take a look at [chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) of the Rust Book.
 :::
 
 ## Potentiometer
 
-The potentiometer is an analog sensor, and is similar to the photoresistor in the sense that it's a variable resistor. It has a knob that can be turned from a minimum angle to a maximum angle, internally changing its resistance. A volume knob on a speaker is a potentiometer, for instance.
+A potentiometer is a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider. If only two terminals are used, one end and the wiper, it acts as a variable resistor or rheostat. A volume knob on a speaker is a potentiometer, for instance.
 
 ![Potentiometer](images/potentiometer_pins.png)
 
 ## Exercises
 
-1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP4 and a potentiometer to ADC0. Use Kicad to draw the schematic.
-2. Change the monochromatic LED's intensity, using button A (SW_A) and button B(SW_B) on the Pico Explorer. Button A will increase the intensity, and button B will decrease it.
+1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP4 and a potentiometer to ADC0. Use Kicad to draw the schematic. (**1p**)
+2. Change the monochromatic LED's intensity, using button A (SW_A) and button B(SW_B) on the Pico Explorer. Button A will increase the intensity, and button B will decrease it. (**2p**)
 
 :::tip
 - Use PWM to control the intensity.
 - Create two tasks, one for button A, one for button B. Use a channel to send commands from each button task to the main task.
 :::
 
-3. Control the RGB LED's color with buttons A, B, X and Y on the Pico Explorer. 
+3. Control the RGB LED's color with buttons A, B, X and Y on the Pico Explorer. (**2p**)
 - Button A -> RGB = Red
 - Button B -> RGB = Green
 - Button X -> RGB = Blue
@@ -219,6 +219,6 @@ The potentiometer is an analog sensor, and is similar to the photoresistor in th
 Use a separate task for each button. The RGB LED's color will be set in the main task.
 :::
 
-4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer.
+4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer. (**3p**)
 
-5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity.
+5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. (**2p**)
