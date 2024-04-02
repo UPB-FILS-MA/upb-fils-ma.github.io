@@ -144,7 +144,7 @@ Asynchronous programming is widely used in web development. In JavaScript, the e
 
 Read more about how async/await works in Rust [here](https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html).
 
-### Selecting `Future`s
+### `await`ing multiple `Future`s
 
 In some cases, we might find ourselves in the situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
 
@@ -179,6 +179,16 @@ After selecting the first `Future` that completes, the other one is *dropped*. F
 :::info
 You can also use [`select3`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select3.html), [`select4`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select4.html) or [`select_array`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select_array.html) when dealing with more than two `Future`s.
 :::
+
+### Joining `Future`s
+
+Similarly, we can also [`join`](https://docs.rs/embassy-futures/latest/embassy_futures/join/fn.join.html) multiple `Future`s, meaning that we wait for all of them to complete before moving on. 
+
+```rust
+let (res1, res2) = join(button.wait_for_falling_edge(), Timer::after_secs(5)).await;
+```
+
+`join` returns a tuple containing the results of both `Future`s.
 
 ## Channels
 
