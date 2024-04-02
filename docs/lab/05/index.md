@@ -177,7 +177,7 @@ After selecting the first `Future` that completes, the other one is *dropped*. F
 :::
 
 :::info
-You can also use `select3`, `select4` or `select_array` when dealing with more than two `Future`s.
+You can also use [`select3`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select3.html), [`select4`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select4.html) or [`select_array`](https://docs.rs/embassy-futures/latest/embassy_futures/select/fn.select_array.html) when dealing with more than two `Future`s.
 :::
 
 ## Channels
