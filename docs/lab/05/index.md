@@ -63,7 +63,7 @@ loop {
 
 ## `await` keyword
 
-After setting the timer, our `main` function would need to wait until the alarm fires after 200 ms. Instead of just waiting and blocking the current and *only* thread of execution, it could allow the thread to do another action in the meantime. This is where the `await` keyword comes into play.
+After setting the timer, our `main` function would need to wait until the alarm fires after 200 ms. Instead of just waiting and blocking the current and *only* thread of execution, it could allow the thread to do another action in the meantime. This is where the `.await` keyword comes into play.
 When using `.await` inside of an asynchronous function, we are telling a third party (called the **executor**, detailed later) that this action might take more time to finish, so *do something else* until it's ready. Basically, the execution flow of the asynchronous function function is halted exactly where `.await` is used, and the executor starts running another task. In our case, it would halt the main function while waiting for the alarm to go off and it could start running the code inside the `button_pressed` task.
 ```rust
 loop {
@@ -80,9 +80,9 @@ On an operating system, it would be the scheduler's job to decide when and for h
 
 ## Futures
 
-Rust has a special datatype that represents an action that will complete sometime in the future. By using `await` on a `Future`, we are passing control to another task until the Future completes.
+Rust has a special datatype that represents an action that will complete sometime in the future. By using `.await` on a `Future`, we are passing control to another task until the Future completes.
 :::info
-In the `button_pressed` task, the `wait_for_falling_edge` returns a `Future`, which is then `await`ed.
+In the `button_pressed` task, the `wait_for_falling_edge` returns a `Future`, which is then `.await`ed.
 :::
 This is a simplified version of what a `Future` in Rust really looks like:
 ```rust
@@ -90,14 +90,15 @@ enum Poll<T> {
     Pending,
     Ready(T),
 }
+
 trait Future {
    type Output;
    fn poll(&mut self) -> Poll<Self::Output>;
 }
 ```
-The `Future` has an `Output` type, that represents the type of the result that it will return once it completes. For `wait_for_falling_edge()`, the Output type is `()` (nothing).
-The function `poll` returns a Poll type, which can either be `Pending`, or `Ready<T>` (T will be output in this case).
-Let's break down what all of this means. A `Future` needs to be checked on, every now and then, to see what its status is. This is the job of the **Executor**. The executor must regularly ask the `Future` if it's completed, or if it needs more time before it can give a result. We can say that the `Future` is `poll`ed, and depending on whether it's ready to give a result or not, it gives its status as `Pending` or `Ready`. If it's still pending, it needs more time before it can return a result, so the executor moves on to poll another `Future`. Whenever the `Future` is completed, it returns `Ready` once polled, and the executor returns execution back to the function where the `Future` completed.
+The `Future` has an `Output` associated type, that represents the type of the result that it will return once it completes. For `wait_for_falling_edge()`, the Output type is `()` (nothing).
+The function `poll` returns a `Poll` type, which can either be `Pending`, or `Ready<T>` (T will be output in this case).
+Let's break down what all of this means. A `Future` needs to be checked on, every now and then, to see what its status is. This is the job of the **Executor**. The executor must regularly ask the `Future` if it's completed, or if it needs more time before it can give a result. We can say that the `Future` is `poll`ed, and depending on whether it's ready to give a result or not, it gives its status as `Pending` or `Ready`. If it's still pending, it needs more time before it can return a result, so the executor moves on to poll another `Future`. Whenever the `Future` is completed, it returns `Ready` once polled, and the executor returns execution back to the function where the `Future` `.await`ed.
 
 ```mermaid
 sequenceDiagram
@@ -124,7 +125,7 @@ An efficient executor will not poll all tasks. Instead, tasks signal the executo
 
 TODO: real future in Rust
 
-Under the hood, the Rust compiler is actually transforming our asynchronous function into a state-machine. That is why we can only use `await` inside of an `async` function, because it needs to be treated differently than an ordinary function in order to work asynchronously.
+Under the hood, the Rust compiler is actually transforming our asynchronous function into a state-machine. That is why we can only use `.await` inside of an `async` function, because it needs to be treated differently than an ordinary function in order to work asynchronously.
 
 :::info
 Asynchronous programming is widely used in web development. In JavaScript, the equivalent of a `Future` would be a `Promise`.
@@ -134,7 +135,7 @@ Read more about how async/await works in Rust [here](https://rust-lang.github.io
 
 ## Channels
 
-Up to this point, to be able to share peripherals across multiple tasks, we have been using global `Mutex`s or passing them directly as parameters to the tasks. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
+Up to this point, to be able to share peripherals or data across multiple tasks, we have been using global `Mutex`s or passing them directly as parameters to the tasks. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
 
 **Channels** allow a unidirectional flow of information between two endpoints: the *Sender* and the *Receiver*. The sender sends a value through the channel, and the receiver receives this value once it is ready to do so. Until it is ready, the data will be stored inside a queue. Channels in Embassy are *Multiple Producer, Multiple Consumer*, which means that we can have a channel associated with multiple senders and multiple receivers. 
 
