@@ -11,7 +11,9 @@ This lab will teach you the principles of asynchronous programming, and its appl
 
 ## Resources
 
-TBD
+**Bert Peters**, *[How does async Rust work](https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html)* 
+
+**Omar Hiari**, *[Sharing Data Among Tasks in Rust Embassy: Synchronization Primitives](https://dev.to/apollolabsbin/sharing-data-among-tasks-in-rust-embassy-synchronization-primitives-59hk)* 
 
 ## Asynchronous functions
 
@@ -122,7 +124,17 @@ sequenceDiagram
 An efficient executor will not poll all tasks. Instead, tasks signal the executor that they are ready to make progress by using a `Waker`.
 :::
 
-TODO: real future in Rust
+:::info
+A real future in Rust looks like this:
+```rust
+pub trait Future {
+    type Output;
+
+    // Required method
+    fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Self::Output>;
+}
+```
+:::
 
 Under the hood, the Rust compiler is actually transforming our asynchronous function into a state-machine. That is why we can only use `.await` inside of an `async` function, because it needs to be treated differently than an ordinary function in order to work asynchronously.
 
@@ -277,7 +289,16 @@ sequenceDiagram
 4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer. (**3p**)
 
 :::tip
-You will need another task in which you sample the ADC and send the values over a separate channel. You can `await` both channel `receive()` futures inside of a `select` to see which command is received first, and handle it.
+You will need another task in which you sample the ADC and send the values over a channel.
+You could do this in one of two ways:
+1. Use a single channel for both changing the color and the intensity of the LED. Button tasks and the potentiometer task will send over the same channel. For this, you will need to change the type of data that is sent over the channel to encapsulate both types of commands. For example, you could use an enum like this:
+```rust
+enum LedCommand {
+    ChangeColor(Option<LedColor>),
+    ChangeIntensity(u16)
+}
+```
+2. Use two separate channels, one for sending the color command (which contains the LedColor), and one for sending the intensity. You can `await` both channel `receive()` futures inside of a `select` to see which command is received first, and handle it.
 Example:
 ```rust
 let select = select(COLOR_CHANNEL.receive(), INTENSITY_CHANNEL.receive()).await;
@@ -292,4 +313,18 @@ match select {
 ```
 :::
 
-5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. (**2p**)
+5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. Use the SPI screen driver provided in the lab skeleton. (**2p**)
+:::tip
+To write to the screen, use this example:
+```rust
+let mut text = String::<64>::new();
+write!(text, "Screen print: ", led_color).unwrap(); // led_color must be defined first
+
+Text::new(&text, Point::new(40, 110), style)
+    .draw(&mut display)
+    .unwrap();
+
+// Small delay for yielding
+Timer::after_millis(1).await;
+```
+:::
