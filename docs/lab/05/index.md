@@ -6,7 +6,7 @@ slug: /lab/05
 
 # 05 - Asynchronous Development
 
-This lab will teach you the principles of asynchronous programming, and its application in Embassy-rs.
+This lab will teach you the principles of asynchronous programming, and its application in Embassy.
 
 
 ## Resources
@@ -46,7 +46,6 @@ async fn main(spawner: Spawner) {
 
     loop {
         led.toggle();
-
         Timer::after_millis(200).await;
     }
 }
@@ -75,12 +74,12 @@ We can see that here, we also use the `wait_for_falling_edge` function asynchron
 When the button is pressed the execution flow will resume inside of the `button_pressed` task, until it is interrupted by the next `.await` in that function. If the timer runs out before the `button_pressed` task execution reaches the next `.await`, the resuming of the `main` function will delayed until the `button_pressed` task `.await`s.
 This method of development allows our programs to run seemingly "in parallel", without the need of multiple threads. Each task *voluntarily* pauses its execution and passes control over to whatever other task needs it. This means that it's the task's business to allow other tasks to run while it's idly waiting for something to happen on its end.
 :::note
-On an operating system, it would be the scheduler's job to decide when and for how long processes get to run.
+On a preemptive operating system, it would be the scheduler's job to decide when and for how long processes get to run.
 :::
 
-## Futures
+## `Future`s
 
-Rust has a special datatype that represents an action that will complete sometime in the future. By using `.await` on a `Future`, we are passing control to another task until the Future completes.
+Rust has a special datatype that represents an action that will complete sometime in the future. By using `.await` on a `Future`, we are passing control to another task until the `Future` completes.
 :::info
 In the `button_pressed` task, the `wait_for_falling_edge` returns a `Future`, which is then `.await`ed.
 :::
