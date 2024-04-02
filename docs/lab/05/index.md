@@ -145,6 +145,10 @@ Read more about how async/await works in Rust [here](https://rust-lang.github.io
 
 ### `await`ing multiple `Future`s
 
+Sometimes we need to `.await` several futures at the same time. Embassy provides two ways of doing this:
+- `select` - wait for several `Future`s, stop as soon as **one** of them **returns**;
+- `join` - wait for several `Future`s until they **all return**
+
 #### `select`
 
 In some cases, we might find ourselves in the situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
@@ -191,11 +195,6 @@ let (res1, res2) = join(button.wait_for_falling_edge(), Timer::after_secs(5)).aw
 
 `join` returns a tuple containing the results of both `Future`s.
 
-:::note
-Summary:
-- `select` - wait for one `Future` to complete
-- `join` - wait for both `Future`s to complete
-:::
 
 ## Channels
 
