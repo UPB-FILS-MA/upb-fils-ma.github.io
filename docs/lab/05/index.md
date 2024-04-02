@@ -18,8 +18,8 @@ TBD
 Up to now, during the labs, we've seen that, in order to be able to do multiple different actions "at once", we would use *tasks*. We would let the `main` function run, while also doing another action seemingly "in parallel" inside of another task. 
 Let's take the following example: if we want to blink an LED every second while also waiting for a button press to do something else, we would need to spawn a new task in which we would wait for the button press, while blinking the LED in the `main` function. 
 
-When thinking of how exactly this works, you would probably think that the task is running on a separate *thread* than the `main` function. Usually this would be the case when developing a normal computer application. Since only one thread can independently run per processor core (without a preemptive OS), that means that, since we are using only one core of the RP2040 (which actually has only 2), we would only be able to run **one thread at a time**. So how exactly does the task wait for the button press in parallel with the LED blinking? 
-Short answer is: it doesn't. In reality, both functions runs asynchronously. 
+When thinking of how exactly this works, you would probably think that the task is running on a separate *thread* than the `main` function. Usually this would be the case when developing a normal computer application. Multithreading is possible, but requires a preemptive operating system. Without one, only one thread can independently run per processor core and that means that, since we are using only one core of the RP2040 (which actually has only 2), we would only be able to run **one thread at a time**. So how exactly does the task wait for the button press in parallel with the LED blinking? 
+Short answer is: it doesn't. In reality, both functions run asynchronously. 
 
 ### Tasks
 
@@ -159,6 +159,14 @@ match select {
     }
 }
 ```
+
+:::warning
+After selecting the first `Future` that completes, the other one is *dropped*. For instance, if the button press happens first, the timer will be stopped.
+:::
+
+:::info
+You can also use `select3`, `select4` or `select_array` when dealing with more than two `Future`s.
+:::
 
 ## Channels
 
