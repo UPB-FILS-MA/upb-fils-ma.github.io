@@ -133,6 +133,34 @@ Asynchronous programming is widely used in web development. In JavaScript, the e
 
 Read more about how async/await works in Rust [here](https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html).
 
+### Selecting Futures
+
+In some cases, we might find ourselves in the situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
+
+There is a function in Embassy that allows us to do this: `select`. It takes two `Future`s as arguments, and polls both of them to see which one completes first.
+```rust
+let select = select(button.wait_for_falling_edge(), Timer::after_secs(5)).await;
+```
+
+It returns an `Either` type, that looks like this:
+```rust
+pub enum Either<A, B> {
+    First(A),
+    Second(B),
+}
+```
+A and B are the results of each `Future`, so we can just use a `match` on the `select` variable to see which `Future` finished first.
+```rust
+match select {
+    First(res1) => {
+        // handle case for button press
+    },
+    Second(res2) => {
+        // handle case for alarm firing
+    }
+}
+```
+
 ## Channels
 
 Up to this point, to be able to share peripherals or data across multiple tasks, we have been using global `Mutex`s or passing them directly as parameters to the tasks. But there are other, more convenient ways to send data to and from tasks. Instead of having to make global, static variables that are shared by tasks, we could choose to only send the information that we need from one task to another. To achieve this, we can use *channels*.
@@ -204,7 +232,7 @@ A potentiometer is a three-terminal resistor with a sliding or rotating contact 
 
 ## Exercises
 
-1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP4 and a potentiometer to ADC0. Use Kicad to draw the schematic. (**1p**)
+1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP5 and a potentiometer to ADC0. Use Kicad to draw the schematic. (**1p**)
 2. Change the monochromatic LED's intensity, using button A (SW_A) and button B(SW_B) on the Pico Explorer. Button A will increase the intensity, and button B will decrease it. (**2p**)
 
 :::tip
@@ -242,7 +270,19 @@ sequenceDiagram
 4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer. (**3p**)
 
 :::tip
-You will need another task in which you sample the ADC and send the values over the channel.
+You will need another task in which you sample the ADC and send the values over a separate channel. You can `await` both channel `receive()` futures inside of a `select` to see which command is received first, and handle it.
+Example:
+```rust
+let select = select(COLOR_CHANNEL.receive(), INTENSITY_CHANNEL.receive()).await;
+match select {
+    First(color) => {
+        // ...
+    },
+    Second(intensity) => {
+        // ...
+    }
+}
+```
 :::
 
 5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. (**2p**)
