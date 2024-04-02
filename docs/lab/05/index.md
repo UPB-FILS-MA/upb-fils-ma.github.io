@@ -132,7 +132,7 @@ Asynchronous programming is widely used in web development. In JavaScript, the e
 
 Read more about how async/await works in Rust [here](https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html).
 
-### Selecting Futures
+### Selecting `Future`s
 
 In some cases, we might find ourselves in the situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
 
