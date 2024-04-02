@@ -144,8 +144,9 @@ To use a channel in Embassy, we first need to declare a static instance of the c
 ```rust
 static CHANNEL: Channel<ThreadModeRawMutex, bool, 64> = Channel::new();
 ```
-
-The second generic argument of `Channel` is the type of data that we will be sending through the channel. The third argument is the maximum number of values that can be stored in the queue. 
+- `ThreadModeRawMutex` - the type of Mutex that the Channel internally uses. It is a mutex that can safely be shared between threads
+- `bool` - the type of data that is sent through the channel
+- `64` - the maximum number of values that can be stored in the channel's queue
 
 Let's say we spawn a task `task1` that runs a timer. Every second, we want to toggle an LED in the `main` function, based on the timer running in `task1`. For this, `task1` would need to 
 send a signal to the `main` program every time the 1 second alarm has fired, meaning the task and the main program would share the channel. `task1` would *send* over the channel, and 
@@ -217,9 +218,31 @@ A potentiometer is a three-terminal resistor with a sliding or rotating contact 
 - Button X -> RGB = Blue
 - Button Y -> RGB = Led Off
 :::tip
-Use a separate task for each button. The RGB LED's color will be set in the main task.
+Use a separate task for each button. When a button press is detected, a command will be sent to the main task, and the main task will set the RGB LED's color according to that command.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    note right of TaskBtnA: waits for button A press
+    note right of TaskBtnB: waits for button B press
+    note right of TaskBtnX: waits for button X press
+    note right of TaskBtnY: waits for button Y press
+    note right of TaskMain: waits for LED command
+    Hardware-->>TaskBtnA: button A press
+    TaskBtnA-->>TaskMain: LedCommand(LedColor::Red)
+    note right of TaskMain: sets PWM configuration
+    TaskMain-->>Hardware: sets RGB LED color RED
+    Hardware-->>TaskBtnX: button X press
+    TaskBtnX-->>TaskMain: LedCommand(LedColor::Blue)
+    note right of TaskMain: sets PWM configuration
+    TaskMain-->>Hardware: sets RGB LED color BLUE
+```
 :::
 
 4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer. (**3p**)
+
+:::tip
+You will need another task in which you sample the ADC and send the values over the channel.
+:::
 
 5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. (**2p**)
