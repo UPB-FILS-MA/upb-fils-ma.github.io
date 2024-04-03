@@ -211,27 +211,16 @@ static CHANNEL: Channel<ThreadModeRawMutex, bool, 64> = Channel::new();
 - `bool` - the type of data that is sent through the channel
 - `64` - the maximum number of values that can be stored in the channel's queue
 
-Let's say we spawn a task `task1` that runs a timer. Every second, we want to toggle an LED in the `main` function, based on the timer running in `task1`. For this, `task1` would need to 
-send a signal to the `main` program every time the 1 second alarm has fired, meaning the task and the main program would share the channel. `task1` would *send* over the channel, and 
-`main` would *receive*.
-
-For this we need to pass a `Sender` endpoint to `task1` once we spawn it.
-
-```rust
-// ---- fn main() ----
-spawner.spawn(task1(CHANNEL.sender())).unwrap();
-```
-
-The `sender()` function returns a new sender for the given channel.
+Let's say we spawn a task `task1` that runs a timer. Every second, we want to toggle an LED in the `main` function, based on the timer running in `task1`. For this, `task1` would need to send a signal to the `main` program every time the 1 second alarm has fired, meaning the task and the main program would share the channel. `task1` would *send* over the channel, and `main` would *receive*.
 
 Inside `task1`, we would just set a timer and wait until it fires. After it fires, we send a signal through the channel, to indicate that 1 second has elapsed.
 
 ```rust
 #[embassy_executor::task]
-async fn task1(channel_sender: Sender<'static, ThreadModeRawMutex, bool, 64>) {
+async fn task1() {
     loop {
         Timer::after_secs(1).await;
-        channel_sender.send(true).await;
+        CHANNEL.send(true).await;
     }
 }
 ```
