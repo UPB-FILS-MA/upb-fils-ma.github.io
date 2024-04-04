@@ -61,7 +61,7 @@ registers map
 ---
 ---
 # Reading from a digital sensor
-using synchronous/asynchronous SPI to read the pressure_lsb of BMP280
+using synchronous/asynchronous SPI to read the `press_lsb` register of BMP280
 
 <img src="/sensors/spi_read_register.svg" class="rounded w-200">
 
@@ -107,7 +107,7 @@ let pressure_lsb = rx_buf[1];
 ---
 ---
 # Writing to a digital sensor
-setting up the sensor using synchronous/asynchronous SPI
+using synchronous/asynchronous SPI to set up the `ctrl_meas` register of the BMP280 sensor 
 
 <img src="/sensors/spi_write_register.svg" class="rounded w-200">
 
