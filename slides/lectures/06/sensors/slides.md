@@ -47,8 +47,10 @@ analog and digital
 schematics
 
 <div align="center">
-<img src="/sensors/bmp280_schematics.png" class="rounded w-170">
+<img src="/sensors/bmp280_schematics.png" class="rounded w-150">
 </div>
+
+[Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)
 
 ---
 ---
