@@ -29,13 +29,34 @@ Lecture 6
 # UART & SPI
 used by RP2040
 
-- Universal Asynchronous Receiver and Transmitter
-- Serial Peripheral Interface
+- Direct Memory Access
+- Buses
+  - Universal Asynchronous Receiver and Transmitter
+  - Serial Peripheral Interface
+- Analog and Digital Sensors
+
+<!-- DMA -->
+
+---
+src: ./dma/slides.md
+---
 
 <!-- UART -->
 
 ---
-src: ./uart/uart.md
+src: ./uart/slides.md
+---
+
+<!-- SPI -->
+
+---
+src: ./spi/slides.md
+---
+
+<!-- Sensors -->
+
+---
+src: ./sensors/slides.md
 ---
 
 ---
@@ -43,5 +64,8 @@ src: ./uart/uart.md
 # Conclusion
 we discussed about
 
-- Universal Asynchronous Receiver and Transmitter
-- Serial Peripheral Interface
+- Direct Memory Access
+- Buses
+  - Universal Asynchronous Receiver and Transmitter
+  - Serial Peripheral Interface
+- Analog and Digital Sensors
