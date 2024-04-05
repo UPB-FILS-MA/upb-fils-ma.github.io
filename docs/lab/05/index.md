@@ -272,6 +272,23 @@ A potentiometer is a three-terminal resistor with a sliding or rotating contact 
 :::tip
 Use a separate task for each button. When a button press is detected, a command will be sent to the main task, and the main task will set the RGB LED's color according to that command.
 
+:::warning
+When building Rust software in *debug mode*, which is what `cargo build` does, Rust will panic if mathematical operations underflow or overflow. This means that:
+
+```rust
+let v = 10u8;
+v -= 12;
+```
+
+will panic. To avoid this, you can use the [`wrapping_`](https://doc.rust-lang.org/std/primitive.u8.html#method.wrapping_add) and [`saturating_`](https://doc.rust-lang.org/std/primitive.u8.html#method.saturating_add) functions:
+
+```rust
+let v = 10u8;
+// this will store 0 in v
+v = v.saturating_sub(12); 
+```
+:::
+
 ```mermaid
 sequenceDiagram
     autonumber
