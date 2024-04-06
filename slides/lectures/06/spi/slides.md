@@ -6,6 +6,16 @@ Serial Peripheral Interface
 
 ---
 ---
+
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.4 - *SPI*
+
+---
+---
 # SPI
 a.k.a *spy*
 
@@ -113,7 +123,7 @@ when data is read and written
 | `CPHA` | Clock phase | defines when the data is written to the line <br> 0: when `CS` *activates* or *clock edge* <br> 1: on *clock edge* (depends on `CPOL`) |
 
 ---
----
+
 # Transmission Example
 one main, two subs
 
@@ -125,8 +135,8 @@ one main, two subs
 
 <div>
 
-1. **main** writes the first bit on MOSI, **sub 1** writes the first bit on MISO
-2. **main** activates the CS pin of **sub 1**
+1. **main** activates the CS pin of **sub 1**
+2. **main** writes the first bit on MOSI, **sub 1** writes the first bit on MISO
 3. **main** starts the clock
 4. **main** and **sub 1** send the rest of the bits
 5. **main** stops the clock
@@ -136,8 +146,8 @@ one main, two subs
 
 <div>
 
-7. **main** writes the first bit on MOSI, **sub 2** writes the first bit on MISO
-8. **main** activates the CS pin of **sub 2**
+7. **main** activates the CS pin of **sub 2**
+8. **main** writes the first bit on MOSI, **sub 2** writes the first bit on MISO
 9. **main** starts the clock
 10. **main** and **sub 2** send the rest of the bits
 11. **main** stops the clock
@@ -147,11 +157,15 @@ one main, two subs
 
 </div>
 
+
 ---
 layout: two-cols
 ---
+
 # Daisy Chaining
 using several SPI devices together
+
+<v-clicks depth="2">
 
 1. **main** activates all the **subs**
 2. on the clock edge
@@ -160,6 +174,8 @@ using several SPI devices together
    - ...
    - **sub n-1** sends data to **sub n**
    - **sub n** sends data to **main**
+  
+</v-clicks>
 
 [^sub_data]: usually **subs** send the previous data bit received from **main** to the **next sub**
 
@@ -180,6 +196,7 @@ activate all the **sub** devices
 <div align="center">
 <img src="/spi/spi_leds.jpg" class="rounded w-90">
 </div>
+
 
 ---
 ---
@@ -281,4 +298,3 @@ let mut rx_buf = [0_u8; 6];
 spi.transfer(&mut rx_buf, &tx_buf).await;
 cs.set_high();
 ```
-

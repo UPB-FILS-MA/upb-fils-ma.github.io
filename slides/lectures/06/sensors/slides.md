@@ -6,6 +6,17 @@ Analog and Digital Sensors
 
 ---
 ---
+# Bibliography
+for this section
+
+**BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
+  - Chapter 3 - *Functional Description*
+  - Chapter 4 - *Global memory map and register description*
+  - Chapter 5 - *Digital Interfaces*
+    - Subchapter 5.3 - *SPI Interface*
+
+---
+---
 # Sensors
 analog and digital
 
@@ -59,9 +70,10 @@ registers map
 
 <img src="/sensors/bmp280_registers.png" class="rounded">
 
+[Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)
 
 ---
----
+
 # Reading from a digital sensor
 using synchronous/asynchronous SPI to read the `press_lsb` register of BMP280
 
@@ -69,7 +81,7 @@ using synchronous/asynchronous SPI to read the `press_lsb` register of BMP280
 
 <div grid="~ cols-2 gap-5">
 
-```rust{all|1|3,4|6,7|6,7,8|10,11|14}
+```rust{all|1|3,4|6,7|6,7,8|10,11|13,14}
 const REG_ADDR: u8 = 0xf8;
 
 // enable the sensor
@@ -86,7 +98,7 @@ cs.set_high();
 let pressure_lsb = buf[1];
 ```
 
-```rust{none|all|1|3,4|6,7,8|6,7,8,9|11,12|15}
+```rust{none|all|1|3,4|6,7,8|6,7,8,9|11,12|14,15}
 const REG_ADDR: u8 = 0xf8;
 
 // enable the sensor
@@ -105,6 +117,7 @@ let pressure_lsb = rx_buf[1];
 ```
 
 </div>
+
 
 ---
 ---

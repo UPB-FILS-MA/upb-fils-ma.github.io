@@ -6,6 +6,15 @@ Universal Asynchronous Receiver and Transmitter
 
 ---
 ---
+# Bibliography
+for this section
+
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.2 - *UART*
+
+---
+---
 # UART
 aka serial port
 
@@ -193,7 +202,7 @@ using the 8N1 data format
 </div>
 
 ---
----
+
 # Embassy API
 for RP2040, synchronous
 
@@ -248,16 +257,17 @@ let mut uart = uart::Uart::new_blocking(p.UART0, p.PIN_0, p.PIN_1, config);
 uart.blocking_write("Hello World!\r\n".as_bytes());
 
 // read 5 bytes
-let buf = [0; 5];
-uart.blocking_read(&buf);
+let mut buf = [0; 5];
+uart.blocking_read(&mut buf);
 ```
 
+
 ---
----
+
 # Embassy API
 for RP2040, asynchronous
 
-```rust{all|1|3-5|7|9,10|12,13|16,17}
+```rust{all|1|3-5|7|9,10|12,13|15,16,17}
 use embassy_rp::uart::Config as UartConfig;
 
 bind_interrupts!(struct Irqs {
@@ -267,13 +277,12 @@ bind_interrupts!(struct Irqs {
 let config = UartConfig::default();
 
 // use UART0, Pins 0 and 1
-let mut uart = uart::Uart::new_blocking(p.UART0, p.PIN_0, p.PIN_1, Irqs, p.DMA_CH0, p.DMA_CH1, config);
+let mut uart = uart::Uart::new(p.UART0, p.PIN_0, p.PIN_1, Irqs, p.DMA_CH0, p.DMA_CH1, config);
 
 // write
 uart.write("Hello World!\r\n".as_bytes()).await;
 
 // read 5 bytes
-let buf = [0; 5];
-uart.blocking_read(&buf).await;
+let mut buf = [0; 5];
+uart.read(&mut buf).await;
 ```
-
