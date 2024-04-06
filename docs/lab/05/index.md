@@ -256,6 +256,8 @@ A potentiometer is a three-terminal resistor with a sliding or rotating contact 
 
 ## Exercises
 
+![Pico Explorer Pinout](images/explorer_pins.jpg)
+
 1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP5 and a potentiometer to ADC0. Use Kicad to draw the schematic. (**1p**)
 2. Change the monochromatic LED's intensity, using button A (SW_A) and button B(SW_B) on the Pico Explorer. Button A will increase the intensity, and button B will decrease it. (**2p**)
 
