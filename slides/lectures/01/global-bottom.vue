@@ -1,1 +1,0 @@
-../assets/global-bottom.vue
