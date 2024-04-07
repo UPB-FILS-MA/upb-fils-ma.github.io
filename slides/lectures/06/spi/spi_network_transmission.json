@@ -99,8 +99,8 @@
             "name": "data",
             "wave": "xx5..|............xxxx|xx5..|............xxx|",
             "data": [
-                "payload to/from slave 1",
-                "payload to/from slave 2"
+                "payload to/from sub 1",
+                "payload to/from sub 2"
             ],
             "period": 1
         }
