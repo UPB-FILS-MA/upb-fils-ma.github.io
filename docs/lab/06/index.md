@@ -70,14 +70,23 @@ SPI has 4 different modes which define when data is read or written. These modes
 | `CPOL` | Clock polarity | defines when the data bit is read <br/> 0: *rising edge* <br/> 1: *falling edge* |
 | `CPHA` | Clock phase | defines when the data is written to the line <br/> 0: when `CS` *activates* <br/> 1: on *clock edge* (depends on `CPOL`) |
 
+### Daisy Chaining
+
+An SPI network with many sub devices can prove impractical from a hardware point of view. **Daisy chaining** is a method that solves this by linking multiple devices together with the following configuration:
+
+![SPI_Daisy](images/spi_daisy.svg)
+
+The `MOSI` line connects the main device only to the first sub. Then, the `MISO` output of the first sub ties to the `MOSI` input of the second sub, and so forth. The final sub in the chain ties to the `MISO` line to the main device. All `CS` lines are common, therefore all subs are active at the same time.
+
+If main wants to communicate with the second sub, it will send its data through the first sub, and receive data from the second sub through all subs following it. (TODO: explain)
+
 ## DMA
 
-When it comes to standard communication protocols that rely on [MMIO](/docs/lab/02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the Direct Memory Access (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
+When it comes to standard communication protocols that rely on [MMIO](/docs/lab/02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
 
-## BMP280 Digital Pressure Sensor
+## Digital vs Analog sensors
 
-### Digital vs Analog sensors
-
+### Analog sensors
 Up to now, during the labs, we have been using *analog sensors* (photoresistor and potentiometer). Analog sensors are just a transducer, which outputs a voltage depending on its measurement (light, temperature, etc.). This output needs to be read using an ADC and processed so that it can resemble something useful to us.
 :::info
 For example, for an analog temperature sensor, we would be getting a voltage reading that we need to convert to an actual temperature in Celsius by using a specific formula. This formula can usually be found in the datasheet of the analog sensor.
@@ -85,13 +94,89 @@ For example, for an analog temperature sensor, we would be getting a voltage rea
 
 ![Analog_Sensor](images/analog_sensor.svg)
 
+### Digital sensors
 For this lab, we will be using a *digital sensor*, which is an *upgraded* version of an analog sensor. It contains a transducer, but also an internal MCU with an ADC. This means that the sensor itself deals with the analog-to-digital conversion and the processing of the voltage reading, and exposes it through a digital interface that can be accessed using a specific communication protocol (e.g. SPI, I2C etc.).
 
 ![Digital_Sensor](images/digital_sensor.svg)
 
-#### BMP280 Digital Pressure Sensor
+## BMP280 Digital Pressure Sensor
 
-The **BMP280** is a digital temperature and pressure sensor designed by Bosch. It can be interfaced both with SPI and with I2C.
+The **BMP280** is a *digital* temperature and pressure sensor designed by Bosch. It can be interfaced both with SPI and with I2C. This means that we can read the temperature and pressure values directly from the registers of the BMP280 using SPI.
+
+:::info
+**DATASHEET**: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf
+:::
+
+### BMP280 Memory Map
+
+![BMP280_Memory_Map](images/bmp280_memory_map.png)
+
+#### Registers
+
+`id` register (0xF3) - contains the ID of the BMP280
+
+`ctrl_meas` register (0xF4) - used for configuring the temperature/pressure measurements of the sensor
+
+| `ctrl_meas` bits | Name | Description |
+|-|-|-| 
+| Bit 7, 6, 5 | osrs_t[2:0] | Controls oversampling of temperature data. |
+| Bit 4, 3, 2 | osrs_p[2:0] | Controls oversampling of pressure data. |
+| Bit 1, 0 | mode[1:0] | Controls the power mode of the device. |
+
+| osrs_p[2:0] | Pressure oversampling |
+|-|-|
+| 000 | Skipped (output set to 0x80000) |
+| 001 | oversampling x 1 |
+| 010 | oversampling x 2 |
+| 011 | oversampling x 4 |
+| 100 | oversampling x 8 |
+| 101, others | oversampling x 16 |
+
+| osrs_t[2:0] | Temperature oversampling |
+|-|-|
+| 000 | Skipped (output set to 0x80000) |
+| 001 | oversampling x 1 |
+| 010 | oversampling x 2 |
+| 011 | oversampling x 4 |
+| 100 | oversampling x 8 |
+| 101, others | oversampling x 16 |
+
+`press` registers - `press_msb` (0xF7), `press_lsb` (0xF8), `press_xslb` (0xF9) - contain the pressure measurement
+
+`temp` registers - `temp_msb` (0xFA), `temp_lsb` (0xFB), `temp_xslb` (0xFC) - contain the temperature measurement
+
+:::warning
+Unless we write to the `osrs_p` and `osrs_t` fields of the `ctrl_meas` register, the `press` and `temp` registers will have a constant value of `0x80000`! We need to configure the pressure and temperature oversampling before reading the measurements.
+:::
+
+### BMP280 wiring
+
+The BMP280 has 5 pins:
+
+| Pin | Function |
+|-|-|
+| `VCC` | power source (3V3) |
+| `GND` | ground |
+| `SCL` | `CLK` line |
+| `SDA` | `MOSI` line |
+| `CSB` | `CS` line |
+| `SDO` | `MISO` line |
+
+![bmp280_wiring](images/bmp280_wiring.png)
+
+:::note
+The BMP280 can also be interfaced through I2C, using the same pins but with different functions.
+:::
+
+The Raspberry Pi Pico has multiple usable SPI channels. Each channel has a set of two SPI control pins.
+
+![pico_pinout](images/pico_pinout.png)
+
+:::tip
+Since we are using the Pico Explorer, it's simple to see which pins are used for SPI transmission. You can also check the back side of the Pico Explorer to see exactly which GP pins are being used by the extension for SPI.
+:::
+
+### Reading the temperature/pressure from the BMP280 sensor
 
 ## Exercises
 
