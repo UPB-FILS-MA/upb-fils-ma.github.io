@@ -23,14 +23,16 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-      - name: Test build website
-        run: npm run build
-
+      
       - name: Install dependencies (slides)
         working-directory: slides
         run: |
           npx -y playwright@^1.41.2 install chromium
           npm ci
+
       - name: Build slides
         working-directory: slides
         run: ./build.sh
+
+      - name: Test build website
+        run: npm run build

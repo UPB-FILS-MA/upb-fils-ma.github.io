@@ -1,0 +1,33 @@
+{
+    "signal": [
+        {
+            "name": "Clock",
+            "wave": "PPPPPPPPPPPPPP|"
+        },
+        {
+            "name": "elecrical signal",
+            "wave": "h02222222221..|",
+            "data": [
+                "b7",
+                "b6",
+                "B5",
+                "b4",
+                "b3",
+                "b2",
+                "b1",
+                "b0",
+                "p"
+            ]
+        },
+        {
+            "name": "data",
+            "wave": "x34.......65.x|",
+            "data": [
+                "start",
+                "payload",
+                "parity",
+                "stop"
+            ]
+        }
+    ]
+}

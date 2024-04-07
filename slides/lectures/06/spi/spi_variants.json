@@ -1,0 +1,119 @@
+{
+    "signal": [
+        {
+            "name": "CS",
+            "wave": "1.0................1..|",
+            "data": [
+                "b7",
+                "b6",
+                "B5",
+                "b4",
+                "b3",
+                "b2",
+                "b1",
+                "b0"
+            ],
+            "period": 1
+        },
+        {
+            "name": "Clock CPOL=0",
+            "wave": "l.P|PPPPPPl|",
+            "phase": 1,
+            "period": 2
+        },
+        {
+            "name": "Clock CPOL=1",
+            "wave": "h.N|NNNNNNh|",
+            "phase": 1,
+            "period": 2
+        },
+        [
+            "CPHA = 0",
+            {
+                "name": "MOSI",
+                "wave": "zz6.6|6.6.6.6.6.6.zzzz|",
+                "data": [
+                    "bN-1",
+                    "b..",
+                    "b5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0"
+                ],
+                "period": 1
+            },
+            {
+                "name": "MISO",
+                "wave": "zz4.4|4.4.4.4.4.4.zzzz|",
+                "data": [
+                    "bN-1",
+                    "b..",
+                    "b5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0"
+                ],
+                "period": 1
+            },
+            {
+                "name": "data",
+                "wave": "xx5..|............xxxx|",
+                "data": [
+                    "payload (N bits)"
+                ],
+                "period": 1
+            }
+        ],
+        [
+            "CPHA = 1",
+            {
+                "name": "MOSI",
+                "wave": "zzzx6.6|6.6.6.6.6.6.zzz|",
+                "data": [
+                    "bN-1",
+                    "b..",
+                    "b5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0"
+                ],
+                "period": 1,
+                "phase": 1
+            },
+            {
+                "name": "MISO",
+                "wave": "zzzx4.4|4.4.4.4.4.4.zzz|",
+                "data": [
+                    "bN-1",
+                    "bN-2",
+                    "b..",
+                    "b5",
+                    "b4",
+                    "b3",
+                    "b1",
+                    "b0"
+                ],
+                "period": 1,
+                "phase": 1
+            },
+            {
+                "name": "data",
+                "wave": "xxxx5..|............xxx|",
+                "data": [
+                    "payload (N bits)"
+                ],
+                "period": 1,
+                "phase": 1
+            }
+        ]
+    ],
+    "config": {
+        "skin": "narrow"
+    }
+}
