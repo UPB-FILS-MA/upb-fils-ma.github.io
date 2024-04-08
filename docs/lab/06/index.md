@@ -84,6 +84,80 @@ If main wants to communicate with the second sub, it will send its data through 
 
 When it comes to standard communication protocols that rely on [MMIO](/docs/lab/02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
 
+## SPI in Embassy
+
+In Embassy, we can use the SPI both blocking and asynchronously. The following example will be using the asynchronous version.
+
+First, we initialize the peripherals.
+
+```rust
+let peripherals = embassy_rp::init(Default::default());
+```
+
+Next, we create the configuration for the SPI. We can set the clock frequency, polarity and phase (the SPI mode).
+
+```rust
+let mut config = spi::Config::default();
+config.frequency = 2_000_000;
+config.phase = spi::Phase::CaptureOnFirstTransition;
+config.polarity = spi::Polarity::IdleHigh;
+```
+
+Once we have the configuration, we can initialize the `MISO`, `MOSI` and `CLK` pins.
+
+```rust
+let miso = peripherals.PIN_X;
+let mosi = peripherals.PIN_Y;
+let clk = peripherals.PIN_Z;
+```
+
+Now we can create our SPI instance. The example uses the SPI0 channel, but others can be used. Being an asynchronous SPI, it also needs a pair of `DMA` channels, one that handles the *transmission* of data, and one that handles the *receiving* of data.
+
+```rust
+let mut spi = Spi::new(peripherals.SPI0, clk, mosi, miso, peripherals.DMA_CH0, peripherals.DMA_CH1, config);
+```
+
+:::info
+To figure out which pins work with SPI and what channels they are associated with, you need to take a look at the pinout of the Raspberry Pi Pico.
+:::
+
+We also need a `CS` pin, that is simply a GPIO output pin. We will initialize it as such. Any pin can be used. For multiple subs, multiple pins will be initialized. 
+
+```rust
+let mut cs = Output::new(peripherals.PIN_N, Level::High);
+```
+
+Now we have set up the SPI, and can use it to communicate with the connected sub. To activate the sub, we need to set the `cs` pin to `low`.
+
+```rust
+cs.set_low();
+```
+
+Once we do this, we can use two buffers:
+- `tx_buf` - used to store data to transmit to the sub via the `MOSI` line
+- `rx_buf` - one to store data to receive from the sub via the `MISO` line
+
+```rust
+let tx_buf = [1_u8, 2, 3, 4, 5, 6];
+let mut rx_buf = [0_u8; 6]; // dummy values, will be replaced by received data
+```
+
+:::note
+`rx_buf` is mutable because the values inside the buffer will be replaced by the data received from the sub.
+:::
+
+We then use the two buffers to make the transfer. The values in `tx_buffer` will be sent over the `MOSI` and the values received over the `MISO` will be stored in `rx_buf`.
+
+```rust
+spi.transfer(&mut rx_buf, &tx_buf).await;
+```
+
+Once we are done with the transfer, we set the `cs` line back to `high` to deactivate the sub.
+
+```rust
+cs.set_low();
+```
+
 ## Digital vs Analog sensors
 
 ### Analog sensors
@@ -113,9 +187,9 @@ The **BMP280** is a *digital* temperature and pressure sensor designed by Bosch.
 
 #### Registers
 
-`id` register (0xF3) - contains the ID of the BMP280
+`id` register - contains the ID of the BMP280
 
-`ctrl_meas` register (0xF4) - used for configuring the temperature/pressure measurements of the sensor
+`ctrl_meas` register - used for configuring the temperature/pressure measurements of the sensor
 
 | `ctrl_meas` bits | Name | Description |
 |-|-|-| 
@@ -141,9 +215,9 @@ The **BMP280** is a *digital* temperature and pressure sensor designed by Bosch.
 | 100 | oversampling x 8 |
 | 101, others | oversampling x 16 |
 
-`press` registers - `press_msb` (0xF7), `press_lsb` (0xF8), `press_xslb` (0xF9) - contain the pressure measurement
+`press` registers - `press_msb`, `press_lsb`, `press_xslb` - contain the pressure measurement
 
-`temp` registers - `temp_msb` (0xFA), `temp_lsb` (0xFB), `temp_xslb` (0xFC) - contain the temperature measurement
+`temp` registers - `temp_msb`, `temp_lsb`, `temp_xslb` - contain the temperature measurement
 
 :::warning
 Unless we write to the `osrs_p` and `osrs_t` fields of the `ctrl_meas` register, the `press` and `temp` registers will have a constant value of `0x80000`! We need to configure the pressure and temperature oversampling before reading the measurements.
@@ -168,7 +242,7 @@ The BMP280 has 5 pins:
 The BMP280 can also be interfaced through I2C, using the same pins but with different functions.
 :::
 
-The Raspberry Pi Pico has multiple usable SPI channels. Each channel has a set of two SPI control pins.
+The Raspberry Pi Pico has two usable SPI channels. Each channel has a set SPI control pins.
 
 ![pico_pinout](images/pico_pinout.png)
 
@@ -176,84 +250,110 @@ The Raspberry Pi Pico has multiple usable SPI channels. Each channel has a set o
 Since we are using the Pico Explorer, it's simple to see which pins are used for SPI transmission. You can also check the back side of the Pico Explorer to see exactly which GP pins are being used by the extension for SPI.
 :::
 
-### Reading the temperature/pressure from the BMP280 sensor
+### Reading the temperature/pressure from the BMP280 sensor using Embassy
+
+To get the temperature and pressure values we want from the digital sensor, we need to access its internal registers. The BMP280 has some rules when it comes to reading and writing to these registers, that must be extracted from the [datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf). Every sensor has different registers, and different ways of interfacing them, so reading the datasheet is usually required, especially when we don't have the leverage of using already existing libraries for these sensors.
+
+First, we make sure our SPI is initialized correctly.
+
+```rust
+let peripherals = embassy_rp::init(Default::default());
+
+let mut config = spi::Config::default();
+config.frequency = 2_000_000;
+// default values for phase and polarity are fine
+
+let miso = peripherals.PIN_X;
+let mosi = peripherals.PIN_Y;
+let clk = peripherals.PIN_Z;
+// make sure you use a SPI channel that supports the miso, mosi and clk pin numbers you chose!
+let mut spi = Spi::new(peripherals.SPI0, clk, mosi, miso, peripherals.DMA_CH0, peripherals.DMA_CH1, config);
+
+let mut cs = Output::new(peripherals.PIN_N, Level::High);
+```
+
+In section 5.3.2 of the datasheet, we get the information we need in order to read/write to a register of the BMP280. 
+
+![SPI_read_write_BMP280](images/spi_read_write_bmp280.png)
+
+To know what is expected from it, the sensor expects to receive a *control byte*. This control byte contains the address of the register that we want to access, except the 7th bit of this address is changed:
+- it will be `1` if we want to *read* the register
+- it will be `0` if we want to *write* to the register
+
+This way, we're sending a command to the sensor for it to know what to do: either send back the value of the register we requested or write to this register.
+
+#### Reading a register
+
+To read the value of a register, the main device (the RP2040) needs to first send a control byte containing the address of that register, with the 7th bit a `1`.
+The sub device (the sensor) will then send a byte back, containing the value of the requested register.
+
+```rust
+cs.set_low();
+let tx_buf = [(1 << 7) | REG_ADDR, 0x00]; // first value of buffer is the control byte, second is a *don't care* value
+let mut rx_buf = [0u8; 2]; // initial values that will be replaced by the received bytes
+spi.transfer(&mut rx_buf, &tx_buf).await;
+cs.set_high();
+let register_value = rx_buf[1]; // the second byte in the buffer will be the received register value
+```
+
+:::info
+Remember, SPI is full-duplex. When the main writes, the sub also writes, no matter if it has any relevant data to send or not. This is why the `tx_buf` and `rx_buf` both have 2 elements. First, the main will send the register address (`tx_buf[0]`) and the sub will send a dummy value back (stored in `rx_buf[0]`), *at the same time*. Then, the main will send a dummy value (`tx_buf[1]`) and the sub will send the value of the register (stored in `rx_buf[1]`).
+:::
+
+:::tip
+Once we send the address of a register we want to read, the sensor will continuously send back bytes containing the values of the consecutive registers. For example, if we ask to read `REG_ADDR`, the sensor will first send the register value at address `REG_ADDR`, then the value at address `REG_ADDR+1`, and so on, until we deactivate it.
+
+```rust
+cs.set_low();
+let tx_buf = [(1 << 7) | REG_ADDR, 0x00, 0x00];
+let mut rx_buf = [0u8; 3]; // three receive values instead of two
+spi.transfer(&mut rx_buf, &tx_buf).await;
+cs.set_high();
+let register_value = rx_buf[1]; // the second byte in the buffer will be the received register value (REG_ADDR)
+let register_value_next = rx_buf[2]; // the third byte in the buffer will be the next received register value (REG_ADDR+1)
+```
+:::
+
+#### Writing to a register
+
+To write a value to a register, the main device (the RP2040) needs to first send a control byte containing the address of that register, with the 7th bit a `0`.
+The main device then must send the value that it wants to write to that register.
+
+```rust
+cs.set_low();
+let tx_buf = [!(1 << 7) & REG_ADDR, value_to_write]; // value_to_write is to be replaced with the 8-bit value that we want to write to this register
+let mut rx_buf = [0u8; 2]; // we are not expecting any relevant information to be received, but we still need to receive dummy values anyway
+spi.transfer(&mut rx_buf, &tx_buf).await;
+```
 
 ## Exercises
 
-1. Connect an LED to GP0, an RGB LED to GP1, GP2, GP5 and a potentiometer to ADC0. Use Kicad to draw the schematic. (**1p**)
-2. Change the monochromatic LED's intensity, using button A (SW_A) and button B(SW_B) on the Pico Explorer. Button A will increase the intensity, and button B will decrease it. (**2p**)
+1. Connect the BMP280. Use Kicad to draw the schematic. (**1p**)
+2. The example provided for exercise 2 in the lab skeleton is a base example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
 
 :::tip
-- Use PWM to control the intensity.
-- Create two tasks, one for button A, one for button B. Use a channel to send commands from each button task to the main task.
+Use the datasheet to find the address of the `id` register! Take a look at section 4.2 and 4.3.
 :::
 
-3. Control the RGB LED's color with buttons A, B, X and Y on the Pico Explorer. (**2p**)
-- Button A -> RGB = Red
-- Button B -> RGB = Green
-- Button X -> RGB = Blue
-- Button Y -> RGB = Led Off
-:::tip
-Use a separate task for each button. When a button press is detected, a command will be sent to the main task, and the main task will set the RGB LED's color according to that command.
-
-```mermaid
-sequenceDiagram
-    autonumber
-    note right of TaskBtnA: waits for button A press
-    note right of TaskBtnB: waits for button B press
-    note right of TaskBtnX: waits for button X press
-    note right of TaskBtnY: waits for button Y press
-    note right of TaskMain: waits for LED command
-    Hardware-->>TaskBtnA: button A press
-    TaskBtnA-->>TaskMain: LedCommand(LedColor::Red)
-    note right of TaskMain: sets PWM configuration
-    TaskMain-->>Hardware: sets RGB LED color RED
-    Hardware-->>TaskBtnX: button X press
-    TaskBtnX-->>TaskMain: LedCommand(LedColor::Blue)
-    note right of TaskMain: sets PWM configuration
-    TaskMain-->>Hardware: sets RGB LED color BLUE
-```
-:::
-
-4. In addition to the four buttons, control the RGB LED's intensity with the potentiometer. (**3p**)
+3. Get the pressure and temperature readings from the sensor.
+- Write the `ctrl_meas` register with appropiate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
+- Read the pressure value and print it over the serial. (**1p**)
 
 :::tip
-You will need another task in which you sample the ADC and send the values over a channel.
-You could do this in one of two ways:
-1. Use a single channel for both changing the color and the intensity of the LED. Button tasks and the potentiometer task will send over the same channel. For this, you will need to change the type of data that is sent over the channel to encapsulate both types of commands. For example, you could use an enum like this:
-```rust
-enum LedCommand {
-    ChangeColor(Option<LedColor>),
-    ChangeIntensity(u16)
-}
-```
-2. Use two separate channels, one for sending the color command (which contains the LedColor), and one for sending the intensity. You can `await` both channel `receive()` futures inside of a `select` to see which command is received first, and handle it.
-Example:
-```rust
-let select = select(COLOR_CHANNEL.receive(), INTENSITY_CHANNEL.receive()).await;
-match select {
-    First(color) => {
-        // ...
-    },
-    Second(intensity) => {
-        // ...
-    }
-}
-```
-:::
+The pressure value is split into 3 registers: `press_msb`, `press_lsb` and `press_xlsb`. 
+- `press_msb` is the first binary half of the pressure value (stands for pressure most significant bits)
+- `press_lsb` is the second binary half of the pressure value (stands for pressure least significant bits)
+- `press_xlsb` is an extra degree of precision for the pressure value; **we won't be using it**
 
-5. Print to the screen of the Pico Explorer the color of the RGB LED and its intensity. Use the SPI screen driver provided in the lab skeleton. (**2p**)
+To compute the pressure value, we need to read `press_msb` and `press_lsb`, and **add them together**.
+
+*pressure = `press_msb` + `press_lsb`*
+:::
+- Read the temperature value and print it over the serial. (**1p**)
 :::tip
-To write to the screen, use this example:
-```rust
-let mut text = String::<64>::new();
-write!(text, "Screen print: ", led_color).unwrap(); // led_color must be defined first
-
-Text::new(&text, Point::new(40, 110), style)
-    .draw(&mut display)
-    .unwrap();
-
-// Small delay for yielding
-Timer::after_millis(1).await;
-```
+This is similar to how we read the pressure value. 
 :::
+
+4. Show the temperature and pressure values on the screen. (**1p**)
+
+TODO: more exercises (suggestions?)
