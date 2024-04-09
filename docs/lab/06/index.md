@@ -371,7 +371,7 @@ To compute the pressure value, we need to read `press_msb` and `press_lsb`, shif
 
 *pressure = `press_msb << 8` + `press_lsb`*
 :::
-- Read the temperature value and print it over the serial. (**2p**)
+- Read the temperature value and print it over the serial. (**1p**)
 :::tip
 This is similar to how we read the pressure value. 
 :::
@@ -384,7 +384,7 @@ Use the buzzer with PWM for a specific sound frequency.
 
 5. Show the temperature and pressure values on the screen. The screen also uses SPI.
 - Move the sensor to the second SPI channel (SPI1). Change the wiring and code accordingly. The two SPI devices will work independently on different channels. (**1p**)
-- Use both the sensor and the screen on the same SPI channel. This means that the two devices will be subs in the same common configuration, and therefore will use the same CLK, MOSI and MISO pins, with separate CS. 
+- Use both the sensor and the screen on the same SPI channel. This means that the two devices will be subs in the same common configuration, and therefore will use the same CLK, MOSI and MISO pins, with separate CS. (**1p**)
 
 :::tip
 For this, we will need to initialize the sensor to use the same SPI bus as the screen. Since the screen is already using a blocking SPI, we will use it when creating our SPI sensor device, like this:
