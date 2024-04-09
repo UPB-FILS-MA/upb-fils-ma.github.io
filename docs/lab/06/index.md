@@ -10,7 +10,15 @@ This lab will teach you how to communicate with hardware devices using the Seria
 
 ## Resources
 
-TBD
+**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.4 - *SPI*
+
+**BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
+  - Chapter 3 - *Functional Description*
+  - Chapter 4 - *Global memory map and register description*
+  - Chapter 5 - *Digital Interfaces*
+    - Subchapter 5.3 - *SPI Interface*
 
 ## Serial Peripheral Interface (SPI)
 
@@ -39,7 +47,7 @@ SPI is most commonly implemented in a 4-wire configuration. However, there is al
 
 #### Transmission example
 
-1. main sets `CS` to `LOW` - the sub that the main wants to communicate with is activated - all other subs are already disconnect from `MOSI` and `MISO` lines as their CS line is not active
+1. main sets `CS` to `LOW` - the sub that the main wants to communicate with is activated - all other subs are already disconnected from `MOSI` and `MISO` lines as their CS line is not active
 2. main writes the first bit on the `MOSI` line, and, *simultaneously*, sub writes the first bit on the `MISO` line
 3. main starts the clock
 4. on *rising edge* 
@@ -82,7 +90,7 @@ SPI has 4 different modes which define when data is read or written. These modes
 
 ![SPI_Daisy](images/spi_daisy.svg)
 
-The `MOSI` line connects the main device only to the first sub. Then, the `MISO` output of the first sub ties to the `MOSI` input of the second sub, and so forth. The final sub in the chain ties to the `MISO` line to the main device. All `CS` lines are common, therefore all subs are active at the same time.
+The `MOSI` line connects the main device only to the first sub. Then, the `MISO` output of the first sub ties to the `MOSI` input of the second sub, and so forth. The final sub in the chain ties to the `MISO` line of the main device. All `CS` lines are common, therefore all subs are always active.
 
 For example, if main wants to communicate with the second sub, it will:
 - send its data through the `MOSI` line to the first sub
@@ -183,7 +191,7 @@ For example, for an analog temperature sensor, we would be getting a voltage rea
 ![Analog_Sensor](images/analog_sensor.svg)
 
 ### Digital sensors
-For this lab, we will be using a *digital sensor*, which is an *upgraded* version of an analog sensor. It contains a transducer, but also an internal MCU with an ADC. This means that the sensor itself deals with the analog-to-digital conversion and the processing of the voltage reading, and exposes it through a digital interface that can be accessed using a specific communication protocol (e.g. SPI, I2C etc.).
+For this lab, we will be using a *digital sensor*, which is an *upgraded* version of an analog sensor. It contains a transducer, but also an internal MCU with an ADC. This means that the sensor itself deals with the analog-to-digital conversion and the processing of the voltage reading, and exposes it through a digital interface of registers that can be accessed using a specific communication protocol (e.g. SPI, I2C etc.).
 
 ![Digital_Sensor](images/digital_sensor.svg)
 
@@ -256,9 +264,15 @@ The BMP280 has 5 pins:
 The BMP280 can also be interfaced through I2C, using the same pins but with different functions.
 :::
 
-The Raspberry Pi Pico has two usable SPI channels. Each channel has a set SPI control pins.
+The Raspberry Pi Pico has two usable SPI channels: SPI0 and SPI1. Each channel has two sets of pins that can be used for `CLK`, `MOSI` and `MISO`. They are marked with pink in the pinout diagram.
 
 ![pico_pinout](images/pico_pinout.png)
+
+:::info
+`TX` = transmitter = `MOSI`
+
+`RX` = receiver = `MISO`
+:::
 
 :::tip
 Since we are using the Pico Explorer, it's simple to see which pins are used for SPI transmission. You can also check the back side of the Pico Explorer to see exactly which GP pins are being used by the extension for SPI.
@@ -290,9 +304,11 @@ In section 5.3.2 of the datasheet, we get the information we need in order to re
 
 ![SPI_read_write_BMP280](images/spi_read_write_bmp280.png)
 
-To know what is expected from it, the sensor expects to receive a *control byte*. This control byte contains the address of the register that we want to access, except the 7th bit of this address is changed:
+To know what is expected from it, the sensor needs to receive a *control byte*. This control byte contains the address of the register that we want to access, except the 7th bit of this address is changed:
 - it will be `1` if we want to *read* the register
 - it will be `0` if we want to *write* to the register
+
+So, for example, if we wanted to read the register at address 0x1, we would need to send a control byte of `10000001`, and if we wanted to write to it, we would send `00000001`.
 
 This way, we're sending a command to the sensor for it to know what to do: either send back the value of the register we requested or write to this register.
 
@@ -326,6 +342,7 @@ cs.set_high();
 let register_value = rx_buf[1]; // the second byte in the buffer will be the received register value (REG_ADDR)
 let register_value_next = rx_buf[2]; // the third byte in the buffer will be the next received register value (REG_ADDR+1)
 ```
+This is explained in section 5.3 of the datasheet.
 :::
 
 #### Writing to a register
@@ -348,10 +365,14 @@ A buzzer is a hardware device that emits sound. There are two types of buzzers:
 
 ![Buzzer](images/buzzer.png)
 
+:::tip
+To control the buzzer, all you need to do is to set the `top` value of the PWM config to match the frequency you want!
+:::
+
 ## Exercises
 
 1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 3. Use Kicad to draw the schematic. (**1p**)
-2. The example provided for exercise 2 in the lab skeleton is a base example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
+2. The example provided for exercise 2 in the lab skeleton is a basic example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
 
 :::tip
 Use the datasheet to find the address of the `id` register! Take a look at section 4.2 and 4.3.
