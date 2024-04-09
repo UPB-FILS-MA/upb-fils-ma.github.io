@@ -30,12 +30,12 @@ During SPI transmission, there are 4 wires used:
                        - inactive subs will disconnect from the *MOSI* and *MISO* lines
 
 :::info
-The communication is *full-duplex*. This means that, during data transmission, both the master and the slave **must write** to the MOSI/MISO wires, no matter if that data is relevant or not.
+The communication is *full-duplex*. This means that, during data transmission, both the main and the sub **must write** to the MOSI/MISO wires, no matter if that data is relevant or not.
 :::
 
 #### Transmission example
 
-1. main sets `CS` to `LOW` - the sub that the main wants to communicate with is activated - all other subs disconnect from `MOSI` and `MISO` lines
+1. main sets `CS` to `LOW` - the sub that the main wants to communicate with is activated - all other subs are already disconnect from `MOSI` and `MISO` lines as their CS line is not active
 2. main writes the first bit on the `MOSI` line, and, *simultaneously*, sub writes the first bit on the `MISO` line
 3. main starts the clock
 4. on *rising edge* 
@@ -47,7 +47,7 @@ The communication is *full-duplex*. This means that, during data transmission, b
 6. repeat steps 4 and 5 until main stops the clock
 
 :::note
-Whether steps 4 and 5 happen on rising/falling edge depends on the configuration of the SPI.
+Whether steps 4 and 5 happen on rising/falling edge depends on the `CPOL` configuration of the SPI.
 :::
 
 ![SPI_example](images/spi_network_transmission.svg)
@@ -345,9 +345,9 @@ The pressure value is split into 3 registers: `press_msb`, `press_lsb` and `pres
 - `press_lsb` is the second binary half of the pressure value (stands for pressure least significant bits)
 - `press_xlsb` is an extra degree of precision for the pressure value; **we won't be using it**
 
-To compute the pressure value, we need to read `press_msb` and `press_lsb`, and **add them together**.
+To compute the pressure value, we need to read `press_msb` and `press_lsb`, and **shift and add them together**.
 
-*pressure = `press_msb` + `press_lsb`*
+*pressure = `press_msb << 8` + `press_lsb`*
 :::
 - Read the temperature value and print it over the serial. (**1p**)
 :::tip
