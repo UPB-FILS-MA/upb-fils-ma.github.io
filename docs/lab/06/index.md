@@ -62,17 +62,19 @@ In the image above, the main first exchages data with the first sub by setting i
 
 SPI has 4 different modes which define when data is read or written. These modes can be configured through 2 registers: `CPOL` and `CPHA`.
 
-| Mode | `CPOL` | `CPHA` |
-|-|-|-|
-| 0 | 0 | 0 |
-| 1 | 0 | 1 |
-| 2 | 1 | 0 |
-| 3 | 1 | 1 |
+| Mode | `CPOL` | `CPHA` | Clock polarity in idle state | Clock phase used to read and/or write data |
+|-|-|-|-|-|
+| 0 | 0 | 0 | Logic Low | Data read on rising edge and written on falling edge | 
+| 1 | 0 | 1 | Logic low | Data read on the falling edge and written on the rising edge |
+| 2 | 1 | 0 | Logic high | Data read on the falling edge and written on the rising edge |
+| 3 | 1 | 1 | Logic high | Data read on the rising edge and written on the the falling edge |
 
 | | | |
 |-|-|-| 
-| `CPOL` | Clock polarity | defines when the data bit is read <br/> 0: *rising edge* <br/> 1: *falling edge* |
-| `CPHA` | Clock phase | defines when the data is written to the line <br/> 0: when `CS` *activates* <br/> 1: on *clock edge* (depends on `CPOL`) |
+| `CPOL` | Clock polarity | defines when the clock is considered *idle*, or when no transfer is occurring |
+| `CPHA` | Clock phase | defines when the data bit is read and when it is written: depends on `CPOL` |
+
+![SPI_timing_diagram](images/SPI_timing_diagram_CS.svg)
 
 ### Daisy Chaining
 
@@ -338,9 +340,17 @@ let mut rx_buf = [0u8; 2]; // we are not expecting any relevant information to b
 spi.transfer(&mut rx_buf, &tx_buf).await;
 ```
 
+### Buzzer
+
+A buzzer is a hardware device that emits sound. There are two types of buzzers:
+- *active buzzer* - connected to VCC and GND, with a resistance - emits a constant frequency
+- *passive buzzer* - connected to a GPIO pin and GND, with a resistance - frequency can be controlled through the pin with PWM
+
+![Buzzer](images/buzzer.png)
+
 ## Exercises
 
-1. Connect the BMP280. Use Kicad to draw the schematic. (**1p**)
+1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 3. Use Kicad to draw the schematic. (**1p**)
 2. The example provided for exercise 2 in the lab skeleton is a base example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
 
 :::tip
