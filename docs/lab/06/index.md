@@ -10,15 +10,15 @@ This lab will teach you how to communicate with hardware devices using the Seria
 
 ## Resources
 
-**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
    - Chapter 4 - *Peripherals*
      - Chapter 4.4 - *SPI*
 
-**BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
-  - Chapter 3 - *Functional Description*
-  - Chapter 4 - *Global memory map and register description*
-  - Chapter 5 - *Digital Interfaces*
-    - Subchapter 5.3 - *SPI Interface*
+2. **BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
+    - Chapter 3 - *Functional Description*
+    - Chapter 4 - *Global memory map and register description*
+    - Chapter 5 - *Digital Interfaces*
+      - Subchapter 5.3 - *SPI Interface*
 
 ## Serial Peripheral Interface (SPI)
 
@@ -82,7 +82,7 @@ SPI has 4 different modes which define when data is read or written. These modes
 | `CPOL` | Clock polarity | defines when the clock is considered *idle*, or when no transfer is occurring |
 | `CPHA` | Clock phase | defines when the data bit is read and when it is written: depends on `CPOL` |
 
-![SPI_timing_diagram](images/SPI_timing_diagram_CS.svg)
+![SPI_timing_diagram](images/spi_variants.svg)
 
 ### Daisy Chaining
 
@@ -371,7 +371,7 @@ To control the buzzer, all you need to do is to set the `top` value of the PWM c
 
 ## Exercises
 
-1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 3. Use Kicad to draw the schematic. (**1p**)
+1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 3. Next, connect the buzzer (with a resistance) to GPIO 1. Use Kicad to draw the schematic. (**1p**)
 2. The example provided for exercise 2 in the lab skeleton is a basic example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
 
 :::tip
@@ -380,19 +380,19 @@ Use the datasheet to find the address of the `id` register! Take a look at secti
 
 3. Get the pressure and temperature readings from the sensor.
 - Write the `ctrl_meas` register with appropiate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
-- Read the pressure value and print it over the serial. (**2p**)
+- Read the raw pressure value and print it over the serial. (**2p**)
 
 :::tip
 The pressure value is split into 3 registers: `press_msb`, `press_lsb` and `press_xlsb`. 
 - `press_msb` is the first binary half of the pressure value (stands for pressure most significant bits)
 - `press_lsb` is the second binary half of the pressure value (stands for pressure least significant bits)
-- `press_xlsb` is an extra degree of precision for the pressure value; **we won't be using it**
+- `press_xlsb` is an extra degree of precision for the pressure value, depends on the oversampling value written to the `ctrl_meas` register
 
-To compute the pressure value, we need to read `press_msb` and `press_lsb`, shift the `press_msb` 8 bits to the left and add them together.
+To compute the **RAW** pressure value, we need to read `press_msb`, `press_lsb` and `press_xlsb` and reconstruct the 20-bit pressure register, as such:
 
-*pressure = `press_msb << 8` + `press_lsb`*
+`pressure = press_msb << 12 + press_lsb << 4 + press_xlsb >> 4`
 :::
-- Read the temperature value and print it over the serial. (**1p**)
+- Read the raw temperature value and print it over the serial. (**1p**)
 :::tip
 This is similar to how we read the pressure value. 
 :::
@@ -403,19 +403,42 @@ This is similar to how we read the pressure value.
 Use the buzzer with PWM for a specific sound frequency.
 :::
 
+:::warning
+The `press` and`temp` registers contain the *raw* value of the pressure and temperature. To compute the pressure in Pascals and the temperature in Celsius, we need to apply a specific formula based on the internal calibration data of the sensor. For simplicity, we have already provided you with the necessary function to do compute the temperature value in the lab skeleton.
+
+The value returned by the `calculate_temperature` function is: `actual_temp * 100`.
+
+The formula for the actual pressure value can be found at section 3.11 of the datasheet.
+:::
+
 5. Show the temperature and pressure values on the screen. The screen also uses SPI.
 - Move the sensor to the second SPI channel (SPI1). Change the wiring and code accordingly. The two SPI devices will work independently on different channels. (**1p**)
+:::warning
+The SPI1 channel is accessible on the Pico Explorer by using the pins marked as "motor".
+:::
 - Use both the sensor and the screen on the same SPI channel. This means that the two devices will be subs in the same common configuration, and therefore will use the same CLK, MOSI and MISO pins, with separate CS. (**1p**)
 
 :::tip
-For this, we will need to initialize the sensor to use the same SPI bus as the screen. Since the screen is already using a blocking SPI, we will use it when creating our SPI sensor device, like this:
+For this, we will need to initialize the sensor to use the same SPI bus as the screen. For this, we can use an Embassy driver called `SpiDeviceWithConfig`, which will allow us to connect both the screen and the sensor in the same SPI configuration! Since the screen is already using a blocking SPI, we will use it when creating our SPI sensor device, like this:
 
 ```rust
 let mut spi: Spi<'_, _, Blocking> = Spi::new_blocking(peripherals.SPI0, clk, mosi, miso, bmp280_config.clone()); // SPI used by the display
 let spi_bus: Mutex<NoopRawMutex, _> = Mutex::new(RefCell::new(spi)); // a SPI bus Mutex that will be shared by the two sub devices
 
+let display_spi = SpiDeviceWithConfig::new(
+        &spi_bus,
+        display_cs,
+        display_config,
+    );
+
+let mut bmp280_spi = SpiDeviceWithConfig::new(
+    &spi_bus,
+    bmp280_cs,
+    bmp280_config,
+);
+
 // ...display configurations and initialization...
 
-bmp280_spi.transfer_in_place(&mut tx_buf);
+bmp280_spi.transfer(&mut rx_buf, &tx_buf);
 ```
 :::
