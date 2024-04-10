@@ -177,7 +177,7 @@ spi.transfer(&mut rx_buf, &tx_buf).await;
 Once we are done with the transfer, we set the `cs` line back to `high` to deactivate the sub.
 
 ```rust
-cs.set_low();
+cs.set_high();
 ```
 
 ## Digital vs Analog sensors
