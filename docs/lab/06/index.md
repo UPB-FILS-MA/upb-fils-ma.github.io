@@ -64,7 +64,7 @@ Whether steps 4 and 5 happen on rising/falling edge depends on the `CPOL` config
 
 ![SPI_example](images/spi_network_transmission.svg)
 
-In the image above, the main first exchages data with the first sub by setting its corresponding `CS` line to low. After it finishes transmission with sub 1, it deactivates it and, afterwards, initiates communication with the second sub by setting its `CS` line to low. Notice that both main and sub read and write to the MOSI/MISO line simultaneously.
+In the image above, the main first exchanges data with the first sub by setting its corresponding `CS` line to low. After it finishes transmission with sub 1, it deactivates it and, afterwards, initiates communication with the second sub by setting its `CS` line to low. Notice that both main and sub read and write to the MOSI/MISO line simultaneously.
 
 ### SPI modes
 
@@ -75,7 +75,7 @@ SPI has 4 different modes which define when data is read or written. These modes
 | 0 | 0 | 0 | Logic Low | Data read on rising edge and written on falling edge | 
 | 1 | 0 | 1 | Logic low | Data read on the falling edge and written on the rising edge |
 | 2 | 1 | 0 | Logic high | Data read on the falling edge and written on the rising edge |
-| 3 | 1 | 1 | Logic high | Data read on the rising edge and written on the the falling edge |
+| 3 | 1 | 1 | Logic high | Data read on the rising edge and written on the falling edge |
 
 | | | |
 |-|-|-| 
@@ -379,7 +379,7 @@ Use the datasheet to find the address of the `id` register! Take a look at secti
 :::
 
 3. Get the pressure and temperature readings from the sensor.
-- Write the `ctrl_meas` register with appropiate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
+- Write the `ctrl_meas` register with appropriate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
 - Read the pressure value and print it over the serial. (**2p**)
 
 :::tip
