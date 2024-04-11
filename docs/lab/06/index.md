@@ -390,7 +390,7 @@ The pressure value is split into 3 registers: `press_msb`, `press_lsb` and `pres
 
 To compute the **RAW** pressure value, we need to read `press_msb`, `press_lsb` and `press_xlsb` and reconstruct the 20-bit pressure register, as such:
 
-`pressure = press_msb << 12 + press_lsb << 4 + press_xlsb >> 4`
+`pressure = (press_msb << 12) + (press_lsb << 4) + (press_xlsb >> 4)`
 :::
 - Read the raw temperature value and print it over the serial. (**1p**)
 :::tip
