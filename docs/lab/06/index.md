@@ -371,7 +371,7 @@ To control the buzzer, all you need to do is to set the `top` value of the PWM c
 
 ## Exercises
 
-1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 3. Next, connect the buzzer (with a resistance) to GPIO 1. Use Kicad to draw the schematic. (**1p**)
+1. Connect the BMP280. Use the wiring configuration for the SPI, and connect the CS to GPIO 5. Next, connect the buzzer (with a resistance) to GPIO 1. Use Kicad to draw the schematic. (**1p**)
 2. The example provided for exercise 2 in the lab skeleton is a basic example of how to read a register of the BMP280. Modify it to read the `id` of the BMP280 and print it over serial. (**1p**)
 
 :::tip
