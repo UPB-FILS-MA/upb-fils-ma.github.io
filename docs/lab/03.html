@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.f6370a99.css">
-<script src="/assets/js/runtime~main.19744198.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.57aa7d38.js" defer="defer"></script>
 <script src="/assets/js/main.6eddfc4d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -269,6 +269,7 @@ The <code>main</code> task has to use <code>await</code> at some point. Failure 
 <p>If several tasks need to share the same data, a <code>Mutex</code> similar to the one from Embedded HAL is needed.</p>
 <p>If tasks just need to send values to each other, sending them as arguments should work.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercises">Exercises<a href="#exercises" class="hash-link" aria-label="Direct link to Exercises" title="Direct link to Exercises">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Pico Explorer Pinout" src="/assets/images/explorer_pins-826d67f02154207c1b67514ed209149a.jpg" width="800" height="600" class="img_ev3q"></p>
 <ol>
 <li>Connect an LED1 to pin 0 and an LED2 to pin 1. Use <a href="https://www.kicad.org/" target="_blank" rel="noopener noreferrer">KiCad</a> to draw the schematics. (<strong>1p</strong>)</li>
 <li>Write a program using <code>embedded-hal</code> that blinks the LED1. Use <code>rust-objdump</code> to display the sections. (<strong>2p</strong>)</li>
@@ -296,7 +297,7 @@ initialized, as the fault might have occurred while initializing the board.</p><
 <ol start="4">
 <li>Register an interrupt on the pin connected to button A. Toggle LED2 each time the button is pressed. (<strong>2p</strong>)</li>
 </ol>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Refer to the pico explorer pinout diagram to figure out to which pin button A is connected.</p><p><img decoding="async" loading="lazy" alt="Pico Explorer Pinout" src="/assets/images/pico_explorer_pinout-995d70ca0989d41de997b2f3ca128114.png" width="402" height="480" class="img_ev3q"></p></div></div>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Look at the table on the back of the Pico Explorer Base to figure out to which pin button A is connected.</p></div></div>
 <ol start="5">
 <li>Use <code>embassy-rs</code> to obtain the same result. (<strong>2p</strong>)</li>
 </ol>
