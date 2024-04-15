@@ -9,9 +9,11 @@ Pulse Width Modulation
 # Bibliography
 for this section
 
-**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
    - Chapter 4 - *Peripherals*
      - Chapter 4.5 - *PWM*
+
+2. **Paul Denisowski**, *[Understanding PWM](https://www.youtube.com/watch?v=nXFoVSN3u-E)*
 
 ---
 layout: two-cols

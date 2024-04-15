@@ -9,9 +9,12 @@ Universal Asynchronous Receiver and Transmitter
 # Bibliography
 for this section
 
-**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
    - Chapter 4 - *Peripherals*
      - Chapter 4.2 - *UART*
+
+2. **Paul Denisowski**, *[Understanding Serial Protocols](https://www.youtube.com/watch?v=LEz5UCN3aHA)*
+3. **Paul Denisowski**, *[Understanding UART](https://www.youtube.com/watch?v=sTHckUyxwp8)*
 
 ---
 ---
