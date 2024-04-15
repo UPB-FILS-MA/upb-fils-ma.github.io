@@ -13,7 +13,7 @@ for this section
   - Chapter 3 - *Functional Description*
   - Chapter 4 - *Global memory map and register description*
   - Chapter 5 - *Digital Interfaces*
-    - Subchapter 5.3 - *SPI Interface*
+    - Subchapter 5.2 - *I2C Interface*
 
 ---
 ---

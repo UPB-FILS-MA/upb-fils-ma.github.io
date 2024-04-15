@@ -31,7 +31,7 @@ used by RP2040
 
 - Buses
   - Inter-Integrated Circuit
-  - Universal Serial Bus
+  - Universal Serial Bus v2.0
 
 <!-- I2C -->
 
@@ -56,8 +56,6 @@ src: ./sensors/slides.md
 # Conclusion
 we discussed about
 
-- Direct Memory Access
 - Buses
-  - Universal Asynchronous Receiver and Transmitter
-  - Serial Peripheral Interface
-- Analog and Digital Sensors
+  - Inter-Integrated Circuit
+  - Universal Serial Bus v2.0

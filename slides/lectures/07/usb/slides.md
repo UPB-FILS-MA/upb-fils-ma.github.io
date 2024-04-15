@@ -1,13 +1,14 @@
 ---
 layout: section
 ---
-# USB
+# USB 2.0
 Universal Serial Bus
 
 ---
 layout: two-cols
 ---
 # Universal Serial Bus
+2.0
 
 - Used for communication between a host and several devices that each provide functions
 - Two modes:
@@ -46,6 +47,17 @@ flowchart
 	class R3,F2 error
 	class S3 start
 ```
+
+---
+---
+# Bibliography
+for this section
+
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.1 - *USB*
+
+2. *[USB Made Simple](https://www.usbmadesimple.co.uk/)*
 
 ---
 layout: two-cols
@@ -742,17 +754,12 @@ The DATA packet of the SETUP Control Transfer
 
 ---
 ---
-# USB Modes
+# USB 1.0 and 2.0 Modes
 | Mode | Speed | Version |
 |-|-|-|
 | Low Speed | 1.5 Mbit/s | 1.0 |
 | Full Speed | 12 Mbit/s | 1.0 |
 | High Speed | 480 Mbit/s | 2.0 |
-| Super Speed | 5 Gbit/s | 3.0 |
-| SuperSuper Speed | 10 Gbit/s | 3.1 |
-| Super Speed | 20 Gbit/s | 3.2 |
-| USB4 Gen 3x2 | 40 Gbit/s | 4 |
-| USB4 Gen 4 | 80 Gbit/s | 4 v2.0 |
 
 ---
 ---
@@ -765,7 +772,7 @@ The DATA packet of the SETUP Control Transfer
 | Clock | *independent* | the **host** and the **device** must synchronize their clocks |
 | Wires | *DP* / *DM* | data is sent in a differential way |
 | Devices | *1 host* <br> *several devices* | a receiver and a transmitter |
-| Speed | * Bbit/s* |  |
+| Speed | *480 MBbit/s* |  |
 
 ---
 layout: two-cols

@@ -10,9 +10,11 @@ Inter-Integrated Circuit
 # Bibliography
 for this section
 
-**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
    - Chapter 4 - *Peripherals*
      - Chapter 4.3 - *I2C*
+
+2. **Rhode Schwarz**, *[Understanding I2C](https://www.youtube.com/watch?v=CAvawEcxoPU)*
 
 ---
 ---
@@ -71,14 +73,16 @@ a.k.a *I square C*
 2. **controller** sends the address of the **target**
 3. **controller** sends the command bit (`R/W`)
 4. **target** sends `ACK` / `NACK` to **controller**
-5. **controller** or **target** sends data (depends on `R/W`)
 
 </v-clicks>
+
 
 <div>
 
 <v-clicks>
 
+5. **controller** or **target** sends data (depends on `R/W`)
+    - receives `ACK` / `NACK` after every byte
 6. **controller** issues a `STOP` condition 
    - stops the clock
    - pulls the `SDA` line `HIGH` while `CLK` is `HIGH`
@@ -118,6 +122,7 @@ Transmission
 3. **controller** sends the command bit (`R/W`)
 4. **target** sends `ACK` / `NACK` to **controller**
 5. **controller** sends the *lower address* of the **target**
+6. **target** sends `ACK` / `NACK` to **controller**
 
 </v-clicks>
 
@@ -125,8 +130,8 @@ Transmission
 
 <v-clicks>
 
-6. **target** sends `ACK` / `NACK` to **controller**
 7. **controller** or **target** sends data (depends on `R/W`)
+    - receives `ACK` / `NACK` after every byte
 8. **controller** issues a `STOP` condition 
 
 </v-clicks>
