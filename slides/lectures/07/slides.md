@@ -5,13 +5,13 @@ class: text-center
 highlighter: shiki
 lineNumbers: true
 info: |
-  ## UART & SPI
+  ## I2C & USB 2.0
 drawings:
   persist: false
 defaults:
   foo: true
 transition: slide-left
-title: MA - 07 - I2C & USB
+title: MA - 07 - I2C & USB 2.0
 mdc: true
 layout: cover
 themeConfig:
@@ -21,12 +21,12 @@ exportFilename: ma-07
 background:
 ---
 
-# I2C & USB
+# I2C & USB 2.0
 Lecture 7
 
 ---
 
-# I2C & USB
+# I2C & USB 2.0
 used by RP2040
 
 - Buses
