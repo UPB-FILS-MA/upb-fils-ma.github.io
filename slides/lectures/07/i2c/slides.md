@@ -14,7 +14,7 @@ for this section
    - Chapter 4 - *Peripherals*
      - Chapter 4.3 - *I2C*
 
-2. **Rhode Schwarz**, *[Understanding I2C](https://www.youtube.com/watch?v=CAvawEcxoPU)*
+2. **Paul Denisowski**, *[Understanding I2C](https://www.youtube.com/watch?v=CAvawEcxoPU)*
 
 ---
 ---
