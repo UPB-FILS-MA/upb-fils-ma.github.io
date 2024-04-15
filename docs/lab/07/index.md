@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
-description: Serial Peripheral Interface
-slug: /lab/06
+description: Inter-Integrated Circuit
+slug: /lab/07
 ---
 
 # 07 - Inter-Integrated Circuit
@@ -229,7 +229,7 @@ This is explained in section 5.3 of the datasheet.
 
 #### Writing to a register
 
-![i2c_bmp280_write](i2c_bmp280_write.png)
+![i2c_bmp280_write](images/i2c_bmp280_write.png)
 
 To write to a register, we need to send the sensor a buffer containing pairs of register addresses and values we want to write to those registers. For example, if we wanted to write `0x00` to `REG_A`:
 
