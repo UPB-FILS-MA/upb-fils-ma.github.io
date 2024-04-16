@@ -1,0 +1,40 @@
+{
+    "reg": [
+        {
+            "bits": 3,
+            "name": "00J",
+            "type": 1,
+            "attr": [
+                "EOP"
+            ]
+        },
+        {
+            "bits": 4,
+            "name": "PID",
+            "type": 3,
+            "attr": [
+                "Packet ID"
+            ]
+        },
+        {
+            "bits": 4,
+            "name": "!PID",
+            "type": 3,
+            "attr": [
+                "Inverted",
+                "Packet ID"
+            ]
+        },
+        {
+            "bits": 8,
+            "name": 1,
+            "type": 1,
+            "attr": [
+                "SYNC"
+            ]
+        }
+    ],
+    "config": {
+        "hspace": 350
+    }
+}

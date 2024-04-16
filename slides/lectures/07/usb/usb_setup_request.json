@@ -1,0 +1,44 @@
+{
+    "reg": [
+        {
+            "bits": 16,
+            "name": "wLength",
+            "type": 7,
+            "attr": [
+                "Number of bytes to transfer in DATA step"
+            ]
+        },
+        {
+            "bits": 16,
+            "name": "wIndex",
+            "type": 5,
+            "attr": [
+                "Index of offset"
+            ]
+        },
+        {
+            "bits": 16,
+            "name": "wValue",
+            "type": 5,
+            "attr": [
+                "Value"
+            ]
+        },
+        {
+            "bits": 8,
+            "name": "bRequest",
+            "type": 3,
+            "attr": [
+                "Specific to request"
+            ]
+        },
+        {
+            "bits": 8,
+            "name": "bmRequestType",
+            "type": 3
+        }
+    ],
+    "config": {
+        "lanes": 2
+    }
+}
