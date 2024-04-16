@@ -34,11 +34,9 @@ The communication is *half-duplex*. This means that data is transmitted only in 
 :::info
 The `SDA` and `SCL` wires are never actually driven (set to `LOW`/`HIGH`) by the controller/peripherals. The line is controlled by either pulling the line low or releasing the line high. 
 
-When the line is *pulled down*, this means that it is tied to `GND` through a pull-down resistor. This electronically translates to `LOW`.
+When the line is *pulled down*, this means that it is tied directly to `GND`. This electronically translates to `LOW`.
 
 When the line is *released*, or *pulled up*, this means that it ties back to `3V3` (which we can consider as being the "default" state of the wire) through a pull-up resistor. This electronically translates to `HIGH`.
-
-The pull-down resistor has a smaller resistance than the pull-up one, so every time a peripheral wants to write a 0 to the line, it changes the circuit of the bus so that it ties directly to ground.
 
 This is called *open-drain connection*. You can read more about how it works [here](https://www.ti.com/lit/an/sbaa565/sbaa565.pdf?ts=1712891793335#:~:text=I2C%20is%20a%20two%2Dwire,and%20receive%20commands%20and%20data.), at section 2.2.
 :::
