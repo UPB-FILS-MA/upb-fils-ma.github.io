@@ -10,7 +10,15 @@ This lab will teach you how to communicate with hardware devices using the Inter
 
 ## Resources
 
-TBD
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+   - Chapter 4 - *Peripherals*
+     - Chapter 4.3 - *I2C*
+
+2. **BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
+  - Chapter 3 - *Functional Description*
+  - Chapter 4 - *Global memory map and register description*
+  - Chapter 5 - *Digital Interfaces*
+    - Subchapter 5.2 - *I2C Interface*
 
 ## Inter-Integrated Circuit (I2C)
 
@@ -243,7 +251,7 @@ let tx_buf = [REG_A, 0x00, REG_B, 0x00];
 i2c.write_async(BMP280_ADDR, tx_buf).await.unwrap();
 ```
 
-## Exercises (in progress)
+## Exercises
 
 1. Connect the BMP280 **with I2C**. Use Kicad to draw the schematic. (**1p**)
 
@@ -252,10 +260,10 @@ i2c.write_async(BMP280_ADDR, tx_buf).await.unwrap();
 3. Get the pressure and temperature readings from the sensor, **using I2C**. 
 - Write the `ctrl_meas` register with appropiate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
 - Read the raw pressure value and print it over the serial. (**2p**)
-- Read the raw temperature value and print it over the serial. (**1p**)
+- Read the raw temperature value and print it over the serial. (**2p**)
 
 :::tip
 Use what you learned in the last lab.
 :::
 
-4. Show the temperature and pressure values on the screen. (**2p**)
+4. Show the temperature and pressure values on the screen. (**1p**)
