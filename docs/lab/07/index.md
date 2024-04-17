@@ -79,6 +79,18 @@ For 10-bit addresses, the controller first issues a specific sequence of bits. T
 
 ### I2C in Embassy
 
+These are the I2C imports we will be using. We will use the functions provided by the `embedded_hal` crate, since these are standard and used by most frameworks.
+
+```rust
+use embassy_rp::i2c::{I2c, InterruptHandler as I2CInterruptHandler, Config as I2cConfig};
+use embedded_hal_async::i2c::{Error, I2c as _};
+use embassy_rp::peripherals::I2C0;
+```
+
+:::info
+The reason why we use `I2c as _` from `embedded_hal_async` is that in order to use the `embedded_hal` trait methods, the trait needs to be imported.
+:::
+
 We start by initializing the peripherals.
 
 ```rust
@@ -111,7 +123,7 @@ bind_interrupts!(struct Irqs {
 :::warning
 Since multiple `Config`s and `InterruptHandler`s can exist in one file, in the code examples above, `I2cConfig` and `I2CInterruptHandler` are renamed imports:
 ```rust
-use embassy_rp::i2c::{InterruptHandler as I2CInterruptHandler, Config as I2cConfig};
+use embassy_rp::i2c::{I2c, InterruptHandler as I2CInterruptHandler, Config as I2cConfig};
 ```
 :::
 
@@ -128,7 +140,7 @@ The following example reads two bytes from the target of address `0x44`.
 ```rust
 const TARGET_ADDR: u16 = 0x44;
 let mut rx_buf = [0x00u8; 2];
-i2c.read_async(TARGET_ADDR, &mut rx_buf).await.unwrap();
+i2c.read(TARGET_ADDR, &mut rx_buf).await.unwrap();
 ```
 
 #### Writing to a target
@@ -144,14 +156,14 @@ The following example writes two bytes to the target of address `0x44`.
 ```rust
 const TARGET_ADDR: u16 = 0x44;
 let tx_buf = [0x01, 0x05];
-i2c.write_async(TARGET_ADDR, tx_buf).await.unwrap();
+i2c.write(TARGET_ADDR, &tx_buf).await.unwrap();
 ```
 
 :::info
-We can also use `write_read_async` if we want to perform both a write and a read one after the other.
+We can also use `write_read` if we want to perform both a write and a read one after the other.
 
 ```rust
-i2c.write_read_async(TARGET_ADDR, tx_buf, &mut rx_buf).await.unwrap();
+i2c.write_read(TARGET_ADDR, &tx_buf, &mut rx_buf).await.unwrap();
 ```
 :::
 
@@ -186,6 +198,7 @@ Before we start, we initialize the I2C driver with the pins and channel we will 
 
 ```rust
 use embassy_rp::i2c::{I2c, InterruptHandler as I2CInterruptHandler, Config as I2cConfig};
+use embedded_hal_async::i2c::{Error, I2c as _};
 use embassy_rp::peripherals::I2C0;
 
 bind_interrupts!(struct Irqs {
@@ -217,11 +230,11 @@ For this, we need to first *write* this register address over I2C and then *read
 ```rust
 let tx_buf = [REG_ADDR]; // the tx buffer contains the address of the register we want to read
 let mut rx_buf = [0x00u8]; // the rx buffer initially contains one empty value, which will be replaced by the value of the register we asked for
-i2c.write_read_async(BMP280_ADDR, tx_buf, &mut rx_buf).await.unwrap(); // we provide the function the I2C address of the BMP280 and the two buffers
+i2c.write_read(BMP280_ADDR, &tx_buf, &mut rx_buf).await.unwrap(); // we provide the function the I2C address of the BMP280 and the two buffers
 ```
 
 :::info
-I2C is *half-duplex*. The `write_read_async` function performs two separate transfers: a write and a read. As opposed to SPI, these transfers are unidirectional, and that's why we need two of them, separately.
+I2C is *half-duplex*. The `write_read` function performs two separate transfers: a write and a read. As opposed to SPI, these transfers are unidirectional, and that's why we need two of them, separately.
 :::
 
 :::info
@@ -241,14 +254,14 @@ To write to a register, we need to send the sensor a buffer containing pairs of 
 
 ```rust
 let tx_buf = [REG_A, 0x00];
-i2c.write_async(BMP280_ADDR, tx_buf).await.unwrap();
+i2c.write(BMP280_ADDR, &tx_buf).await.unwrap();
 ```
 
 If we wanted to write both `REG_A` and `REG_B` to `0x00`:
 
 ```rust
 let tx_buf = [REG_A, 0x00, REG_B, 0x00];
-i2c.write_async(BMP280_ADDR, tx_buf).await.unwrap();
+i2c.write(BMP280_ADDR, &tx_buf).await.unwrap();
 ```
 
 ## Exercises
