@@ -88,7 +88,7 @@ use embassy_rp::peripherals::I2C0;
 ```
 
 :::info
-The reason why we use `I2c as _` from `embedded_hal_async` is because we expose the I2C trait from `embedded_hal`, but we use the I2C structure from Embassy that implements this trait. This way, we have access to the `write`, `read` and `write_read` functions from `embedded_hal`.
+The reason why we use `I2c as _` from `embedded_hal_async` is that in order to use the `embedded_hal` trait methods, the trait needs to be imported.
 :::
 
 We start by initializing the peripherals.
