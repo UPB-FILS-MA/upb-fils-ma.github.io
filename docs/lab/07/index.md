@@ -15,10 +15,10 @@ This lab will teach you how to communicate with hardware devices using the Inter
      - Chapter 4.3 - *I2C*
 
 2. **BOSCH**, *[BMP280 Digital Pressure Sensor](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)*
-  - Chapter 3 - *Functional Description*
-  - Chapter 4 - *Global memory map and register description*
-  - Chapter 5 - *Digital Interfaces*
-    - Subchapter 5.2 - *I2C Interface*
+   - Chapter 3 - *Functional Description*
+   - Chapter 4 - *Global memory map and register description*
+   - Chapter 5 - *Digital Interfaces*
+     - Subchapter 5.2 - *I2C Interface*
 
 ## Inter-Integrated Circuit (I2C)
 
