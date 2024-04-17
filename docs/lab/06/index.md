@@ -20,6 +20,8 @@ This lab will teach you how to communicate with hardware devices using the Seria
     - Chapter 5 - *Digital Interfaces*
       - Subchapter 5.3 - *SPI Interface*
 
+3. **Paul Denisowski**, *[Understanding SPI](https://www.youtube.com/watch?v=0nVNwozXsIc)*
+
 ## Serial Peripheral Interface (SPI)
 
 The Serial Peripheral Interface (or SPI) is a communication protocol used between microcontrollers and peripheral ICs (integrated circuits). It allows synchronous transfer of data between one *main* device and one or more *sub* devices (e.g. sensors). The main device is the one that dictates the communication.

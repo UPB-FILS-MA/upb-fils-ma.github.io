@@ -11,7 +11,7 @@ This lab will teach you the difference between digital and analog signals, how t
 
 ## Resources
 
-**Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
+1. **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
     - Chapter 2 - *System Description*
      - Chapter 2.15 - *Clocks*
        - Subchapter 2.15.1
@@ -23,6 +23,8 @@ This lab will teach you the difference between digital and analog signals, how t
        - Subchapter 4.9.1
        - Subchapter 4.9.2
        - Subchapter 4.9.5
+
+2. **Paul Denisowski**, *[Understanding PWM](https://www.youtube.com/watch?v=nXFoVSN3u-E)*
 
 ## Timing
 
