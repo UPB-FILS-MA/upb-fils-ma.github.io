@@ -84,7 +84,7 @@ Open wireless networks don't require any authentication, and all transmissions a
 
 #### Wired Equivalent Privacy (WEP)
 
-WEP is the first security protocol ever implemented. It uses data encryption based on generated key values. It was designed in 1197 and has since become obsolete, because it is really easy to crack and basically as unsafe as open Wi-Fi.
+WEP is the first security protocol ever implemented. It uses data encryption based on generated key values. It was designed in 1997 and has since become obsolete, because it is really easy to crack and basically as unsafe as open Wi-Fi.
 
 #### Wi-Fi Protected Access (WPA/WPA2/WPA3)
 
