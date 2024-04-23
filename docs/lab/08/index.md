@@ -23,21 +23,33 @@ Devices that communicate in a network have an associated IP (Internet Protocol) 
 ### IPv4
 
 An IPv4 address looks like this:
-`192.168.0.1/8`
-Each number separated by a dot is represented on 8 bits (ranging from 0 to 255). The number after the slash is the *mask* of the address, which will be described shortly.
+`192.168.0.1/24`
+Each number separated by a dot is represented on 8 bits (ranging from 0 to 255). The number after the slash is the *network mask*, which will be described shortly.
 
 An IP address is made of two parts:
 - network prefix: defines the network the device is a part of
 - host identifier: is unique to the device in the network
 
-The *mask* of an address defines the number of bits that are used to represent the host identifier. In other words, the bigger the mask, the more unique devices can exist in the network.
+The *network mask* defines the number of bits that are used to represent the network prefix. In other words, the smaller the mask, the more unique devices can exist in the network.
 
-For example, for the above address `192.168.0.1/8`, we know that the host identifier is 8 bits long. Therefore, the first 24 bits give us the network prefix and the last 8 bits give us the host identifier.
+For example, for the above address `192.168.0.1/24`, we know that the network prefix is 24 bits long. Therefore, the first 24 bits give us the network prefix and the last 8 bits give us the host identifier. The mask in this case would look like this: `255.255.255.0`.
+
+:::info
+In binary, `255.255.255.0` is `11111111.11111111.11111111.00000000`. 
+
+First 24 bits are 1, last 8 bits are 0. 
+:::
 
 Any device that wants to communicate in this local network (or *subnet*) must have an address ranging from `192.168.0.1` to `192.168.0.254`.
 
 :::note
 In the above example, `192.168.0.0` is the *network address*, and `192.168.0.255` is the *broadcast address* (used to broadcast to *all* endpoints in a subnet). The first and last possible addresses in a subnet are reserved and should not be assigned to devices.
+
+To determine the *network address*, we need to perform a logic `AND` operation between the IP address and the network mask.
+
+To determine the *broadcast address*, we need to perform a logic `OR` operation between the IP address and the network mask.
+
+This means converting the IP address and network mask to binary, then performing `AND` or `OR` on every bit, then converting it back to decimal.
 :::
 
 Learn more about subnetting [here](https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105/what-is-subnetting).
