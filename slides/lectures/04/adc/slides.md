@@ -94,7 +94,7 @@ how the ADC works
 </div>
 
 There are different [types of ADCs](https://www.monolithicpower.com/en/analog-to-digital-converters/introduction-to-adcs/types-of-adcs) depending on the architecture. 
-The most common used is SAR (*Successive Approximation Register*) ADC[^adc_types], also integrated in RP2040.
+The most common used is SAR ([*Successive Approximation Register*](https://en.wikipedia.org/wiki/Successive-approximation_ADC)) ADC, also integrated in RP2040.
 
 ---
 layout: two-cols
