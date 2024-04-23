@@ -52,7 +52,7 @@ let cpuid_value = unsafe { *cpuid_reg };
 ```
 
 <v-click>
-⚠️ Processors use cache!
+⚠️ Compilers optimize code and processors use cache!
 </v-click>
 
 ::right::
@@ -62,16 +62,41 @@ let cpuid_value = unsafe { *cpuid_reg };
 
 ---
 ---
-# 8 bit processor
-with cache
+# Compiler Optimization
+compilers optimize code
 
-![8 Bit Processor](/mmio/8-bit-processor-with-cache.svg)
+Write bytes to the `UART` (serial port) data register
+
+```rust{1|2-5|all}
+const UART_TX: *const u8 = 0x400_3400;
+for b in b"Hello, World".iter() {
+    unsafe { UART_TX.write(*b); }
+}
+```
+
+<v-clicks>
+
+1. The compiler does not know that `UART_TX` is a register and uses it as a memory address.
+2. Writing several values to the same memory address will result in having the last value stored at that address.
+3. The compiler optimizes the code write the value
+
+</v-clicks>
+
+<v-after>
+
+```rust
+const UART_TX: *const u8 = 0x400_3400;
+unsafe { UART_TX.write(b'd'); }
+```
+.
+
+</v-after>
 
 ---
 layout: two-cols
 ---
 
-# Cache Write-Trough
+# No Compiler Optimization
 
 CPUID: **0xe000_ed00** (*0xe000_0000 + 0xed00*)
 
@@ -89,13 +114,32 @@ unsafe {
 
 |  |  |
 |----------|-------------|
-| `read_volatile`, `write_volatile` | **no** cache or compiler **optimization** |
-| `read`, `write`, `*p` | **use** cache and compiler **optimization**  |
+| `read_volatile`, `write_volatile` | **no** compiler **optimization** |
+| `read`, `write`, `*p` | **use** compiler **optimization**  |
 
 ::right::
 
 ![SysCtrl Registers](/mmio/sysctrl_registers.png)
 
+---
+---
+# 8 bit processor
+with cache
+
+![8 Bit Processor](/mmio/8-bit-processor-with-cache.svg)
+
+---
+---
+# No Cache or Flush Cache
+
+- Cache types:
+  - *write-trough* - data is written to the cache and to the main memory (bus)
+  - *write-back* - data is written to the cache and later to the main memory (bus)
+- few Cortex-M MCUs have cache
+- the Memory Mapped region is set as *nocache*
+- for chips that use cache
+  - *nocache* regions have to be set manually (if MCU knows)
+  - the cache has to be flushed before every `volatile_read` and after `volatile_write`
 
 ---
 layout: two-cols
