@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[840],{80190:e=>{e.exports=JSON.parse('{"title":"Lab","description":"The lab materials","slug":"/category/lab","permalink":"/docs/category/lab","navigation":{"previous":{"title":"07 - I2C & USB 2.0","permalink":"/docs/lecture/07"},"next":{"title":"00 - Rust","permalink":"/docs/lab/00"}}}')}}]);
