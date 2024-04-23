@@ -10,7 +10,7 @@ for this section
 
 **Raspberry Pi Ltd**, *[RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)*
    - Chapter 2 - *System Description*
-     - Chapter 2.15 - * Clocks*
+     - Chapter 2.15 - *Clocks*
        - Subchapter 2.15.1
        - Subchapter 2.15.2
    - Chapter 4 - *Peripherals*
