@@ -20,6 +20,9 @@ This lab will teach you how to communicate with hardware devices using the Inter
    - Chapter 5 - *Digital Interfaces*
      - Subchapter 5.2 - *I2C Interface*
 
+3. **Paul Denisowski**, *[Understanding Serial Protocols](https://www.youtube.com/watch?v=LEz5UCN3aHA)*
+4. **Paul Denisowski**, *[Understanding UART](https://www.youtube.com/watch?v=sTHckUyxwp8)*
+
 ## Inter-Integrated Circuit (I2C)
 
 The Inter-Integrated Circuit (I2C) is a synchronous, multi-controller/multi-target communication protocol. Similarly to the SPI, it allows data transfer between a controller and one or more peripheral ICs, but it uses only 2 wires (1 data line and 1 clock line, making it half-duplex) and has a different way of addressing the peripherals: using the their unique *addresses*.
