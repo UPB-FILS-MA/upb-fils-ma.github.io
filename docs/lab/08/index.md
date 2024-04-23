@@ -10,7 +10,9 @@ This lab will teach you the basics of networking and Wi-Fi, and how to use Wi-Fi
 
 ## Resources
 
-TBD
+**Andrew Tanenbaum**, *Computer networks (5th edition)*
+  - Chapter 1 - *Introduction*
+    - Subchapter 1.4.2 - *The TCP/IP Reference Model*
 
 ## Networking basics
 
@@ -35,18 +37,30 @@ For example, for the above address `192.168.0.1/8`, we know that the host identi
 Any device that wants to communicate in this local network (or *subnet*) must have an address ranging from `192.168.0.1` to `192.168.0.254`.
 
 :::note
-In the above example, `192.168.0.0` is the *network address*, and `192.168.0.255` is the *broadcast address*. The first and last possible addresses in a subnet are reserved and should not be used for devices.
+In the above example, `192.168.0.0` is the *network address*, and `192.168.0.255` is the *broadcast address* (used to broadcast to *all* endpoints in a subnet). The first and last possible addresses in a subnet are reserved and should not be assigned to devices.
 :::
 
 Learn more about subnetting [here](https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105/what-is-subnetting).
 
 ### Routers
 
-TODO
+Routers are devices that forward packets between networks. The packets of the sender will be *routed* to the receiver of a different network, depending on the IP of the destination, passing from one router to another until they reach their destination. This happens through complex routing protocols. Routers also deal with traffic filtering, DNS (Domain Name System), DHCP and others.
+
+The *default gateway* in a local network is the router where packets must be sent when the *destination IP* is not in the current local network. From there, packets will be routed further. Read more about it [here](https://en.wikipedia.org/wiki/Default_gateway).
 
 ### DHCP
 
 Dynamic Host Configuration Protocol (DHCP) is a network management protocol used by routers to dynamically allocate IP addresses to devices connected to its network. Routers dynamically assign addresses to new devices in the network, if they don't already have a *static* IP.
+
+### Networking protocols
+
+#### TCP (Transmission Control Protocol)
+
+TCP is *connection-oriented*, meaning that a connection must be first established between two devices (client and server) before data can be sent. Packets that are not received correctly must be *retransmitted* by the sender, ensuring that data always reaches its destination. TCP is used in cases where data integrity is most important.
+
+#### UDP (User Datagram Protocol)
+
+UDP, on the other hand, is *connectionless*, and prioritizes time over reliability. Packets that are not received correctly are dropped and **not** retransmitted. UDP is used in time-sensitive applications, such as audio streaming.
 
 ## Wi-Fi
 
@@ -55,10 +69,6 @@ Dynamic Host Configuration Protocol (DHCP) is a network management protocol used
 Wi-Fi devices use radio waves to transmit data to one another in a network, through *wireless access points* (a wireless router, for instance). The access point (AP) connects directly to a local area network (LAN) and provides wireless connections for other devices in its proximity to use. 
 
 ![wi-fi](images/Wi-Fi.gif)
-
-:::note
-Certain materials, such as stone with high metal content, can block Wi-Fi signals.
-:::
 
 ### Protocol
 
@@ -69,12 +79,6 @@ Wi-Fi uses the *802.11* IEEE standard, with different radio technologies:
 - others, not widely used
 
 Each radio frequency range is divided into a multitude of *channels*. Each device that uses a frequency band communicates over one channel. Ideally, each device is allocated a separate channel. Sometimes, though, when there are many devices using a Wi-Fi frequency band, devices might end up having to *share* a channel and wait their turn to transmit data, leading to lower communication speeds. 5 GHz provides more channels than 2.4 GHz, allowing more devices to use the band without interference. 
-
-### Wi-Fi on the Raspberry Pi Pico
-
-Apart from the RP2040 microcontroller, the Raspberry Pi Pico board also has a separate, on-board wireless interface. It is a 2.4 GHz Infineon chip, *CYW43439*. This chip deals only with Wi-Fi (and Bluetooth) communication, and it is connected to the RP2040 via SPI.
-
-![cyw43](images/cyw43.png)
 
 ### Security
 
@@ -89,6 +93,12 @@ WEP is the first security protocol ever implemented. It uses data encryption bas
 #### Wi-Fi Protected Access (WPA/WPA2/WPA3)
 
 WPA, WPA2 and WPA3 were defined in response to the serious weaknesses discovered in WEP. Each version of WPA increments the security of the protocol, using more powerful password encryption methods. 
+
+### Wi-Fi on the Raspberry Pi Pico
+
+Apart from the RP2040 microcontroller, the Raspberry Pi Pico board also has a separate, on-board wireless interface. It is a 2.4 GHz Infineon chip, *CYW43439*. This chip deals only with Wi-Fi (and Bluetooth) communication, and it is connected to the RP2040 via SPI.
+
+![cyw43](images/cyw43.png)
 
 ### Wi-Fi in Embassy
 
@@ -212,6 +222,7 @@ async fn net_task(stack: &'static Stack<cyw43::NetDriver<'static>>) -> ! {
 The `CYW43` driver has a function that allows us to scan all Wi-Fi access points in the device's proximity.
 
 ```rust
+
 let mut scanner = control.scan(Default::default()).await;
 while let Some(bss) = scanner.next().await {
     if let Ok(ssid_str) = str::from_utf8(&bss.ssid) {
@@ -259,7 +270,7 @@ control.join_open(WIFI_NETWORK).await;
 The Pico can also be used as an Access Point, that other devices can connect to. We can initialize it as either an open network:
 
 ```rust
-control.start_ap_open("Pico AP", 5).await; // what are these parameters?
+control.start_ap_open("Pico AP", 5).await;
 ```
 
 or as a secured, WPA2 network:
@@ -268,11 +279,11 @@ or as a secured, WPA2 network:
 control.start_ap_wpa2("Pico AP", "WeloveRust", 5).await;
 ```
 
-#### Starting a server
+#### Starting a TCP server
 
 Now that we have connected our Pico to a Wi-Fi network, we can start a server to handle connections to our Pico.
 
-We need to create a TCP socket in order to handle TCP connections and transfers. 
+We can to create a TCP socket in order to handle TCP connections and transfers. 
 
 ```rust
 let mut socket = TcpSocket::new(stack, &mut rx_buffer, &mut tx_buffer);
@@ -321,11 +332,67 @@ loop {
 }
 ```
 
+#### Starting an UDP server
+
+Similarly to the TCP server, we create a new socket, this time one that handles UDP connections.
+
+```rust
+let mut rx_buffer = [0; 4096];
+let mut rx_metadata_buffer = [PacketMetadata::EMPTY; 3];
+let mut tx_buffer = [0; 4096];
+let mut tx_metadata_buffer = [PacketMetadata::EMPTY; 3];
+
+let mut buf = [0u8; 4096];
+
+let mut socket = UdpSocket::new(
+    stack, &mut rx_metadata_buffer, &mut rx_buffer, &mut tx_metadata_buffer, &mut tx_buffer
+);
+```
+
+Next, we bind our socket to a port (for example port `1234`). Note that the `bind` function is not a future, since we don't need to wait for connections before initiating a transmission.
+
+```rust
+if let Err(e) = socket.bind(1234) {
+    warn!("accept error: {:?}", e);
+    continue;
+}
+```
+
+Now, we can read and write to the socket, and any endpoint that connects to the port can send/receive data.
+
+```rust
+// example read
+loop {
+    match socket.recv_from(&mut buf).await {
+        Ok((n, endpoint)) => {
+            info!("Received from {:?}: {:?}", endpoint, from_utf8(&buf[..n]).unwrap());
+        },
+        Err(_) => {
+            info!("An error occurred when receiving the packet!");
+        }
+    }
+}
+
+// example write
+let buffer = "hello\n".as_bytes();
+match socket.send_to(&buffer, IpEndpoint::new(IpAddress::v4(192, 168, 100, 45), 1234)).await {
+    Ok(()) => {
+        info!("sent")
+    }
+    Err(e) => {
+        warn!("send error: {:?}", e);
+    }
+}
+```
+
 ## Exercises
 
 1. The lab skeleton contains an example of setting up the Wi-Fi and connecting to an access point.
 - Scan for local networks. (**1p**)
-- Modify the code in order to connect to an existing network. Once connected, determine the IP address that has been assigned to the Pico through DHCP. (**1p**)
+- Modify the code in order to connect to an existing network. Once connected, determine the IP address that has been assigned to the Pico through DHCP and the default gateway of the network. (**1p**)
+:::tip
+You can use `stack.config_v4()` to find the assigned IP address and default gateway. 
+:::
 - Use a static IP address instead of a dynamic one. You can use the IP determined at the previous point. (**1p**)
 
 2. Test the example by connecting your computer to the Pico through Wi-Fi. Use `netcat` or any alternative to send a TCP packet to the Pico server. You should receive back the same string. (**1p**)
@@ -335,13 +402,22 @@ On Windows, you can use [NCat](https://nmap.org/download.html#windows). The comm
 ```shell
 ncat [ip_address] [port]
 ```
-To send a TCP packet, write any string in the terminal and press enter. You should receive back the same string, since this is what our server is currently configured to do.
+To send a packet, write any string in the terminal and press enter. You should receive back the same string, since this is what our server is currently configured to do.
+You can run `ncat -h` to see a list of other available parameters for this command.
 :::
 
-3. Modify the way the server on the Pico deals with connections. Send a message through Wi-Fi to your computer whenever a button is pressed. (**2p**)
+3. Modify the way the server on the Pico deals with connections. Send a message through Wi-Fi to your computer whenever a button is pressed. It's better to use UDP for this. (Why?) (**2p**)
 
-4. Modify the server so that you can send commands from your computer to turn an LED on and off. (**1p**)
+:::tip
+You can transform a string slice to bytes using `as_bytes()`.
+:::
 
-5. Configure the Pico as an access point. You will need to set a static IP address both for the Pico and your computer, to make sure they are both in the same subnet. (**1p**)
+4. Modify the server so that you can *also* send commands from your computer to turn an LED on and off. (**1p**)
+
+:::tip
+Use *select* to await multiple futures (wait for button press and read from socket). Refer to Lab 5.
+:::
+
+5. Configure the Pico as an access point. You will need to set a static IP address both for the Pico and your computer, to make sure they are both in the same subnet, so that they can communicate. (**1p**)
 
 6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the server for the LED Pico, and another team the server for the button Pico. (**2p**)
