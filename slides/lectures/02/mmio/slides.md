@@ -139,7 +139,8 @@ with cache
 - the Memory Mapped I/O region is set as *nocache*
 - for chips that use cache
   - *nocache* regions have to be set manually (if MCU knows)
-  - the cache has to be flushed before every `volatile_read` and after `volatile_write`
+  - or, the cache has to be flushed before a `volatile_read` and after a `volatile_write`
+  - beware DMA controllers that can't see the cache contents
 
 ---
 layout: two-cols
