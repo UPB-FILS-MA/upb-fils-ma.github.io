@@ -24,7 +24,7 @@ the MCU
 |-|-|
 | Vendor | Raspberry PI |
 | Variant | ARM Cortex-M0+ |
-| ISA | armv6-m |
+| ISA | ARMv6-M (Thumb and some Thumb-2) |
 | Cores | 2 |
 | Word | 32 bit |
 | Frequency | up to 133 MHz |
