@@ -16,38 +16,66 @@ This lab will teach you the basics of networking and Wi-Fi, and how to use Wi-Fi
 
 ## Networking basics
 
-A network is a set of devices that are linked together in order to share resources. Devices can talk to one another using different communication protocols, usually Ethernet (wired) or Wi-Fi (wireless).
+A network is a set of devices that are linked together in order to share resources. Most of the time, devices communicate to one another within a network using a set of protocols based on a network communication standard called the OSI (Open Systems Intercommunication) Stack.
 
-Devices that communicate in a network have an associated IP (Internet Protocol) address. There are two types of IP addresses: IPv4 (stored on 32 bits) and IPv6 (newer, stored on 64 bits). We will be discussing only the IPv4 in this lab, since it is most commonly used in local networks.
+The OSI stack has 7 layers, out of which 5 are important:
+- L1 - hardware layer - transmission of bits through a physical medium (copper wire, radio waves, optical fibre)
+- L2 - data link layer - transmission of packets between two devices in a network (Ethernet, Wi-Fi)
+- L3 - network layer - transmission of packets between devices in different networks (IP)
+- L4 - transport - transmission of data from a source to a destination (TCP, UDP)
+- L7 - application - transmission of data from an application (port) of a device to an application of another device
+
+:::info
+More information on the OSI model can be found in Lecture 08 - Networking.
+:::
+
+Devices that communicate in a network have associated addresses. In a TCP/IP network these addresses are called IP (Internet Protocol) addresses. There are two types of IP addresses: 
+
+- IPv4 - stored on 32 bits
+- IPv6 - newer, stored on 128 bits
+
+The IPv6 solves the problem of an evergrowing number of devices with networking capabilities; a higher resolution for the IP address means more unique addresses that can be assigned. We will be discussing only the IPv4 in this lab, since it is most commonly used in local networks.
 
 ### IPv4
 
 An IPv4 address looks like this:
+
 `192.168.0.1/24`
+
 Each number separated by a dot is represented on 8 bits (ranging from 0 to 255). The number after the slash is the *network mask*, which will be described shortly.
+
+:::info
+The IP address can also be represented in hexadecimal or binary form. Usually, when configuring subnets, it's easier to use the binary form to perform the necessary calculations.
+
+`192.168.0.1` = `11000000.10101000.00000000.00000001`
+:::
 
 An IP address is made of two parts:
 - network prefix: defines the network the device is a part of
 - host identifier: is unique to the device in the network
 
-The *network mask* defines the number of bits that are used to represent the network prefix. In other words, the smaller the mask, the more unique devices can exist in the network.
+The *network mask* defines the number of bits that are used to represent the network prefix. The smaller the mask, the more unique devices can exist in the network.
 
 For example, for the above address `192.168.0.1/24`, we know that the network prefix is 24 bits long. Therefore, the first 24 bits give us the network prefix and the last 8 bits give us the host identifier. The mask in this case would look like this: `255.255.255.0`.
 
 :::info
 In binary, `255.255.255.0` is `11111111.11111111.11111111.00000000`. 
 
-First 24 bits are 1, last 8 bits are 0. 
+The first 24 bits are `1`, the last 8 bits are `0`.
 :::
 
-Any device that wants to communicate in this local network (or *subnet*) must have an address ranging from `192.168.0.1` to `192.168.0.254`.
+Any device that wants to communicate in this local network (or *subnet*) must have an address ranging from `192.168.0.1` to `192.168.0.254`. Note that the first 24 bits of the address are the same: the network prefix for these addresses is the same, since they can all be allocated to devices within the *same* network.
+
+![ip_address](images/ip_address.png)
+
+![ip_address_bits](images/ip_address_bits.png)
 
 :::note
 In the above example, `192.168.0.0` is the *network address*, and `192.168.0.255` is the *broadcast address* (used to broadcast to *all* endpoints in a subnet). The first and last possible addresses in a subnet are reserved and should not be assigned to devices.
 
 To determine the *network address*, we need to perform a logic `AND` operation between the IP address and the network mask.
 
-To determine the *broadcast address*, we need to perform a logic `OR` operation between the IP address and the network mask.
+To determine the *broadcast address*, we need to perform a logic `OR` operation between the IP address and the *inverse* of the network mask.
 
 This means converting the IP address and network mask to binary, then performing `AND` or `OR` on every bit, then converting it back to decimal.
 :::
@@ -60,19 +88,25 @@ Routers are devices that forward packets between networks. The packets of the se
 
 The *default gateway* in a local network is the router where packets must be sent when the *destination IP* is not in the current local network. From there, packets will be routed further. Read more about it [here](https://en.wikipedia.org/wiki/Default_gateway).
 
+A L3 (Network) packet looks like this:
+
+![network_packet](images/packet.svg)
+
+The L3 packet is contained within the L2 frame. The L2 packet headers contain the MAC address of the source and the destination, and the data contains the L3 packet. The L3 packet has a separate header, with the IP address of the source and the destination. The router is an L3 network device, meaning it is able to descifer the IP address of the source and the destination from the L3 frame and determine where the packet needs to be routed to.
+
 ### DHCP
 
-Dynamic Host Configuration Protocol (DHCP) is a network management protocol used by routers to dynamically allocate IP addresses to devices connected to its network. Routers dynamically assign addresses to new devices in the network, if they don't already have a *static* IP.
+Dynamic Host Configuration Protocol (DHCP) is a network management protocol used by routers to dynamically allocate IP addresses to devices connected to its network. Routers dynamically assign addresses to new devices in the network, if they don't already have a *static* IP. DHCP leases IP, Mask, Gateway and DNS servers.
 
 ### Networking protocols
 
 #### TCP (Transmission Control Protocol)
 
-TCP is *connection-oriented*, meaning that a connection must be first established between two devices (client and server) before data can be sent. Packets that are not received correctly must be *retransmitted* by the sender, ensuring that data always reaches its destination. TCP is used in cases where data integrity is most important.
+TCP is *connection-oriented*, meaning that a connection must be first established between two devices (client and server) before data can be sent. Packets that are not received correctly must be *retransmitted* by the sender, ensuring that data always reaches its destination. The packet might also be fragmented during the transmission and the receiver might receive it in several smaller packets. TCP is used in cases where data integrity is most important.
 
 #### UDP (User Datagram Protocol)
 
-UDP, on the other hand, is *connectionless*, and prioritizes time over reliability. Packets that are not received correctly are dropped and **not** retransmitted. UDP is used in time-sensitive applications, such as audio streaming.
+UDP, on the other hand, is *connectionless*, and prioritizes time over reliability. Packets that are not received correctly are dropped,**not** retransmitted and **not** fragmented. UDP is used in time-sensitive applications, such as audio streaming.
 
 ## Wi-Fi
 
@@ -418,13 +452,17 @@ To send a packet, write any string in the terminal and press enter. You should r
 You can run `ncat -h` to see a list of other available parameters for this command.
 :::
 
-3. Modify the way the server on the Pico deals with connections. Send a message through Wi-Fi to your computer whenever a button is pressed. It's better to use UDP for this. (Why?) (**2p**)
+3. Modify the way the server on the Pico deals with connections. Send a message through Wi-Fi to your computer whenever a button is pressed. Use UDP instead of TCP. (**2p**)
 
 :::tip
 You can transform a string slice to bytes using `as_bytes()`.
 :::
 
 4. Modify the server so that you can *also* send commands from your computer to turn an LED on and off. (**1p**)
+
+- `led:on` - command for turning on the LED
+- `led:off` - command for turning off the LED
+- `led:toggle` - command for toggling the LED
 
 :::tip
 Use *select* to await multiple futures (wait for button press and read from socket). Refer to Lab 5.
@@ -433,3 +471,5 @@ Use *select* to await multiple futures (wait for button press and read from sock
 5. Configure the Pico as an access point. You will need to set a static IP address both for the Pico and your computer, to make sure they are both in the same subnet, so that they can communicate. (**1p**)
 
 6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the server for the LED Pico, and another team the server for the button Pico. (**2p**)
+
+- `button:pressed` - signal for the button press
