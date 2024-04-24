@@ -211,7 +211,7 @@ read the number of elapsed μs since reset
 
 <img src="/timers/timer_registers_1.png" class="rounded w-100">
 
-## Reading the time elapsed since restart
+### Reading the time elapsed since restart
 
 ```rust{all|1,5|2,6|4,7,8}
 const TIMERLR: *const u32 = 0x4005_400c;
@@ -219,12 +219,12 @@ const TIMERHR: *const u32 = 0x4005_4008;
 
 let time: u64 = unsafe {
     let low = read_volatile(TIMERLR);
-    let high = read_volatile(TIMERLR);
+    let high = read_volatile(TIMERHR);
     high as u64 << 32 | low
 }
 ```
 
-The reading order maters.
+The **reading order maters** as reading `TIMELR` latches the value in `TIMEHR` (stops being updated) until `TIMEHR` is read. Works only in **single core**.
 
 :: right ::
 
@@ -245,18 +245,19 @@ triggering an interrupt at an interval
 unsafe fn TIMER_IRQ_0() { /* alarm fired */ }
 ```
 
-```rust{all|1,10|2,11|3,4,12}
+```rust{all|1,10|2,11,12|3,4,13}
 const TIMERLR: *const u32 = 0x4005_400c;
 const ALARM0: *mut u32 = 0x4005_4010;
 // + 0x2000 is bitwise set
 const INTE_SET: *mut u32 = 0x4005_4038 + 0x2000;
 
 // set an alarm after 3 seconds
-let microseconds = 3_0000_0000;
+let us = 3_0000_0000;
 
 unsafe {
     let time = read_volatile(TIMERLR);
-    write_volatile(ALARM0, time + microseconds);
+    // use `wrapping_add` as overflowing may panic
+    write_volatile(ALARM0, time.wrapping_add(us));
     write_volatile(INTE_SET, 1 << 0);
 };
 ```
