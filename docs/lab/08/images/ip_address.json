@@ -1,0 +1,17 @@
+{
+    "reg": [
+      {
+        "bits": 8, 
+        "name": "Host Identifier",
+        "type": 7,
+        "attr": ".1"
+      },
+      {
+        "bits": 24, 
+        "name": "Network Prefix",
+        "type": 6,
+        "attr": "192.168.0"
+      }
+    ]
+  }
+  

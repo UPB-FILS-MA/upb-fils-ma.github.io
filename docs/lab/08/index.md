@@ -26,7 +26,7 @@ The OSI stack has 7 layers, out of which 5 are important:
 - L7 - application - transmission of data from an application (port) of a device to an application of another device
 
 :::info
-More information on the OSI model can be found in Lecture 08 - Networking.
+More information on the OSI model can be found in [Lecture 08 - Networking](/docs/lecture/08).
 :::
 
 Devices that communicate in a network have associated addresses. In a TCP/IP network these addresses are called IP (Internet Protocol) addresses. There are two types of IP addresses: 
@@ -93,6 +93,8 @@ A L3 (Network) packet looks like this:
 ![network_packet](images/packet.svg)
 
 The L3 packet is contained within the L2 frame. The L2 packet headers contain the MAC address of the source and the destination, and the data contains the L3 packet. The L3 packet has a separate header, with the IP address of the source and the destination. The router is an L3 network device, meaning it is able to descifer the IP address of the source and the destination from the L3 frame and determine where the packet needs to be routed to.
+
+![osi_stack](images/osi_stack.svg)
 
 ### DHCP
 
@@ -456,7 +458,7 @@ You can use `stack.config_v4()` to find the assigned IP address and default gate
 :::
 - Use a static IP address instead of a dynamic one. You can use the IP determined at the previous point. (**1p**)
 
-2. Test the example by connecting your computer to the Pico through Wi-Fi. Use `netcat` or any alternative to send a TCP packet to the Pico server. You should receive back the same string. (**1p**)
+2. Test the example by connecting your computer to the Pico through Wi-Fi. Use the *Wyliodrin* network, the password will be written on the blackboard. Connect both the Pi and the laptop. Use `netcat` or any alternative to send a TCP packet to the Pico server from your computer. You should receive back the same string. (**1p**)
 
 :::tip
 On Windows, you can use [NCat](https://nmap.org/download.html#windows). The command for establishing a TCP connection is:
@@ -469,7 +471,7 @@ You can run `ncat -h` to see a list of other available parameters for this comma
 
 3. Start a server on the pico that sends a message through Wi-Fi to your computer whenever a button is pressed. Use an UDP socket instead of TCP. (**2p**)
 
-You can use the provided `server` code to open an UDP client socket on your PC that receives the messages from the Pico. Just create a new crate in a different folder with `cargo init`, then use the following code snippet:
+Use both `netcat` and the provided `server` code to open an UDP client socket on your PC that receives the messages from the Pico. Just create a new crate in a different folder with `cargo init`, then use the following code snippet:
 ```rust
 use tokio::net::UdpSocket;
 use std::{io, str::from_utf8};
@@ -486,7 +488,7 @@ async fn main() -> io::Result<()> {
 }
 ```
 
-Then, modify the `Cargo.toml` dependencies by adding this line: `tokio = { version = "1", features = ["full"] }`, then run `cargo run`.
+Then, modify the `Cargo.toml` dependencies by adding this line: `tokio = { version = "1", features = ["full"] }`, or use `cargo add tokio --features=full`. Then run `cargo run`.
 
 :::note
 You will need to specify the IP address of your computer in the `send_to` function to send the message. The port is also required; we can use the `-p` argument for `ncat` to specify on which port the computer should listen for the message, or if you're using the Rust server, you can modify the port in the code (`0.0.0.0:port`).
