@@ -69,7 +69,7 @@ layout: two-cols
 | (Q)SPI | (Quad) Serial Peripheral Interface |
 | UART | Universal Async. Receiver/Transmitter |
 | RTC | Real Time Clock |
-| I2C | IntraIntegrated Communication  TODO |
+| I2C | Inter-Integrated Circuit |
 | PIO | Programmable Input/Output |
 
 ---
