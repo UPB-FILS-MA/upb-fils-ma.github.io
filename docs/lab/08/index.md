@@ -431,6 +431,21 @@ match socket.send_to(&buffer, IpEndpoint::new(IpAddress::v4(192, 168, 100, 45), 
 }
 ```
 
+:::note
+Since UDP is connectionless, to send data to an endpoint we need to specify exactly to which IP address and port we want to send it to.
+:::
+
+#### Connecting as a client to a TCP server
+
+The Pico can connect as a client to a TCP server using the `connect` function:
+
+```rust
+if let Err(e) = socket.connect(IpEndpoint::new(IpAddress::v4(1,2,3,5), 1234)).await {
+    warn!("accept error: {:?}", e);
+    continue;
+}
+```
+
 ## Exercises
 
 1. The lab skeleton contains an example of setting up the Wi-Fi and connecting to an access point.
@@ -452,17 +467,39 @@ To send a packet, write any string in the terminal and press enter. You should r
 You can run `ncat -h` to see a list of other available parameters for this command.
 :::
 
-3. Modify the way the server on the Pico deals with connections. Send a message through Wi-Fi to your computer whenever a button is pressed. Use UDP instead of TCP. (**2p**)
+3. Start a server on the pico that sends a message through Wi-Fi to your computer whenever a button is pressed. Use an UDP socket instead of TCP. (**2p**)
+
+You can use the provided `server` code to open an UDP client socket on your PC that receives the messages from the Pico. Just create a new crate in a different folder with `cargo init`, then use the following code snippet:
+```rust
+use tokio::net::UdpSocket;
+use std::{io, str::from_utf8};
+
+#[tokio::main]
+async fn main() -> io::Result<()> {
+    let sock = UdpSocket::bind("0.0.0.0:1234").await?; // 0.0.0.0 means any network interface
+    let mut buf = [0; 1024];
+    loop {
+        let (len, addr) = sock.recv_from(&mut buf).await?;
+        println!("Received from {:?}", addr);
+        println!("{}", from_utf8(&buf[..len]).unwrap().trim());
+    }
+}
+```
+
+Then, modify the `Cargo.toml` dependencies by adding this line: `tokio = { version = "1", features = ["full"] }`, then run `cargo run`.
+
+:::note
+You will need to specify the IP address of your computer in the `send_to` function to send the message. The port is also required; we can use the `-p` argument for `ncat` to specify on which port the computer should listen for the message, or if you're using the Rust server, you can modify the port in the code (`0.0.0.0:port`).
+:::
 
 :::tip
 You can transform a string slice to bytes using `as_bytes()`.
 :::
 
-4. Modify the server so that you can *also* send commands from your computer to turn an LED on and off. (**1p**)
+4. Modify the server so that you can *also* receive commands from your computer to turn an LED on and off. (**1p**)
 
 - `led:on` - command for turning on the LED
 - `led:off` - command for turning off the LED
-- `led:toggle` - command for toggling the LED
 
 :::tip
 Use *select* to await multiple futures (wait for button press and read from socket). Refer to Lab 5.
@@ -470,6 +507,12 @@ Use *select* to await multiple futures (wait for button press and read from sock
 
 5. Configure the Pico as an access point. You will need to set a static IP address both for the Pico and your computer, to make sure they are both in the same subnet, so that they can communicate. (**1p**)
 
-6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the server for the LED Pico, and another team the server for the button Pico. (**2p**)
+:::info
+To set a static IP for your computer when connecting to the Pico, choose "Properties" and configure the static IP for your computer there.
+
+![wifi_properties](images/properties.png)
+:::
+
+6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the connection for the LED Pico (server side), and another team the connection for the button Pico (client side). (**2p**)
 
 - `button:pressed` - signal for the button press
