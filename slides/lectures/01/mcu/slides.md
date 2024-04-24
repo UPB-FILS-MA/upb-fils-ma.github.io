@@ -119,7 +119,7 @@ Advanced RISC Machine
 | | |
 |-|-|
 | Vendor | Qualcomm, NXP, Nordic Semiconductor, Broadcom, Raspberry Pi |
-| ISA | thumb-1 (armv6-m, armv7-m) and thumb-2 (armv7-m) |
+| ISA | ARMv6-M (Thumb and some Thumb-2) ARMv7-M (Thumb and Thumb-2) |
 | Word | 32 |
 | Frequency | 1 - 900 MHz |
 | Storage | up to a few MB |
