@@ -224,7 +224,7 @@ let time: u64 = unsafe {
 }
 ```
 
-The reading order maters as `TIMERHR` is latched while `TIMERLR` is read.
+The **reading order maters** as reading `TIMELR` latches the value in `TIMEHR` (stops being updated) until `TIMEHR` is read. Works only in **single core**.
 
 :: right ::
 
