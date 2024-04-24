@@ -136,7 +136,7 @@ with cache
   - *write-through* - data is written to the cache and to the main memory (bus)
   - *write-back* - data is written to the cache and later to the main memory (bus)
 - few Cortex-M MCUs have cache
-- the Memory Mapped region is set as *nocache*
+- the Memory Mapped I/O region is set as *nocache*
 - for chips that use cache
   - *nocache* regions have to be set manually (if MCU knows)
   - the cache has to be flushed before every `volatile_read` and after `volatile_write`
