@@ -133,7 +133,7 @@ with cache
 # No Cache or Flush Cache
 
 - Cache types:
-  - *write-trough* - data is written to the cache and to the main memory (bus)
+  - *write-through* - data is written to the cache and to the main memory (bus)
   - *write-back* - data is written to the cache and later to the main memory (bus)
 - few Cortex-M MCUs have cache
 - the Memory Mapped region is set as *nocache*
