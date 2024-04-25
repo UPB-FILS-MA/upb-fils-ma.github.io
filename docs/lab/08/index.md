@@ -518,3 +518,4 @@ To set a static IP for your computer when connecting to the Pico, choose "Proper
 6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the connection for the LED Pico (server side), and another team the connection for the button Pico (client side). (**2p**)
 
 - `button:pressed` - signal for the button press
+
