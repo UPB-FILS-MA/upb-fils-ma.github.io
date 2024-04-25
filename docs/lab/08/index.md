@@ -273,7 +273,7 @@ The `CYW43` driver has a function that allows us to scan all Wi-Fi access points
 
 let mut scanner = control.scan(Default::default()).await;
 while let Some(bss) = scanner.next().await {
-    if let Ok(ssid_str) = str::from_utf8(&bss.ssid) {
+    if let Ok(ssid_str) = core::str::from_utf8(&bss.ssid) {
         info!("Scanned {}", ssid_str);
     }
 }
