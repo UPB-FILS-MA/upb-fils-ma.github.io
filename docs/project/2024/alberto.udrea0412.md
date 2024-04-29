@@ -1,4 +1,4 @@
-# Project Name
+# Weather Station
 
 :::info 
 
@@ -13,7 +13,7 @@ The project builds a weather station which should provide real-time weather data
 
 ## Motivation
 
-Building a Raspberry Pi Pico W weather station with embassy-rs combined my interest in embedded systems with a chance to explore networking. It allowed me to learn sensor interaction, data processing, and real-time programming. Integrating a web interface adds a network layer, enabling real-time data display and opening doors for future functionalities like remote monitoring.
+Building a Raspberry Pi Pico W weather station with embassy-rs combined my interest in embedded systems with a chance to explore networking. It allows me to learn sensor interaction, data processing, and real-time programming. Integrating a web interface adds a network layer, enabling real-time data display and opening doors for future functionalities like remote monitoring.
 
 ## Architecture 
 
@@ -54,12 +54,12 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html) |
-| [BME280](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) | Temperature, pressure and humidity sensor | [5,9 EUR](https://eu.mouser.com/ProductDetail/Bosch-Sensortec/BME280) |
-| LED/OLED Display | Display | |
-| Breadboard | | |
-| Jumper Wires | | |
-| Push buttons | For switching info on the screen|
-
+| [BME280](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) | Temperature, pressure and humidity sensor | [74 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/5649-modul-senzor-barometric-de-presiune-bme280.html) |
+| [LED Display](https://ardushop.ro/8014-thickbox_default/modul-lcd-spi-128x160.jpg) | Display | [39 RON](https://ardushop.ro/ro/home/2818-modul-lcd-spi-128x160.html) |
+| [Breadboard](https://www.yamanelectronics.com/wp-content/uploads/2020/06/basics-of-breadboard.jpg) | The basis of our system | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
+| [Jumper Wires](http://www.atomsindustries.com/assets/images/items/1075/1075.jpg) | For connecting all the different components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/886-set-fire-tata-tata-40p-15-cm.html) |
+| [Push buttons](https://ardushop.ro/655-thickbox_default/buton-mic-push-button-trough-hole.jpg) | For switching info on the screen| [0.36 RON each / 1.5 RON total](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html)
+ 
 
 ## Software
 
@@ -75,6 +75,6 @@ The format is
 
 
 1. [Idea](https://www.hackster.io/jotrinelectronics/building-a-weather-station-with-raspberry-pi-pico-rp2040-9d5cbb)
-2. [Arduino BME280 Library (not Rust, but it will be useful as a conceptual insight](https://github.com/finitespace/BME280)
+2. [Arduino BME280 Library (not Rust, but it will be useful as a conceptual insight)](https://github.com/finitespace/BME280)
 3. [Web app framework](https://yew.rs)
 4. [Might be useful for the web app implementation](https://github.com/rustwasm/wasm-bindgen)
