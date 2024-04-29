@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
 
-# Project
+# Description
 
 The purpose of the project is to build a hardware device that runs software written in Rust.
 
