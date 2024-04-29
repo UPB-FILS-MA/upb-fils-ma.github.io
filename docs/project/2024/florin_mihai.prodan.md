@@ -2,8 +2,8 @@
 
 :::info 
 
-**Author**: PRODAN Florin Mihai Alexandru
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-mihaiprodann)
+**Author**: PRODAN Florin Mihai Alexandru \
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-mihaiprodann
 
 :::
 
@@ -18,8 +18,13 @@ This project was inspired by my past experiences with casino games, particularly
 
 ## Architecture 
 
-[todo]
+In it's final stage, my project will look more or less like the following diagram:
+![Aviator Game Control Panel](https://i.ibb.co/tX03PG5/PROTOTIP.png)
 
+* The airplane shape will be made of LEDs of the indicated colors.
+* The central LCD screen will display information about game status, current money amount, etc.
+* By pressing the button, you will initiate a new game by betting the selected amount of money.
+* With the potentiometer, you will select the amount of money you want to bet.
 ## Log
 
 <!-- write every week your progress here -->
@@ -32,7 +37,15 @@ This project was inspired by my past experiences with casino games, particularly
 
 ## Hardware
 
-Detail in a few words the hardware used.
+1. **Raspberry Pi Pico W**: Microcontroller board for running the game logic.
+2. **LEDs**: Visual indicators representing multiplier values.
+3. **LCD 1602 module**: Display for showing current odds and game information.
+4. **Push-button switch**: Trigger for starting the game.
+5. **Potentiometer**: Control for adjusting the bet amount.
+6. **Breadboard**: Platform for prototyping and connecting components.
+7. **Jumper wires**: Connectors for establishing electrical connections on the breadboard.
+
+In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize multiplier values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer adjusts the bet amount. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
 
 ### Schematics
 
@@ -68,10 +81,9 @@ The format is
 | Dupont Wires M-M, 20cm           | Wire Connection      | [7 Lei](https://www.bitmi.ro/electronica/40-x-fire-dupont-tata-tata-20cm-10511.html) |
 | 220Ω Resistors                   | Current Limiting     | [9 Lei](https://ardushop.ro/ro/electronica/211-rezistenta-14w-1-buc.html#/83-valoare_rezistenta-220r) (for 30) |
 | 330Ω Resistors                   | Current Limiting     | [9 Lei](https://ardushop.ro/ro/electronica/211-rezistenta-14w-1-buc.html#/85-valoare_rezistenta-330r) (for 30) |
-| 74HC595 Shift Registers          | Expand GPIOs         | [20 Lei](https://ardushop.ro/ro/electronica/141-ic-shift-register-sn74hc595n-74hc595.html) (for 5) |
 | Male Headers                     | Connection Points    | [7.5 Lei](https://ardushop.ro/ro/electronica/70-40-x-bareta-pini-tata.html?gad_source=1) (for 10) |
 
-**Total Cost:** [179.5 Lei](#)
+**Total Cost:** 159.5 Lei
 
 
 ## Software
@@ -80,6 +92,7 @@ The format is
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [micro-rand](https://crates.io/crates/micro_rand) | A tiny, no STD library for generating (pseudo) random numbers. | Used to generate when the airplane will crash |
 
 ## Links
 
