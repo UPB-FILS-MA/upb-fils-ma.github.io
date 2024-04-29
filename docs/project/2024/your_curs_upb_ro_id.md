@@ -17,7 +17,7 @@ Why did you choose this project?
 
 ## Architecture 
 
-Add here a schematics with the architecture of you project. Make sure to include:
+Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
 
