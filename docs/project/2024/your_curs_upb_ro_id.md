@@ -33,7 +33,7 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 ## Hardware
 
-Explain in a few words the hardware used.
+Detail in a few words the hardware used.
 
 ### Schematics
 
