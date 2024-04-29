@@ -65,7 +65,7 @@ The format is
 
 ## Links
 
-<!-- Add a few links that got you the idea and that you think you will use for your project -->
+<!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [link](https://example.com)
 2. [link](https://example3.com)
