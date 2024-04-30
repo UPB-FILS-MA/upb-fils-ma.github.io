@@ -36,7 +36,7 @@ As it can be probably guessed from the above paragraphs, I am want to combine 2 
 
 
 
-![image](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/assets/130050495/a26ff65a-2491-4ee6-9cee-238035d2aa0f)
+![architecture](architecture.png)
 
 
 Here is a small diagram of all the connections (i think) should be neccessary for the controller. I'll also try to describe it in words. Hopefully it will make sense.
