@@ -17,9 +17,7 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+![architecture](architecture.svg)
 
 ## Log
 
