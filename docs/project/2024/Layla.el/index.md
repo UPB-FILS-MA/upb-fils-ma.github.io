@@ -1,7 +1,7 @@
 # Project Name
+Automated Parking System: Enhanced Security and Efficiency
 
 :::info 
-
 **Author**: El-Ghoul Layla \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Scarletwtc
 :::
