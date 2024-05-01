@@ -2,7 +2,8 @@
 
 :::info 
 
-**Author**: PRODAN Florin Mihai Alexandru \
+**Author**: PRODAN Florin Mihai Alexandru
+
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-mihaiprodann
 
 :::
@@ -19,7 +20,7 @@ This project was inspired by my past experiences with casino games, particularly
 ## Architecture 
 
 In it's final stage, my project will look more or less like the following diagram:
-![Aviator Game Control Panel](https://i.ibb.co/tX03PG5/PROTOTIP.png)
+![Aviator Game Control Panel](./PROTOTIP.png)
 
 * The airplane shape will be made of LEDs of the indicated colors.
 * The central LCD screen will display information about game status, current money amount, etc.
