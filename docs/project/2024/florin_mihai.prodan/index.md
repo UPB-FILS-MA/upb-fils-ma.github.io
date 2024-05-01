@@ -1,4 +1,4 @@
-# Crasher casino game
+# Crasher game
 
 :::info 
 
@@ -10,11 +10,11 @@
 
 ## Description
 
-"Crasher" is an engaging online casino game featuring an airplane that ascends on the screen while a multiplier increases. Players are challenged to decide the optimal moment to cash out their bet before the airplane crashes, abruptly stopping the multiplier.
+"Crasher" is an engaging online game featuring an airplane that ascends on the screen while a multiplier increases. Players are challenged to decide the optimal moment to cash out their bet before the airplane crashes, abruptly stopping the multiplier.
 
 ## Motivation
 
-This project was inspired by my past experiences with casino games, particularly one that combined elements of risk and strategy in a simple yet engaging format. As part of a project requirement, I decided to bring this game into a tangible form using the Raspberry Pi Pico W and other electronic components. The goal was to recreate the game's excitement and decision-making process in a new, interactive way, merging it with practical experience gained during the lab.
+This project was inspired by my past experiences with gambling, particularly one that combined elements of risk and strategy in a simple yet engaging format. As part of a project requirement, I decided to bring this game into a tangible form using the Raspberry Pi Pico W and other electronic components. The goal was to recreate the game's excitement and decision-making process in a new, interactive way, merging it with practical experience gained during the lab.
 
 
 ## Architecture 
