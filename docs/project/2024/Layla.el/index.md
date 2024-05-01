@@ -7,23 +7,16 @@
 :::
 
 ## Description
-
 The project revolves around a multi-storey parking lot. At the entrance, an infrared sensor will detect the presence of vehicles. After the detection of a vehicle a servomotor barrier will allow its entry. Infrared sensors will be implanted at each parking lot to monitor occupation.There will be green leds indicating available parking spaces, and red ones indicating occupancy.The second floor will be designated for authorized vehicles only.To make this happen, an RFID system will be utilized. In case an unauthorized vehicle tries to access, a buzzer will be activated alerting security personnel. When an authorized vehicle is detected, an LED light will turn on. The exit will also implement an infrared sensor and a servomotor barrier. A flame sensor will indicate the presence of fire, in case of fire a buzzer will be activated and the servomotors will automatically open to enable evacuation procedures.
 
-
 ## Motivation
-
 These days, cars have become a necessity rather than a luxury. People rely on them for their everyday activities, whether it's going to work, running errands, or simply enjoying some leisure time. One major concern for them is finding a place to park wherever they go. Whether it's for work, fun, or shopping, having a convenient and safe parking space is crucial for their comfort and peace of mind.
 I picked this project because it addresses this concern. My project focuses on making parking lots safer, ensuring a better parking experience for everyone.
 
 ## Architecture 
-
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
-
  ![A prototype of architecture](Architecture.png)
-The architecture should sort of look like this. I will be using a cardboard box. The first floor has 3 parking spaces, an entrance and exit. The components will be stuck to the "walls". Components on the first floor: 3 green leds, 3 red leds, 2 servomotors, 5 infrared sensors, 1 fire sensor, 1 buzzer. The second floor will have the authorised parking spots. Components on second floor: rfid rc522, 1 led light. 
+
+The architecture should sort of look like this. I will be using a cardboard box. The first floor has 3 parking spaces, an entrance and exit. The components will be stuck to the "walls". Components on the first floor: 3 green leds, 3 red leds, 2 servomotors, 5 infrared sensors, 1 fire sensor, 1 buzzer. The second floor will have the authorised parking spots. Components on second floor: rfid rc522, 1 led light. I shall cut the cardboard and hide the breadboard inside.
 
 ## Log
 
@@ -46,7 +39,6 @@ Red leds: used to indicate occupied parking spots.
 
 ### Schematics
 
-Place your KiCAD schematics here.
 ![alt text](kicad1.png)
 ![alt text](Kicad2.png)
 In kicad1, for simplicity I put ground and vcc, not connecting them directly. 
@@ -75,11 +67,16 @@ In kicad2, everything is connected properly.
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+|[embassy-executor]()|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
+|[embassy-time]()|Time management library  |Used for time-based operations such as delays |
+|[embassy-rp]()| Peripheral access library |Used for initializing and interacting with peripherals |
+|[log]()|Logging facade |Used for logging messages |
+|[embassy-usb-logger]()|USB logger implementation for embassy  |Used for logging messages over USB  |
+|[gpio]()|GPIO manipulation |Used for interacting with GPIO pins |
+|[pwm]()|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+
 
 ## Links
 
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
 1. [PM projects 2023](https://ocw.cs.pub.ro/courses/pm/prj2023)
-2. [link](https://example3.com)
-...
+
