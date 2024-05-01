@@ -14,7 +14,7 @@ These days, cars have become a necessity rather than a luxury. People rely on th
 I picked this project because it addresses this concern. My project focuses on making parking lots safer, ensuring a better parking experience for everyone.
 
 ## Architecture 
- ![A prototype of architecture](Architecture.png)
+![A prototype of architecture](Architecture.png)
 
 The architecture should sort of look like this. I will be using a cardboard box. The first floor has 3 parking spaces, an entrance and exit. The components will be stuck to the "walls". Components on the first floor: 3 green leds, 3 red leds, 2 servomotors, 5 infrared sensors, 1 fire sensor, 1 buzzer. The second floor will have the authorised parking spots. Components on second floor: rfid rc522, 1 led light. I shall cut the cardboard and hide the breadboard inside.
 
@@ -38,7 +38,6 @@ Green leds: used to indicate free parking spots.
 Red leds: used to indicate occupied parking spots.
 
 ### Schematics
-
 ![alt text](kicad1.png)
 ![alt text](Kicad2.png)
 In kicad1, for simplicity I put ground and vcc, not connecting them directly. 
@@ -62,18 +61,17 @@ In kicad2, everything is connected properly.
 
 
 ## Software
-
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-|[embassy-executor]()|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
-|[embassy-time]()|Time management library  |Used for time-based operations such as delays |
-|[embassy-rp]()| Peripheral access library |Used for initializing and interacting with peripherals |
-|[log]()|Logging facade |Used for logging messages |
-|[embassy-usb-logger]()|USB logger implementation for embassy  |Used for logging messages over USB  |
-|[gpio]()|GPIO manipulation |Used for interacting with GPIO pins |
-|[pwm]()|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+|[embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
+|[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
+|[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |
+|[log](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|Logging facade |Used for logging messages |
+|[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
+|[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
+|[pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 
 
 ## Links
