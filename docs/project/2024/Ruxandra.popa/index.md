@@ -99,10 +99,8 @@ Place your KiCAD schematics here.
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [TinyUSB](https://github.com/hathach/tinyusb) | An open-source USB library for embedded systems that handles USB device and host functionality | Provides USB communication capabilities for the RustPlayer, enabling potential future expansions such as connecting USB-based audio devices |
-| [FatFs](https://github.com/abbrev/fatfs) | A lightweight file system library for embedded systems, compatible with FAT32, FAT16, and FAT12 | Handles reading and writing audio files to and from the microSD card efficiently |
-| [ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio) | This library manages the I2S digital audio interface for Raspberry Pi Pico W, ensuring high-quality audio playback | Configures and controls the PCM5102 DAC for superior audio output from the MP3 files played |
-
+| [TinyUSB](https://github.com/nviennot/tinyusb-sys-rs) | An open-source USB library for embedded systems that handles USB device and host functionality | Provides USB communication capabilities for the RustPlayer, enabling potential future expansions such as connecting USB-based audio devices |
+| [FatFs](https://github.com/rafalh/rust-fatfs) | A lightweight file system library for embedded systems, compatible with FAT32, FAT16, and FAT12 | Handles reading and writing audio files to and from the microSD card efficiently |
 
 ## Links
 
