@@ -1,16 +1,14 @@
 # DIY Laptop Cooling Pad
 
-:::info
 
 **Author**: SAKKA Mohamad-Mario \
 **GitHub Project Link**: <https://github.com/UPB-FILS-MA/project-mmswflow-upb.git>
 
-:::
 
 ## Description
 
 * There are 2 possible ways to use it: physically or wirelessly.
-* Physically: The fan is controlled through a UI made up of a screen which shows the current selection and buttons with which we navigate through the options in order to set the fan's speed.
+* Physically: The fans are controlled through a UI made up of a screen which shows the current selection and buttons with which we increase/decrease the speed of the fans.
 * Wirelessly: A user can interact with the microcontroller through a desktop app which sends commands to it through WIFI.
 
 ## Motivation
