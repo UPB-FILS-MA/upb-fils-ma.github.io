@@ -85,11 +85,23 @@ TBD
 TBD
 ## Hardware
 
-The controller has 16 buttons, 2 vibration motors, 2 joysticks, resistances of 220 ohms to not blow up the circuit (i don't know I'm not sure...yet). Pico will process all the inputs from the buttons and will translate it for the XInput app. More TBD!
+The controller has 16 buttons, 2 vibration motors(TODO), 2 joysticks, resistances of 220 ohms to not blow up the circuit (i don't know I'm not sure...yet). Pico will process all the inputs from the buttons and will translate it for the XInput app. 
+
+To implement the project, you need a board with a native USB port, such as the Raspberry Pi Pico.
+
+I chose to use two voltage dividers to save the digital pins on the board. The directional buttons and the A/B/X/Y buttons are grouped by 4 in a voltage divider.
+
+The disadvantage of these groupings is that two or more buttons from the same group cannot be read simultaneously. For example, pressing buttons A and B at the same time will send to the analog pin the value corresponding to pressing button B, not both. (I'll find a solution in the future... I hope)
+
+Another compromise is the fact that, for reasons of availability, the "Trigger" buttons are not analog. The value sent to the XInput API is either 0% pressed or 100% pressed.
+
+
 
 ### Schematics
 
-Place your KiCAD schematics here. //TODO
+![hardware](hardware.png)
+
+Please bear in mind that this is not the final form, just a quick sketch. It does not contain the vibration motors. Moreover, pins, components and other stuff might change in the future (but it is better than nothing :D)
 
 ### Bill of Materials
 
@@ -120,6 +132,7 @@ The format is
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [directinput_to_xinput](https://github.com/csutorasa/XOutput) | Transfer Driver for API | In need to translate directInput signals |
 | [Xinput](https://learn.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) | Bread and butter of this project (main driver) | Xinput, comes with Windows |
+| [GP2040-CE](https://github.com/OpenStickCommunity/GP2040-CE) | GamePad Library for Raspberry Pi Pico | Firmware to implement in the Pico |
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
