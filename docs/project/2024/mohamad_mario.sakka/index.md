@@ -89,7 +89,7 @@ The format is
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
-| --------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------- |
+|-|-|-|
 | [lcd1602-driver](https://github.com/eZioPan/lcd1602-driver) | Display driver for LCD1602 | Used as a display for my cooling pad |
 | [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
 
