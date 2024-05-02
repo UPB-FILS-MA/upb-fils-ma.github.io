@@ -101,4 +101,5 @@ The format is
 
 1. [Emilostuff - Preventing Plant Death With Technology ](https://www.youtube.com/watch?v=9Fx9zQJe3H4&t=493s)
 2. [TechNovelTies - Never Kill Another Plant! Flower Care Sensor & App Review](https://www.youtube.com/watch?v=_47GMmjb1Ik)
-...
+3. [Learn Rust](https://www.rust-lang.org/learn)
+
