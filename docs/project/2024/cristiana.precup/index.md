@@ -96,8 +96,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [embassy](https://github.com/embassy-rs/embassy) | Async runtime for embedded systems | Manages tasks and system operations |
 | [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
 | [embassy-executor](https://github.com/embassy-rs/embassy) | Task executor | Handles asynchronous tasks and data processing |
