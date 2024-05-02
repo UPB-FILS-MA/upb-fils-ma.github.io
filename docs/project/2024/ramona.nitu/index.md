@@ -21,6 +21,7 @@ Add here the schematics with the architecture of your project. Make sure to incl
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
 
+ ![architecture](./Architecture.jpeg)
 
 ## Log
 
