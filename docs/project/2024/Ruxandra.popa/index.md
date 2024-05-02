@@ -19,7 +19,8 @@ My passion for music and technology inspired me to want to create the RustPlayer
 
 ### Schematic Diagram**
 
-A detailed schematic diagram is provided to illustrate the connections and layout of the components. You can find this diagram in the `Schematic.png` file located in the same document as the index.md is.
+A detailed schematic diagram is provided to illustrate the connections and layout of the components. ![Schematic](https://github.com/ruxi22/upb-fils-ma.github.io/assets/162493289/e0f06f4f-0828-4be1-be58-4b5b1ffe7dc3)
+
  
   **Raspberry Pi Pico W**
   - **Role**: Acts as the central controller for all functions.
