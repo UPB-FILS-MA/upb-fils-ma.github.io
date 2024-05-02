@@ -2,7 +2,7 @@
 
 PicoW Garden Monitor
 
-**Author**: JERCĂu Hadasa-Ștefana \
+**Author**: JERCĂU Hadasa-Ștefana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-hadassahj
 
 :::
@@ -93,15 +93,12 @@ The format is
 
 ## Software
 
-| Library | Description | Usage |
-|---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
+1. [Emilostuff - Preventing Plant Death With Technology ](https://www.youtube.com/watch?v=9Fx9zQJe3H4&t=493s)
+2. [TechNovelTies - Never Kill Another Plant! Flower Care Sensor & App Review](https://www.youtube.com/watch?v=_47GMmjb1Ik)
 ...
