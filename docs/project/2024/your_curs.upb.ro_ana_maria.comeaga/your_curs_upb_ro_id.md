@@ -28,6 +28,8 @@ On the other hand, taking into consideration the growth of concerns about the en
 
 The FloraMood Smart Pot is powered up by a battery. Then, it collects the parameters from the sensors, like humidity, temperature, and light. Based on them and on their thresholds, a specific emoji is displyed on the LCD Module, in order to transmit the state in which the plant is on that moment. The watering system is using a simple water pump with a gear, that automatically powers up when the humidity level is under the set threshold and stops after giving the plant the necessary ammount of water, and the humidity level comes back in its normal range.
 
+![Architecture photo](./Architecture.png)
+
 The diagram depicts the functioning of FloraMood Smart Pot. Here is a breakdown of its components:
 
 1) FloraMood Smart Pot: The central element is the pink FloraMood Smart Pot. It is a smart plant pot designed to take care of plants using various sensors and modules.
@@ -38,6 +40,9 @@ The diagram depicts the functioning of FloraMood Smart Pot. Here is a breakdown 
 6) Battery: The system is powered by a battery, ensuring continuous operation of the sensors and display.
 7) Watering Pump with Gear: When necessary, the system activates a watering pump with gear to water the plant. This ensures that the plant receives adequate hydration.
 Overall, the FloraMood Smart Pot combines technology and plant care to create an intelligent and interactive gardening experience.
+
+![3D Schematic](./obj.mtl)
+![3D Schematic in TinkerCad](./tinker.obj)
 
 ## Log
 
@@ -91,13 +96,12 @@ The format is
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [ads1x1x](https://github.com/vgasparyan/ads1256-rs) | Provides drivers for ADS1x1x ADCs | Used to interact with the ADS1115 ADC |
-| [std](https://github.com/rust-lang/rust/blob/master/library/std/src/lib.rs) | Standard library for Rust | Provides core functionality and data structures |
-| [embedded-hal](https://github.com/embassy-rs/embassy) | Hardware abstraction layer for embedded systems | Used for abstracting hardware interactions |
-| [rppal](https://github.com/golemparts/rppal) | Raspberry Pi Pico hardware interface library | Interface with Raspberry Pi Pico hardware components |
-| [lcd_2inch](https://github.com/zadi15/picoLCD) | Library for interfacing with 2-inch LCD displays | Initializing and controlling the LCD display |
-| [thread](https://github.com/rust-lang/rust/blob/master/library/std/src/thread/mod.rs) | Thread management library | Creating and managing threads |
-
+| [core](https://github.com/embassy-rs/embassy) | Provides core types and traits  |  Define asynchronous tasks, spawn futures, and manage asynchronous execution  |
+| [embedded_hal](https://github.com/embassy-rs/embassy) | Hardware abstraction layer for embedded systems | Used for abstracting hardware interactions |
+| [embassy_rp](https://github.com/embassy-rs/embassy) | Provides abstractions and APIs|  Communicate via UART, SPI, and I2C using their respective modules |
+| [embassy_time](https://github.com/embassy-rs/embassy) | Provides time-related functionality | Schedule tasks to run at specific times |
+| [embassy_executor](https://github.com/embassy-rs/embassy) | Provides an executor for running asynchronous tasks concurrently | Execute asynchronous tasks concurrently  |
+| [embassy_sync](https://github.com/embassy-rs/embassy) |Provides synchronization primitives | Create mutexes, semaphores, and barriers for coordinating access to shared resources |
 
 ## Links
 
