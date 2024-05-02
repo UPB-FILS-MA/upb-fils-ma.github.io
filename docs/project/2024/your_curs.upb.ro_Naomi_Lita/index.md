@@ -1,4 +1,4 @@
-# Automatic Window Roller Blinds
+# Automated Window Blinds
 
 :::info 
 
