@@ -43,6 +43,9 @@ Connection:
     - The Raspberry Pi Pico communicates with the Rust server over the local network, sending sensor data and receiving instructions.
     - The Rust server processes the incoming data, generates care instructions, and communicates with the web interface to provide users with real-time updates and insights.
 
+
+![Project Diagram](Diagram.jpg)
+
 ## Log
 
 <!-- write every week your progress here -->
@@ -55,7 +58,12 @@ Connection:
 
 ## Hardware
 
-Detail in a few words the hardware used.
+    - Raspberry Pi Pico WH: Microcontroller board used as the central hub for data acquisition and communication.
+    - BMP280 GY Barometric Pressure Sensor Module: Used to measure atmospheric pressure and temperature.
+    - TSL2561 Light Intensity Sensor Module: Used to measure light intensity and provide data on ambient light conditions.
+    - Soil Moisture Sensor Module: Used to measure soil moisture levels, providing insights into soil hydration levels for plant care.
+    - Jumper Wires: Used to establish electrical connections between components on the breadboard or between various parts of the circuit. They facilitate the prototyping and assembly process by enabling flexible and temporary connections.
+    - Laptop: Used for connecting to the Raspberry Pi Pico and for managing and analyzing collected data. Utilized for software development and testing associated with the project.
 
 ### Schematics
 
@@ -74,8 +82,13 @@ The format is
 -->
 
 | Device | Usage | Price |
-|--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+|--------|-------|-------|
+| [Raspberry Pi Pico WH](https://www.optimusdigital.ro/ro/placi-raspberry-pi/12395-raspberry-pi-pico-wh.html?search_query=0104110000089595&results=1) | Microcontroller for data acquisition and communication | [38,99 lei](https://www.optimusdigital.ro/ro/placi-raspberry-pi/12395-raspberry-pi-pico-wh.html?search_query=0104110000089595&results=1) |
+| [BMP280 GY Barometric Pressure Sensor Module](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1666-modul-senzor-de-presiune-barometric-bmp280.html?search_query=0104110000016300&results=1) | Measures atmospheric pressure and temperature | [8,49 lei](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1666-modul-senzor-de-presiune-barometric-bmp280.html?search_query=0104110000016300&results=1) |
+| [TSL2561 Light Intensity Sensor Module](https://www.optimusdigital.ro/ro/senzori-senzori-optici/137-senzor-de-intensitate-a-luminii.html?search_query=0104110000000590&results=1) | Measures light intensity | [22,99 lei](https://www.optimusdigital.ro/ro/senzori-senzori-optici/137-senzor-de-intensitate-a-luminii.html?search_query=0104110000000590&results=1) |
+| [Soil_moisture_module] (https://www.optimusdigital.ro/ro/senzori-senzori-de-umiditate/73-senzor-de-umiditate-a-solului.html?search_query=0104110000001023&results=1) | Measures soil moisture levels | [3,99 lei](https://www.optimusdigital.ro/ro/senzori-senzori-de-umiditate/73-senzor-de-umiditate-a-solului.html?search_query=0104110000001023&results=1) |
+| [Jumpers] (https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=0104110000008046&results=1) | Measures soil moisture levels | [12,49 lei](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=0104110000008046&results=1) |
+
 
 
 ## Software
