@@ -128,8 +128,7 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [rusty_xinput](https://docs.rs/rusty-xinput/latest/rusty_xinput/#) | Crate for Rust | Implements Xinput .dll in Rust, has several functions |
 | [directinput_to_xinput](https://github.com/csutorasa/XOutput) | Transfer Driver for API | In need to translate directInput signals |
 | [Xinput](https://learn.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) | Bread and butter of this project (main driver) | Xinput, comes with Windows |
 | [GP2040-CE](https://github.com/OpenStickCommunity/GP2040-CE) | GamePad Library for Raspberry Pi Pico | Firmware to implement in the Pico |
