@@ -39,7 +39,7 @@ As it can be probably guessed from the above paragraphs, I am want to combine 2 
 ![architecture](architecture.png)
 
 
-Here is a small diagram of all the connections (i think) should be neccessary for the controller. I'll also try to describe it in words. Hopefully it will make sense.
+Here is a small diagram of all the connections (I think) should be neccessary for the controller. I'll also try to describe it in words. Hopefully it will make sense.
 
 ### Main Components
 
