@@ -18,7 +18,10 @@ The average temperature around the globe has been on the rise for quite a while,
 
 ## Architecture
 
+* The application on the laptop will act as a client, which will connect to the WIFI network hosted on the RP Pico W, and it will send commands to it through TCP to ensure reliable communication between the two. This app will be written in *Python*
+  using *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will come with a preset network name & password. 
 
+* The physical UI (buttons & LCD) will be used to start the server, increase/decrease fan speed, power on/off the setup, with all necessary info being displayed on the LCD.
 ![example](project_architecture.png)  
 
 ## Log
