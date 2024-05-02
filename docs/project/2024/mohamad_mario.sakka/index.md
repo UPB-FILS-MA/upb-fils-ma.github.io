@@ -76,7 +76,7 @@ The format is
 | [Set of Resistors]()                                                                                                       | Current Modulation                                     | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893)                   |
 | [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg)    | Powering Circuit                                              | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html)                                                         |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg)                       | Powering Circuit                                              | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html)                                                                          |
-| [TOTAL] | - | [186.64 RON] |
+| [TOTAL]() | - | [186.64 RON]() |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
