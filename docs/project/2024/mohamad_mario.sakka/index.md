@@ -16,8 +16,8 @@
 Everyone knows that in this year the average temperature was higher than in other years, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. While thinking 
 about the project, I've come to realise that I would also like to cool down my laptop since its keyboard gets pretty hot sometimes when playing games, and I've moved on to this idea. I also wanted the cooling pad
 to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
-
 ## Architecture
+
 
 Add here the schematics with the architecture of your project. Make sure to include:
 
@@ -82,11 +82,11 @@ The format is
 | Library                                                                     | Description               | Usage                                           |
 | --------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------- |
 | [lcd1602-driver](https://github.com/eZioPan/lcd1602-driver) | Display driver for LCD1602 | Used as a display for my cooling pad |
-| [heapless](https://github.com/rust-embedded/heapless) | heapless data structures | Creating strings that will be displayed on the LCD |
+| [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [Temperature Sensor With RP Pico W](https://electrocredible.com/raspberry-pi-pico-ds18b20-temperature-sensor/)
-2. [RP Pico Controlling DC Motor](https://www.tomshardware.com/how-to/dc-motors-raspberry-pi-pico)
+1. [RP Pico Controlling DC Motor](https://www.tomshardware.com/how-to/dc-motors-raspberry-pi-pico)
+2. [WebApp Hosted on RP Pico W Used to Control Cooler Through PWM](https://www.youtube.com/watch?v=oDCNkxCHNNQ)
