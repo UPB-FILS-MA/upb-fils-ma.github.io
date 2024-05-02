@@ -3,8 +3,8 @@
 :::info 
 
 **Author**: Naomi Lita in collaboration with Rebeca Chiorean \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-nimintz)
-[link_to_Rebeca's_github](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)
+**GitHub Project Link**: [my github](https://github.com/UPB-FILS-MA/project-nimintz)
+[Rebeca's github](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)
 
 :::
 
