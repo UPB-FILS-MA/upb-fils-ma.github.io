@@ -17,7 +17,7 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 ## Architecture 
 
-![architecture](architecture.svg)
+![Architecture](architecture_light.svg#gh-light-mode-only)]![Architecture](architecture_dark.svg#gh-dark-mode-only)
 
 ## Log
 
