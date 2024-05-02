@@ -19,9 +19,9 @@ My passion for music and technology inspired me to want to create the RustPlayer
 
 ### Schematic Diagram**
 
-A detailed schematic diagram is provided to illustrate the connections and layout of the components. 
+A schematic diagram is provided to illustrate the connections and layout of the components. 
 
-![Schematic](https://github.com/ruxi22/upb-fils-ma.github.io/assets/162493289/d56a54dd-9f37-4a30-a5da-10334ac17c61)
+![Schematic diagram](https://github.com/ruxi22/RustPlayer/Schematic.png)
 
  
   **Raspberry Pi Pico W**
