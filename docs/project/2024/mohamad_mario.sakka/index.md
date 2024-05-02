@@ -7,22 +7,19 @@
 
 ## Description
 
-* There are 2 possible ways to use it: physically or wirelessly.
-* Physically: The fans are controlled through a UI made up of a screen which shows the current selection and buttons with which we increase/decrease the speed of the fans.
+There are 2 possible of using it:
+* Physically: The fans are controlled through a UI made up of a screen which displays info and buttons with which we increase/decrease the speed of the fans.
+
 * Wirelessly: A user can interact with the microcontroller through a desktop app which sends commands to it through WIFI.
 
 ## Motivation
 
-Everyone knows that in this year the average temperature was higher than in other years, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. While thinking 
-about the project, I've come to realise that I would also like to cool down my laptop since its keyboard gets pretty hot sometimes when playing games, and I've moved on to this idea. I also wanted the cooling pad
-to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
+The average temperature around the globe has been on the rise for quite a while, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. After a while I realised that, because I use my laptop for long periods of time doing multiple things including gaming, I wanted also to cool down my laptop since its keyboard gets pretty hot sometimes when playing games, so I've moved on to this idea. I also wanted the cooling pad to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
+
 ## Architecture
 
 
-Add here the schematics with the architecture of your project. Make sure to include:
-
-* what are the main components (architecture components, not hardware components)
-* how they connect with each other
+![example](project_architecture.png)  
 
 ## Log
 
@@ -36,14 +33,21 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 ## Hardware
 
-1. Raspberry Pi Pico W: Detecting input and controlling the fans' speed
-2. Breadboard: Connecting components
-3. Push Buttons with LEDs: Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on/off, increasing/decreasing speed.
-4. Rigid Jumper WIres: Connecting components to breadboard.
-5. LCD 1602 I2C: Displaying info when changing speed, powering on and establishing connection with PC.
-6. Cooling Fans: Used to cool down the laptop.
-7. Motor Driver: Providing enough current to the fans.
-8. Breadboard Supply: Powering the whole setup either through USB connection from laptop or wall socket.
+* **Raspberry Pi Pico W:** Detecting input and controlling the fans' speed
+
+* **Breadboard:** Connecting components
+
+* **Push Buttons with LEDs:** Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on/off, increasing/decreasing speed.
+
+* **Rigid Jumper WIres:** Connecting components to breadboard.
+
+* **LCD 1602 I2C:** Displaying info when changing speed, powering on and establishing connection with PC.
+
+* **Cooling Fans:** Used to cool down the laptop.
+
+* **Motor Driver:** Providing enough current to the fans.
+
+* **Breadboard Supply:** Powering the whole setup either through USB connection from laptop or wall socket.
 
 ### Schematics
 
@@ -76,7 +80,7 @@ The format is
 | [Set of Resistors]() | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
 | [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
-| [TOTAL]() | - | [186.64 RON]() |
+| **TOTAL** | - | [**186.64 RON**]() |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
@@ -87,6 +91,5 @@ The format is
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
-
-1. [RP Pico Controlling DC Motor](https://www.tomshardware.com/how-to/dc-motors-raspberry-pi-pico)
-2. [WebApp Hosted on RP Pico W Used to Control Cooler Through PWM](https://www.youtube.com/watch?v=oDCNkxCHNNQ)
+* [RP Pico Controlling DC Motor](https://www.tomshardware.com/how-to/dc-motors-raspberry-pi-pico)
+* [WebApp Hosted on RP Pico W Used to Control Cooler Through PWM](https://www.youtube.com/watch?v=oDCNkxCHNNQ)
