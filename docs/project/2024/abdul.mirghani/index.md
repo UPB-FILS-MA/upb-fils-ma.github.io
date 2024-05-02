@@ -1,5 +1,4 @@
-# Project Name
-Object Detection and Alert System
+# Object Detection and Alert System
 :::info 
 
 **Author**: Mahmoud Mirghani Abdelrahman
@@ -37,6 +36,7 @@ Display Module:
     An LCD screen provides real-time feedback, displaying the distance to the detected object and the angle of the servo motor.
 
     Connections:
+```
 LCD Screen: 
     Connected to the Pico with:
         SDA to PIN_16
@@ -58,6 +58,7 @@ Servo Motor:
         Signal to PIN28
         VCC to VBUS
         Ground to Ground
+```
 ## Log
 
 <!-- write every week your progress here -->
@@ -103,8 +104,6 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 |[pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 |[embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 |[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
