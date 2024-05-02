@@ -11,10 +11,17 @@ Obstacltron is an obstacle avoider robot built using Raspberry Pi Pico W. It uti
 
 ## Motivation
 
-The motivation behind this project was to create a simple yet effective robot that can navigate its environment autonomously by detecting and avoiding obstacles.
+The motivation behind this project was to create a simple yet effective robot that can navigate its environment autonomously by detecting and avoiding obstacles. This project aims to showcase practical applications of robotics and sensor integration while providing a platform for experimentation and learning.
 
 ## Architecture
 
+* Raspberry Pi Pico W: Chosen as the microcontroller unit due to its affordability and versatility.
+
+* L298N Motor Driver: Responsible for controlling the DC motors, offering bidirectional control and allowing precise manipulation of the robot's movement.
+
+* HC-SR04 Ultrasonic Sensor: Serves as the primary sensor for obstacle detection, utilizing ultrasonic waves to measure distances accurately.
+
+* DC Motors: These motors are the driving force behind the robot's movement, enabling it to navigate its environment.
 
 ### Components
 - Raspberry Pi Pico W: Microcontroller unit
