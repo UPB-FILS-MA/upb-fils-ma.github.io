@@ -14,7 +14,6 @@ My project aims to automate a window blinds roller. The roller will be controlle
 
 ## Motivation
 
-Why did you choose this project?
 I chose this project because it was a dream of mine to wake up with natural sunlight at sunrise, but also to sleep well in a dark room with the rollers closed.
 
 ## Architecture 
