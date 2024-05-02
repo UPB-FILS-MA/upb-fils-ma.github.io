@@ -17,7 +17,7 @@ My passion for music and technology inspired me to want to create the RustPlayer
 
 ## Architecture 
 
-  **Schematic Diagram**
+### Schematic Diagram**
 
 A detailed schematic diagram is provided to illustrate the connections and layout of the components. You can find this diagram in the `Schematic.png` file located in the same document as the index.md is.
  
