@@ -38,8 +38,8 @@ Green leds: used to indicate free parking spots.
 Red leds: used to indicate occupied parking spots.
 
 ### Schematics
-![alt text](kicad1.png)
-![alt text](Kicad2.png)
+![Kicad schematic where the pins are connected directly to pico  but the ground and vcc are not](kicad1.png)
+![Kicad schematic where everything is connected to the raspberry pico](Kicad2.png)
 In kicad1, for simplicity I put ground and vcc, not connecting them directly. 
 In kicad2, everything is connected properly. 
 
