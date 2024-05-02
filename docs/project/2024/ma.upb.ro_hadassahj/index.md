@@ -96,8 +96,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [core::panic::PanicInfo](https://doc.rust-lang.org/core/panic/struct.PanicInfo.html) | Panic handling utilities | I'll utilize this module for managing panics, accessing information about the panic such as file and line numbers. |
-| [core::str::from_utf8](https://doc.rust-lang.org/core/str/fn.from_utf8.html) | UTF-8 string conversion | This module provides functions for converting byte slices to UTF-8 strings, which will be handy for working with text data stored as byte slices. |
 | [rppal](https://crates.io/crates/rppal) | GPIO library for Raspberry Pi Pico | I'll rely on this library to access GPIO pins, SPI, I2C, PWM, and other peripherals on the Raspberry Pi Pico microcontroller. It'll help me interface with sensors like the BMP280, TSL2561, and soil moisture sensor, as well as control other components connected to the Pico. |
 | [bmp280](https://crates.io/crates/bmp280) | Driver for BMP280 sensor | This library will facilitate interfacing with the BMP280 sensor, which measures atmospheric pressure and temperature. With its functions for initializing the sensor, reading temperature and pressure data, and configuring sensor settings, I'll collect environmental data for monitoring plant conditions in the garden. |
 | [tsl2561](https://crates.io/crates/tsl2561) | Driver for TSL2561 light sensor | I'll employ this library to access the TSL2561 light sensor, which measures light intensity. Its capabilities in initializing the sensor, configuring its operating mode, and reading raw light intensity values will enable me to monitor ambient light conditions in the garden and optimize plant placement accordingly. |
