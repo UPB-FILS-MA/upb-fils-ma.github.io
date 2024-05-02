@@ -77,11 +77,13 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [VsCode](https://code.visualstudio.com/) | Integrated Development Environment | Integrated Development Environment |
-| [Rust](https://www.rust-lang.org/)       | The Programming Language           | The Programming Language           |
-| [Embassy](https://embassy.dev/)          | The Framework                      | The Framework                      |
+| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals |
+| [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
+| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
+| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 
-//I will add more as I do the project
 
 ## Links
 
