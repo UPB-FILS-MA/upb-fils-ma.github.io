@@ -63,11 +63,6 @@ Place your KiCAD schematics here.
 
 ## Software
 
-| Library | Description | Usage |
-|---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-
 ## Links
 
 1. [Instructables | Arduino RC Car Project](https://www.instructables.com/Arduino-RC-Car-Project/)
