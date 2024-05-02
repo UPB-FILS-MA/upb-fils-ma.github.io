@@ -12,7 +12,7 @@
 A house alarm system triggered by motion detection and proximity monitoring. It includes the following features:
 
 - Detection of motion presence using a motion sensor
-- Proximity monitoring using a distance sensor mounted on a servo motor rotating 180 degrees
+- Proximity monitoring using a distance sensor mounted on a servomotor rotating 180 degrees
 - Activation of a buzzer alarm when motion is detected and the presence is close enough
 - Deactivation of the buzzer alarm by entering a code using a keypad
 - Displaying the entered code on an LCD screen
@@ -21,7 +21,7 @@ A house alarm system triggered by motion detection and proximity monitoring. It 
 
 ## Motivation
 
-I chose this as my first embedded project because it allows me to put into practice the skills and knowledge that I have gained throughout this course. Implementing a house alarm system involves integrating various components such as motion sensors, distance sensors, keypad input, and LCD display, thus allowing me to apply concepts ranging from hardware interfacing to software development.
+I chose this as my first embedded project because it allows me to put into practice the skills and knowledge that I have gained throughout this course. Implementing a house alarm system involves integrating various components such as motion sensors, distance sensors, keypad input, and the LCD display, thus allowing me to apply concepts ranging from hardware interfacing to software development.
 
 Moreover, this project presents a real-life application that can be scaled and potentially benefit others by enhancing security measures in homes.
 
@@ -30,7 +30,7 @@ Overall, this project not only consolidates my learning but also offers a soluti
 ## Architecture 
 
 The project has the following architecture:
- - __Raspberry Pi Pico:__ The Pico has the role of controling all the others componenets used in the project
+ - __Raspberry Pi Pico:__ The Pico has the role of connecting all the components between them
  - __LCD:__ Connected to the Pico via I2C, the LCD provides an interface for displaying system statuses, messages and inputs
  - __Motion and Distance Sensors:__ These sensors detect motion and proximity separately. They provide input to the pico about potential intruders
  - __Servormotor:__ The servormotor is controlled by the Pico through PWM and it serves as a platform for mounting the distance sensor so that it can rotate 180°
@@ -81,15 +81,23 @@ The format is
 | [Keypad](https://cdn.sparkfun.com/assets/f/f/a/5/0/DS-16038.pdf) | Keypad | [7 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/470-tastatura-matriceala-4x4-cu-conector-pin-de-tip-mama.html?search_query=keypad&results=5) |
 | MicroSD Module | MicroSD Card Slot Module | [5 RON](https://www.optimusdigital.ro/en/memories/1516-microsd-card-slot-module.html) |
 | Activ Buzzer | Buzzer | [1.5 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer&results=61) |
+| Push Button | Button | [1 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
 | Jumper Wires | Connecting components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=set+fire&results=110) |
-| Breadboard | Placing the components on it | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145) |
+| Breadboard | Project board | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145) |
 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 pheripherals | Used for accesing the pheripherals of the microcontroller  |
+| [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) | Time Library | Used for creating timeouts and delays |
+| [embassy-futures](https://github.com/embassy-rs/embassy/tree/main/embassy-futures) | Futures library | Used for asynchronous development |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Synchronization primitives | Used for syncronizing asynchronous tasks |
+| [embassy-embedded-hal](https://github.com/embassy-rs/embassy/tree/main/embassy-embedded-hal) | I2C and SPI busses for embedded hal implemented in embassy | Used to create a SPI bus for the MicroSD |
+| [heapless](https://github.com/rust-embedded/heapless) | Data structures that don’t require dynamic memory allocation| Using Strings from this library |
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display library | Used for writing to the display |
+| [embedded-sdmmc-rs](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | SD Card library | Used for writing to the MicroSD |
 
 ## Links
 
