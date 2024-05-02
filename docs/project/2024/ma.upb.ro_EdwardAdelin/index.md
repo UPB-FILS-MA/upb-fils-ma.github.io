@@ -22,7 +22,7 @@ I think that this would be a good solution for real-life problems that I have en
 
 Main Components:
 
-![diagram](diagram.png)
+![diagram](diagram.jpg)
 
 Raspberry Pico: Acts as the central processing unit for the Pet Feeder, controlling the sensors and motors.
 Barometric Sensor BMP280: Will be used to calculate temperature and pressure.
