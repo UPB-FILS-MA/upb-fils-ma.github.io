@@ -6,9 +6,9 @@
 ## Description
 
 RustPlayer is a custom-built MP3 player utilizing a Raspberry Pi Pico W to allow users to play music directly from a microSD card, controlled through a simple interface of buttons and an OLED display. Some laboratories I found relevent for the project I am implementing, are: 
-Lab 3: Interfacing SPI devices
-Lab 5: I2S Audio
-Lab 7: Advanced I/O Interfaces
+- Lab 3: Interfacing SPI devices
+- Lab 5: I2S Audio
+- Lab 7: Advanced I/O Interfaces
 
 
 ## Motivation
