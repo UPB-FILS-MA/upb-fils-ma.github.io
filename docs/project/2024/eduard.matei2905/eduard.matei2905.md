@@ -1,29 +1,33 @@
-# Project Name
+# Obstacltron
 
 :::info 
-
-**Author**: Student Name \
-**GitHub Project Link**: link_to_github
-
+**Author**: Matei Eduard Gabriel \
+**GitHub Project Link**: [Obstacltron on GitHub](https://github.com/UPB-FILS-MA/project-lexofficial29)
 :::
 
 ## Description
 
-Describe in a few words your project idea.
+Obstacltron is an obstacle avoider robot built using Raspberry Pi Pico W. It utilizes an L298N motor driver, DC motors, and an HC-SR04 ultrasonic distance sensor.
 
 ## Motivation
 
-Why did you choose this project?
+The motivation behind this project was to create a simple yet effective robot that can navigate its environment autonomously by detecting and avoiding obstacles.
 
-## Architecture 
+## Architecture
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+
+### Components
+- Raspberry Pi Pico W: Microcontroller unit
+- L298N Motor Driver: Controls the DC motors
+- HC-SR04 Ultrasonic Sensor: Detects obstacles
+- DC Motors: Drive the robot's movement
+
+### Connection
+- Raspberry Pi Pico W and L298N Motor Driver are connected via GPIO pins.
+- The DC motors are connected to the output terminals of the L298N Motor Driver.
+- The HC-SR04 Ultrasonic Sensor is connected to the Raspberry Pi Pico W.
 
 ## Log
-
-<!-- write every week your progress here -->
 
 ### Week 6 - 12 May
 
@@ -33,40 +37,23 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 ## Hardware
 
-Detail in a few words the hardware used.
-
 ### Schematics
 
-Place your KiCAD schematics here.
+---> Not ready yet
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
-| Device | Usage | Price |
-|--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-
+| Device                          | Usage              | Price              |
+|---------------------------------|--------------------|--------------------|
+| Raspberry Pi Pico W             | Microcontroller    | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| L298N Motor Driver              | Motor Driver       | [9 RON](https://www.optimusdigital.ro/en/brushed-motor-drivers/145-l298n-dual-motor-driver.html) |
+| HC-SR04 Ultrasonic Sensor       | Distance sensor    | [7 RON](https://www.optimusdigital.ro/en/ultrasonic-sensors/9-hc-sr04-ultrasonic-sensor.html) |
+| 2x 9V Battery                   | Power Source       | [5 RON](https://www.emag.ro/baterie-varta-superlife-zinc-carbon-9v-s1-4008496556632/pd/D0T5S3MBM/)
 
 ## Software
 
-| Library | Description | Usage |
-|---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| Library             | Description             | Usage                                       |
+|---------------------|-------------------------|---------------------------------------------|
+
 
 ## Links
-
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
