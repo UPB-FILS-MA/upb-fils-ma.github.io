@@ -1,0 +1,59 @@
+# Obstacltron
+
+:::info 
+**Author**: Matei Eduard Gabriel \
+**GitHub Project Link**: [Obstacltron on GitHub](https://github.com/UPB-FILS-MA/project-lexofficial29)
+:::
+
+## Description
+
+Obstacltron is an obstacle avoider robot built using Raspberry Pi Pico W. It utilizes an L298N motor driver, DC motors, and an HC-SR04 ultrasonic distance sensor.
+
+## Motivation
+
+The motivation behind this project was to create a simple yet effective robot that can navigate its environment autonomously by detecting and avoiding obstacles.
+
+## Architecture
+
+
+### Components
+- Raspberry Pi Pico W: Microcontroller unit
+- L298N Motor Driver: Controls the DC motors
+- HC-SR04 Ultrasonic Sensor: Detects obstacles
+- DC Motors: Drive the robot's movement
+
+### Connection
+- Raspberry Pi Pico W and L298N Motor Driver are connected via GPIO pins.
+- The DC motors are connected to the output terminals of the L298N Motor Driver.
+- The HC-SR04 Ultrasonic Sensor is connected to the Raspberry Pi Pico W.
+
+## Log
+
+### Week 6 - 12 May
+
+### Week 7 - 19 May
+
+### Week 20 - 26 May
+
+## Hardware
+
+### Schematics
+
+---> Not ready yet
+
+### Bill of Materials
+
+| Device                          | Usage              | Price              |
+|---------------------------------|--------------------|--------------------|
+| Raspberry Pi Pico W             | Microcontroller    | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| L298N Motor Driver              | Motor Driver       | [9 RON](https://www.optimusdigital.ro/en/brushed-motor-drivers/145-l298n-dual-motor-driver.html) |
+| HC-SR04 Ultrasonic Sensor       | Distance sensor    | [7 RON](https://www.optimusdigital.ro/en/ultrasonic-sensors/9-hc-sr04-ultrasonic-sensor.html) |
+| 2x 9V Battery                   | Power Source       | [5 RON](https://www.emag.ro/baterie-varta-superlife-zinc-carbon-9v-s1-4008496556632/pd/D0T5S3MBM/)
+
+## Software
+
+| Library             | Description             | Usage                                       |
+|---------------------|-------------------------|---------------------------------------------|
+
+
+## Links
