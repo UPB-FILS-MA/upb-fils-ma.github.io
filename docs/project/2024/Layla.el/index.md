@@ -1,5 +1,5 @@
-# Project Name
-Automated Parking System: Enhanced Security and Efficiency
+# Automated Parking System 
+Enhanced Security and Efficiency
 
 :::info 
 **Author**: El-Ghoul Layla \
