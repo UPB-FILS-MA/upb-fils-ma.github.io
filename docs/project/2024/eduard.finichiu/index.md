@@ -84,15 +84,17 @@ The format is
 
 -->
 
-| Device                                                                                                          | Usage                 | Price                                                                                                                      |
-| --------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)       | The microcontroller   | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                              |
-| ---------------------------------------------------------------------------------------------                   |
-| [BMP280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf)                                      | The barometric sensor | [9 RON](https://www.optimusdigital.ro/en/pressure-sensors/1666-modul-senzor-de-presiune-barometric-bmp280.html)            |
-| ---------------------------------------------------------------------------------------------                   |
-| [OV7670 Camera](https://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf)                                      | Camera                | [16 RON](https://www.optimusdigital.ro/en/optical-sensors/624-modul-camera-ov7670.html)                                    |
-| --------------------------------------------------------------------------------------------------------------- |
-| [Servo Motor](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf)                         | The microcontroller   | [14 RON](https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&results=196) |
+| Device                                                                                                               | Usage                  | Price                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)            | The microcontroller    | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                              |
+| ---------------------------------------------------------------------------------------------                        |
+| [BMP280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf)                                           | The barometric sensor  | [9 RON](https://www.optimusdigital.ro/en/pressure-sensors/1666-modul-senzor-de-presiune-barometric-bmp280.html)            |
+| ---------------------------------------------------------------------------------------------                        |
+| [OV7670 Camera](https://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf)                                           | Camera                 | [16 RON](https://www.optimusdigital.ro/en/optical-sensors/624-modul-camera-ov7670.html)                                    |
+| ---------------------------------------------------------------------------------------------------------------      |
+| [Servo Motor](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf)                              | The servo motor        | [14 RON](https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&results=196) |
+| ---------------------------------------------------------------------------------------------------------------      |
+| [Water level sensor](https://circuitdigest.com/microcontroller-projects/interfacing-water-level-sensor-with-arduino) | The water level sensor | [2 RON](https://www.optimusdigital.ro/en/others/272-senzor-de-nivel-al-apei.html)                                          |
 
 ## Software
 
