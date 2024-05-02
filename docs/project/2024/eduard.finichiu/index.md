@@ -98,11 +98,11 @@ The format is
 
 ## Software
 
-| Library                                                              | Description                                                 | Usage                                  |
-| -------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------- |
-| [tokio](https://docs.rs/tokio/latest/tokio/)                         | runtime for writing reliable network applications           | Used for speed of network applications |
-| [pico sdk rust](https://docs.rs/pico-sdk/latest/pico_sdk/)           | rust binding and wrappers                                   | pico sdk for rust                      |
-| [rp2040 hal](https://github.com/embedded-graphics/embedded-graphics) | an implementation of the embedded-hal traits for the RP2040 | traits for the RP2040 microcontroller  |
+| Library                                                    | Description                                       | Usage                                  |
+| ---------------------------------------------------------- | ------------------------------------------------- | -------------------------------------- | ------------------------------------ |
+| [tokio](https://docs.rs/tokio/latest/tokio/)               | runtime for writing reliable network applications | Used for speed of network applications |
+| [pico sdk rust](https://docs.rs/pico-sdk/latest/pico_sdk/) | rust binding and wrappers                         | pico sdk for rust                      |
+| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/)     | Pulse-width modulation                            | traits for the RP2040 microcontroller  | Used for controlling the servo motor |
 
 ## Links
 
