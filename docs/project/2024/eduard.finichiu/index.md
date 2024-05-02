@@ -1,5 +1,6 @@
 # Project Name
 
+Pet Feeder
 :::info
 
 **Author**: FINICHIU Eduard Adelin \
@@ -98,17 +99,20 @@ The format is
 
 ## Software
 
-| Library                                                    | Description                                       | Usage                                  |
-| ---------------------------------------------------------- | ------------------------------------------------- | -------------------------------------- | ------------------------------------ |
-| [tokio](https://docs.rs/tokio/latest/tokio/)               | runtime for writing reliable network applications | Used for speed of network applications |
-| [pico sdk rust](https://docs.rs/pico-sdk/latest/pico_sdk/) | rust binding and wrappers                         | pico sdk for rust                      |
-| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/)     | Pulse-width modulation                            | traits for the RP2040 microcontroller  | Used for controlling the servo motor |
+| Library                                                          | Description            | Usage                                                                                                                   |
+| ---------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [bmp280](https://crates.io/crates/bmp280)                        | BMP280 sensor          | Barometric sensor will be used to calculate pressure and temperature.                                                   |
+| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/)           | Pulse-width modulation | Traits for the RP2040 microcontroller used for controlling the servo motor.                                             |
+| [embassy](https://github.com/embassy-rs/embassy)                 | Embassy                | Asynchronous executor and HAL (Hardware Abstraction Layer) for building embedded applications in Rust.                  |
+| [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network        | Networking library for the Embassy asynchronous executor, enabling network communication in embedded Rust applications. |
+| [image](https://crates.io/crates/image)                          | Image Processing       | Library for handling image manipulation tasks such as resizing, cropping, or object detection.                          |
+| [rtc-pcf8523](https://crates.io/crates/rtc-pcf8523)              | Real-Time Clock (RTC)  | API for interacting with the PCF8523 real-time clock module for keeping track of time.                                  |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://www.youtube.com/watch?v=vKdQXICO-r0&ab_channel=MrFlashPick)
-2. [link](https://www.youtube.com/watch?v=U7KqqlYaXgY&ab_channel=NicoleZhang)
-3. [link](https://mi-home.ro/products/xiaomi-smart-pet-food-feeder)
+1. [Top 5 Pet Feeders](https://www.youtube.com/watch?v=vKdQXICO-r0&ab_channel=MrFlashPick)
+2. [Project Inspiration](https://www.youtube.com/watch?v=U7KqqlYaXgY&ab_channel=NicoleZhang)
+3. [Comercial product](https://mi-home.ro/products/xiaomi-smart-pet-food-feeder)
    ...
