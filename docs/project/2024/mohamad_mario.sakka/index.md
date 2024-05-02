@@ -2,7 +2,7 @@
 
 
 **Author**: SAKKA Mohamad-Mario \
-**GitHub Project Link**: <https://github.com/UPB-FILS-MA/project-mmswflow-upb.git>
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-mmswflow-upb.git
 
 
 ## Description
