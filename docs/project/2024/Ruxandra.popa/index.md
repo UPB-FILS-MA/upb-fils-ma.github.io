@@ -1,7 +1,11 @@
 # RustPlayer
 
+:::info 
+
 **Author**: Popa Ruxandra-Georgiana \
 **GitHub Project Link**: (https://github.com/ruxi22/RustPlayer)
+
+:::
 
 ## Description
 
