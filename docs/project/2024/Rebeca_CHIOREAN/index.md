@@ -8,21 +8,21 @@
 
 ## Description
 
-Pico wand is useful device for physically impaired people. It uses a gyroscope that detects hand movements and interacts with objects around the house. <br>
-When pressing a push button it starts collecting the movement of your wand.<br>
-It collects movements such as:<br>
-  •	Up and down<br>
-  •	Back and fourth<br>
-  •	Left to right<br>
-  •	Circular motion<br>
-All this information is then shown on a OLED display.<br>
-This device could be used in relation to smart objects. This idea is further expanded upon by my coleague [Naomi Lita](https://github.com/UPB-FILS-MA/project-nimintz).<br>
+Pico wand is useful device for physically impaired people. It uses a gyroscope that detects hand movements and interacts with objects around the house. <br />
+When pressing a push button it starts collecting the movement of your wand.<br />
+It collects movements such as:<br />
+  •	Up and down<br />
+  •	Back and fourth<br />
+  •	Left to right<br />
+  •	Circular motion<br />
+All this information is then shown on a OLED display.<br />
+This device could be used in relation to smart objects. This idea is further expanded upon by my coleague [Naomi Lita](https://github.com/UPB-FILS-MA/project-nimintz).<br />
 
 ## Example of usage
 
-Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and do a left to right motion. Our curtain will pick up the signal and adjust accordingly.<br>
+Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and do a left to right motion. Our curtain will pick up the signal and adjust accordingly.<br />
 For adjusting the intensity of a lightbulb we could implement our Pico Wand to collect circular movement.
-If they make a circular movement to the left the light will dim and if it is to the right we could raise the intensity.<br>
+If they make a circular movement to the left the light will dim and if it is to the right we could raise the intensity.<br />
 This sort of implementation could be done on other objects as well: a door, the room temperature and so on.
 
 ## Motivation
