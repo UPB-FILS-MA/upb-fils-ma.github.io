@@ -38,7 +38,7 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 1. Raspberry Pi Pico W: Detecting input and controlling the fans' speed
 2. Breadboard: Connecting components
-3. Push Buttons with LEDs: Controlling the speed of the fans and displaying status of program (Powered on/off, Increasing/Decreasing Speed, Connected through WIFI).
+3. Push Buttons with LEDs: Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on/off, increasing/decreasing speed.
 4. Rigid Jumper WIres: Connecting components to breadboard.
 5. LCD 1602 I2C: Displaying info when changing speed, powering on and establishing connection with PC.
 6. Cooling Fans: Used to cool down the laptop.
