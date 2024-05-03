@@ -16,7 +16,7 @@ I picked this project because it addresses this concern. My project focuses on m
 
 ## Architecture 
 ![A prototype of architecture](Architecture.png)
-![Architecture Scheme] (Architecture2.png)
+![Architecture Scheme](Architecture2.png)
 
 This project utilizes a Raspberry Pi Pico W to create a smart parking system, housed within a cardboard box. The system features two floors, with various sensors and components managing the parking spaces.
 
@@ -28,13 +28,14 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
   - **3 parking spaces**, each equipped with:
     - **Green LED**: Indicates the space is available.
     - **Red LED**: Indicates the space is occupied.
+    - **Infrared Sensor**: Detects presence of cars.
 
 - **Gates**:
   - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 1).
   - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 2).
 
 - **Sensors**:
-  - **PIR Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
+  - **Infrared Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
   - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
 
 #### Second Floor
@@ -75,13 +76,13 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 ### Week 20 - 26 May
 
 ## Hardware
-Infrared Flame sensor: I used this to detect any nearby fires.
-Active buzzer module: This buzzer is activated when the flame sensor detects fire, or when rfid detects unauthorised car.
-Servomotor: Used as a barrier.
-Infrared sensor: Two of them are used with the servomotors, they indicate nearby cars so that the servo barrier opens. Three of them are used to detect if parking spaces are occupied or not.
-Rfid module: I used it to differ between authorised and unauthorised cars. Authorised have a recognised card attached to it, the unauthorised ones will have a different card attached.
-Green leds: used to indicate free parking spots.
-Red leds: used to indicate occupied parking spots.
+- *Infrared Flame sensor*: I used this to detect any nearby fires.
+- *Active buzzer module*: This buzzer is activated when the flame sensor detects fire, or when rfid detects unauthorised car.
+- *Servomotor*: Used as a barrier.
+- *Infrared sensor*: Two of them are used with the servomotors, they indicate nearby cars so that the servo barrier opens. Three of them are used to detect if parking spaces are occupied or not.
+- *Rfid module*: I used it to differ between authorised and unauthorised cars. Authorised have a recognised card attached to it, the unauthorised ones will have a different card attached.
+- *Green leds*: used to indicate free parking spots.
+- *Red leds*: used to indicate occupied parking spots.
 
 ### Schematics
 ![Kicad schematic where the pins are connected directly to pico  but the ground and vcc are not](kicad1.png)
@@ -121,4 +122,4 @@ In kicad2, everything is connected properly.
 ## Links
 
 1. [PM projects 2023](https://ocw.cs.pub.ro/courses/pm/prj2023)
-
+2. [Car Parking System](https://www.youtube.com/watch?v=8XOsXdNOa4g&ab_channel=svsembedded)
