@@ -49,6 +49,13 @@ As someone who hates hot weather, the idea for the Smart Summer Hat was born out
 
 
 ## Architecture 
+Project will look more or less like the following diagram:
+
+![Diagram of the connections](./projectprototip.png)
+
+
+
+
 
 The project has the following architecture:
   1-Rasberry Pi Pico: The core of the system, Rasberry Pi Pico serves as the microcontroller unit (MCU) that manages all operations of the project. It interacts with and controls all the components.
