@@ -1,4 +1,6 @@
 # Pico Wand
+A useful device for physically impaired people
+
 :::info 
 
 **Author**: Chiorean Rebeca \
