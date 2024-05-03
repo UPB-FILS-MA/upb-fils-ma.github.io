@@ -1,7 +1,6 @@
-# Project Name
-#Rust-powered Portable Smart Summer Hat
+#Smart Summer Hat
 
-Smart Summer Hat
+**Rust-powered Portable Smart Summer Hat**
 
 
 :::info 
@@ -12,8 +11,6 @@ Smart Summer Hat
 :::
 
 ## Description
-
-**Description:**
 
   Beat the heat with my innovative SmartSummer Hat powered by Rasberry Pi Pico and programmed in Rust language. This project combines practical functionality with modern technology to provide a refreshing solution for those really hot summer days.
 
