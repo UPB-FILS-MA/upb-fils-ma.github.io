@@ -1,6 +1,6 @@
 # Smart Summer Hat
 
-**Rust-powered Portable Smart Summer Hat**
+Rust-powered Portable Smart Summer Hat
 
 
 :::info 
@@ -127,12 +127,12 @@ The format is
 | [BMP 280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf) | Temperature Sensor | [10 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1777-modul-senzor-de-presiune-barometric-bmp280.html?search_query=bmp280&results=11) |
 | [DC Motor (FAN)](https://datasheetspdf.com/datasheet-pdf/917194/775-5520F-CC.html) | DC Motor for FAN | [10 RON](https://www.bitmi.ro/motor-dc-3v-6v-pentru-proiecte-electronice-10651.html?gad_source=1&gclid=EAIaIQobChMIhsGZpandhQMVEplQBh0msAG5EAQYCCABEgLS5vD_BwE) |
 | [1602 Display](https://html.alldatasheet.com/html-pdf/1574132/CRYSTAIFONTZ/LCD-1602A/1009/1/LCD-1602A.html) | LCD Display | [25 RON](https://www.bitmi.ro/electronica/ecran-lcd1602-cu-modul-i2c-iic-10487.html) |
-| [Jumper Wires (Female - Female)]() | Female - Female Wires for connections | [7 RON](https://www.bitmi.ro/componente-electronice/40-fire-dupont-mama-mama-30cm-10503.html) |
-| [Jumper Wires]() | Male - Male Wires for connections | [8 RON](https://www.bitmi.ro/componente-electronice/set-de-65-fire-dupont-tata-tata-9-16-cm-10638.html) |
-| [Breadboard]() | x2 Breadboard for all other connections | [18 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
+| [Jumper Wires (Female - Female)]  | Female - Female Wires for connections | [7 RON](https://www.bitmi.ro/componente-electronice/40-fire-dupont-mama-mama-30cm-10503.html) |
+| [Jumper Wires] | Male - Male Wires for connections | [8 RON](https://www.bitmi.ro/componente-electronice/set-de-65-fire-dupont-tata-tata-9-16-cm-10638.html) |
+| [Breadboard] | x2 Breadboard for all other connections | [18 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
 | [Buzzer Set (Active - Passive)](https://components101.com/misc/buzzer-pinout-working-datasheet) |Active and Passive Buzzer Components| [5 RON](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16) |
-| [LED SET ]() | Leds | [16 RON](https://www.bitmi.ro/electronica/set-200-led-uri-de-diferite-culori-3-mm-5-mm-10508.html) |
-| [Button]() | Push Button | [1 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html?search_query=button&results=18) |
+| [LED SET ] | Leds | [16 RON](https://www.bitmi.ro/electronica/set-200-led-uri-de-diferite-culori-3-mm-5-mm-10508.html) |
+| [Button] | Push Button | [1 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html?search_query=button&results=18) |
 
 
 
