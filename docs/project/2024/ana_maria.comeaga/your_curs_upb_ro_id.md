@@ -41,8 +41,8 @@ The diagram depicts the functioning of FloraMood Smart Pot. Here is a breakdown 
 7) Watering Pump with Gear: When necessary, the system activates a watering pump with gear to water the plant. This ensures that the plant receives adequate hydration.
 Overall, the FloraMood Smart Pot combines technology and plant care to create an intelligent and interactive gardening experience.
 
-![3D Schematic](./obj.mtl)
-![3D Schematic in TinkerCad](./tinker.obj)
+<!-- ![3D Schematic](./obj.mtl)
+![3D Schematic in TinkerCad](./tinker.obj) -->
 
 ## Log
 
