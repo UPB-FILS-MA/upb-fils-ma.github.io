@@ -51,6 +51,11 @@ Detail in a few words the hardware used.
 ### Schematics
 
 Place your KiCAD schematics here.
+
+Some of the parts were either created by me as they did not have a publicly available schematic but most of the more detailed schemas for the modules used can be found in their datasheet.
+
+In this case I couldn't find the Laser Receiver Symbol and the MicroSd card reader module. 
+
 ![image](https://github.com/NegrilaRares/rares.negrila_project_documentaion/assets/129112753/a6af34c7-d23d-443e-9ee3-b4ce6be0175d)
 
 
