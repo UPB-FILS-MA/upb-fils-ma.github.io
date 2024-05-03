@@ -1,5 +1,6 @@
-# Project Name
-House Thermometer
+# House Thermometer
+
+The House Thermometer project uses a Raspberry Pi Pico W to measure indoor temperatures, visually display data and enable remote monitoring and data analysis.
 
 :::info 
 
