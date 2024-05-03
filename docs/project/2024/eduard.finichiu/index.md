@@ -1,6 +1,8 @@
 # Project Name
 
 Pet Feeder
+automatic dispenser of food for animals
+
 :::info
 
 **Author**: FINICHIU Eduard Adelin \
