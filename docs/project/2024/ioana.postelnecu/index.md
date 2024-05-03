@@ -2,7 +2,7 @@
 
 :::info 
 
-**Author**: POSTELNECU Ioana
+**Author**: POSTELNECU Ioana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-IoanaP0711
 
 :::
@@ -17,10 +17,7 @@ I've decided to choose this project, because ever since I was a kid, I've used t
 
 ## Architecture 
 
-In the end, my project will consist of a Raspberry Pi Pico W, a LCD screen, a LED and buttons, all
-    * on the LCD the game is going to be displayed
-    * the LED will show if the console is powered on or off
-    * the buttons will be used to control the game
+This project's architecture revolves around the Raspberry Pi Pico W as the microcontroller, executing the game code. The LCD screen 1602 module serves as the display interface for the game graphics. An LED is integrated to signify the console's power status. User input is facilitated through buttons, with one controlling velocity and the other managing movement. To construct and test the circuit, a breadboard and jumper wires are employed, allowing seamless connectivity between components.
 
 ## Log
 
@@ -40,6 +37,8 @@ In the end, my project will consist of a Raspberry Pi Pico W, a LCD screen, a LE
 4. **Buttons**: one for velocity and one for up and down
 5.**Breadboard**: needed for building and testing the circuit
 6. **Jumper wires**: needed for connecting the components
+
+In this project, Raspberry Pi Pico W runs the game code, while the LCD screen 1602 module displays the game. An LED indicates power status, and buttons control velocity and movement. A breadboard and jumper wires connect the components for testing and construction.
 
 ### Schematics
 
@@ -62,19 +61,29 @@ The format is
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [1602 LCD] | LCD Screen | [16.34 RON](https://www.optimusdigital.ro/en/lcds/2894-1602-lcd-with-i2c-interface-and-blue-backlight.html) |
 | [ Button 6x6x6] | Buttons for controls | [0.36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=butoane+&results=197) |
-| [Breadboard, Wires, Power Source](https://kits.plusivo.com/microcontroller-starter-kit/claim.html) |Breadboard with 830 points, Power Source for Breadboard, Wires | [74.99 RON](https://www.optimusdigital.ro/ro/kituri/12333-kit-plusivo-microcontroller-starter.html?search_query=plusivo+microcontroller+starter+kit&results=3) |
-
+| [Breadboard, Wires](https://kits.plusivo.com/microcontroller-starter-kit/claim.html) |Breadboard with 830 points, Wires | [74.99 RON](https://www.optimusdigital.ro/ro/kituri/12333-kit-plusivo-microcontroller-starter.html?search_query=plusivo+microcontroller+starter+kit&results=3) |
+TOTAL : 126.69 RON 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 pheripherals | Used for accesing the pheripherals of the microcontroller  |
+| [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Synchronization primitives | Used for syncronizing asynchronous tasks |
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display library | Used for writing to the display |
+| [wasmi](https://github.com/wasmi-labs/wasmi) | Game Framework | Game Engine used for the development of the game/ WebAssembly Interpreter |
+
 
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
+1. [tutorials for creating a game + libraries](https://arewegameyet.rs/) 
+2. [game engine that works with Rust and WebAssembly](https://github.com/bevyengine/bevy/tree/latest)
+3. [step by step tutorial on how to create a game by using Rust and Bevy](https://www.youtube.com/watch?v=E9SzRc9HkOg)
+4. [understanding and starting to use wasmi](https://blog.knoldus.com/hosting-wasm-modules-in-rust-easily-using-wasmi/#hosting-in-rust)
+5. [book on how to create a game with Rust and WebAssembly](https://www2.irb.hr/korisnici/zskoda/hoffmanWasmRust.pdf)
+6. [libraries for Rust and Bevy(in case I'm using Bevy I've decided to put all the info for Wasmi & Bevy too)](https://lib.rs/game-development)
 ...
