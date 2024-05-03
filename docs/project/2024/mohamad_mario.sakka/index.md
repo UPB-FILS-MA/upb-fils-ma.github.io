@@ -10,7 +10,7 @@
 ## Description
 
 There are 2 possible of using it:
-* Physically: The fans are controlled through a UI made up of a screen which displays info and buttons with which we increase/decrease the speed of the fans.
+* Physically: The fans are controlled through a UI made up of a screen which displays info and buttons with which we increase or decrease the speed of the fans.
 
 * Wirelessly: A user can interact with the microcontroller through a desktop app which sends commands to it through WIFI.
 
@@ -43,7 +43,7 @@ The average temperature around the globe has been on the rise for quite a while,
 
 * **Breadboard:** Connecting components
 
-* **Push Buttons with LEDs:** Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on/off, increasing/decreasing speed.
+* **Push Buttons with LEDs:** Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on or off, increasing or decreasing speed.
 
 * **Rigid Jumper WIres:** Connecting components to breadboard.
 
@@ -74,7 +74,7 @@ The format is
 | Device | Usage | Price                                                                                                                                                                                           |
 |-|-|-|
 | [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)| The Microcontroller | [1 x 56.23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=Raspberry+Pi+Pico+WH%2C+Wireless+Headers&results=1027) |
-| [Data Micro USB Cable]() | PC-Microcontroller Communication (Debugging/Flashing Program) | [1 x 3.48 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=0104210000002362&results=1) |
+| [Data Micro USB Cable]() | PC-Microcontroller Communication (Debugging or Flashing Program) | [1 x 3.48 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=0104210000002362&results=1) |
 | [Motor Driver](https://ardushop.ro/4686-thickbox_default/l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.jpg) | Powering Cooling Fans | [1 x 11.49 RON](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html?search_query=XNVELI_module-L298N&results=166) |
 | [12V 80mm Cooling Fan]() | Cooling | [2 x 10.84 RON](https://ardushop.ro/ro/home/986-cooler-carcasa-80-mm.html?search_query=ATPNWB_80mm_cooler&results=20)  |
 | [1602 LCD with I2C Adaptor](https://static.optimusdigital.ro/55018-large_default/lcd-cu-interfata-i2c-si-backlight-albastru.jpg) | Physical User Interface | [1 x 16.34 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html?search_query=LCD&results=210)  |                                                                   
@@ -86,7 +86,7 @@ The format is
 | [Set of Resistors]() | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
 | [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
-| [Cooling Pad Frame]() | Laptop Stand That Holds Fans | [unkown]() |
+| [Cooling Pad Frame] |  Frame That Holds Fans & Laptop | [not sure] |
 | **TOTAL** | - | [**186.64 RON**]() |
 ## Software
 
