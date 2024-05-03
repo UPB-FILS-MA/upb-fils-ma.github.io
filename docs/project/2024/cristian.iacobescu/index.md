@@ -49,7 +49,7 @@ We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is use
 
 ### Schematics
 
-![Archictecture Diagram](architecture.png)
+![KiCAD Schematic](kicad.PNG)
 
 ### Bill of Materials
 
