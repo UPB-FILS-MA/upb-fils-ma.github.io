@@ -1,10 +1,10 @@
 
-# Project Name
-A one line project description
+# Smart lamp
+The project involves creating a smart lamp that that responds to motion and ambient light levels. The led will turn on when it detects motion using a motion sensor and turn on/off if the light intensity falls/exceeds a specific level.
 
 :::info 
 
-**Author**: Student Name \
+**Author**: Radu George-Alexandru
 **GitHub Project Link**: link_to_github
 
 :::
