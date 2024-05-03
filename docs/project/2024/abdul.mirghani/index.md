@@ -26,7 +26,7 @@ I chose this project to create a functional radar-like system for obstacle detec
 
 ## Architecture 
 
-[Architecture Scheme](Architecture.png)
+![Architecture Scheme](Architecture.png)
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
 
