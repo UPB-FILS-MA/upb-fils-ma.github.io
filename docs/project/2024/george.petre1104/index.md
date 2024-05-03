@@ -35,7 +35,11 @@ I choose this project because I wanted to have an RC car that I could control wi
 
 ## Hardware
 
-Detail in a few words the hardware used.
+The main components of the hardware that I used are:
+- Raspberry Pi Pico - The Pico microcontroller is a small, low-cost, high-performance microcontroller board built with the RP2040 chip developed by Raspberry Pi. It features a dual-core ARM Cortex M0+ processor, which provides ample power for handling the logic and control functions of the car.
+- L289N Driver motor - The L289N is a powerful dual full-bridge driver designed to drive inductive loads such as relays, solenoids, DC, and stepping motors. In this project, this driver manages the motors by allowing the Pico microcontroller to run motors with a higher power requirement than the Pico can provide directly. It can handle a significant current load and operates over a wide voltage range, making it ideal for controlling the wheels of the car.
+- Power Supply  - 4 AA batteries
+- 4WD Kit - This represents the chasis of the car. Contains the wheels, motors for the wheels and 2 acrylic plates that make the body of the car.
 
 ### Schematics
 
