@@ -18,9 +18,9 @@ I choose this project because I wanted to have an RC car that I could control wi
 
 ## Architecture 
 
-<div align="center">
+
 ![Arhitecture](Schematic.png)
-</div>
+
 
 
 ## Log
