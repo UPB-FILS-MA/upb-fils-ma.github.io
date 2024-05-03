@@ -1,5 +1,6 @@
 # Project Name
-Rust-powered Portable Smart Summer Hat
+
+**Rust-powered Portable Smart Summer Hat**
 
 :::info 
 
