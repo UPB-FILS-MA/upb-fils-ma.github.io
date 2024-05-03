@@ -1,5 +1,5 @@
 # Smart Fan
-Smart fan : displays room temp/pressure, auto-activates at thresholds.
+Displays room temp/pressure, auto-activates at thresholds.
 
 :::info 
 
@@ -13,9 +13,9 @@ Smart fan : displays room temp/pressure, auto-activates at thresholds.
 A fan that monitors and displays the temperature and pressure in the room on a LCD screen, then activates the fan after a certain threshold :
 
 
-  + The system utilizes a sensor to detect both temperature and pressure.
++ The system utilizes a sensor to detect both temperature and pressure.
 
- + The LCD screen showcases the temperature and pressure readings.
++ The LCD screen showcases the temperature and pressure readings.
 
 + The fan is triggered once the threshold is exceeded.
 
