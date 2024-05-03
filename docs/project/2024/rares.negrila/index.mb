@@ -44,6 +44,7 @@ as well as understand the conversion of digital code into analog sound.
 
 Detail in a few words the hardware used.
 
+
 ### Schematics
 
 Place your KiCAD schematics here.
@@ -89,6 +90,7 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [MicroSd Crate](https://github.com/rust-embedded-community/embedded-sdmmc-rs)
+2. [Inspiration Video](https://youtu.be/h_y1y6eUvIY?si=NTLO8pDmCqerRG1a)
+3. [MCP4725 Crate](https://github.com/mendelt/mcp4725)
+4. [Framework used in project](https://github.com/embassy-rs/embassy)
