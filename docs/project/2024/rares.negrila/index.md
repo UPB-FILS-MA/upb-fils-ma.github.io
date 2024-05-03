@@ -50,6 +50,14 @@ as well as understand the conversion of digital code into analog sound.
 
 Detail in a few words the hardware used.
 
+Using leds as settings indicators.
+Buttons and a stereo potentiometer for octave and volume respectively.
+7 Laser diodes placed at an angle in order to continuously shine on the laser receivers.
+A MicroSd card reader with a standard 2GB MicroSd card.
+A Dac for processing the data and a amplifier for keeping the signal at a desireable level.
+The amplifer will connect to the opposite port of the stereo potentiometer.
+And the speaker will be connected to the output of the amplifier.
+
 ### Schematics
 
 Some of the parts were either created by me as they did not have a publicly available schematic but most of the more detailed schemas for the modules used can be found in their datasheet.
