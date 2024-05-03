@@ -3,7 +3,7 @@ A one line project description
 
 :::info 
 
-**Author**: Student Name \
+**Author**: Mihaela-Raluca Dorobanțu \
 **GitHub Project Link**: link_to_github
 
 :::
