@@ -1,7 +1,7 @@
 # Object Detection and Alert System
 :::info 
 
-**Author**: Mahmoud Mirghani Abdelrahman
+**Author**: Mahmoud Mirghani Abdelrahman \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Abd210
 
 :::
@@ -115,5 +115,5 @@ Place your KiCAD schematics here.
 Used for controlling the ultrasonic sensor|
 ## Links
 
-1. [youtube](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
+1. [DIY Radar with Ultrasonic Sensor](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
 
