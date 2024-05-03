@@ -1,0 +1,104 @@
+# Project Name
+House Thermometer
+
+:::info 
+
+**Author**: Grec Carina-Gabriela \
+**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-carinagrec)
+
+:::
+
+## Description
+
+House thermometer capable of displaying the current room temperature on an LCD display for immediate local access, as well as on a web application for remote monitoring. The system uses a digital temperature sensor for accurate measurements and features an RGB LED that changes color based on temperature ranges, enhancing visual feedback. Also, it has an external memory to keep track of the temperatures from the last hours and display the average value. 
+
+## Motivation
+
+I chose this project because it seems like a pretty practical idea in the day-to-day life that can be implemented. It's a mix from multiple topics that we studied and i can also implement extra knowledge such as the EEPROM
+
+## Architecture 
+
+Connectivity and Interactions:
+Sensor Interface → Data Processing and Logic Unit:
+The sensor interface reads temperature data and sends it to the data processing unit where it is logged and processed for further actions.
+Data Processing and Logic Unit → Display Controller:
+Processed data that includes current temperatures and possibly system statuses is sent from the data processing unit to the display controller for real-time display.
+Data Processing and Logic Unit → LED Controller:
+Depending on the temperature data, the data processing unit sends commands to the LED controller to adjust the LED's color and brightness.
+Data Processing and Logic Unit ↔ Network Interface:
+The network interface acts as a gateway for sending temperature data to the web server and receiving commands from the web application, facilitated by the central data processing unit.
+Network Interface ↔ Web Application:
+The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs.
+
+![LED](https://github.com/carinagrec/upb-fils-ma.github.io/assets/150676040/9fe70bd8-0f70-42c2-90b6-aae9b26a2969)
+
+## Log
+
+<!-- write every week your progress here -->
+
+### Week 6 - 12 May
+
+### Week 7 - 19 May
+
+### Week 20 - 26 May
+
+## Hardware
+
+Raspberry Pi Pico W - a compact microcontroller board featuring the RP2040 chip and built-in Wi-Fi connectivity. It serves as the brain of the project, managing data collection from the temperature sensor, driving the display, controlling the RGB LED, and handling network communications.
+DS18B20 Temperature Sensor - a digital temperature sensor that provides 9-bit to 12-bit Celsius temperature measurements. Known for its accuracy and ease of integration, it operates over a one-wire bus that requires only one data line (and ground) for communication with the Raspberry Pi Pico W.
+1602 LCD Module - this 16x2 character LCD display is simple and effective for displaying text and numerical data. It is interfaced via the I2C communication protocol, which simplifies the connection by using just two wires for data transmission.
+Common Cathode RGB LED - a small and efficient multi-color LED capable of displaying various colors by mixing red, green, and blue. Each color component can be controlled independently using PWM signals to create different colors.
+Breadboard and Jumper Wires - used for prototyping without soldering, ideal for testing and adjusting the circuit layout during development. Jumper wires facilitate connections between the components on the breadboard.
+Resistors - used for current limiting and voltage division. They are crucial for protecting components like the RGB LED and ensuring correct signal levels are applied to inputs.
+
+### Schematics
+
+Place your KiCAD schematics here.
+
+### Bill of Materials
+
+<!-- Fill out this table with all the hardware components that you might need.
+
+The format is 
+```
+| [Device](link://to/device) | This is used ... | [price](link://to/store) |
+
+```
+
+-->
+
+| Device | Usage | Price |
+|--------|-------|-------|
+| [Raspberry Pi Pico W](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | The microcontroller with Wi-Fi capability, used for managing sensors and network communication. | [35 RON] |
+| [DS18B20 Temperature Sensor](https://www.optimusdigital.ro/en/sensors/1465-ds18b20-temperature-sensor-to-92.html)| Digital temperature sensor for accurate room temperature measurements. | [3,32 RON] |
+| [1602 LCD Module](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html) | A simple LCD display for showing temperature readings locally. | [18 RON] |
+| [Common Cathode RGB LED](https://www.optimusdigital.ro/en/leds/483-rgb-led-common-cathode.html) | RGB LED to indicate temperature range through color changes. | [1 RON] |
+| [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=breadboard&results=413) | A platform for temporary prototyping and experimenting without soldering. | [9,98 RON] |
+| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=Jumper+Wires&results=100) | Used to connect components on the breadboard. | [7,99 RON] |
+| [Header de pini alb 2.54 mm (40p)](https://www.optimusdigital.ro/ro/componente-electronice-headere-de-pini/463-header-de-pini-alb-254-mm-40p.html?search_query=headere+pini&results=216) | This white single-row male 40 copper pin header can be broken into smaller strips with the use of a wire cutter, in order to fit your desired application. It is an ideal connector for integrated circuit and PCB boards. | [0,99 RON] |
+| [Resistor Kit](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=Resistor+Kit&results=42) | Various resistors for current limiting for the LED and pull-up resistor for the temperature sensor. | [14,99 RON] |
+| [DAC MCP4725 Module with I2C Interface](https://www.optimusdigital.ro/en/others/1327-dac-mcp4725-module-with-i2c-interface.html?search_query=eeprom&results=101) | Integrated circuits designed to store relatively small amounts of data but allowing individual bytes to be electrically erased and reprogrammed. | .[9,52 RON]
+
+
+
+## Software
+
+| Library | Description | Usage |
+|---------|-------------|-------|
+| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used to control the OLED/LCD display for showing temperature readings and other graphical outputs on the Raspberry Pi Pico W. |
+| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Utilized for drawing graphics and text on the display, including temperature data and visual indicators. |
+| [rp2040-hal](https://github.com/rp-rs/rp-hal) | Hardware Abstraction Layer for Raspberry Pi Pico | Provides access to the hardware features of the Raspberry Pi Pico W, simplifying tasks like GPIO management, ADC input, and PWM output. |
+| [one-wire](https://github.com/rust-embedded-community/rust-onewire) | Rust implementation of the OneWire protocol | Manages communication with the DS18B20 temperature sensor to retrieve accurate temperature measurements. |
+| [warp](https://github.com/seanmonstar/warp) | A web server framework for Rust | Serves the web application that displays real-time and historical temperature data, managing requests and routing in the backend. |
+| [embassy-rs](https://github.com/embassy-rs/embassy) | Asynchronous runtime for embedded devices | Used to facilitate non-blocking, concurrent firmware development, handling all device peripherals and networking with ease and safety. |
+
+
+## Links
+
+<!-- Add a few links that inspired you and that you think you will use for your project -->
+
+1. (https://hackaday.io/project/190692-wow-enjoy-the-current-weather-with-picassos-pai/log/217890-complete)
+2. (https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+3. (https://www.arewewebyet.org/)
+4. (https://www.youtube.com/watch?v=aEnS0-Jy2vE)
+5. https://www.tomshardware.com/how-to/oled-display-raspberry-pi-pico
