@@ -4,8 +4,7 @@ A Raspberry Pi Pico W-based radar-like security system.
 
 :::info 
 
-**Author**: Cristiana-Florentina Precup
-
+**Author**: Cristiana-Florentina Precup \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-cristianaprecup
 
 :::
