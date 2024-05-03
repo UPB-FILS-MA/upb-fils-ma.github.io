@@ -16,41 +16,53 @@ I picked this project because it addresses this concern. My project focuses on m
 
 ## Architecture 
 ![A prototype of architecture](Architecture.png)
-The architecture should sort of look like this. I will be using a cardboard box. 
-This project is a smart parking system built using a Raspberry Pi Pico W and various sensors and components. It has two floors:
-    First Floor: Contains three parking spaces with entrance and exit gates.
-    Second Floor: Reserved for authorized parking, monitored by an RFID system.
-    Components:
-        First Floor:
-            Parking Areas: 3 parking spaces, each with:
-            1 Green LED (indicates available).
-            1 Red LED (indicates occupied).
-            Gates:
-            Entrance Gate: Controlled by Servo 1 (connected to GPIO pin 1).
-            Exit Gate: Controlled by Servo 2 (connected to GPIO pin 2).
-            Sensors:
-            PIR Sensors: 5 sensors monitoring vehicle movements.
-            PIR 1 to PIR 5 connected to GPIO pins 6-10.
-            IR Flame Sensor: Detects fire and triggers a buzzer.
-            Connected to GPIO pin 3.
-        Second Floor:
-            Authorized Parking Area:
-            RFID RC522: Controls access to the area.
-            Communicates with the Pico W via SPI:
-            SCK (GPIO 18), MISO (GPIO 16), MOSI (GPIO 19), CS (GPIO 17).
-            LED Light: Indicates access status.
-            Connectivity:
-            PIR Sensors: Connected to the Raspberry Pi Pico W's GPIO pins, sending signals about vehicle presence.
-            Servo Motors: Controlled by PWM pins on the Pico W.
-            LEDs: Indicate parking space and authorization status.
-            Fire Sensor: Activates a buzzer when triggered.
-            RFID: Communicates via SPI with the Pico W, controlling access and indicating status with an LED.
-    Physical Layout:
-        Cardboard Box: Houses the system, with cutouts for each component:
-        First Floor: 3 parking spaces, entrance, and exit.
-        Second Floor: Authorized parking area.
-        Breadboard: Hidden inside, connecting all components to the Pico W.
+![Architecture Scheme] (Architecture2.png)
 
+This project utilizes a Raspberry Pi Pico W to create a smart parking system, housed within a cardboard box. The system features two floors, with various sensors and components managing the parking spaces.
+
+### Components Overview
+
+#### First Floor
+
+- **Parking Areas**:
+  - **3 parking spaces**, each equipped with:
+    - **Green LED**: Indicates the space is available.
+    - **Red LED**: Indicates the space is occupied.
+
+- **Gates**:
+  - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 1).
+  - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 2).
+
+- **Sensors**:
+  - **PIR Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
+  - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
+
+#### Second Floor
+
+- **Authorized Parking Area**:
+  - **RFID RC522**: Controls access to the area, communicates with the Pico W via SPI:
+    - **SCK**: GPIO 18
+    - **MISO**: GPIO 16
+    - **MOSI**: GPIO 19
+    - **CS**: GPIO 17
+  - **LED Light**: Indicates access status.
+
+### Connectivity
+
+- **Infrared Sensors**: Connected to the Raspberry Pi Pico W's GPIO pins, sending signals about vehicle presence.
+- **Servo Motors**: Controlled by pins on the Pico W.
+- **LEDs**: Indicate parking space and authorization status.
+- **Fire Sensor**: Activates a buzzer when triggered.
+- **RFID**: Communicates via SPI with the Pico W, controlling access and indicating status with an LED.
+- **Active buzzer**: the buzzer that gets activated in case of a fire.
+  
+
+### Physical Layout
+
+- **Cardboard Box**: Houses the system, with cutouts for each component:
+  - **First Floor**: 3 parking spaces, entrance, and exit.
+  - **Second Floor**: Authorized parking area.
+- **Breadboard**: Hidden inside, connecting all components to the Pico W.
 
 ## Log
 
