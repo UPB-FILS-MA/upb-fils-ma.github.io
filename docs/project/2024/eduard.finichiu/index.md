@@ -1,6 +1,5 @@
-# Project Name
+# Pet Feeder
 
-Pet Feeder
 automatic dispenser of food for animals
 
 :::info
