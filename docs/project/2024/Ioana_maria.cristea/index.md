@@ -82,9 +82,9 @@ The format is
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [BMP280](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf) | Temperature Sensor| [8,49 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1666-modul-senzor-de-presiune-barometric-bmp280.html?search_query=bmp280&results=11) |
-| [Active Buzzer] | Active Buzzer | [1,49 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer+activ&results=18) |
+| Active Buzzer | Active Buzzer | [1,49 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer+activ&results=18) |
 | [LCD Display](https://www.waveshare.com/datasheet/LCD_en_PDF/LCD1602.pdf) | LCD Display| [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd+1602&results=17) |
-| [DC Motor] | DC Motor| [3,50 RON](https://www.emag.ro/motor-electric-dc-3-6v-ajmaker-8000rpm-6v-450-ma-25-x-20-x15-mm-gri-z000687/pd/DSFQLHYBM/?cmpid=93116&utm_source=google&utm_medium=cpc&utm_campaign=(RO:eMAG!)_3P_NO_SALES_%3e_Jucarii_hobby&utm_content=111476631565&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pRCxklxkpkhCiPunMVr4_dPU2-iwMSfpSF-6S8OcYMyXWCNHiOyHPxoCQGIQAvD_BwE) |
+| DC Motor | DC Motor | [3,50 RON](https://ardushop.ro/ro/motoare-si-drivere/437-motoras-curent-continuu.html?gad_source=1&gclid=Cj0KCQjwltKxBhDMARIsAG8KnqXmbO_Pw93I5tCpBIvBfZewX5Zezb63wDD63KWlIPhqzm3f4ITGaoYaAr0nEALw_wcB) |
 | [Servomotor](https://datasheetspdf.com/datasheet/SG90.html) | Servomotor | [14 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/26-micro-servomotor-sg90.html?search_query=servomotor&results=119) |
 
 
