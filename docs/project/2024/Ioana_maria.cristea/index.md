@@ -1,4 +1,5 @@
 # Smart Fan
+Smart fan : displays room temp/pressure, auto-activates at thresholds.
 
 :::info 
 
@@ -82,8 +83,10 @@ The format is
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [BMP280](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf) | Temperature Sensor| [8,49 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1666-modul-senzor-de-presiune-barometric-bmp280.html?search_query=bmp280&results=11) |
 | [Active Buzzer]() | Active Buzzer | [1,49 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer+activ&results=18) |
-| [LCD Display](http://www.lcdwiki.com/res/MSP1804/1.8inch_SPI_Module_MSP1804_User_Manual_EN.pdf) | LCD Display| [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/12392-modul-lcd-de-18-cu-spi-i-controller-st7735-128x160-px.html?search_query=lcd+st773&results=8) |
+| [LCD Display](https://www.waveshare.com/datasheet/LCD_en_PDF/LCD1602.pdf) | LCD Display| [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd+1602&results=17) |
 | [DC Motor]() | DC Motor| [3,50 RON](https://www.emag.ro/motor-electric-dc-3-6v-ajmaker-8000rpm-6v-450-ma-25-x-20-x15-mm-gri-z000687/pd/DSFQLHYBM/?cmpid=93116&utm_source=google&utm_medium=cpc&utm_campaign=(RO:eMAG!)_3P_NO_SALES_%3e_Jucarii_hobby&utm_content=111476631565&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pRCxklxkpkhCiPunMVr4_dPU2-iwMSfpSF-6S8OcYMyXWCNHiOyHPxoCQGIQAvD_BwE) |
+| [Servomotor](https://datasheetspdf.com/datasheet/SG90.html) | Servomotor | [14 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/26-micro-servomotor-sg90.html?search_query=servomotor&results=119) |
+
 
 
 
@@ -91,13 +94,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [link](https://www.youtube.com/watch?v=8kfROSQYDWI)
-2. [link](https://projects.raspberrypi.org/en/projects/build-your-own-weather-station/2)
+2. [link](https://www.youtube.com/watch?v=OdqcJoFi_Bk)
 
