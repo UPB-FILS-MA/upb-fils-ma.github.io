@@ -85,17 +85,21 @@ The format is
 
 
 
-## Software (Work in progess)
+## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [MicroSd Crate](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | Crate for the Catalex MicroSd card slot | Used for reading pcm from wav files |
+| [MCP4725 Crate](https://github.com/mendelt/mcp4725) | Crate for the MCP4725 DAC | Used to send the data received from the microsd card to the digital to analog converter |
+| [Framework used in project](https://github.com/embassy-rs/embassy)| Rust framework for embedded programming | Used to program the 
+behaviour of the raspberry pi pico and used to simplify certain concepts of embedded programming |
+| [Log](https://docs.rs/log/latest/log/)| Rust Crate for data displaying | Used to display data throught the usb in the terminal of the computer when interacting with the device as a manufacturer |
+
+
+
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
-1. [MicroSd Crate](https://github.com/rust-embedded-community/embedded-sdmmc-rs)
-2. [Inspiration Video](https://youtu.be/h_y1y6eUvIY?si=NTLO8pDmCqerRG1a)
-3. [MCP4725 Crate](https://github.com/mendelt/mcp4725)
-4. [Framework used in project](https://github.com/embassy-rs/embassy)
+1. [Laser Inspiration Video](https://youtu.be/h_y1y6eUvIY?si=NTLO8pDmCqerRG1a)
+2. [Piano General Design Inspiration](https://www.amazon.com/M-WAVE-Controller-Bluetooth-Professional-Production/dp/B0B66T4DHK?th=1)
