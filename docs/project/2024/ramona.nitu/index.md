@@ -17,9 +17,16 @@ I chose this project because of its relevance in various emergency aspects, such
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+1) Text Input Provided to the System: The user enters text input through a connected input device, such as a keyboard. The input text is then passed to the Morse code translator for conversion.
+2) Morse Code Translator Converts Text into Morse Code Symbols: The Morse code translator receives the input text. It processes the text character by character, converting each character into its corresponding Morse code symbol. Special characters and spaces are also translated into their respective Morse code equivalents.
+3) Raspberry Pi Pico Controls the LCD Display, Buzzer, and RGB LED: The Raspberry Pi Pico receives the translated Morse code symbols from the Morse code translator. It controls the operation of the connected hardware components:
+ -The Raspberry Pi Pico sends commands to the LCD display to update its content with the translated Morse code symbols.
+ -Depending on the Morse code symbol being transmitted, the Raspberry Pi Pico activates the buzzer to emit corresponding sound signals.
+ -The Raspberry Pi Pico sends signals to the RGB LED to change colors based on the Morse code symbols being transmitted, providing visual feedback.
+LCD Display Visually Represents the Morse Code Symbols:
+4) The LCD display receives commands from the Raspberry Pi Pico to update its content. It visually represents the Morse code symbols in real-time, displaying them character by character as they are transmitted.
+5) Buzzer Emits Sound Signals Corresponding to Each Morse Code Symbol: The buzzer receives signals from the Raspberry Pi Pico to emit sound signals. Depending on the Morse code symbol being transmitted, the buzzer generates corresponding audio tones, providing auditory feedback.
+6) RGB LED Changes Colors to Provide Visual Feedback: The RGB LED receives signals from the Raspberry Pi Pico to change colors. It dynamically changes colors based on the Morse code symbols being transmitted, offering visual feedback for the translation process.
 
  ![architecture](./Architecture.jpeg)
 
@@ -78,11 +85,11 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals |
+| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals 
 | [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
 | [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 
 
