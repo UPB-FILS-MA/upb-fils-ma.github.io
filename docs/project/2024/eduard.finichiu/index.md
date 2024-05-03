@@ -1,6 +1,6 @@
 # Pet Feeder
 
-automatic dispenser of food for animals
+Automatic food dispenser for animals
 
 :::info
 
