@@ -1,4 +1,5 @@
 # Object Detection and Alert System
+Automated Surveillance and Notification Interface
 :::info 
 
 **Author**: Mahmoud Mirghani Abdelrahman
@@ -23,6 +24,8 @@ This project effectively combines ultrasonic sensing, servo control, and audio a
 I chose this project to create a functional radar-like system for obstacle detection and range measurement, utilizing my skills in ultrasonic sensing, servo control, and real-time feedback. I was also inspired by a YouTube video on similar technology.
 
 ## Architecture 
+
+[Architecture Scheme](Architecture2.png)
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
 
