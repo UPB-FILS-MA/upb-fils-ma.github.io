@@ -98,8 +98,7 @@ The format is
 |---------|-------------|-------|
 | [MicroSd Crate](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | Crate for the Catalex MicroSd card slot | Used for reading pcm from wav files |
 | [MCP4725 Crate](https://github.com/mendelt/mcp4725) | Crate for the MCP4725 DAC | Used to send the data received from the microsd card to the digital to analog converter |
-| [Framework used in project](https://github.com/embassy-rs/embassy)| Rust framework for embedded programming | Used to program the 
-behaviour of the raspberry pi pico and used to simplify certain concepts of embedded programming |
+| [Framework used in project](https://github.com/embassy-rs/embassy)| Rust framework for embedded programming | Used to program the behaviour of the raspberry pi pico and used to simplify certain concepts of embedded programming |
 | [Log](https://docs.rs/log/latest/log/)| Rust Crate for data displaying | Used to display data throught the usb in the terminal of the computer when interacting with the device as a manufacturer |
 
 
