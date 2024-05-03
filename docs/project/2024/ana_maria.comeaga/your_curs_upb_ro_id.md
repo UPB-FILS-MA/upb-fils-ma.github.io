@@ -28,7 +28,7 @@ On the other hand, taking into consideration the growth of concerns about the en
 
 The FloraMood Smart Pot is powered up by a battery. Then, it collects the parameters from the sensors, like humidity, temperature, and light. Based on them and on their thresholds, a specific emoji is displyed on the LCD Module, in order to transmit the state in which the plant is on that moment. The watering system is using a simple water pump with a gear, that automatically powers up when the humidity level is under the set threshold and stops after giving the plant the necessary ammount of water, and the humidity level comes back in its normal range.
 
-![Architecture photo](Architecture.png)
+![Architecture photo](./Architecture.png)
 
 The diagram depicts the functioning of FloraMood Smart Pot. Here is a breakdown of its components:
 
