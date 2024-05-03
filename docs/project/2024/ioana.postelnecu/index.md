@@ -2,7 +2,7 @@
 
 :::info 
 
-**Author**: POSTELNECU Ioana
+**Author**: POSTELNECU Ioana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-IoanaP0711
 
 :::
