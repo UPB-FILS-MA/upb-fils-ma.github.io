@@ -34,6 +34,8 @@ as well as understand the conversion of digital code into analog sound.
  - how they connect with each other
  -->
 
+ ![image](assets/Architecture.JPG)
+
 ## Log
 
 <!-- write every week your progress here -->
@@ -56,7 +58,7 @@ Some of the parts were either created by me as they did not have a publicly avai
 
 In this case I couldn't find the Laser Receiver Symbol and the MicroSd card reader module. 
 
-![image](https://github.com/NegrilaRares/rares.negrila_project_documentaion/assets/129112753/a6af34c7-d23d-443e-9ee3-b4ce6be0175d)
+![image](assets/KiCad.JPG)
 
 
 ### Bill of Materials
