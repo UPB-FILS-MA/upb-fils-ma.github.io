@@ -1,6 +1,6 @@
 # Magnetic Door Alarm System
 
-:::info 
+:::
 
 **Author**: Băluțoiu Ana-Maria \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-arshiii16
