@@ -1,5 +1,7 @@
 # Weather Station
 
+Rust-powered environmetal monitoring station
+
 :::info 
 
 **Author**: Udrea Alberto-George \
