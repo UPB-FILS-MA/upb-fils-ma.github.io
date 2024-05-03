@@ -30,12 +30,6 @@ as well as understand the conversion of digital code into analog sound.
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
-
-
-
 ## Log
 
 <!-- write every week your progress here -->
@@ -69,6 +63,19 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| 13 * Led | This is used for displaying current settings | [-] |
+| 13 * 220 Ohm R | This is used to make sure the leds don't get fried | [-] |
+| 10 * 10 kOhm R | This is used to crate pull up and pull down resistors | [-] |
+| 7 * 0.1 uF Capacitor | This is used to debounce the signal from the laser receivers | [-] |
+| lots * cables | This is used to connect diffrent things on the breadboard/prototype pcb | [-] |
+| 10k Potentiometer | This is used for volume input | [2 RON](https://www.optimusdigital.ro/en/potentiometers/12360-10k-wh148-variable-resistor-without-washer-and-nut.html?search_query=10k+Mono+Potentiometer&results=3) |
+| 2 * [Shift Register](https://www.diodes.com/assets/Datasheets/74HC595.pdf) | This is used for the output of the volume setting | [2 RON](https://www.optimusdigital.ro/en/others/2448-registru-de-deplasare-74hc595-dip-16.html) |
+| Laser Diode | This is used to generate a laser | [2.5 RON](https://ardushop.ro/ro/electronica/262-modul-dioda-laser-rou-5mw.html) |
+| 7 * [ISO203](https://forum.arduino.cc/t/documents-about-laser-sensor-ds18b20/1090450/5) | This is used to monitor for interference in the path of the laser | [6.5 RON](https://www.optimusdigital.ro/en/others/3289-laser-diode-receiver.html) |
+| Catalex MicroSd card slot | This is used to read the data from a microsd | [4.4 RON](https://www.optimusdigital.ro/en/memories/1516-microsd-card-slot-module.html) |
+| [DAC MCP4725](https://ww1.microchip.com/downloads/en/devicedoc/22039d.pdf) | This is used to transfrom the binary from the audio file data into an analog singal for the speaker | [25 RON](https://www.optimusdigital.ro/en/others/1327-dac-mcp4725-module-with-i2c-interface.html?search_query=dac&results=62) |
+| Speaker | This is used to create a sound based on the analog input given by the system | [4.5 RON](https://ardushop.ro/en/modules/1550-difuzor-1w-8ohm.html) |
+| [AMP LM386](https://www.ti.com/lit/ds/symlink/lm386.pdf) | This is used amplify the analog singal | [6.5 RON](https://ardushop.ro/ro/electronica/241-modul-amplificator-audio-lm386.html) |
 
 
 ## Software
