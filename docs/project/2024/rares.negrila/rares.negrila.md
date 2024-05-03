@@ -1,12 +1,8 @@
 # Laser Piano
 A piano made using laser diodes and laser receivers.
 
-:::info 
-
-**Author**: Negrila Rares \
+**Author**: Negrila Rares 
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-NegrilaRares
-
-:::
 
 ## Description
 
