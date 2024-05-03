@@ -3,7 +3,7 @@ MorseSense: Interactive Text-to-Morse Translator with Multi-Sensory Feedback
 
 :::info 
 
-**Author**: Nițu-Săraru Ramona-Gabriela
+**Author**: Nițu-Săraru Ramona-Gabriela \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-GabrielaNitu
 
 :::
