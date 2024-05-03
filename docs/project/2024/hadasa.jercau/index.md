@@ -4,11 +4,12 @@
 **Author**: JERCĂU Hadasa-Ștefana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-hadassahj
 
-:::
 
 ## Description
 
-PicoW Garden Monitor is a project designed to monitor and optimize the growth conditions of plants in gardens using the Raspberry Pi Pico microcontroller. It collects data on soil moisture, light exposure, and temperature to assess the health of plants and provide personalized care instructions for optimal growth. The project aims to include a web application too, hosted on a local server built with Rust, which would allow users to interact with the system, select plants, view real-time sensor data, and receive customized care instructions. By envisioning a locally hosted web interface as part of its development, PicoW Garden Monitor aims to offer a comprehensive solution for plant enthusiasts to cultivate healthy and thriving gardens.
+PicoW Garden Monitor is a project designed to monitor and optimize the growth conditions of plants in gardens using the Raspberry Pi Pico microcontroller. It collects data on soil moisture, light exposure, and temperature to assess the health of plants and provide personalized care instructions for optimal growth. 
+
+The project aims to include a web application too, hosted on a local server built with Rust, which would allow users to interact with the system, select plants, view real-time sensor data, and receive customized care instructions. By envisioning a locally hosted web interface as part of its development, PicoW Garden Monitor aims to offer a comprehensive solution for plant enthusiasts to cultivate healthy and thriving gardens.
 
 ## Motivation
 
@@ -19,28 +20,28 @@ By developing the PicoW Garden Monitor, the goal is to create a reliable and int
 ## Architecture 
 
 Main Components:
-    Sensors: Soil moisture sensor, light sensor, temperature sensor.
+    * Sensors: Soil moisture sensor, light sensor, temperature sensor.
         - These sensors are strategically placed in the garden to capture essential environmental data.
         - The soil moisture sensor measures the moisture level in the soil, indicating when plants need watering.
         - The light sensor detects the intensity of sunlight, helping users identify optimal spots for different types of plants.
         - The temperature sensor monitors the ambient temperature, ensuring plants are not exposed to extreme conditions.
-    Raspberry Pi Pico:
+    * Raspberry Pi Pico:
         - The Raspberry Pi Pico serves as the central hub of the system, responsible for interfacing with the sensors and facilitating communication with the Rust server.
         - It collects data from the sensors and sends this information to the Rust server for analysis.
         - Additionally, the Raspberry Pi Pico executes control logic based on the analyzed data, such as activating watering systems or adjusting light exposure.
-    Rust Server:
+    * Rust Server:
         - The Rust server receives sensor data from the Raspberry Pi Pico and processes it to assess the health parameters of the plants.
         - Using algorithms and predefined thresholds, the server analyzes the data to determine if any corrective actions are needed.
         - It generates personalized care instructions based on the analysis results, considering factors such as soil moisture, light exposure, and temperature requirements.
-    Web Interface:
+    * Web Interface:
         - The web interface provides users with a user-friendly dashboard to interact with the system.
         - Users can access the dashboard from their devices connected to the local network, such as smartphones, tablets, or computers.
         - Through the web interface, users can select specific plants, view live sensor data, and receive actionable insights and care recommendations.
         - The interface communicates with the Rust server to retrieve and display relevant information, ensuring a seamless user experience.
 Connection:
-    - The sensors are connected directly to the Raspberry Pi Pico microcontroller, which interfaces with them to collect data.
-    - The Raspberry Pi Pico communicates with the Rust server over the local network, sending sensor data and receiving instructions.
-    - The Rust server processes the incoming data, generates care instructions, and communicates with the web interface to provide users with real-time updates and insights.
+    * The sensors are connected directly to the Raspberry Pi Pico microcontroller, which interfaces with them to collect data.
+    * The Raspberry Pi Pico communicates with the Rust server over the local network, sending sensor data and receiving instructions.
+    * The Rust server processes the incoming data, generates care instructions, and communicates with the web interface to provide users with real-time updates and insights.
 
 
 ![Project Diagram](Diagram.jpg)
