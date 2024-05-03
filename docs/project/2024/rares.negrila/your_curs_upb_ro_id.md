@@ -29,9 +29,10 @@ as well as understand the conversion of digital code into analog sound.
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
+<!-- Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
+ -->
 
 ## Log
 
@@ -84,7 +85,7 @@ The format is
 
 
 
-## Software
+## Software (Work in progess)
 
 | Library | Description | Usage |
 |---------|-------------|-------|
