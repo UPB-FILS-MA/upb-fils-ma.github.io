@@ -34,7 +34,7 @@ as well as understand the conversion of digital code into analog sound.
  - how they connect with each other
  -->
 
- ![image](assets/Architecture.JPG)
+ ![architecture](assets/Architecture.JPG)
 
 ## Log
 
@@ -52,13 +52,11 @@ Detail in a few words the hardware used.
 
 ### Schematics
 
-Place your KiCAD schematics here.
-
 Some of the parts were either created by me as they did not have a publicly available schematic but most of the more detailed schemas for the modules used can be found in their datasheet.
 
 In this case I couldn't find the Laser Receiver Symbol and the MicroSd card reader module. 
 
-![image](assets/KiCad.JPG)
+![schematics](assets/KiCad.JPG)
 
 
 ### Bill of Materials
