@@ -1,5 +1,5 @@
 # RustPlayer
-
+This project rekindles the nostalgic charm of physically selecting music with buttons, delivering a classic audio experience through an intuitive MP3 player.
 :::info 
 
 **Author**: Popa Ruxandra-Georgiana \
