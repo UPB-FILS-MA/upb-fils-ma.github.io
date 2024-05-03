@@ -11,7 +11,7 @@ A mini game that brings the casino right to your tabletop. Spin, bet, and win bi
 
 ## Description
 
-This project aims to recreate the captivating experience of Casino Roulette, encapsulating the thrill and randomness of betting games, through the integration of modern computing with traditional casino elements. By leveraging the compact yet powerful Raspberry Pi Pico W 🧠 and the efficiency and safety of the Rust programming language, we embark on creating a digital version of the classic Roulette game. 
+This project aims to recreate the captivating experience of Casino Roulette, encapsulating the thrill and randomness of betting games, through the integration of modern computing with traditional casino elements. By leveraging the compact yet powerful Raspberry Pi Pico W and the efficiency and safety of the Rust programming language, we embark on creating a digital version of the classic Roulette game. 
 
 ## Motivation
 
