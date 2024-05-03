@@ -1,4 +1,5 @@
 # Crasher game
+Time your bet before the airplane crashes.
 
 :::info 
 
