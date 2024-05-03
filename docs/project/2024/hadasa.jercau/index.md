@@ -4,7 +4,6 @@
 **Author**: JERCĂU Hadasa-Ștefana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-hadassahj
 
-
 ## Description
 
 PicoW Garden Monitor is a project designed to monitor and optimize the growth conditions of plants in gardens using the Raspberry Pi Pico microcontroller. It collects data on soil moisture, light exposure, and temperature to assess the health of plants and provide personalized care instructions for optimal growth. 
@@ -71,16 +70,6 @@ Place your KiCAD schematics here.
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
 | Device | Usage | Price |
 |--------|-------|-------|
 | [Raspberry Pi Pico WH](https://www.optimusdigital.ro/ro/placi-raspberry-pi/12395-raspberry-pi-pico-wh.html?search_query=0104110000089595&results=1) | Microcontroller for data acquisition and communication | [38,99 lei](https://www.optimusdigital.ro/ro/placi-raspberry-pi/12395-raspberry-pi-pico-wh.html?search_query=0104110000089595&results=1) |
@@ -89,10 +78,7 @@ The format is
 | [Soil_moisture_module] (https://www.optimusdigital.ro/ro/senzori-senzori-de-umiditate/73-senzor-de-umiditate-a-solului.html?search_query=0104110000001023&results=1) | Measures soil moisture levels | [3,99 lei](https://www.optimusdigital.ro/ro/senzori-senzori-de-umiditate/73-senzor-de-umiditate-a-solului.html?search_query=0104110000001023&results=1) |
 | [Jumpers] (https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=0104110000008046&results=1) | Measures soil moisture levels | [12,49 lei](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=0104110000008046&results=1) |
 
-
-
 ## Software
-
 
 | Library | Description | Usage |
 |---------|-------------|-------|
@@ -103,8 +89,6 @@ The format is
 | [heapless](https://crates.io/crates/heapless) | No-std data structures | This crate offers data structures that don't require dynamic memory allocation, which will be perfect for use in embedded systems with limited resources. |
 
 ## Links
-
-<!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Emilostuff - Preventing Plant Death With Technology ](https://www.youtube.com/watch?v=9Fx9zQJe3H4&t=493s)
 2. [TechNovelTies - Never Kill Another Plant! Flower Care Sensor & App Review](https://www.youtube.com/watch?v=_47GMmjb1Ik)
