@@ -1,5 +1,6 @@
 # Object Detection and Alert System
-Automated Surveillance and Notification Interface
+Automated Surveillance and Notification Interface.
+
 :::info 
 
 **Author**: Mahmoud Mirghani Abdelrahman
@@ -25,7 +26,7 @@ I chose this project to create a functional radar-like system for obstacle detec
 
 ## Architecture 
 
-[Architecture Scheme](Architecture2.png)
+[Architecture Scheme](Architecture.png)
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
 
