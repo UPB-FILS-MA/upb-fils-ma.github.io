@@ -64,3 +64,10 @@ The motivation behind this project was to create a simple yet effective robot th
 
 
 ## Links
+**1. Inspiration video**: [Obstacle Avoider Youtube Video](https://www.youtube.com/watch?v=iajyaWi1Ln4)
+
+**2. Inspiration video**: [Obstacle Avoider Youtube Video 2](https://www.youtube.com/watch?v=BhrrNtihIe8)
+
+**3. Ultrasonic sensor**: [Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+
+**4. L298N H-Bridge**: [Datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/22440/STMICROELECTRONICS/L298N.html)
