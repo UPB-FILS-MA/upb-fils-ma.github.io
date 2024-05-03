@@ -4,7 +4,7 @@ A one line project description
 :::info 
 
 **Author**: Mihaela-Raluca Dorobanțu \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: https://github.com/Raluca3012/upb-fils-ma.github.io
 
 :::
 
