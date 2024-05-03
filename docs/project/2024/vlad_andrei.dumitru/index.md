@@ -47,7 +47,7 @@ In it's final stage, my project will look more or less like the following diagra
 7. **Breadboard**: Platform for prototyping and connecting components.
 8. **Jumper wires**: Connectors for establishing electrical connections on the breadboard.
 
-In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize multiplier values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer adjusts the bet amount. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
+In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize the spinning motion of the roulette values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer adjusts the bet amount. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
 
 ### Schematics
 
@@ -97,5 +97,5 @@ The format is
 | [micro-rand](https://crates.io/crates/micro_rand) | A tiny, no STD library for generating (pseudo) random numbers. | Used to generate when the airplane will crash |
 
 ## Links
-
+[Inspiration](https://github.com/WoXy-Sensei/casino-arduino)
 <!-- Add a few links that inspired you and that you think you will use for your project -->
