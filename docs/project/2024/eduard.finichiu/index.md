@@ -99,14 +99,15 @@ The format is
 
 ## Software
 
-| Library                                                          | Description            | Usage                                                                                                                   |
-| ---------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| [bmp280](https://crates.io/crates/bmp280)                        | BMP280 sensor          | Barometric sensor will be used to calculate pressure and temperature.                                                   |
-| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/)           | Pulse-width modulation | Traits for the RP2040 microcontroller used for controlling the servo motor.                                             |
-| [embassy](https://github.com/embassy-rs/embassy)                 | Embassy                | Asynchronous executor and HAL (Hardware Abstraction Layer) for building embedded applications in Rust.                  |
-| [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network        | Networking library for the Embassy asynchronous executor, enabling network communication in embedded Rust applications. |
-| [image](https://crates.io/crates/image)                          | Image Processing       | Library for handling image manipulation tasks such as resizing, cropping, or object detection.                          |
-| [rtc-pcf8523](https://crates.io/crates/rtc-pcf8523)              | Real-Time Clock (RTC)  | API for interacting with the PCF8523 real-time clock module for keeping track of time.                                  |
+| Library | Description | Usage |
+| ------- | ----------- | ----- |
+
+| [bmp280](https://crates.io/crates/bmp280) | BMP280 sensor | Barometric sensor will be used to calculate pressure and temperature. |
+| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/) | Pulse-width modulation | Traits for the RP2040 microcontroller used for controlling the servo motor. |
+| [embassy](https://github.com/embassy-rs/embassy) | Embassy | Asynchronous executor and HAL (Hardware Abstraction Layer) for building embedded applications in Rust. |
+| [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network | Networking library for the Embassy asynchronous executor, enabling network communication in embedded Rust applications. |
+| [image](https://crates.io/crates/image) | Image Processing | Library for handling image manipulation tasks such as resizing, cropping, or object detection. |
+| [rtc-pcf8523](https://crates.io/crates/rtc-pcf8523) | Real-Time Clock (RTC) | API for interacting with the PCF8523 real-time clock module for keeping track of time. |
 
 ## Links
 
