@@ -10,33 +10,34 @@ Rust-powered Portable Smart Summer Hat
 
 ## Description
 
-Description:
+**Description:**
 
   Beat the heat with my innovative SmartSummer Hat powered by Rasberry Pi Pico and programmed in Rust language. This project combines practical functionality with modern technology to provide a refreshing solution for those really hot summer days.
 
-Features:
+**Features:**
 
-  1-Temperature Sensing: Equipped with a precise temperature sensor, Smart Summer Hat continuously monitors the temperature to ensure your comfort.
+  **1-Temperature Sensing**: Equipped with a precise temperature sensor, Smart Summer Hat continuously monitors the temperature to ensure your comfort.
   
-  2-Activate Cooling: When the temperature rises above the hat springs into action. A DC motor, cleverly disguised as a fan, kicks in to provide instant relief from the heat.
+  **2-Activate Cooling**: When the temperature rises above the hat springs into action. A DC motor, cleverly disguised as a fan, kicks in to provide instant relief from the heat.
   
-  3-Visual and Audible Alerts: Stay informed about changing temperatures with a built-in LCD display that showcases the current temperature in Celcius. Moreover, a buzzer emits a warning sound when temperatures reach uncomfortable levels.
+  **3-Visual and Audible Alerts**: Stay informed about changing temperatures with a built-in LCD display that showcases the current temperature in Celcius. Moreover, a buzzer emits a warning sound when temperatures reach uncomfortable levels.
   
-  4-User Interaction: Take control of your comfor with the press of a button. When the temperature alarm sounds, users have the option to activate the cooling fan by simply pressing a button located on the hat.
+  **4-User Interaction**: Take control of your comfor with the press of a button. When the temperature alarm sounds, users have the option to activate the cooling fan by simply pressing a button located on the hat.
  
-  5-LED Indicator: A red LED indicator illuminates when temperatures soar, providing a visual cue alongisde the audible alert, ensuring you never miss a warning.
+  **5-LED Indicator**: A red LED indicator illuminates when temperatures soar, providing a visual cue alongisde the audible alert, ensuring you never miss a warning.
 
-How it Works:
+**How it Works:**
 
   Using Rust Programming language, my Rasberry Pi Pico-based system reads the temperature data from the sensor every second. If the temperature exceeds the predefined threshold, the system triggers both visual and audible alerts, Users are prompted to activate the cooling fan by pressing the button. Once activated, the DC Motor converts electrical energy into a refreshing breeze, offering instant relief from the heat.
 
-Benefits:
+**Benefits:**
 
-  1-Comfort on the GO: Smart Summer Hat ensures comfort wherever you go.
+  **1-Comfort on the GO:** Smart Summer Hat ensures comfort wherever you go.
   
-  2-Customizable Design: the Smart Summer Hat can be custmized to suit individual preferences and style, making it a versatile accessory for any summertime activity.
+  **2-Customizable Design:** the Smart Summer Hat can be custmized to suit individual preferences and style, making it a versatile accessory for any summertime activity.
 
-Conclusion:
+**Conclusion:**
+  
   Say goodbye to sweltering summer days and hello to cool comfort with Smart Summer Hat. Experience the perfect blend of technology and convenience as you stay cool and refreshed wherever your adventures take you!
   
   
@@ -57,21 +58,21 @@ Project will look more or less like the following diagram:
 
 
 
-The project has the following architecture:
+*The project has the following architecture:*
   
-  1-Rasberry Pi Pico: The core of the system, Rasberry Pi Pico serves as the microcontroller unit (MCU) that manages all operations of the project. It interacts with and controls all the components.
+  **1-Rasberry Pi Pico:** The core of the system, Rasberry Pi Pico serves as the microcontroller unit (MCU) that manages all operations of the project. It interacts with and controls all the components.
   
-  2-Temperature Sensor: Connected to the Rasberry Pi Pico via I2C (Inter-Integrated Circuit), The temperature sensor continuously monitors the ambient temperature.
+  **2-Temperature Sensor:** Connected to the Rasberry Pi Pico via I2C (Inter-Integrated Circuit), The temperature sensor continuously monitors the ambient temperature.
   
-  3-DC Motor (FAN): The DC motor functions as a fan to provide airflow when activated. Connected to the Rasberry Pi Pico via PWM (Pulse Width Modulation).
+  **3-DC Motor (FAN):** The DC motor functions as a fan to provide airflow when activated. Connected to the Rasberry Pi Pico via PWM (Pulse Width Modulation).
   
-  4-LCD Display: The LCD display serves as the user interface, showcasing the current temperature in Celcius. Connected to the Rasberry Pi Pico via I2C.
+  **4-LCD Display:** The LCD display serves as the user interface, showcasing the current temperature in Celcius. Connected to the Rasberry Pi Pico via I2C.
   
-  5-Buzzer: The buzzer serves as an audible alert system. Connected to the Rasberry Pi Pico via PWM. The buzzer's fequency and intensity can be modulated to emit different warning sounds based on the temperature level.
+  **5-Buzzer:** The buzzer serves as an audible alert system. Connected to the Rasberry Pi Pico via PWM. The buzzer's fequency and intensity can be modulated to emit different warning sounds based on the temperature level.
   
-  6-LED Indicator: The LED indicator offers a visual cue to accompany the audible alert. It is directly controlled by the Rasberry Pi Pico's GPIO pins.
+  **6-LED Indicator:** The LED indicator offers a visual cue to accompany the audible alert. It is directly controlled by the Rasberry Pi Pico's GPIO pins.
   
-  7-Button: When pressed, the button triggers the Rasberry Pi Pico to activate the cooling fan. Connected to the Rasberry Pi Pico's GPIO pins.
+  **7-Button:** When pressed, the button triggers the Rasberry Pi Pico to activate the cooling fan. Connected to the Rasberry Pi Pico's GPIO pins.
   
 
 ## Log
@@ -86,22 +87,23 @@ The project has the following architecture:
 
 ## Hardware
 
-Hardware Components used in the Smart Summer Hat project:
-  1-Rasberry Pi Pico: Microcontroller unit responsible for managing all operations.
+*Hardware Components used in the Smart Summer Hat project:*
+ 
+  **1-Rasberry Pi Pico:** Microcontroller unit responsible for managing all operations.
   
-  2-Temperature Sensor: Monitors ambient temperature and communicates with the Rasberry Pi Pico
+  **2-Temperature Sensor:** Monitors ambient temperature and communicates with the Rasberry Pi Pico
   
-  3-DC Motor (Fan): Provides airflow for cooling.
+  **3-DC Motor (Fan):** Provides airflow for cooling.
   
-  4-LCD Display: Shows the current temperature in Celcius.
+  **4-LCD Display:** Shows the current temperature in Celcius.
   
-  5-Buzzer: Emits warning sounds.
+  **5-Buzzer:** Emits warning sounds.
   
-  6-LED: Provides visual alerts.
+  **6-LED:** Provides visual alerts.
   
-  7-Button: Enable user interaction, triggering actions such as activating the cooling fan.
+  **7-Button:** Enable user interaction, triggering actions such as activating the cooling fan.
   
-  8-A Hat: A prototype hat to make the project portable.
+  **8-A Hat:** A prototype hat to make the project portable.
 
 ### Schematics
 
