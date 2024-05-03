@@ -37,6 +37,7 @@ By developing the PicoW Garden Monitor, the goal is to create a reliable and int
     - Users can access the dashboard from their devices connected to the local network, such as smartphones, tablets, or computers.
     - Through the web interface, users can select specific plants, view live sensor data, and receive actionable insights and care recommendations.
     - The interface communicates with the Rust server to retrieve and display relevant information, ensuring a seamless user experience.
+    
 **Connection:**
 * The sensors are connected directly to the Raspberry Pi Pico microcontroller, which interfaces with them to collect data.
 * The Raspberry Pi Pico communicates with the Rust server over the local network, sending sensor data and receiving instructions.
