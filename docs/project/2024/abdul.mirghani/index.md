@@ -27,6 +27,7 @@ I chose this project to create a functional radar-like system for obstacle detec
 ## Architecture 
 
 ![Architecture Scheme](Architecture.png)
+```
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
 
@@ -38,7 +39,7 @@ Alert Module:
 
 Display Module:
     An LCD screen provides real-time feedback, displaying the distance to the detected object and the angle of the servo motor.
-
+```
     Connections:
 ```
 LCD Screen: 
