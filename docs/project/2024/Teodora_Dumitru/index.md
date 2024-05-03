@@ -42,6 +42,10 @@ More details for each component and the ispiration behind them can be seen on th
 
 Place your KiCAD schematics here.
 
+### Block diagram
+
+[block diagram](image.png)
+
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
@@ -71,7 +75,7 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [L298N](https://docs.rs/l298n/latest/l298n/struct.L298N.html) | Motor driver implementation | Used for speed and direction control |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 
 ## Links
