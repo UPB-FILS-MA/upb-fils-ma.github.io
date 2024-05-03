@@ -1,4 +1,4 @@
-#Smart Summer Hat
+##Smart Summer Hat
 
 **Rust-powered Portable Smart Summer Hat**
 
