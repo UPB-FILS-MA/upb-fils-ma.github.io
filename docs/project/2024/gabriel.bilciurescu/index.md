@@ -11,13 +11,6 @@ Auto-adjusting laptop cooler for efficient cooling and energy savings.
 
 ## Description
 
-
-<div style="text-align: center;">
-  <img src="./logo.jpg" alt="image info" style="border-radius: 15%; max-height: 150px;" />
-</div>
-
-
-
 This versatile laptop cooler works with any laptop and offers dual power options: USB interface or its built-in rechargeable battery. It features multiple temperature sensors that adjust fan speed to maintain optimal cooling, with asynchronous fans activating only when needed to save energy.
 
 The smart cooling system prevents overheating, extending your laptop's life and conserving battery. Its robust, advanced 3D-printed design is durable and well-suited for heavy use, whether for gaming, work, or streaming.
