@@ -1,5 +1,5 @@
 # Game Console
-
+ A compact game console for user-friendly games like Snake or the Chrome dinosaur game, designed for offline entertainment.
 :::info 
 
 **Author**: POSTELNECU Ioana \
@@ -16,6 +16,8 @@ My idea is to have the ability to play user-friendly games-such as Snake or the 
 I've decided to choose this project, because ever since I was a kid, I've used to play video games and I've told myself that I'll learn how to make one from scratch. On top of that, for many years my desire for playing has been decreasing, because even though I like the games, I'm getting bored of them, so I want to create one at some point, that keeps me playing it. To sum up, I want to make this as my project, because I want to understand the basics of game development, in order to actually start designing and developing my own game. 
 
 ## Architecture 
+
+![Architechture Diagram](arhitechture.png)
 
 This project's architecture revolves around the Raspberry Pi Pico W as the microcontroller, executing the game code. The LCD screen 1602 module serves as the display interface for the game graphics. An LED is integrated to signify the console's power status. User input is facilitated through buttons, with one controlling velocity and the other managing movement. To construct and test the circuit, a breadboard and jumper wires are employed, allowing seamless connectivity between components.
 
