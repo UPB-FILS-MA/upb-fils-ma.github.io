@@ -134,6 +134,8 @@ The format is
 | [LED SET ]() | Leds | [16 RON](https://www.bitmi.ro/electronica/set-200-led-uri-de-diferite-culori-3-mm-5-mm-10508.html) |
 | [Button]() | Push Button | [1 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html?search_query=button&results=18) |
 
+| TOTAL (More or Less) | | [140 RON] | 
+
 
 ## Software
 
