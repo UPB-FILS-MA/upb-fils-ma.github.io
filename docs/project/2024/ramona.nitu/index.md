@@ -28,7 +28,7 @@ LCD Display Visually Represents the Morse Code Symbols:
 5) Buzzer Emits Sound Signals Corresponding to Each Morse Code Symbol: The buzzer receives signals from the Raspberry Pi Pico to emit sound signals. Depending on the Morse code symbol being transmitted, the buzzer generates corresponding audio tones, providing auditory feedback.
 6) RGB LED Changes Colors to Provide Visual Feedback: The RGB LED receives signals from the Raspberry Pi Pico to change colors. It dynamically changes colors based on the Morse code symbols being transmitted, offering visual feedback for the translation process.
 
- ![architecture](./Architecture.jpeg)
+ ![architecture](./Architecture.jpg)
 
 ## Log
 
