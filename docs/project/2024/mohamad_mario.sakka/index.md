@@ -1,4 +1,5 @@
 # DIY Laptop Cooling Pad
+A cooling pad for laptops that can be controlled wirelessly or using buttons.
 
 :::info
 
