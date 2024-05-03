@@ -1,4 +1,5 @@
-# Multi-Sensory Morse Code Translator
+# Project Name
+MorseSense: Interactive Text-to-Morse Translator with Multi-Sensory Feedback
 
 :::info 
 
