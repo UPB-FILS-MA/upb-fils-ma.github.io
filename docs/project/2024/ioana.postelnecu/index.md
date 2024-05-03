@@ -17,7 +17,7 @@ I've decided to choose this project, because ever since I was a kid, I've used t
 
 ## Architecture 
 
-![Architechture Diagram](arhitechture.png)
+![Architechture Diagram](Arhitechture.png)
 
 This project's architecture revolves around the Raspberry Pi Pico W as the microcontroller, executing the game code. The LCD screen 1602 module serves as the display interface for the game graphics. An LED is integrated to signify the console's power status. User input is facilitated through buttons, with one controlling velocity and the other managing movement. To construct and test the circuit, a breadboard and jumper wires are employed, allowing seamless connectivity between components.
 
