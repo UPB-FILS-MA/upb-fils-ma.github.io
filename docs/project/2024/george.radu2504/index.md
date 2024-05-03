@@ -11,7 +11,7 @@ The project involves creating a smart lamp that responds to motion and ambient l
 
 ## Description
 
-This project revolves around creating a smart lamp system that enhances both convenience and energy efficiency. Utilizing the Raspberry Pi Pico W as its core, along with a motion sensor and a photoresistor, the lamp dynamically responds to its environment. By detecting motion, it ensures that illumination is provided when needed. Additionally, the lamp adjusts its brightness based on ambient light levels, conserving energy when sufficient natural light is available and optimizing comfort in various lighting conditions. This integration of motion and light sensing technology transforms the lamp into a versatile and adaptive lighting solution for any space.
+This project revolves around creating a smart lamp system that enhances both convenience and energy efficiency. Utilizing the Raspberry Pi Pico W as its core, along with a motion sensor and a photoresistor, the lamp dynamically responds to its environment. By detecting motion, it ensures that illumination is provided when needed. Additionally, the led turns on/off based on ambient light levels, conserving energy when sufficient natural light is available and optimizing comfort when there is not enough light. This integration of motion and light sensing technology transforms the lamp into a versatile and adaptive lighting solution for any space.
 
 
 ## Motivation
