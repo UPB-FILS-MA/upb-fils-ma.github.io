@@ -1,7 +1,7 @@
 # Object Detection and Alert System
 Automated Surveillance and Notification Interface.
 
-:::info 
+:::info
 
 **Author**: Mahmoud Mirghani Abdelrahman
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Abd210
