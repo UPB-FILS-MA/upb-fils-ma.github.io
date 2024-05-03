@@ -1,5 +1,5 @@
 # RC Car controlled with WIFI
-Remote Controlled Car using WIFI and a 
+Remote Controlled Car using WIFI and a phone app. 
 
 :::info 
 
