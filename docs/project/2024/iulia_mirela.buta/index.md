@@ -7,7 +7,6 @@
 
 :::
 
-
 ## Description:
 
 A fire alarm system trigerred by a fire source or other sort of light source in the proximity. It includes the following features:
@@ -58,7 +57,7 @@ The architecture of the project is the following:
 +-------------------------+
  |      Fire Sensor        |
  +-------------------------+
- 
+
                  |
                  | (Signal)
                  V
