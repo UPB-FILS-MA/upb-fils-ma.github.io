@@ -3,7 +3,7 @@ A mini game that brings the casino right to your tabletop. Spin, bet, and win bi
 
 :::info 
 
-**Author**: DUMITRU Vlad Andrei
+**Author**: DUMITRU Vlad Andrei \
 
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-kevinvlad03
 
