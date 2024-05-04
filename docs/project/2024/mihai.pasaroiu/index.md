@@ -64,6 +64,7 @@ The format is
 | Speaker | Outputs the song | [4.27 RON](https://www.optimusdigital.ro/ro/audio-difuzoare/2147-difuzor-de-1-w.html?search_query=Difuzor+de+1+W&results=100) |
 | Resistors | Limits current flow | [14.99 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html) |
 | MicroSD Card Module | Reads the song from the microSD| [4.39 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html) |
+| Capacitor | Low-pass filter(RC) | [0.39 RON](https://www.optimusdigital.ro/en/capacitors/2749-capacitor-10nf.html) |
 
 
 
@@ -71,13 +72,15 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [embedded-sdmmc-rs](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
+| [HD44780-driver](https://github.com/JohnDoneth/hd44780-driver) | LCD display driver | Used for displaying the name of the song playing |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [How to connect SD Card to Raspberry Pi Pico using SPI](https://www.youtube.com/watch?v=JrYT7aJnP_I)
+2. [How to use the LCD using I2C](https://www.tomshardware.com/how-to/lcd-display-raspberry-pi-pico)
+3. Check and search for dependecies: [1](https://docs.rs/), [2](https://crates.io/)
+4. [Example of how to play music using PWM](https://bandarra.me/2022/08/02/Play-Music-with-the-Raspberry-Pi-Pico-and-Rust/)
+5. [Audio output circuit example](https://www.hackster.io/news/learn-how-to-use-pwm-to-generate-an-audio-signal-from-your-raspberry-pi-pico-00347dece8b8)
