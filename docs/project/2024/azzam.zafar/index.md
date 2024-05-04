@@ -9,7 +9,7 @@ Security system that performs different actions based on the distance of a perso
 
 ## Description
 
-• I will use an ultrasonic sensor to detect an object, and to see how close an object is to the sensor. Based on how close the object is, certain actions will happen.
+  - I will use an ultrasonic sensor to detect an object, and to see how close an object is to the sensor. Based on how close the object is, certain actions will happen.
 
 • When the sensor will detect an object within a specific range (e.g., 100 cm) an LED will light up. If the object gets even closer (e.g., 60 cm) the LED will remain lit and a buzzer (alarm) will start buzzing. And when the object comes even closer ( e.g., less than or equal to 30cm), the LED will remain lit and the buzzer will keep buzzing and two servo motors (with carboard attached) will rotate 90 degrees (one servo motor will rotate clockwise, the other servo motor will rotate anticlockwise) to show a closing gate.
 
