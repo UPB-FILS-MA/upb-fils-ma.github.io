@@ -29,9 +29,9 @@ Depending on the temperature data, the data processing unit sends commands to th
 Data Processing and Logic Unit ↔ Network Interface:
 The network interface acts as a gateway for sending temperature data to the web server and receiving commands from the web application, facilitated by the central data processing unit.
 Network Interface ↔ Web Application:
-The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs.
+The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs. |
 
-docs/project/2024/carina.grec/LED (1).png
+<img title="a title" alt="Alt text" src="docs/project/2024/carina.grec/LED (1).png">
 
 ## Log
 
