@@ -75,7 +75,7 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [example 1](https://www.bekirbilge.com/blog/2022/12/03/parking-sensor-with-raspberry-pi-pico-w-and-hc-sr04/)
-2. [example 2](https://www.instructables.com/Raspberry-Pi-Pico-and-Proximity-Sensor/)
-3. [example 3](https://www.youtube.com/watch?v=5U1DCcJfwH4)
-4. [example 4](https://youtu.be/JvQKZXCYMUM?si=4Tzn40Ns30Ax0ocM)
+1. [Proximity Sensor With Raspberry Pi Pico W and HC-SR04](https://www.bekirbilge.com/blog/2022/12/03/parking-sensor-with-raspberry-pi-pico-w-and-hc-sr04/)
+2. [Raspberry Pi Pico and Proximity Sensor](https://www.instructables.com/Raspberry-Pi-Pico-and-Proximity-Sensor/)
+3. [Measuring distance accurately with a Raspberry Pi and a HC-SR04 sensor](https://www.youtube.com/watch?v=5U1DCcJfwH4)
+4. [How to Use the HC-SR04 Ultrasonic Sensor with Raspberry Pi](https://youtu.be/JvQKZXCYMUM?si=4Tzn40Ns30Ax0ocM)
