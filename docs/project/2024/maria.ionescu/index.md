@@ -1,9 +1,8 @@
-@ -1,100 +0,0 @@
 # Ferrari Line Follower and Obstacle Avoider Car 
 
 :::info 
 
-**Author**: Ionescu Maria-Magdalena
+**Author**: Ionescu Maria-Magdalena \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-IonescuMariaMagdalena 
 
 :::
