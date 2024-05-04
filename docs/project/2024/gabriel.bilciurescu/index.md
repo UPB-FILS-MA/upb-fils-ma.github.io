@@ -101,7 +101,7 @@ The format is
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Kalman Filter](https://github.com/strawlab/adskalman-rs)
-2. [MT3608 DC-DC Vol]([https://example3.com](https://www.youtube.com/watch?v=LMKiPE_2Uu4&t=557s))
+2. [MT3608 DC-DC Vol](https://www.youtube.com/watch?v=LMKiPE_2Uu4&t=557s)
 3. [Transistor Interfacing to Pico W](https://www.youtube.com/watch?v=6KoJ_D2ashI)
 4. [Temperature sensor tutorial](https://www.youtube.com/watch?v=lIpgGru2Wv0)
 5. [Beginners Guide to 3D Printing](https://www.youtube.com/watch?v=b2Od4YHcLAQ)
