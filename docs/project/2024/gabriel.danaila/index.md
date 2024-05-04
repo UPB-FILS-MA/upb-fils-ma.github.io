@@ -61,18 +61,18 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [Kit DIY Difuzor Mini TESLA Coil 15-24V Plasma] | PCB BoardKit with Tesla Coil | [45 RON](https://www.olx.ro/d/oferta/kit-diy-difuzor-mini-tesla-coil-15-24v-plasma-IDgLEoY.html) |
-| [2x Cablu alimentare si date] | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
-| [Header Pins for Pi Pico W] | Header Pins | [4 RON] |
-| [Modul adaptor USB/UART CP2102] | UART to USB Adapter | [32 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
-| [Kit Start Componente Electronice] | Kit with Electronic components | [100 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
+| Kit DIY Difuzor Mini TESLA Coil 15-24V Plasma | PCB BoardKit with Tesla Coil | [45 RON](https://www.olx.ro/d/oferta/kit-diy-difuzor-mini-tesla-coil-15-24v-plasma-IDgLEoY.html) |
+| 2x Cablu alimentare si date | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
+| Header Pins for Pi Pico W | Header Pins | [4 RON] |
+| Modul adaptor USB/UART CP2102 | UART to USB Adapter | [32 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
+| Kit Start Componente Electronice | Kit with Electronic components | [100 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [Work in progress] | Will be updated | TBA |
+| Work in progress | Will be updated | TBA |
 
 ## Links
 
