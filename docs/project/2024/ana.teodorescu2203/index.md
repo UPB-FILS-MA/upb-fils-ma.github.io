@@ -105,7 +105,6 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [pwm](https://docs.rs/rp2040-hal/latest/rp2040_hal/pwm/index.html) | Pulse-width modulation | Used for controlling the buzzer |
-| [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | GPIO manipulation | Used for interacting with GPIO pins |
 | [embedded-hal](https://docs.rs/embedded-hal/latest/embedded_hal/) | Hardware abstraction library | Include support for GPIO, SPI, I2C, and more |
 
 
