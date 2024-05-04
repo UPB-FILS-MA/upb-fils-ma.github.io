@@ -3,7 +3,7 @@ Simulate cybersecurity threats and defenses within a physical environment using 
 
 :::info 
 
-**Author**: Ionescu Rares-Andrei
+**Author**: Ionescu Rares-Andrei \
 **GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-RaresI)
 
 :::
