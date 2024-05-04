@@ -52,6 +52,8 @@ Common Cathode RGB LED - a small and efficient multi-color LED capable of displa
 Breadboard and Jumper Wires - used for prototyping without soldering, ideal for testing and adjusting the circuit layout during development. Jumper wires facilitate connections between the components on the breadboard.
 Resistors - used for current limiting and voltage division. They are crucial for protecting components like the RGB LED and ensuring correct signal levels are applied to inputs.
 
+docs/project/2024/carina.grec/LED (1).png
+
 ### Schematics
 
 Place your KiCAD schematics here.
