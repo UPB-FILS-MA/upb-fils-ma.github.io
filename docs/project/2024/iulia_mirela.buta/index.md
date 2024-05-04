@@ -1,11 +1,13 @@
 # Fire alarm system
+A fire alarm system trigerred by a fire source or other sort of light source in the proximity
 
 :::info
 
-*Author*: Buta Iulia-Mirela
+*Author*: Buta Iulia-Mirela \
 *GitHub Project Link*: https://github.com/UPB-FILS-MA/project-ButaIulia
 
 :::
+
 
 
 ## Description:
@@ -85,25 +87,21 @@ The format is
 
 -->
 
-| Device                                                                                                  | Usage               | Price                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Rapspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [39 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                                                                                                                                                                                        |
-| [Breadboard]()                                                                                          | Main board          | [0 RON(Already had this)]()                                                                                                                                                                                                                                                          |
-| [ 16×2 I2C LCD Display ]()                                                                         | Display             | [14,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html)                                                                                                                                                           |
-| [IR Flame Sensor]()                                                                | Flame Sensor     | [2,49 RON](https://www.optimusdigital.ro/en/optical-sensors/110-ir-flame-sensor.html)                                                                                                                         |
-| [Buzzer]()                                                                                              | Buzzer              | [0 RON (Already had this)]()                                                                                                                                                                                                                                                         |
-| [4 Mother-Father wires 30 cm]()                                                                         | Connectors          | [0 RON(Already had this)]()                                                                                                                                                                                                                                                          |
-| [6 Father-Father wires]()                                                                               | Connectors          | [0 RON(Already had this)]()                           |     
-| [ RGB LED Module]()                                                                                          |        | [0 RON(Already had this)]()                                                                                                                                                                                                                               
+| Device                                                                                                  | Usage               | Price                                                      
+| [Rapspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [39 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)  |
+| [Breadboard] | Main board          | [0 RON(Already had this)]|
+| [ 16×2 I2C LCD Display ]| Display| [14,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html)|
+| [IR Flame Sensor]| Flame Sensor     | [2,49 RON](https://www.optimusdigital.ro/en/optical-sensors/110-ir-flame-sensor.html)|
+| [Buzzer] |Buzzer | [0 RON (Already had this)]|  
+| [4 Mother-Father wires 30 cm]  | Connectors          | [0 RON(Already had this)]   |
+| [6 Father-Father wires]| Connectors          | [0 RON(Already had this)] |     
+| [ RGB LED Module]   |    LED  | [0 RON(Already had this)]|                                   
 
 ## Software
 
 | Library                                  | Description                        | Usage                              |
 | ---------------------------------------- | ---------------------------------- | ---------------------------------- |
-| [st7789] | Display driver for st7789 | Used for the display for Pico Explorer |
-| [Rust](https://www.rust-lang.org/)       | Programming Language               | Programming Language               |
-| [Embassy](https://embassy.dev/)          | Framework                          | Framework                          |
-| [embedded-graphics]         | 2D graphics library                         | Used for drawing to the display           
+| [VsCode](https://code.visualstudio.com/) | Integrated Development Environment | Integrated Development Environment |         
 
 
 ## Links
