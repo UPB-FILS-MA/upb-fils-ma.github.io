@@ -86,10 +86,18 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [lcd1602-driver](https://github.com/eZioPan/lcd1602-driver) | Driver for the LCD 1602 | Used to operate the LCD 1602|
-| [heapless](https://github.com/rust-embedded/heapless) | Used to make strings on the pico | Needed to convert data to string in order to display the data on the LCD 1602 |
+| [lcd1602-driver](https://github.com/eZioPan/lcd1602-driver) | Driver for the LCD 1602 I2C| Used to operate the LCD 1602|
+| [heapless](https://docs.rs/heapless/latest/heapless/) | Used to make strings on the pico | Needed to convert data to string in order to display the data on the LCD 1602 I2C|
 | [hc_sr04 module](https://github.com/Benehiko/pico-ultrasonic-rs) | Driver for the HC-SR04 Ultrasonic Sensor | Used to operate the HC-SR04 Ultrasonic Sensor |
+| [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | Pulse-Width Modulation | Used for controlling the servo motors and the buzzer's noise level|
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html) | Asynchronous Executor for Embedded Rust Systems | Used for task scheduling and asynchronous programming |
+| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Hardware Abstraction Layer for the RP2040 | Used to operate the peripheral devices connected the Raspberry Pi Pico |
+| [embassy-time](https://embassy.dev/book/dev/time_keeping.html) | Time management library | This library is used for managing timekeeping, timeouts and delays |
+| [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | Library for handling GPIO functionalities | Used to control and configure GPIO pins on the microcontroller board |
+| [log](https://docs.rs/log/latest/log/) | Lightweight Logging Facade | Used for logging messages |
+| [embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | USB implementation of the log crate | Used for logging messages over USB |
+
+
 
 ## Links
 
