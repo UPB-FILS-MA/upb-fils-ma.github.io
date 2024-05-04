@@ -57,23 +57,24 @@ The architecture of the project is the following:
 
 ### Schematics
 
-+-------------------------+
- |      Fire Sensor        |
- +-------------------------+
-
-                 |
-                 | (Signal)
-                 V
-         +-----------------+
-         | Raspberry Pi Pico|
-         +-----------------+
-                 |
-      +----------+----------+
-      |                     |
-      V                     V
- +---------+           +-----------+
- |  Buzzer |           |  ST7789   |
- +---------+           +-----------+
+-+-------------------------+
+- |      Fire Sensor        |
+- +-------------------------+
+-
+-                 |
+-                 | (Signal)
+-                 V
+-         +-----------------+
+-         | Raspberry Pi Pico|
+-         +-----------------+
+-                 |
+-      +----------+----------+
+-      |                     |
+-      V                     V
+- +---------+           +-----------+
+- |  Buzzer |           |  ST7789   |
+- +---------+           +-----------+
++```
 
 ### Bill of Materials
 
@@ -101,7 +102,6 @@ The format is
 
 | Library                                  | Description                        | Usage                              |
 |-|-|-|
-| [VsCode](https://code.visualstudio.com/) | Integrated Development Environment | Integrated Development Environment |         
 
 
 ## Links
