@@ -10,7 +10,7 @@ A game in rust that resembles the classic Snake Game from the Nokia 5110 phones 
 
 ## Description
 
-This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. If you hit yourself or a wall, it's game over and you have to start again. The game itself is displayed on an actual Nokia 5110 LCD display.
+This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. If you hit yourself or a wall, it's game over and you have to start again. The game itself is displayed on an actual Nokia 5110 LCD display. Good luck and enjoy!
 
 ## Motivation
 
@@ -24,17 +24,28 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ### Week 6 - 12 May
 
+TBD
+
 ### Week 7 - 19 May
+
+TBD
 
 ### Week 20 - 26 May
 
+TBD 
+
 ## Hardware
 
-Detail in a few words the hardware used.
+- **Joystick Module** is used for controlling the snake (interacting with the game) and it's connected to ADC pins such that the analog voltage is converted to digital values.
+- **Passive Buzzer** is used for *beeping* in various situations (sound feedback from the game).
+- **Nokia 5110 Display** is used for displaying the game itself.
+- **TM1637 Module** is used for keeping track of the score while playing.
+- **Raspberry Pi Pico H** is used as the main component (microcontroller) responsible for processing input data.
+- **Breadboard** is used for connecting every pin of the hardware components.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+TBD
 
 ### Bill of Materials
 
@@ -56,6 +67,10 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
 
 ## Links
 
