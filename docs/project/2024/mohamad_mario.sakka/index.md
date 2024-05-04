@@ -88,7 +88,7 @@ The format is
 | [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
 | [Cooling Pad Frame] |  Frame That Holds Fans & Laptop | [not sure] |
-| **TOTAL** | - | [**186.64 RON**]() |
+| **TOTAL** | - | [**186.64 RON**] |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
