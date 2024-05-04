@@ -95,7 +95,6 @@ Place your KiCAD schematics here.
 |---------|-------------|-------|
 | [rppal](https://github.com/golemparts/rppal) | Raspberry Pi Peripheral Access Library | Provides an interface for accessing various Raspberry Pi peripherals |
 | [panic-halt](https://github.com/korken89/panic-halt) | panic handler that halts the program | Used to handle panics gracefully |
-| [elf2uf2](https://github.com/JoNil/elf2uf2-rs) | for flashing onto microcontrollers | Converts Rust executables (in ELF format) to UF2 format |
 
 ## Links
 
