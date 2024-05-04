@@ -18,14 +18,14 @@ I have chosen this project because I wanted to implement something that could tu
 
 ## Architecture 
 
-Components <br>
-  -> Raspberry Pi Pico W: Microcontroller <br>
-  -> Mini PIR HC-SR505 Sensor: Detects movement around the sensor <br>
-  -> Photo Resistor: Used to detect the light intensity around the resistor <br>
+Components \
+  -> Raspberry Pi Pico W: Microcontroller \
+  -> Mini PIR HC-SR505 Sensor: Detects movement around the sensor \
+  -> Photo Resistor: Used to detect the light intensity around the resistor 
 
-Connections <br>
-  -> Both the PIR HC-SR505 sensor and the photo resistor are connected to the Raspberry Pi Pico W <br>
-  -> The LED is also connected to the Rapberry Pi Pico W <br>
+Connections \
+  -> Both the PIR HC-SR505 sensor and the photo resistor are connected to the Raspberry Pi Pico W \
+  -> The LED is also connected to the Rapberry Pi Pico W \
   -> The buttons are connected to the LED and also to the Raspberry Pi Pico W in order to send a signal when to get the data from the sensor and photo resistor
 
 
