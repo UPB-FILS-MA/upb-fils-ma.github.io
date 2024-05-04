@@ -31,7 +31,7 @@ The network interface acts as a gateway for sending temperature data to the web 
 Network Interface ↔ Web Application:
 The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs. |
 
-<img title="a title" alt="Alt text" src="docs/project/2024/carina.grec/LED (1).png">
+<img src="LED (1).png">
 
 ## Log
 
