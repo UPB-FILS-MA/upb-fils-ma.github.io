@@ -101,5 +101,6 @@ The format is
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [YouTube](https://www.youtube.com/watch?v=l9MAZu7yvN4&ab_channel=Shilleh)
+2. [YouTube](https://www.youtube.com/watch?v=OapZNPaKrmA&ab_channel=ElectronicsUniversity)
 
 
