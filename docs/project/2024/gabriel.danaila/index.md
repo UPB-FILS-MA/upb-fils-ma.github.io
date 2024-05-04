@@ -65,7 +65,7 @@ The format is
 | 2x Cablu alimentare si date | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
 | Header Pins for Pi Pico W | Header Pins | 4 RON |
 | Modul adaptor USB/UART CP2102 | UART to USB Adapter | [32 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
-| Kit Start Componente Electronice | Kit with Electronic components | [100 RON](https://www.emag.ro/modul-adaptor-usb-uart-cp2102-waveshare-5-3-3-v-cp2102usbuartboard-micro-waveshare11325/pd/DNDJFQMBM/) |
+| Kit Start Componente Electronice | Kit with Electronic components | [100 RON](https://www.emag.ro/kit-start-componente-electronice-ai777/pd/DXRJ4TMBM/) |
 
 
 ## Software
