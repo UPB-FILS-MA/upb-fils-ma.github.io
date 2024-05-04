@@ -9,7 +9,7 @@ Security system that performs different actions based on the distance of a perso
 
 ## Description
 
-  - I will use an ultrasonic sensor to detect an object, and to see how close an object is to the sensor. Based on how close the object is, certain actions will happen.
+  - I will use an Ultrasonic sensor to detect an object, and to see how close an object is to the sensor. Based on how close the object is, certain actions will happen.
 
   - When the sensor will detect an object within a specific range (e.g., 100 cm) an LED will light up. If the object gets even closer to the sensor (e.g., 60 cm) the LED will remain lit and a buzzer (alarm) will start buzzing. And when the object comes even closer ( e.g., less than or equal to 30cm), the LED will remain lit and the buzzer will keep buzzing and two servo motors (with carboard attached) will rotate 90 degrees (one servo motor will rotate clockwise, the other servo motor will rotate anticlockwise) to show a closing gate.
 
@@ -41,7 +41,7 @@ I decided on this idea because of its real world applications. This project is a
 
   - Using female-to-male and male-to-male jumper wires, components will be connected via a breadboard.
 
-  - Object detection and distance measurement will be handled by the HC-SR04 ultrasonic sensor. Various states will be indicated by; a monochromatic LED that is connected with a 1K resistor to limit current, a buzzer, and two SG90 servo motors.
+  - Object detection and distance measurement will be handled by the HC-SR04 Ultrasonic sensor. Various states will be indicated by; a monochromatic LED that is connected with a 1K resistor to limit the current, a Buzzer, and two SG90 Servo motors.
 
   - An LCD will be used to display the distance of the object in real-time.
 
@@ -103,5 +103,5 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [Using an ultrasonic sensor with Raspberry Pi Pico](https://how2electronics.com/hc-sr04-ultrasonic-distance-sensor-with-raspberry-pi-pico/)
+1. [Using an Ultrasonic sensor with Raspberry Pi Pico](https://how2electronics.com/hc-sr04-ultrasonic-distance-sensor-with-raspberry-pi-pico/)
 2. [Using a servo motor with a Raspberry Pi Pico](https://how2electronics.com/how-to-control-servo-motor-with-raspberry-pi-pico/)
