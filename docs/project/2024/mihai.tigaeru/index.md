@@ -10,11 +10,11 @@ A game in rust that resembles the classic Snake Game from the Nokia 5110 phones 
 
 ## Description
 
-Describe in a few words your project idea.
+This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. The game itself will be displayed on an actual Nokia 5110 LCD display.
 
 ## Motivation
 
-Why did you choose this project?
+I choose this project mainly because I've always wanted to create a fully functional game from zero, including hardware and I've always liked the idea of retro-themed stuff. Also, by looking on the internet and finding out that there's actual Nokia displays that can be easily used with microcontrollers I instantly thought about one of the most popular Nokia games, Snake, and how cool it would be to resemble it.
 
 ## Architecture 
 
@@ -43,7 +43,7 @@ Place your KiCAD schematics here.
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico H](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [40 RON](https://www.bitmi.ro/placi-de-dezvoltare/placa-de-dezvoltare-raspberry-pi-pico-h-rp2040-264kb-ram-10848.html) |
-| [2-axis (XY) Joystick Module ] | Game Interactions | [6 RON](https://www.bitmi.ro/module-electronice/modul-joystick-cu-2-axe-x-y-10454.html) |
+| 2-axis (XY) Joystick Module | Game Interactions | [6 RON](https://www.bitmi.ro/module-electronice/modul-joystick-cu-2-axe-x-y-10454.html) |
 | Breadboard 830 | Hardware Pins Connections | [9 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
 | Pasive Buzzer Module | Sounds | [4 RON](https://www.bitmi.ro/module-electronice/modul-buzzer-pasiv-ky-006-10678.html) |
 | LCD Nokia 5110 Display 84x48 | Game Displaying | [24 RON](https://cleste.ro/ecran-nokia-5110-84x48.html) |
