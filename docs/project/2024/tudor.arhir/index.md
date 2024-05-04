@@ -47,7 +47,7 @@ The idea is simple : someone who drinks alcohol(a beer for example) blows into t
 
 Place your KiCAD schematics here.
 
-![alt text](image-1.png)
+![Block diagram](image-1.png)
 
 
 ### Bill of Materials
