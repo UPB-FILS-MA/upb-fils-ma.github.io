@@ -71,8 +71,6 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [pir-motion-sensor](https://crates.io/crates/pir-motion-sensor/2.0.2) | Rust library for PIR motion sensors |For working with PIR sensors, the HC-SR501 speciffically |
 
 ## Links
