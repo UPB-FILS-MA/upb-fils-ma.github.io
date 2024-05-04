@@ -81,7 +81,7 @@ The format is
 | [Breadboard](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=143) | for prototyping | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=143) |
 | [2n2222 NPN BJT](https://pdf1.alldatasheet.com/datasheet-pdf/view/15067/PHILIPS/2N2222.html) | NPN BJT Transistors for current amplification | [2 RON](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=2n2222&results=9) |
 | [TP4056](https://pdf1.alldatasheet.com/datasheet-pdf/view/1487471/ETC2/TP4056.html) | Charging module for the battery | [6 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-incarcatoare/7534-incarcator-tp4056-cu-micro-usb-pt-baterie-lipo-1a-cu-protectie-pentru-circuite.html?search_query=modul+incarcator+&results=37) |
-| [ 18650 LI-ION Battery 3200mA 10A Panasonic]() |  Battery | [23 RON](https://www.emag.ro/acumulator-18650-li-ion-3200ma-10a-panasonic-lincr18650bd/pd/DL86WWBBM/) |
+| [18650 LI-ION Battery 3200mA 10A Panasonic]() |  Battery | [23 RON](https://www.emag.ro/acumulator-18650-li-ion-3200ma-10a-panasonic-lincr18650bd/pd/DL86WWBBM/) |
 
 <!-- | []() |  | []() | -->
 
@@ -89,13 +89,22 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [OneWire](https://github.com/kellerkindt/onewire) | One Wire protocol | Protocol for gathering data from the sensors |
+| [embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Embassy Hardware Abstraction Layer (HAL) for the Raspberry Pi RP2040 microcontroller | Used to program the Pico |
+| [embassy_sync](https://docs.embassy.dev/embassy-sync/git/default/index.html) | Synchronization primitives and data structures with async support | Used for communicating through different tasks |
+| [embassy-executor](https://crates.io/crates/embassy-executor) | An async/await executor designed for embedded usage | Used for task execution |
+| [embassy-time](https://crates.io/crates/embassy-time) | Instant and Duration for embedded no-std systems, with async timer support | Timekeeping, delays and timeouts. |
+| [embassy-net](https://crates.io/crates/embassy-net)| Async TCP/IP network stack for embedded systems | To send data to the computer through wifi |
+| [Kalman Filter](https://github.com/strawlab/adskalman-rs) | A filter for smoothing readings from sensors | To correct the temperature value sent by the sensors |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
+1. [Kalman Filter](https://github.com/strawlab/adskalman-rs)
+2. [MT3608 DC-DC Vol]([https://example3.com](https://www.youtube.com/watch?v=LMKiPE_2Uu4&t=557s))
+3. [Transistor Interfacing to Pico W](https://www.youtube.com/watch?v=6KoJ_D2ashI)
+4. [Temperature sensor tutorial](https://www.youtube.com/watch?v=lIpgGru2Wv0)
+5. [Beginners Guide to 3D Printing](https://www.youtube.com/watch?v=b2Od4YHcLAQ)
+6. [TP4056 Charging Module](https://www.youtube.com/watch?v=jE0O8PP-wsw)
 ...
