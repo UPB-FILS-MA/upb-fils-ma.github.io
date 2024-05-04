@@ -5,7 +5,6 @@ The project involves creating a smart lamp that responds to motion and ambient l
 :::info 
 
 **Author**: Radu George-Alexandru \
-
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-George2543
 
 :::
@@ -22,7 +21,7 @@ I choose to persue this smart lamp project because I was thinking that one of th
 ## Architecture 
 
 
-![Rasberry Pi Pico W (5)](https://github.com/George2543/upb-fils-ma.github.io/assets/154756379/599a908e-feed-4ca3-8aa4-25665cae1950)
+![Architecture](./Architecture.png)
 
 
 Main components:
@@ -100,7 +99,7 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [YouTube](https://www.youtube.com/watch?v=l9MAZu7yvN4&ab_channel=Shilleh)
-2. [YouTube](https://www.youtube.com/watch?v=OapZNPaKrmA&ab_channel=ElectronicsUniversity)
+1. [How to Connect BH1750 with the Raspberry Pi Pico/Pico W: Measure Ambient Light for Smart Lighting](https://www.youtube.com/watch?v=l9MAZu7yvN4&ab_channel=Shilleh)
+2. [Smart Light | LDR | Relay | Arduino Uno | Arduino project | Smart Bulb | Smart Street Light | Bulb](https://www.youtube.com/watch?v=OapZNPaKrmA&ab_channel=ElectronicsUniversity)
 
 
