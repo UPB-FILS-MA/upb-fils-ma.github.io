@@ -3,7 +3,7 @@ The project aims to create a Pacman game along with a wii remote
 
 :::info 
 
-**Author**: Solomon Miruna-Maria in collaboration with Balba Tudor-Neculai
+**Author**: Solomon Miruna-Maria in collaboration with Balba Tudor-Neculai\
 **GitHub Project Link**: [pacman game] ()
 
 :::
