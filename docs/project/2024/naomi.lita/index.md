@@ -1,16 +1,17 @@
 # Automated Window Blinds
 
+Fully automated blinds that roll up and down at a set time.
+
 :::info 
 
 **Author**: Naomi Lita in collaboration with Rebeca Chiorean \
-**GitHub Project Link**: [my github](https://github.com/UPB-FILS-MA/project-nimintz)
-[Rebeca's github](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-nimintz
 
 :::
 
 ## Description
 
-My project aims to automate a window blinds roller. The roller will be controlled through a web page on which I can set a time (like an alarm) to roll up/down the blinds or with a button to roll up/down directly. Also, my project will be connected to Rebeca's project. Her pico wand will be able to control the up/down movement of my window blinds. 
+My project aims to automate a window blinds roller. The roller will be controlled through a web page on which I can set a time (like an alarm) to roll up/down the blinds or with a button to roll up/down directly. Also, my project will be connected to Rebeca's project. Her pico wand will be able to control the up/down movement of my window blinds with a hand gesture. 
 
 ## Motivation
 
@@ -52,14 +53,17 @@ The format is
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56,23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=Raspberry+Pi+Pico+WH%2C+Wireless+Headers&results=1031) |
+| [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | the microcontroller | [56,23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=Raspberry+Pi+Pico+WH%2C+Wireless+Headers&results=1031) |
 | Kit Breadboard | to place the components | [24,61 RON](https://ardushop.ro/ro/electronica/163-kit-breadboard830-65xfire-jumper-sursa-alimentare-335v.html?search_query=KIT+Breadboard830+++65xfire+jumper+++sursa+alimentare+3%2C3%2F5V&results=694) |
 | Resistors | regulate the power supply | [12,29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+&results=429) |
-| Stepper Motor 28BYJ-48 5V and Driver ULN2003| the motor to rotate the blinds and the driver that connects it pico | [16,97 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/101-driver-uln2003-motor-pas-cu-pas-de-5-v-.html) |
-| 3D printed case for device | holding all components together |
+| [Stepper Motor 28BYJ-48 5V and Driver ULN2003](https://www.hwlibre.com/en/28bj-48/)| the motor to rotate the blinds and the driver to connect it to the microcontroller | [16,97 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/101-driver-uln2003-motor-pas-cu-pas-de-5-v-.html) |
+| 3D printed toothed disks | connect the motor to the blinds |
+| 3D printed case for device | hold all components together |
 
 
 ## Software
+
+I only included those specific for this project.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
@@ -72,3 +76,4 @@ The format is
 
 1. [3D printed and fully automated Roller Blind Motor](https://imgur.com/a/xuQjH3z)
 2. [Pico Project: Automated window blinds that open at sunrise and close at sunset](https://www.reddit.com/r/raspberrypipico/comments/wbdsz1/pico_project_automated_window_blinds_that_open_at/)
+3. [28BYJ-48 Stepper Motor with Raspberry PI Pico](https://www.youtube.com/watch?v=VM3S9CiyPzY&t=2s)
