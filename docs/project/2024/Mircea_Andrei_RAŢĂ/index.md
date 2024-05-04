@@ -30,7 +30,7 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 ## Architecture 
 
-![System Diagram](https://i.imgur.com/VssvqIb.png)
+![System Diagram](arhitecture.png)
 
 ## Log
 
