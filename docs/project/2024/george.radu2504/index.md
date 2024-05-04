@@ -16,7 +16,7 @@ This project revolves around creating a smart lamp system that enhances both con
 
 ## Motivation
 
-Why did you choose this project?
+I choose to persue this smart lamp project because I was thinking that one of the most important facilities of a smart house are the lights. This project tackles energy efficiency by innovating traditional lighting with a Raspberry Pi Pico W and motion/light sensors. It's a technical challenge that excites me, merging hardware and software seamlessly, so that I can craft a smart home solution that contributes to a mindful energy consumption.
 
 ## Architecture 
 
