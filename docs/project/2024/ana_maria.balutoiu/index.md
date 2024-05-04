@@ -1,6 +1,7 @@
 # Magnetic Door Alarm System
 A simple security device
-:::
+
+:::info
 
 **Author**: Băluțoiu Ana-Maria \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-arshiii16
