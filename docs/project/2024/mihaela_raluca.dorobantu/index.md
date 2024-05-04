@@ -90,12 +90,12 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [33 RON](https://www.emag.ro/microcontroller-raspberry-pi-rp2040-pico/pd/DKQQWNMBM/) |
-| [HC-SR04 Ultrasonic Sensor] | Measures distances | [18 RON](https://www.emag.ro/senzor-ultrasonic-hc-sr04-cl09/pd/DS0C5JBBM/) |
-| [MG995 Servo] | Allows the sensor to rotate 180-degree for full-range scanning | [39 RON](https://www.emag.ro/motor-servo-mg995-11kg-180grade-cl845/pd/DZSHBRBBM/) |
-| [HW-094 Motor Controller] | Manages the operation of the robot's motors	| [27 RON](https://www.emag.ro/modul-l298n-cu-punte-h-dubla-cl26/pd/D2ZZ5JBBM/)|
-| [Bluetooth Module] | Facilitates data transfer to PC | [29 RON](https://www.emag.ro/modul-bluetooth-hc-05-cl263/pd/D0966JBBM/?utm_campaign=share_product&utm_source=mobile_dynamic_share&utm_medium=android) |
-| [Battery Pack (for Motor Controller)] | Supplies energy to the motors and servo | [3 RON](https://www.emag.ro/suport-cu-fire-pentru-baterii-9v-oky0252-1/pd/D6R726MBM/) |
-| [Source (for Raspberry Pi Pico) + Breadbord + Wires] | Provides power to the microcontroller  | [35 RON](https://www.emag.ro/kit-breadboard-830-gauri-65-fire-modul-tensiune-alimentare-mb102-tri273/pd/DY1YP6BBM/) |
+| [HC-SR04 Ultrasonic Sensor](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf) | Measures distances | [18 RON](https://www.emag.ro/senzor-ultrasonic-hc-sr04-cl09/pd/DS0C5JBBM/) |
+| [MG995 Servo](https://components101.com/motors/mg995-servo-motor) | Allows the sensor to rotate 180-degree for full-range scanning | [39 RON](https://www.emag.ro/motor-servo-mg995-11kg-180grade-cl845/pd/DZSHBRBBM/) |
+| [HW-094 Motor Controller](https://www.gotronic.fr/pj2-35233-eng-1776.pdf) | Manages the operation of the robot's motors	| [27 RON](https://www.emag.ro/modul-l298n-cu-punte-h-dubla-cl26/pd/D2ZZ5JBBM/)|
+| [Bluetooth Module](https://components101.com/wireless/hc-05-bluetooth-module) | Facilitates data transfer to PC | [29 RON](https://www.emag.ro/modul-bluetooth-hc-05-cl263/pd/D0966JBBM/?utm_campaign=share_product&utm_source=mobile_dynamic_share&utm_medium=android) |
+| [Battery Pack (for Motor Controller)](https://) | Supplies energy to the motors and servo | [3 RON](https://www.emag.ro/suport-cu-fire-pentru-baterii-9v-oky0252-1/pd/D6R726MBM/) |
+| [Source (for Raspberry Pi Pico) + Breadbord + Wires](https://) | Provides power to the microcontroller  | [35 RON](https://www.emag.ro/kit-breadboard-830-gauri-65-fire-modul-tensiune-alimentare-mb102-tri273/pd/DY1YP6BBM/) |
 
 
 
