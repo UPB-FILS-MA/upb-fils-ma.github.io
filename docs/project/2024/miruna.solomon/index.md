@@ -1,10 +1,10 @@
-# Project Name
-A one line project description
+# Pacman Game
+The project aims to create a Pacman game along with a wii remote
 
 :::info 
 
-**Author**: Student Name \
-**GitHub Project Link**: link_to_github
+**Author**: Solomon Miruna-Maria in collaboration with Balba Tudor-Neculai
+**GitHub Project Link**: [pacman game] ()
 
 :::
 
