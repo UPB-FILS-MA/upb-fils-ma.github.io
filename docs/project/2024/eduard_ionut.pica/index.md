@@ -36,7 +36,7 @@ To operate a 12V cooling fan, a voltage amplifier is employed to boost the outpu
 
 The circuit features an on/off button that allows users to power the system up or down, and an LED indicator that signals whether the cooling system is currently active or inactive.
 
- ![image info](./arhitecture.png)
+ ![architecture](./arhitecture.png)
 
 ## Log
 
