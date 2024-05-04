@@ -4,7 +4,7 @@ An autonomous indoor robot equipped with a 180-degree rotating ultrasonic sensor
 
 :::info 
 
-**Author**: Mihaela-Raluca Dorobanțu
+**Author**: Mihaela-Raluca Dorobanțu \
 **GitHub Project Link**: https://github.com/Raluca3012/upb-fils-ma.github.io
 
 :::
@@ -27,7 +27,7 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
 
 ## Architecture 
 
-
+![Architecture photo](./architecture.png)
 
 1. **SmartBot Navigator Unit:**
    - The core of the system, this unit houses all operational components. It’s designed to navigate indoor spaces autonomously using various sensors and actuators.
@@ -115,4 +115,3 @@ The format is
 1. [Pet Robot](https://www.instructables.com/Build-Your-Own-Desktop-Pet-Robot-With-Arduino/)
 2. [Distance Sensor Detector](https://ocw.cs.pub.ro/courses/pm/prj2023/abirlica/bogdan-toma)
 3. [Bluetooth Car](https://ocw.cs.pub.ro/courses/pm/prj2014/amusat/bluetooth-car)
-
