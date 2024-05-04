@@ -47,7 +47,7 @@ Raspberry Pi Pico WH (Wireless+Headers) - This is the main microcontroller board
 
 Buzzer - An audio output device. It can produce sound signals corresponding to Morse code symbols when activated by the microcontroller.
 
-LCD Hat 1602 for Raspberry Pi - This is an LCD display module with a 16x2 character display. It will be used to visually display the translated Morse code text.
+LCD 1602 with I2C interface - This is an LCD display module with a 16x2 character display. It will be used to visually display the translated Morse code text.
 
 Breadboard Kit (830 points) + Jumper Wires + Power Supply - The breadboard provides a platform for prototyping and connecting various components without soldering. Jumper wires will be used to make connections between components. The power supply ensures stable power for the circuit.
 
