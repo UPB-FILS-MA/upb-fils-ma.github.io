@@ -10,11 +10,11 @@ A game in rust that resembles the classic Snake Game from the Nokia 5110 phones 
 
 ## Description
 
-This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. The game itself will be displayed on an actual Nokia 5110 LCD display.
+This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. If you hit yourself or a wall, it's game over and you have to start again. The game itself is displayed on an actual Nokia 5110 LCD display.
 
 ## Motivation
 
-I choose this project mainly because I've always wanted to create a fully functional game from zero, including hardware and I've always liked the idea of retro-themed stuff. Also, by looking on the internet and finding out that there's actual Nokia displays that can be easily used with microcontrollers I instantly thought about one of the most popular Nokia games, Snake, and how cool it would be to resemble it.
+I've chosen this project mainly because I've always wanted to create a fully functional game from zero, including hardware and I've always liked the idea of retro-themed stuff. Also, by looking on the internet and finding out that there's actual Nokia displays that can be easily used with microcontrollers I've instantly thought about one of the most popular Nokia games, Snake, and how cool it would be to recreate it using Rust.
 
 ## Architecture 
 
