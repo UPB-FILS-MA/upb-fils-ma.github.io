@@ -19,7 +19,9 @@ As a game enthusiast and tech geek, I wanted something to combine both of them. 
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
+![Block Diagram](img/front%20view%20robotic%20arm.jpg)
+![Block Diagram](img/side%20view%20robotci%20arm.jpg)
+![Block Diagram](img/simplified%20schematic.jpg)
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
 
