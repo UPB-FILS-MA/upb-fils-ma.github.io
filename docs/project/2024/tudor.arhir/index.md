@@ -16,8 +16,9 @@ A breathalyzer which detects the alcohol in the blown air.
 ## Motivation
 
 I chose this project based on two important factors:
--on my 20th birthday my friends got me a real breathalyzer which is very usefull for me because i love to drive
--i wanted to make it more practical and easy to use for anybody at any time(we use it at gatherings and parties)
+- on my 20th birthday my friends got me a real breathalyzer which is very usefull for me because i love to drive
+- I wanted to make it more practical and easy to use for anybody at any time(we use it at gatherings and parties)
+
 I want to put in use everything that i learned until now and to learn new things that will make this passion of mine to grown on a larger scale.
 
 ## Architecture 
@@ -46,7 +47,7 @@ The idea is simple : someone who drinks alcohol(a beer for example) blows into t
 
 Place your KiCAD schematics here.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 
 ### Bill of Materials
@@ -67,15 +68,14 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 peripherals | Used for accessing the peripherals of the Pico W |
+| Work in progress | To be updated | TBA |
 
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [How does a breathalyzer work](https://www.medicalnewstoday.com/articles/breathalyzer-test)
+2. [Breathalyzer with pico w](https://forums.raspberrypi.com/viewtopic.php?t=226459)
+3. [How does an MQ-3 work](https://help.sinric.pro/pages/tutorials/custom-device-types/alcohol-sensor/MQ-3)
