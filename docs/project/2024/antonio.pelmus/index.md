@@ -50,7 +50,7 @@ Place your KiCAD schematics here.
 | [JoyStick Shield V1.A](https://cb-electronics.com/products/funduino-joystick-shield-v1-a-ky-023-shield/) | Input/Controller | [14,99](https://www.bitmi.ro/module-electronice/shield-cu-joystick-si-butoane-compatibil-arduino-10378.html)|
 | [0.96" OLED Display](https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/) | Visual Output | [25,99](https://www.bitmi.ro/componente-electronice/ecran-oled-0-96-cu-interfata-iic-i2c-10488.html)|
 | [400p BreadBoard](https://static.cs.tme.eu/2018/03/5aaa4f5a91b79/Lecture_1_The_Breadboard.pdf) | Platform | [7,99](https://www.bitmi.ro/electronica/breadboard-400-puncte-pentru-montaje-electronice-rapide-10633.html)|
-| [Wires(F-F,M-M,F-M)](https://www.sudatel.sd/storage/2019/12/JUMPER-WIRE-SPECIFICATION.pdf) | Wire Connection | [Free from friend] |
+| [Wires(F-F,M-M,F-M)](https://www.sudatel.sd/storage/2019/12/JUMPER-WIRE-SPECIFICATION.pdf) | Wire Connection | Free from friend |
 Total Cost: 89 ron
 ## Software
 
