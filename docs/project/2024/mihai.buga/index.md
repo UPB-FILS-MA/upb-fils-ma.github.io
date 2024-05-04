@@ -60,9 +60,9 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
- buzzer-https://www.bitmi.ro/module-electronice/modul-buzzer-activ-compatibil-arduino-10397.html|used for creating sound||[5 lei]|
- Breadboard 830 puncte MB-102-https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html-|to assamble the Project||[9 lei]|
- Modul senzor pulsoximetru MAX30102-https://www.bitmi.ro/senzori-electronici/modul-senzor-pulsoximetru-max30102-10803.html| to measure-heart-rate-and-spo2-with-max30102-eb4f74| |[16 lei]|
+ [buzzer](https://www.bitmi.ro/module-electronice/modul-buzzer-activ-compatibil-arduino-10397.html) |used for creating sound| |[5 lei]|
+ [Breadboard 830 puncte MB-102] |(https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |to assamble the Project| |[9 lei]|
+ [Modul senzor pulsoximetru MAX30102] |(https://www.bitmi.ro/senzori-electronici/modul-senzor-pulsoximetru-max30102-10803.html) | to measure-heart-rate-and-spo2-with-max30102-eb4f74| |[16 lei]|
 ## Software
 
 | Library | Description | Usage |
@@ -74,6 +74,6 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. https://all3dp.com/2/easy-simple-arduino-projects/
-2. https://projecthub.arduino.cc/SurtrTech/measure-heart-rate-and-spo2-with-max30102-eb4f74
+1. [inspired](https://all3dp.com/2/easy-simple-arduino-projects/)
+2. [project ideea](https://projecthub.arduino.cc/SurtrTech/measure-heart-rate-and-spo2-with-max30102-eb4f74)
 ...
