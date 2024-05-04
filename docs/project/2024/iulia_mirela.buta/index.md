@@ -100,7 +100,7 @@ The format is
 ## Software
 
 | Library                                  | Description                        | Usage                              |
-| ---------------------------------------- | ---------------------------------- | ---------------------------------- |
+|-|-|-|
 | [VsCode](https://code.visualstudio.com/) | Integrated Development Environment | Integrated Development Environment |         
 
 
