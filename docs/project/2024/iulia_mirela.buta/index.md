@@ -7,6 +7,7 @@
 
 :::
 
+
 ## Description:
 
 A fire alarm system trigerred by a fire source or other sort of light source in the proximity. It includes the following features:
