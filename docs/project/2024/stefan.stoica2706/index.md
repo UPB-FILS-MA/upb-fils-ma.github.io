@@ -1,11 +1,9 @@
 # Project Name
 Sensor Control System
-:::info 
 
 **Author**: Stoica Stefan Nicolae \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-bep1s69
 
-:::
 
 ## Description
 
@@ -41,8 +39,6 @@ Users can access the control interface from a web browser to view sensor data an
 
 ## Log
 
-<!-- write every week your progress here -->
-
 ### Week 6 - 1 April - Started researching the required parts
 
 ### Week 7 - 8 April - Ordered said required parts
@@ -69,16 +65,6 @@ Place your KiCAD schematics here.
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [55 RON](https://robotescu.net/product/raspberry-pi-pico-w/) |
@@ -95,8 +81,6 @@ The format is
 | [ds18b20](https://github.com/awendland/rpi-ds18b20-rust) | DS18B20 temperature sensor driver | Used for interfacing with the DS18B20 temperature sensor over the OneWire protocol |
 
 ## Links
-
-<!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Programming the Raspberry Pi Pico with Rust](https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
 2. [Lecture and lab materials](https://embedded-rust-101.wyliodrin.com/)
