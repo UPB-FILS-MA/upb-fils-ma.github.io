@@ -103,7 +103,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [rp2040-hal](https://github.com/rp-rs/rp-hal) | RP2040 microcontroller support | Enables control of GPIOs and PWM, essential for interfacing with sensors and motors |
 | [embedded-hal](https://github.com/rust-embedded/embedded-hal) | A Hardware Abstraction Layer (HAL) for embedded systems | Offers interfaces for digital input and output, useful for managing sensor signals |
 | [defmt](https://github.com/knurling-rs/defmt) | Efficient logging for embedded systems | Enables detailed logging for system diagnostics and debugging during development |
