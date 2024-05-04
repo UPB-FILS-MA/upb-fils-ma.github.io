@@ -86,7 +86,6 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [rp-hal](https://github.com/rp-rs/rp-hal) | Hardware Abstraction Layer for RP2040 microcontrollers. | Manages GPIO, I2C, SPI, and other peripherals on the Raspberry Pi Pico W. |
 | [embedded-hal](https://github.com/rust-embedded/embedded-hal) | Hardware Abstraction Layer traits for embedded systems. | Provides abstractions for digital I/O and analog readings, crucial for interfacing with sensors and actuators. |
 | [uom](https://github.com/iliekturtles/uom) | Library for safely handling units of measurement. | Ensures that all calculations involving electrical measurements (voltage, current, power) are accurate and unit-safe. |
