@@ -23,7 +23,7 @@ I decided on this idea because of its real world applications. This project is a
 
 ## Architecture 
 
-![Architecture](project[1].drawio.svg)
+![Architecture](project_architecture.svg)
 
 ## Log
 
