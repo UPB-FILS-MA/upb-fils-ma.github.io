@@ -18,9 +18,7 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+![architecture](assets/Architecture.png)
 
 ## Log
 
