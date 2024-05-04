@@ -1,5 +1,5 @@
-# RC Car controlled by a Web Application
-
+# RC Car 
+A RC Car controlled by a Web Application
 :::info 
 
 **Author**: Mihai-Antonio GEORGESCU \
