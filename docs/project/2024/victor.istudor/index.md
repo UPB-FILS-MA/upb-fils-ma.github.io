@@ -1,12 +1,10 @@
 # Project Name
 A robot that follows a black line on a white background.
 
-:::info 
 
 **Author**: Istudor Victor Mihai \
 **GitHub Project Link**: link_to_github
 
-:::
 
 ## Description
 
@@ -60,14 +58,14 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [2x IR Sensor Module] | Used for line detection | [8,78 RON](https://ardushop.ro/ro/electronica/41-modul-senzor-ir-infrarosu-evita-obstacole.html?search_query=infrarosu&results=29) |
-| [4x DC Motors] | Motors | [19,28 RON](https://ardushop.ro/ro/electronica/64-motor-dc-3v-6v-cu-reductor-148.html) |
-| [L298N Dual H Bridge] | The motor driver | [11,49 RON](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html) |
-| [Female to female jumper wires] | Wires | [11,07 RON](https://ardushop.ro/ro/electronica/25-40-x-fire-dupont-mama-mama-10cm.html?search_query=DQYNCA_FDP-FF-40x20&results=111) |
-| [Male to female jumper wires] | Wires | [5,18 RON](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=OTGKMP_FDP-FM-40x10&results=52) |
-| [Jumper set] | Wires | [8,68 RON](https://ardushop.ro/ro/home/1374-set-jumper-breadboard-140.html?search_query=HWCYUB_BB-140&results=61) |
-| [Breadboard ] | - | [3,35 RON](https://ardushop.ro/ro/electronica/34-breadboard-400.html?search_query=PGIGAD_BB-400&results=170) |
-| [4x Rubber Wheels] | Wheels | [42.84 RON](https://ardushop.ro/ro/home/63-riata-roboti-cauciuc-65mm-diametru.html) |
+| [2x IR Sensor Module](https://www.circuits-diy.com/hw201-infrared-ir-sensor-module/) | Used for line detection | [8,78 RON](https://ardushop.ro/ro/electronica/41-modul-senzor-ir-infrarosu-evita-obstacole.html?search_query=infrarosu&results=29) |
+| [4x DC Motors](https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3777_Web.pdf)| Motors | [19,28 RON](https://ardushop.ro/ro/electronica/64-motor-dc-3v-6v-cu-reductor-148.html) |
+| [L298N Dual H Bridge](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf) | The motor driver | [11,49 RON](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html) |
+| Female to female jumper wires | Wires | [11,07 RON](https://ardushop.ro/ro/electronica/25-40-x-fire-dupont-mama-mama-10cm.html?search_query=DQYNCA_FDP-FF-40x20&results=111) |
+| Male to female jumper wires | Wires | [5,18 RON](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=OTGKMP_FDP-FM-40x10&results=52) |
+| Jumper set | Wires | [8,68 RON](https://ardushop.ro/ro/home/1374-set-jumper-breadboard-140.html?search_query=HWCYUB_BB-140&results=61) |
+| Breadboard | - | [3,35 RON](https://ardushop.ro/ro/electronica/34-breadboard-400.html?search_query=PGIGAD_BB-400&results=170) |
+| 4x Rubber Wheels | Wheels | [42.84 RON](https://ardushop.ro/ro/home/63-riata-roboti-cauciuc-65mm-diametru.html) |
 
 ## Software
 
@@ -79,6 +77,5 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [https://robu.in/ir-sensor-working/]
-2. [https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/]
-...
+1. [How IR sensors work.](https://robu.in/ir-sensor-working/)
+2. [How the L298N motor driver works.](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/)
