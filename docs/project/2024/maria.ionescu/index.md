@@ -21,13 +21,13 @@ By engaging in this project, I want to explore the frontiers of autonomous robot
 The architecture should sort of look like this. I will be using a white cardbox with a black line for the path and different objects as obstacles. 
 This project is a smart car using a Raspberry Pi Pico W and various sensors and components. It has the following strucure:
 
-- The Raspberry Pi Pico W is a microcontroller board based on the RP2040 microcontroller chip developed by Raspberry Pi, that manages the project's operations, controlling the servo motor, processing sensor data, and handling other components.
-- HC-SR04 ultrasonic distance sensor + mounting bracket: This sensor emits ultrasonic pulses and measures the time it takes for the pulses to bounce back from obstacles, allowing the car to detect objects in its path. The mounting bracket holds the sensor in a fixed position, ensuring accurate readings.
-- SG90 Servo motor: The servo motor is responsible for controlling the steering mechanism of the car. It can rotate to specific angles, allowing the car to change direction based on input from the microcontroller.
-- Two IR sensors FC-123: These infrared sensors detect infrared light reflected off surfaces, enabling the car to follow a predefined path by detecting lines or markings on the ground.
-- Pololu QTRX-HD-06A Reflective IR Sensor: This reflective IR sensor detects contrasts in reflectivity, aiding in line following or edge detection tasks.
-- L298N Motor Driver: The motor driver controls the speed and direction of the motors, converting signals from the microcontroller into power outputs for the motors.
-- Active Buzzer Module: The buzzer module produces audible alerts or tones, which can be used for signaling purposes, such as indicating when an obstacle is detected.
+ - The Raspberry Pi Pico W is a microcontroller board based on the RP2040 microcontroller chip developed by Raspberry Pi, that manages the project's operations, controlling the servo motor, processing sensor data, and handling other components.
+ - HC-SR04 ultrasonic distance sensor + mounting bracket: This sensor emits ultrasonic pulses and measures the time it takes for the pulses to bounce back from obstacles, allowing the car to detect objects in its path. The mounting bracket holds the sensor in a fixed position, ensuring accurate readings.
+ - SG90 Servo motor: The servo motor is responsible for controlling the steering mechanism of the car. It can rotate to specific angles, allowing the car to change direction based on input from the microcontroller.
+ - Two IR sensors FC-123: These infrared sensors detect infrared light reflected off surfaces, enabling the car to follow a predefined path by detecting lines or markings on the ground.
+ - Pololu QTRX-HD-06A Reflective IR Sensor: This reflective IR sensor detects contrasts in reflectivity, aiding in line following or edge detection tasks.
+ - L298N Motor Driver: The motor driver controls the speed and direction of the motors, converting signals from the microcontroller into power outputs for the motors.
+ - Active Buzzer Module: The buzzer module produces audible alerts or tones, which can be used for signaling purposes, such as indicating when an obstacle is detected.
 
 
 ## Log
@@ -41,23 +41,7 @@ This project is a smart car using a Raspberry Pi Pico W and various sensors and 
 ### Week 20 - 26 May
 
 ## Hardware
-Rapspberry Pi Pico W
-Four wheels
-Four TT Motors
-Four AA batteries (1.5V) + mounting device
-HC-SR04 ultrasonic distance sensor + mounting bracket
-SG90 Servo motor
-Two IR sensors FC-123
-Pololu QTRX-HD-06A Reflective IR Sensor
-L298N Motor Driver 
-Mini Breadboard
-Active Buzzer Module
-Male-female, male-male, female-female wires
-Switch l Insulating electrical tape
-Double-sided adhesive white tape
-Connectors and screws
-Chassis
-Pin headers
+Rapspberry Pi Pico W, Four wheels, Four TT Motors, Four AA batteries (1.5V) + mounting device, HC-SR04 ultrasonic distance sensor + mounting bracket, SG90 Servo motor, Two IR sensors FC-123, Pololu QTRX-HD-06A, Reflective IR Sensor, L298N Motor Driver, Mini Breadboard, Active Buzzer Module, Male-female, male-male, female-female wires, Switch l Insulating electrical tape, Double-sided adhesive white tape, Connectors and screws, Chassis, Pin headers
 
 ### Schematics
 Place your KiCAD schematics here.
