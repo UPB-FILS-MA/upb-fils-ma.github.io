@@ -31,7 +31,7 @@ The network interface acts as a gateway for sending temperature data to the web 
 Network Interface ↔ Web Application:
 The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs.
 
-![LED](https://github.com/carinagrec/upb-fils-ma.github.io/assets/150676040/9fe70bd8-0f70-42c2-90b6-aae9b26a2969)
+
 
 ## Log
 
@@ -70,15 +70,15 @@ The format is
 
 | Device | Usage | Price |
 |--------|-------|-------|
-| [Raspberry Pi Pico W](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | The microcontroller with Wi-Fi capability, used for managing sensors and network communication. | [35 RON] |
-| [DS18B20 Temperature Sensor](https://www.optimusdigital.ro/en/sensors/1465-ds18b20-temperature-sensor-to-92.html)| Digital temperature sensor for accurate room temperature measurements. | [3,32 RON] |
-| [1602 LCD Module](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html) | A simple LCD display for showing temperature readings locally. | [18 RON] |
-| [Common Cathode RGB LED](https://www.optimusdigital.ro/en/leds/483-rgb-led-common-cathode.html) | RGB LED to indicate temperature range through color changes. | [1 RON] |
-| [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=breadboard&results=413) | A platform for temporary prototyping and experimenting without soldering. | [9,98 RON] |
-| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=Jumper+Wires&results=100) | Used to connect components on the breadboard. | [7,99 RON] |
-| [Header de pini alb 2.54 mm (40p)](https://www.optimusdigital.ro/ro/componente-electronice-headere-de-pini/463-header-de-pini-alb-254-mm-40p.html?search_query=headere+pini&results=216) | This white single-row male 40 copper pin header can be broken into smaller strips with the use of a wire cutter, in order to fit your desired application. It is an ideal connector for integrated circuit and PCB boards. | [0,99 RON] |
-| [Resistor Kit](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=Resistor+Kit&results=42) | Various resistors for current limiting for the LED and pull-up resistor for the temperature sensor. | [14,99 RON] |
-| [DAC MCP4725 Module with I2C Interface](https://www.optimusdigital.ro/en/others/1327-dac-mcp4725-module-with-i2c-interface.html?search_query=eeprom&results=101) | Integrated circuits designed to store relatively small amounts of data but allowing individual bytes to be electrically erased and reprogrammed. | .[9,52 RON]
+| [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller with Wi-Fi capability, used for managing sensors and network communication. | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [DS18B20 Temperature Sensor](https://www.alldatasheet.com/view.jsp?Searchword=Ds18b20%20datasheet&gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYVUHqUtnoJCOwvXEnXHKXTR3qZre8D3MO_ehf0MTlAIB7ETcrZeTXIaArlOEALw_wcB)| Digital temperature sensor for accurate room temperature measurements. | [3,32 RON](https://www.optimusdigital.ro/en/sensors/1465-ds18b20-temperature-sensor-to-92.html) |
+| [1602 LCD Module](https://www.waveshare.com/datasheet/LCD_en_PDF/LCD1602.pdf) | A simple LCD display for showing temperature readings locally. | [18 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html) |
+| [Common Cathode RGB LED](https://randomnerdtutorials.com/electronics-basics-how-do-rgb-leds-work/) | RGB LED to indicate temperature range through color changes. | [1 RON](https://www.optimusdigital.ro/en/leds/483-rgb-led-common-cathode.html) |
+| [Breadboard](https://en.wikipedia.org/wiki/Breadboard) | A platform for temporary prototyping and experimenting without soldering. | [9,98 RON](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=breadboard&results=413) |
+| [Jumper Wires](https://en.wikipedia.org/wiki/Jump_wire) | Used to connect components on the breadboard. | [7,99 RON](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=Jumper+Wires&results=100) |
+| [Header de pini alb 2.54 mm (40p)](https://en.wikipedia.org/wiki/Pin_header) | This white single-row male 40 copper pin header can be broken into smaller strips with the use of a wire cutter, in order to fit your desired application. It is an ideal connector for integrated circuit and PCB boards. | [0,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-headere-de-pini/463-header-de-pini-alb-254-mm-40p.html?search_query=headere+pini&results=216) |
+| [Resistor Kit](https://en.wikipedia.org/wiki/Resistor) | Various resistors for current limiting for the LED and pull-up resistor for the temperature sensor. | [14,99 RON](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=Resistor+Kit&results=42) |
+| [DAC MCP4725 Module with I2C Interface](https://www.alldatasheet.com/view.jsp?Searchword=Mcp4725%20datasheet&gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYUenyA7lMcPWmrcVCqC1cvBR28NL38MnpyoS-Zzmi6TfeupLiwyvnMaAncYEALw_wcB) | Integrated circuits designed to store relatively small amounts of data but allowing individual bytes to be electrically erased and reprogrammed. | .[9,52 RON](https://www.optimusdigital.ro/en/others/1327-dac-mcp4725-module-with-i2c-interface.html?search_query=eeprom&results=101)
 
 
 
