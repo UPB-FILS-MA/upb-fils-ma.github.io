@@ -66,7 +66,7 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| |[spi](https://github.com/2bn-dev/pico-spi-utilities) | SPI communication driver | Used for communicating with the CYW43439 wireless interface chip connected to the RP2040 via SPI |
+| [spi](https://github.com/2bn-dev/pico-spi-utilities) | SPI communication driver | Used for communicating with the CYW43439 wireless interface chip connected to the RP2040 via SPI |
 | [rp-hal](https://github.com/rp-rs/rp-hal) | Hardware abstraction layer | Used for interacting with hardware peripherals, including the ADC (Analog-to-Digital Converter) |
 | [ds18b20](https://github.com/awendland/rpi-ds18b20-rust) | DS18B20 temperature sensor driver | Used for interfacing with the DS18B20 temperature sensor over the OneWire protocol |
 
