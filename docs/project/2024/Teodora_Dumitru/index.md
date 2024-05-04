@@ -2,12 +2,12 @@
 
 I intend to do a robot car that can be controlled through a website accessed from the mobile phone or a computer . The website will have on the home page a controller with all 4 directions of movement.
 
-:::info 
+
 
 **Author**: Dumitru Teodora-Iulia \
 **GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-Teodora1807.git)
 
-:::
+
 
 ## Description
 
