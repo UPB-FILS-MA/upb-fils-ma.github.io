@@ -1,8 +1,9 @@
-# Project Name
+# Clock-in
 
+A clock-in machine used to keep track of attendance.
 
 **Author**: Oblu Alexandra \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-alexandra214)
 
 
 ## Description
@@ -11,17 +12,29 @@ This project aims to create a clock-in device using a Raspberry Pi Pico W microc
 
 ## Motivation
 
-Why did you choose this project?
+This clock-in device is designed to simplify attendance tracking, addressing the inefficiencies of manual systems. By automating the process with reliable technology, it aims to enhance accuracy and streamline administrative tasks for businesses.
 
-## Architecture 
+## Architecture
 
-The main components of the project include:
+* Raspberry Pi Pico W: Chosen as the microcontroller unit due to its affordability and versatility.
 
-    Raspberry Pi Pico W microcontroller
-    LCD display module
+* Real-Time Clock (RTC) Module: Responsible for preserving time data even when the system is off.
 
-The microcontroller controls the display module to show the user interface for clocking in.
-## Log
+* LCD Display: Visual interface for the clock-in device.
+
+* Push Buttons: Input devices for clocking in/out.
+
+### Components
+- Raspberry Pi Pico W: Chosen as the microcontroller unit due to its affordability and versatility.
+- Real-Time Clock (RTC) Module: Responsible for preserving time data even when the system is off
+- LCD Display: Visual interface for the clock-in device.
+- Push Buttons: Input devices for clocking in/out.
+  
+### Connection
+- Raspberry Pi Pico W and RTC Module are connected via GPIO pins.
+- The LCD display is connected to the Raspberry Pi Pico W.
+- Push buttons are connected to GPIO pins of the Raspberry Pi Pico W.
+
 
 <!-- write every week your progress here -->
 
@@ -33,30 +46,18 @@ The microcontroller controls the display module to show the user interface for c
 
 ## Hardware
 
-Detail in a few words the hardware used.
-
 ### Schematics
 
-Place your KiCAD schematics here.
+Not ready yet.
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
-| Device | Usage | Price |
-|--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [Push buttons](https://components101.com/switches/push-button) | to clock-in with them | [1 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html) |
-| [Real-Time Clock (RTC) Module](https://components101.com/modules/ds3231-rtc-module-pinout-circuit-datasheet) | to remember the time even if the pico is off | [24 RON](https://ardushop.ro/en/electronics/231-precision-rtc-module-ds3231.html?search_query=rtc&results=12) |
-| [LCD Display](https://www.farnell.com/datasheets/58820.pdf) | to show who clocked-in | [10 RON](https://ardushop.ro/ro/electronica/36-lcd-1602.html) |
+| Device                          | Usage              | Price              |
+|---------------------------------|--------------------|--------------------|
+| Raspberry Pi Pico W             | Microcontroller    | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| Push buttons                    | Input devices      | [1 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
+| Real-Time Clock (RTC) Module    | Timekeeping        | [18 RON](https://www.optimusdigital.ro/ro/altele/637-modul-ds3231-rtc-pentru-raspberry-pi-.html?search_query=rtc+module&results=15) |
+| LCD Display                     | Visual interface   | [58 RON](https://www.optimusdigital.ro/ro/lcd-uri/1158-lcd-hat-1602-pentru-raspberry-pi.html?search_query=lcd+display+raspberry+pi&results=27)
 
 
 ## Software
@@ -67,4 +68,10 @@ The format is
 | [rp-hal](https://github.com/rp-rs/rp-hal) | HAL for Raspberry Pi Pico | Provides higher-level abstractions for peripherals on the Raspberry Pi Pico |
 
 ## Links
+**1. RTC module**: [Datasheet](https://www.optimusdigital.ro/ro/altele/637-modul-ds3231-rtc-pentru-raspberry-pi-.html?search_query=rtc+module&results=15)
 
+**2. LCD display**: [Datasheet](https://www.optimusdigital.ro/en/lcds/1158-lcd-hat-1602-pentru-raspberry-pi.html)
+
+**3. Inspiration**: [RTC video](https://www.youtube.com/watch?v=gv1h-3kK6SU&ab_channel=CoreElectronics)
+
+**4. Inspiration**: [Punch clock](https://www.youtube.com/watch?v=kCpWF5UXfQ4&ab_channel=CBSSundayMorning)
