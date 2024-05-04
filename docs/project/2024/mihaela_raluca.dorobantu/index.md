@@ -33,10 +33,10 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
    - The core of the system, this unit houses all operational components. It’s designed to navigate indoor spaces autonomously using various sensors and actuators.
 
 2. **HC-SR04 Ultrasonic Sensor:**
-   - Mounted on top of the unit, this sensor measures distances using ultrasonic waves. It’s crucial for detecting obstacles and aiding in the creation of spatial maps.
+   - Mounted on top of the unit, this sensor measures distances using ultrasonic waves. It’s crucial for detecting obstacles.
 
 3. **MG995 Servo Motor:**
-   - This servo motor controls the rotation of the HC-SR04 sensor, allowing it to cover a 180-degree field. This wide range enhances the robot’s ability to comprehensively map its surroundings.
+   - This servo motor controls the rotation of the HC-SR04 sensor, allowing it to cover a 180-degree field. This wide range enhances the robot’s ability to detect and navigate around obstacles efficiently.
 
 4. **HW-094 Motor Controller:**
    - Manages the two motors that drive the robot’s wheels. This controller adjusts the speed and direction based on the navigation algorithm’s outputs, ensuring smooth and efficient movement.
@@ -45,7 +45,7 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
    - Enables wireless communication between the SmartBot Navigator and a PC. This module facilitates real-time transmission of operational data, allowing for remote monitoring and control of the robot.
 
 6. **Raspberry Pi Pico:**
-   -Serves as the brain of the operation. This microcontroller integrates data from sensors, manages the execution of navigation and mapping algorithms, and oversees Bluetooth communications.
+   - Serves as the brain of the operation. This microcontroller integrates data from sensors, manages the execution of navigation algorithms, and oversees Bluetooth communications.
 
 7. **Power Supply:**
    - Two separate battery blocks power the system:
@@ -103,13 +103,16 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-
+| [rp2040-hal](https://github.com/rp-rs/rp-hal) | RP2040 microcontroller support | Enables control of GPIOs and PWM, essential for interfacing with sensors and motors |
+| [embedded-hal](https://github.com/rust-embedded/embedded-hal) | A Hardware Abstraction Layer (HAL) for embedded systems | Offers interfaces for digital input and output, useful for managing sensor signals |
+| [defmt](https://github.com/knurling-rs/defmt) | Efficient logging for embedded systems | Enables detailed logging for system diagnostics and debugging during development |
+| [embassy](https://github.com/embassy-rs/embassy) | Asynchronous runtime for embedded systems | Supports non-blocking tasks, improving efficiency in managing multiple operations like sensor reading and motor control |
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [Pet Robot](https://www.instructables.com/Build-Your-Own-Desktop-Pet-Robot-With-Arduino/)
+2. [Distance Sensor Detector](https://ocw.cs.pub.ro/courses/pm/prj2023/abirlica/bogdan-toma)
+3. [Bluetooth Car](https://ocw.cs.pub.ro/courses/pm/prj2014/amusat/bluetooth-car)
+
