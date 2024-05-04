@@ -1,4 +1,3 @@
-@ -1,67 +0,0 @@
 # Chicken Invaders
 A chicken invaders game made in Rust
 
