@@ -59,7 +59,7 @@ The format is
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=pico+wh&results=108) |
 | [Punte H Dubla L298N](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The Driver Motor | [11.53 RON](https://www.sigmanortec.ro/Punte-H-Dubla-L298N-p125423236) |
 | [Kit sasiu Smart Car 4WD](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The chasis of the Car | [75.05 RON](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [Suport baterii 4AA](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | Support for batteries | [11.53 RON](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
@@ -85,6 +85,8 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [L289N](https://github.com/lucazulian/l298n) | no_std driver for L298N  | Used for the control of the driver motor |
+
 
 
 
