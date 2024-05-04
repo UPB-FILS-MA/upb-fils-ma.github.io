@@ -44,6 +44,8 @@ The architecture of the RustFlower consists of the following main components:
   - **Function**: Provides real-time feedback on the system’s performance, including the current power output.
   - **Components**: An LCD display connected to the Raspberry Pi Pico W to show calculated data.
 
+Connectivity of the main components:
+
 - **From Sensing to Control**: The photoreceptors are connected to the Raspberry Pi Pico W via analog inputs, where the light intensity data is converted into digital signals for processing.
 - **Control to Actuation**: The Raspberry Pi Pico W sends PWM (Pulse Width Modulation) signals to the servomotors, directing the necessary adjustments in panel positioning.
 - **Display of Information**: The Raspberry Pi Pico W also sends data to the LCD display, updating it in real-time with information about the energy captured and system status.
