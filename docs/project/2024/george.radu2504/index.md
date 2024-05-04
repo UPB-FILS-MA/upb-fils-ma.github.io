@@ -20,7 +20,9 @@ I choose to persue this smart lamp project because I was thinking that one of th
 
 ## Architecture 
 
-![Rasberry Pi Pico W (3)](https://github.com/George2543/upb-fils-ma.github.io/assets/154756379/c2007868-f619-4784-a06f-4510111d4b02)
+
+![Rasberry Pi Pico W (5)](https://github.com/George2543/upb-fils-ma.github.io/assets/154756379/599a908e-feed-4ca3-8aa4-25665cae1950)
+
 
 Main components:
 - Raspberry Pi Pico W: Is the control unit, it manages the motion sensor, photoresistor and LED
@@ -46,7 +48,14 @@ Main components:
 
 ## Hardware
 
-Detail in a few words the hardware used.
+- Raspberry Pi Pico W: The microcontroller serves as the main processing unit, coordinating the functions of the entire system.
+- Magnetic motion sensor: Detects motion within its range and sends signals to the Raspberry Pi Pico W, triggering the activation of the LED when movement is detected.
+- Photoresistor: Measures ambient light levels and communicates this data to the Raspberry Pi Pico W.
+- LED: Illuminates the lamp and is controlled by the Raspberry Pi Pico W. It turns on/off based on signals received from the motion sensor and light sensor.
+- Resistors: Used to limit the current flow and protect the components, ensuring stable operation of the circuit.
+- Breadboard: Provides a platform for assembling the circuit.
+- Micro USB Cable: Powers the Raspberry Pi Pico W.
+
 
 ### Schematics
 
@@ -67,6 +76,14 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+|[Magnetic sensor HALL SS495A](https://pdf1.alldatasheet.com/datasheet-pdf/view/124002/HONEYWELL/SS495A.html)|Detecting motions|[3.33 RON](https://ardushop.ro/ro/senzori/1291-ss495a-ss495a1-95a-solid-state-sensor.html?search_query=senzor+magnetic+hall&results=215)|
+|[Photoresistor](https://digilent.com/reference/_media/ni:photoresistor_ds.pdf)|Measures ambient light|[1.90 RON](https://www.optimusdigital.ro/ro/componente-electronice-altele/28-fotorezistor10-pcs-set.html?search_query=photoresistor&results=3)|
+|[LED 5mm](https://www.farnell.com/datasheets/1498852.pdf)|Serves as output|[0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=led+5mm&results=621)|
+|[Resistors](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=rezistor&results=43)|Protect components|[12.29 RON 600pcs/30val](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=rezistor&results=43)|
+|[Breadboard](https://www.mouser.com/datasheet/2/58/BPS-MAR-BB830_BB830T-001-6408.pdf)|Assembling the circuit|[9.98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard+830&results=16)|
+|[Wires male to male](https://media.digikey.com/pdf/Data%20Sheets/Digi-Key%20PDFs/Jumper_Wire_Kits.pdf)|Connections|[6.99 RON 40pcs](https://www.optimusdigital.ro/ro/fire-fire-mufate/886-set-fire-tata-tata-40p-15-cm.html?search_query=fire+tata+tata&results=78)|
+|[Micro USB cable](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/4576-cablu-albastru-micro-usb-50-cm.html?search_query=cablu+micro+usb&results=146)|Power the microcontroller|[3.03](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/4576-cablu-albastru-micro-usb-50-cm.html?search_query=cablu+micro+usb&results=146)|
+
 
 
 ## Software
