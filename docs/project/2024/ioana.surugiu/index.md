@@ -18,7 +18,7 @@ As someone who has always been captivated by music, art, the creation and work b
 
 ## Architecture 
 
-![Architechture Diagram](arhitecture_schematic.JPG)
+![Architechture Diagram](arhitecture_schematic.jpg)
 
 The project's arhitecture shows that the Raspberry Pi Pico W is the central unit that coordinates the other components' actions. The audio sensor serves as the primary input device, detecting sound and converts it into electrical signals. They are processed by the Raspberry Pi Pico to determine the intensity and rhythm of the played music. Then, the LEDs connected to the Raspberry Pi Pico through PWM (Pulse Width Modulation) pins, light up in response to the audio input. The Passive Infrared (PIR) sensor detects motion within its field of view. When it's detected, a signal is sent to the Raspberry Pi Pico, indicating the presence of motion in the environment. Pico Display communicates with the Raspberry Pi Pico via the I2C protocol. Upon receiving signals from the PIR sensor, the Raspberry Pi Pico calls the Pico Display to show images.
 
