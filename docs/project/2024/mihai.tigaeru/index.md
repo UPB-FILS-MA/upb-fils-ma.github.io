@@ -4,7 +4,7 @@ A game in rust that resembles the classic Snake Game from the Nokia 5110 phones 
 :::info 
 
 **Author**: Mihai-Septimiu Tigaeru \
-**GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-septimium)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-septimium
 
 :::
 
