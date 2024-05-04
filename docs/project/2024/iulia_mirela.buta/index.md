@@ -57,6 +57,7 @@ The architecture of the project is the following:
 
 ### Schematics
 
+```
 +-------------------------+
 |      Fire Sensor        |
 +-------------------------+
@@ -74,6 +75,7 @@ The architecture of the project is the following:
          +---------+           +-----------+
          |  Buzzer |           |  ST7789   |
          +---------+           +-----------+
+```
 
 ### Bill of Materials
 
