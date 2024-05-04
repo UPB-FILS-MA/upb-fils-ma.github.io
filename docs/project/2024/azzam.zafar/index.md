@@ -78,7 +78,7 @@ The format is
 | [9V Battery](https://www.aliexpress.com/item/1005006441224325.html?spm=a2g0o.productlist.main.1.5b005ac9mw252Z&algo_pvid=36b1e5e0-2d28-4a4c-8ff3-eb18d7ce0800&algo_exp_id=36b1e5e0-2d28-4a4c-8ff3-eb18d7ce0800-0&pdp_npi=4%40dis%21RON%2166.10%2129.74%21%21%21100.50%2145.22%21%402101e58317134694603096605eb2fb%2112000037177703549%21sea%21RO%210%21AB&curPageLogUid=PQjzWXzG9skB&utparam-url=scene%3Asearch%7Cquery_from%3A) | DC Voltage Source | [29.74 RON](https://www.aliexpress.com/item/1005006441224325.html?spm=a2g0o.productlist.main.1.5b005ac9mw252Z&algo_pvid=36b1e5e0-2d28-4a4c-8ff3-eb18d7ce0800&algo_exp_id=36b1e5e0-2d28-4a4c-8ff3-eb18d7ce0800-0&pdp_npi=4%40dis%21RON%2166.10%2129.74%21%21%21100.50%2145.22%21%402101e58317134694603096605eb2fb%2112000037177703549%21sea%21RO%210%21AB&curPageLogUid=PQjzWXzG9skB&utparam-url=scene%3Asearch%7Cquery_from%3A) |
 | [LEDs](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=LED+5mm+-+Culoare+%3A+Ro%C8%99u%09&results=744) | Indicator | [0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=LED+5mm+-+Culoare+%3A+Ro%C8%99u%09&results=744) |
 | [Buzzers](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html?search_query=buzzer&results=60) | Indicator | [1.40 RON](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html?search_query=buzzer&results=60) |
-| [2x Servo Motor](https://www.optimusdigital.ro/ro/motoare-servomotoare/2261-micro-servo-motor-sg90-180.html?search_query=sg90&results=11) | Indicator | [11.99 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/2261-micro-servo-motor-sg90-180.html?search_query=sg90&results=11) |
+| [Servo Motors](https://www.optimusdigital.ro/ro/motoare-servomotoare/2261-micro-servo-motor-sg90-180.html?search_query=sg90&results=11) | Indicator | [11.99 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/2261-micro-servo-motor-sg90-180.html?search_query=sg90&results=11) |
 
 
 
@@ -92,7 +92,7 @@ The format is
 | [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | Pulse-Width Modulation | Used for controlling the servo motors and the buzzer's noise level|
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html) | Asynchronous Executor for Embedded Rust Systems | Used for task scheduling and asynchronous programming |
 | [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Hardware Abstraction Layer for the RP2040 | Used to operate the peripheral devices connected the Raspberry Pi Pico |
-| [embassy-time](https://embassy.dev/book/dev/time_keeping.html) | Time management library | This library is used for managing timekeeping, timeouts and delays |
+| [embassy-time](https://docs.rs/embassy-time/0.3.0/embassy_time/) | Time management library | This library is used for managing timekeeping, timeouts and delays |
 | [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | Library for handling GPIO functionalities | Used to control and configure GPIO pins on the microcontroller board |
 | [log](https://docs.rs/log/latest/log/) | Lightweight Logging Facade | Used for logging messages |
 | [embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | USB implementation of the log crate | Used for logging messages over USB |
