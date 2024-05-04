@@ -21,7 +21,7 @@ My passion for music and technology inspired me to want to create the RustPlayer
 
 ## Architecture 
 
-### Schematic Diagram**
+### Schematic Diagram
 
 A schematic diagram is provided to illustrate the connections and layout of the components. 
 
