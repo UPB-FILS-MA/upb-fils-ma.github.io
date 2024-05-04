@@ -20,9 +20,19 @@ I choose to persue this smart lamp project because I was thinking that one of th
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+![Rasberry Pi Pico W (3)](https://github.com/George2543/upb-fils-ma.github.io/assets/154756379/c2007868-f619-4784-a06f-4510111d4b02)
+
+Main components:
+- Raspberry Pi Pico W: Is the control unit, it manages the motion sensor, photoresistor and LED
+- Magnetic sensor Hall: Detects motion within its range
+- Photoresistor: Measures ambient light levels
+- LED
+
+ Connection between components:
+ - Motion sensor to microcontroller: The motion sensor is connected to the Raspberry Pi Pico W through GPIO pins.
+ - Photoresistor to microcontroller: The photoresistor is directly connected to the Raspberry Pi Pico W.
+ - LED to microcontroller: The LED is connected to the Raspberry Pi Pico W, serving as the output. Through the microcontroller, the LED is controlled based on the inputs received from the magnetic motion sensor and photoresistor.
+ 
 
 ## Log
 
