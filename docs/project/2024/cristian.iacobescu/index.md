@@ -85,7 +85,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|   
-| [core::fmt](https://doc.rust-lang.org/beta/core/fmt/index.html) | Utilities for formatting and printing strings. | Used to print floats and integers to the LCD|
 | [heapless](https://docs.rs/heapless/0.8.0/heapless/) | Data structure library | Used for String vectors |
 | [embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Embassy Hardware Abstraction Layer (HAL) for the Raspberry Pi RP2040 microcontroller | Used to program the Pico |
 | [embassy_sync](https://docs.embassy.dev/embassy-sync/git/default/index.html) | Synchronization primitives and data structures with async support | Used for communicating through different tasks |
