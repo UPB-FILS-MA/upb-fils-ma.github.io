@@ -39,7 +39,7 @@ I decided on this idea because of its real world applications. This project is a
 
   - I'm using the Raspberry Pi Pico WH development board, which has the RP2040 microcontroller chip that handles processing and interfaces with every piece of hardware.
 
-  - Using female-male and male-male jumper wires, components will be connected via a breadboard.
+  - Using female-to-male and male-to-male jumper wires, components will be connected via a breadboard.
 
   - Object detection and distance measurement will be handled by the HC-SR04 ultrasonic sensor. Various states will be indicated by; a monochromatic LED that is connected with a 1K resistor to limit current, a buzzer, and two SG90 servo motors.
 
