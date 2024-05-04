@@ -24,8 +24,6 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 ## Log
 
-<!-- write every week your progress here -->
-
 ### Week 6 - 12 May
 
 ### Week 7 - 19 May
@@ -42,32 +40,27 @@ Place your KiCAD schematics here.
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-
+| [Rapspberry Pi Pico H](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [40 RON](https://www.bitmi.ro/placi-de-dezvoltare/placa-de-dezvoltare-raspberry-pi-pico-h-rp2040-264kb-ram-10848.html) |
+| [2-axis (XY) Joystick Module ] | Game Interactions | [6 RON](https://www.bitmi.ro/module-electronice/modul-joystick-cu-2-axe-x-y-10454.html) |
+| Breadboard 830 | Hardware Pins Connections | [9 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
+| Pasive Buzzer Module | Sounds | [4 RON](https://www.bitmi.ro/module-electronice/modul-buzzer-pasiv-ky-006-10678.html) |
+| LCD Nokia 5110 Display 84x48 | Game Displaying | [24 RON](https://cleste.ro/ecran-nokia-5110-84x48.html) |
+| LED Display Module with Serial Interface (TM1637) | Score Counting | [11 RON](https://www.sigmanortec.ro/modul-display-led-cu-interfata-seriala-tm1637) |
+| Dupont Wires M-M | Connections | [7 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-tata-20cm-10511.html) |
+| Dupont Wires F-F | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-mama-mama-20cm-10509.html) |
+| Dupont Wires M-F | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-mama-20cm-10512.html) |
+| Jumper Wires Kit | Connections | [9 RON](https://ardushop.ro/ro/home/1374-set-jumper-breadboard-140.html) |
+| Micro USB Cable | Power | [8 RON](https://ardushop.ro/ro/electronica/397-cablu-usb-micro.html?search_query=micro+usb&results=383) |
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 
 ## Links
 
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [Arduino Snake Game Project](https://www.youtube.com/watch?v=nXdEqbL_6jg)
+2. [Nokia5110 LCD interfacing with Raspberry Pi Pico using SPI](https://www.youtube.com/watch?app=desktop&v=Ll23kHzQrtA)
+3. [Snake Game with Rust](https://www.youtube.com/watch?v=AYfehnFklkA)
