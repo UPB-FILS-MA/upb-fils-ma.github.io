@@ -4,7 +4,7 @@ The project involves creating a smart lamp that responds to motion and ambient l
 
 :::info 
 
-**Author**: Radu George-Alexandru
+**Author**: Radu George-Alexandru \
 
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-George2543
 
