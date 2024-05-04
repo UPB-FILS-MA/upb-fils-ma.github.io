@@ -1,13 +1,13 @@
 # Obstacltron
 
+## Description
+
+Obstacltron is an obstacle avoider robot built using Raspberry Pi Pico W. It utilizes an L298N motor driver, DC motors, and an HC-SR04 ultrasonic distance sensor.
+
 :::info 
 **Author**: Matei Eduard Gabriel \
 **GitHub Project Link**: [Obstacltron on GitHub](https://github.com/UPB-FILS-MA/project-lexofficial29)
 :::
-
-## Description
-
-Obstacltron is an obstacle avoider robot built using Raspberry Pi Pico W. It utilizes an L298N motor driver, DC motors, and an HC-SR04 ultrasonic distance sensor.
 
 ## Motivation
 
