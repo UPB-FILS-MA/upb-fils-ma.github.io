@@ -1,4 +1,4 @@
-# Robotic Tic Tac Toe
+# Robo Tic Tac Toe
 An interactive game of tic tac toe against a robotic arm.
 
 :::info 
