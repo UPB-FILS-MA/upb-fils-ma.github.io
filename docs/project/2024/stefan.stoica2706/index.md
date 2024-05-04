@@ -4,6 +4,7 @@ Sensor Control System
 **Author**: Stoica Stefan Nicolae
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-bep1s69
 
+
 ## Description
 
 Using a Raspberry Pi Pico microcontroller board along with temperature and light sensors, this project aims to create a system capable of autonomously regulating environmental conditions for sensitive plants or similar applications. The system is designed to trigger a small motor with blades (acting as a fan) and adjust the intensity of an LED based on real-time sensor data. Using the Rust programming language, the project combines hardware and software components to create an efficient and reliable solution. Additionally, the system incorporates Wi-Fi connectivity to enable remote monitoring and control, allowing users to access sensor data and manually trigger the fan and LED through a web interface.
