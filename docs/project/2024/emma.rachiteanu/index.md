@@ -10,8 +10,7 @@ An interactive game of tic tac toe against a robotic arm.
 
 ## Description
 
-Robo Tic Tac Toe offers an engaging gameplay where a human player competes against a pre-programmed robotic arm. For simplicity reasons, the game is designed to have a display of the game to which the robotic arm points its move. The player uses a control panel on a mobile website, each corresponding to a different space on the game board where the move will be executed.
- This information is then transmitted to the computer for it to make its move. The robotic arm operates using servo motors to maneuver 3D-printed components that form the arm's structure.
+Robo Tic Tac Toe offers an engaging gameplay where a human player competes against a pre-programmed robotic arm. For simplicity reasons, the game is designed to have a display of the game to which the robotic arm points its move. The player uses a control panel on a mobile website, each corresponding to a different space on the game board where the move will be executed. This information is then transmitted to the computer for it to make its move. The robotic arm operates using servo motors to maneuver 3D-printed components that form the arm's structure.
 
 ## Motivation
 
@@ -21,7 +20,7 @@ As a game enthusiast and tech geek, I wanted something to combine both of them. 
 
 ![Block Diagram](img/front%20view%20robotic%20arm.jpg)
 ![Block Diagram](img/side%20view%20robotci%20arm.jpg)
-![Block Diagram](img/simplified%20schematic.jpg)
+![Block Diagram](img/schematic.jpg)
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
 
