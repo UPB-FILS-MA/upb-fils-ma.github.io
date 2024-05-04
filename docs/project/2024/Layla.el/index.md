@@ -1,5 +1,6 @@
-# Project Name
-Automated Parking System: Enhanced Security and Efficiency
+# Automated Parking System 
+Enhanced Security and Efficiency
+
 
 :::info 
 **Author**: El-Ghoul Layla \
@@ -96,8 +97,6 @@ In kicad2, everything is connected properly.
 ## Software
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 |[embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 |[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
 |[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |

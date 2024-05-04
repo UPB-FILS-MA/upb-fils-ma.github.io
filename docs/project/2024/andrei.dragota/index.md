@@ -1,4 +1,4 @@
-GamePad Xinput API
+# GamePad Xinput API
 
 
 
@@ -128,11 +128,10 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [directinput_to_xinput](https://github.com/csutorasa/XOutput) | Transfer Driver for API | In need to translate directInput signals |
+| [rusty_xinput](https://docs.rs/rusty-xinput/latest/rusty_xinput/#) | Crate for Rust | Implements Xinput .dll in Rust, has several functions |
+| [gilrs](https://docs.rs/gilrs/latest/gilrs/) | GilRs - Game Input Library for Rust | GilRs abstract platform specific APIs to provide unified interfaces for working with gamepads |
 | [Xinput](https://learn.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) | Bread and butter of this project (main driver) | Xinput, comes with Windows |
-| [GP2040-CE](https://github.com/OpenStickCommunity/GP2040-CE) | GamePad Library for Raspberry Pi Pico | Firmware to implement in the Pico |
+| [embassy_rs](https://github.com/embassy-rs/embassy) | Embassy framework for embedded systems| Implement specifically USB module, ADC converter, I2C/SPi crates |
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
