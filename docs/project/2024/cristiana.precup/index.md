@@ -1,7 +1,10 @@
 # Radar Secure System
+
+A Raspberry Pi Pico W-based radar-like security system.
+
 :::info 
 
-**Author**: Cristiana-Florentina Precup\
+**Author**: Cristiana-Florentina Precup \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-cristianaprecup
 
 :::
@@ -61,8 +64,6 @@ Laptop: Displays the radar data graphically.
 
 ### Schematics
 
-Place your KiCAD schematics here.
-
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
@@ -109,4 +110,3 @@ The format is
 
 1. [YouTube Video](https://www.youtube.com/watch?v=kQRYIH2HwfY&ab_channel=HowToMechatronics)
 
-...
