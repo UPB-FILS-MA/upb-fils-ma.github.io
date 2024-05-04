@@ -1,5 +1,5 @@
 # Magnetic Door Alarm System
-
+A simple security device
 :::
 
 **Author**: Băluțoiu Ana-Maria \
