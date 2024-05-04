@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.55650926.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0a52afcc.js" defer="defer"></script>
 <script src="/assets/js/main.e8bf7535.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,52 +25,87 @@
 I picked this project because it addresses this concern. My project focuses on making parking lots safer, ensuring a better parking experience for everyone.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="architecture">Architecture<a href="#architecture" class="hash-link" aria-label="Direct link to Architecture" title="Direct link to Architecture">​</a></h2>
 <p><img decoding="async" loading="lazy" alt="A prototype of architecture" src="/assets/images/Architecture-144531a4f585b4cfc8c0d8d1041350f3.png" width="765" height="431" class="img_ev3q">
-The architecture should sort of look like this. I will be using a cardboard box.
-This project is a smart parking system built using a Raspberry Pi Pico W and various sensors and components. It has two floors:
-First Floor: Contains three parking spaces with entrance and exit gates.
-Second Floor: Reserved for authorized parking, monitored by an RFID system.
-Components:
-First Floor:
-Parking Areas: 3 parking spaces, each with:
-1 Green LED (indicates available).
-1 Red LED (indicates occupied).
-Gates:
-Entrance Gate: Controlled by Servo 1 (connected to GPIO pin 1).
-Exit Gate: Controlled by Servo 2 (connected to GPIO pin 2).
-Sensors:
-PIR Sensors: 5 sensors monitoring vehicle movements.
-PIR 1 to PIR 5 connected to GPIO pins 6-10.
-IR Flame Sensor: Detects fire and triggers a buzzer.
-Connected to GPIO pin 3.
-Second Floor:
-Authorized Parking Area:
-RFID RC522: Controls access to the area.
-Communicates with the Pico W via SPI:
-SCK (GPIO 18), MISO (GPIO 16), MOSI (GPIO 19), CS (GPIO 17).
-LED Light: Indicates access status.
-Connectivity:
-PIR Sensors: Connected to the Raspberry Pi Pico W&#x27;s GPIO pins, sending signals about vehicle presence.
-Servo Motors: Controlled by PWM pins on the Pico W.
-LEDs: Indicate parking space and authorization status.
-Fire Sensor: Activates a buzzer when triggered.
-RFID: Communicates via SPI with the Pico W, controlling access and indicating status with an LED.
-Physical Layout:
-Cardboard Box: Houses the system, with cutouts for each component:
-First Floor: 3 parking spaces, entrance, and exit.
-Second Floor: Authorized parking area.
-Breadboard: Hidden inside, connecting all components to the Pico W.</p>
+<img decoding="async" loading="lazy" alt="Architecture Scheme" src="/assets/images/Architecture2-6952344dffa1c186db1695345efa6002.png" width="772" height="497" class="img_ev3q"></p>
+<p>This project utilizes a Raspberry Pi Pico W to create a smart parking system, housed within a cardboard box. The system features two floors, with various sensors and components managing the parking spaces.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="components-overview">Components Overview<a href="#components-overview" class="hash-link" aria-label="Direct link to Components Overview" title="Direct link to Components Overview">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="first-floor">First Floor<a href="#first-floor" class="hash-link" aria-label="Direct link to First Floor" title="Direct link to First Floor">​</a></h4>
+<ul>
+<li>
+<p><strong>Parking Areas</strong>:</p>
+<ul>
+<li><strong>3 parking spaces</strong>, each equipped with:<!-- -->
+<ul>
+<li><strong>Green LED</strong>: Indicates the space is available.</li>
+<li><strong>Red LED</strong>: Indicates the space is occupied.</li>
+<li><strong>Infrared Sensor</strong>: Detects presence of cars.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Gates</strong>:</p>
+<ul>
+<li><strong>Entrance Gate</strong>: Controlled by <strong>Servomotor 1</strong> (connected to GPIO pin 1).</li>
+<li><strong>Exit Gate</strong>: Controlled by <strong>Servomotor 2</strong> (connected to GPIO pin 2).</li>
+</ul>
+</li>
+<li>
+<p><strong>Sensors</strong>:</p>
+<ul>
+<li><strong>Infrared Sensors</strong>: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.</li>
+<li><strong>IR Flame Sensor</strong>: Detects fire and triggers a buzzer, connected to GPIO pin 3.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="second-floor">Second Floor<a href="#second-floor" class="hash-link" aria-label="Direct link to Second Floor" title="Direct link to Second Floor">​</a></h4>
+<ul>
+<li><strong>Authorized Parking Area</strong>:<!-- -->
+<ul>
+<li><strong>RFID RC522</strong>: Controls access to the area, communicates with the Pico W via SPI:<!-- -->
+<ul>
+<li><strong>SCK</strong>: GPIO 18</li>
+<li><strong>MISO</strong>: GPIO 16</li>
+<li><strong>MOSI</strong>: GPIO 19</li>
+<li><strong>CS</strong>: GPIO 17</li>
+</ul>
+</li>
+<li><strong>LED Light</strong>: Indicates access status.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="connectivity">Connectivity<a href="#connectivity" class="hash-link" aria-label="Direct link to Connectivity" title="Direct link to Connectivity">​</a></h3>
+<ul>
+<li><strong>Infrared Sensors</strong>: Connected to the Raspberry Pi Pico W&#x27;s GPIO pins, sending signals about vehicle presence.</li>
+<li><strong>Servo Motors</strong>: Controlled by pins on the Pico W.</li>
+<li><strong>LEDs</strong>: Indicate parking space and authorization status.</li>
+<li><strong>Fire Sensor</strong>: Activates a buzzer when triggered.</li>
+<li><strong>RFID</strong>: Communicates via SPI with the Pico W, controlling access and indicating status with an LED.</li>
+<li><strong>Active buzzer</strong>: the buzzer that gets activated in case of a fire.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physical-layout">Physical Layout<a href="#physical-layout" class="hash-link" aria-label="Direct link to Physical Layout" title="Direct link to Physical Layout">​</a></h3>
+<ul>
+<li><strong>Cardboard Box</strong>: Houses the system, with cutouts for each component:<!-- -->
+<ul>
+<li><strong>First Floor</strong>: 3 parking spaces, entrance, and exit.</li>
+<li><strong>Second Floor</strong>: Authorized parking area.</li>
+</ul>
+</li>
+<li><strong>Breadboard</strong>: Hidden inside, connecting all components to the Pico W.</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
-<p>Infrared Flame sensor: I used this to detect any nearby fires.
-Active buzzer module: This buzzer is activated when the flame sensor detects fire, or when rfid detects unauthorised car.
-Servomotor: Used as a barrier.
-Infrared sensor: Two of them are used with the servomotors, they indicate nearby cars so that the servo barrier opens. Three of them are used to detect if parking spaces are occupied or not.
-Rfid module: I used it to differ between authorised and unauthorised cars. Authorised have a recognised card attached to it, the unauthorised ones will have a different card attached.
-Green leds: used to indicate free parking spots.
-Red leds: used to indicate occupied parking spots.</p>
+<ul>
+<li><em>Infrared Flame sensor</em>: I used this to detect any nearby fires.</li>
+<li><em>Active buzzer module</em>: This buzzer is activated when the flame sensor detects fire, or when rfid detects unauthorised car.</li>
+<li><em>Servomotor</em>: Used as a barrier.</li>
+<li><em>Infrared sensor</em>: Two of them are used with the servomotors, they indicate nearby cars so that the servo barrier opens. Three of them are used to detect if parking spaces are occupied or not.</li>
+<li><em>Rfid module</em>: I used it to differ between authorised and unauthorised cars. Authorised have a recognised card attached to it, the unauthorised ones will have a different card attached.</li>
+<li><em>Green leds</em>: used to indicate free parking spots.</li>
+<li><em>Red leds</em>: used to indicate occupied parking spots.</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="Kicad schematic where the pins are connected directly to pico  but the ground and vcc are not" src="/assets/images/kicad1-e41df1367bc8950e221c893d304ac705.png" width="983" height="675" class="img_ev3q">
 <img decoding="async" loading="lazy" alt="Kicad schematic where everything is connected to the raspberry pico" src="/assets/images/Kicad2-8adf6103034e7442a301756c1d4d5cf2.png" width="981" height="670" class="img_ev3q">
@@ -83,6 +118,7 @@ In kicad2, everything is connected properly.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="links">Links<a href="#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links">​</a></h2>
 <ol>
 <li><a href="https://ocw.cs.pub.ro/courses/pm/prj2023" target="_blank" rel="noopener noreferrer">PM projects 2023</a></li>
-</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/edit/main/docs/project/2024/Layla.el/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/project/2024/Ioana_maria.cristea"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Smart Fan</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/project/2024/Ruxandra.popa"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">RustPlayer</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#description" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#motivation" class="table-of-contents__link toc-highlight">Motivation</a></li><li><a href="#architecture" class="table-of-contents__link toc-highlight">Architecture</a></li><li><a href="#log" class="table-of-contents__link toc-highlight">Log</a><ul><li><a href="#week-6---12-may" class="table-of-contents__link toc-highlight">Week 6 - 12 May</a></li><li><a href="#week-7---19-may" class="table-of-contents__link toc-highlight">Week 7 - 19 May</a></li><li><a href="#week-20---26-may" class="table-of-contents__link toc-highlight">Week 20 - 26 May</a></li></ul></li><li><a href="#hardware" class="table-of-contents__link toc-highlight">Hardware</a><ul><li><a href="#schematics" class="table-of-contents__link toc-highlight">Schematics</a></li><li><a href="#bill-of-materials" class="table-of-contents__link toc-highlight">Bill of Materials</a></li></ul></li><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#links" class="table-of-contents__link toc-highlight">Links</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Materials</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/category/lecture">Lecture</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/lab">Lab</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/project">Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/upb-fils-ma" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 <a href="https://wyliodrin.com" target="_blank">Wyliodrin SRL</a>, licensed under CC BY-SA 4.0.</div></div></div></footer></div>
+<li><a href="https://www.youtube.com/watch?v=8XOsXdNOa4g&amp;ab_channel=svsembedded" target="_blank" rel="noopener noreferrer">Car Parking System</a></li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/edit/main/docs/project/2024/Layla.el/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/project/2024/Ioana_maria.cristea"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Smart Fan</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/project/2024/Ruxandra.popa"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">RustPlayer</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#description" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#motivation" class="table-of-contents__link toc-highlight">Motivation</a></li><li><a href="#architecture" class="table-of-contents__link toc-highlight">Architecture</a><ul><li><a href="#components-overview" class="table-of-contents__link toc-highlight">Components Overview</a></li><li><a href="#connectivity" class="table-of-contents__link toc-highlight">Connectivity</a></li><li><a href="#physical-layout" class="table-of-contents__link toc-highlight">Physical Layout</a></li></ul></li><li><a href="#log" class="table-of-contents__link toc-highlight">Log</a><ul><li><a href="#week-6---12-may" class="table-of-contents__link toc-highlight">Week 6 - 12 May</a></li><li><a href="#week-7---19-may" class="table-of-contents__link toc-highlight">Week 7 - 19 May</a></li><li><a href="#week-20---26-may" class="table-of-contents__link toc-highlight">Week 20 - 26 May</a></li></ul></li><li><a href="#hardware" class="table-of-contents__link toc-highlight">Hardware</a><ul><li><a href="#schematics" class="table-of-contents__link toc-highlight">Schematics</a></li><li><a href="#bill-of-materials" class="table-of-contents__link toc-highlight">Bill of Materials</a></li></ul></li><li><a href="#software" class="table-of-contents__link toc-highlight">Software</a></li><li><a href="#links" class="table-of-contents__link toc-highlight">Links</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Materials</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/category/lecture">Lecture</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/category/lab">Lab</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/project">Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/upb-fils-ma" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 <a href="https://wyliodrin.com" target="_blank">Wyliodrin SRL</a>, licensed under CC BY-SA 4.0.</div></div></div></footer></div>
 </body>
 </html>
