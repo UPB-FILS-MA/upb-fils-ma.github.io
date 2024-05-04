@@ -2,8 +2,7 @@
 A smart emotional pot with automated watering system
 :::info 
 
-**Author**: Ana-Maria Comeaga
-
+**Author**: Ana-Maria Comeaga \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-anamaria2004
 
 :::
