@@ -10,11 +10,7 @@ A breathalyzer which detects the alcohol in the blown air.
 
 ## Description
 
- My project is a breathalyzer with a LCD (which shows the precentage of alchohol in the air(and some other stuff)), a buzzer, an alcohol sensor, 2 LED's  and a button which resets the number so we can have another reading.( the "no idea" price tag on the components is there because they come from an arduino kit which i bought 1 year ago and i cannot remember the price). It has a 3D-printed case which makes it look more practical than just wires and components on a breadboard . The idea is simple : someone who drinks alcohol(a beer for example) blows into the MQ-3 sensor and then 3 thing will happen :
- 1. The LCD will show some data which shows the precentage of alcohol in the air that was blown into the sensor
- 2. The buzzer will make a sound to signal that the upper limit of detected alcohol in the air has been passed
- 3. The LED's will be one red and one blue, which resembles the lights on a police car ( this is just for looks )
- I want this project to be something useful and at the same time something fun which anybody can use.
+ My project is a breathalyzer with a LCD (which shows the precentage of alchohol in the air(and some other stuff)), a buzzer, an alcohol sensor, 2 LED's  and a button which resets the number so we can have another reading.( the "no idea" price tag on the components is there because they come from an arduino kit which i bought 1 year ago and i cannot remember the price). It has a 3D-printed case which makes it look more practical than just wires and components on a breadboard . I want this project to be something useful and at the same time something fun which anybody can use.
 
 
 ## Motivation
@@ -30,7 +26,6 @@ Add here the schematics with the architecture of your project. Make sure to incl
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
 
-
 ## Log
 
 <!-- write every week your progress here -->
@@ -43,11 +38,16 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 ## Hardware
 
-Detail in a few words the hardware used.
-
+The idea is simple : someone who drinks alcohol(a beer for example) blows into the MQ-3 sensor and then 3 thing will happen :
+ 1. The LCD will show some data which shows the precentage of alcohol in the air that was blown into the sensor
+ 2. The buzzer will make a sound to signal that the upper limit of detected alcohol in the air has been passed
+ 3. The LED's will be one red and one blue, which resembles the lights on a police car ( this is just for looks )
 ### Schematics
 
 Place your KiCAD schematics here.
+
+![alt text](image.png)
+
 
 ### Bill of Materials
 
