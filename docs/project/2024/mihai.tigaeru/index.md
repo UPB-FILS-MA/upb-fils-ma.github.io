@@ -51,17 +51,17 @@ TBD
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico H](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [40 RON](https://www.bitmi.ro/placi-de-dezvoltare/placa-de-dezvoltare-raspberry-pi-pico-h-rp2040-264kb-ram-10848.html) |
-| 2-axis (XY) Joystick Module | Game Interactions | [6 RON](https://www.bitmi.ro/module-electronice/modul-joystick-cu-2-axe-x-y-10454.html) |
-| Breadboard 830 | Hardware Pins Connections | [9 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
-| Pasive Buzzer Module | Sounds | [4 RON](https://www.bitmi.ro/module-electronice/modul-buzzer-pasiv-ky-006-10678.html) |
-| LCD Nokia 5110 Display 84x48 | Game Displaying | [24 RON](https://cleste.ro/ecran-nokia-5110-84x48.html) |
-| LED Display Module with Serial Interface (TM1637) | Score Counting | [11 RON](https://www.sigmanortec.ro/modul-display-led-cu-interfata-seriala-tm1637) |
-| Dupont Wires M-M | Connections | [7 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-tata-20cm-10511.html) |
-| Dupont Wires F-F | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-mama-mama-20cm-10509.html) |
-| Dupont Wires M-F | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-mama-20cm-10512.html) |
-| Jumper Wires Kit | Connections | [9 RON](https://ardushop.ro/ro/home/1374-set-jumper-breadboard-140.html) |
-| Micro USB Cable | Power | [8 RON](https://ardushop.ro/ro/electronica/397-cablu-usb-micro.html?search_query=micro+usb&results=383) |
+[Rapspberry Pi Pico H](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [40 RON](https://www.bitmi.ro/placi-de-dezvoltare/placa-de-dezvoltare-raspberry-pi-pico-h-rp2040-264kb-ram-10848.html) |
+| [2-axis (XY) Joystick Module](https://cse.unl.edu/~jfalkinburg/cse_courses/2024/336/JOYSTICK_MODULE.pdf) | Game Interactions | [6 RON](https://www.bitmi.ro/module-electronice/modul-joystick-cu-2-axe-x-y-10454.html) |
+| [Breadboard 830](https://docs.sunfounder.com/projects/sf-components/en/latest/component_breadboard.html) | Hardware Pins Connections | [9 RON](https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
+| [Pasive Buzzer Module](https://www.thegeekpub.com/wiki/sensor-wiki-ky-006-passive-piezo-buzzer-module/) | Sounds | [4 RON](https://www.bitmi.ro/module-electronice/modul-buzzer-pasiv-ky-006-10678.html) |
+| [LCD Nokia 5110 Display 84x48](https://mecrisp-stellaris-folkdoc.sourceforge.io/nokia-5110.html) | Game Displaying | [24 RON](https://cleste.ro/ecran-nokia-5110-84x48.html) |
+| [LED Display Module with Serial Interface (TM1637)](https://robojax.com/learn/arduino/robojax-TM1637_display_manual.pdf) | Score Counting | [11 RON](https://www.sigmanortec.ro/modul-display-led-cu-interfata-seriala-tm1637) |
+| [Dupont Wires M-M](https://www.farnell.com/datasheets/3178883.pdf) | Connections | [7 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-tata-20cm-10511.html) |
+| [Dupont Wires F-F](https://www.farnell.com/datasheets/3178883.pdf) | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-mama-mama-20cm-10509.html) |
+| [Dupont Wires M-F](https://www.farnell.com/datasheets/3178883.pdf) | Connections | [6 RON](https://www.bitmi.ro/componente-electronice/40-x-fire-dupont-tata-mama-20cm-10512.html) |
+| [Jumper Wires Kit](https://www.farnell.com/datasheets/3178883.pdf) | Connections | [9 RON](https://ardushop.ro/ro/home/1374-set-jumper-breadboard-140.html) |
+| [Micro USB Cable](https://www.techtarget.com/whatis/definition/micro-USB) | Power | [8 RON](https://ardushop.ro/ro/electronica/397-cablu-usb-micro.html?search_query=micro+usb&results=383) |
 
 ## Software
 
