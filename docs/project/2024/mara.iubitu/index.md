@@ -4,7 +4,7 @@ A sensor that measures the distance
 :::info 
 
 **Author**: Iubitu Mara \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-MaraIubitu.git)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-MaraIubitu.git
 
 :::
 
