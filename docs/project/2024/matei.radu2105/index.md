@@ -1,12 +1,10 @@
 # Snakes and Apples
 My project has the goal of using a Raspberry Pi to simulate the old video game Snake.
 
-:::info 
 
 **Author**: Radu Matei \
 **GitHub Project Link**: [This is my project.](idk how to find the link or how to use github properly)
 
-:::
 
 ## Description
 
@@ -34,10 +32,6 @@ hardware is not really my specialty, I will do my best to make the best game I c
 ## Architecture 
 
 ![Project_architecture](https://github.com/matei7-7/upb-fils-ma.github.io/assets/163386907/7c0f97c5-45d2-4cf8-942e-5c31e0257cbe)
-
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
 
 ## Log
 
@@ -72,7 +66,12 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-|test|test again|1 ron|
+| LCD SPI Display | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/1312-modul-lcd-spi-de-144-128x128-ili9163-negru.html) |
+| 3.3V Buzzer | Buzzers for sound effects and background music | [2 RON / Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
+| Buttons | 4 Buttons for the movement buttons + 1 Button for On/Off switch | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
+| Wires | Wires for connecting the hardware | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html) |
+| Bredboard | Bredboard for connecting the hardware | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
+| Resistors | Resistors | [0.1 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/848-rezistor-025w-22k.html) |
 
 ## Software
 
@@ -85,6 +84,4 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [Snake (Video Game)](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
