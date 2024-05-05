@@ -2,7 +2,7 @@
 
 :::info 
 
-**Author**: GZARA Seif
+**Author**: GZARA Seif \
 **GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-seifgz)
 
 :::
