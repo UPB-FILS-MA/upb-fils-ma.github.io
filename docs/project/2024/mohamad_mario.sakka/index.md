@@ -21,7 +21,8 @@ The average temperature around the globe has been on the rise for quite a while,
 
 ## Architecture
 
-* The application on the laptop will act as a server, the RP Pico W will establish a connection with it, and it will exchange data with it via TCP to ensure reliable communication between the two. This app will be written in *Python* using the *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will connect to a network with preset name & password which must be hosted by the laptop. 
+* The application on the laptop will act as a server, the RP Pico W will establish a connection with it, and it will exchange data with it via TCP to ensure reliable communication between the two. This app will be written in *Python* using the *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will connect to a network with preset name & password which must be hosted by the laptop. The
+program running on the RP Pico W will be written using the *embassy-rs* framework.
 
 * The physical UI (buttons & LCD) will be used to establish the connection, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
 
@@ -99,7 +100,19 @@ The format is
 | Library                                                                     | Description               | Usage                                           |
 |-|-|-|
 | [lcd1602-driver](https://github.com/eZioPan/lcd1602-driver) | Display driver for LCD1602 | Used as a display for my cooling pad |
+| [embassy-time](https://docs.embassy.dev/embassy-executor/git/std/index.html) | Time management library | Delays & debouncing between button pressings |
+| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Accessing peripherals | Interacting with peripherals (pins) |
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)| An async/await executor designed for embedded usage | Running multiple tasks simultaneously |
+| [log](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | Logging interface | Logging info or warning messages |
+| [embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | USB implementation of the log crate | Logging info or warning messages over USB |
+| [embassy-pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM driver for embassy | Controlling rotation speed of coolers |
+| [embassy-net](https://github.com/embassy-rs/embassy/tree/main/embassy-net) | Networking functionalities for embassy | Creating TCP connections with laptop |
+| [embedded-io-async](https://github.com/rust-embedded/embedded-hal/tree/master/embedded-io-async) | Async IO traits for embedded systems | Async writing to buffers |
+| [static_cell](https://github.com/embassy-rs/static-cell) | Statically allocated, initialized at runtime cell | Static variables intialized at runtime|
+| [cyw43_pio](https://docs.embassy.dev/cyw43-pio/git/default/index.html) | no-std Rust driver for cyw43 WIFI chip on RP Pico W| Connecting to WIFI network hosted by Laptop |
 | [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
+| [Custom Tkinter](https://github.com/TomSchimansky/CustomTkinter) | Python UI-library based on Tkinter | Building the UI of the desktop app |
+| [socket](https://docs.python.org/3/library/socket.html) | Low level networking interface for Python | Handling data exchanges and connections with Rp Pico W |
 
 ## Links
 
