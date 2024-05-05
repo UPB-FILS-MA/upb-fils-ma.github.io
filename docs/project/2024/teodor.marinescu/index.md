@@ -4,7 +4,7 @@ Smart light that can be controlled just by the clapping of your hands.
 :::info 
 
 **Author**: Marinescu Teodor\
-**GitHub Project Link**: https://github.com/teofils1/Project_Rust/
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-teofils1
 
 :::
 
