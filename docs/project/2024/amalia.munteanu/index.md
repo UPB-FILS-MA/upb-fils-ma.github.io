@@ -33,7 +33,7 @@ I've always taken a big interest in the game development area, and thought it wo
 
 -Raspberry Pi Pico W: A microcontroller board for the embedded project.
 
--LCD Display: A 16x2 character LCD display with I2C interface and blue backlight.
+ - LCD Display: A 16x2 character LCD display with I2C interface and blue backlight.
 
 -Wires father-father: Male-to-male jumper wires for connecting components on a breadboard or elsewhere.
 
