@@ -16,7 +16,7 @@ I've always taken a big interest in the game development area, and thought it wo
 
 ## Architecture 
 
-<img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/e20722b9-ee21-4c65-a625-b7a9bce18401">
+![Architecture1](./Architecture1.png)
 
 
 ## Log
