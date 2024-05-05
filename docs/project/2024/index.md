@@ -1,6 +1,9 @@
 # Tic-Tac_Toe
 This project aims to emulate the popular game Tic-Tac_Toe on a Rapspberry Pi.
 
+
+:::info
+
 **Author**: Teodor-Matei FRÂNCU \
 **GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-Angery-Stoman)
 
