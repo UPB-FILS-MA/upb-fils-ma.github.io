@@ -2,7 +2,13 @@
 
 You can play music just by moving your fingers through air.
 
-Author: Chirila Teodora
+
+:::info
+
+**Author**: Chirila Teodora \
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-ChirilaTeodoraAuthor: Chirila Teodora
+
+:::
 
 GitHub Project Link: https://github.com/UPB-FILS-MA/project-ChirilaTeodora
 
@@ -28,11 +34,11 @@ Main Component (Software): The Rust program running on the Raspberry Pi Pico W.
 
 Subcomponents:
 
-• Sensor Input: Handles communication with the ultrasonic sensor and retrieves distance data.
+- Sensor Input: Handles communication with the ultrasonic sensor and retrieves distance data.
 
-• LED Control: Controls the three LEDs based on the detected distance.
+- LED Control: Controls the three LEDs based on the detected distance.
 
-• Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
+- Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
 
 ## Log
 
@@ -48,21 +54,21 @@ Subcomponents:
 
 This project utilizes the following hardware components:
 
-• Raspberry Pi Pico W: The microcontroller board that controls the entire system.
+- Raspberry Pi Pico W: The microcontroller board that controls the entire system.
 
-• Ultrasonic Sensor: Detects the distance of objects in front of it using ultrasonic waves.
+- Ultrasonic Sensor: Detects the distance of objects in front of it using ultrasonic waves.
 
-• Three LEDs: Provide visual feedback based on the detected distance.
+- Three LEDs: Provide visual feedback based on the detected distance.
 
-• Two Buzzers (Active or Passive): Generate sound for the piano functionality.
+- Two Buzzers (Active or Passive): Generate sound for the piano functionality.
 
-• Breadboard: Facilitates easy connection between components.
+- Breadboard: Facilitates easy connection between components.
 
-• Jumper Wires: Connect components to the breadboard and Raspberry Pi Pico.
+- Jumper Wires: Connect components to the breadboard and Raspberry Pi Pico.
 
 ### Schematics
 
-![alt text](image.png)
+![Architecture diagram](image.png)
 
 
 ### Bill of Materials
@@ -78,7 +84,7 @@ The format is
 -->
 
 | Device                                                                                                  | Usage               | Price                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-|-|-|
 | [Raspberry Pi Pico](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | The microcontroller | [39 lei](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                                                                                                                                                                                        |
 | [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                          | Main board          | [10 lei](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                                                                                                                                                                                          |
 | [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)|   Connecting      | [8 lei ](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)                                                                                                                                                                    |
