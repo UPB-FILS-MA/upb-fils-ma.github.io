@@ -33,6 +33,8 @@ hardware is not really my specialty, I will do my best to make the best game I c
 
 ## Architecture 
 
+![Project_architecture](https://github.com/matei7-7/upb-fils-ma.github.io/assets/163386907/7c0f97c5-45d2-4cf8-942e-5c31e0257cbe)
+
 Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
