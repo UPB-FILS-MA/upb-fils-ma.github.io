@@ -1,9 +1,13 @@
 # Project Name
 Sensor Control System
 
+
+:::info
+
 **Author**: Stoica Stefan Nicolae
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-bep1s69
 
+:::
 
 ## Description
 
@@ -66,10 +70,8 @@ Place your KiCAD schematics here.
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [spi](https://github.com/2bn-dev/pico-spi-utilities) | SPI communication driver | Used for communicating with the CYW43439 wireless interface chip connected to the RP2040 via SPI |
-| [rp-hal](https://github.com/rp-rs/rp-hal) | Hardware abstraction layer | Used for interacting with hardware peripherals, including the ADC (Analog-to-Digital Converter) |
-| [ds18b20](https://github.com/awendland/rpi-ds18b20-rust) | DS18B20 temperature sensor driver | Used for interfacing with the DS18B20 temperature sensor over the OneWire protocol |
-
+| [rp-hal](https://github.com/rp-rs/rp-hal) | Hardware abstraction layer | Used for interacting with hardware peripherals, including the ADC (Analog-to-Digital Converter) and the SPI|
+| [onewire](https://github.com/rust-embedded-community/onewire) | OneWire protocol driver | Used for interfacing with OneWire devices, namely the DS18B20 Temperature Sensor, connected to the Raspberry Pi Pico |
 ## Links
 
 1. [Programming the Raspberry Pi Pico with Rust](https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
