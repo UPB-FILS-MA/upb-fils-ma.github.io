@@ -4,7 +4,7 @@ This project is a compact music player built with a Raspberry Pi Pico W, using R
 **Author**: Popescu Mihai-Cristian \
 **GitHub Project Link**: link
 
-:::
+
 
 ## Description
 
