@@ -4,7 +4,7 @@ My project has the goal of using a Raspberry Pi to simulate the old video game S
 
 :::info 
 **Author**: Radu Matei \
-**GitHub Project Link**: [This is my project.](https://github.com/UPB-FILS-MA/project-matei7-7) 
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-matei7-7
 :::
 
 
