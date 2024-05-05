@@ -108,8 +108,8 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. (https://hackaday.io/project/190692-wow-enjoy-the-current-weather-with-picassos-pai/log/217890-complete)
-2. (https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
-3. (https://www.arewewebyet.org/)
-4. (https://www.youtube.com/watch?v=aEnS0-Jy2vE)
-5. https://www.tomshardware.com/how-to/oled-display-raspberry-pi-pico
+1. [Get the weather in real time](https://hackaday.io/project/190692-wow-enjoy-the-current-weather-with-picassos-pai/log/217890-complete)
+2. [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+3. [How to build a web project using Rust](https://www.arewewebyet.org/)
+4. [Temperature Sensor Tutorial](https://www.youtube.com/watch?v=aEnS0-Jy2vE)
+5. [OLED display for Raspberry Pi Pico](https://www.tomshardware.com/how-to/oled-display-raspberry-pi-pico)
