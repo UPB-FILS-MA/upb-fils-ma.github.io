@@ -98,8 +98,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used to control the OLED/LCD display for showing temperature readings and other graphical outputs on the Raspberry Pi Pico W. |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Utilized for drawing graphics and text on the display, including temperature data and visual indicators. |
 | [rp2040-hal](https://github.com/rp-rs/rp-hal) | Hardware Abstraction Layer for Raspberry Pi Pico | Provides access to the hardware features of the Raspberry Pi Pico W, simplifying tasks like GPIO management, ADC input, and PWM output. |
 | [one-wire](https://github.com/rust-embedded-community/rust-onewire) | Rust implementation of the OneWire protocol | Manages communication with the DS18B20 temperature sensor to retrieve accurate temperature measurements. |
 | [warp](https://github.com/seanmonstar/warp) | A web server framework for Rust | Serves the web application that displays real-time and historical temperature data, managing requests and routing in the backend. |
