@@ -4,7 +4,7 @@ Parking sensor with barrier control
 :::info 
 
 **Author**: Rosoiu Luca \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-LucaRosoiu)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-LucaRosoiu
 
 :::
 
