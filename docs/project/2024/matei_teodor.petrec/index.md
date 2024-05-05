@@ -2,7 +2,7 @@
 
 :::info 
 
-**Author**: Petrec Matei-Teodor
+**Author**: Petrec Matei-Teodor \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Petrecm
 
 :::
