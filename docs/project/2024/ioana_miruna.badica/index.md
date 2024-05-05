@@ -4,7 +4,7 @@ The prototype of a lamp with multiple functionalities.
 :::info 
 
 **Author**: Bădică Ioana-Miruna \
-**GitHub Project Link**: [Smart Lamp](https://github.com/jojomojo22/upb-fils-ma.github.io/blob/project_documentation/docs/project/2024/ioana_miruna.badica/index.md)
+**GitHub Project Link**: [Smart Lamp](https://github.com/jojomojo22/upb-fils-ma.github.io/tree/project_documentation/docs/project/2024/ioana_miruna.badica)
 
 :::
 
