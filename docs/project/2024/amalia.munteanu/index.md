@@ -1,10 +1,10 @@
 # The Hangmaster
 A hangman game programmed on a Raspberry Pi Pico. 
 
-
+:::info 
 **Author**: Munteanu Amalia-Nicole \
 **GitHub Project Link**: [My Project](https://github.com/UPB-FILS-MA/project-nikkoxp)
-
+:::
 
 ## Description
 
