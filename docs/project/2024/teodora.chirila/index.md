@@ -94,8 +94,7 @@ The format is
 ## Software
 
 | Library                                  | Description                        | Usage                              |
-| ---------------------------------------- | ---------------------------------- | ---------------------------------- |
-| []() |  |  |
+| ---------------------------------------- | ---------------------------------- | ----------------------------------|
 | [Embassy](https://github.com/embassy-rs/embassy)       | A Rust-based framework designed specifically for embedded programming.                | It's for programming the Raspberry Pi Pico and simplifying embedded concepts.              |                         
 | [embassy-hal](https://github.com/embassy-rs/embassy)        | Hardware                | Provides access to Raspberry Pi Pico W specific hardware functionalities.              |
 
