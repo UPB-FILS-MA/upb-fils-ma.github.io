@@ -19,17 +19,28 @@ I chose this project because it seems like a pretty practical idea in the day-to
 
 ## Architecture 
 
-Connectivity and Interactions:
-Sensor Interface → Data Processing and Logic Unit:
-The sensor interface reads temperature data and sends it to the data processing unit where it is logged and processed for further actions.
-Data Processing and Logic Unit → Display Controller:
-Processed data that includes current temperatures and possibly system statuses is sent from the data processing unit to the display controller for real-time display.
-Data Processing and Logic Unit → LED Controller:
-Depending on the temperature data, the data processing unit sends commands to the LED controller to adjust the LED's color and brightness.
-Data Processing and Logic Unit ↔ Network Interface:
-The network interface acts as a gateway for sending temperature data to the web server and receiving commands from the web application, facilitated by the central data processing unit.
-Network Interface ↔ Web Application:
-The web application communicates with the network interface to send user commands and receive data for display. This includes settings adjustments, real-time temperature updates, and accessing historical data logs. |
+# Connectivity and Interactions
+
+1. **Sensor Interface → Data Processing and Logic Unit:**
+   - The sensor interface reads temperature data.
+   - This data is then sent to the data processing unit, where it is logged and processed for further actions.
+
+2. **Data Processing and Logic Unit → Display Controller:**
+   - Processed data, including current temperatures and system statuses, is forwarded from the data processing unit to the display controller.
+   - The display controller provides real-time visualization of the data.
+
+3. **Data Processing and Logic Unit → LED Controller:**
+   - Based on the temperature data, the data processing unit issues commands to the LED controller.
+   - The LED controller adjusts the LED's color and brightness according to the temperature conditions.
+
+4. **Data Processing and Logic Unit ↔ Network Interface:**
+   - The network interface functions as a gateway, facilitating communication between the web server and the data processing unit.
+   - It allows the data processing unit to send temperature data to the web server and receive commands from the web application.
+
+5. **Network Interface ↔ Web Application:**
+   - The web application interacts with the network interface to transmit user commands and receive data for display.
+   - This includes adjusting settings, monitoring real-time temperature updates, and accessing historical data logs.
+
 
 <img src="LED (1).png">
 
