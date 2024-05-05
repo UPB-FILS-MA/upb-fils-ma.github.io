@@ -94,5 +94,5 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-https://www.youtube.com/watch?v=gBofy7MMdIY
+[https://www.youtube.com/watch?v=gBofy7MMdIY](Thermometer and Digital Clock)
 ...
