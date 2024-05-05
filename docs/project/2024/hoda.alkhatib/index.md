@@ -68,7 +68,6 @@ The Raspberry Pi is positioned at the center, serving as the main controller.
 Components are arranged in a clear and organized manner around the Raspberry Pi.
 Arrows indicate the direction of data flow or connection from the components to the Raspberry Pi.
 Each component is labeled for clarity.
-![image](https://github.com/AlkhatibHoda/upb-fils-ma.github.io/assets/163418706/6d8fd589-afbd-4f42-a0ab-eaa5cbad18c2)
 
 Place your KiCAD schematics here.
 
