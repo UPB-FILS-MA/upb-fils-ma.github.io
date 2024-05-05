@@ -17,6 +17,7 @@ I'll design a user-friendly alarm clock with a real-time clock (RTC) module, LCD
 The motivation behind this project is to create a multifunctional clock that not only provides accurate timekeeping and customizable alarms but also offers real-time weather information in a fun and intuitive way. I chose this project because the clock is essential in our lives; whether you need to go to work, attend an appointment, or manage your daily tasks, knowing the time is crucial. Additionally, the weather function helps a lot when you want to know how to dress yourself.
 
 ## Architecture 
+![Architecture diagram](./architecture_diagram.png)
 
 ## Log
 
