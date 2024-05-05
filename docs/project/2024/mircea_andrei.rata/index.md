@@ -1,6 +1,6 @@
 # Burglar alarm with notification via email
 
- A smart burglar alarm system , equipped with motion detection, email alerts and keypad for security.
+ A smart burglar alarm system, equipped with motion detection, email alerts and keypad for security.
 
 :::info 
 
