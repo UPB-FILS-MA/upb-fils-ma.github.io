@@ -4,7 +4,7 @@ This project aims to deliver a working Xbox One Controller through the official 
 :::info 
 
 **Author**: Leonte Robert \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-CearceafAlb)
+**GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-CearceafAlb)
 
 :::
 
@@ -70,5 +70,5 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://learn.microsoft.com/en-us/gaming/gdk/_content/gc/input/overviews/input-overview)
+1. [GameInput Official Documentation](https://learn.microsoft.com/en-us/gaming/gdk/_content/gc/input/overviews/input-overview)
 ...
