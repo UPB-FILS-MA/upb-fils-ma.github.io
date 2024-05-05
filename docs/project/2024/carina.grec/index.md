@@ -42,7 +42,7 @@ I chose this project because it seems like a pretty practical idea in the day-to
    - This includes adjusting settings, monitoring real-time temperature updates, and accessing historical data logs.
 
 
-<img src="LED (1).png">
+![Architecture](docs/project/2024/carina.grec/architecture.png)
 
 ## Log
 
