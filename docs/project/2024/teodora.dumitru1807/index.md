@@ -5,7 +5,7 @@ A robot car that can be controlled through a website accessed from the mobile ph
 :::info
 
 **Author**: Dumitru Teodora-Iulia \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-Teodora1807.git)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Teodora1807.git
 
 :::
 
