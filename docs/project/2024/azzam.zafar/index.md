@@ -25,7 +25,7 @@ I decided on this idea because of its real world applications. This project is a
 
 ## Architecture 
 
-![Architecture](project_architecture.svg)
+![Architecture](project_architecture_light_mode.svg#gh-light-mode-only)![Architecture](project_architecture_dark_mode.svg#gh-dark-mode-only)
 
 ## Log
 
