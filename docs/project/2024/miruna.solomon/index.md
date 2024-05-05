@@ -1,5 +1,5 @@
 # Game Remote
-The project aims to create a remote that is going to recognise the hand movement in order to move a character in a Pacman game
+The project aims to create a remote that is going to recognise the hand movement in order to move a character in a Pacman game\
 :::info
 **Author**: Solomon Miruna-Maria in collaboration with Balba Tudor-Neculai\
 **GitHub Project Link**: [Pacman Game](https://github.com/UPB-FILS-MA/project-mirusol)
