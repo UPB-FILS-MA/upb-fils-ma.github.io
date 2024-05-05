@@ -3,7 +3,7 @@ A hangman game programmed on a Raspberry Pi Pico.
 
 :::info 
 **Author**: Munteanu Amalia-Nicole \
-**GitHub Project Link**: [My Project](https://github.com/UPB-FILS-MA/project-nikkoxp)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-nikkoxp
 :::
 
 ## Description
@@ -33,7 +33,7 @@ I've always taken a big interest in the game development area, and thought it wo
 
 -Raspberry Pi Pico W: A microcontroller board for the embedded project.
 
--LCD 1602 cu Interfata I2C si Backlight Albastru: A 16x2 character LCD display with I2C interface and blue backlight.
+-LCD Display: A 16x2 character LCD display with I2C interface and blue backlight.
 
 -Wires father-father: Male-to-male jumper wires for connecting components on a breadboard or elsewhere.
 
@@ -41,13 +41,13 @@ I've always taken a big interest in the game development area, and thought it wo
 
 -Buzzer: An audio output device that emits sound when activated once the player loses all the lives.
 
--Tastatură Matriceală 4x4 cu Butoane: A 4x4 matrix keypad for inputting the letters.
+-Keypad: A 4x4 matrix keypad for inputting the letters.
 
--Potentiometru Stereo 10k: A stereo potentiometer used for adjusting analog signals.
+-Potentiometer: A stereo potentiometer used for adjusting analog signals.
 
--Breadboard HQ (830 Puncte): A breadboard for prototyping the circuit necessary for the project.
+-Breadboard: A breadboard for prototyping the circuit necessary for the project.
 
--3 LEDs Roșii de 3 mm cu Lentile Difuze: 3 red LEDs with diffused lens for visual indication.
+-3 LEDs: 3 red LEDs with diffused lens for visual indication.
 
 -Buton 6x6x6: A tactile push button for manual control or input.
 
@@ -74,11 +74,11 @@ The format is
 | Wires father-father | The Wires Father-Father | [6,99 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire&results=437) |
 | Wires mother-mother | The Wires Mother-Mother | [7,73 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/652-fire-colorate-mama-mama-40p-10-cm.html?search_query=fire&results=437) |
 | Buzzer | The Buzzer | [1,95 RON](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html?search_query=buzzer&results=62) |
-| Tastatură Matriceală 4x4 cu Butoane | The Keypad | [3,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html) |
-| Potentiometru Stereo 10k | The Potentiometer | [1,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/1886-potentiometru-stereo-10k.html?search_query=Potentiometru+stereo+10k&results=2) |
-| Breadboard HQ (830 Puncte) | The Breadboard | [9,98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard&results=145) |
-| LED Roșu de 3 mm cu Lentile Difuze | The LEDs | [0,39 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/696-led-rou-de-3-mm-cu-lentile-difuze.html?search_query=LED&results=818) |
-| Buton 6x6x6 | The On/Off Button | [0,36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
+| Keypad | The Keypad | [3,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html) |
+| Potentiometer | The Potentiometer | [1,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/1886-potentiometru-stereo-10k.html?search_query=Potentiometru+stereo+10k&results=2) |
+| Breadboard | The Breadboard | [9,98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard&results=145) |
+| 3 Red LEDs | The LEDs | [0,39 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/696-led-rou-de-3-mm-cu-lentile-difuze.html?search_query=LED&results=818) |
+| Button 6x6x6 | The On/Off Button | [0,36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
 
 
 ## Software
