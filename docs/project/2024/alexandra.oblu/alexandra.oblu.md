@@ -2,8 +2,11 @@
 
 A clock-in machine used to keep track of attendance.
 
+
+:::info
 **Author**: Oblu Alexandra \
 **GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-alexandra214)
+:::
 
 
 ## Description
