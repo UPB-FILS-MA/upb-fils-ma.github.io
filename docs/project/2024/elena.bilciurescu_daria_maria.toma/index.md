@@ -93,6 +93,6 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
+1. [PID Controller based Line Following and Obstacle Avoidance Two Wheeled Robot](https://www.ijert.org/research/pid-controller-based-line-following-and-obstacle-avoidance-two-wheeled-robot-IJERTCONV7IS02026.pdf)
+2. [Two wheeled Line Follower using PID](https://www.youtube.com/watch?v=QoNkpnpvEqc&ab_channel=ShyamRavi)
 ...
