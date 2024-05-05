@@ -17,6 +17,8 @@ The motivation behind the Ferrari Line Follower and Obstacle Avoider Car project
 By engaging in this project, I want to explore the frontiers of autonomous robotics and contribute to the advancement of technology in meaningful and impactful ways. Also, I've always been a huge fan of cars, especially Ferraris and it's a chance to show my DIY skills and dive into the world of robotics and electronics. 
 
 ## Architecture 
+![A prototype of architecture](architecture.jpg)
+![Architecture diagram](diagram.jpeg)
 
 The architecture should sort of look like this. I will be using a white cardbox with a black line for the path and different objects as obstacles. 
 This project is a smart car using a Raspberry Pi Pico W and various sensors and components. It has the following strucure:
@@ -78,7 +80,3 @@ Place your KiCAD schematics here.
 1. [example of a car](https://ocw.cs.pub.ro/courses/pm/prj2023/danield/linetracer)
 2. [video of constructing a car](https://www.youtube.com/watch?v=4PQgjjOqJa4)
 3. [soft help](https://forums.raspberrypi.com/viewtopic.php?t=174980)
-
-
-
-
