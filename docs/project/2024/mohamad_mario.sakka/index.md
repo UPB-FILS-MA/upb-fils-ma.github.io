@@ -1,5 +1,5 @@
-# DIY Laptop Cooling Pad
-A cooling pad for laptops that can be controlled wirelessly or using buttons.
+# DIY Laptop Cooling Station
+A cooling station for laptops that can be controlled wirelessly or using buttons.
 
 :::info
 
@@ -17,7 +17,7 @@ There are 2 possible ways of using it:
 
 ## Motivation
 
-The average temperature around the globe has been on the rise for quite a while, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. After a while I realised that, because I use my laptop for long periods of time doing multiple things including gaming, I wanted also to cool down my laptop since its keyboard gets pretty hot sometimes when playing games, so I've moved on to this idea. I also wanted the cooling pad to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
+The average temperature around the globe has been on the rise for quite a while, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. After a while I realised that, because I use my laptop for long periods of time doing multiple things including gaming, I also wanted to cool down my laptop's since its keyboard gets pretty hot sometimes when playing games, so I've moved on to this idea. I also wanted the coolers to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
 
 ## Architecture
 
@@ -39,11 +39,11 @@ The average temperature around the globe has been on the rise for quite a while,
 
 ## Hardware
 
-* **Raspberry Pi Pico W:** Detecting input and controlling the fans' speed
+* **Raspberry Pi Pico W:** Detecting input and controlling the fans' speed.
 
-* **Breadboard:** Connecting components
+* **Breadboard:** Connecting components.
 
-* **Push Buttons** Controlling the speed of the fans and 
+* **Push Buttons** Controlling the speed of the fans.
 
 * **LEDs:** Displaying the status of the cooling pad such as WIFI connection status, powered on or off, increasing or decreasing speed.
 
@@ -55,7 +55,7 @@ The average temperature around the globe has been on the rise for quite a while,
 
 * **Motor Driver:** Providing enough current to the fans.
 
-* **Set-Up Voltage Source:** Raising voltage to power motor driver.
+* **Step-Up Voltage Source:** Raising voltage to power motor driver.
 
 * **Breadboard Supply:** Powering the whole setup either through USB connection from laptop or wall socket.
 
@@ -82,8 +82,8 @@ The format is
 | [Motor Driver](https://ardushop.ro/4686-thickbox_default/l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.jpg) | Powering Cooling Fans | [1 x 11.49 RON](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html?search_query=XNVELI_module-L298N&results=166) |
 | [12V 80mm Cooling Fan](https://ardushop.ro/4102-thickbox_default/cooler-carcasa-80-mm.jpg) | Cooling | [2 x 10.84 RON](https://ardushop.ro/ro/home/986-cooler-carcasa-80-mm.html?search_query=ATPNWB_80mm_cooler&results=20)  |
 | [1602 LCD with I2C Adaptor](https://static.optimusdigital.ro/55018-large_default/lcd-cu-interfata-i2c-si-backlight-albastru.jpg) | Physical User Interface | [1 x 16.34 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html?search_query=LCD&results=210)  |                                                                   
-| [Push Buttons](https://static.optimusdigital.ro/7679-large_default/buton-6x6x6.jpg) | Physical User Interface | [4 x 0.36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
-| [LEDs](https://ardushop.ro/605-thickbox_default/led-5mm.jpg) | Physical User Interface | [4 x 0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=GIISED_LED5_red&results=286#/10-culoare-rou) |
+| [6x6x6 Push Buttons](https://static.optimusdigital.ro/7679-large_default/buton-6x6x6.jpg) | Physical User Interface | [4 x 0.36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
+| [5mm LEDs](https://ardushop.ro/605-thickbox_default/led-5mm.jpg) | Physical User Interface | [4 x 0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=GIISED_LED5_red&results=286#/10-culoare-rou) |
 | [830 Points Breadboard](https://static.optimusdigital.ro/54847-large_default/breadboard-830-points.jpg) | Connectivity | [1 x 10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=Breadboard+830+puncte+MB-102%09&results=584) |
 | [Set of Female-Male Wires](https://static.optimusdigital.ro/48492-large_default/set-fire-mama-tata-10p-30-cm.jpg) | Connectivity | [1 x 5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) |
 | [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [1 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
