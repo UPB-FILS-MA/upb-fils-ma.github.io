@@ -1,5 +1,5 @@
 
-## VitalTrack: Wearable Fitness and Health Monitor
+# VitalTrack: Wearable Fitness and Health Monitor
 A wearable device that tracks steps, heart rate, and location, with data visualization and smartphone integration.
 
 
@@ -67,8 +67,8 @@ Place your KiCAD schematics here.
 
 | Device                | Usage                     | Price                                               |
 |-----------------------|---------------------------|-----------------------------------------------------|
-| Raspberry Pi Pico W  | The microcontroller       | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| Accelerometer         | Step tracking             | [13 RON](https://www.optimusdigital.ro/ro/senzori-senzori-inertiali/97-modul-accelerometru-cu-3-axe-adxl345.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYWJSj7gQn3KVIODZsQ75yYTZjC3MPmSpByy592yeU-X4ncr1yfCf5gaApJ9EALw_wcB) |
+| [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)  | The microcontroller       | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Accelerometer](https://www.omega.com/en-us/resources/accelerometers)         | Step tracking             | [13 RON](https://www.optimusdigital.ro/ro/senzori-senzori-inertiali/97-modul-accelerometru-cu-3-axe-adxl345.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYWJSj7gQn3KVIODZsQ75yYTZjC3MPmSpByy592yeU-X4ncr1yfCf5gaApJ9EALw_wcB) |
 | Heart rate sensor     | Heart rate monitoring     | [5 RON](https://www.optimusdigital.ro/en/others/12594-heart-rate-sensor-module.html) |
 | GPS module            | Location tracking         | [45 RON](https://www.optimusdigital.ro/en/gps/105-gy-neo6mv2-gps-module.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYVr6IyMZX1Ynbjm0SX9Md8QoaR7rUFRcTRJWrdmEJVxdJ-6XjGoY2gaAk_XEALw_wcB) |
 | Small display/LEDs    | Data display              | [10-20 RON](https://www.optimusdigital.ro/en/73-led-displays) |
@@ -79,10 +79,10 @@ Place your KiCAD schematics here.
 
 | Library                   | Description                                | Usage                                             |
 |---------------------------|--------------------------------------------|---------------------------------------------------|
-| Pico SDK                  | Official SDK for Raspberry Pi Pico.        | Fundamental for programming and hardware interaction. |
-| Sensor Libraries          | Libraries for interfacing with sensors.    | Handle data acquisition from accelerometer, heart rate sensor, and GPS. |
-| Display Driver Libraries  | Drivers for managing output to displays.   | Manage visual output on the device's display.     |
-| Communication Libraries   | Libraries to enable Wi-Fi connectivity.    | Facilitate data transmission to smartphones or the cloud. |
+| [Pico SDK](https://www.raspberrypi.com/documentation/pico-sdk/)                 | Official SDK for Raspberry Pi Pico.        | Fundamental for programming and hardware interaction. |
+| [Sensor Libraries](https://www.arduino.cc/reference/en/libraries/category/sensors/)        | Libraries for interfacing with sensors.    | Handle data acquisition from accelerometer, heart rate sensor, and GPS. |
+| [Display Driver Libraries](https://www.arduinolibraries.info/categories/display)  | Drivers for managing output to displays.   | Manage visual output on the device's display.     |
+| [Communication Libraries](https://github.com/hathach/tinyusb)  | Libraries to enable Wi-Fi connectivity.    | Facilitate data transmission to smartphones or the cloud. |
 
 
 ## Links
