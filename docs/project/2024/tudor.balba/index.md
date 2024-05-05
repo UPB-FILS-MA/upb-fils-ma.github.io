@@ -1,92 +1,75 @@
----
-sidebar_position: 1
----
-
-# Description
-
-The purpose of the project is to build a hardware device that runs software written in Rust.
-
-## Deliverables
-All the deliverables will be published in a GitHub repository that each student will be assigned to.
-
-The repository contains:
-- documentation - the reposiotry's `README.md` file
-  - short description of functionality
-  - requirements (hardware and software)
-  - hardware design - use [KiCad EDA](https://www.kicad.org/) or a similar tool for the schematics
-  - software design
-    - detail design
-    - functional diagram
-- software source code
-
-Students will have to build and showcase the hardware with the running software at PM Fair.
-
-## Hardware Rules
-
-1. Projects have to use a microcontroller (MCU) that is capable of running Rust code. Examples of MCUs are *nRF52*, *RP2024*, *ESP32* (RISC-V version). 
-2. Usage of a development board is encouraged, but not required, a custom PCB can be built. Example of development boards are:
-  - [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) (RP2024) or [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) for WiFi
-  - [Adafruit Trinkey QT2040](https://www.adafruit.com/product/5056) (RP2040)
-  - [Arduino Nano RP2040 Connect](https://store.arduino.cc/products/arduino-nano-rp2040-connect) (RP2040) - ⚠️ [^arduino_nano_rp2040_connect]
-  - [micro:bit v2](https://microbit.org/) (nRF52833)
-  - [nRF52 DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk) (nRF52810)
-  - [STM32 NUCLEO-F401RE](https://ro.mouser.com/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMuqBwn8WqcFUv%2FX0DKhApUpi46qP7WpjrffIid8Wo1rTg%3D%3D)
-  - [ESP32-C3-DevKit-RUST-1](https://www.espressif.com/en/dev-board/esp32-c3-devkit-rust-1-en) (ESP32-C3) - ⚠️ [^esp32_riscv]
-3. The hardware part may be designed either using a breadboard and jumper wires, a prototype board (solder breadboard) or a PCB.
-
-## Software Rules
-It has to run software written in Rust. Students can use:
-- [embassy-rs](https://embassy.dev/)
-- [RTIC](https://rtic.rs/2/book/en/)
-- [bare metal](https://docs.rs/cortex-m-rt/latest/cortex_m_rt) - the cortex-r-rt crate
-- [Tock](https://www.tockos.org)
-- any other software framework that is written in Rust
+# Pacman Game
+The project aims to create a Pacman Game that is going to be played on a LCD screen
+:::info
 
 
-## Project Rules
+**Author**: Balba Tudor-Neculai in collaboration with Solomon Miruna-Maria\
+**GitHub Project Link**: [Pacman Game](https://github.com/UPB-FILS-MA/project-tudorb1011)
 
-1. Copying schematics or source code from the Internet is not allowed.
-2. Each project is considered individual work, students can ask the lab assistant (lab) about implementation details during the development period.
-3. Students are strongly encouraged to ask the lab assistant questions about the project.
-4. The presentation of all the milestones is mandatory.
+:::
 
-## Requirements
-1. *Complexity:* use knowledge of at least 3 labs, **excluding** [00 - Rust](https://embedded-rust-101.wyliodrin.com/docs/lab/00), [01 - Hardware Introduction](https://embedded-rust-101.wyliodrin.com/docs/lab/01) and [02 - Setting up the Raspberry Pi Pico + GPIO](https://embedded-rust-101.wyliodrin.com/docs/lab/02)
-2. *Documentation:* Complete documentation of the implementation for both hardware and software.
-3. *Functionality:* the hardware device has to be fully functional.
+## Description
 
-## Example Projects
+In this project, we're creating a modern twist on the classic Pac-Man game using a Pico W microcontroller and an LCD screen. The game logic, including Pac-Man's movements and level progression, is governed by the Pico W. Players can control Pac-Man remotely from a laptop via network communication, guiding him through the maze to avoid ghosts and collect pellets. This setup offers a hands-on gaming experience with responsive gameplay, blending nostalgia with cutting-edge technology.
 
-### Examples of projects from past years
-1. https://ocw.cs.pub.ro/courses/pm/prj2022
-2. https://ocw.cs.pub.ro/courses/pm/prj2023
+## Motivation
 
-### Outstanding Projects
-1. [POV - DAVIC picTronics](https://ocw.cs.pub.ro/courses/pm/prj2023/gpatru/376)
-2. [Ryobo - Computer Vision & Object Following](https://ocw.cs.pub.ro/courses/pm/prj2023/gpatru/483)
-3. [Plug & Play ChatGPT](https://ocw.cs.pub.ro/courses/pm/prj2023/ncaroi/plug)
-4. [VENDING MACHINE](https://ocw.cs.pub.ro/courses/pm/prj2023/drtranca/vending.machine)
+This project combines elements of retro gaming, embedded systems development, and network communication, offering a unique and engaging experience for players. By developing a Pac-Man game on a Pico W microcontroller with network connectivity, we aim to demonstrate the versatility and capabilities of embedded systems in gaming applications. This project also provides an opportunity to explore the integration of hardware and software components, including display drivers, networking protocols, and game logic, fostering interdisciplinary learning and innovation. 
+## Architecture 
+![arhitecture_project](https://github.com/tudorb1011/upb-fils-ma.github.io/assets/105288335/0d29da57-e512-4b4d-b2b0-f6af086cc671)
 
-## Grading
 
-| Part | Deadline | Points |
-|--------|--------|--------|
-| Documentation Milestone | Lab 9 | 1p |
-| Hardware Milestone | Lab 11 | 1p |
-| Software Milestone | Lab 12 | 1p |
-| PM Faire | TBD | 2p |
-| **Total** |  | **5p** |
+## Log
 
-## F.A.Q
-**Q:** Can I use another programming language, not Rust?\
-**A:** No, the main focus of the project is to learn to work with microcontrollers using Rust.
+<!-- write every week your progress here -->
 
-**Q:** Can I use a different framework than [embassy-rs](https://github.com/embassy-rs/embassy)?\
-**A:** Yes, we suggest taking a look at [RTIC](https://rtic.rs/2/book/en/) or [Tock](https://github.com/tock/tock).
+### Week 6 - 12 May
 
-**Q:** What if the PCB arrives after the hardware milestone?\
-**A:** You will only present the diagram for the hardware part and if there is a prototype using breadboard, but at the end of the project you must necessarily have the PCB printed and functional.
+### Week 7 - 19 May
 
-[^arduino_nano_rp2040_connect]: Some function of this board, like WiFi, might not be supported in Rust.
-[^esp32_riscv]: ESP32 provides its own Rust SDK described in the [The Rust on ESP Book](https://docs.esp-rs.org/book/introduction.html).
+### Week 20 - 26 May
 
+## Hardware
+
+Detail in a few words the hardware used.
+
+### Schematics
+
+Place your KiCAD schematics here.
+
+### Bill of Materials
+
+<!-- Fill out this table with all the hardware components that you might need.
+
+The format is 
+```
+| [Device](link://to/device) | This is used ... | [price](link://to/store) |
+
+```
+
+-->
+
+| Device | Usage | Price |
+|--------|--------|-------|
+| [Rapspberry Pi Pico W *2](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [70 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Modul Accelerometru și Giroscop MPU6500 GY](https://docs.nanoframework.net/devicesdetails/Mpu9250/README.html)| The gyroscope | [20 RON](https://www.optimusdigital.ro/ro/senzori-senzori-inertiali/1672-modul-accelerometru-i-giroscop-mpu6500-gy.html?search_query=giroscop&results=49) |
+| [Modul LCD de 2.8'' cu SPI și Controller ILI9341](https://docs.rs/lcd-ili9341/0.1.0/lcd_ili9341/) | LCD screen | [70 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/3550-modul-lcd-de-28-cu-spi-i-controller-ili9341-240x320-px.html?search_query=Lcd&results=209) |
+| [Breadboard HQ](https://os.mbed.com/handbook/Breadboard)| A breadboard for the remote | [5 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/44-breadboard-400-points.html?search_query=Breadboard+hq+400&results=23) |
+| Kit Plusivo| Wires and resistors | [50 RON](https://www.optimusdigital.ro/ro/kituri/12026-kit-plusivo-pentru-introducere-in-electronica-0721248990075.html?search_query=%09Kit+Plusivo+pentru+Introducere+in+Electronica&results=3) |
+| Micro USB wire *2| USB wires for the pico w| [14 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/497-cablu-micro-usb-1-m-negru.html?search_query=cablu+usb+mic+usb+mare&results=42) |
+
+
+
+## Software
+
+| Library | Description | Usage |
+|---------|-------------|-------|
+| [embassy-net](https://github.com/embassy-rs/embassy)| Ethernet module  | In case that the network won t be stable |\
+| [embedded-sensors v0.1.1](https://github.com/justdimaa/embedded-sensors)| embedded-sensors library | For using the gyroscope |\
+| [lcd-ili9341](https://github.com/sharebrained/rust-lcd-ili9341)| LCD driver for rust | Used for the display of future game |
+
+
+## Links
+
+[Pacman game](https://www.youtube.com/watch?v=rUgfixMTfW8)\
+[Wii remote](https://www.youtube.com/watch?v=ETAKfSkec6A)
