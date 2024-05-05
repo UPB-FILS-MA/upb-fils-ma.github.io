@@ -1,9 +1,9 @@
 # Crasher game
+Time your bet before the airplane crashes.
 
 :::info 
 
-**Author**: PRODAN Florin Mihai Alexandru
-
+**Author**: PRODAN Florin Mihai Alexandru \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-mihaiprodann
 
 :::
