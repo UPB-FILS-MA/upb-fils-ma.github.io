@@ -16,7 +16,7 @@ In this project, we're creating a modern twist on the classic Pac-Man game using
 
 This project combines elements of retro gaming, embedded systems development, and network communication, offering a unique and engaging experience for players. By developing a Pac-Man game on a Pico W microcontroller with network connectivity, we aim to demonstrate the versatility and capabilities of embedded systems in gaming applications. This project also provides an opportunity to explore the integration of hardware and software components, including display drivers, networking protocols, and game logic, fostering interdisciplinary learning and innovation. 
 ## Architecture 
-![arhitecture_project](https://github.com/tudorb1011/upb-fils-ma.github.io/assets/105288335/0d29da57-e512-4b4d-b2b0-f6af086cc671)
+https://github.com/tudorb1011/upb-fils-ma.github.io/blob/project_documentation/docs/project/2024/tudor.balba/arhitecture_project.jpg
 
 
 ## Log
