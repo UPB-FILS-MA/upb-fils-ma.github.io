@@ -3,7 +3,7 @@ A hangman game programmed on a Raspberry Pi Pico.
 
 
 **Author**: Munteanu Amalia-Nicole \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: [My Project](https://github.com/UPB-FILS-MA/project-nikkoxp)
 
 
 ## Description
