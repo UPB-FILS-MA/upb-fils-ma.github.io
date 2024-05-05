@@ -3,7 +3,7 @@ A mechanism that can be used in a bigger scale as a drawbridge or in a smaller s
 
 :::info 
 
-**Author**: Ciuraru Costin Cristian
+**Author**: Ciuraru Costin Cristian \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-ciurarucostin
 
 :::
