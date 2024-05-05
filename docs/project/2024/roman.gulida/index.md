@@ -20,26 +20,26 @@ I've been interested in cryptocurrencies for a long time and use price tracking 
 
 ![Architecture](architecture.jpg)
 
-Components 
-Data Source: 
-The primary source of cryptocurrency data is the CoinMarketCap API. This is where the application fetches real-time prices and daily percentage changes for various cryptocurrencies. 
-Microcontroller: 
-The Raspberry Pi Pico WH serves as the central processing unit, managing data retrieval, handling logic, and interfacing with other components. 
-Display Screen: 
-A ST7735 LCD screen connected to the Pico WH shows the cryptocurrency price and daily percentage change. This is the main visual output for the tracker. 
-Price Alert Buzzer: 
-A buzzer that emits an audible alert when a price threshold is reached. This is connected to the Pico WH and is activated based on predefined conditions. 
-Switch for Currency Selection: 
-A toggle switch that allows the user to toggle between different cryptocurrencies. This connects to the Pico WH and interacts with the display and data-fetching logic. 
-Web Server and Web Page: 
-A web server running on the Pico WH serves a simple web page. This web page allows remote monitoring of prices and setting of price alerts.
+* Components 
+  + Data Source: 
+    The primary source of cryptocurrency data is the CoinMarketCap API. This is where the application fetches real-time prices and daily percentage changes for various cryptocurrencies. 
+  + Microcontroller: 
+    The Raspberry Pi Pico WH serves as the central processing unit, managing data retrieval, handling logic, and interfacing with other components. 
+  + Display Screen: 
+    A ST7735 LCD screen connected to the Pico WH shows the cryptocurrency price and daily percentage change. This is the main visual output for the tracker. 
+  + Price Alert Buzzer: 
+    A buzzer that emits an audible alert when a price threshold is reached. This is connected to the Pico WH and is activated based on predefined conditions. 
+  + Switch for Currency Selection: 
+    A toggle switch that allows the user to toggle between different cryptocurrencies. This connects to the Pico WH and interacts with the display and data-fetching logic. 
+  + Web Server and Web Page: 
+    A web server running on the Pico WH serves a simple web page. This web page allows remote monitoring of prices and setting of price alerts.
 
-Connections and Flow 
-The Pico W fetches data from the CoinMarketCap API at regular intervals, typically using HTTP requests. This data is processed to extract the relevant price and daily percentage change. 
-The screen is updated with the latest data, displaying the current cryptocurrency price and daily change. 
-The toggle switch allows users to select which cryptocurrency to track, changing the request to the CoinMarketCap API accordingly. 
-The buzzer is triggered when price alerts are activated. The alert thresholds are set via the web page, which communicates with the Pico WH through the web server. 
-The web server running on the Pico WH allows users to access the tracker remotely through a web page, providing a convenient interface for monitoring prices and configuring alerts.
+* Connections and Flow 
+  + The Pico W fetches data from the CoinMarketCap API at regular intervals, typically using HTTP requests. This data is processed to extract the relevant price and daily   percentage change. 
+  + The screen is updated with the latest data, displaying the current cryptocurrency price and daily change. 
+  + The toggle switch allows users to select which cryptocurrency to track, changing the request to the CoinMarketCap API accordingly. 
+  + The buzzer is triggered when price alerts are activated. The alert thresholds are set via the web page, which communicates with the Pico WH through the web server. 
+  + The web server running on the Pico WH allows users to access the tracker remotely through a web page, providing a convenient interface for monitoring prices and configuring alerts.
 
 ## Log
 
@@ -86,7 +86,7 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [st7735](https://github.com/scholtzan/st7735-rs) | Display driver for ST7735 | Used for the display for the Pico WH |
-| [reqwest](https://github.com/seanmonstar/reqwest) | HTTP Client | Retrieve cryptocurrency prices and other relevant data from a remote server |
+| [reqwless](https://github.com/drogue-iot/reqwless) | HTTP Client | Retrieve cryptocurrency prices and other relevant data from a remote server |
 
 ## Links
 
