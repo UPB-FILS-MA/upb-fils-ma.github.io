@@ -87,11 +87,13 @@ The format is
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| Wire.h |  |  |
+| LiquidCrystal_I2C.h] |  |  |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
+1. [Hangman LCD](https://ocw.cs.pub.ro/courses/pm/prj2021/alazar/hangman_lcd)
+2. [Hangman](https://ocw.cs.pub.ro/courses/pm/prj2022/imacovei/iarina.dalimon)
 ...
