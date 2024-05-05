@@ -1,7 +1,7 @@
 # Project Name
 Pulse Oximeter Health Monitoring
 
-
+:::info
 
 **Author**: Buga Mihai
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-MishulicaZeu
