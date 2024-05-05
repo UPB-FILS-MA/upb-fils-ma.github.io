@@ -72,7 +72,7 @@ The format is
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [LCD Display](https://www.waveshare.com/datasheet/LCD_en_PDF/LCD1602.pdf) | LCD Display| [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd+1602&results=17) |
-| [Stepper Motor](https://pages.pbclinear.com/rs/909-BFY-775/images/Data-Sheet-Stepper-Motor-Support.pdf)| The motor [48,99 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/3912-motor-pas-cu-pas-42hb34f08ab.html?search_query=stepper+motor&results=48) |
+| [Stepper Motor](https://pages.pbclinear.com/rs/909-BFY-775/images/Data-Sheet-Stepper-Motor-Support.pdf)| The motor | [48,99 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/3912-motor-pas-cu-pas-42hb34f08ab.html?search_query=stepper+motor&results=48) |
 
 
 
