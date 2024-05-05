@@ -1,0 +1,644 @@
+[33mcommit fbb5e5be2a60846e1915aa9dc906cc2095d22a78[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mproject_documentation[m[33m, [m[1;31morigin/project_documentation[m[33m)[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sun May 5 19:24:32 2024 +0300
+
+    Modified the color of the arrows in 'Architecture.png' because they were invisible in dark mode.
+
+[33mcommit cec9f568a190d8ffdd7ae379c4a313a78a417ba2[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 21:13:29 2024 +0300
+
+    Modified 'Bill of Materials'.
+
+[33mcommit 118d766ea2b1a27f581ca86531d896d90094c387[m
+Author: Septimiu Țigăeru <151669209+septimium@users.noreply.github.com>
+Date:   Sat May 4 19:52:14 2024 +0300
+
+    Update index.md
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+
+[33mcommit f7a2e71155c09aa933d60ad828cb1c3fb0c27a0a[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 17:31:32 2024 +0300
+
+    Filled 'Hardware' and made other small changes to index.md.
+
+[33mcommit fba83e1aa6d2dc48863f8e12364ba2bcc95bba1e[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 17:09:57 2024 +0300
+
+    Added 'Architecture.png' and filled 'Architecture' in index.md.
+
+[33mcommit d9dde01be1cadac8b66c700c0822421573fa07f7[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 15:15:58 2024 +0300
+
+    Updated 'Description' and 'Motivation'.
+
+[33mcommit 8ebec1fcaab17f0d4b7b8af3e49890026a024648[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 15:12:18 2024 +0300
+
+    Added 'Description' and 'Motivation'.
+
+[33mcommit d6fda8539fa84184460a710473f752f2ae5342b1[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 14:44:49 2024 +0300
+
+    Filled 'Bill of Materials' and deleted Libraries from 'Software'.
+
+[33mcommit 9d2338ca98d14aba9754223233335a4e8e7c7bc6[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 13:56:23 2024 +0300
+
+    added a '/' after my name
+
+[33mcommit a2028d26c41e77bc4fd27452411568dd27fd7bc0[m
+Author: septimium <septimiutg@gmail.com>
+Date:   Sat May 4 13:54:22 2024 +0300
+
+    Added Project name, short description, my name and project link.
+
+[33mcommit 9a6c572e3fa407c2aae2eef89891ea1d3d57ab8c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: ruxi22 <162493289+ruxi22@users.noreply.github.com>
+Date:   Sat May 4 12:11:01 2024 +0300
+
+    Update index.md (#165)
+
+[33mcommit e28d1a732f61da69301c3a2e9b5c710de1777e0d[m
+Author: Edward <110591892+EdwardAdelin@users.noreply.github.com>
+Date:   Fri May 3 23:17:35 2024 +0300
+
+    Project documentation for Pet Feeder (#152)
+    
+    * documentation and diagram
+    
+    * added missing hardware
+    
+    * documentation and diagram
+    
+    * fixed libraries, spam spaces, link names and project name
+    
+    * deletede one more unwanted row of |-|-|-| from documentation
+    
+    * one line description under the title
+    
+    * rewrote the title and one line description
+    
+    * fixed typos and grammar from title and one line description
+    
+    * deleted line 88 |-|-|-|etc
+    
+    * fixed aspect & enabled -save without formating- in IDE
+    
+    * still working on
+    
+    * fixed bill material table
+    
+    * visuals fixed
+
+[33mcommit 2d8d39598a4e82e7115dec4a217ff3aa027b7003[m
+Author: Cristiana Precup <cristianaprecup65@gmail.com>
+Date:   Fri May 3 23:13:37 2024 +0300
+
+    Add one line description of the project and slight adjustments (cristiana.precup)  (#160)
+    
+    * upload project documentation
+    
+    * Update index.md
+    
+    Removed the unnecessary libraries.
+    
+    * added one line description and slight adjustments
+    
+    * slight adjustments
+
+[33mcommit 2e2aae405f4adc2bf3980dd6974435ee954f9eda[m
+Author: Negrila Rares <129112753+NegrilaRares@users.noreply.github.com>
+Date:   Fri May 3 23:11:51 2024 +0300
+
+    Negrila Rares Documentaion (rares.negrila@stud.fils.upb.ro) (#164)
+    
+    * Create index.mb
+    
+    * Update index.mb
+    
+    * Update index.mb
+    
+    * Update index.mb
+    
+    * Add files via upload
+    
+    * Update your_curs_upb_ro_id.md
+    
+    * Delete docs/project/2024/rares.negrila/index.mb
+    
+    * Update your_curs_upb_ro_id.md
+    
+    * Rename your_curs_upb_ro_id.md to rares.negrila.md
+    
+    * Update rares.negrila.md
+    
+    * Update rares.negrila.md
+    
+    * Update rares.negrila.md
+    
+    * Rename rares.negrila.md to index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Create temp.txt
+    
+    * Add files via upload
+    
+    * Delete docs/project/2024/rares.negrila/assets/temp.txt
+    
+    * Update index.md
+    
+    * Add files via upload
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+
+[33mcommit 779405958c969f526bd6be0c756f868b615f2b62[m
+Author: Naomi Lita <134428958+nimintz@users.noreply.github.com>
+Date:   Fri May 3 17:09:40 2024 +0300
+
+    necessary changes fix (#162)
+
+[33mcommit 73f5046559e911bc45dbcfa226ec15472a218ee8[m
+Author: Dragota Andrei <130050495+domnudragota@users.noreply.github.com>
+Date:   Fri May 3 15:01:36 2024 +0300
+
+    update libraries (#163)
+
+[33mcommit 9faa4d981297acbb3d88d0aa8eb2c408f75cd506[m
+Author: U-alb <94986973+U-alb@users.noreply.github.com>
+Date:   Fri May 3 14:05:48 2024 +0300
+
+    Project documentation (alberto.udrea0412) (#126)
+    
+    * First documentation commit
+    
+    * First documentation commit
+    
+    * fixed typo
+    
+    * add motivation
+    
+    * added hardware explanations
+    
+    * added BME280 libraries
+    
+    * moved the BME280 library to the software section
+    
+    * Remove unnecessary tag
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    
+    * fix syntax
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    
+    * add back template file
+    
+    * implement requested changes
+    
+    * rephrasing for more clarity
+    
+    * Moved .md file to directory
+    
+    * Added the architecture schematic
+    
+    * Added theme specific .svgs
+    
+    * add css
+    
+    * added short description
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    Co-authored-by: Alexandru RADOVICI <alexandru.radovici@wyliodrin.com>
+
+[33mcommit 43e5ec49854f06811aecb40c827e9bf48a61a3dc[m
+Author: Mihai Prodan <florin_mihai.prodan@stud.fils.upb.ro>
+Date:   Fri May 3 13:46:44 2024 +0300
+
+    [Project documentation] Add one line description of the project (florin_mihai.prodan) (#159)
+    
+    * add project details
+    
+    * more project details
+    
+    * upload image locally
+    
+    * slight fixes
+    
+    * Add one line description to documentation
+
+[33mcommit 57a948b06e1b572410d4304cdf60e07c13eab61a[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Fri May 3 13:25:28 2024 +0300
+
+    fix projects (#158)
+
+[33mcommit 45a3e295c21fe3fe4e84f2813bff4e59681b1b0c[m
+Author: Layla El Ghoul <147739990+Scarletwtc@users.noreply.github.com>
+Date:   Fri May 3 13:21:42 2024 +0300
+
+    Project documentation (i just removed the software examples im not using) (#155)
+    
+    * Add index.md file and delete your_curs_upb_ro_id.md
+    
+    * Added most of the index.md
+    
+    * Added software and erased some lines in index.md
+    
+    * Added software links in index.md
+    
+    * Update index.md
+    
+    * modifed the alt text
+    
+    * Updated index.md, changed the architecture
+    
+    * removed from software the examples which im not using
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+
+[33mcommit d8e2be02a9dbcde304f00b9c35afefd4e56a5549[m
+Author: ChioreanRebeca <163349981+ChioreanRebeca@users.noreply.github.com>
+Date:   Fri May 3 13:14:25 2024 +0300
+
+    Chiorean Rebeca project documentation (#134)
+    
+    * Chiorean Rebeca project documentation
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * .
+    
+    .
+    
+    * Update index.md
+    
+    Added short description
+
+[33mcommit 99fa694b2888c40571419aca444c99dbdc7472d3[m
+Author: Ana-Maria Comeagă <63545793+anamaria2004@users.noreply.github.com>
+Date:   Fri May 3 12:55:37 2024 +0300
+
+    Project documentation - Ana Maria Comeaga (#144)
+    
+    * Describe your modifications here
+    
+    * Add the project documentation
+    
+    * Project Documentation
+    
+    * modified the folder
+    
+    * Added the schematics and modified the libraries
+    
+    * Name of the file changed
+    
+    * added
+    
+    * try
+    
+    * deleted files
+    
+    * deleted files
+    
+    * deleted files
+    
+    * deleted files
+    
+    * deleted files
+    
+    * deleted files
+    
+    * Delete docs/project/2024/ana_maria.comeaga/obj.mtl
+    
+    * Delete docs/project/2024/ana_maria.comeaga/tinker.obj
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+
+[33mcommit 361563c0a46ec9708c3a60fec63d54ba087502c1[m
+Author: ruxi22 <162493289+ruxi22@users.noreply.github.com>
+Date:   Fri May 3 12:54:01 2024 +0300
+
+    Project documentation for Ruxandra Popa (#138)
+    
+    * Completed some the index
+    
+    * Update index.md
+    
+    * Update docs/project/2024/Ruxandra.popa/index.md
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+
+[33mcommit a240ecb338fa4ce0baafa48957733a3e370a999f[m
+Author: Dragota Andrei <130050495+domnudragota@users.noreply.github.com>
+Date:   Fri May 3 10:54:10 2024 +0300
+
+    change libraries (#154)
+
+[33mcommit 9a4326276d7d23542c8a0affb25c5c64f16641e6[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Fri May 3 10:16:30 2024 +0300
+
+    add a project description line (#157)
+
+[33mcommit ec09000f195fd50e38852f6b08af5c33cb8fe2c9[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Fri May 3 10:16:19 2024 +0300
+
+    Update index.md (#150)
+
+[33mcommit 8bdc2cbe57457789119d0d8d1575defc0ae47b38[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Fri May 3 09:54:16 2024 +0300
+
+    Fix project typo (#156)
+
+[33mcommit 6c6f2435f3abf97932240630599688450d72c925[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Fri May 3 07:25:15 2024 +0300
+
+    Update project name (#151)
+
+[33mcommit ac31c128b0d15b6e1032e8140b9372ebe7ab636f[m
+Author: Naomi Lita <134428958+nimintz@users.noreply.github.com>
+Date:   Fri May 3 01:31:16 2024 +0300
+
+    Naomi Lita project documentation (#135)
+    
+    * Naomi Lita project documentation
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    * Update index.md
+    
+    changed the title
+    
+    * Update index.md
+
+[33mcommit 5808ce62dd9ec4ff851d741e7f22700f478bc9af[m
+Author: Cristiana Precup <cristianaprecup65@gmail.com>
+Date:   Fri May 3 01:25:15 2024 +0300
+
+    Project documentation (cristiana.precup) (#136)
+    
+    * upload project documentation
+    
+    * Update index.md
+    
+    Removed the unnecessary libraries.
+
+[33mcommit 501147db1737207fabb33dfc37aa121d78ebe53c[m
+Author: Mihai Smarandache <138105395+Mihai1803@users.noreply.github.com>
+Date:   Fri May 3 01:22:24 2024 +0300
+
+    Project documentation (mihai.smarandache) (#140)
+    
+    * project template
+    
+    * update documentation
+    
+    * update documentation
+
+[33mcommit b8d53f4b9e52ade14cf73df7777d67acf411473e[m
+Author: Abd210 <150333656+Abd210@users.noreply.github.com>
+Date:   Fri May 3 00:34:02 2024 +0300
+
+    Added index.md (#141)
+    
+    * Added index.md
+    
+    * Added your_curs_upb_ro_id.md
+    
+    * Update index.md
+    
+    ---------
+    
+    Co-authored-by: Daabd21 <abdalrahman1232023@gmail.com>
+
+[33mcommit 06eeedc2162ecd2a220588257f1f9b3ec0e0a584[m
+Author: Mihai Prodan <florin_mihai.prodan@stud.fils.upb.ro>
+Date:   Thu May 2 22:17:00 2024 +0300
+
+    Project documentation (florin_mihai.prodan) (#128)
+    
+    * add project details
+    
+    * more project details
+    
+    * upload image locally
+    
+    * slight fixes
+
+[33mcommit 741613d7ec3736f1ecdff5121d99713b0110f5df[m
+Author: Dragota Andrei <130050495+domnudragota@users.noreply.github.com>
+Date:   Thu May 2 22:15:56 2024 +0300
+
+    Project documentation (andrei.dragota) (#127)
+    
+    * test1
+    
+    milestone1
+    
+    * test2
+    
+    milestone2
+    
+    * test3
+    
+    milestone3
+    
+    * test4
+    
+    final milestone i hope
+    
+    * re-add the template
+    
+    * minor tweaks
+    
+    * identation changes
+    
+    * image repository
+    
+    * typo fix
+    
+    * change name folder
+    
+    * rename files
+    
+    * image quickfix
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    
+    * Delete docs/project/2024/index.md
+    
+    * hardware schematic v1
+    
+    * hardware sketch
+    
+    * lowercase i
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <msg4alex@gmail.com>
+
+[33mcommit b9cbd584a8e1f580d300982d07aac57face038c6[m
+Author: Layla El Ghoul <147739990+Scarletwtc@users.noreply.github.com>
+Date:   Thu May 2 22:14:16 2024 +0300
+
+    Project documentation (#129)
+    
+    * Add index.md file and delete your_curs_upb_ro_id.md
+    
+    * Added most of the index.md
+    
+    * Added software and erased some lines in index.md
+    
+    * Added software links in index.md
+    
+    * Update index.md
+    
+    * modifed the alt text
+    
+    * Updated index.md, changed the architecture
+
+[33mcommit 6b0680f5a9e4b1a0e0516f48c4fcdc5729ae5ba3[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Mon Apr 29 12:37:24 2024 +0300
+
+    Add students template (#125)
+    
+    * add students template
+    
+    * Update docs/project/2024/your_curs_upb_ro_id.md
+    
+    Co-authored-by: George Danut Aldea <45511762+DanutAldea@users.noreply.github.com>
+    
+    * Update docs/project/2024/your_curs_upb_ro_id.md
+    
+    Co-authored-by: George Danut Aldea <45511762+DanutAldea@users.noreply.github.com>
+    
+    * Update docs/project/2024/your_curs_upb_ro_id.md
+    
+    Co-authored-by: George Danut Aldea <45511762+DanutAldea@users.noreply.github.com>
+    
+    ---------
+    
+    Co-authored-by: George Danut Aldea <45511762+DanutAldea@users.noreply.github.com>
+
+[33mcommit a54320117b6f49197c1fc11a644648a58125a1fd[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Thu Apr 25 23:53:37 2024 +0300
+
+    Volatile is not the same as no cache (#120)
+    
+    * volatile is not the same as no cache
+    
+    * Update slides/lectures/02/mmio/slides.md
+    
+    Co-authored-by: Jonathan Pallant <jonathan.pallant@ferrous-systems.com>
+    
+    * Update slides/lectures/02/mmio/slides.md
+    
+    Co-authored-by: Jonathan Pallant <jonathan.pallant@ferrous-systems.com>
+    
+    * Update slides/lectures/02/mmio/slides.md
+    
+    Co-authored-by: Jonathan Pallant <jonathan.pallant@ferrous-systems.com>
+    
+    * cache dma transfers
+    
+    ---------
+    
+    Co-authored-by: Jonathan Pallant <jonathan.pallant@ferrous-systems.com>
+
+[33mcommit 734c4d610520ab58e254fa0951247e94940018d9[m
+Author: George Danut Aldea <45511762+DanutAldea@users.noreply.github.com>
+Date:   Thu Apr 25 23:34:38 2024 +0300
+
+    fix from_utf8 import (#124)
+
+[33mcommit 66f4743aadae143f5ddc134c384063f250695026[m
+Author: Teodora Miu <96741919+TeodoraMiu@users.noreply.github.com>
+Date:   Wed Apr 24 22:59:58 2024 +0300
+
+    Lab08 - Wi-Fi (#108)
+    
+    * lab08 initial draft
+    
+    * Update index.md
+    
+    Co-authored-by: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+    
+    * routers, tcp, udp
+    
+    * review suggestions
+    
+    * review suggestions again
+    
+    * improved exercises
+    
+    * review
+    
+    ---------
+    
+    Co-authored-by: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+
+[33mcommit 66d79464a357d4cb1f453f6f7005466b1a04fb22[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Wed Apr 24 11:04:47 2024 +0300
+
+    Fix ARM ISA (#118)
+    
+    * fix arm isa
+    
+    * fix the names of the ARM ISA
+
+[33mcommit a59e576c430cb8a30c20789cc029044de2372d55[m
+Author: Alexandru Radovici <alexandru.radovici@wyliodrin.com>
+Date:   Wed Apr 24 09:16:37 2024 +0300
