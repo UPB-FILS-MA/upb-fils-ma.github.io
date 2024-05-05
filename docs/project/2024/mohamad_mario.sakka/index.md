@@ -26,7 +26,7 @@ The average temperature around the globe has been on the rise for quite a while,
 
 * The physical UI (buttons & LCD) will be used to start the server, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
 
-![example](project_architecture.png)  
+![example](MA_project_architecture.png)  
 
 ## Log
 
