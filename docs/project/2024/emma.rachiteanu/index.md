@@ -25,7 +25,7 @@ For this project, I aimed to create something both fun and intricate. Merely cre
 
 ![Block Diagram](img/FrontViewRoboticArm.jpg)
 ![Block Diagram](img/SideViewRoboticArm.jpg)
-![Block Diagram](img/Schematic.jpg)
+![Block Diagram](img/schematic.jpg)
 
 ## Log
 
