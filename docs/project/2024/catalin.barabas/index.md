@@ -19,7 +19,7 @@ This project's root stands in my love for ambient lighting from my computer setu
 
 ## Architecture
 
-![LED Music Strip](./LED%20Music%20Strip.png)
+![LED Music Strip](./LEDMusicStrip.png)
 
 - The light show will be on as long as the Raspberry PI will be plugged in
 - The IR sensor will capture the signals from the remote
