@@ -29,29 +29,28 @@ And as an added bonus I'm quite passionate about video games and I spend most of
 
 Here is the list of all of the main components and a short description of their utility:
 
--Controller
+-Controller \
 This controller is composed of 5 simple buttons, 4 of them are for inputting directions (up down left and right) and one is for imputting your move (placing down x or 0 on the playing field)
 
--Microcontroller
+-Microcontroller \
 The brains of this project, responsible with interpreting the input of the controller and sending the appropriate data to be displayed by the LCD display and to the buzzers.
 
--Display
+-Display \
 Comprised of an lcd display that will present the user the game itself, a 3x3 matrice that both the player and the computer will play on.
 
--Buzzers
+-Buzzers \
 Used to play different sounds according to the users inputs and the state of the game (loss/win/idle)
 
 ### Connections
 
--Controller to Microcontroller:
+-Controller to Microcontroller: \
 The input of the controller is directly connected to the microcontroller, which interprets these commands and modifies the state of other components accordingly.
 
--Microcontroller to Display:
+-Microcontroller to Display: \
 The microcontroller sends data to be displayed on the LCD display, which in turn displays the instructions that it receives from the microcontroller.
 
--Microcontroller to Buzzers:
+-Microcontroller to Buzzers: \
 The microcontroller, depending on what is happening in game, will tell the buzzers to either play the game theme, a song for when the player loses and one for when they win. Additionally, on player input, a small chime will be played.
-
 
 ## Log
 
