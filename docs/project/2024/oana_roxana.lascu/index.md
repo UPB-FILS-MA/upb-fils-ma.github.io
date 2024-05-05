@@ -1,5 +1,5 @@
 # Line Following Car
-Using a 4wd smart car chasis, I will attach two IR sensors and a motor driver to the Raspberry Pi Pico W board, and I will use a pid algorithm in Rust, in order to build a line following car.
+The car follows a line, detected by the IR sensors, while a PID algorithm adjusts motor speeds accordingly, using the motor driver.
 :::info 
 
 **Author**: Oana-Roxana Lascu \
