@@ -2,6 +2,8 @@
 
 Security system that performs different actions based on the distance of a person or an object
 
+:::info
+
 **Author**: Zafar Azzam \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Azzamjoy44
 
