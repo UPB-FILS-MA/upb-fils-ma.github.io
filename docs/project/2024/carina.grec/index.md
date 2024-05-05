@@ -57,32 +57,26 @@ I chose this project because it seems like a pretty practical idea in the day-to
 ## Hardware
 
 1. **Raspberry Pi Pico W**
-   - ![Raspberry Pi Pico W](images/raspberry_pi_pico_w.png)
    - A compact microcontroller board featuring the RP2040 chip and built-in Wi-Fi connectivity.
    - Manages data collection from the temperature sensor, drives the display, controls the RGB LED, and handles network communications.
 
 2. **DS18B20 Temperature Sensor**
-   - ![DS18B20 Temperature Sensor](images/ds18b20_sensor.png)
    - A digital temperature sensor that provides 9-bit to 12-bit Celsius temperature measurements.
    - Known for its accuracy and ease of integration, it operates over a one-wire bus that requires only one data line (and ground) for communication with the Raspberry Pi Pico W.
 
 3. **1602 LCD Module**
-   - ![1602 LCD Module](images/1602_lcd.png)
    - A 16x2 character LCD display that is simple and effective for displaying text and numerical data.
    - Interfaced via the I2C communication protocol, which simplifies the connection by using just two wires for data transmission.
 
 4. **Common Cathode RGB LED**
-   - ![Common Cathode RGB LED](images/rgb_led.png)
    - A small and efficient multi-color LED capable of displaying various colors by mixing red, green, and blue.
    - Each color component can be controlled independently using PWM signals to create different colors.
 
 5. **Breadboard and Jumper Wires**
-   - ![Breadboard and Jumper Wires](images/breadboard_jumper_wires.png)
    - Ideal for prototyping without soldering, useful for testing and adjusting the circuit layout during development.
    - Jumper wires facilitate connections between the components on the breadboard.
 
 6. **Resistors**
-   - ![Resistors](images/resistors.png)
    - Used for current limiting and voltage division.
    - Crucial for protecting components like the RGB LED and ensuring correct signal levels are applied to inputs.
 
