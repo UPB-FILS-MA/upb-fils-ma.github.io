@@ -1,5 +1,5 @@
-# Project Name
-A one line project description
+ Tic-Tac-Toe
+ a simple game made in rust
 
 :::info 
 
@@ -64,7 +64,8 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| TODO |
+ [SSD1306](https://github.com/adafruit/Adafruit_SSD1306) | Display driver |
+ 
 | TODO |
 
 ## Links
