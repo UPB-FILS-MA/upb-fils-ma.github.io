@@ -82,8 +82,11 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [PID Controller](https://github.com/topics/pid-controller?l=rust&o=desc&s=updated) | Implements a PID (Proportional-Integral-Derivative) controller. | Used for error correction|
+| [rand](https://github.com/engusmaze/frand) | Generates random numbers | Introduces randomness in motor adjustments (e.g., slight variations in speed or turning angles) to simulate real-world conditions and prevents the car from following the same path exactly every time. |
+| [time](https://github.com/time-rs/time) |Provides time-related functionality. |Measures time intervals for calculating integral and derivative terms in the PID controller and ensures stable control loops with accurate timing.|
+| [rp2040_hal](https://github.com/rp-rs/rp-hal) |Board support for Raspberry Pi Pico  |Configures pins and peripherals on the Pico (e.g., connecting IR sensors, motor driver) and enables communication with other components. |
+| [elf2uf2-rs](https://github.com/rej696/elf2uf2) |Rust port of ELF2UF2 for flashing programs |Loads compiled firmware onto the Raspberry Pi Pico W, essential for deploying the code to the board|
 
 ## Links
 
