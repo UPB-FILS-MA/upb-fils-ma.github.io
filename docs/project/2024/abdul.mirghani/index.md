@@ -117,5 +117,5 @@ Place your KiCAD schematics here.
 Used for controlling the ultrasonic sensor|
 ## Links
 
-1. [youtube](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
+1. [DIY Radar With Ultrasonic Sensor](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
 
