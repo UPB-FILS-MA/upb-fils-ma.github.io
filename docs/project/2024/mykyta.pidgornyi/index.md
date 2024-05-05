@@ -37,7 +37,7 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 
 
-![[Pasted image 20240504200734.png]]
+![[Pasted_image_20240504200734.png]]
 
 ## Log
 
@@ -56,7 +56,7 @@ DFRobot GNSS - GPS Module
 PICO EXPLORER BASE - The base for the clock with a display, buttons and a breadboard 
 
 This is my whole digikey order:
-![[Pasted image 20240504182423.png]]
+![[Pasted_image_20240504182423.png]]
 
 ### Schematics
 
