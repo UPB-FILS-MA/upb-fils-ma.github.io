@@ -17,7 +17,8 @@ My project is based on an old timey game that we all used to play during school 
 I've always taken a big interest in the game development area, and thought it would be fun to try challenging myself by coding a game designed to work on a microprocessor in a newly encountered programming language, rust. The question was which game. Well, it all came around when one day, during free hours, my friends and I decided to play Hangman and thought it would be a great idea to revolve my project on this timeless game.
 
 ## Architecture 
-<img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/967ee4db-efe6-4d7e-8d41-958a847f65ab">
+
+<img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/e20722b9-ee21-4c65-a625-b7a9bce18401">
 
 
 ## Log
@@ -61,6 +62,7 @@ The format is
 | Potentiometru Stereo 10k | The Potentiometer | [1,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/1886-potentiometru-stereo-10k.html?search_query=Potentiometru+stereo+10k&results=2) |
 | Breadboard HQ (830 Puncte) | The Breadboard | [9,98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard&results=145) |
 | LED Roșu de 3 mm cu Lentile Difuze | The LEDs | [0,39 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/696-led-rou-de-3-mm-cu-lentile-difuze.html?search_query=LED&results=818) |
+| Buton 6x6x6 | The On/Off Button | [0,36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
 
 
 ## Software
