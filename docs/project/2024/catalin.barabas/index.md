@@ -2,9 +2,9 @@
 
 A LED strip that responds to music and lights up the room accordingly.
 
-:::info
+:::info 
 
-**Author**: BARABAȘ Cătălin-Gabriel
+**Author**: BARABAȘ Cătălin-Gabriel \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-cata-g
 
 :::
@@ -48,7 +48,7 @@ Place your KiCAD schematics here.
 
 <!-- Fill out this table with all the hardware components that you might need.
 
-The format is
+The format is 
 ```
 | [Device](link://to/device) | This is used ... | [price](link://to/store) |
 
@@ -56,21 +56,20 @@ The format is
 
 -->
 
-| Device                                                                                                    | Usage                       | Price                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller         | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                                                                        |
-| [Pin Header for Raspberry PI]                                                                             | The pins for the breadboard | [0.99 RON](<(https://www.optimusdigital.ro/ro/componente-electronice-headere-de-pini/463-header-de-pini-alb-254-mm-40p.html)>)                                       |
-| [LED Strip]                                                                                               | The LED strip               | [6.99 RON](https://www.optimusdigital.ro/ro/optoelectronice-bare-cu-leduri/753-bara-de-led-uri-rgb-ws2812-cu-8-led-uri.html?search_query=0104110000006523&results=1) |
-| [Sound Sensor with Mic]                                                                                   | The sound sensor            | [2.99 RON](https://www.optimusdigital.ro/ro/senzori/12982-modul-senzor-de-sunet-cu-microfon.html?search_query=0104110000087416&results=1)                            |
-| [IR Sensor]                                                                                               | The infra-red sensor        | [8.99 RON](https://www.optimusdigital.ro/ro/altele/755-modul-receptor-telecomanda-infrarou.html?search_query=0104110000006455&results=1)                             |
-| [Remote Control]                                                                                          | The IR Remote Control       | [3.60 RON](https://www.optimusdigital.ro/ro/altele/11-mini-telecomanda.html?search_query=0104110000001412&results=1)                                                 |
+| Device | Usage | Price |
+|--------|--------|-------|
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Pin Header for Raspberry PI](https://static.optimusdigital.ro/60928-thickbox_default/header-de-pini-alb-254-mm-40p.jpg) | The pins for the breadboard | [0.99 RON](https://www.optimusdigital.ro/ro/componente-electronice-headere-de-pini/463-header-de-pini-alb-254-mm-40p.html) |
+[LED Strip](https://static.optimusdigital.ro/23166-thickbox_default/bara-de-led-uri-rgb-ws2812-cu-8-led-uri.jpg) | The LED strip | [6.99 RON](https://www.optimusdigital.ro/ro/optoelectronice-bare-cu-leduri/753-bara-de-led-uri-rgb-ws2812-cu-8-led-uri.html)|
+|[Sound Sensor with Mic](https://static.optimusdigital.ro/67937-thickbox_default/modul-senzor-de-sunet-cu-microfon.jpg) | The sound sensor | [2.99 RON](https://www.optimusdigital.ro/ro/senzori/12982-modul-senzor-de-sunet-cu-microfon.html) |
+| [IR Sensor](https://static.optimusdigital.ro/23230-thickbox_default/modul-receptor-telecomanda-infrarou.jpg) | The infra-red sensor |[8.99 RON](https://www.optimusdigital.ro/ro/altele/755-modul-receptor-telecomanda-infrarou.html) |
+| [Remote Control](https://static.optimusdigital.ro/52355-thickbox_default/mini-telecomanda.jpg) | The IR Remote Control | [3.60 RON](https://www.optimusdigital.ro/ro/altele/11-mini-telecomanda.html) |
 
 ## Software
 
-| Library                                                                     | Description               | Usage                                           |
-| --------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------- |
-| [st7789](https://github.com/almindor/st7789)                                | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library       | Used for drawing to the display                 |
+| Library | Description | Usage |
+|---------|-------------|-------|
+
 
 ## Links
 
