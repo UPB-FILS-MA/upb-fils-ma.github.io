@@ -1,6 +1,6 @@
 # Kalman Temperature Alert System
 
-:::info
+Temperature alert system using the Kalman Filter for perfect accuracy
 
 _Author_: Fotescu Maria-Irina, Economu Teo-Antonio
 
@@ -10,7 +10,7 @@ _GitHub Project Link_: https://github.com/UPB-FILS-MA/project-economuteo
 
 ## Description
 
-We created a clock with LCD 1602/I2C, displaying time and temperature, triggering a buzzer and cooler if temperature surpasses a set threshold, with a warning message shown, using Kalman Filter for accuracy.
+We are looking to have a clock that presents the current time and the temperature on a LCD 1602 which has an I2C interface. We will set a certain threshold on the sensor. If the temperature surpases this limit, the buzzer will start ringing and the cooler will try to cool down the sensor in order to bring the temperature back to optimal levels. In order for us to be informed about the temperature increase, the display will show a warning message and the buzzer will start ringing once the threshold is reached. For a very accurate measurement, we are going to use the Kalman Filter.
 
 ## Motivation
 
