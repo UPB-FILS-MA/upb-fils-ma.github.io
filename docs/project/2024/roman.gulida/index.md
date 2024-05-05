@@ -79,7 +79,7 @@ The format is
 | [Active Buzzer](https://www.mouser.com/datasheet/2/400/ef532_ps-13444.pdf) | Price alert | [1.5 RON](https://www.optimusdigital.ro/en/buzzers/635-3v-active-buzzer.html?search_query=active+buzzer&results=16) |
 | [Breadboard](https://busboard.com/documents/datasheets/BPS-DAT-(KIT-BB830+SB830)) | The physical base of the project | [10 RON](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html) |
 | [Jumper Wires](https://ro.mouser.com/datasheet/2/58/BPS_DAT__ZW_10__Datasheet-1282929.pdf) | Connect components | [4 RON](https://www.optimusdigital.ro/en/wires-with-connectors/887-set-fire-tata-tata-10p-15-cm.html?search_query=jumper+wires&results=100) |
-| [Toggle Switch]() | Switch between cryptocurrencies | [0.5 RON](https://www.optimusdigital.ro/en/buttons-and-switches/8930-miniature-side-toggle-switch-with-5-mm-handle.html?search_query=toggle+switch&results=31) |
+| [Toggle Switch](https://www.optimusdigital.ro/en/buttons-and-switches/8930-miniature-side-toggle-switch-with-5-mm-handle.html?search_query=toggle+switch&results=31) | Switch between cryptocurrencies | [0.5 RON](https://www.optimusdigital.ro/en/buttons-and-switches/8930-miniature-side-toggle-switch-with-5-mm-handle.html?search_query=toggle+switch&results=31) |
 
 ## Software
 
