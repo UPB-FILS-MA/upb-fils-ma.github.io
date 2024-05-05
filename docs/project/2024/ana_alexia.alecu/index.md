@@ -67,7 +67,7 @@ The format is
 | [Ky-038 Microphone Sound Sensor](https://kirig.ph/wp-content/uploads/2020/08/KY-038-Joy-IT.pdf) | Used for capturing the sound | [6 RON](https://www.bitmi.ro/modul-senzor-sunet-cu-microfon-ky-038-10658.html?gad_source=1&gclid=Cj0KCQjwltKxBhDMARIsAG8KnqVtOHJJyAnCysmzd026bh0o0Vw4qvzYcy5RNVwreSkt491DiR8epWsaAgojEALw_wcB) |
 | [Kit Plusivo Microcontroller](https://www.plusivo.com/electronics-kit/88-plusivo-microcontroller-super-starter-kit-196-pcs.html) | The breadboard, jumper wires and male to female wires) | [75 RON](https://www.optimusdigital.ro/ro/kituri/12333-kit-plusivo-microcontroller-starter.html?search_query=plusivo+microcontroller+starter+kit&results=3) |
 | [MB102 Breadboard Power Supply Module 3.3V/5V](https://components101.com/modules/5v-mb102-breadboard-power-supply-module) | The power supply | [5 RON](https://ardushop.ro/ro/home/40-modul-sursa-de-alimentare-5v-33v.html?gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQASEyvWtmmps6Ws3dCUTS4OcWVfv0u_nU3wKQxYoxGqLemFYc_rMQPxoCBSYQAvD_BwE) |
-| [PC Speakers] | Used for emitting a powerful sound | [-] |
+| PC Speakers | Used for emitting a powerful sound | [-] |
 
 
 ## Software
