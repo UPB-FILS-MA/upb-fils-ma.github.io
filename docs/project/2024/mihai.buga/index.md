@@ -1,11 +1,13 @@
-# Pulse Oximeter Health Monitoring
+## Pulse Oximeter Health Monitoring
 
-:::info
+A device providing real-time measurement of blood oxygen levels for proactive health tracking.
+
+
 
 **Author**: Buga Mihai
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-MishulicaZeu
 
-:::
+
 
 ## Description
 
@@ -58,16 +60,16 @@ The format is
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
- [buzzer](https://www.bitmi.ro/module-electronice/modul-buzzer-activ-compatibil-arduino-10397.html) |used for creating sound| |[5 lei]|
- [Breadboard 830 puncte MB-102] |(https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |to assamble the Project| |[9 lei]|
- [Modul senzor pulsoximetru MAX30102] |(https://www.bitmi.ro/senzori-electronici/modul-senzor-pulsoximetru-max30102-10803.html) | to measure-heart-rate-and-spo2-with-max30102-eb4f74| |[16 lei]|
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)| The microcontroller | [35 RON] |(https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+ [buzzer](https://miketrebilcock.github.io/js-gpiozero/Buzzer.html |used for creating sound) | [5 RON] | (https://www.bitmi.ro/module-electronice/modul-buzzer-activ-compatibil-arduino-10397.html) |
+ [Breadboard 830 puncte MB-102] (https://static.cs.tme.eu/2018/03/5aaa4f5a91b79/Lecture_1_The_Breadboard.pdf) |to assamble the Project| |[9 RON] | (https://www.bitmi.ro/componente-electronice/breadboard-830-puncte-mb-102-10500.html) |
+ [Modul senzor pulsoximetru MAX30102] (https://www.analog.com/media/en/technical-documentation/data-sheets/max30102.pdf) | to measure-heart-rate-and-spo2 | [16 RON]| (https://www.bitmi.ro/senzori-electronici/modul-senzor-pulsoximetru-max30102-10803.html)|
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [to be added] | to be added | to be added |
+| [to be added] | to be added | to be added |
 
 ## Links
 
