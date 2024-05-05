@@ -90,3 +90,4 @@ It has to run software written in Rust. Students can use:
 [^arduino_nano_rp2040_connect]: Some function of this board, like WiFi, might not be supported in Rust.
 [^esp32_riscv]: ESP32 provides its own Rust SDK described in the [The Rust on ESP Book](https://docs.esp-rs.org/book/introduction.html).
 
+
