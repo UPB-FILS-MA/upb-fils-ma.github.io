@@ -20,10 +20,6 @@ I've always taken a big interest in the game development area, and thought it wo
 <img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/967ee4db-efe6-4d7e-8d41-958a847f65ab">
 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
-
 ## Log
 
 <!-- write every week your progress here -->
@@ -57,6 +53,14 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [LCD 1602 cu Interfata I2C si Backlight Albastru] | The Display | [16,34 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html) |
+| [Wires father-father] | The Wires Father-Father | [6,99 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire&results=437) |
+| [Wires mother-mother] | The Wires Mother-Mother | [7,73 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/652-fire-colorate-mama-mama-40p-10-cm.html?search_query=fire&results=437) |
+| [Buzzer] | The Buzzer | [1,95 lei RON](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html?search_query=buzzer&results=62) |
+| [Tastatură Matriceală 4x4 cu Butoane] | The Keypad | [3,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html) |
+| [Potentiometru Stereo 10k] | The Potentiometer | [1,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/1886-potentiometru-stereo-10k.html?search_query=Potentiometru+stereo+10k&results=2) |
+| [Breadboard HQ (830 Puncte)] | The Breadboard | [9,98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard&results=145) |
+| [LED Roșu de 3 mm cu Lentile Difuze] | The LEDs | [0,39 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/696-led-rou-de-3-mm-cu-lentile-difuze.html?search_query=LED&results=818) |
 
 
 ## Software
