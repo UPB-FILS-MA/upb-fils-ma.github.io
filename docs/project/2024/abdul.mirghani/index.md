@@ -1,7 +1,6 @@
 # Object Detection and Alert System
 Automated Surveillance and Notification Interface.
-
-:::info
+:::info 
 **Author**: Mahmoud Mirghani Abdelrahman \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Abd210
 :::
@@ -23,7 +22,9 @@ This project effectively combines ultrasonic sensing, servo control, and audio a
 I chose this project to create a functional radar-like system for obstacle detection and range measurement, utilizing my skills in ultrasonic sensing, servo control, and real-time feedback. I was also inspired by a YouTube video on similar technology.
 
 ## Architecture 
+
 ![Architecture Scheme](Architecture.png)
+
 ```
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
@@ -86,7 +87,6 @@ The hardware used includes:
 Detail in a few words the hardware used.
 
 ### Schematics
-
 ![Kicad schematic](Kicad.png)
 
 ### Bill of Materials
@@ -114,7 +114,7 @@ Detail in a few words the hardware used.
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
 |[HC-SR04](https://github.com/Benehiko/pico-ultrasonic-rs.git) |HC-SR04 manipulation| 
 Used for controlling the ultrasonic sensor|
-## Links
 
-1. [DIY Radar With Ultrasonic Sensor](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
+## Links
+1. [DIY Radar with Ultrasonic Sensor](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
 
