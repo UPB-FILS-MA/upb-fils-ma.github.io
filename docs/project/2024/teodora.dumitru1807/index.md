@@ -3,6 +3,10 @@
 A robot car that can be controlled through a website accessed from the mobile phone or a computer
 
 
+<<<<<<< HEAD:docs/project/2024/teodora.dumitru1807/index.md
+=======
+
+>>>>>>> 09ef96c60fde601031d1ace43d380640ac677bb2:docs/project/2024/Teodora_Dumitru/index.md
 
 **Author**: Dumitru Teodora-Iulia \
 **GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-Teodora1807.git)
