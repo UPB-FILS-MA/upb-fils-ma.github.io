@@ -22,6 +22,7 @@ For this project, I aimed to create something both fun and intricate. Merely cre
 - _Display_: This component displays game data on a 9x9 grid filled with X's and O's. The display is sized to allow for pointer inaccuracies.
 - _Mobile website_: This site features a simple 9x9 grid design, acting as the control interface for the player. Inputs are transmitted to the microcontroller via Wi-Fi.
 - _Robotic arm_: After the microcontroller decides on a move, the robotic arm points to one of the nine grid positions. Both servos adjust continuously to ensure accuracy. The lower servo is equipped with an L-shaped component to enable slight rotation, while the upper servo has a longer attachment to ensure it can reach all positions.
+
 ![Block Diagram](img/FrontViewRoboticArm.jpg)
 ![Block Diagram](img/SideViewRoboticArm.jpg)
 ![Block Diagram](img/Schematic.jpg)
