@@ -1,26 +1,33 @@
-# security door
-a door that opens using a password and closes when the sensor sees that you entered
+# Security Door
 
-:::info 
+This project creates a password-protected automatic door system using a Raspberry Pi, microcontroller, and sensor.
 
-**Author**: Alkhalidy Essam \
-**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-esxm
+:::info
+
+*Author*: Alkhalidy Essam \
+*GitHub Project Link*: https://github.com/UPB-FILS-MA/project-esxm
 
 :::
 
 ## Description
 
-Describe in a few words your project idea.
+This project is designed to create an automated door system that operates based on a password input through a keypad. Once the correct password is entered, the door will open using a servo motor. An integrated sensor ensures the door remains open only as long as needed and closes securely after entry is detected. The system is built around a Raspberry Pi and a separate microcontroller, combining robust processing capabilities with efficient real-time control.
 
 ## Motivation
 
-Why did you choose this project?
+1. Practical Application of Skills: This project provides a comprehensive platform to apply and enhance a range of technical skills, including programming, electronics, mechanical system design, and systems integration. It's an excellent opportunity to work hands-on with both software and hardware components, thus deepening your understanding of how multiple systems interact.
 
-## Architecture 
+2. Problem-Solving Challenge: Designing a system that requires synchronization between software and hardware presents complex problem-solving opportunities. It challenges you to think critically about issues like secure access, reliable mechanical movement, real-time data processing, and user interface design.
+
+3. Innovation and Customization: An automated door system allows for a great deal of innovation and customization. You can tailor security features, such as password complexity, encryption, or even biometric authentication. The project can also be expanded to include IoT connectivity, enabling remote monitoring and control.
+
+4. Interdisciplinary Learning: This project spans multiple disciplines—computer science, electrical engineering, mechanical engineering, and information security. Such an interdisciplinary approach can significantly broaden your learning and might open up new areas of interest.
+
+5. Real-World Utility and Impact: Automated door systems have significant real-world applications in residential, commercial, and industrial settings. By working on this project, you can contribute to solutions that improve security and accessibility, potentially leading to entrepreneurial opportunities or impactful research projects.
+
+## Architecture
 
 Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
 
 ## Log
 
@@ -45,29 +52,40 @@ Place your KiCAD schematics here.
 <!-- Fill out this table with all the hardware components that you might need.
 
 The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
 
-```
+| [Device](link://to/device) | This is used ... | [price](link://to/store) |
 
 -->
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [1 x 56.23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=WCBSTR_PICO_WH&results=108) |
+| [4xAA Battery Holder](https://ardushop.ro/4684-thickbox_default/suport-baterii-4xaa.jpg) | --CHANGE HERE-- | [2 x 4.39 RON](https://ardushop.ro/ro/home/65-suport-baterii-4xaa.html?search_query=XHFSRH_4xAAholder&results=1) |
+| [830 Points Breadboard](https://ardushop.ro/4105-thickbox_default/breadboard-830.jpg) | --CHANGE HERE--| [1 x 10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=HTZAKJ_BB-830&results=47) | 
+| [Set of Jumper Wires](https://ardushop.ro/6604-thickbox_default/65-x-jumper-wires.jpg) | --CHANGE HERE--| [1 x 11.86 RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=QUKRNX_FJP-65&results=144) | 
+| [Set of Resistances](https://ardushop.ro/7381-thickbox_default/set-rezistente-14w-600buc30-valori-10r-1m.jpg) | --CHANGE HERE--| [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=PLCTHL_R-SET&results=425) | 
+| [5mm LEDs](https://ardushop.ro/605-thickbox_default/led-5mm.jpg) | --CHANGE HERE--| [10 x 0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=GIISED_LED5_red&results=286#/10-culoare-rou) | 
+| [Micro USB Cable](https://static.optimusdigital.ro/31356-large_default/cablu-micro-usb-1-m-alb.jpg) | --CHANGE HERE--| [RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=0104210000002362&results=1) | 
+| [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | --CHANGE HERE--| [1 x 2.85 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=0104210000009040&results=1) | 
+| [Movement Sensor](https://static.optimusdigital.ro/8703-large_default/modul-senzor-pir-hc-sr501.jpg) | to see when te person has entered to close the door | [1 x 5.99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-pir/106-modul-senzor-pir-hc-sr501.html?search_query=0104110000000132&results=1) | 
+| [SG90 Servomotor](https://static.optimusdigital.ro/54859-large_default/micro-servomotor-sg90.jpg) | --CHANGE HERE--| [1 x 13.99 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/26-micro-servomotor-sg90.html?search_query=0104110000001368&results=1) | 
+| [4x4 Matrix Keypad](https://static.optimusdigital.ro/23301-large_default/tastatura-matriceala-4x4-cu-conector-pin-de-tip-mama.jpg) | to introduce the password to unlock the door | [1 x 6.99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/470-tastatura-matriceala-4x4-cu-conector-pin-de-tip-mama.html?search_query=0104110000002747&results=1) | 
+| [Set of Female-Male Wires](https://static.optimusdigital.ro/54998-large_default/set-fire-mama-tata-10p-30-cm.jpg) | --CHANGE HERE--| [2 x 5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=0104210000008999&results=1) | 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [embassy-time](https://docs.embassy.dev/embassy-executor/git/std/index.html) | Time management library | Delays & debouncing between button pressings |
+| [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Accessing peripherals | Interacting with peripherals (pins) |
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)| An async/await executor designed for embedded usage | Running multiple tasks simultaneously |
+| [log](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | Logging interface | Logging info or warning messages |
+| [embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html) | USB implementation of the log crate | Logging info or warning messages over USB |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://example.com)
-2. [link](https://example3.com)
-...
+1. [Anti-Theft Door Code Lock w RP Pico](https://www.youtube.com/watch?v=Jg0W165iHYk)
+2. [Servo Motor Door Project](https://youtu.be/o263P5RVYc0?si=v0RRp57XY6DXxYQ4)
+3. [Simple Automatic Car Parking Toll Gate System](https://www.youtube.com/watch?v=O7yoa-hwnkI)
