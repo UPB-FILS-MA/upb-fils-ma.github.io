@@ -21,9 +21,7 @@ The motivation behind my RC Car project comes from my desire to play, create and
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
+![image](https://github.com/sadtoni/upb-fils-ma.github.io/assets/122456673/a2cb09da-29d2-4d01-967c-65be150d6add)
 
 ## Log
 
