@@ -1,4 +1,5 @@
- Tic-Tac-Toe
+# Tic-Tac-Toe
+
  a simple game made in rust
 
 :::info 
