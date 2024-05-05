@@ -10,7 +10,7 @@ A cooling pad for laptops that can be controlled wirelessly or using buttons.
 
 ## Description
 
-There are 2 possible of using it:
+There are 2 possible ways of using it:
 * Physically: The fans are controlled through a UI made up of a screen which displays info and buttons with which we increase or decrease the speed of the fans.
 
 * Wirelessly: A user can interact with the microcontroller through a desktop app which sends commands to it through WIFI.
