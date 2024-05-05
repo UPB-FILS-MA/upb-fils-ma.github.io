@@ -53,6 +53,8 @@ The average temperature around the globe has been on the rise for quite a while,
 
 * **Motor Driver:** Providing enough current to the fans.
 
+* **Set-Up Voltage Source:** Raising voltage to power motor driver.
+
 * **Breadboard Supply:** Powering the whole setup either through USB connection from laptop or wall socket.
 
 ### Schematics
@@ -85,10 +87,11 @@ The format is
 | [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [1 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
 | [Sets of Rigid Jumper Wires](https://static.optimusdigital.ro/55063-large_default/set-de-fire-pentru-breadboard-rigide.jpg) | Connectivity | [1 x 12.49 RON](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=fire+rigide&results=2) |
 | [Set of Resistors](https://ardushop.ro/7381-thickbox_default/set-rezistente-14w-600buc30-valori-10r-1m.jpg) | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
+| [2A Step-Up Voltage Source](https://static.optimusdigital.ro/55746-large_default/sursa-de-tensiune-ridicatoare-xs1308-de-2-a.jpg) | Voltage Amplification | [1 x 4.99 RON](https://www.optimusdigital.ro/ro/surse-ridicatoare-reglabile/2255-sursa-de-tensiune-ridicatoare-xs1308-de-2-a.html?search_query=0104110000015396&results=1) |
 | [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
 | [Cooling Pad Frame] |  Frame That Holds Fans & Laptop | [not sure] |
-| **TOTAL** | - | [**186.64 RON**] |
+| **TOTAL** | - | [**175.53 RON**] |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
