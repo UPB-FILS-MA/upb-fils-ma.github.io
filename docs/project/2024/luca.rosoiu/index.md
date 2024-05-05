@@ -56,7 +56,7 @@ The format is
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [Doppler Sensor](https://www.nivetec.com.br/arquivos/Manual_Nivus_Sensor_KDA_us_Nivetec.pdf) | This will be at the base of both the parking sensor and the parking barrier sensor | [8 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-distanta/2039-senzor-de-proximitate-cu-microunde.html) |
-| [Barrier]() | This will be the trigger of the doppler sensor (might need 3d printing) | [ RON]() |
+| Barrier | This will be the trigger of the doppler sensor (might need 3d printing) | RON |
 | [LED](https://www.diodeled.com/technical-documents/) | The LED | [1 RON](https://componenteonline.ro/led-5mm-3v-galben-rotund-141002?product_id=147244) |
 | [Buzzer](https://www.arduino.cc/reference/en/libraries/buzzer/) | The Buzzer | [2 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html) |
 
