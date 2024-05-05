@@ -21,7 +21,7 @@ Creating a Snake game with Rust on a Raspberry Pi and LED matrix blends nostalgi
 Add here the schematics with the architecture of your project. Make sure to include:
 
 -   what are the main components (architecture components, not hardware components)
-the main architecture components:
+the main architecture components are:
 
 Game Engine:
 Manages game state and logic.
