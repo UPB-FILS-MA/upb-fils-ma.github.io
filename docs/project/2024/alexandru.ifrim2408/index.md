@@ -3,8 +3,8 @@ A LED MIDI Controller with FL Studio using Raspberry Pico W, that synchronizes m
 
 :::info 
 
-**Author**: Ifrim Alexandru-Constantin
-**GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-pitisef)
+**Author**: Ifrim Alexandru-Constantin \
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-pitisef
 
 :::
 
