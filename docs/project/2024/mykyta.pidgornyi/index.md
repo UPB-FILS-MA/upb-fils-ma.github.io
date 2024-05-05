@@ -86,7 +86,7 @@ The format is
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
-| --------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------- |
+|-|-|-|
 | [st7789](https://github.com/almindor/st7789)                                | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [GPS](https://wiki.dfrobot.com/SKU_TEL0157_Gravity_GNSS_Positioning_Module) | Drivers for GPS           | Used as a GPS driver                            |
 
