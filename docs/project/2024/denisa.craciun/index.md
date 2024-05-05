@@ -30,7 +30,7 @@ I always wanted a Tamagotchi when I was little but never got one. I was recently
 The main component is the program running on the Raspberry Pi Pico W.
 The subcomponents are the LCD that is showcasing the interface and the animated pet and the buttons that are used to interact with the pet.
 
-![321290083-c3ce5465-5c68-4d0c-b831-40e94a0dd944](https://github.com/tvstatico/upb-fils-ma.github.io/assets/163406758/5e9d46d0-8934-41f5-9049-b6927f923297)
+![architecture](architecture.png)
 
 
 ## Log
