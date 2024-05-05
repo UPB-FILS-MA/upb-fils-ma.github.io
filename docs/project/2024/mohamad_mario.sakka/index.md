@@ -21,9 +21,9 @@ The average temperature around the globe has been on the rise for quite a while,
 
 ## Architecture
 
-* The application on the laptop will act as a client, which will connect to the WIFI network hosted on the RP Pico W, and it will send commands to it through TCP to ensure reliable communication between the two. This app will be written in *Python* using the *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will come with a preset network name & password. 
+* The application on the laptop will act as a server, the RP Pico W will establish a connection with it, and it will exchange data with it via TCP to ensure reliable communication between the two. This app will be written in *Python* using the *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will connect to a network with preset name & password which must be hosted by the laptop. 
 
-* The physical UI (buttons & LCD) will be used to start the server, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
+* The physical UI (buttons & LCD) will be used to establish the connection, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
 
 ![example](MA_project_architecture.png)  
 
@@ -43,7 +43,9 @@ The average temperature around the globe has been on the rise for quite a while,
 
 * **Breadboard:** Connecting components
 
-* **Push Buttons with LEDs:** Controlling the speed of the fans and displaying status of the setup, such as WIFI connection status, powered on or off, increasing or decreasing speed.
+* **Push Buttons** Controlling the speed of the fans and 
+
+* **LEDs:** Displaying the status of the cooling pad such as WIFI connection status, powered on or off, increasing or decreasing speed.
 
 * **Rigid Jumper WIres:** Connecting components to breadboard.
 
