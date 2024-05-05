@@ -87,7 +87,7 @@ The format is
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [charlcd](https://crates.io/crates/charlcd) | | a crate to correctly interact with HD44780 LCD screens on embedded Linux devices. |
+| [AG-LCD](https://github.com/mjhouse/ag-lcd) | | This is a rust port of the LiquidCrystal library |
 
 
 ## Links
