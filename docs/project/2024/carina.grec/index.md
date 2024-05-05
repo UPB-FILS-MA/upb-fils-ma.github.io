@@ -5,7 +5,7 @@ The House Thermometer project uses a Raspberry Pi Pico W to measure indoor tempe
 :::info 
 
 **Author**: Grec Carina-Gabriela \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-carinagrec)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-carinagrec
 
 :::
 
