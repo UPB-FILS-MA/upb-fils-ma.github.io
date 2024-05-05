@@ -21,6 +21,7 @@ When I was little, besides dolls and legos , i liked remote controlled cars or e
 ## Architecture 
 
 This is my block diagram:
+
 [block diagram](image.png)
 
 I am going to connect the 2 motors to the 2 big wheels.
@@ -56,6 +57,7 @@ The motors consists of many winding of copper wire inside a magnetic field. Thes
 This dual bidirectional motor driver, is based on the very popular L298 Dual H-Bridge Motor Driver Integrated Circuit. The circuit will allow you to easily and independently control two motors of up to 2A each in both directions. It is ideal for robotic applications and well suited for connection to a microcontroller requiring just a couple of control lines per motor.
 
 ![L298N](image-1.png)
+
 ![L298N](image-2.png)
 
 There are two types of control pins found at the bottom right side of the module. One type controls the speed and the other type controls the direction of the motor.
