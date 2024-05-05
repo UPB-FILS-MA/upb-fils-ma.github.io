@@ -1,5 +1,4 @@
-# Project Name
-Pulse Oximeter Health Monitoring
+# Pulse Oximeter Health Monitoring
 
 :::info
 
