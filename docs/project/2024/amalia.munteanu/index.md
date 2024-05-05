@@ -17,7 +17,8 @@ My project is based on an old timey game that we all used to play during school 
 I've always taken a big interest in the game development area, and thought it would be fun to try challenging myself by coding a game designed to work on a microprocessor in a newly encountered programming language, rust. The question was which game. Well, it all came around when one day, during free hours, my friends and I decided to play Hangman and thought it would be a great idea to revolve my project on this timeless game.
 
 ## Architecture 
-![architecture](<img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/8a5c853d-47f2-4f2e-a877-216c83b06953">)
+<img width="443" alt="Architecture1" src="https://github.com/nikkoxp/upb-fils-ma.github.io/assets/163386570/967ee4db-efe6-4d7e-8d41-958a847f65ab">
+
 
 Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
