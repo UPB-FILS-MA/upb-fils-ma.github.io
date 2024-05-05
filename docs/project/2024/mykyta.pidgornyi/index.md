@@ -75,7 +75,7 @@ The format is
 -->
 
 | Device                                                                                                                                         | Usage                                        | Price      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
+|-|-|-|
 | [Raspberry Pi Pico WH](https://www.digikey.ro/en/products/detail/raspberry-pi/SC0919/18713315?s=N4IgTCBcDaIMoGEAMBOAjCkBdAvkA)                 | The microcontroller                          | 33,48 RON  |
 | [TEL0157](https://www.digikey.ro/en/products/detail/dfrobot/TEL0157/18069252?s=N4IgTCBcDaICoFEAyAGAjAVgOwgLoF8g)                               | GPS Module                                   | 83,24 RON  |
 | [PICO EXPLORER BASE](https://www.digikey.ro/en/products/detail/pimoroni-ltd/PIM550/13981737?s=N4IgTCBcDaIAoEkCyBWFAGEBdAvkA)                   | Base for Microcontroller                     | 133,92 RON |
