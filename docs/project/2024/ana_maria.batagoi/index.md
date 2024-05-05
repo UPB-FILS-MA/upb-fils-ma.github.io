@@ -3,7 +3,7 @@
 
 :::info 
 
-**Author**: Ana-Maria Batagoi
+**Author**: Ana-Maria Batagoi \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-anabat27
 
 :::
@@ -36,7 +36,7 @@ How they connect:
 Sensor Interface Module to Data Processing Module: The BME280 is connected to the Raspberry Pi Pico W through GPIO pins.
 Data Processing Module to User Interface Module:The Raspberry Pi Pico W is connected to the web interface using a micro USB cable.
 
-
+![Architecture schematics](./architecture_schematics.png)
 
 ## Log
 
@@ -56,8 +56,6 @@ BME280 Sensor Module: This sensor module integrates temperature, humidity, and p
 Micro USB Cable: To connect the Raspberry Pi Pico W to the computer for programming and development.
 
 Breadboard and Jumper Wires: For prototyping and connecting the components together.
-
-![Architecture schematics](./architecture_schematics.png)
 
 ### Schematics
 
