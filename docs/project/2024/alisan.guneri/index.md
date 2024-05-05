@@ -51,9 +51,6 @@ My motivation for making this game likely combines elements of personal interest
 
 ## Architecture 
 
-Add here the schematics with the architecture of your project. Make sure to include:
- - what are the main components (architecture components, not hardware components)
- - how they connect with each other
 
 ## Log
 
