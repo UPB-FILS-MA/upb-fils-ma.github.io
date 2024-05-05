@@ -32,14 +32,23 @@ I've always taken a big interest in the game development area, and thought it wo
 ## Hardware
 
 -Raspberry Pi Pico W: A microcontroller board for the embedded project.
+
 -LCD 1602 cu Interfata I2C si Backlight Albastru: A 16x2 character LCD display with I2C interface and blue backlight.
+
 -Wires father-father: Male-to-male jumper wires for connecting components on a breadboard or elsewhere.
+
 -Wires mother-mother: Female-to-female jumper wires for connecting components on a breadboard or elsewhere.
+
 -Buzzer: An audio output device that emits sound when activated once the player loses all the lives.
+
 -Tastatură Matriceală 4x4 cu Butoane: A 4x4 matrix keypad for inputting the letters.
+
 -Potentiometru Stereo 10k: A stereo potentiometer used for adjusting analog signals.
+
 -Breadboard HQ (830 Puncte): A breadboard for prototyping the circuit necessary for the project.
+
 -3 LEDs Roșii de 3 mm cu Lentile Difuze: 3 red LEDs with diffused lens for visual indication.
+
 -Buton 6x6x6: A tactile push button for manual control or input.
 
 ### Schematics
