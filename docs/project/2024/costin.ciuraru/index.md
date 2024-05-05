@@ -80,7 +80,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embassy-time](https://github.com/embassy-rs/embassy) | Timing module | Provides timing functions for operations |
 |[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
 |[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |
 |[pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound |
