@@ -33,7 +33,7 @@ hardware is not really my specialty, I will do my best to make the best game I c
 
 ## Architecture 
 
-![Project_architecture](https://github.com/matei7-7/upb-fils-ma.github.io/assets/163386907/5d6cf16e-81e5-4ee9-b6d6-bbf790c86306)
+![Project_architecture](./Project_architecture.png)
 
 
 ## Log
