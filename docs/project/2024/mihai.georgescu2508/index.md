@@ -9,11 +9,11 @@ A RC Car controlled by a Web Application
 
 ## Description
 
-• Using the Raspberry Pi Pico W microcontroller, I built a remote-controlled car, operated via a web application.
++Using the Raspberry Pi Pico W microcontroller, I built a remote-controlled car, operated via a web application.
 
-• The connection is realized with Pico’s integrated Wi-Fi capabilities, since it is ten times faster than using Bluetooth and is easier to control via a web browser on an iPhone.
++The connection is realized with Pico’s integrated Wi-Fi capabilities, since it is ten times faster than using Bluetooth and is easier to control via a web browser on an iPhone.
 
-• On the bonnet, an ultrasonic sensor is placed to provide distance information to the user, allowing them to control the car even if it is out of sight.
++On the bonnet, an ultrasonic sensor is placed to provide distance information to the user, allowing them to control the car even if it is out of sight.
 
 ## Motivation
 
@@ -21,7 +21,7 @@ The motivation behind my RC Car project comes from my desire to play, create and
 
 ## Architecture 
 
-![image](https://github.com/sadtoni/upb-fils-ma.github.io/assets/122456673/a2cb09da-29d2-4d01-967c-65be150d6add)
+![image](schematic.jpg)
 
 ## Log
 
