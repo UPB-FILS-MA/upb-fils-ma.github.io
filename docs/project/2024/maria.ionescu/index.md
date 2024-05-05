@@ -1,5 +1,7 @@
 # Ferrari Line Follower and Obstacle Avoider Car 
 
+A smart Ferrari-inspired autonomous car that navigates and avoids obstacles with precision.
+
 :::info 
 
 **Author**: Ionescu Maria-Magdalena \
