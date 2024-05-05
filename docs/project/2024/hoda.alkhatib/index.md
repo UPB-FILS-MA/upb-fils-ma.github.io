@@ -2,9 +2,8 @@
 
 :::info
 
-Author: Alkhatib Hoda
-
-GitHub Project Link: https://github.com/UPB-FILS-MA/project-AlkhatibHoda
+**Author**: Alkhatib Hoda \
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-AlkhatibHoda
 
 :::
 
