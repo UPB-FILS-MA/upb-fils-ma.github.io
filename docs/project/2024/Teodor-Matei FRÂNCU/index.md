@@ -23,7 +23,7 @@ And as an added bonus I'm quite passionate about video games and I spend most of
 
 ## Architecture 
 
-![architecture](<img width="870" alt="architecture" src="https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/assets/163386844/781248c2-bc65-4d6b-a6b0-360f5891a9d4">)
+![architecture](architecture.png)
 
 ### Main Components
 
