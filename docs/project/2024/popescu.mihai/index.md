@@ -16,7 +16,7 @@ Constructing a music player using a Raspberry Pi Pico W and Rust presented me wi
 
 ## Architecture 
 
-+![Architecture](arhitecture.png)
+![Architecture](arhitecture.png)
 
 ## Log
 
