@@ -2,7 +2,7 @@
 This project is a compact music player built with a Raspberry Pi Pico W, using Rust for development. It retrieves songs from a microSD card and outputs them to a speaker. 
 
 **Author**: Popescu Mihai-Cristian \
-**GitHub Project Link**: [link](https://github.com/mihaio3)
+**GitHub Project Link**: [[link](https://github.com/mihaio3)](https://github.com/mihaio3/upb-fils-ma.github.io/tree/main/docs/project/2024/popescu.mihai)
 
 
 
