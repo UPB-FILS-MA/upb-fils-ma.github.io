@@ -23,7 +23,7 @@ And as an added bonus I'm quite passionate about video games and I spend most of
 
 ## Architecture 
 
-![architecture](<img width="870" alt="architecture" src="https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/assets/163386844/781248c2-bc65-4d6b-a6b0-360f5891a9d4">)
+![architecture](architecture.png)
 
 ### Main Components
 
@@ -95,12 +95,11 @@ The format is
 ## Software
 
 | Library | Description | Usage |
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base | \
+| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base| \
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display | \
 | [embassy_rs](https://github.com/embassy-rs/embassy) | Embassy framework for embedded systems | Used for its many useful and versatile libraries | 
 
 ## Links
 
 1. [Gameboy](https://en.wikipedia.org/wiki/Game_Boy)
-
 
