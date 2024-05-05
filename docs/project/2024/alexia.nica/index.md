@@ -57,7 +57,7 @@ The format is
 | [Push Button](https://components101.com/switches/push-button)|Push button|[0.63 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html?search_query=buton&results=157)|
 | [Temperature sensor](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)|Temperature sensor|[14.30 RON](https://ardushop.ro/ro/home/121-modul-senzor-temperatura-i-umiditate-digital-dht11.html?search_query=dht11&results=3)|
 | [RTC Module](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231.pdf)|Real time clock module|[23.56 RON](https://ardushop.ro/ro/electronica/231-modul-rtc-de-precizie-ds3231-i2c.html?search_query=ds3231&results=1)|
-| [Breadboard]||[10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31)|
+| Breadboard|Breadboard|[10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31)|
 
 ## Software
 
