@@ -1,5 +1,7 @@
 # House Alarm
 
+A house alarm system combining motion detection, proximity monitoring and event logging.
+
 :::info 
 
 **Author**: Smarandache Mihai \
