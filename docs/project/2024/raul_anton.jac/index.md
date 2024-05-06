@@ -77,15 +77,17 @@ Place your KiCAD schematics here.
 | [Plusivo Resistor Kit 250 pcs](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=resistors&results=184) | Used for Voltage Divider | [15 RON](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=resistors&results=184)|
 | [Breadboard Jumper Wires Set](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=561) | Connecting components | [8 RON](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=561)|
 | [2 x Breadboard HQ (830 points)](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html) | Base for the project | [20 RON](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html)|
-| [Speaker](#) | Song output | [TBA](#)|
+| [Amplifier Audio Mono XPT8871](https://www.optimusdigital.ro/ro/audio-amplificatoare-audio/8348-amplificator-audio-mono-xpt8871-5-w.html) | Amplifies the audio signal | [5 RON](https://www.optimusdigital.ro/ro/audio-amplificatoare-audio/8348-amplificator-audio-mono-xpt8871-5-w.html)|
+| [Speaker ](https://www.emag.ro/difuzor-mini-3-wati-8-ohmi-pentru-arduino-diy-ai1702/pd/DF0ZDDYBM/?ref=fp_growth_atc_1_1&provider=rec&recid=rec_74_c9f04ca83f0bc58c1133face9f24fff43981cc74b43976796129ba02ad6997dd_1714765523&scenario_ID=74) | The output of the mp3 player | [16 RON](https://www.emag.ro/difuzor-mini-3-wati-8-ohmi-pentru-arduino-diy-ai1702/pd/DF0ZDDYBM/?ref=fp_growth_atc_1_1&provider=rec&recid=rec_74_c9f04ca83f0bc58c1133face9f24fff43981cc74b43976796129ba02ad6997dd_1714765523&scenario_ID=74)|
 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [FatFS](https://github.com/rafalh/rust-fatfs) | Foundation for drivers | Used for components to communicate with software |
-| [embedded-hal](https://github.com/rust-embedded/embedded-hal) | A lightweight file system library for embedded systems, compatible with FAT32, FAT16, and FAT12 | Handles reading and writing audio files to and from the microSD card efficiently |
+| [embedded-hal](https://github.com/rust-embedded/embedded-hal)| Foundation for drivers | Used for components to communicate with software |
+| [FatFS](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
+| [HD44780-Driver](https://github.com/JohnDoneth/hd44780-driver) | Driver for 1602 lcd | Used to transfer the text from pico to lcd |
 
 
 ## Links
