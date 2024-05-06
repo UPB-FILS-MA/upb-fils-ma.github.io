@@ -18,7 +18,7 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ## Architecture 
 
-![architecture](assets/Architecture.png)
+![architecture](Architecture.png)
 
 ## Log
 
