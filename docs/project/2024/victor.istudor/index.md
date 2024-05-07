@@ -1,10 +1,12 @@
-# Project Name
+# Line Follower
 A robot that follows a black line on a white background.
 
+:::info
 
 **Author**: Istudor Victor Mihai \
 **GitHub Project Link**: link_to_github
 
+:::
 
 ## Description
 
