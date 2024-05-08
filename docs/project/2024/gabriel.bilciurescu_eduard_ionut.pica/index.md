@@ -49,11 +49,15 @@ The circuit features an on/off button that allows users to power the system up o
 
 ## Hardware
 
-Detail in a few words the hardware used.
+MT3608 28V 2A - is a voltage regulator that we use to amplify the current given by the battery to power the fans
+DS18B20 (TO-92) - is a digital temperature sensor with adjustable accuracy from 9 bit to 12 bit readings
+2n2222 NPN BJT - are cheap bipolar transistor that we use as a switch to power the fans
+TP4056 - is a module we use for charging the battery
 
 ### Schematics
 
-Place your KiCAD schematics here.
+ ![KiCAD_schematic](./hardware_schematic.png)
+
 
 ### Bill of Materials
 
