@@ -34,7 +34,7 @@ Basically, this project has both a technical and practical focus: it explores th
 
 ## Motivation
 
-As it can be probably guessed from the above paragraphs, I am want to combine 2 subjects which are on opposite measurement axis (creativity and art with engineering projects). I believe that this project will help me understand how much time and effort developpers and engineers put when designing even just a little piece of the hardware part for the console or computer. Moreover, I'm keen on challenges and I wish to learn Rust as a new and innovative programming language, in comparison, I come from Java langaguage so Rust might be the perfect mix for me for C/C++ and Java. Furthermore (and last idea I promise) I want to create a small presentation involving statistics and measuring data to show that projects can be done in an equal rhythm with fun, creativity and hard work.
+As it can be probably guessed from the above paragraphs, I want to combine 2 subjects which are on opposite measurement axis (creativity and art with engineering projects). I believe that this project will help me understand how much time and effort developpers and engineers put when designing even just a little piece of the hardware part for the console or computer. Moreover, I'm keen on challenges and I wish to learn Rust as a new and innovative programming language, in comparison, I come from Java langaguage so Rust might be the perfect mix for me for C/C++ and Java. Furthermore (and last idea I promise) I want to create a small presentation involving statistics and measuring data to show that projects can be done in an equal rhythm with fun, creativity and hard work.
 
 ## Architecture 
 
@@ -82,7 +82,7 @@ The microcontroller sends input data to the host system using the XInput API. Th
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-TBD
+Designed the hardware on the breadboard, applied the voltage dividers to the circuit, finished up the KiCad hardware schematic
 ### Week 7 - 19 May
 TBD
 ### Week 20 - 26 May
@@ -105,7 +105,7 @@ Another compromise is the fact that, for reasons of availability, the "Trigger" 
 
 ![hardware](hardware.png)
 
-Please bear in mind that this is not the final form, just a quick sketch. It does not contain the vibration motors. Moreover, pins, components and other stuff might change in the future (but it is better than nothing :D)
+Please bear in mind that this is not the final form, just a quick sketch. Moreover, pins, components and other stuff might change in the future (but it is better than nothing :D)
 
 ### Bill of Materials
 
@@ -122,7 +122,7 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| BreadBoard| Build the circuit | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
+| 2 x BreadBoard| Build the circuit | [20 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
 | Buttons ( 12-15 ) | Input for controller | [5 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
 | Resistances | To not fry the circuit | [5 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) |
 | 2x JoySticks | Move and aim with the controller | [10 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/742-modul-joystick-ps2-biaxial-negru-cu-5-pini.html?search_query=joystick&results=42) |
