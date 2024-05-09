@@ -1,5 +1,5 @@
 # Snake game project 
-
+The game 'Snake,' displayed on an 8×8 LED Matrix module 
 :::info
 
 **Author**: Alkhatib Hoda \
@@ -16,6 +16,9 @@ My project is a recreation of the popular game 'Snake,' displayed on an 8×8 LED
 Creating a Snake game with Rust on a Raspberry Pi and LED matrix blends nostalgia with technical challenge, fostering both creativity and learning.
 
 ## Architecture
+
+![Architecture.jpg](https://github.com/AlkhatibHoda/upb-fils-ma.github.io/assets/163418706/9adce84e-7836-41bc-a30b-dc0bfab75834)
+
 
 Add here the schematics with the architecture of your project. Make sure to include:
 
@@ -84,15 +87,15 @@ The format is
 
 | Device                                                                                                  | Usage               | Price                                                                                                                                                                                                                                                                                |
 |-|-|-|
-| [Raspberry Pi Pico WH, Wireless+Headers](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56,23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=pico&results=14)                                                                                                                                                                                        |
-| [Breadboard]()                                                                                          | Main board          | [10,14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31)                                                                                                                                                                                                                                                          |
-| [L8x8 LED matrix + control circuit]()                                                                   | a screen to Display | [14,87 RON](https://ardushop.ro/ro/home/95-matrice-led-uri-8x8-circuit-de-control.html?search_query=matrix&results=8)                                                                                                                                                           |
-| [Passive Buzzer]()                                                                                      | Buzzer              | [3,97 RON ](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16)                                                                                                                         |
-| [Joystick mode]()                                                                                       | control the game    | [3,60 RON ](https://ardushop.ro/ro/electronica/127-modul-joystick.html?search_query=joystick&results=4)                                                                                                                                                                                                                                                         |
-| [A LED]()                                                                                               | turns on when starting | [0 RON( I borrowed it)]()                                                                                                                                                                                                                                                          |
-| [A resistor]()                                                                                          | current-limiting resistor| [0 RON( I borrowed it)]()                                                                                                                                                                                                                                                          |
-| [65 x Fire Jumper]()                                                                                    | connection           | [11,86  RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=fir&results=286) |
-| [40 x Dupont Yarn Mother-Father 10cm]()                                                                 | connection           | [5,18  RON](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=fir&results=286) |
+| [Raspberry Pi Pico WH, Wireless+Headers](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56,23 RON]                                                                                                                                                                                        |
+| [Breadboard](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31) | Main board          | [10,14 RON]                                                                                                                                                                                                                                                      
+| [L8x8 LED matrix + control circuit](https://ardushop.ro/ro/home/95-matrice-led-uri-8x8-circuit-de-control.html?search_query=matrix&results=8)     | a screen to Display | [14,87 RON]                                                                                                                                                          |
+| [Passive Buzzer](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16)                                                                                       | Buzzer              | [3,97 RON ]                                                                                                                        |
+| [Joystick mode](https://ardushop.ro/ro/electronica/127-modul-joystick.html?search_query=joystick&results=4)                                                                                        | control the game    | [3,60 RON ]                                                                                                                                                                                                                                                       |
+| [A LED]()                                                       | turns on when starting | [0 RON-I borrowed it]                                                                                                                                                                                                                                                       |
+| [A resistor]()                                                            | current-limiting resistor| [0 RON-I borrowed it]                                                                                                                                                                                                                                                        |
+| [65 x Fire Jumper](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=fir&results=286)           | connection           | [11,86  RON] |
+| [40 x Dupont Yarn Mother-Father 10cm](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=fir&results=286)                     | connection           | [5,18  RON]|
 
 ## Software
 
@@ -108,4 +111,4 @@ More to come as we are developing our project!
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [from last year projects](https://ocw.cs.pub.ro/courses/pm/prj2023/apredescu/gameofsnake)
+1. From last year projects: [project](https://ocw.cs.pub.ro/courses/pm/prj2023/apredescu/gameofsnake)
