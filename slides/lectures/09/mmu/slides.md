@@ -51,21 +51,80 @@ the **page table** is located in the **physical memory**
 <img src="/mmu/paging.svg" class="w-170">
 
 ---
+layout: two-cols
 ---
 # Address Translation
 page to frame
+
+the logic address is divided in two parts:
+- *page index*
+- *offset* withing the page
+
+the MMU translates every logic address into a physical address using a *page table*
+
+<style>
+.two-columns {
+    grid-template-columns: 2fr 6fr;
+}
+</style>
+
+:: right ::
 
 <div align="center">
     <img src="/mmu/page_translation.svg" class="w-170">
 </div>
 
 ---
+layout: two-cols
 ---
-# Translation Lookaside Buffer
+# Translation Lookaside Buffer (TLB)
 caching address translation
 
+<style>
+.two-columns {
+    grid-template-columns: 2fr 6fr;
+}
+</style>
+
+the **page table** is **stored in RAM**
+
+each memory access **requires 2 accesses**
+1. read the page table entry to translate the address
+2. the requested access
+
+:: right ::
+
 <div align="center">
-    <img src="/mmu/tlb.svg" class="w-170">
+    <img src="/mmu/tlb.svg" class="w-170 rounded">
+</div>
+
+---
+layout: two-cols
+---
+# Page Directory
+caching address translation
+
+<style>
+.two-columns {
+    grid-template-columns: 2fr 6fr;
+}
+</style>
+
+$$ size_{table} = \frac{size_{ram}}{size_{page}}  $$
+
+- each table entry is 4B
+- the address space is 4GB (for 32 bits processors)
+
+$$ size_{table\_32\_bits} = \frac{2^{32}}{4 \times 2^{10}}  $$
+
+$$ size_{table\_32\_bits} = 4 MB $$
+
+RAM was counted in MB when paging started being used
+
+:: right ::
+
+<div align="center">
+    <img src="/mmu/page_directory.svg" class="w-170">
 </div>
 
 ---

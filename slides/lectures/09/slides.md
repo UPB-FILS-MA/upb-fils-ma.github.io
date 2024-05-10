@@ -55,7 +55,6 @@ Integrated in embedded systems for certain tasks
 - controls hardware
 - does not require an Operating System
 - costs $0.1 - $25
-- annual demand is billions
 - uses **Memory Protection Unit**
 
 <img src="/pico.jpg" class="m-5 h-30 rounded">
@@ -70,10 +69,9 @@ General purpose, for PC & workstations
 - limited number of I/O ports
 - usually requires an Operating System
 - costs $75 - $500
-- annual demand is tens of millions
 - uses **Memory Management Unit**
 
-<img src="/pi5.jpg" class="h-50 rounded">
+<img src="/pi5.jpg" class="m-5 h-50 rounded">
 
 ---
 ---
