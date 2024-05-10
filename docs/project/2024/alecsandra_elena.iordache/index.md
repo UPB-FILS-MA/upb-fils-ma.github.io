@@ -18,16 +18,16 @@ Think about it – every drop counts, right? By setting up this cool project, we
 
 ## Architecture 
 ![A prototype of architecture](architecture.png)
-•	Raspberry Pi Pico
-•	MG996 Servo Motor
+a.   Raspberry Pi Pico
+b.   MG996 Servo Motor
 -	The servo motor is responsible for actuating the water release mechanism. It receives instructions from the Raspberry Pi Pico to rotate and control the flow of water from the bottle
-•	Bottle of water
+c.	Bottle of water
 -	The water bottle acts as the reservoir for supplying water to the plants. It is connected to the servo motor, and its controlled release ensures precise watering based on humidity levels.
-•	The module with soil moisture sensor
+d.	The module with soil moisture sensor
 -	The sensor module measures the moisture content of the soil. It provides data to the Raspberry Pi Pico, allowing it to determine when watering is required based on preset thresholds.
-•	LED
+e.	LED
 -	The LED serves as an indicator that the system is watering the plant
-•	Power Supply
+f.	Power Supply
 
 
 ## Log
