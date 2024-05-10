@@ -5,6 +5,14 @@ layout: section
 ARM: MPU, RISC-V: PMP
 
 ---
+---
+# Bibliography
+for this section
+
+**Joseph Yiu**, *The Definitive Guide to ARM® Cortex®-M0 and Cortex-M0+ Processors, 2nd Edition* 
+   - Chapter 12 - *Memory Protection Unit*
+
+---
 layout: two-cols
 ---
 # Memory Protection

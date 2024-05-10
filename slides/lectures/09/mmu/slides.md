@@ -5,6 +5,19 @@ layout: section
 MMU
 
 ---
+---
+# Bibliography
+for this section
+
+1. **Andrew Tanenbaum**, *Modern Operating Systems (4th edition)*
+   - Chapter 3 - *Memory Management*
+     - Subchapter 3.3 - *Virtual Memory*
+
+2. **Philipp Oppermann**, [*Writing an OS in Rust*](https://os.phil-opp.com)
+   - [*Introduction to Paging*](https://os.phil-opp.com/paging-introduction/) 
+   - [*Paging Implementation*](https://os.phil-opp.com/paging-implementation/)
+
+---
 layout: two-cols
 ---
 # Memory Management
@@ -101,6 +114,7 @@ each memory access **requires 2 accesses**
 ---
 layout: two-cols
 ---
+
 # Page Directory
 caching address translation
 
@@ -126,6 +140,11 @@ RAM was counted in MB when paging started being used
 <div align="center">
     <img src="/mmu/page_directory.svg" class="w-170">
 </div>
+
+<div align="center">
+two levels, page directory and table, usually used for 32 bits systems
+</div>
+
 
 ---
 ---
