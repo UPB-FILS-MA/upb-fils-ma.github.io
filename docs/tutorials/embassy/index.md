@@ -213,7 +213,7 @@ components = ["rust-src", "rustfmt", "llvm-tools", "clippy"]
 
 :::tip
 
-Please make sure that you install the Rust ARMv6M target (thumbv6m-none-eabi).
+Please make sure that you install the Rust ARMv6-M target (thumbv6m-none-eabi).
 
 ```bash
 rustup target add thumbv6m-none-eabi
