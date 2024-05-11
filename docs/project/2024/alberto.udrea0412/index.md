@@ -27,6 +27,8 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 ### Week 6 - 12 May
 
+[Added the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
+
 ### Week 7 - 19 May
 
 ### Week 20 - 26 May
