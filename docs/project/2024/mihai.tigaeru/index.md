@@ -45,8 +45,7 @@ TBD
 
 ### Schematics
 
-TBD
-
+![kicadschematic](KicadSCH.svg)
 ### Bill of Materials
 
 | Device | Usage | Price |
