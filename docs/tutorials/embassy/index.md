@@ -211,6 +211,16 @@ targets = ["thumbv6m-none-eabi"]
 components = ["rust-src", "rustfmt", "llvm-tools", "clippy"]
 ```
 
+:::tip
+
+Please make sure that you install the Rust ARMv6-M target (thumbv6m-none-eabi).
+
+```bash
+rustup target add thumbv6m-none-eabi
+```
+
+:::
+
 #### Memory layout
 
 We also need to take care of the memory layout of our program when writing code for a microcontroller. These can be found in the datasheet of all the microcontrollers. Bellow, you can find the memory layout for the **RP2040**:
