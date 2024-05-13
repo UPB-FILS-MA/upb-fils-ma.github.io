@@ -1,5 +1,5 @@
 # Snake game project 
-The game 'Snake,' displayed on an 8×8 LED Matrix module 
+The game 'Snake', displayed on an 8×8 LED Matrix module 
 :::info
 
 **Author**: Alkhatib Hoda \
