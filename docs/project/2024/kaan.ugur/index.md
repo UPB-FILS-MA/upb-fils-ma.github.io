@@ -81,7 +81,15 @@ Project will look more or less like the following diagram:
 
 ### Week 6 - 12 May
 
+- I already had the all components and I tried to learn something more about Rust fundamentals.
+- I kept getting errors and I tried to solve them sometimes it took even hours, with debuging them I actually learned the logic behind it.
+- I tried to solve more things and if it was possible added more things for hardware and software parts.
+
 ### Week 7 - 19 May
+
+- I improved the hardware part and made the connections more understandable.
+- I worked on prototype to show main idea I tried to make it somehow with using even chopsticks and incenses.
+- At the same time still did not make all the components work and I am still working on the codes.
 
 ### Week 20 - 26 May
 
