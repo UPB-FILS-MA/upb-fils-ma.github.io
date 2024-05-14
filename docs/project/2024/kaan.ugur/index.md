@@ -111,9 +111,9 @@ Project will look more or less like the following diagram:
   
   ![Picture of Hardware](hardware.jpg)
 
-  From side                              | From top
+  From front                             | From top
   :--------------------------------------|--------------------------------------:
-  <img src="hardware_side.jpg" width="500" height="500"> | <img src="hardware_top.jpg" width="500" height="500">
+  <img src="hardware_front.jpg" width="500" height="500"> | <img src="hardware_top.jpg" width="500" height="500">
 
   **Additional Pictures of the prototype**
 
