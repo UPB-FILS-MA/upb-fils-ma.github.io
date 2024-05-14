@@ -121,7 +121,7 @@ Project will look more or less like the following diagram:
 
   From side                                             | From front
   :-----------------------------------------------------|-----------------------------------------------------:
-<img src="prototype_side.jpg" width="500" height="400"> | <img src="prototype_front.jpg" width="500" height="500">
+<img src="prototype_side.jpg" width="500" height="500"> | <img src="prototype_front.jpg" width="500" height="500">
   
 
   
