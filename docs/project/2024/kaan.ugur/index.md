@@ -105,6 +105,29 @@ Project will look more or less like the following diagram:
   
   **8-A Hat:** A prototype hat to make the project portable.
 
+  **Additional Pictures of Project.**
+  
+  Pictures of the hardware.
+  
+  ![Picture of Hardware](hardware.jpg)
+
+  From side                              |             From top
+  :--------------------------------------|--------------------------------------:
+  ![Hardware from top](hardware_top.jpg) | ![Hardware from side](hardware_side.jpg)
+
+  **Additional Pictures of the prototype**
+
+  This is just a unprofessionally prototype to show the **main idea.** I am still working on it.
+
+  From side                                             |                    From front
+  :-----------------------------------------------------|-----------------------------------------------------:
+<img src="prototype_side.jpg" width="100" height="100"> | <img src="prototype_front.jpg" width="100" height="100">
+  
+
+  
+
+  
+
 ### Schematics
 
 Schematic of the project on KiCad Application.
