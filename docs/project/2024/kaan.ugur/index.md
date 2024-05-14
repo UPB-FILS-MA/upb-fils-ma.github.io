@@ -109,7 +109,7 @@ Project will look more or less like the following diagram:
   
   Pictures of the hardware.
   
-  ![Picture of Hardware](hardware.jpg)
+  ![Picture of Hardware](hardware1.png)
 
   From front                             | From top
   :--------------------------------------|--------------------------------------:
