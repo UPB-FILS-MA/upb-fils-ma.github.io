@@ -113,7 +113,7 @@ Project will look more or less like the following diagram:
 
   From side                              | From top
   :--------------------------------------|--------------------------------------:
-  <img src="hardware_top.jpg" width="500" height="500"> | <img src="hardware_top.jpg" width="500" height="500">
+  <img src="hardware_side.jpg" width="500" height="500"> | <img src="hardware_top.jpg" width="500" height="500">
 
   **Additional Pictures of the prototype**
 
