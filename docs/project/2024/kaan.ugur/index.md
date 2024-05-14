@@ -113,7 +113,7 @@ Project will look more or less like the following diagram:
 
   From side                              | From top
   :--------------------------------------|--------------------------------------:
-  ![Hardware from top](hardware_top.jpg) | ![Hardware from side](hardware_side.jpg)
+  <img src="hardware_top.jpg" width="500" height="500"> | <img src="hardware_top.jpg" width="500" height="500">
 
   **Additional Pictures of the prototype**
 
