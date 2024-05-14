@@ -107,7 +107,9 @@ Project will look more or less like the following diagram:
 
 ### Schematics
 
-Place your KiCAD schematics here.
+Schematic of the project on KiCad Application.
+
+![Schematic of the project with using KiCad](schema_hardware.png)
 
 ### Bill of Materials
 
