@@ -111,7 +111,7 @@ Project will look more or less like the following diagram:
   
   ![Picture of Hardware](hardware.jpg)
 
-  From side                              |             From top
+  From side                              | From top
   :--------------------------------------|--------------------------------------:
   ![Hardware from top](hardware_top.jpg) | ![Hardware from side](hardware_side.jpg)
 
@@ -119,9 +119,9 @@ Project will look more or less like the following diagram:
 
   This is just a unprofessionally prototype to show the **main idea.** I am still working on it.
 
-  From side                                             |                    From front
+  From side                                             | From front
   :-----------------------------------------------------|-----------------------------------------------------:
-<img src="prototype_side.jpg" width="400" height="400"> | <img src="prototype_front.jpg" width="400" height="400">
+<img src="prototype_side.jpg" width="500" height="400"> | <img src="prototype_front.jpg" width="500" height="500">
   
 
   
