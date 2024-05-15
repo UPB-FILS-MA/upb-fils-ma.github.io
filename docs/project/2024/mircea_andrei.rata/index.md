@@ -1,11 +1,7 @@
 # SmartGuard: Raspberry Pi Pico W Burglar Alarm System
 
  Raspberry Pi Pico W-powered Smart Burglar Alarm System with Multi-Sensor Detection.
-=======
-# Burglar alarm with notification via email
-
- A smart burglar alarm system, equipped with motion detection, email alerts and keypad for security.
-
+ 
 :::info 
 
 **Author**: RATA MIRCEA-ANDREI \
@@ -57,8 +53,6 @@ The motivation behind this project stems from a desire to enhance home and prope
 ## Hardware
 
 The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion detection, an LED for visual alerts, a buzzer for audio alerts, an LCD screen for display, and a keypad for user input and password authentication.
-
-<<<<<<< HEAD
 - **Raspberry Pi Pico W** is the microcontroller,the brain of this project.
 - **Passive Infrared (PIR) sensor**  is used to detect movement.
 - **LED** is used to provide visual alerts when motion is detected.
