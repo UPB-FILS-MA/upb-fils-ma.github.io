@@ -47,7 +47,6 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 ### 26.04-3.05
     I already learned how it should work, and I am still at the hardware part, at all the connection and everything. I try to make them work
-<<<<<<< HEAD
     
 ### 6.05-10.05
     I manage to do all the hardware part and finished soldering all the parts.
@@ -103,7 +102,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-<<<<<<< HEAD
 |[embassy-rp](https://crates.io/crates/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
 |[PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-Width Modulation|Used to make buzzer sound louder|
 | [embassy-executor](https://crates.io/crates/embassy-executor) | Executor for Rust Embedded Systems | An async/await executor designed for embedded usage|
