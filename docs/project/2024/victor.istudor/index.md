@@ -4,7 +4,7 @@ A robot that follows a black line on a white background.
 :::info
 
 **Author**: Istudor Victor Mihai \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: https://github.com/istudormihai/project-ma-rust
 
 :::
 
@@ -53,8 +53,7 @@ The final product!
 
 ### Schematics
 
-Place your KiCAD schematics here.
-(coming soon)
+![Schematic](./kicad_schematic.png)
 
 ### Bill of Materials
 
@@ -84,11 +83,16 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [embassy](https://github.com/embassy-rs/embassy) | Framework | Used for building embedded applications in Rust |
+| [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | General-purpose Input/Output (GPIO) module | Used to control GPIO pins |
 | [infrared](https://docs.rs/infrared/latest/infrared/) | Infrared sensor library | Used for the sensors that will track the line |
+| [syact](https://docs.rs/syact/latest/syact/) | Motor control library | Used for controlling the DC motors |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [How IR sensors work.](https://robu.in/ir-sensor-working/)
-2. [How the L298N motor driver works.](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/)
+1. [Principle Operation of a Line Follower Robot.](https://www.opastpublishers.com/open-access-articles/principle-operation-of-a-line-follower-robot.pdf)
+2. [How IR sensors work.](https://robu.in/ir-sensor-working/)
+3. [How the L298N motor driver works.](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/)
+4. [IR Sensor Module Circuit.](https://www.instructables.com/DIY-IR-Module/)
