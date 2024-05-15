@@ -1,6 +1,10 @@
 # SmartGuard: Raspberry Pi Pico W Burglar Alarm System
 
  Raspberry Pi Pico W-powered Smart Burglar Alarm System with Multi-Sensor Detection.
+=======
+# Burglar alarm with notification via email
+
+ A smart burglar alarm system, equipped with motion detection, email alerts and keypad for security.
 
 :::info 
 
@@ -43,6 +47,7 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 ### 26.04-3.05
     I already learned how it should work, and I am still at the hardware part, at all the connection and everything. I try to make them work
+<<<<<<< HEAD
     
 ### 6.05-10.05
     I manage to do all the hardware part and finished soldering all the parts.
@@ -54,6 +59,7 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion detection, an LED for visual alerts, a buzzer for audio alerts, an LCD screen for display, and a keypad for user input and password authentication.
 
+<<<<<<< HEAD
 - **Raspberry Pi Pico W** is the microcontroller,the brain of this project.
 - **Passive Infrared (PIR) sensor**  is used to detect movement.
 - **LED** is used to provide visual alerts when motion is detected.
@@ -97,13 +103,13 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+<<<<<<< HEAD
 |[embassy-rp](https://crates.io/crates/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
 |[PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-Width Modulation|Used to make buzzer sound louder|
 | [embassy-executor](https://crates.io/crates/embassy-executor) | Executor for Rust Embedded Systems | An async/await executor designed for embedded usage|
 | [GPIO](https://crates.io/crates/gpio) | GPIO  | Used for interacting with GPIO Pins of the Pi Pico |
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |
-...
 
 ## Links
 
