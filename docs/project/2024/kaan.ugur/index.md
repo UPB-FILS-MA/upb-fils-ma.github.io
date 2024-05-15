@@ -148,9 +148,7 @@ Schematic of the project on KiCad Application.
 
 ![Schematic of the project with using KiCad](schema_hardware.png)
 
-### Schematics
 
-Place your KiCAD schematics here.
 
 
 ### Bill of Materials
