@@ -1,7 +1,6 @@
 # Project Name
 
 Smart Door Lock System 
-
 Author: Nistorescu Maria-Lorena
 GitHub Project Link*: (https://github.com/LolitaMary/SmartDoorLockSystem)
 
