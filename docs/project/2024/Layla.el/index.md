@@ -87,7 +87,8 @@ I assembled all components, secured them in their designated positions within th
 - *Red leds*: used to indicate occupied parking spots.
 -*Orange led*: used to indicate the presence of authorised car
 
-  
+![This is what the wiring looks like](Initial_hardware_pic.jpg)
+
 ### Schematics
 ![Kicad schematic ](Kicad.png)
 This is the kicad schematic.
