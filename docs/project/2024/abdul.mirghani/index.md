@@ -87,7 +87,7 @@ The hardware used includes:
 Detail in a few words the hardware used.
 
 ### Schematics
-![Kicad schematic](Kicad.png)
+![Kicad schematic](Kicad_picture.jpg)
 
 ### Bill of Materials
 
