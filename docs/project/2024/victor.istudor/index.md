@@ -51,6 +51,12 @@ The final product!
 
 ![Robot](./robot.jpg)
 
+I added some stickers.
+
+![Stickers1](./robot_stickers1.jpg)
+
+![Stickers2](./robot_stickers2.jpg)
+
 ### Schematics
 
 ![Schematic](./kicad_schematic.png)
