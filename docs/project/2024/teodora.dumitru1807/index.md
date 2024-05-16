@@ -15,6 +15,8 @@ A robot car that can be controlled through a website accessed from the mobile ph
 
 Welcome to the documentation for a Wi-Fi robot car, powered by the Pico W microcontroller and programmed using the Rust programming language. This comprehensive guide will present, at the final deadline, the assembly, setup, and programming of a Wi-Fi-enabled robot car. In this project, I aim to build a Wi-Fi robot car. The robot car will be capable of wireless communication over a Wi-Fi network, enabling remote control and autonomous operation. This project, if everything works at the end, can be stilized with specific components(like a proper car kit) for a more stylished look.
 
+I am going to create a website using html, css and phython. The web page will have a controller for direction which is going to action the car by using the microcontroller and respecting the pins used to connect the pico_w to the driver. The pico is going to be connected to my wifi using the knowledge from the last lab. Also i hope that i succeed to control the speed by using a slider . 
+
 ## Motivation
 
 When I was little, besides dolls and legos , i liked remote controlled cars or even helicopters so this is more like an ambition for me.
@@ -23,7 +25,18 @@ When I was little, besides dolls and legos , i liked remote controlled cars or e
 
 This is my block diagram:
 
-[block diagram](image.png)
+UPDATE:
+
+![BLOCK DIAGRAM](<BLOCK DIAGRAM.png>)
+
+I will attach here photos of my project, i intend to style it more before the final presentation.
+
+![Below](Below.jpg)
+![Above](Above_car.jpg)
+![Circ](Circ1.jpg)
+![Driver](Driver.jpg)
+![Driver](Driver1.jpg)
+![Buzzer](BUZZER.jpg)
 
 I am going to connect the 2 motors to the 2 big wheels.
 The motor driver module is going to be connected to the pico_w microcontroller and the module is going to be powered by the 2 batteries.
@@ -51,6 +64,8 @@ I have connected the motors as said above, glued the battery holder and the buzz
 I finished the kicad scheme, PCB without errors and screenshot the 3D viewer.
 
 I have done all the connections from driver to pico. 
+
+I studied the ways of conntrolling the motors and their logical inputs.
 
 In conclusion: I have added a on/off switch to preserve the life of the batteries.
 
@@ -104,6 +119,10 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 
 [block diagram](image.png)
 
+UPDATE:
+
+![BLOCK DIAGRAM](<BLOCK DIAGRAM.png>)
+
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
@@ -119,7 +138,7 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| 2 wheels,1 small wheel, 2 motors, platform  | The kit | 15 RON |
+| 2 wheels,1 small wheel, 2 motors, platform  | The kit ; is second hand i dont have a link | 15 RON |
 | Battery Charger for 2 | To recharge the used batteries | [24,99 RON](https://www.optimusdigital.ro/ro/incarcatoare-de-baterii/11021-incarcator-1865026650-dublu-cu-cablu-usb-pentru-baterii-cu-litiu-ion.html) |
 | 4 x Batteries | The power source of the whole project | [68 RON](https://www.dedeman.ro/ro/acumulator-li-ion-well-18650-3-7v-2200-mah/p/1050265) |
 | Battery holder for 2 | ensure reliable power supply | [4.99 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/941-suport-de-baterii-2-x-18650.html) 
@@ -135,7 +154,7 @@ The format is
 | [L298N](https://docs.rs/l298n/latest/l298n/struct.L298N.html) | Motor driver implementation | Used for speed and direction control |
 | [PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM | Used to control the intensity of the sound of the buzzer |
 | [Embassy](https://github.com/embassy-rs/embassy) | Embassy | Modern embedded framework, using Rust and async |
-
+| [cyw43](https://docs.embassy.dev/cyw43/git/default/index.html)| Rust driver for the CYW43439 wifi chip | Used for the connection to an existing network and create a server |
 
 
 ## Links
