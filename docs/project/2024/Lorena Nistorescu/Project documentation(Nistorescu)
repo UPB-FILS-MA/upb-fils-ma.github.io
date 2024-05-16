@@ -31,22 +31,33 @@ So I wanted to implement it and, maybe use it every day life.
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+In this week, I tried to find more resources regarding to the mobile application I intend to make in order to unlock the door.
 
 ### Week 7 - 19 May
+In this week, I finally finished the hardware part, including the kicad schematics.
 
 ### Week 20 - 26 May
 
+
 ## Hardware
 
--Rapspberry Pi Pico W (micronctroller)
--RFID MODULE (for unlocking the door)
--TTPP223
--2N2222
--BUZZER 5V
--RELAY MODULE
--ELECTRONIC DOOR LOCK
--Power Supply 12V
--Module DC-DC Step Down LM2596S ( connected to power suplly)
+- **Raspberry Pi Pico W (microcontroller):** The main control unit for the smart door lock system, responsible for processing data, running the necessary functions, and communicating with other components.
+  
+- **RFID MODULE (for unlocking the door):** Reads RFID tags/cards to allow authorized access through the smart door lock system.
+  
+- **TTP223:** Capacitive touch sensor used for touch-based inputs, such as entering a code to unlock the door.
+  
+- **2N2222:** NPN transistor that may be used for switching purposes in the circuit, such as controlling the relay module or other components.
+  
+- **BUZZER 5V:** Emits an audible alert, like a beep or chime, to provide feedback when the door is unlocked or in case of an error.
+  
+- **RELAY MODULE:** Controls the electronic door lock mechanism, allowing the microcontroller to trigger the locking or unlocking of the door.
+  
+- **ELECTRONIC DOOR LOCK:** The physical locking mechanism that secures the door, controlled by the relay module based on input from the microcontroller.
+  
+- **Power Supply 12V:** Supplies the necessary power to the components in the system, ensuring they function properly.
+  
+- **Module DC-DC Step Down LM2596S  (connected to power supply):** Regulates the 12V power supply to provide lower voltage levels required by certain components in the system, such as the Raspberry Pi Pico W.
 
 
 ### Schematics
@@ -80,7 +91,8 @@ The format is
 | [Breadboard HQ (830 Puncte)](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard+HQ+%28830+Puncte%29&results=12)|  [ 9.98 RON ] |
 | [Cablaj de test 50 x 70 mm](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=Cablaj+de+test+50+x+70+mm&submit_search=) | [ 2,49 RON  ]|
 | [Button with one touch, TTP223, with pins, 3 V, MulticoloR](https://www.emag.ro/buton-cu-o-singura-atingere-ttp223-cu-pini-3-v-multicolor-ttp223-mod-1ch/pd/DC6798MBM/)| IT IS USED FOR UNLOCKING THE DOOR| [18,33 RON] shipping more expensive than the component |
-
+| [Module DC-DC Step Down LM2596S]|[13 RON]
+| [Power Supply]|[16RON]
 
 
 ## Software
