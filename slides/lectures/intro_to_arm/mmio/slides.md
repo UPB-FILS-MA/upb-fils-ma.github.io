@@ -108,8 +108,8 @@ const CPUID: usize = 0xed00;
 
 let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
 unsafe {
-	// avoid compiler optimizations
-    read_volatile(cpuid_reg)
+	// avoid compiler optimization
+    read_volatile(cpuid_reg) 
 }
 ```
 
@@ -121,6 +121,7 @@ unsafe {
 ::right::
 
 ![SysCtrl Registers](/mmio/sysctrl_registers.png)
+
 
 ---
 ---
@@ -142,44 +143,6 @@ with cache
   - *nocache* regions have to be set manually (if MCU knows)
   - or, the cache has to be flushed before a `volatile_read` and after a `volatile_write`
   - beware DMA controllers that can't see the cache contents
-
----
-layout: two-cols
----
-
-# Read the CPUID
-About the MCU
-
-```rust{all|1|3-4|6|7-9|11,12|14,15|17,18|20,21}
-use core::ptr::read_volatile;
-
-const SYS_CTRL: usize = 0xe000_0000;
-const CPUID: usize = 0xed00;
-
-let cpuid_reg = (SYS_CTRL + CPUID) as *const u32;
-let cpuid_value = unsafe {
-    read_volatile(cpuid_reg)
-};
-
-// shift right 24 bits and keep only the last 8 bits
-let variant = (cpuid_value >> 24) & 0b1111_1111;
-
-// shift right 16 bits and keep only the last 4 bits
-let architecture = (cpuid_value >> 16) & 0b1111;
-
-// shift right 4 bits and keep only the last 12 bits
-let part_no = (cpuid_value >> 4) & 0b11_1111_1111;
-
-// shift right 0 bits and keep only the last 4 bits
-let revision = (cpuid_value >> 0) & 0b1111;
-```
-
-::right::
-
-## CPUID Register
-Offset: 0xed04
-
-![CPUID Register](/mmio/cpuid_register.png)
 
 
 ---
