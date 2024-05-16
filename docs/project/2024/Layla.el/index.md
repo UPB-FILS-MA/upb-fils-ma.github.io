@@ -87,9 +87,15 @@ I assembled all components, secured them in their designated positions within th
 - *Red leds*: used to indicate occupied parking spots.
 -*Orange led*: used to indicate the presence of authorised car
 
-![This is what the wiring looks like](Initial_hardware_pic.jpg)
+This is what the wiring looks like:
+![This is what the wiring looks like](Initial_hardware.jpg)
+
+This picture shows what the wires look like inside the cardboard behind the "wall" i will be adding:
 ![This picture shows what the wires look like inside the cardboard behind the "wall" i will be adding](Hardware_inprogress.jpg)
+
+This is the final product as of yet:
 ![This is the final product as of yet](Hardware_product.jpg)
+
 
 ### Schematics
 ![Kicad schematic ](Kicad.png)
