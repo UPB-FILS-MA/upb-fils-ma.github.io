@@ -44,7 +44,9 @@ So I wanted to implement it and, maybe use it every day life.
 -2N2222
 -BUZZER 5V
 -RELAY MODULE
--ELECTRIC DOOR LOCK
+-ELECTRONIC DOOR LOCK
+_ Power Supply 12V
+_ Module DC-DC Step Down LM2596S ( connected to power suplly)
 
 
 ### Schematics
