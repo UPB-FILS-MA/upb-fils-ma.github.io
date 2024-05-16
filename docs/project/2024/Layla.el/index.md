@@ -1,5 +1,5 @@
 # Automated Parking System 
-Enhanced Security and Efficiency
+A parking system utilizing infrared sensors, RFID, and Raspberry Pi Pico W for enhanced security and efficiency.
 
 
 :::info 
