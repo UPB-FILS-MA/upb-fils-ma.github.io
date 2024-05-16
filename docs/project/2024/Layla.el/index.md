@@ -70,8 +70,10 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I prepared the cardboard, created all necessary cutouts, and applied the appropriate coloring. I then began developing and testing code for each component individually to ensure they function as desired, and selected the appropriate GPIO pins.
 
 ### Week 7 - 19 May
+I assembled all components, secured them in their designated positions within the cardboard structure, and wrote the integrated code for the project.
 
 ### Week 20 - 26 May
 
@@ -83,12 +85,12 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 - *Rfid module*: I used it to differ between authorised and unauthorised cars. Authorised have a recognised card attached to it, the unauthorised ones will have a different card attached.
 - *Green leds*: used to indicate free parking spots.
 - *Red leds*: used to indicate occupied parking spots.
+-*Orange led*: used to indicate the presence of authorised car
 
+  
 ### Schematics
-![Kicad schematic where the pins are connected directly to pico  but the ground and vcc are not](kicad1.png)
-![Kicad schematic where everything is connected to the raspberry pico](Kicad2.png)
-In kicad1, for simplicity I put ground and vcc, not connecting them directly. 
-In kicad2, everything is connected properly. 
+![Kicad schematic ](Kicad.png)
+This is the kicad schematic.
 
 ### Bill of Materials
 | Device | Usage | Price |
