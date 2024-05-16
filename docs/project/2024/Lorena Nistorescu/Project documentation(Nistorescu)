@@ -102,6 +102,8 @@ The format is
 
 |[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
+
+
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
