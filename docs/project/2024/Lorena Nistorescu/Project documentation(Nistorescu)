@@ -1,4 +1,5 @@
 # Smart Door Lock System
+Smart door lock: Keyless security for your space.
 
 Author: Nistorescu Maria-Lorena
 GitHub Project Link*: (https://github.com/LolitaMary/SmartDoorLockSystem)
@@ -44,8 +45,8 @@ So I wanted to implement it and, maybe use it every day life.
 -BUZZER 5V
 -RELAY MODULE
 -ELECTRONIC DOOR LOCK
-_ Power Supply 12V
-_ Module DC-DC Step Down LM2596S ( connected to power suplly)
+-Power Supply 12V
+-Module DC-DC Step Down LM2596S ( connected to power suplly)
 
 
 ### Schematics
