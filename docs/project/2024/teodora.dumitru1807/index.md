@@ -30,6 +30,11 @@ The motor driver module is going to be connected to the pico_w microcontroller a
 In addition, i intend to add a buzzer to the whole robot to copy the sound of a honk.
 All of the components will be attached to the skeleton which is a piece of wood with round corners with space for the wheels the hard components and equipped with an on/off button if desired.
 
+Update: I have connected the motors in this way : 
+
+M1 OUT1 and OUT2; 
+M2 OUT3 and OUT4;
+
 
 ## Log
 
@@ -37,7 +42,18 @@ All of the components will be attached to the skeleton which is a piece of wood 
 
 ### Week 6 - 12 May
 
+I have started to work on the car. I made a kicad schematic to visualize everything. I have done some research to find out one of the most important things from the hardware part : the type of voltage pin i should connect the Vcc. I found out that Vsys is the right one for the battery power supply type of circuits. 
+ 
 ### Week 7 - 19 May
+
+I have connected the motors as said above, glued the battery holder and the buzzer to the car and screw the driver module. I have soldered the OUTs for the motors to the driver, the wires to the buzzer and also the minus and plus pins of the on/off SPST switch to the driver and the battery holder as shown in the kicad scheme.
+
+I finished the kicad scheme, PCB without errors and screenshot the 3D viewer.
+
+I have done all the connections from driver to pico. 
+
+In conclusion: I have added a on/off switch to preserve the life of the batteries.
+
 
 ### Week 20 - 26 May
 
@@ -78,7 +94,11 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicadscheme](Kicad-scheme.png)
+![PCB](PCB.png)
+![3D VIEW](PCB1.png)
+![3D VIEW](PCB2.png)
+
 
 ### Block diagram
 
@@ -113,7 +133,10 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [L298N](https://docs.rs/l298n/latest/l298n/struct.L298N.html) | Motor driver implementation | Used for speed and direction control |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM | Used to control the intensity of the sound of the buzzer |
+| [Embassy](https://github.com/embassy-rs/embassy) | Embassy | Modern embedded framework, using Rust and async |
+
+
 
 ## Links
 
