@@ -86,7 +86,6 @@ I assembled the initial rendition of this robot for the purposes of showing a ro
 
 ![Kicad schematics](./SmartBot-Navigator_schematics.jpeg)
 
-Place your KiCAD schematics here.
 
 ### Bill of Materials
 
