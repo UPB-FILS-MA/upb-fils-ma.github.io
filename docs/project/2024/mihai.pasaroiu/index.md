@@ -19,7 +19,7 @@ Building a music player with a Raspberry Pi Pico W using Rust allowed me to work
 
 ## Architecture 
 
-![Block Diagram](Arhitecture.png)
+![Architecture Diagram](arhitecture.png)
 
 ## Log
 
@@ -35,11 +35,9 @@ Make the hardware part and work for the software.
 
 This project utilizes a Raspberry Pi Pico to facilitate digital audio playback from a 32GB microSD card formatted in FAT32, interfaced via SPI protocol. The audio output is delivered through a 1W speaker powered by a PAM8403 Class D Stereo Mini Amplifier, enhanced by an RC filter comprising a 680-ohm resistor and a 10nF capacitor, which filters frequencies above 23.4kHz. Visual augmentation is achieved through four LEDs, controlled by PWM signals that vary in intensity corresponding to the audio output's duty cycle, providing a dynamic representation of sound intensity. User interaction is managed through a 1602 LCD display, operating on the I2C protocol, which displays the current song title. The system also incorporates three push-buttons connected to the microcontroller's GPIO pins to the +3v3, with 10k-ohm pull-up resistors, assigned to play/pause functionality and navigation between tracks. Additionally, a potentiometer is integrated for volume control, offering user-adjustable audio output levels.
 
-![kicad](kicad.png)
-
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad](kicad.png)
 
 ### Bill of Materials
 
@@ -66,6 +64,7 @@ The format is
 | Speaker | Outputs the song | [4.27 RON](https://www.optimusdigital.ro/ro/audio-difuzoare/2147-difuzor-de-1-w.html?search_query=Difuzor+de+1+W&results=100) |
 | Resistors | Limits current flow | [14.99 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html) |
 | MicroSD Card Module | Reads the song from the microSD| [4.39 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html) |
+| Capacitor | Low-pass filter(RC) | [0.39 RON](https://www.optimusdigital.ro/en/capacitors/2749-capacitor-10nf.html) |
 | Capacitor | Low-pass filter(RC) | [0.39 RON](https://www.optimusdigital.ro/en/capacitors/2749-capacitor-10nf.html) |
 
 
