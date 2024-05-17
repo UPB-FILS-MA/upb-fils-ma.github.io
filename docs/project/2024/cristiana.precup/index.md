@@ -43,10 +43,13 @@ User Interface to Controller: The push buttons are wired to GPIO pins on the Pic
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
-
+Assembled hardware components temporarily on a breadboard for testing. \
+I started to test code on each component one by one to be sure that they worked as expected. 
 
 ### Week 7 - 19 May
+Created the KiCad schematic for the project. \
+Final assembled the components on the breadboard. \
+Assembled the box structure, ensuring stability and correct dimensions. 
 
 ### Week 20 - 26 May
 
@@ -63,6 +66,15 @@ Breadboard: Used for assembling the prototype.\
 Wires: Female-to-Male, Female-to-Female, and Male-to-Male for connections.\
 Micro USB Cable: Powers the Raspberry Pi Pico W.\
 Laptop: Displays the radar data graphically.
+
+This is what the wiring looks like:
+| Wiring Overview | Closer look |
+|------------|------------|
+| ![Hardware 1](./Hardware1.jpg) | ![Hardware 2](./Hardware2.jpg) |
+
+This is the final product as of yet:
+
+![Hardware3](./Hardware3.jpg)
 
 ### Schematics
 
