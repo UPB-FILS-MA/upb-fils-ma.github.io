@@ -21,7 +21,7 @@ My passion for music and technology inspired me to want to create the RustPlayer
 
 ## Architecture 
 
-### Schematic Diagram**
+### Schematic Diagram
 
 A schematic diagram is provided to illustrate the connections and layout of the components. 
 
@@ -85,11 +85,15 @@ The Raspberry Pi Pico W serves as the central microcontroller for the RustPlayer
 
 This is the current progress of the RustPlayer project. So far, the essential components have been assembled. The next step involves making the music player more compact by integrating all components into a custom-designed box with a lid. This enclosure will be created using Tinkercad to ensure a perfect fit.
 
+![](project_picture_1.png)
+
+![](project_picture_2.png)
 
 
 ### Schematics
 
-Place your KiCAD schematics here.
+This schematic, created with KiCad, illustrates the electronic design of the RustPlayer project. It provides a detailed layout of the connections and components, ensuring accurate assembly and functionality.
+
 ![The kicad schematic](Kicad.png)
 
 ### Bill of Materials
