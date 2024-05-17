@@ -45,11 +45,15 @@ What pushed me to choose this project was that, while observing a similar approa
 
 ## Hardware
 
-We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is used for getting the player's 'bet', and a push used to confirm the bet (an RC Filter will be used to ensure no switch bounce happens). The main piece of this project is the barcode scanner, which scans the barcodes from the playing cards and facilitates a way to connect the real-life events to the microcontroller for handling the logic behind the game. An adaptor is needed for it since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
+We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is used for getting the player's 'bet', and a push button used to confirm the bet (an RC Filter will be used to ensure no switch bounce happens).
+
+The main piece of hardware for this project is the barcode scanner, which scans the barcodes from the playing cards and facilitates a way to connect the real-life events to the microcontroller for handling the logic behind the game. It sends the barcodes encoded using the UTF-8 encoding standard.
+
+An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
 
 ### Schematics
-
-![KiCAD Schematic](kicad.PNG)
+[Download Schematic](kiCADProj.kicad_sch)
+![KiCAD Schematic](FINAL_KICAD.PNG)
 
 ### Bill of Materials
 
@@ -75,7 +79,10 @@ The format is
 | Buzzer Module (Passive) | React to game events | [4 RON](https://ardushop.ro/ro/home/89-modul-buzzer.html#/63-tip-pasiv) |
 | Mini Breadboard | Breadboard for the LEDs | [3 x 4 RON](https://ardushop.ro/ro/electronica/35-breadboard-170-puncte.html#/8-culoare-alb) |
 | [1602 LCD Screen with I2C Interface](https://ardushop.ro/ro/index.php?controller=attachment&id_attachment=53) | Display game details | [15 RON](https://www.optimusdigital.ro/en/lcds/62-1602-lcd-with-i2c-interface-and-yellow-green-backlight.html) |
-| Capacitor (1 uF) | Debounce button to avoid unwanted input | [0.25 RON](https://ardushop.ro/ro/home/2708-condensator-electrolitic-alege-valoarea.html?gad_source=1&gclid=CjwKCAjw57exBhAsEiwAaIxaZpg3s-VVKIPilWtcM-0Po90QrGbxYJy50oCzWjlC8kihEiA7bCG7GBoCudMQAvD_BwE) |
+| Capacitor (0.1 uF) | Debounce button to avoid unwanted input | [0.25 RON](https://ardushop.ro/ro/home/2708-condensator-electrolitic-alege-valoarea.html?gad_source=1&gclid=CjwKCAjw57exBhAsEiwAaIxaZpg3s-VVKIPilWtcM-0Po90QrGbxYJy50oCzWjlC8kihEiA7bCG7GBoCudMQAvD_BwE) |
+| Jumper wires | Connect components | [20 RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLPhrybjljA9A3xgsd4vbqVUmO--VsbFIENcQA4Tjibbs8TRelUL_48aAqHuEALw_wcB) |
+| Male-Female Cables | Connect components | [5 RON](https://ardushop.ro/ro/home/226-10-x-fire-dupont-mama-tata-20cm.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLNSME8SlCdnLyn600SAGHKZJEvZYQEyryAc1VL_2S_HwYl7dAun4FYaArNrEALw_wcB) |
+| Female-Female Cables | Connect components | [15 RON](https://www.tme.eu/ro/details/mikroe-511-kpl/accesorii-pentru-kituri-de-dezvoltare/mikroe/wire-jumper-female-to-female-10pcs/?brutto=1&currency=RON&gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLOw0Q8iHwvKr86T1EtKf0cCaMHjvixeEiZcaa4Qs0aYY1qpzcNQTgIaAl5bEALw_wcB) |
 
 
 
