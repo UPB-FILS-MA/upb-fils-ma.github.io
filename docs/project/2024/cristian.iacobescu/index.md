@@ -51,6 +51,64 @@ The main piece of hardware for this project is the barcode scanner, which scans 
 
 An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
 
+
+
+
+Bird's Eye View
+
+![BEV Project](pics/bev.jpg)
+
+
+
+Scanner 
+
+![Scanner](pics/scanner.jpg)
+
+
+
+LCD 
+
+![LCD](pics/lcd.jpg)
+
+
+
+Buzzer
+
+![Buzzer](pics/buzzer.jpg)
+
+
+
+Potentiometer
+
+![Potentiometer](pics/pot.jpg)
+
+
+
+Push Button with physical pull-down resistor
+
+![Push Button](pics/push_pull_down.jpg)
+
+
+
+Resistive Capacitive Filter
+
+![RC](pics/RC.jpg)
+
+
+
+RGB LEDs
+
+![rgb](pics/leds.jpg)
+
+
+
+
+Pico Close-Up
+
+![Pico](pics/pico.jpg)
+
+
+
 ### Schematics
 
 ![KiCAD Schematic](FINAL_KICAD.PNG)
