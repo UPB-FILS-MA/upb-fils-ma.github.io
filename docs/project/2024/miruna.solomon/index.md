@@ -24,14 +24,19 @@ The development of this motion-controlled remote is driven by a desire to revolu
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+- **Documentation**
+- **Arhitecture for the project**
 ### Week 7 - 19 May
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+- **MPU-9250 sensor** is used for recognizing the hand gestures and also to register them
+- **Raspberry Pi Pico W** there are 2 in our project, the main components (microcontrollers), responsible for processing and transmitting input data, one is used for the remote and one for the game screen
+- **LCD_ILI9341** is used to play the game and show hot the pictogram is going move
+- **Breadboard** is used for connecting every pin of the hardware components
+- **Wires** used for connecting the components together
 
 ### Schematics
 ![pacman_game](pacman_game.svg)
