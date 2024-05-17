@@ -109,6 +109,10 @@ Here's the schematic file in KiCad
 ![schematic](project.kicad_sch)
 
 
+
+![hardware_implementation](hardware_implementation.jpg)
+
+
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
