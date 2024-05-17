@@ -104,9 +104,9 @@ Another compromise is the fact that, for reasons of availability, the "Trigger" 
 ### Schematics
 
 ![hardware](hardware.png)
-Here's the schematic file in KiCad
 
-![schematic](project.kicad_sch)
+
+
 
 
 
