@@ -53,10 +53,6 @@ An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communic
 
 ### Schematics
 
-
-[Download Schematic](kiCADProj.kicad_sch)
-
-
 ![KiCAD Schematic](FINAL_KICAD.PNG)
 
 ### Bill of Materials
