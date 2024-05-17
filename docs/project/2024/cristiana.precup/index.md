@@ -25,7 +25,7 @@ Control Unit: The Raspberry Pi Pico W acts as the brain of the system. It contro
 
 Feedback Mechanisms:\
 Visual Feedback: Delivered by the RGB LED, which changes color to indicate different system statuses or alerts.\
-Auditory Feedback: The Passive Buzzer produces sound alerts when movement is detected or under specific conditions.\
+Auditory Feedback: The Passive Buzzer produces sound alerts when movement is detected or under specific conditions.
 
 User Interface: Consists of Tactile Push Button Switches that allow users to manually operate the system.\
 Display Interface: A laptop connected to the Raspberry Pi Pico W via Wi-Fi. It displays the radar data graphically, mimicking naval radar systems, and provides a user-friendly interface for monitoring.
@@ -43,6 +43,8 @@ User Interface to Controller: The push buttons are wired to GPIO pins on the Pic
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+
+
 
 ### Week 7 - 19 May
 
@@ -63,6 +65,11 @@ Micro USB Cable: Powers the Raspberry Pi Pico W.\
 Laptop: Displays the radar data graphically.
 
 ### Schematics
+
+![KiCad Schematics](./KiCad%20Schematics.png)
+
+Connected to the Rasperry Pi Pico W, there is a RGB LED connected to `GPIO 0`, `GPIO 1` and `GPIO 2`, two push buttons connected to `GPIO 3` and `GPIO 4`. The buzzer is connected to `GPIO 5`. The HC-SR04 ultrasonic sensor is connected through `I2C` to the Raspberry Pi Pico using `GPIO 18` as SDA and `GPIO 19` as SCL, and to PIN 36 (`3V3_OUT`) for the power. The Servomotor is connected to `GPIO 16` in order to be used with `PWM`, and connected to PIN 39 (`VSYS`, used to power system, can be in range 1.8V-5.5V).
+
 
 ### Bill of Materials
 
@@ -97,12 +104,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embassy](https://github.com/embassy-rs/embassy) | Async runtime for embedded systems | Manages tasks and system operations |
-| [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
-| [embassy-executor](https://github.com/embassy-rs/embassy) | Task executor | Handles asynchronous tasks and data processing |
-| [embassy-time](https://github.com/embassy-rs/embassy) | Timing module | Provides timing functions for operations |
-| [embassy-net](https://github.com/embassy-rs/embassy) | Networking library | Manages Wi-Fi communications |
-| [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
+| [embassy](https://docs.rs/embassy/latest/embassy/) | Async runtime for embedded systems | Manages tasks and system operations |
+| [embassy-hal](https://docs.rs/embassy-hal/latest/embassy_hal/) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
+| [embassy-executor](https://docs.rs/embassy-executor/latest/embassy_executor/) | Task executor | Handles asynchronous tasks and data processing |
+| [embassy-time](https://docs.rs/embassy-time/latest/embassy_time/) | Timing module | Provides timing functions for operations |
+| [embassy-net](https://docs.rs/embassy-net/latest/embassy_net/) | Networking library | Manages Wi-Fi communications |
+| [embassy-gpio](https://docs.rs/embassy-gpio/latest/embassy_gpio/) | GPIO management | Controls GPIO pins for devices and inputs |
 
 ## Links
 
