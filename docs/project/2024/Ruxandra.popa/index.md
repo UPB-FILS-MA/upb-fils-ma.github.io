@@ -52,10 +52,6 @@ A schematic diagram is provided to illustrate the connections and layout of the 
 
  **Audio Amplifier**
   - **Interface**: I2S
-  - **Connections**:
-    - **BCLK** (Bit Clock Line) to GPIO10 of Raspberry Pi Pico W
-    - **LRCLK** (Left Right Clock Line) to GPIO11 of Raspberry Pi Pico W
-    - **DIN** (Data In Line) to GPIO9 of Raspberry Pi Pico W
   - **Role**: Amplifies the audio signal for output to the speaker.
 
  **Speaker**
@@ -75,13 +71,21 @@ A schematic diagram is provided to illustrate the connections and layout of the 
 
 ### Week 6 - 12 May
 
+The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit.
+
 ### Week 7 - 19 May
+
+A 3D model of the project enclosure has been designed using Tinkercad. The box is tailored to fit all components securely and includes cutouts for the buttons, display, RGB led and speaker.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
 The Raspberry Pi Pico W serves as the central microcontroller for the RustPlayer project. It provides the processing power and interfaces necessary to control various components of the music player. With its dual-core ARM Cortex-M0+ processor and ample GPIO pins, the Pico W can handle tasks such as reading input from buttons, interfacing with the MicroSD card module for storing and accessing MP3 files, driving the OLED display for the user interface, and controlling the audio output via the MAX98357A amplifier.
+
+This is the current progress of the RustPlayer project. So far, the essential components have been assembled. The next step involves making the music player more compact by integrating all components into a custom-designed box with a lid. This enclosure will be created using Tinkercad to ensure a perfect fit.
+
+
 
 ### Schematics
 
