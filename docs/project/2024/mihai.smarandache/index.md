@@ -74,9 +74,9 @@ To provide control, there are two push buttons: one for submitting the code ente
 
 ### Hardware pictures
 
-![Hardware picture](./hardware_picture1.jpg)
+![Hardware picture](hardware_picture1.jpg)
 
-![Hardware picture](./hardware_picture2.jpg)
+![Hardware picture](hardware_picture2.jpg)
 
 ### Bill of Materials
 
