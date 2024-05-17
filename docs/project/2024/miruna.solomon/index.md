@@ -34,7 +34,9 @@ The development of this motion-controlled remote is driven by a desire to revolu
 Detail in a few words the hardware used.
 
 ### Schematics
-![remote_game](remote_game.kicad_sch)
+![pacman_game](pacman_game.svg)
+
+![remote_game](remote_game.svg)
 
 
 ### Bill of Materials
