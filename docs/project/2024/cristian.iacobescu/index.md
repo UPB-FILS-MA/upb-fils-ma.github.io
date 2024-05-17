@@ -52,8 +52,6 @@ The main piece of hardware for this project is the barcode scanner, which scans 
 An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
 
 
-
-
 Bird's Eye View
 
 ![BEV Project](pics/bev.jpg)
