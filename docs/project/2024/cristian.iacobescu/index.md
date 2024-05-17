@@ -52,7 +52,11 @@ The main piece of hardware for this project is the barcode scanner, which scans 
 An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
 
 ### Schematics
+
+
 [Download Schematic](kiCADProj.kicad_sch)
+
+
 ![KiCAD Schematic](FINAL_KICAD.PNG)
 
 ### Bill of Materials
@@ -83,6 +87,7 @@ The format is
 | Jumper wires | Connect components | [20 RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLPhrybjljA9A3xgsd4vbqVUmO--VsbFIENcQA4Tjibbs8TRelUL_48aAqHuEALw_wcB) |
 | Male-Female Cables | Connect components | [5 RON](https://ardushop.ro/ro/home/226-10-x-fire-dupont-mama-tata-20cm.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLNSME8SlCdnLyn600SAGHKZJEvZYQEyryAc1VL_2S_HwYl7dAun4FYaArNrEALw_wcB) |
 | Female-Female Cables | Connect components | [15 RON](https://www.tme.eu/ro/details/mikroe-511-kpl/accesorii-pentru-kituri-de-dezvoltare/mikroe/wire-jumper-female-to-female-10pcs/?brutto=1&currency=RON&gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLOw0Q8iHwvKr86T1EtKf0cCaMHjvixeEiZcaa4Qs0aYY1qpzcNQTgIaAl5bEALw_wcB) |
+| Resistors | Regulates voltage for components | [22 RON](https://www.sigmanortec.ro/kit-rezistori-30-valori-20-bucati?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLN9VAEYdEySVc1yxKakLE6hFED_pJPGWr9zKog2hp0IfI0_-HhANn0aAoP5EALw_wcB) |
 
 
 
