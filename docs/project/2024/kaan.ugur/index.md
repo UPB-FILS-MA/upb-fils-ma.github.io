@@ -94,7 +94,10 @@ Project will look more or less like the following diagram:
 
 
 ### Week 7 - 19 May
-
+- Until now I kept working on hardware more to find better idea.
+- I still had some problems with software part but I solved and project is apparently fully functional.
+- I improved the prototype and I made the last - touches the project's hardware part is also done.
+- I will detail the parts with using some pictures.
 
 ### Week 20 - 26 May
 
@@ -136,6 +139,21 @@ Project will look more or less like the following diagram:
   Prototype from side                                             | Prototype from front
   :-----------------------------------------------------|-----------------------------------------------------:
 <img src="prototype_side.jpg" width="500" height="500"> | <img src="prototype_front.jpg" width="500" height="500">
+
+**After submitting the prototype to show the main idea, I worked on the project more and I have the final looking under below!**
+
+*Picture of the project before building.*
+I decided to use a battery for my project ( More spesifically for the Motor Driver ) instead of using a baterry I decided to use Arduino. ( Only 5V and GND Pins are used!)
+![Before Building](before-building.jpg)
+
+*Picture of the project from front*
+![Front Picture](final_front.jpg)
+
+*Picture of the project from side*
+![Side Picture](final-side.jpg)
+
+*Picture of the project from back*
+![Back Picture](final_back.jpg)
   
 
   
@@ -205,4 +223,5 @@ The format is
 4. [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
 5. [Embassy Documents](https://embassy.dev/book/dev/index.html)
 6. [Rust For Embedded Wyliodrin](https://embedded-rust-101.wyliodrin.com)
+7. [How to use Motor Driver](https://www.youtube.com/watch?v=W_Wm28nQAYA&t=425s)
 ...
