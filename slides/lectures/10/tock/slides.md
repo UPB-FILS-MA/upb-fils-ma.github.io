@@ -6,6 +6,14 @@ An embedded operating system designed for running multiple concurrent, mutually 
 
 ---
 ---
+# Bibliography
+for this section
+
+**Alexandru Radovici, Ioana Culic**, *Getting Started with Secure Embedded Systems*
+   - Chapter 3 - *The Tock system architecture*
+
+---
+---
 # Tock OS
 an embedded operating systems that works like a desktop or server one
 

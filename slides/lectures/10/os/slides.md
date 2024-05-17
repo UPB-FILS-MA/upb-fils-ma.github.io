@@ -5,6 +5,18 @@ layout: section
 the purpose of and OS
 
 ---
+---
+# Bibliography
+for this section
+
+**Andrew Tanenbaum**, *Modern Operating Systems (4th edition)*
+   - Chapter 1 - *Memory Management*
+     - Subchapter 1 - *Introduction*
+       - Subchapter 1.1 - *What is an operating system?*
+       - Subchapter 1.6 - *System calls*
+       - Subchapter 1.7 - *Operating system structure*
+
+---
 layout: two-cols
 ---
 # Operating System
@@ -94,24 +106,52 @@ could a process stop the whole system?
 - processes **cannot be suspended** by the kernel
 - a misbehaving process **can stop** the system
 
----
----
 
+---
+---
 # Kernel Types
 from the **kernel and drivers** point of view
 
+<div grid="~ cols-3 gap-5">
+
+<div>
+
 **Monolothic**
+
+<img src="/os/monolithic.svg" class="w-73 rounded" />
+
   - all drivers in the kernel
   - Windows, Linux, MacOS
 
+
+</div>
+
+<div>
+
 **Microkernel**
+
+<img src="/os/microkernel.svg" class="w-80 rounded" />
+
   - all drivers are applications
   - Minix
 
+</div>
+
+<div>
+
 **Unikernel**
+
+<img src="/os/unikernel.svg" class="w-75 m-1 rounded" />
+
   - the kernel is bundled with all the drivers and one single application
   - Unikraft/Linux
   - Most of the microcontroller RTOSes
+
+
+</div>
+
+</div>
+
 
 ---
 layout: two-cols

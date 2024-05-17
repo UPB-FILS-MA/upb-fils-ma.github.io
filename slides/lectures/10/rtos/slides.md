@@ -6,6 +6,14 @@ aka Real-Time Operating Systems (RTOS)
 
 ---
 ---
+# Bibliography
+for this section
+
+**Alexandru Radovici, Ioana Culic**, *Getting Started with Secure Embedded Systems*
+   - Chapter 2 - *Embedded systems software development*
+
+---
+---
 # Embedded Operating Systems
 
 - small OSes that run on microcontrollers
