@@ -48,8 +48,14 @@ The project has the following architecture:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+ - Uploaded the initial documentation for the project
+ - Began assembling the hardware
+ - Started working on the software
 
 ### Week 7 - 19 May
+ - Completed the hardware
+ - Updated the documentation for the hardware milestone
+ - Continued developing the software
 
 ### Week 20 - 26 May
 
