@@ -26,7 +26,7 @@ I want to put in use everything that i learned until now and to learn new things
 Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
-
+![Block diagram](image-1.png)
 ## Log
 
 <!-- write every week your progress here -->
@@ -47,7 +47,16 @@ The idea is simple : someone who drinks alcohol(a beer for example) blows into t
 
 Place your KiCAD schematics here.
 
-![Block diagram](image-1.png)
+
+![Kicad Schematic](schematic.png)
+
+![Photo of the project](irl_schematic.png)
+
+![Led's](led.png)
+
+![Buzzer and MQ-3 sensor](buzzer_mq-3.png)
+
+![LCD](LCD.png)
 
 
 ### Bill of Materials
