@@ -34,8 +34,8 @@ The development of this motion-controlled remote is driven by a desire to revolu
 Detail in a few words the hardware used.
 
 ### Schematics
+![remote_game](remote_game.kicad_sch)
 
-Place your KiCAD schematics here.
 
 ### Bill of Materials
 
