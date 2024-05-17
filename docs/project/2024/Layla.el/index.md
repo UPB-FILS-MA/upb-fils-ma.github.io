@@ -26,9 +26,9 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 
 - **Parking Areas**:
   - **3 parking spaces**, each equipped with:
-    - **Green LED**: Indicates the space is available.
-    - **Red LED**: Indicates the space is occupied.
-    - **Infrared Sensor**: Detects presence of cars.
+   - **Green LED**: Indicates the space is available.
+   - **Red LED**: Indicates the space is occupied.
+   - **Infrared Sensor**: Detects presence of cars.
 
 - **Gates**:
   - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 19).
@@ -37,16 +37,27 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 - **Sensors**:
   - **Infrared Sensors**: 5 sensors (PIR 6 to PIR 10) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
   - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 5.
+  - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 1).
+  - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 2).
+
+- **Sensors**:
+  - **Infrared Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
+  - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
+
 
 #### Second Floor
 
 - **Authorized Parking Area**:
   - **RFID RC522**: Controls access to the area, communicates with the Pico W via SPI:
-    - **SCK**: GPIO 2
-    - **MISO**: GPIO 4
-    - **MOSI**: GPIO 3
-    - **CS**: GPIO 1
-    - **RST**: GPIO 0
+   - **SCK**: GPIO 2
+   - **MISO**: GPIO 4
+   - **MOSI**: GPIO 3
+   - **CS**: GPIO 1
+   - **RST**: GPIO 0
+   - **SCK**: GPIO 18
+   - **MISO**: GPIO 16
+   - **MOSI**: GPIO 19
+   - **CS**: GPIO 17
   - **LED Light**: Indicates access status.
 
 ### Connectivity
@@ -96,6 +107,7 @@ This picture shows what the wires look like inside the cardboard behind the "wal
 
 This is the final product as of yet:
 ![This is the final product as of yet](Hardware_product.jpg)
+
 
 
 ### Schematics
