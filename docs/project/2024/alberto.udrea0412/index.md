@@ -43,20 +43,14 @@ We also made progress in the hardware part of the project, basically grounding t
 We will use a BME280 in order to gather environmental data. The Pico will process this gathered data in order to print meaningful graphics on the provided display. We will also use several push buttons in order to switch between the available data
 
 ### Schematics
+![KiCad schematic](schematics/kicad.png)
 
+### Photos
+![photo1](schematics/RUID4f1a8646aa4343efbc15b9675c5200ea.jpg)
+![photo2](schematics/RUIDaac8f36b7d744f2798e5896638570c82.jpg)
 
 
 ### Bill of Materials
-
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
 
 | Device | Usage | Price |
 |--------|--------|-------|
@@ -77,9 +71,6 @@ The format is
 | [BME 280 Rust Library](https://github.com/VersBinarii/bme280-rs)| BME280 Sensor library | Used for communicating with the sensor |
 
 ## Links
-
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
 
 1. [Idea](https://www.hackster.io/jotrinelectronics/building-a-weather-station-with-raspberry-pi-pico-rp2040-9d5cbb)
 2. [Arduino BME280 Library (not Rust, but it will be useful as a conceptual insight)](https://github.com/finitespace/BME280)
