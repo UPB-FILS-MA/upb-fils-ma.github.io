@@ -164,7 +164,7 @@ I decided to use a battery for my project ( More spesifically for the Motor Driv
 
 Schematic of the project on KiCad Application.
 
-![Schematic of the project with using KiCad](schema_hardware.png)
+![Schematic of the project with using KiCad](kicad_new.png)
 
 
 
