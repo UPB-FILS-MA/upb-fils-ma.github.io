@@ -34,6 +34,7 @@ usually called RTOS
   - System calls
 - Embedded Operating Systems
   - Real Time
+- Tock OS
 
 <!-- os -->
 
@@ -65,3 +66,4 @@ we discussed about
   - System calls
 - Embedded Operating Systems
   - Real Time
+- Tock OS

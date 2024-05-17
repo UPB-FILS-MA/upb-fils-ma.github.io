@@ -100,7 +100,18 @@ could a process stop the whole system?
 # Kernel Types
 from the **kernel and drivers** point of view
 
+**Monolothic**
+  - all drivers in the kernel
+  - Windows, Linux, MacOS
 
+**Microkernel**
+  - all drivers are applications
+  - Minix
+
+**Unikernel**
+  - the kernel is bundled with all the drivers and one single application
+  - Unikraft/Linux
+  - Most of the microcontroller RTOSes
 
 ---
 layout: two-cols
