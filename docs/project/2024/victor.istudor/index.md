@@ -4,7 +4,7 @@ A robot that follows a black line on a white background.
 :::info
 
 **Author**: Istudor Victor Mihai \
-**GitHub Project Link**: https://github.com/istudormihai/project-ma-rust
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-istudormihai
 
 :::
 
