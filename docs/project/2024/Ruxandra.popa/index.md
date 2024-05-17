@@ -86,6 +86,7 @@ The Raspberry Pi Pico W serves as the central microcontroller for the RustPlayer
 ### Schematics
 
 Place your KiCAD schematics here.
+![The kicad schematic](Kicad.png)
 
 ### Bill of Materials
 
