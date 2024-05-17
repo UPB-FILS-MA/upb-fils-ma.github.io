@@ -29,9 +29,11 @@ I chose this project because i started to have a passion for robotics. Being a m
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+My parts order arrived and i started to think about the way i can build this robot.
+Looked up on the internet for some Rust libraries that could help me write the software.
 ### Week 7 - 19 May
-
+Finished the KiCad schematic and built the robot.
+Started working on the software.
 ### Week 20 - 26 May
 
 ## Hardware
