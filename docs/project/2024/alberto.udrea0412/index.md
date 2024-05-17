@@ -1,6 +1,6 @@
 # Weather Station
 
-Rust-powered environmetal monitoring station
+Rust-powered environmental monitoring station
 
 :::info 
 
@@ -26,10 +26,18 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+[Implemented the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
+
+The work in this phase involved the creation of the crates, the assimilation of the necessary resources and the implementation of communication between the components at a grassroots level.
 
 [Added the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
 
 ### Week 7 - 19 May
+[Added the network stack onto the software](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/ddab361e172beedbbc50cb34c979435d62d4cf54)
+
+Here we fixed (most of) the bugs left over from the previous stage of our development and added the network part of the code, which deals with the transmission of the data collected in the network, to the host device of the web application.
+
+We also made progress in the hardware part of the project, basically grounding the physical side of the project
 
 ### Week 20 - 26 May
 
@@ -39,7 +47,7 @@ We will use a BME280 in order to gather environmental data. The Pico will proces
 
 ### Schematics
 
-Place your KiCAD schematics here.
+
 
 ### Bill of Materials
 
