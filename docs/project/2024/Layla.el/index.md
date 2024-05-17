@@ -31,21 +31,22 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
     - **Infrared Sensor**: Detects presence of cars.
 
 - **Gates**:
-  - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 1).
-  - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 2).
+  - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 19).
+  - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 20).
 
 - **Sensors**:
-  - **Infrared Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
-  - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
+  - **Infrared Sensors**: 5 sensors (PIR 6 to PIR 10) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
+  - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 5.
 
 #### Second Floor
 
 - **Authorized Parking Area**:
   - **RFID RC522**: Controls access to the area, communicates with the Pico W via SPI:
-    - **SCK**: GPIO 18
-    - **MISO**: GPIO 16
-    - **MOSI**: GPIO 19
-    - **CS**: GPIO 17
+    - **SCK**: GPIO 2
+    - **MISO**: GPIO 4
+    - **MOSI**: GPIO 3
+    - **CS**: GPIO 1
+    - **RST**: GPIO 0
   - **LED Light**: Indicates access status.
 
 ### Connectivity
@@ -70,10 +71,10 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-I prepared the cardboard, created all necessary cutouts, and applied the appropriate coloring. I then began developing and testing code for each component individually to ensure they function as desired, and selected the appropriate GPIO pins.
+I prepared the cardboard, created all necessary cutouts, and applied the appropriate coloring. I then began developing and testing code for each component individually to ensure they function as desired, and selected the appropriate GPIO pins. I drew the initial KiCad schematics, ensuring that each component was accurately represented and connected according to the design specifications.
 
 ### Week 7 - 19 May
-I assembled all components, secured them in their designated positions within the cardboard structure, and wrote the integrated code for the project.
+I assembled all components, secured them in their designated positions within the cardboard structure, and wrote the integrated code for the project. Additionally, I updated the original KiCad design by adding a few more components.
 
 ### Week 20 - 26 May
 
@@ -98,7 +99,7 @@ This is the final product as of yet:
 
 
 ### Schematics
-![Kicad schematic ](Kicad.png)
+![Kicad schematic ](Kicad_schematic.png)
 This is the kicad schematic.
 
 ### Bill of Materials
