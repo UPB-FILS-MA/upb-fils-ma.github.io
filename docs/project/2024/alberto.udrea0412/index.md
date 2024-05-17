@@ -23,14 +23,11 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 ## Log
 
-<!-- write every week your progress here -->
 
 ### Week 6 - 12 May
 [Implemented the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
 
 The work in this phase involved the creation of the crates, the assimilation of the necessary resources and the implementation of communication between the components at a grassroots level.
-
-[Added the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
 
 ### Week 7 - 19 May
 [Added the network stack onto the software](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/ddab361e172beedbbc50cb34c979435d62d4cf54)
