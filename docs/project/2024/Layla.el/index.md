@@ -82,10 +82,10 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-I prepared the cardboard, created all necessary cutouts, and applied the appropriate coloring. I then began developing and testing code for each component individually to ensure they function as desired, and selected the appropriate GPIO pins. I drew the initial KiCad schematics, ensuring that each component was accurately represented and connected according to the design specifications.
+I prepared the cardboard, created all necessary cutouts, and applied the appropriate coloring. I then began developing and testing code for each component individually to ensure they function as desired, and selected the appropriate GPIO pins. I drew the initial KiCad schematics, ensuring that each component was represented and connected according to my design .
 
 ### Week 7 - 19 May
-I assembled all components, secured them in their designated positions within the cardboard structure, and wrote the integrated code for the project. Additionally, I updated the original KiCad design by adding a few more components.
+I assembled all components, secured them in their  positions within the cardboard structure, and wrote the  code for the project. Additionally, I updated the original KiCad design by adding a few more components.
 
 ### Week 20 - 26 May
 
