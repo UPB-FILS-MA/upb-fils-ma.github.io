@@ -83,7 +83,7 @@ This is the Kicad Schematic:
 ![KiCad Schematics](KiCad.png)
 Here are some photos of the hardware:
 ![Hardware1](hardware1.png)
-![Hardware2](hardware2.png)
+![Hardware2](Hardware2.png)
 
 ### Bill of Materials
 
