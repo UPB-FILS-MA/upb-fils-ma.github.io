@@ -106,8 +106,7 @@ This is an upclose picture of the wiring:
 
 ### Schematics
 ![Kicad schematic](Kicad_picture.jpg)
-### Schematics
-![Kicad schematic](Kicad.png)
+
 
 ### Bill of Materials
 
