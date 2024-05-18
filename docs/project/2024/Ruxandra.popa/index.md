@@ -60,10 +60,10 @@ A schematic diagram is provided to illustrate the connections and layout of the 
  **MicroSD Card Module**
   - **Interface**: SPI
   - **Connections**:
-    - **SCK** (Serial Clock) to GPIO18 of Raspberry Pi Pico W
-    - **MOSI** (Master Out Slave In) to GPIO19 of Raspberry Pi Pico W
-    - **MISO** (Master In Slave Out) to GPIO16 of Raspberry Pi Pico W
-    - **CS** (Chip Select) to GPIO17 of Raspberry Pi Pico W
+    - **SCK** (Serial Clock) to GPIO24 of Raspberry Pi Pico W
+    - **MOSI** (Master Out Slave In) to GPIO25 of Raspberry Pi Pico W
+    - **MISO** (Master In Slave Out) to GPIO21 of Raspberry Pi Pico W
+    - **CS** (Chip Select) to GPIO22 of Raspberry Pi Pico W
 
 ## Log
 
