@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.4cfc690b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c6c982bd.js" defer="defer"></script>
 <script src="/assets/js/main.48bacdb5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -52,15 +52,22 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<p>Acquired the required parts and researched the feasibility of the project. This phase involved understanding the specifications of each component and planning the integration.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<p>Assembled all the parts and wired everything up. This step involved careful connection of the components according to the schematics and initial power-up testing to ensure all parts were functional.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
+<p>Hardware Diagram</p>
+<p><img decoding="async" loading="lazy" alt="Diagram" src="/assets/images/diagram-365b47af33783f08b0bd7846c6ec3c06.jpg" width="541" height="741" class="img_ev3q"></p>
+<p>Completed Robot</p>
+<p><img decoding="async" loading="lazy" alt="Robot" src="/assets/images/robot-c10c1f5659c1c7b2972a63f597f964c1.jpg" width="2048" height="1902" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p>---&gt; Not ready yet</p>
+<p>KiCad Schematic</p>
+<p><img decoding="async" loading="lazy" alt="Kicad schematic" src="/assets/images/kicad-f00d5bf293279686402c59077e4e33a1.png" width="1521" height="949" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td>Raspberry Pi Pico W</td><td>Microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td>L298N Motor Driver</td><td>Motor Driver</td><td><a href="https://www.optimusdigital.ro/en/brushed-motor-drivers/145-l298n-dual-motor-driver.html" target="_blank" rel="noopener noreferrer">9 RON</a></td></tr><tr><td>HC-SR04 Ultrasonic Sensor</td><td>Distance sensor</td><td><a href="https://www.optimusdigital.ro/en/ultrasonic-sensors/9-hc-sr04-ultrasonic-sensor.html" target="_blank" rel="noopener noreferrer">7 RON</a></td></tr><tr><td>2x 9V Battery</td><td>Power Source</td><td><a href="https://www.emag.ro/baterie-varta-superlife-zinc-carbon-9v-s1-4008496556632/pd/D0T5S3MBM/" target="_blank" rel="noopener noreferrer">5 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
-<table><thead><tr><th>Library</th><th>Description</th><th>Usage</th></tr></thead></table>
+<table><thead><tr><th>Library</th><th>Description</th><th>Usage</th></tr></thead><tbody><tr><td><a href="https://github.com/embassy-rs/embassy" target="_blank" rel="noopener noreferrer">embassy</a></td><td>Rust framework for embedded programming</td><td>Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems</td></tr><tr><td><a href="https://crates.io/crates/l298n" target="_blank" rel="noopener noreferrer">L298N</a></td><td>Rust crate for L298N</td><td>Used for driving the motors</td></tr><tr><td><a href="https://crates.io/crates/hc-sr04" target="_blank" rel="noopener noreferrer">HC-SR04</a></td><td>Rust crate for HC-SR04 distance sensor</td><td>Used for calculating the distance to the object in front</td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="links">Links<a href="#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links">​</a></h2>
 <p><strong>1. Inspiration video</strong>: <a href="https://www.youtube.com/watch?v=iajyaWi1Ln4" target="_blank" rel="noopener noreferrer">Obstacle Avoider Youtube Video</a></p>
 <p><strong>2. Inspiration video</strong>: <a href="https://www.youtube.com/watch?v=BhrrNtihIe8" target="_blank" rel="noopener noreferrer">Obstacle Avoider Youtube Video 2</a></p>
