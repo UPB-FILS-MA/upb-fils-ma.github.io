@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.65c6db81.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.df2dd082.js" defer="defer"></script>
 <script src="/assets/js/main.48bacdb5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -56,18 +56,18 @@ The microcontroller sends input data to the host system using the XInput API. Th
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
 <p>Designed the hardware on the breadboard, applied the voltage dividers to the circuit, finished up the KiCad hardware schematic</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
-<p>TBD</p>
+<p>Finished up the hardware on the breadboard + final version on KiCad. Should start with software now.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <p>TBD</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
-<p>The controller has 16 buttons, 2 vibration motors(TODO), 2 joysticks, resistances of 220 ohms to not blow up the circuit (i don&#x27;t know I&#x27;m not sure...yet). Pico will process all the inputs from the buttons and will translate it for the XInput app.</p>
+<p>The controller has 16 buttons, 2 vibration motors, 2 joysticks, resistances of 220 ohms to not blow up the circuit. Pico will process all the inputs from the buttons and will translate it for the XInput app.</p>
 <p>To implement the project, you need a board with a native USB port, such as the Raspberry Pi Pico.</p>
 <p>I chose to use two voltage dividers to save the digital pins on the board. The directional buttons and the A/B/X/Y buttons are grouped by 4 in a voltage divider.</p>
-<p>The disadvantage of these groupings is that two or more buttons from the same group cannot be read simultaneously. For example, pressing buttons A and B at the same time will send to the analog pin the value corresponding to pressing button B, not both. (I&#x27;ll find a solution in the future... I hope)</p>
+<p>The disadvantage of these groupings is that two or more buttons from the same group cannot be read simultaneously. For example, pressing buttons A and B at the same time will send to the analog pin the value corresponding to pressing button B, not both. (fixed it, should work)</p>
 <p>Another compromise is the fact that, for reasons of availability, the &quot;Trigger&quot; buttons are not analog. The value sent to the XInput API is either 0% pressed or 100% pressed.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p><img decoding="async" loading="lazy" alt="hardware" src="/assets/images/hardware-42e20f45b26f88f477dc3e2901223771.png" width="3507" height="2480" class="img_ev3q"></p>
-<p>Please bear in mind that this is not the final form, just a quick sketch. Moreover, pins, components and other stuff might change in the future (but it is better than nothing <!-- -->:D<!-- -->)</p>
+<p><img decoding="async" loading="lazy" alt="hardware" src="/assets/images/hardware-ce6f4169a3c9ecf582a1846c1ff7fcfa.png" width="3507" height="2480" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="hardware_implementation" src="/assets/images/hardware_implementation-c64bf5ba9f8f142379b07b460b23a3b6.jpg" width="1512" height="2016" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td>2 x BreadBoard</td><td>Build the circuit</td><td><a href="https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html" target="_blank" rel="noopener noreferrer">20 RON</a></td></tr><tr><td>Buttons ( 12-15 )</td><td>Input for controller</td><td><a href="https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&amp;results=222" target="_blank" rel="noopener noreferrer">5 RON</a></td></tr><tr><td>Resistances</td><td>To not fry the circuit</td><td><a href="https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&amp;results=120" target="_blank" rel="noopener noreferrer">5 RON</a></td></tr><tr><td>2x JoySticks</td><td>Move and aim with the controller</td><td><a href="https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/742-modul-joystick-ps2-biaxial-negru-cu-5-pini.html?search_query=joystick&amp;results=42" target="_blank" rel="noopener noreferrer">10 RON</a></td></tr><tr><td>2x Vibration Motors</td><td>Response from game using Windows API</td><td><a href="https://www.optimusdigital.ro/ro/motoare-motoare-cu-vibratii/693-motor-cu-vibratii-a1027.html?gad_source=1&amp;gclid=Cj0KCQjwir2xBhC_ARIsAMTXk87DxwQMGCCtCEbpkpSU_Mpx-jXCLmP0dDQwEzAGgiDgH0d1KsIc7isaAvvcEALw_wcB" target="_blank" rel="noopener noreferrer">5 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
