@@ -51,18 +51,17 @@ The MPU6050 Accelerometer and Gyroscope sensor takes the wand movement input. Wh
 
 The **pushbutton** signals the start of the data reading process from the MPU6050 sensor. It uses a simple GPIO connection, as follows:<br />
   - **not pressed** -> GP20 is HIGH
-  - **pressed** -> GP20 is LOW
+  - **pressed** -> GP20 is LOW <br />
 It is connected using a pull-up resistor(of 10kΩ) between the input pin and Vcc to keep the voltage HIGH when the button is not pressed.<br />  
 
 The **MPU6050** sends data to the first PicoW. It uses a I2C connection as follows:<br />
   - **SDA** -> GP0
-  - **SCL** -> GP1
+  - **SCL** -> GP1 <br />
 The data sent is then interpretetd by our PicoW with the help of our ML Edge Impulse model. [Edge Impulse Model](https://studio.edgeimpulse.com/studio/395280).<br />  
 
 The **SSD1306** shows the direction of our movement after it has been interpreted by our PicoW. It uses I2C connection as follows:<br />
   - **SDA** -> GP2
-  - **SCL** -> GP3
-
+  - **SCL** -> GP3<br />
 The information is then sent through WiFi connection to a second PicoW (Naomi's project).
 
 ### Schematics
