@@ -94,7 +94,12 @@ This is the current progress of the RustPlayer project. So far, the essential co
 
 This schematic, created with KiCad, illustrates the electronic design of the RustPlayer project. It provides a detailed layout of the connections and components, ensuring accurate assembly and functionality.
 
-![The kicad schematic](Kicad.png)
+![The kicad schematic](KiCad1.png)
+
+
+In the second picture I have used net labels to represent connections, for a cleaner and more organized layout.
+
+![The kicad schematic](KiCad2.png)
 
 ### Bill of Materials
 
