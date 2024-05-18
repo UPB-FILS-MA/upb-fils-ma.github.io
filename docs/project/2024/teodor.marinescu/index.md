@@ -36,9 +36,9 @@ The potentiometer sends the desired intensity to the Pico board.
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Planed the architecture of the project and bought all the required components.
 ### Week 7 - 19 May
-
+The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit which was further used as a guide for when I assembled the project on a physical breadboard.
 ### Week 20 - 26 May
 
 ## Hardware
