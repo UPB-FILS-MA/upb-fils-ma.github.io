@@ -51,12 +51,12 @@ The main components of the hardware that I used are:
 
 ### Photos
 
-[Photo1](photos/Photo1.jpeg)
-[Photo2](photos/Photo.jpeg)
-[Photo3](photos/Photo2.jpeg)
-[Photo4](photos/Photo3.jpeg)
-[Temp_Photo](photos/Photo4.jpeg)
-[Photo6](photos/Photo5.jpeg)
+![Photo1](photos/Photo1.jpeg)
+![Photo2](photos/Photo.jpeg)
+![Photo3](photos/Photo2.jpeg)
+![Photo4](photos/Photo3.jpeg)
+![Temp_Photo](photos/Photo4.jpeg)
+![Photo6](photos/Photo5.jpeg)
 
 ### Bill of Materials
 
