@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.2ecaa7b7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.65c6db81.js" defer="defer"></script>
 <script src="/assets/js/main.48bacdb5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -69,13 +69,6 @@
 <p><strong>Audio Amplifier</strong></p>
 <ul>
 <li><strong>Interface</strong>: I2S</li>
-<li><strong>Connections</strong>:<!-- -->
-<ul>
-<li><strong>BCLK</strong> (Bit Clock Line) to GPIO10 of Raspberry Pi Pico W</li>
-<li><strong>LRCLK</strong> (Left Right Clock Line) to GPIO11 of Raspberry Pi Pico W</li>
-<li><strong>DIN</strong> (Data In Line) to GPIO9 of Raspberry Pi Pico W</li>
-</ul>
-</li>
 <li><strong>Role</strong>: Amplifies the audio signal for output to the speaker.</li>
 </ul>
 <p><strong>Speaker</strong></p>
@@ -87,21 +80,29 @@
 <li><strong>Interface</strong>: SPI</li>
 <li><strong>Connections</strong>:<!-- -->
 <ul>
-<li><strong>SCK</strong> (Serial Clock) to GPIO18 of Raspberry Pi Pico W</li>
-<li><strong>MOSI</strong> (Master Out Slave In) to GPIO19 of Raspberry Pi Pico W</li>
-<li><strong>MISO</strong> (Master In Slave Out) to GPIO16 of Raspberry Pi Pico W</li>
-<li><strong>CS</strong> (Chip Select) to GPIO17 of Raspberry Pi Pico W</li>
+<li><strong>SCK</strong> (Serial Clock) to GPIO24 of Raspberry Pi Pico W</li>
+<li><strong>MOSI</strong> (Master Out Slave In) to GPIO25 of Raspberry Pi Pico W</li>
+<li><strong>MISO</strong> (Master In Slave Out) to GPIO21 of Raspberry Pi Pico W</li>
+<li><strong>CS</strong> (Chip Select) to GPIO22 of Raspberry Pi Pico W</li>
 </ul>
 </li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<p>The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<p>A 3D model of the project enclosure has been designed using Tinkercad. The box is tailored to fit all components securely and includes cutouts for the buttons, display, RGB led and speaker.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <p>The Raspberry Pi Pico W serves as the central microcontroller for the RustPlayer project. It provides the processing power and interfaces necessary to control various components of the music player. With its dual-core ARM Cortex-M0+ processor and ample GPIO pins, the Pico W can handle tasks such as reading input from buttons, interfacing with the MicroSD card module for storing and accessing MP3 files, driving the OLED display for the user interface, and controlling the audio output via the MAX98357A amplifier.</p>
+<p>This is the current progress of the RustPlayer project. So far, the essential components have been assembled. The next step involves making the music player more compact by integrating all components into a custom-designed box with a lid. This enclosure will be created using Tinkercad to ensure a perfect fit.</p>
+<p><img decoding="async" loading="lazy" src="/assets/images/project_picture_1-72d0dbafc2e98df378217e58fd28f657.png" width="1536" height="2048" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="/assets/images/project_picture_2-36305abf8675add3c5e4bf9f2a66d92a.png" width="1536" height="2048" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p>Place your KiCAD schematics here.</p>
+<p>This schematic, created with KiCad, illustrates the electronic design of the RustPlayer project. It provides a detailed layout of the connections and components, ensuring accurate assembly and functionality.</p>
+<p><img decoding="async" loading="lazy" alt="The kicad schematic" src="/assets/images/KiCad1-e943946e0d85a403cbb7461d7f7d41a4.png" width="1802" height="1222" class="img_ev3q"></p>
+<p>In the second picture I have used net labels to represent connections, for a cleaner and more organized layout.</p>
+<p><img decoding="async" loading="lazy" alt="The kicad schematic" src="/assets/images/KiCad2-0e418ab1cdff85bdf113bd411dac7905.png" width="1803" height="1229" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Raspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td><a href="https://www.robofun.ro/modul-cititor-card-microsd" target="_blank" rel="noopener noreferrer">MicroSD Card Module</a></td><td>Storage for MP3 files</td><td><a href="https://www.robofun.ro/modul-cititor-card-microsd" target="_blank" rel="noopener noreferrer">66 RON</a></td></tr><tr><td><a href="https://www.robofun.ro/amplificator-3w-i2s-max98357a.html?gad_source=1&amp;gclid=EAIaIQobChMIuMLW1uvuhQMVtTgGAB2bvw6eEAQYASABEgL-DfD_BwE" target="_blank" rel="noopener noreferrer">Amplificator 3W I2S - MAX98357A</a></td><td>Audio output</td><td><a href="https://www.robofun.ro/amplificator-3w-i2s-max98357a.html?gad_source=1&amp;gclid=EAIaIQobChMIuMLW1uvuhQMVtTgGAB2bvw6eEAQYASABEgL-DfD_BwE" target="_blank" rel="noopener noreferrer">53 RON</a></td></tr><tr><td><a href="https://www.sigmanortec.ro/Display-OLED-0-96-I2C-IIC-Albastru-p135055705?gad_source=1&amp;gclid=EAIaIQobChMI87uZ2uzuhQMVXAUGAB0WEwaqEAQYASABEgIC8vD_BwE" target="_blank" rel="noopener noreferrer">0.96&#x27;&#x27; I2C IIC OLED Display</a></td><td>User interface display</td><td><a href="https://www.sigmanortec.ro/Display-OLED-0-96-I2C-IIC-Albastru-p135055705?gad_source=1&amp;gclid=EAIaIQobChMI87uZ2uzuhQMVXAUGAB0WEwaqEAQYASABEgIC8vD_BwE" target="_blank" rel="noopener noreferrer">20 RON</a></td></tr><tr><td><a href="https://ro.farnell.com/visaton/2916/speaker-k-50-wp-50-ohms/dp/1683896?gross_price=true&amp;CMP=KNC-GRO-GEN-SHOPPING-PMax_Test_840_HighMargin&amp;mckv=_dc%7Cpcrid%7C%7Cplid%7C%7Ckword%7C%7Cmatch%7C%7Cslid%7C%7Cproduct%7C1683896%7Cpgrid%7C%7Cptaid%7C%7C&amp;gad_source=1&amp;gclid=EAIaIQobChMIqpmFqOzuhQMVdkJBAh25UwYvEAQYASABEgJ7jPD_BwE" target="_blank" rel="noopener noreferrer">VISATON 2916</a></td><td>Audio output device</td><td><a href="https://ro.farnell.com/visaton/2916/speaker-k-50-wp-50-ohms/dp/1683896?gross_price=true&amp;CMP=KNC-GRO-GEN-SHOPPING-PMax_Test_840_HighMargin&amp;mckv=_dc%7Cpcrid%7C%7Cplid%7C%7Ckword%7C%7Cmatch%7C%7Cslid%7C%7Cproduct%7C1683896%7Cpgrid%7C%7Cptaid%7C%7C&amp;gad_source=1&amp;gclid=EAIaIQobChMIqpmFqOzuhQMVdkJBAh25UwYvEAQYASABEgJ7jPD_BwE" target="_blank" rel="noopener noreferrer">50 RON</a></td></tr><tr><td><a href="https://www.emag.ro/card-de-memorie-microsd-kingston-canvas-select-plus-32gb-100mb-s-cu-adaptor-sdcs2-32gb/pd/D63FBGBBM/?ref=fam#32-GB" target="_blank" rel="noopener noreferrer">Card MicroSD</a></td><td>Memory Card MicroSD</td><td><a href="https://www.emag.ro/card-de-memorie-microsd-kingston-canvas-select-plus-32gb-100mb-s-cu-adaptor-sdcs2-32gb/pd/D63FBGBBM/?ref=fam#32-GB" target="_blank" rel="noopener noreferrer">30-40 RON</a></td></tr><tr><td><a href="https://www.optimusdigital.ro/en/?gad_source=1&amp;gclid=EAIaIQobChMIt8fHl_DuhQMVoj8GAB2CHwcJEAAYASAAEgLBrvD_BwE" target="_blank" rel="noopener noreferrer">Electronic components: LEDs, buttons, wires resistors and Breadboard</a></td><td>Electronic Components</td><td><a href="https://www.optimusdigital.ro/en/?gad_source=1&amp;gclid=EAIaIQobChMIt8fHl_DuhQMVoj8GAB2CHwcJEAAYASAAEgLBrvD_BwE" target="_blank" rel="noopener noreferrer">15-20 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
