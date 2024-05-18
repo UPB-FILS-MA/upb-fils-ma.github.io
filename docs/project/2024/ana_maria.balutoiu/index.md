@@ -73,7 +73,7 @@ These components work together to create a simple yet effective door alarm syste
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad Schematics](KiCad.png)
 
 ### Bill of Materials
 
