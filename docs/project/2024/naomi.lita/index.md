@@ -19,7 +19,7 @@ I chose this project because it was a dream of mine to wake up with natural sunl
 
 ## Architecture 
 
-![architecture](schematic.png)
+![architecture](schematic_project.png)
 
 
 ## Log
@@ -35,7 +35,7 @@ On the other hand, I started designing the toothed disks for the 3D printer.
 
 ### Week 20 - 26 May
 
-## Hardware
+### Hardware
 
 The pico gets input either from a web app or another pico connected through wifi(Rebeca's project: pico wand) and sends a signal to the motor driver (ULN2003) which in turn starts the stepper motor (28BYJ-48) that rolls the blinds up or down.
 
@@ -74,7 +74,7 @@ The format is
 | [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | the microcontroller | [56,23 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=Raspberry+Pi+Pico+WH%2C+Wireless+Headers&results=1031) |
 | Kit Breadboard | to place the components | [24,61 RON](https://ardushop.ro/ro/electronica/163-kit-breadboard830-65xfire-jumper-sursa-alimentare-335v.html?search_query=KIT+Breadboard830+++65xfire+jumper+++sursa+alimentare+3%2C3%2F5V&results=694) |
 | Resistors | regulate the power supply | [12,29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+&results=429) |
-| [Stepper Motor 28BYJ-48 5V and Driver ULN2003](https://www.hwlibre.com/en/28bj-48/)| the motor to rotate the blinds and the driver to connect it to the microcontroller | [16,97 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/101-driver-uln2003-motor-pas-cu-pas-de-5-v-.html) |
+| [Stepper Motor 28BYJ-48 5V](http://descargas.cetronic.es/28BYJ-48.pdf) and [Driver ULN2003](https://www.mouser.com/datasheet/2/115/ULN200xA-3216185.pdf)| the motor to rotate the blinds and the driver to connect it to the microcontroller | [16,97 RON](https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/101-driver-uln2003-motor-pas-cu-pas-de-5-v-.html) |
 | 3D printed toothed disks | connect the motor to the blinds |
 | 3D printed case for device | hold all components together |
 
@@ -95,3 +95,4 @@ I only included those specific for this project.
 1. [3D printed and fully automated Roller Blind Motor](https://imgur.com/a/xuQjH3z)
 2. [Pico Project: Automated window blinds that open at sunrise and close at sunset](https://www.reddit.com/r/raspberrypipico/comments/wbdsz1/pico_project_automated_window_blinds_that_open_at/)
 3. [28BYJ-48 Stepper Motor with Raspberry PI Pico](https://www.youtube.com/watch?v=VM3S9CiyPzY&t=2s)
+4. [28BYJ-48 Stepper Motor Description](https://www.hwlibre.com/en/28bj-48/)
