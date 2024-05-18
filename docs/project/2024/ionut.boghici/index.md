@@ -1,5 +1,6 @@
 # Morse Code Translator
     
+A two Raspberry Pi Morse Code translator system: one converts English to Morse, blinking LED and buzzer; the other translates Morse back to English displayed on an LCD via microphone detection.
 
 :::info 
 
