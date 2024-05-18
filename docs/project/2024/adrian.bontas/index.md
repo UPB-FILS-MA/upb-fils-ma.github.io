@@ -2,8 +2,12 @@
 
 Remote-controlled car built and operated via smartphone.
 
+:::info
+
 **Author**: Bontas Adrian-Cosmin \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-adriancosm1n
+
+:::
 
 
 

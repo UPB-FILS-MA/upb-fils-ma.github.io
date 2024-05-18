@@ -98,6 +98,7 @@ The hardware used includes:
 5. LCD Screen: Displays real-time feedback on the distance to detected objects and the angle of the servo motor.
 Detail in a few words the hardware used.
 
+
 This is what the project looks like:
 ![Hardware picture](Hardware_pic1.jpg)
 This is an upclose picture of the wiring:
@@ -105,6 +106,8 @@ This is an upclose picture of the wiring:
 
 ### Schematics
 ![Kicad schematic](Kicad_picture.jpg)
+### Schematics
+![Kicad schematic](Kicad.png)
 
 ### Bill of Materials
 
