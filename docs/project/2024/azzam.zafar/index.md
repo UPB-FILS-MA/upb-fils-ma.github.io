@@ -51,6 +51,7 @@ I was able to make the buzzer start buzzing, and keep the LED lit on, when the d
 
   - The complete system can be powered on a 9V battery, which makes the system portable and independent.
 
+These are images of the physical hardware and connections
 ![Hardware1](Project_Hardware_Image_1.jpg)
 ![Hardware2](Project_Hardware_Image_2.jpg)
 
