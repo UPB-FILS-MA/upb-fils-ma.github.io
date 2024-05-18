@@ -174,7 +174,7 @@ Applications are **not allowed** to access the **kernel's memory** or **the peri
 - Tock runs only on *single core*
 - *Running* state means the process is ready to run
 - *Yielded* means the process waits for an event (*upcall*)
-- *start* and *stop* are use commands
+- *start* and *stop* are user commands
 - a process is stopped only if the user asked it
 
 <div align="center">
