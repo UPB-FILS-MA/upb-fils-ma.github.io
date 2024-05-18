@@ -162,6 +162,8 @@ I decided to use a battery for my project ( More spesifically for the Motor Driv
 
 ### Schematics
 
+- You can find the KiCad folder [here](docs/hardware.kicad)
+
 Schematic of the project on KiCad Application.
 
 ![Schematic of the project with using KiCad](kicad_new.png)
