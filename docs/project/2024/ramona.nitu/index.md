@@ -59,14 +59,14 @@ RGB LED (Common Cathode) + 220Ω Resistors - The RGB LED can emit different colo
 
 USB Cable - Used to power the Raspberry Pi Pico and for communication with the laptop.
 
- ![Hardware1](./Hardware1.jpeg)
- ![Hardware2](./Hardware2.jpeg)
- ![Hardware3](./Hardware3.jpeg)
- ![Hardware4](./Hardware4.jpeg)
+![Hardware1](./Hardware1.jpeg)
+![Hardware2](./Hardware2.jpeg)
+![Hardware3](./Hardware3.jpeg)
+![Hardware4](./Hardware4.jpeg)
 
 ### Schematics
 
- ![KiCad_Schematics](./KiCad_Schematics.png)
+![KiCad_Schematics](./KiCad_Schematics.png)
 
 -RGB LED:
 The common cathode of the RGB LED is connected to GND (pin 33).
@@ -107,7 +107,6 @@ The format is
 | [Micro USB](https://www.mouser.com/pdfdocs/HiroseZX62Datasheet24200011.pdf) | USB used to power the Raspberry Pi Pico | [3 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/4576-cablu-albastru-micro-usb-50-cm.html?search_query=cablu+micro+usb&results=146) |
 | ["Mother-father" jumpers](https://greenchip.com.ua/23-0-204-2.html) | Used to connect the LCD to Raspberry Pi Pico | [4 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/214-fire-colorate-mama-mama-10p.html?search_query=fire+mama+tata&results=37) |
 
-
 ## Software
 
 | Library | Description | Usage |
@@ -119,7 +118,6 @@ The format is
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 | [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
 | [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
-
 
 ## Links
 
