@@ -86,6 +86,7 @@ The format is
 | [16 x Suruburi M3x5mm](https://www.phippselectronics.com/wp-content/uploads/2021/08/4WD_Robot_Car_Guide_V1.0.pdf)  | 16 x Screws M3x5mm | [In the Kit.](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [10 x Piulite M3](https://www.phippselectronics.com/wp-content/uploads/2021/08/4WD_Robot_Car_Guide_V1.0.pdf)  | 10 x Nuts M3 | [In the Kit.](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [4 x AA Duracell Bateries](https://www.emag.ro/baterii-alcaline-duracell-plus-power-mn1500-lr6-aa-blister-de-4-buc-5000394017641/pd/D69PRMBBM/)  | 4 AA Duracell Bateries | [15 RON](https://www.emag.ro/baterii-alcaline-duracell-plus-power-mn1500-lr6-aa-blister-de-4-buc-5000394017641/pd/D69PRMBBM/) |
+| [Suport baterii 2AA](https://www.optimusdigital.ro/ro/suporturi-de-baterii/941-suport-de-baterii-2-x-18650.html?search_query=0104110000008671&results=1&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fro%2Fcautare%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3D0104110000008671%26submit_search%3D) | Support for 2 batteries | [4.99 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/941-suport-de-baterii-2-x-18650.html?search_query=0104110000008671&results=1&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fro%2Fcautare%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3D0104110000008671%26submit_search%3D) |
 
 
 
