@@ -27,8 +27,11 @@ The project's arhitecture shows that the Raspberry Pi Pico W is the central unit
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I connected all the components and made the electronic circuit according to the shape of the stage and tested it. 
 
 ### Week 7 - 19 May
+I made the KiCad Schematic for the project. Because I couldn't find any symbol for Pico Display Pack, I created it and added to the schematic.
+I created the stage and added it to the circuit having now the final shape of it.
 
 ### Week 20 - 26 May
 
@@ -44,7 +47,10 @@ The project's arhitecture shows that the Raspberry Pi Pico W is the central unit
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad Schematics](kicad.jpg)
+![Circuit picture 1](circuit.jpg)
+![Circuit picture 2](circuit1.jpg)
+![Circuit picture 3](circuit2.jpg)
 
 ### Bill of Materials
 
@@ -67,8 +73,8 @@ The format is
 | [LEDs] | Electronic Components | [40 RON](hhttps://www.optimusdigital.ro/ro/kituri/11970-set-led-uri-asortate-plusivo-500-buc-led-uri-100-buc-rezistoare-i-pcb-bonus.html?search_query=led&results=818) |
 | [Wires] | Electronic Components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire&results=437) |
 | [2x Breadboards] | Electronic Components | [20 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145) |
-| [5x Transistors] | Electronic Components | [0.85 RON ](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=tranzistor&results=103) |
-| [5x Resistors 1K] | Electronic Components | [0.50 RON ](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/859-rezistor-025w-1k.html?search_query=rezistor+1k&results=120) |
+| [4x Shift Registers 74hc595](https://www.alldatasheet.com/datasheet-pdf/pdf/12198/ONSEMI/74HC595.html) | Electronic Components | [8 RON ](https://www.optimusdigital.ro/en/others/2448-registru-de-deplasare-74hc595-dip-16.html) |
+| [32x Resistors 220 ohm] | Electronic Components | [5 RON ](https://www.optimusdigital.ro/ro/kituri/11970-set-led-uri-asortate-plusivo-500-buc-led-uri-100-buc-rezistoare-i-pcb-bonus.html?search_query=led&results=818) |
 
 
 
