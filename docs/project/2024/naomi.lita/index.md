@@ -43,7 +43,7 @@ The pico gets input either from a web app or another pico connected through wifi
  - **28BYJ-48 stepper motor**: this motor is a unipolar stepper motor with 4 phases. It has the torque of about 0.34 kg per cm on its axis. This is enough to raise a lightweight model blind. 
 
 I will use this table for the clockwise direction to create a matrix where high is 1 and low is 0: 
-![motor_rotation](motor_rotation.png)
+![motor_rotation](motor_rotation.jpg)
 
 For counterclockwise rotation, it is the same matrix, only reversed.
 
