@@ -4,7 +4,7 @@ A useful device for physically impaired people
 :::info 
 
 **Author**: Chiorean Rebeca \
-**My GitHub Project Link**: [Github project link](https://github.com/UPB-FILS-MA/project-ChioreanRebeca<br />
+**My GitHub Project Link**: [Github project link](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)<br />
 **Coleague GitHub Link**: [Naomi Lita](https://github.com/UPB-FILS-MA/project-nimintz)
 
 :::
