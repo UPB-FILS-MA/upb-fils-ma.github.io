@@ -99,7 +99,7 @@ A **DC Motor** that controls the fan
 
 ### Schematics
 
-![diagram](kicad_fan.png)
+![diagram](newkicad_fan.jpg)
 ![diagram](pic1.2.jpg)
 ![diagram](pic2.jpg)
 ![diagram](pic3.jpg)
