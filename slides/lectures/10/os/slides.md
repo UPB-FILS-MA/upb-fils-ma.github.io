@@ -59,7 +59,7 @@ abstractions
 
 **Data**
 - everything is a file
-- peripherals a viewed as files (*POSIX*)
+- peripherals are viewed as files (*POSIX*)
   - `/sys/class/gpio/gpio5/direction`
   - `/sys/class/gpio/gpio5/value`
 
