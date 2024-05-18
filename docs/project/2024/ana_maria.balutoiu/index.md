@@ -82,8 +82,8 @@ These components work together to create a simple yet effective door alarm syste
 This is the Kicad Schematic:
 ![KiCad Schematics](KiCad.png)
 Here are some photos of the hardware:
-![Hardware1](hardware1.png)
-![Hardware2](Hardware2.png)
+![Hardware1](hardware1.jpg)
+![Hardware2](Hardware2.jpg)
 
 ### Bill of Materials
 
