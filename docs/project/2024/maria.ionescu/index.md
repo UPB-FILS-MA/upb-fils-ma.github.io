@@ -39,9 +39,10 @@ This project is a smart car using a Raspberry Pi Pico W and various sensors and 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+Uploaded the documentation and the hardware arrived.
 
 ### Week 7 - 19 May
-
+Build the car and starting to work at the software.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -57,7 +58,6 @@ Place your KiCAD schematics here.
 | [L298N Motor Driver](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaLLSL30GmBm03YwrOLTLWe7udlgA_18JR-vSDqgFOe0J-D9ATSX3VUaAuQ6EALw_wcB)| the motor | [11,5 RON](https://ardushop.ro/ro/electronica/84-l298n-punte-h-dubla-dual-h-bridge-motor-dcsteppe.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaLLSL30GmBm03YwrOLTLWe7udlgA_18JR-vSDqgFOe0J-D9ATSX3VUaAuQ6EALw_wcB)|
 |[IR Sensor](https://ardushop.ro/ro/electronica/41-modul-senzor-ir-infrarosu-evita-obstacole.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaJNlwDUtcQS4_9cpYyxwKY2GxpJVmUqcW12zFnIP_sfgO4vtYXc3jAaAqKLEALw_wcB)| Infrared Sensor - obstacle avoidance |[8,78 RON](https://ardushop.ro/ro/electronica/41-modul-senzor-ir-infrarosu-evita-obstacole.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaJNlwDUtcQS4_9cpYyxwKY2GxpJVmUqcW12zFnIP_sfgO4vtYXc3jAaAqKLEALw_wcB)|
 |[Kit Sasiu](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803)| KIT SASIU SMART CAR 4WD |[75,05 RON](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803)|
-|[Motor](https://ardushop.ro/ro/electronica/64-motor-dc-3v-6v-cu-reductor-148.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaJXP9MsuC9_ixrErYdm3rwvy6QaV9Mg9xgH_vNHQ80j6zl8tMQ1UiUaAhIMEALw_wcB)| Powering the circuit |[4,82 RON](https://ardushop.ro/ro/electronica/64-motor-dc-3v-6v-cu-reductor-148.html?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaJXP9MsuC9_ixrErYdm3rwvy6QaV9Mg9xgH_vNHQ80j6zl8tMQ1UiUaAhIMEALw_wcB)|
 |[SERVOMOTOR SG90 360 GRADE, CONTINUU](https://www.sigmanortec.ro/servomotor-sg90-360-continuu)| Micro servomotor |[11,90 RON](https://www.sigmanortec.ro/servomotor-sg90-360-continuu)|
 |[SUPORT SENZOR ULTRASUNETE HC-SR04](https://www.sigmanortec.ro/suport-senzor-ultrasunete-hc-sr04)| suport |[3,95 RON](https://www.sigmanortec.ro/suport-senzor-ultrasunete-hc-sr04)|
 [Senzor Infraroșu Reflectiv Pololu QTRX-HD-06A](https://www.optimusdigital.ro/ro/senzori-senzori-optici/7234-senzor-infrarou-reflectiv-pololu-qtrx-hd-06a.html)| IR sensors | [29,99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-optici/7234-senzor-infrarou-reflectiv-pololu-qtrx-hd-06a.html)|
