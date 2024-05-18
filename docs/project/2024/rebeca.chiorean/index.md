@@ -4,7 +4,8 @@ A useful device for physically impaired people
 :::info 
 
 **Author**: Chiorean Rebeca \
-**GitHub Project Link**: [Github project link](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)
+**My GitHub Project Link**: [Github project link](https://github.com/UPB-FILS-MA/project-ChioreanRebeca)
+**Coleague GitHub Link**: [Naomi Lita](https://github.com/UPB-FILS-MA/project-nimintz)
 
 :::
 
@@ -28,8 +29,7 @@ If they make a circular movement to the left the light will dim and if it is to 
 This sort of implementation could be done on other objects as well: a door, the room temperature and so on.
 
 ## Motivation
-
-This project aims to help people with disabilities gain some of their autonomy by being able to interact with objects around them. 
+This project aims to help people with disabilities gain some of their autonomy by being able to interact with objects around them. It ensures that they have the same opportunities to perform everyday tasks as those that aren't faced with the same challenges. Engaging in efforts that make a tangible difference in people’s lives can be incredibly rewarding. My motivation comes from knowing that my work has directly improved someone’s ability to live independently.
 
 ## Architecture 
 
@@ -49,17 +49,17 @@ I completed the hardware connections and the KiCad schematic. In addition, I rev
 ## Hardware
 The MPU6050 Accelerometer and Gyroscope sensor takes the wand movement input. When the pushbutton is pressed, our PicoW takes the provided input and understands the nature of the movement. The direction of the movement is then sent to the SSD1360 display that prints it. The PicoW also sends the movement information to another PicoW connected to it by wifi. The second PicoW is the one connected to smart devices and will interact with them.<br />  
 
-The **pushbutton** singnals the start of the data reading process from the MPU6050 sensor. It uses a simple GPIO connection as it follows:<br />
+The **pushbutton** signals the start of the data reading process from the MPU6050 sensor. It uses a simple GPIO connection, as follows:<br />
   - **not pressed** -> GP20 is HIGH
   - **pressed** -> GP20 is LOW
 It is connected using a pull-up resistor(of 10kΩ) between the input pin and Vcc to keep the voltage HIGH when the button is not pressed.<br />  
 
-The **MPU6050** sends data to the first PicoW. It uses a I2C connection as it follows:<br />
+The **MPU6050** sends data to the first PicoW. It uses a I2C connection as follows:<br />
   - **SDA** -> GP0
   - **SCL** -> GP1
 The data sent is then interpretetd by our PicoW with the help of our ML Edge Impulse model. [Edge Impulse Model](https://studio.edgeimpulse.com/studio/395280).<br />  
 
-The **SSD1306** shows the direction of our movement after it has been interpreted by our PicoW. It uses I2C connection as it follows:<br />
+The **SSD1306** shows the direction of our movement after it has been interpreted by our PicoW. It uses I2C connection as follows:<br />
   - **SDA** -> GP2
   - **SCL** -> GP3
 
@@ -69,11 +69,11 @@ The information is then sent through WiFi connection to a second PicoW (Naomi's 
 ![KiCad schematic](ChioreanRebeca_PicoWand.svg)
 
 ### Pictures of hardware
-This shows the hardware until now. The display shows "IDLE" when the Pico Wand is not moving. It can also sense "left-right" movement and "up-down".
+This shows the hardware until now. The display shows "IDLE" when the Pico Wand is not moving. It can also sense "left-right" movement and "up-down".<br />  
 ![PicoWand hardware picture idle](picture_of_hardware.png)
 ![PicoWand hardware picture left right](picture_of_hardware_leftright.png)
 ![PicoWand hardware picture up down](picture_of_hardware_updown.png)
-Note that in the picture the position for up-down and left-right look inverted, that is because PicoWand is supposed to be held as a remote.
+Note that in the picture, the positions for "up-down" and "left-right" look inverted, that is because PicoWand is supposed to be held as a remote.
 
 ### Bill of Materials
 
