@@ -79,8 +79,11 @@ The magnetic door alarm project uses the following hardware components:
 These components work together to create a simple yet effective door alarm system.
 
 ### Schematics
-
+This is the Kicad Schematic:
 ![KiCad Schematics](KiCad.png)
+Here are some photos of the hardware:
+![Hardware1](hardware1.png)
+![Hardware2](hardware2.png)
 
 ### Bill of Materials
 
