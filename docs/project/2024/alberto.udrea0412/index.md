@@ -49,8 +49,11 @@ We will use a BME280 in order to gather environmental data. The Pico will proces
 ![KiCad schematic](schematics/kicad.png)
 
 ### Photos
-![photo1](schematics/photo1.jpg)
-![photo2](schematics/photo2.jpg)
+
+<p float="left">
+  <img src="schematics/photo1.png" width="49%" />
+  <img src="schematics/photo2.png" width="49%" />
+</p>
 
 
 ### Bill of Materials
