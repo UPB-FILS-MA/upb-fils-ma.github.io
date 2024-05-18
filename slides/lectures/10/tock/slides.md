@@ -289,7 +289,7 @@ similar to segfaults
 - due to MPU usage Tock apps fault on:
   - trying to access memory outside its data (includes peripheral access)
   - stack overflow
-  - trying to perform operations
+  - trying to perform privileged operations
 
 :: right ::
 
