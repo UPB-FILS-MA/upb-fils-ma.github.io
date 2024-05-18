@@ -42,7 +42,7 @@ During this week, I built a general idea of how I wanted the project to look lik
 After several issues regarding the soldering of the wires to the DC motors, I continued to assemble the chassis and to connect the DC motors to the L298N Motor Driver, the IR sensors to the Pico, the motor driver to the Pico, and, finally, I added the power supply to the Motor Driver and the board.
 Below are some pictures taken at the beginning of the process:
 ![](process1.png)
-![](process2.png)
+![](process.png)
 
 ### Week 20 - 26 May
 
