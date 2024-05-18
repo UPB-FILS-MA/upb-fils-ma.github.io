@@ -28,6 +28,9 @@ I choose this project because I wanted to have an RC car that I could control wi
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+- started building the project
+- soldered wires to the motors
+- made the connection between the Pico, L289N and the Motors
 
 ### Week 7 - 19 May
 
@@ -43,7 +46,17 @@ The main components of the hardware that I used are:
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Schematic](schema.png)
+
+
+### Photos
+
+[Photo1](photos/Photo1.jpeg)
+[Photo2](photos/Photo.jpeg)
+[Photo3](photos/Photo2.jpeg)
+[Photo4](photos/Photo3.jpeg)
+[Temp_Photo](photos/Photo4.jpeg)
+[Photo6](photos/Photo5.jpeg)
 
 ### Bill of Materials
 
@@ -72,6 +85,8 @@ The format is
 | [8 x Suruburi M3x30mm](https://www.phippselectronics.com/wp-content/uploads/2021/08/4WD_Robot_Car_Guide_V1.0.pdf)  | 8 Screws M3x30mm | [In the Kit.](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [16 x Suruburi M3x5mm](https://www.phippselectronics.com/wp-content/uploads/2021/08/4WD_Robot_Car_Guide_V1.0.pdf)  | 16 x Screws M3x5mm | [In the Kit.](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [10 x Piulite M3](https://www.phippselectronics.com/wp-content/uploads/2021/08/4WD_Robot_Car_Guide_V1.0.pdf)  | 10 x Nuts M3 | [In the Kit.](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
+| [4 x AA Duracell Bateries](https://www.emag.ro/baterii-alcaline-duracell-plus-power-mn1500-lr6-aa-blister-de-4-buc-5000394017641/pd/D69PRMBBM/)  | 4 AA Duracell Bateries | [15 RON](https://www.emag.ro/baterii-alcaline-duracell-plus-power-mn1500-lr6-aa-blister-de-4-buc-5000394017641/pd/D69PRMBBM/) |
+
 
 
 
@@ -83,6 +98,7 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [L289N](https://github.com/lucazulian/l298n) | no_std driver for L298N  | Used for the control of the driver motor |
+| [embassy](https://github.com/embassy-rs/embassy) | Embassy | An asynchronous executor and Hardware Abstraction Layer (HAL) designed for constructing embedded applications in Rust. |
 
 
 
