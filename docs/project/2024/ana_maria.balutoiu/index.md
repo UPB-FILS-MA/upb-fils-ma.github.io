@@ -52,9 +52,16 @@ The Pico’s Rust program reads the sensor input, controls the buzzer and LED, a
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+Hardware Design:
+I selected necessary components, including the Hall Effect sensor, a 555 timer IC, a buzzer, resistors, two LEDs, a capacitor, a transistor.
+Circuit Design: 
+Created a circuit diagram connecting the components.
 
 ### Week 7 - 19 May
-
+Software Setup: 
+Opened KiCad and created a new project.
+Component Placement: 
+Added components from the hardware design to the schematic and connected them according to the circuit diagram.
 ### Week 20 - 26 May
 
 ## Hardware
