@@ -130,7 +130,7 @@ Project will look more or less like the following diagram:
 
   From front                             | From top
   :--------------------------------------|--------------------------------------:
-  <img src="hardware_front.jpg" width="700" height="500"> | <img src="hardware_top.jpg" width="700" height="500">
+  <img src="hardware_front.jpg" width="700" height="500"/> | <img src="hardware_top.jpg" width="700" height="500"/>
 
   **Additional Pictures of the prototype**
 
@@ -138,7 +138,7 @@ Project will look more or less like the following diagram:
 
   Prototype from side                                             | Prototype from front
   :-----------------------------------------------------|-----------------------------------------------------:
-<img src="prototype_side.jpg" width="500" height="500"> | <img src="prototype_front.jpg" width="500" height="500">
+<img src="prototype_side.jpg" width="500" height="500"/> | <img src="prototype_front.jpg" width="500" height="500"/>
 
 **After submitting the prototype to show the main idea, I worked on the project more and I have the final looking under below!**
 
