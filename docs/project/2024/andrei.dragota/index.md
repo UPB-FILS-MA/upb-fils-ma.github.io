@@ -84,18 +84,18 @@ The microcontroller sends input data to the host system using the XInput API. Th
 ### Week 6 - 12 May
 Designed the hardware on the breadboard, applied the voltage dividers to the circuit, finished up the KiCad hardware schematic
 ### Week 7 - 19 May
-TBD
+Finished up the hardware on the breadboard + final version on KiCad. Should start with software now.
 ### Week 20 - 26 May
 TBD
 ## Hardware
 
-The controller has 16 buttons, 2 vibration motors(TODO), 2 joysticks, resistances of 220 ohms to not blow up the circuit (i don't know I'm not sure...yet). Pico will process all the inputs from the buttons and will translate it for the XInput app. 
+The controller has 16 buttons, 2 vibration motors, 2 joysticks, resistances of 220 ohms to not blow up the circuit. Pico will process all the inputs from the buttons and will translate it for the XInput app. 
 
 To implement the project, you need a board with a native USB port, such as the Raspberry Pi Pico.
 
 I chose to use two voltage dividers to save the digital pins on the board. The directional buttons and the A/B/X/Y buttons are grouped by 4 in a voltage divider.
 
-The disadvantage of these groupings is that two or more buttons from the same group cannot be read simultaneously. For example, pressing buttons A and B at the same time will send to the analog pin the value corresponding to pressing button B, not both. (I'll find a solution in the future... I hope)
+The disadvantage of these groupings is that two or more buttons from the same group cannot be read simultaneously. For example, pressing buttons A and B at the same time will send to the analog pin the value corresponding to pressing button B, not both. (fixed it, should work)
 
 Another compromise is the fact that, for reasons of availability, the "Trigger" buttons are not analog. The value sent to the XInput API is either 0% pressed or 100% pressed.
 
@@ -105,7 +105,13 @@ Another compromise is the fact that, for reasons of availability, the "Trigger" 
 
 ![hardware](hardware.png)
 
-Please bear in mind that this is not the final form, just a quick sketch. Moreover, pins, components and other stuff might change in the future (but it is better than nothing :D)
+
+
+
+
+
+![hardware_implementation](hardware_implementation.jpg)
+
 
 ### Bill of Materials
 
