@@ -28,7 +28,7 @@ an embedded operating systems that works like a desktop or server one
 - Has separate **kernel and user space**
   - most embedded OS have the one piece software philosophy
 - Runs untrusted apps in user space
-- **Microkernel** architecture
+- **Hybrid** architecture
 - Kernel (and drivers) written in Rust
 - Apps written in C/C++ or Rust (any language that can be compiled)
 
