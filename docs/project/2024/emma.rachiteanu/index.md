@@ -58,11 +58,10 @@ Place your KiCAD schematics here.
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [2* Motor Servo (probably) SG90 9g](https://datasheetspdf.com/datasheet-pdf/791970/SG90.html) | The servomotors | [15 RON](https://www.emag.ro/servomotor-sg90-180-de-grade-ai0156-s297/pd/D33V1GMBM/) |
-| [3* Display LCD](https://www.openhacks.com/uploadsproductos/eone-1602a1.pdf) | Display of the game | [16 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html?search_query=LCD+1602+cu+Interfata+I2C+si+Backlight+Albastru&results=2) |
-| [PLA Fillament](https://www.eshop.formwerk.ro/cumpara/filament-extrudr-pla-nx2-matt-1196) | Display of the game | [16 RON](https://www.eshop.formwerk.ro/cumpara/filament-extrudr-pla-nx2-matt-1196) |
-
-
+| [3* Servo Motor SG90 9g](https://datasheetspdf.com/datasheet-pdf/791970/SG90.html) | The servomotors | [15 RON](https://www.emag.ro/servomotor-sg90-180-de-grade-ai0156-s297/pd/D33V1GMBM/) |
+| [3* LCD 1602 i2c](https://www.openhacks.com/uploadsproductos/eone-1602a1.pdf) | Display of the game | [16 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html?search_query=LCD+1602+cu+Interfata+I2C+si+Backlight+Albastru&results=2) |
+| [PLA Fillament](https://www.eshop.formwerk.ro/cumpara/filament-extrudr-pla-nx2-matt-1196) | Plastic fillament | [125 RON](https://www.eshop.formwerk.ro/cumpara/filament-extrudr-pla-nx2-matt-1196) |
+| [L7805](https://www.sparkfun.com/datasheets/Components/LM7805.pdf) | 5V Voltage regulator | [2 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/937-l7805-stabilizator-de-tensiune-de-5-v-to-220.html?search_query=lm+7805+ic&results=7#idTab5) |
 
 
 ## Software
@@ -81,5 +80,6 @@ Place your KiCAD schematics here.
 1. [servo documentation + code snippet in python](https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/27-component_servo.html)
 2. [robot arm with the GPIO mapping](https://github.com/Makerfabs/PICO_Merchanical_Hand_Driver)
 3. [tic tac toe code logic for C++ or Python](https://www.geeksforgeeks.org/implementation-of-tic-tac-toe-game/)
+4. [i2c lcd display](https://microcontrollerslab.com/i2c-lcd-raspberry-pi-pico-micropython-tutorial/)
 
 ...
