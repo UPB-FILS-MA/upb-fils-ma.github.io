@@ -19,15 +19,19 @@ I chose this project because it was a dream of mine to wake up with natural sunl
 
 ## Architecture 
 
-![architecture](architectureChioreanLita.png)
+![architecture](schematic.png)
+
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I purchased the components for the project. I tried to see if the motor would rotate using thony and micropython, and happily, it worked.
 
 ### Week 7 - 19 May
+I set up the project in rust. I'm still fixing errors.
+On the other hand, I started designing the toothed disks for the 3D printer.
 
 ### Week 20 - 26 May
 
@@ -35,9 +39,23 @@ I chose this project because it was a dream of mine to wake up with natural sunl
 
 The pico gets input either from a web app or another pico connected through wifi(Rebeca's project: pico wand) and sends a signal to the motor driver (ULN2003) which in turn starts the stepper motor (28BYJ-48) that rolls the blinds up or down.
 
+## Components
+ - **28BYJ-48 stepper motor**: this motor is a unipolar stepper motor with 4 phases. It has the torque of about 0.34 kg per cm on its axis. This is enough to raise a lightweight model blind. 
+
+I will use this table for the clockwise direction to create a matrix where high is 1 and low is 0: 
+![motor_rotation](motor_rotation.png)
+
+For counterclockwise rotation, it is the same matrix, only reversed.
+
+ - **ULN2003 motor driver**: this module connects the motor to the pico. This allows the 4 phases of the motor to be controlled through GP02, GP03, GP04, GP05 on the pico which are set to high or low.
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad_schematic](kicad_schematic.jpg)
+
+## Photos
+![picture01](project_image01.jpg)
+![picture02](project_image02.jpg)
 
 ### Bill of Materials
 
