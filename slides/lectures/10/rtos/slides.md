@@ -27,7 +27,7 @@ for this section
 # Real Time?
 upper bound
 
-- **real time** means **performing** an action in **always** in a **deterministic** amount of **time**
+- **real time** means **performing** an action **always** in a **deterministic** amount of **time**
 - the amount of time can be large
 - **low latency** means that the amount if time must be small
 
