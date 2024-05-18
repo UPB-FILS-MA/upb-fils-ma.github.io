@@ -40,6 +40,10 @@ The line-following sensor array consists of two IR sensors that detect the line 
 During this week, I built a general idea of how I wanted the project to look like and how the hardware components should be connected. After that, I started to assemble the chassis and worked on the KiCad schematics of the electronic components.
 ### Week 7 - 19 May
 After several issues regarding the soldering of the wires to the DC motors, I continued to assemble the chassis and to connect the DC motors to the L298N Motor Driver, the IR sensors to the Pico, the motor driver to the Pico, and, finally, I added the power supply to the Motor Driver and the board.
+Below are some pictures taken at the beginning of the process:
+![](process1.png)
+![](process2.png)
+
 ### Week 20 - 26 May
 
 ## Hardware
@@ -56,7 +60,8 @@ The chassis provides the structural framework for the line following car, housin
 
 ### Schematics
 
-![KICad Schematics](./schematics.png)
+![KICad Schematics](./schematic.jpg)
+
 In the middle of the schematics, we have the Raspberry Pi Pico, which will be connected with the two IR Sensors, through the Gpio pins 2 and 3. On the left side, we have the 4 DC motors: the upper motors represent the motors from the left side of the chassis, while the ones below represent the right side. They are connected to the Motor Driver, and then to the Raspberry Pi Pico, through the Gpio Pins 10,11,12 and 13, while the enable pins of the driver are connected to the Gpio Pins 6 and 7 of the board. 
 
 
