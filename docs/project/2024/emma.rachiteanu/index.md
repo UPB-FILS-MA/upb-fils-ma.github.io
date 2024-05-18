@@ -49,6 +49,9 @@ Three LCD displays are mounted on the Pico, each containing a row of X's or O's.
 ### Schematics
 
 ![Block Diagram](img/kicad.png)
+![Block Diagram](img/project2.jpg)
+![Block Diagram](img/project1.jpg)
+![Block Diagram](img/project3.jpg)
 
 ### Bill of Materials
 
