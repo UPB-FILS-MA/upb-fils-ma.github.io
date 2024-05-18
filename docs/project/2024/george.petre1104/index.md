@@ -4,7 +4,7 @@ Remote Controlled Car using WIFI and a phone app.
 :::info 
 
 **Author**: George-Alexandru PETRE  \
-**GitHub Project Link**: https://github.com/UPB-FILS-MA/lab-GeorgePetre11
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-GeorgePetre11
 
 :::
 
