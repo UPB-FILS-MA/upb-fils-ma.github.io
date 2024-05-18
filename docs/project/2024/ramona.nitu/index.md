@@ -37,7 +37,11 @@ LCD Display Visually Represents the Morse Code Symbols:
 
 ### Week 6 - 12 May
 
+I temporarily assembled the hardware components on a breadboard for testing. I began by testing the code for each component individually to ensure they worked as expected. This step-by-step approach allowed me to troubleshoot and verify the functionality of each part before integrating them into the complete system.
+
 ### Week 7 - 19 May
+
+I've successfully assembled all the components and created the KiCad schematics, ensuring to modify certain components to match the actual parts that I have.
 
 ### Week 20 - 26 May
 
@@ -55,9 +59,30 @@ RGB LED (Common Cathode) + 220Ω Resistors - The RGB LED can emit different colo
 
 USB Cable - Used to power the Raspberry Pi Pico and for communication with the laptop.
 
+ ![Hardware1](./Hardware1.jpeg)
+ ![Hardware2](./Hardware2.jpeg)
+ ![Hardware3](./Hardware3.jpeg)
+ ![Hardware4](./Hardware4.jpeg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+ ![KiCad_Schematics](./KiCad_Schematics.png)
+
+-RGB LED:
+The common cathode of the RGB LED is connected to GND (pin 33).
+The red cathode is connected to GP1 (pin 2) through a resistor.
+The green cathode is connected to GP2 (pin 4) through a resistor.
+The blue cathode is connected to GP4 (pin 6) through a resistor.
+
+-Buzzer:
+The positive terminal of the buzzer is connected to GP7 (pin 10) of the Raspberry Pi Pico.
+The negative terminal of the buzzer is connected to GND (pin 3).
+
+-LCD 1602 + I2C Module:
+The SCL (Serial Clock) of the I2C module is connected to GP21 (pin 27) of the Raspberry Pi Pico.
+The SDA (Serial Data) of the I2C module is connected to GP20 (pin 26) of the Raspberry Pi Pico.
+The VCC of the I2C module is connected to VBUS (pin 40) for power.
+The GND of the I2C module is connected to GND (pin 38).
 
 ### Bill of Materials
 
@@ -89,10 +114,11 @@ The format is
 |---------|-------------|-------|
 | [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals 
 | [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
+| [embassy-hal](https://docs.rs/embassy-hal/latest/embassy_hal/) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 | [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
-| [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 
 
 ## Links
