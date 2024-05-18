@@ -42,9 +42,10 @@ The circuit features an on/off button that allows users to power the system up o
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+The hardware components arrived.
 ### Week 7 - 19 May
-
+Changed the power supply method, and came up with a new solution to power up the pico w.
+Continued to develop the software part, with focus on the onewire communication protocol with the temperature sensor.
 ### Week 20 - 26 May
 
 ## Hardware
