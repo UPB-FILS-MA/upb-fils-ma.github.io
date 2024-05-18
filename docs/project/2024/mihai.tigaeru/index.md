@@ -18,15 +18,17 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ## Architecture 
 
-![architecture](assets/Architecture.png)
+![architecture](Architecture.png)
 
 ## Log
 
 ### Week 6 - 12 May
 
-TBD
+- Created the documentation of the project
+- Added KiCAD Schematic
+- Added 3 new libraries
 
-### Week 7 - 19 May
+### Week 13 - 19 May
 
 TBD
 
@@ -45,8 +47,7 @@ TBD
 
 ### Schematics
 
-TBD
-
+![kicadschematic](KicadSCH.svg)
 ### Bill of Materials
 
 | Device | Usage | Price |
@@ -67,7 +68,9 @@ TBD
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| TBD | TBD | TBD |
+| [embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
+| [pcd8544](https://crates.io/crates/pcd8544) | Rust crate for PCD8544 displays | Used for initiliazing and writing on the PCD8544 display |
+| [tm1637-gpio-driver](https://crates.io/crates/tm1637-gpio-driver/2.0.6) | Rust crate for TM1637 microcontroller | Used for controlling the TM1637 module |
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |

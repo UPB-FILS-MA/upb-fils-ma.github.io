@@ -1,10 +1,12 @@
 # Line Follower
 A robot that follows a black line on a white background.
 
+:::info
 
 **Author**: Istudor Victor Mihai \
 **GitHub Project Link**: link_to_github
 
+:::
 
 ## Description
 
@@ -37,11 +39,22 @@ I chose this project because i started to have a passion for robotics. Being a m
 The "brain" of this robot will be the Raspberry Pi Pico microcontroller. The IR sensors and motor driver will be connected to it. The batteries will be able to power the motor driver and the Pico. All 4 of the 3V-6V DC motors will be hooked-up to the H-bridge.
 
 These are the components that i will use:
+
 ![Components](./Components.jpg)
+
+
+Soldering:
+
+![Solder](./soldering.jpg)
+
+The final product!
+
+![Robot](./robot.jpg)
 
 ### Schematics
 
 Place your KiCAD schematics here.
+(coming soon)
 
 ### Bill of Materials
 
