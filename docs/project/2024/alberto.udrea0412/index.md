@@ -51,8 +51,8 @@ We will use a BME280 in order to gather environmental data. The Pico will proces
 ### Photos
 
 <p float="left">
-  <img src="schematics/photo1.png" width="49%" />
-  <img src="schematics/photo2.png" width="49%" />
+  <img src="schematics/photo1.jpg" width="49%" />
+  <img src="schematics/photo2.jpg" width="49%" />
 </p>
 
 
