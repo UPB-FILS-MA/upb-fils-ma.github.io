@@ -18,7 +18,7 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ## Architecture 
 
-![architecture](Architecture.png)
+![architecture](assets/hardware/Architecture.png)
 
 ## Log
 
@@ -30,13 +30,21 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ### Week 13 - 19 May
 
-TBD
+- Modified KiCAD Schematic
+- Modified a library
+- Managed to configure all the components of the project in Rust
+- Finished Hardware
+- Designed the aspect of the project
 
 ### Week 20 - 26 May
 
 TBD 
 
 ## Hardware
+
+![opened](assets/hardware/Opened.jpg)
+![fprofile](assets/hardware/FrontProfile.jpg)
+![sprofile](assets/hardware/SideProfile.jpg)
 
 - **Joystick Module** is used for controlling the snake (interacting with the game) and it's connected to ADC pins such that the analog voltage is converted to digital values.
 - **Passive Buzzer** is used for *beeping* in various situations (sound feedback from the game).
@@ -47,7 +55,7 @@ TBD
 
 ### Schematics
 
-![kicadschematic](KicadSCH.svg)
+![kicadschematic](assets/kicad/Schematic.svg)
 ### Bill of Materials
 
 | Device | Usage | Price |
@@ -70,7 +78,7 @@ TBD
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
 | [pcd8544](https://crates.io/crates/pcd8544) | Rust crate for PCD8544 displays | Used for initiliazing and writing on the PCD8544 display |
-| [tm1637-gpio-driver](https://crates.io/crates/tm1637-gpio-driver/2.0.6) | Rust crate for TM1637 microcontroller | Used for controlling the TM1637 module |
+| [tm1637-embedded-hal](https://crates.io/crates/tm1637-embedded-hal) | Rust crate for TM1637 microcontroller | Used for controlling the TM1637 module |
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |
 | TBD | TBD | TBD |
