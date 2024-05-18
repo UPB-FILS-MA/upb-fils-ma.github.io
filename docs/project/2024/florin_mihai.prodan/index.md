@@ -50,8 +50,9 @@ In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualiz
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KICad Schematics](./KicadScheme.png)
 
+In the center of the schematics there is the Raspberry Pi Pico W. In it's left side, there are 3 shift registers (74HC595) which I use for the 24 leds that will form my airplane shape. In the right side of the Pico W, there is the LCD connection (actually the PCF8574 I2C module that I use to connect the 1602LCD with my Raspberry Pi Pico W), the 2 push buttons and the potentiometer.
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
