@@ -1,0 +1,98 @@
+{
+    "reg": [
+        {
+            "bits": 1,
+            "name": "P",
+            "type": 6,
+            "attr": [
+                "0: Invalid",
+                "1: Valid"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "R/W",
+            "type": 7,
+            "attr": [
+                "0 - R",
+                "1 - RW"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "U/S",
+            "type": 7,
+            "attr": [
+                "0: User",
+                "1: Super"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "PWT",
+            "type": 2,
+            "attr": [
+                "0 - W Back",
+                "1 - W Through"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "PCD",
+            "type": 2,
+            "attr": [
+                "Cache"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "A",
+            "type": 4,
+            "attr": [
+                "Accessed"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "D",
+            "type": 4,
+            "attr": [
+                "Dirty"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "PAT",
+            "type": 2,
+            "attr": [
+                "Attributes"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "G",
+            "type": 2,
+            "attr": [
+                "Global"
+            ]
+        },
+        {
+            "bits": 3,
+            "name": "AVL",
+            "type": 5,
+            "attr": [
+                "available for OS"
+            ]
+        },
+        {
+            "bits": 20,
+            "name": "Frame Number",
+            "type": 3,
+            "attr": []
+        }
+    ],
+    "config": {
+        "lanes": 2,
+        "hspace": 1200
+    }
+}
