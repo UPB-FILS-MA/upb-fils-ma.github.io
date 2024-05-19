@@ -85,13 +85,14 @@ The format is
 
 -->
 
-| Device | Usage | Price | \
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | \
-| [Display](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196) | Displays the game | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/12392-modul-lcd-de-18-cu-spi-i-controller-st7735-128x160-px.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYW_FcUUf-veHQYVdumHZVaVkLbAsaFEqVJjGCpSuVWwelo4iq26zUQaAlL_EALw_wcB) | \
-| Bredboard | Connecting the components | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) | \
-| Wires | Connecting the components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/888-set-fire-tata-tata-40p-20-cm.html?search_query=fire&results=437) | \
-| Resistances | Needed in order to not damage the components | [5 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) | \
-| 5 Buttons | For controlling the game | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) | \
+| Device | Usage | Price | 
+|--------|--------|-------|
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | 
+| [Display](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196) | Displays the game | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/12392-modul-lcd-de-18-cu-spi-i-controller-st7735-128x160-px.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYW_FcUUf-veHQYVdumHZVaVkLbAsaFEqVJjGCpSuVWwelo4iq26zUQaAlL_EALw_wcB) | 
+| Bredboard | Connecting the components | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) | 
+| Wires | Connecting the components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/888-set-fire-tata-tata-40p-20-cm.html?search_query=fire&results=437) | 
+| Resistances | Needed in order to not damage the components | [5 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) | 
+| 5 Buttons | For controlling the game | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) | 
 | 2/3 Buzzers | Playing music | [4 or 6 RON](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html?search_query=buzzer&results=62) | 
 
 ## Software
