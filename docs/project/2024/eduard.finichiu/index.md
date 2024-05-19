@@ -95,11 +95,11 @@ Kicad project also atached here in the folder and in the project repo.
 
 Here are some pictures IRL:
 
-![picture1](<pic(1).jpg>)
+![picture1](<pic (1).jpg>)
 
-![picture2](<pic(2).jpg>)
+![picture2](<pic (2).jpg>)
 
-![picture3](<pic(3).jpg>)
+![picture3](<pic (3).jpg>)
 
 ### Bill of Materials
 
