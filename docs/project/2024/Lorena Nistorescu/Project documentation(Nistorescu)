@@ -62,10 +62,18 @@ In this week, I finally finished the hardware part, including the kicad schemati
 
 ### Schematics
 
-![KICADoor](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/assets/120091173/9e9a5397-384d-43d5-ad6c-95f6c4b8de39)
+Shortly, I am going to admit that the KICAD schematics took me with all the coffee breaks included, somewehere around 16-20h :) 
+Also, I tried to make the schematics clearer and maybe, help me to notice, if u notice some other mistakes.
 
+Legend of the KICAD schematics:
+U1  represents the RFID
+U2  represents the SENSOR TOUCH
+U4  represents the LM5296S
+U6  represents the POWER SUPPLY
+U7  represents the LOCK
+U8  represents the RELAY MODULE
 
-![RFID](https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/assets/120091173/9e9a5397-384d-43d5-ad6c-95f6c4b8de39)
+Q1 is NPN transistor 2N2222
 
 
 
@@ -116,4 +124,6 @@ The format is
 1. [link](https://www.youtube.com/watch?v=LfptYHFc6xU)| The main idea source|
 2. [link](https://youtube.com/shorts/94idGywsd70?si=_esn9RnLSelw9FPq)| RFID DOOR LOCK|
 3. [link](https://www.youtube.com/watch?v=VP0qLUOdvuU)| DOOR LOCK USING BLYNK APP TUTORIAL|
+4. [link](https://youtu.be/RAbTdeLU2JQ?si=CxUgyN9DnoZCcLRv)| LM2596S tutorial building|
+
 ...
