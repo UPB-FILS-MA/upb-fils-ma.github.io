@@ -48,8 +48,6 @@ Next on the list was choosing the structure of the Blackjack game logic. The par
 With this objective in mind, I set out to create the mold for the Pico-side Blackjack logic. This was done quite quickly and allowed me to move on to the next part of the project, and the most important: the scanner, which will be taken care of in the next week or so.
 
 
-The first
-
 ### Week 7 - 19 May
 
 
