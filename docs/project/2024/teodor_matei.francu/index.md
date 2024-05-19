@@ -67,7 +67,17 @@ The microcontroller, depending on what is happening in game, will tell the buzze
 
 At the moment, this is how my project looks like right now. Keep in mind that this version is meant to be used as a testing grounds for the software program. As we approach the day of the final product, for example, the buttons and lcd display will be moved onto a smalled bredboard, to allow for an easier way of pressing them, without having to jam your fingers in between wires. Furthermore, I will design a small case for the bredboard which will resemble a game console.
 
+These are the connections of the microcontroller:
+![Micro](Microcontroller-Close.png)
 
+These are the buttons, which are connected using pull-up resistors:
+![Buttons](Buttons.png)
+
+This is how the lcd diplay is connected to the microcontroller:
+![LCD](Top-Down-View.png)
+
+These are the buzzers of the project:
+![Buzzers](Buzzers.png)
 
 ### Schematics
 
