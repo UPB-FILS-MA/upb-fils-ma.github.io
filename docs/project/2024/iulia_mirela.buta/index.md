@@ -10,7 +10,7 @@ A fire alarm system trigerred by a fire source or other sort of light source in 
 
 
 
-## Description:
+## Description: 
 
 A fire alarm system trigerred by a fire source or other sort of light source in the proximity. It includes the following features:
 - Detection of the fire using a Flame Sensor.
@@ -52,12 +52,11 @@ The architecture of the project is the following:
 ## Connection Overview:
 * The fire sensor is connected to one of the GPIO pins of the Raspberry Pi Pico for detecting fire or smoke.
 * The buzzer is connected to another GPIO pin to sound the alarm when triggered.
+* The 16×2 I2C LCD Display is connected to the Raspberry Pi Pico via SPI for displaying system status and alerts.
 * The ST7789 display is connected to the Raspberry Pi Pico via SPI for displaying system status and alerts.
 * Power supply is connected to Raspberry Pi Pico for powering the entire system.
 
 ### Schematics
-
-```
 +-------------------------+
 |      Fire Sensor        |
 +-------------------------+
@@ -73,9 +72,14 @@ The architecture of the project is the following:
               |                     |
               V                     V
          +---------+           +-----------+
+
+         |  Buzzer |           |16×2 I2C LCD|
+         +---------+           +-----------+
+
          |  Buzzer |           |  ST7789   |
          +---------+           +-----------+
 ```
+
 
 ### Bill of Materials
 
@@ -105,9 +109,14 @@ The format is
 | Library                                  | Description                        | Usage                              |
 |-|-|-|
 
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 pheripherals | Used for accesing the pheripherals of the microcontroller  |
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display library | Used for writing to the display |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1.[Fire Alarm](https://how2electronics.com/fire-alarm-system-using-flame-sensor-raspberry-pi-pico/)
+2.[https://diyprojectslab.com/flame-sensor-with-raspberry-pi-pico/]
+3.[https://www.youtube.com/watch?v=y1_scz9I0go]
+
