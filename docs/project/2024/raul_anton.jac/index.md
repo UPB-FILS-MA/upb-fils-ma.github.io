@@ -92,7 +92,7 @@ The KiCad Schematics with all components connected.
 |---------|-------------|-------|
 | [embedded-hal](https://github.com/rust-embedded/embedded-hal)| Foundation for drivers | Used for components to communicate with software |
 | [FatFS](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
-| [ssd1306](https://github.com/jamwaffles/ssd1306) | Driver for 1602 lcd | Used to transfer the text from pico to lcd |
+| [ssd1306](https://github.com/jamwaffles/ssd1306) | Driver for 0.91 OLED Display | Used to transfer the text from pico to lcd |
 
 
 ## Links
