@@ -65,7 +65,7 @@ I connected the step-up voltage to the motor driver and the fans to the motor dr
 
 * **The KiCAD schematic:**
 
-![kicad_schematic](kicad_schematic2.png)
+![kicad_schematic](kicad_schematic22.png)
 
 * **In Reality:**
 ![hardware pic 1](Pic_1.jpg)
