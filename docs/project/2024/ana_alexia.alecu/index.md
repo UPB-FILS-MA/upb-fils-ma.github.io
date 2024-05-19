@@ -44,9 +44,21 @@ The architecture components are the following:
 
 The Raspberry Pi Pico microcontroller is perfect for this Pitch Detection project, as it requires a lot of computational power due to the signal processing. The Ky-038 microphone sound sensor module is used for capturing the sounds, emitted by a Piano App, through some PC Speakers. Although the hardware part of this project is not complex, as this technological endeavour does not rely on the hardware part, but rather on the software one, I believe it is still a challenging programming project that will help me develop my technical skills needed for my carrer.
 
+The whole setup
+![Pic3](hardware/pic3.jpeg)
+
+The LCD 1602 I2C Module
+![Pic1](hardware/pic1.jpeg)
+
+The Ky-038 Sound Sensor Module
+![Pic2](hardware/pic2.jpeg)
+
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCAD Schematic1](KiCad/Pitch_Detector_Setup.png) 
+![KiCAD Schematic2](KiCad/Ky-038_Sound_Sensor.png)
+
 
 ### Bill of Materials
 
@@ -76,8 +88,7 @@ The format is
 |---------|-------------|-------|
 | [Embassy-rs](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming | Used for programming the behavior of the Raspberry Pi Pico and for streamlining specific concepts within embedded programming |
 | [ag-lcd](https://github.com/mjhouse/ag-lcd) | Rust port of the LiquidCrystal library | Used for writing to the lcd1602 |
-| [pitch_detector](https://docs.rs/pitch-detector/latest/pitch_detector/) | Rust library for pitch and note detection | Used to detect the predominant frequency of a signal |
-| [pitch-detection](https://github.com/alesgenova/pitch-detection) | Musical note detector library | Used to determine the pitch of a sound sample |
+
 
 ## Links
 
