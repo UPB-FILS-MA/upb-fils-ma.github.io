@@ -11,8 +11,7 @@ Sensor Control System
 
 ## Description
 
-Using a Raspberry Pi Pico microcontroller board along with temperature and light sensors, this project aims to create a system capable of autonomously regulating environmental conditions for sensitive plants or similar applications. The system is designed to trigger a small motor with blades (acting as a fan) and adjust the intensity of an LED based on real-time sensor data. Using the Rust programming language, the project combines hardware and software components to create an efficient and reliable solution. Additionally, the system incorporates Wi-Fi connectivity to enable remote monitoring and control, allowing users to access sensor data and manually trigger the fan and LED through a web interface.
-
+Using a Raspberry Pi Pico microcontroller board along with temperature and light sensors, this project aims to create a system capable of autonomously regulating environmental conditions for sensitive plants or similar applications. The system is designed to trigger a small motor with blades (acting as a fan) and adjust the intensity of an LED based on real-time sensor data. A small 10 segment LED display makes it possible to view the temperature and ambient light data (switching between them with a push button) locally. A buzzer and will also notify the user whenever the actions have started (the LED or the motor were turned on). Using the Rust programming language, the project combines hardware and software components to create an efficient and reliable solution. Additionally, the system incorporates Wi-Fi connectivity to enable remote monitoring and control, allowing users to access sensor data and manually trigger the fan and LED through a web interface.
 
 
 ## Motivation
@@ -41,6 +40,9 @@ Users can access the control interface from a web browser to view sensor data an
 
 ### Week 10 - 29 April - Started the Project documentation and setting things up
 
+### Week 12 - 13 May - Worked on assembling the project and the KiCad Schematics
+
+
 ## Hardware
 
 Raspberry Pi Pico - the microcontroller which acts as the "brain" of the whole project
@@ -53,9 +55,14 @@ DS18B20 Temperature sensor - used to measure the ambient temperature
 
 Jumper wires - used to connect all the parts together
 
+![Hardware Photo](Hardware_1.JPG)
+![Hardware Photo](Hardware_2.JPG)
+
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![Hardware Schematic](KiCadSchematic.png)
+
 
 ### Bill of Materials
 

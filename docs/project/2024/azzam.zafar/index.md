@@ -2,6 +2,8 @@
 
 Security system that performs different actions based on the distance of a person or an object
 
+:::info
+
 **Author**: Zafar Azzam \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Azzamjoy44
 
@@ -11,9 +13,9 @@ Security system that performs different actions based on the distance of a perso
 
   - I will use an Ultrasonic sensor to detect an object, and to see how close an object is to the sensor. Based on how close the object is, certain actions will happen.
 
-  - When the sensor will detect an object within a specific range (e.g., 100 cm) an LED will light up. If the object gets even closer to the sensor (e.g., 60 cm) the LED will remain lit and a buzzer (alarm) will start buzzing. And when the object comes even closer ( e.g., less than or equal to 30cm), the LED will remain lit and the buzzer will keep buzzing and two servo motors (with carboard attached) will rotate 90 degrees (one servo motor will rotate clockwise, the other servo motor will rotate anticlockwise) to show a closing gate.
+  - When the sensor will detect an object within a specific range (e.g., 70 cm) an LED will light up. If the object gets even closer to the sensor (e.g., 50 cm) the LED will remain lit and a buzzer (alarm) will start buzzing. And when the object comes even closer ( e.g., less than or equal to 30cm), the LED will remain lit and the buzzer will keep buzzing and two servo motors (with carboard attached) will rotate 90 degrees (one servo motor will rotate clockwise, the other servo motor will rotate anticlockwise) to show a closing gate.
 
-  - If the object starts moving away, and moves beyond a specific distance (e.g., 30 cm) from the sensor, the two servo motors will rotate back to their initial state, but the buzzer will keep buzzing, and the LED will remain lit. If the object keeps moving further away and moves beyond another specific distance (e.g., 60 cm), the buzzer will stop buzzing but the LED will remain lit. And finally, when the object moves further away (e.g., more than 100 cm), the LED will turn off.
+  - If the object starts moving away, and moves beyond a specific distance (e.g., 30 cm) from the sensor, the two servo motors will rotate back to their initial state, but the buzzer will keep buzzing and the LED will remain lit. If the object keeps moving further away and moves beyond another specific distance (e.g., 50 cm), the buzzer will stop buzzing but the LED will remain lit. And finally, when the object moves further away (e.g., more than 70 cm), the LED will turn off.
 
   - An LCD will be constantly displaying the distance between the object and the sensor.
 
@@ -23,15 +25,17 @@ I decided on this idea because of its real world applications. This project is a
 
 ## Architecture 
 
-![Architecture](project_architecture.svg)
+![Architecture](project_architecture_light_mode.svg#gh-light-mode-only)![Architecture](project_architecture_dark_mode.svg#gh-dark-mode-only)
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I managed to make the HC-SR04 ultrasonic sensor work properly. I also managed to make the LED turn on and remain lit when the distance between an object and the sensor is less than or equal to 60 cm, and the LED turns off when the object goes beyond 60 cm away from the sensor.
 
 ### Week 7 - 19 May
+I was able to make the buzzer start buzzing, and keep the LED lit on, when the distance between an object and the sensor is less than or equal to 45 cm. Now when the object is more than 45 cm away from the sensor and is less than or equal to 60 cm away from the sensor, the buzzer stops buzzing, but the LED remains lit and the LED functionalities are intact. I managed to make the LCD 1602 I2C work but I need to integrate the LCD into my project.
 
 ### Week 20 - 26 May
 
@@ -39,17 +43,21 @@ I decided on this idea because of its real world applications. This project is a
 
   - I'm using the Raspberry Pi Pico WH development board, which has the RP2040 microcontroller chip that handles processing and interfaces with every piece of hardware.
 
-  - Using female-to-male and male-to-male jumper wires, components will be connected via a breadboard.
+  - Components will be connected using a breadboard and female-to-male jumper wires, male-to-male jumper wires, and female-to-female jumper wires.
 
   - Object detection and distance measurement will be handled by the HC-SR04 Ultrasonic sensor. Various states will be indicated by; a monochromatic LED that is connected with a 1K resistor to limit the current, a Buzzer, and two SG90 Servo motors.
 
-  - An LCD will be used to display the distance of the object in real-time.
+  - An I2C LCD will be used to display the distance between the sensor and the object in real-time.
 
   - The complete system can be powered on a 9V battery, which makes the system portable and independent.
 
+These are images of the physical hardware and connections
+![Hardware1](Project_Hardware_Image_1.jpg)
+![Hardware2](Project_Hardware_Image_2.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](KiCad_Project_Schematic_Image.png)
 
 ### Bill of Materials
 
@@ -72,8 +80,9 @@ The format is
 | [Micro USB Cable](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=Cablu+Micro+USB+1+m+alb&results=32) | For flashing the program to the microcontroller | [3.48 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=Cablu+Micro+USB+1+m+alb&results=32) |
 | [Breadboard](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=Breadboard+830+puncte+MB-102%09&results=584) | For connections | [10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=Breadboard+830+puncte+MB-102%09&results=584) |
 | [Jumper Wires](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=65+x+fire+jumper%09&results=355) | For connections | [11.86](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=65+x+fire+jumper%09&results=355) |
-| [Female-Male Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) | For connections | [5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) |
-| [Male-Male Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) | For connections | [2.85 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
+| [Female-to-male Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) | For connections | [5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) |
+| [Male-to-male Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) | For connections | [2.85 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
+| [Female-to-female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/90-fire-colorate-mama-mama-40p.html?search_query=male-male+wires&results=1) | For connections | [7.99 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/90-fire-colorate-mama-mama-40p.html?search_query=male-male+wires&results=1) |
 | [9V Battery](https://www.bricodepot.ro/electrice/lanterne-si-baterii/acumulator-reincarcabil-hr-9-v.html) | DC Voltage source | [29.74 RON](https://www.bricodepot.ro/electrice/lanterne-si-baterii/acumulator-reincarcabil-hr-9-v.html) |
 | [9V Battery Holder](https://www.optimusdigital.ro/ro/suporturi-de-baterii/20-conector-pentru-baterie-de-9-v.html?search_query=battery&results=24) | DC Voltage source holder | [1.29 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/20-conector-pentru-baterie-de-9-v.html?search_query=battery&results=24) |
 | [LEDs](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=LED+5mm+-+Culoare+%3A+Ro%C8%99u%09&results=744) | Indicator | [0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=LED+5mm+-+Culoare+%3A+Ro%C8%99u%09&results=744) |

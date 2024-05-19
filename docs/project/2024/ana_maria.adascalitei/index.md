@@ -48,6 +48,7 @@ The microcontroller is connected to a power supply so we can continuously receiv
 
 ### Week 6 - 12 May
 
+
 This week was dedicated to advancing the GreenGuardian project. After thorough research to gather inspiration, I meticulously selected the necessary components and acquired a suitable plant for testing. Additionally, I commenced the schematic design using KiCad, a pivotal step towards materializing the project.
 
 ### Week 7 - 19 May
@@ -57,9 +58,14 @@ However this week, during the implementation phase, an unforeseen challenge aros
 
 This setback necessitated a pause in the physical execution of the project, as the absence of crucial components hindered progress. Nonetheless, this period provided an opportunity for reevaluation and meticulous planning to ensure seamless project execution once all components are available.
 
+
+### Week 7 - 19 May
+
+
 ### Week 20 - 26 May
 
 ## Hardware
+
 
 The hardware setup for the GreenGuardian project encompasses a comprehensive array of components tailored to ensure effective plant monitoring. 
 
@@ -70,6 +76,13 @@ Additionally, a dedicated power supply unit is incorporated to ensure uninterrup
 ### Schematics
 
 ![KiCad photo](./kicad.jpeg)
+
+Detail in a few words the hardware used.
+
+### Schematics
+
+Place your KiCAD schematics here.
+
 
 ### Bill of Materials
 
