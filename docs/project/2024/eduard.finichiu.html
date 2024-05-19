@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.704f9636.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.251da67e.js" defer="defer"></script>
 <script src="/assets/js/main.bfe96e87.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -50,8 +50,13 @@ Barometric sensor offers the possibility of checking room temperature.</p>
 <p>This architecture ensures seamless interaction between the components, allowing for efficient monitoring and control of the PetFeeder via the Raspberry Pico.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<p>Bought hardware parts.
+Mounted PICO on bread board. Wrote the code for barometric sensor. Tested PWM for servo.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<p>Started hating PWM and put the whole thing together.
+I did the KICAD schematic.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
+<p>Implementing water level sensor and writing code for the rest of the hardware.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <p>Pico W - brain of the Pet Feeder</p>
 <p>Motor - delivers food</p>
@@ -60,7 +65,12 @@ Barometric sensor offers the possibility of checking room temperature.</p>
 <p>Water Level sensor - no water, no current continuity</p>
 <p>Power Supply - 4 * R6 1.5V battery and a voltage divider to go at 5V</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p>Place your KiCAD schematics here.</p>
+<p><img decoding="async" loading="lazy" alt="schematics" src="/assets/images/kicad-681fd990b4af7d491ecd30293890d035.png" width="3507" height="2480" class="img_ev3q"></p>
+<p>Kicad project also atached here in the folder and in the project repo.</p>
+<p>Here are some pictures IRL:</p>
+<p><img decoding="async" loading="lazy" alt="picture1" src="/assets/images/pic1-a241341e5fd1f934f7c199ad69305840.jpg" width="1600" height="1204" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="picture2" src="/assets/images/pic2-51f231c9c3377f583b71e8e7e12df4d6.jpg" width="1600" height="1204" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="picture3" src="/assets/images/pic3-852e7ac175b9701ab4920011c4398f1b.jpg" width="1600" height="1204" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td><a href="https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf" target="_blank" rel="noopener noreferrer">BMP280</a></td><td>The barometric sensor</td><td><a href="https://www.optimusdigital.ro/en/pressure-sensors/1666-modul-senzor-de-presiune-barometric-bmp280.html" target="_blank" rel="noopener noreferrer">9 RON</a></td></tr><tr><td><a href="https://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf" target="_blank" rel="noopener noreferrer">OV7670 Camera</a></td><td>Camera</td><td><a href="https://www.optimusdigital.ro/en/optical-sensors/624-modul-camera-ov7670.html" target="_blank" rel="noopener noreferrer">16 RON</a></td></tr><tr><td><a href="http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf" target="_blank" rel="noopener noreferrer">Servo Motor</a></td><td>The servo motor</td><td><a href="https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&amp;results=196" target="_blank" rel="noopener noreferrer">14 RON</a></td></tr><tr><td><a href="https://circuitdigest.com/microcontroller-projects/interfacing-water-level-sensor-with-arduino" target="_blank" rel="noopener noreferrer">Water level sensor</a></td><td>The water level sensor</td><td><a href="https://www.optimusdigital.ro/en/others/272-senzor-de-nivel-al-apei.html" target="_blank" rel="noopener noreferrer">2 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
