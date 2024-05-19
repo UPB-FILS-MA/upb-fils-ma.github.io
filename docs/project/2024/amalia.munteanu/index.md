@@ -26,7 +26,10 @@ I've always taken a big interest in the game development area, and thought it wo
 ### Week 6 - 12 May
 
 ### Week 7 - 19 May
- - This week I was able to finish the Hardware of my project and create the schematics of it using Kicad. 
+ - This week I was able to finish the Hardware of my project and create the schematics of it using Kicad.
+ - I started working on the software part of my project.
+ - Started designing a shell in which I would be able to place my hardware and make it look more appealing to the public, by hiding the wires and the components such as the pico and buzzers.
+   
 ### Week 20 - 26 May
 
 ## Hardware
