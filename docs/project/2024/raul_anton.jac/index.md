@@ -63,7 +63,7 @@ I used the Pico RP2040 W as the "brain" of the entire project, a MicroSD Card Re
 ### Schematics
 
 The KiCad Schematics with all components connected.
-![KiCad Schematics photo](./KiCad.png)
+![KiCad Schematics photo](./KiCad-1.png)
 
 
 ### Bill of Materials
