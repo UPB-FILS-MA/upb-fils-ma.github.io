@@ -24,7 +24,7 @@ I wanted to create the Smart Piggy Bank to merge traditional savings methods wit
 
 ## Architecture 
 
-![Schematic](schematic.png)
+![Schematic](schematic.jpg)
 
 
 ## Log
