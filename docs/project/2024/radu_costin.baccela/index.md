@@ -92,7 +92,7 @@ KiCad schematic of the RustFlower project:
 | [Male-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) | Connects components to the breadboard | [5 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) |
 | [Female-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) | Used for extending connections between components | [3 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) |
 | [Resistors](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) | Controls current flow and voltage levels | [15 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) |
-| [MCP3008](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) | Created aditional ADC ports | [15 RON](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) |
+| [MCP3008](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) | Creates aditional ADC ports | [15 RON](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) |
 
 ## Software
 
