@@ -65,7 +65,9 @@ The microcontroller, depending on what is happening in game, will tell the buzze
 
 ## Hardware
 
-This will be filled in at a later date, when I am more confident in what parts are needed to be used.
+At the moment, this is how my project looks like right now. Keep in mind that this version is meant to be used as a testing grounds for the software program. As we approach the day of the final product, for example, the buttons and lcd display will be moved onto a smalled bredboard, to allow for an easier way of pressing them, without having to jam your fingers in between wires. Furthermore, I will design a small case for the bredboard which will resemble a game console.
+
+
 
 ### Schematics
 
