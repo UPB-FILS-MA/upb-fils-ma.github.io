@@ -88,8 +88,7 @@ The format is
 |---------|-------------|-------|
 | [Embassy-rs](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming | Used for programming the behavior of the Raspberry Pi Pico and for streamlining specific concepts within embedded programming |
 | [ag-lcd](https://github.com/mjhouse/ag-lcd) | Rust port of the LiquidCrystal library | Used for writing to the lcd1602 |
-| [pitch_detector](https://docs.rs/pitch-detector/latest/pitch_detector/) | Rust library for pitch and note detection | Used to detect the predominant frequency of a signal |
-| [pitch-detection](https://github.com/alesgenova/pitch-detection) | Musical note detector library | Used to determine the pitch of a sound sample |
+
 
 ## Links
 
