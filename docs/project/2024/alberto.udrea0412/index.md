@@ -42,18 +42,39 @@ We also made progress in the hardware part of the project, basically grounding t
 
 We will use a BME280 in order to gather environmental data. The Pico will process this gathered data in order to print meaningful graphics on the provided display. We will also use several push buttons in order to switch between the available data
 
-### Schematics
+### Schematics and Photos
 [For the KiCad schematic files, click here](https://github.com/UPB-FILS-MA/project-UdrAlberto/tree/main/schematics)
 
-
+<table>
+<tr>
+ <th>Schematics</th>
+<td>
+ 
 ![KiCad schematic](schematics/kicad.png)
 
-### Photos
+</td>
 
-<p float="left">
-  <img src="schematics/photo1.jpg" width="49%" />
-  <img src="schematics/photo2.jpg" width="49%" />
-</p>
+<td>
+ 
+![Simpler KiCad schematic](schematics/simple_kicad.png)
+
+</td>
+</tr>
+
+<tr>
+ <th>Photos</th>
+ <td>
+  
+![photo1](schematics/photo1.jpg)
+
+</td>
+<td>
+ 
+![photo2](schematics/photo2.jpg)
+
+</td>
+</tr>
+</table>
 
 
 ### Bill of Materials
