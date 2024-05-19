@@ -51,7 +51,7 @@ The Motion-based Alarm System leverages essential electronic components designed
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad Schematic](project_scheamtic.png)
 
 ### Bill of Materials
 
