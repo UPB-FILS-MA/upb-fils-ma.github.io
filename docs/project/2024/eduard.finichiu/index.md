@@ -2,7 +2,7 @@
 
 Automatic food dispenser for animals
 
-:::
+:::info
 
 **Author**: FINICHIU Eduard Adelin \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-EdwardAdelin.git
