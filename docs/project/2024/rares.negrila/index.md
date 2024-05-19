@@ -105,7 +105,7 @@ Laser processing:
 
 Analog signal processing:
 
-[hardware_on_breadboard](assets/hardware_3.jpeg)
+
 
 
 
