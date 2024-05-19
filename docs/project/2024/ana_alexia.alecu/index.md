@@ -46,7 +46,9 @@ The Raspberry Pi Pico microcontroller is perfect for this Pitch Detection projec
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCAD Schematic1](KiCad/Pitch Detector Setup.PNG)
+![KiCAD Schematic2](KiCad/Ky-038 Sound Sensor.PNG)
+
 
 ### Bill of Materials
 
