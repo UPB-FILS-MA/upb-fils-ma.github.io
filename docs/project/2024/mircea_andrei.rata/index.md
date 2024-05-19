@@ -1,7 +1,7 @@
-# Burglar alarm with notification via email
+# SmartGuard: Raspberry Pi Pico W Burglar Alarm System
 
- A smart burglar alarm system, equipped with motion detection, email alerts and keypad for security.
-
+ Raspberry Pi Pico W-powered Smart Burglar Alarm System with Multi-Sensor Detection.
+ 
 :::info 
 
 **Author**: RATA MIRCEA-ANDREI \
@@ -43,14 +43,32 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 ### 26.04-3.05
     I already learned how it should work, and I am still at the hardware part, at all the connection and everything. I try to make them work
+    
+### 6.05-10.05
+    I manage to do all the hardware part and finished soldering all the parts.
+    
+### 13.05-17.05
+    I am am the software part,with small steps trying to learn how to do it.
 
 ## Hardware
 
 The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion detection, an LED for visual alerts, a buzzer for audio alerts, an LCD screen for display, and a keypad for user input and password authentication.
+- **Raspberry Pi Pico W** is the microcontroller,the brain of this project.
+- **Passive Infrared (PIR) sensor**  is used to detect movement.
+- **LED** is used to provide visual alerts when motion is detected.
+- **Passive Buzzer** is used for making sound when the alarm is triggered.
+- **LCD with I2C MODULE** is used for displaying the information on lcd.
+- **Matrix keypad** allows users to input a password for authentication and disarm the alarm system.
+- **Breadboard** is used for connecting every pin of the hardware components.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicadschematic](kicad.png)
+
+ **Here are also a few pictures of the actual project** :
+ 
+![Hardware1](Hardware1.jpeg)
+![Hardware2](Hardware2.jpeg)
 
 ### Bill of Materials
 
@@ -78,6 +96,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+|[embassy-rp](https://crates.io/crates/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
+|[PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-Width Modulation|Used to make buzzer sound louder|
+| [embassy-executor](https://crates.io/crates/embassy-executor) | Executor for Rust Embedded Systems | An async/await executor designed for embedded usage|
+| [GPIO](https://crates.io/crates/gpio) | GPIO  | Used for interacting with GPIO Pins of the Pi Pico |
+| TBD | TBD | TBD |
+| TBD | TBD | TBD |
 
 ## Links
 

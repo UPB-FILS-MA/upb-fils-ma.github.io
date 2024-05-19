@@ -37,7 +37,11 @@ LCD Display Visually Represents the Morse Code Symbols:
 
 ### Week 6 - 12 May
 
+I temporarily assembled the hardware components on a breadboard for testing. I began by testing the code for each component individually to ensure they worked as expected. This step-by-step approach allowed me to troubleshoot and verify the functionality of each part before integrating them into the complete system.
+
 ### Week 7 - 19 May
+
+I've successfully assembled all the components and created the KiCad schematics, ensuring to modify certain components to match the actual parts that I have.
 
 ### Week 20 - 26 May
 
@@ -47,7 +51,7 @@ Raspberry Pi Pico WH (Wireless+Headers) - This is the main microcontroller board
 
 Buzzer - An audio output device. It can produce sound signals corresponding to Morse code symbols when activated by the microcontroller.
 
-LCD Hat 1602 for Raspberry Pi - This is an LCD display module with a 16x2 character display. It will be used to visually display the translated Morse code text.
+LCD 1602 with I2C interface - This is an LCD display module with a 16x2 character display. It will be used to visually display the translated Morse code text.
 
 Breadboard Kit (830 points) + Jumper Wires + Power Supply - The breadboard provides a platform for prototyping and connecting various components without soldering. Jumper wires will be used to make connections between components. The power supply ensures stable power for the circuit.
 
@@ -55,9 +59,30 @@ RGB LED (Common Cathode) + 220Ω Resistors - The RGB LED can emit different colo
 
 USB Cable - Used to power the Raspberry Pi Pico and for communication with the laptop.
 
+![Hardware1](./Hardware1.jpeg)
+![Hardware2](./Hardware2.jpeg)
+![Hardware3](./Hardware3.jpeg)
+![Hardware4](./Hardware4.jpeg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad_Schematics](./KiCad_Schematics.png)
+
+-RGB LED:
+The common cathode of the RGB LED is connected to GND (pin 33).
+The red cathode is connected to GP1 (pin 2) through a resistor.
+The green cathode is connected to GP2 (pin 4) through a resistor.
+The blue cathode is connected to GP4 (pin 6) through a resistor.
+
+-Buzzer:
+The positive terminal of the buzzer is connected to GP7 (pin 10) of the Raspberry Pi Pico.
+The negative terminal of the buzzer is connected to GND (pin 3).
+
+-LCD 1602 + I2C Module:
+The SCL (Serial Clock) of the I2C module is connected to GP21 (pin 27) of the Raspberry Pi Pico.
+The SDA (Serial Data) of the I2C module is connected to GP20 (pin 26) of the Raspberry Pi Pico.
+The VCC of the I2C module is connected to VBUS (pin 40) for power.
+The GND of the I2C module is connected to GND (pin 38).
 
 ### Bill of Materials
 
@@ -75,12 +100,12 @@ The format is
 |--------|--------|-------|
 | [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html) |
 | [KIT Breadboard830 + jumper wires](https://datasheet.octopart.com/BB830T-BusBoard-datasheet-10603672.pdf) | Main board + connectors | [25 RON](https://ardushop.ro/ro/electronica/163-kit-breadboard830-65xfire-jumper-sursa-alimentare-335v.html?search_query=kit+breadboard&results=171) |
-| [LCD Hat 1602 for Raspberry Pi](https://circuitdigest.com/article/16x2-lcd-display-module-pinout-datasheet) | Display | [58 RON](https://www.optimusdigital.ro/ro/lcd-uri/1158-lcd-hat-1602-pentru-raspberry-pi.html?search_query=lcd+hat+1602&results=1) |
+| [LCD 1602 with I2C interface and blue backlight](https://circuitdigest.com/article/16x2-lcd-display-module-pinout-datasheet) | Display | [16 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html?search_query=lcd+1602+cu+i2c&results=4) |
 | [Active Buzzer](https://components101.com/misc/buzzer-pinout-working-datasheet) | Audio output device | [2 RON](https://www.optimusdigital.ro/ro/audio-buzzere/635-buzzer-activ-de-3-v.html?search_query=buzzer+activ&results=18) |
 | [RGB LED with Common Cathode](https://www.arabsmakers.com/wp-content/uploads/2017/05/upload-5mm_RGB_led_common_cathode.pdf) | RGB LED | [3 RON](https://ardushop.ro/ro/electronica/271-led-tricolor-cu-catod-comun.html?search_query=led+rgb+cu+catod&results=1488) |
 | [220Ω Resistors](https://digchip.com/datasheets/parts/datasheet/1838/CFR-25JB-220R.php) | Resistors to limit the current flowing through the LED | [4 RON](https://ardushop.ro/ro/electronica/211-rezistenta-14w-1-buc.html?search_query=rezistor&results=43) |
 | [Micro USB](https://www.mouser.com/pdfdocs/HiroseZX62Datasheet24200011.pdf) | USB used to power the Raspberry Pi Pico | [3 RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/4576-cablu-albastru-micro-usb-50-cm.html?search_query=cablu+micro+usb&results=146) |
-
+| ["Mother-father" jumpers](https://greenchip.com.ua/23-0-204-2.html) | Used to connect the LCD to Raspberry Pi Pico | [4 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/214-fire-colorate-mama-mama-10p.html?search_query=fire+mama+tata&results=37) |
 
 ## Software
 
@@ -88,11 +113,11 @@ The format is
 |---------|-------------|-------|
 | [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals 
 | [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
+| [embassy-hal](https://docs.rs/embassy-hal/latest/embassy_hal/) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 | [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
-| [pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
-
+| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
 
 ## Links
 
