@@ -39,13 +39,25 @@ What pushed me to choose this project was that, while observing a similar approa
 
 ### Week 6 - 12 May
 
+This period marks the start of the project, where the task at hand was to define a clear outline and path going forward. The LCD was the first major component to be tested.
+
+After thoroughly reading the datasheet, I figured out what commands to send for each instruction using the I2C module. However, as I would soon find out, the commands after turning the display on, making the cursor appear on the screen, and making the cursor blink were not doing anything. This led me to try to send the commands 4 bits at a time instead of 8, but after that did not work, I pinned the problem down to a timing issue for the commands. After a lengthy process of trial and error, I still could not determine the correct timing needed for the commands that wrote characters to the screen. This, of course, led to using a Rust library to operate the LCD, which massively simplified the process for anything related to the display.
+
+Next on the list was choosing the structure of the Blackjack game logic. The paradigm that made the most sense for this project was Object-Oriented Programming, as its rules and fundamental concepts fit a Blackjack game perfectly. A deck is comprised of cards that have a suit and a rank, which are used to add to the player’s or dealer's score, then, this score is then used to determine the winner of a round, etc.
+
+With this objective in mind, I set out to create the mold for the Pico-side Blackjack logic. This was done quite quickly and allowed me to move on to the next part of the project, and the most important: the scanner, which will be taken care of in the next week or so.
+
+
+The first
+
+### Week 7 - 19 May
+
+
 Up until this point, I had completed the basic structure of the blackjack game on the software side and tested the LCD. During this period, my main goal was setting up the scanner module and writing the code needed to operate it. At first, the setup seemed to be more difficult than expected: the `blocking_read` function was returning a BREAK error.
 
 After some research, I quickly found out that this error signifies that the line stays in a low state for longer than expected, which led me to find out that the baud rate in the default UART config did not match that of my scanner. Embassy uses the default baud rate of 115200 and the scanner uses 9600. This issue was solved relatively quickly and the setup was ready to go since the scanner uses 8 data bits, one stop bit, and no parity (same as the default config in Embassy).
 
 After this, a lot more information was revealed about the scanner (which unfortunately was not available in the datasheet as the datasheet itself doesn't exist): it turns itself off automatically after approximately 4 seconds as a form of protection, as it heats up very quickly, it uses UTF-8 encoding, the stop bit is 13 (which in ASCII is CARRIAGE_RETURN - represents the action of moving the cursor or print head back to the beginning of a line). This all led to a successful integration of the scanner into the project and after finishing the rest of the small hardware setup, only the blackjack logic and the socket communication + website are left for the upcoming weeks.
-
-### Week 7 - 19 May
 
 ### Week 20 - 26 May
 

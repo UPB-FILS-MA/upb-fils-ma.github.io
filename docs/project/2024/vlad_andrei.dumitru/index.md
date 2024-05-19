@@ -3,7 +3,7 @@ A mini game that brings the casino right to your tabletop. Spin, bet, and win bi
 
 :::info 
 
-**Author**: DUMITRU Vlad Andrei \
+**Author**: DUMITRU Vlad Andrei 
 
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-kevinvlad03
 
@@ -23,18 +23,19 @@ In it's final stage, my project will look more or less like the following diagra
 ![Roulette Mini Game Schematic](./Schematic.png)
 
 * The round roulette shape will be made of LEDs of the indicated colors.
-* The central LCD screen will display information about game status, current money amount, etc.
-* By pressing the button, you will initiate a new game by betting the selected amount of money.
-* With the potentiometer, you will select the amount of money you want to bet.
+* The central LCD screen will display information about game status.
+* By pressing the button, you will initiate a new game by selecting to bet either on a number, or a color.
+* With the potentiometer, you will select your lucky number or color.
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Worked mostly on hardware components and connections, testing the best way of connection and the best way to make the roulette spin. I also started working on the software part, trying to make the LEDs spin and stop on a random number.
 ### Week 7 - 19 May
-
+Managed to fully integrate the spinning roulette with the LEDs, and also managed to make the LEDs stop on a random number. I also completed the LCD display software and hardware, which will display the current odds and game information. Moreover, the push-button switch was integrated to trigger the game, and the potentiometer was connected to select the desired number. The buzzer was also added to emit a sound when the LEDs are spinning.
 ### Week 20 - 26 May
+What remains is to try and solder the LEDs on a PCB, make the final adjustments to the software and additionaly, build a box for the project. I also plan to add a few more features to the game, such as betting on colors, and adding a few more sounds to the buzzer.
 
 ## Hardware
 
@@ -43,15 +44,25 @@ In it's final stage, my project will look more or less like the following diagra
 3. **LCD 1602 module**: Display for showing current odds and game information.
 4. **Buzzer**: Emmits a sound when the leds are spinning.
 5. **Push-button switch**: Trigger for starting the game.
-6. **Potentiometer**: Control for adjusting the bet amount.
+6. **Potentiometer**: Control for selecting the winning number.
 7. **Breadboard**: Platform for prototyping and connecting components.
 8. **Jumper wires**: Connectors for establishing electrical connections on the breadboard.
+9. **Shift Registers**: Reduce the number of wires needed to connect the LEDs.
+10. **PCB Board**: For soldering the LEDs and making the roulette shape.
 
-In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize the spinning motion of the roulette values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer adjusts the bet amount. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
+In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize the spinning motion of the roulette values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer selects the winning number. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
+
+Here are some pictures of the current state of the project`s hardware:
+![Hardware1](./Hard1.jpg)
+![Hardware2](./Hard2.jpg)
+![Hardware3](./Hard3.jpg)
+![Hardware4](./Hard4.jpg)
+![Hardware5](./Hard5.jpg)
+
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad Schematic](./KiCadRoulette.png)
 
 ### Bill of Materials
 
