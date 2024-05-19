@@ -55,8 +55,8 @@ DS18B20 Temperature sensor - used to measure the ambient temperature
 
 Jumper wires - used to connect all the parts together
 
-![Hardware Photo](Hardware_1.png)
-![Hardware Photo](Hardware_2.png)
+![Hardware Photo](Hardware_1.JPG)
+![Hardware Photo](Hardware_2.JPG)
 
 
 ### Schematics
