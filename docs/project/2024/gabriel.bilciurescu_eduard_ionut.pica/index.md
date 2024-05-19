@@ -56,7 +56,7 @@ DS18B20 (TO-92) - is a digital temperature sensor with adjustable accuracy from 
 TP4056 - is a module we use for charging the battery
 
 
-This is the final product simulation in 3DCAD made in Fusion:
+This is the final product simulation made in Fusion:
 ![3D_simulation](./3D_simulation.gif)
 
 This is the current internal circuit of the project( not mounted with the frame and coolers for easy code debuging)
