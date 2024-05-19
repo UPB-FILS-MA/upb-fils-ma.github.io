@@ -78,7 +78,7 @@ This is the final product as of yet:
 
 ### Schematics
 
-![KiCad Schematics](./KiCad%20Schematics.png)
+![KiCad Schematics](./KiCadSchematics.png)
 
 Connected to the Rasperry Pi Pico W, there is a RGB LED connected to `GPIO 0`, `GPIO 1` and `GPIO 2`, two push buttons connected to `GPIO 3` and `GPIO 4`. The buzzer is connected to `GPIO 5`. The HC-SR04 ultrasonic sensor is connected through `I2C` to the Raspberry Pi Pico using `GPIO 18` as SDA and `GPIO 19` as SCL, and to PIN 36 (`3V3_OUT`) for the power. The Servomotor is connected to `GPIO 16` in order to be used with `PWM`, and connected to PIN 39 (`VSYS`, used to power system, can be in range 1.8V-5.5V).
 
