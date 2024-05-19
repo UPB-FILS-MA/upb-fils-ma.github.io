@@ -26,7 +26,7 @@ program running on the RP Pico W will be written using the *embassy-rs* framewor
 
 * The physical UI (buttons & LCD) will be used to establish the connection, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
 
-![example](MA_project_architecture.png)  
+![example](MA_project_architecture_2.png)  
 
 ## Log
 
@@ -65,12 +65,12 @@ I connected the step-up voltage to the motor driver and the fans to the motor dr
 
 * **The KiCAD schematic:**
 
-![kicad_schematic](kicad_schematic.png)
+![kicad_schematic](kicad_schematic2.png)
 
 * **In Reality:**
-![hardware pic 1](Pic1.jpg)
+![hardware pic 1](Pic_1.jpg)
 
-![hardware pic 2](Pic2.jpg)
+![hardware pic 2](Pic_2.jpg)
 
 ### Bill of Materials
 
