@@ -74,9 +74,9 @@ The format is
 | [2x Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontrollers | [70 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [Kit DIY Mini Speaker Tesla Coil 15-24V](https://s3.amazonaws.com/images.ecwid.com/images/wysiwyg/product/15692267/128673850/1594028694571-1078299868/tesla_schema_PNG) | Speaker/EMF generator for powering nearby bulbs/neon tubs | [45 RON](https://www.sigmanortec.ro/Kit-Bobina-Speaker-Mini-Tesla-p128673850) |
 | [4 digits Display](https://components101.com/sites/default/files/component_datasheet/TM1637%20Display%20Module%20Datasheet.pdf) | Displays the potentiometer's resistance | [12 RON](https://www.emag.ro/modul-led-display-ceas-cl281/pd/DR966JBBM/) |
-| 2x Cablu alimentare si date | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
+| 2x Power and Data Cable | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
 | 2x Header Pins for Pi Pico W | Header Pins | 8 RON |
-| Electrical Components Starting Kit | Kit with Electronic components | [100 RON](https://www.emag.ro/kit-start-componente-electronice-ai777/pd/DXRJ4TMBM/) |
+| Electronic Components Starting Kit | Kit with Electronic components | [100 RON](https://www.emag.ro/kit-start-componente-electronice-ai777/pd/DXRJ4TMBM/) |
 | Breadboard with 830 points | Connects components | In-Kit |
 | 2x Ceramic Capacitor 104 | Electrical component | In-Kit |
 | Ceramic Capacitor 105 | Electrical component | In-Kit |
@@ -87,6 +87,8 @@ The format is
 | 68Ω Resistor | Part of the RC-Filter | [5 RON](https://www.emag.ro/rezistenta-68-cu-pelicula-metalica-2w-royal-ohm-mf02sff680ja10-t230247/pd/DJQ53XMBM/) |
 | Potentiometer | Adapts speaker volume | [6 RON](https://www.emag.ro/potentiometru-rotativ-accesorii-audio-hi-fi-10k-3-3-5v-z002396/pd/DX6JD9YBM/) |
 | USB Cooling Fan | Cools Transistors| [101 RON](https://www.evomag.ro/electrocasnice-racire-ventilatoare-de-camera-si-birou/arctic-ventilator-de-birou-arctic-summair-pliabil-usb-c-2800-rpm-negru-4149402.html) |
+| USB Hub for the Powerbank | Splits an USB port in 4 more ports (used on the Powerbank) | [27 RON](https://www.emag.ro/hub-4n1-vaxiuja-usb-3-0-30-cm-negru-jxq/pd/D38S3LMBM/) |
+| USB-C to USB-A Adapter | Converts an USB-C port in an USB-A port (used on the Powerbank) | [13 RON](https://www.emag.ro/adaptor-baseus-usb-type-c-la-usb-a-usb-3-1-10gb-s-albastru-zjjq000003/pd/DDR9FCMBM/) |
 | JBL Speaker | Plays Analog Audio | [Already Owned](https://www.emag.ro/boxa-portabila-jbl-go2-ipx7-negru-jblgo2blk/pd/DC855FBBM/) |
 | Power Source | Powers the Tesla Coil | [60 RON](https://www.emag.ro/alimentator-24v-2a-112653/pd/D7VWPNBBM/) |
 | Powerbank | Powers the Microcontrollers | [Already Owned](https://www.emag.ro/acumulator-extern-a-10-000-mah-quick-charge-3-0-pd-18w-port-usb-conectivitate-type-c-pbxwall1/pd/DTNV17MBM/) |
