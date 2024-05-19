@@ -121,7 +121,7 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 
 UPDATE:
 
-![BLOCK DIAGRAM](<BLOCK DIAGRAM.png>)
+![Block_diagram](BLOCK_DIAGRAM.png)
 
 ### Bill of Materials
 
