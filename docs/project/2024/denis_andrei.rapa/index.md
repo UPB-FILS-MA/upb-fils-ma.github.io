@@ -56,7 +56,7 @@ In my project, the Raspberry Pi Pico microcontroller serves as the central proce
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicad schematics photo](./KiCad_schematic.png)
 
 ### Bill of Materials
 
