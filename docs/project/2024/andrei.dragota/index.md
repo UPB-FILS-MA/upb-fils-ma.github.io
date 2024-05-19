@@ -2,8 +2,12 @@
 
 A game controller coded in Rust using Xinput API
 
+:::info
+
 **Author**: Dragotă Andrei \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-domnudragota
+
+:::
 
 
 
