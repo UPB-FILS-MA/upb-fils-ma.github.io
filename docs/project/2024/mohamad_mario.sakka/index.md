@@ -1,5 +1,5 @@
-# DIY Laptop Cooling Station
-A cooling station for laptops that can be controlled wirelessly or using buttons.
+# DIY Laptop Cooling Pad
+A cooling Pad for laptops that can be controlled wirelessly or using buttons.
 
 :::info
 
@@ -11,7 +11,7 @@ A cooling station for laptops that can be controlled wirelessly or using buttons
 ## Description
 
 There are 2 possible ways of using it:
-* Physically: The fans are controlled through a UI made up of a screen which displays info and buttons with which we increase or decrease the speed of the fans.
+* Physically: The fans are controlled through a tactile UI made up of a screen which displays info and buttons with which we increase or decrease the speed of the fans.
 
 * Wirelessly: A user can interact with the microcontroller through a desktop app which sends commands to it through WIFI.
 
@@ -21,7 +21,7 @@ The average temperature around the globe has been on the rise for quite a while,
 
 ## Architecture
 
-* The application on the laptop will act as a server, the RP Pico W will establish a connection with it, and it will exchange data with it via TCP to ensure reliable communication between the two. This app will be written in *Python* using the *Custom Tkinter & Socket* modules and it will be converted into an executable. The RP PICO W will connect to a network with preset name & password which must be hosted by the laptop. The
+* The application on the laptop will act as a server, the RP Pico W will establish a connection and it will exchange data with it via TCP to ensure reliable communication between the two. This app will be written in *Python* using the *TTKBootstrap & Socket* modules and it will be converted into an executable. The RP PICO W will connect to a network with preset name & password which must be hosted by the laptop. The
 program running on the RP Pico W will be written using the *embassy-rs* framework.
 
 * The physical UI (buttons & LCD) will be used to establish the connection, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
@@ -34,7 +34,12 @@ program running on the RP Pico W will be written using the *embassy-rs* framewor
 
 ### Week 6 - 12 May
 
+I made a laptop pad out of a wood planck, cut 2 holes for the fans and glued the fans into it. I also tested some code that made communication between the RP Pico W & my laptop possible through TCP, and I tested the motor driver.
+
 ### Week 7 - 19 May
+
+I assembled a mini remote with 4 buttons and LEDs that respond to the tactile input or show the status of the circuit, then
+I connected the step-up voltage to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done, I managed to set a hostname for the pico so it's easier to find it on whatever network it will connect to and I created the UI for the Python app on the laptop to control the fans through WIFI.
 
 ### Week 20 - 26 May
 
@@ -58,11 +63,19 @@ program running on the RP Pico W will be written using the *embassy-rs* framewor
 
 * **Step-Up Voltage Source:** Raising voltage to power motor driver.
 
-* **Breadboard Supply:** Powering the whole setup either through USB connection from laptop or wall socket.
-
+* **Breadboard Power Supply:** Powering setup from wall socket or laptop usb port.
 ### Schematics
 
-Place your KiCAD schematics here.
+* **The KiCAD schematic:**
+
+![kicad_schematic](kicad_schematic.png)
+
+* **In Reality:**
+![hardware pic 1](Pic1.jpg)
+
+![hardware pic 2](Pic2.jpg)
+
+![hardware pic 3](Pic3.jpg)
 
 ### Bill of Materials
 
@@ -90,11 +103,11 @@ The format is
 | [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [1 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
 | [Set of Rigid Jumper Wires](https://static.optimusdigital.ro/55063-large_default/set-de-fire-pentru-breadboard-rigide.jpg) | Connectivity | [1 x 12.49 RON](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=fire+rigide&results=2) |
 | [Set of Resistors](https://ardushop.ro/7381-thickbox_default/set-rezistente-14w-600buc30-valori-10r-1m.jpg) | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
-| [2A Step-Up Voltage Source](https://static.optimusdigital.ro/55746-large_default/sursa-de-tensiune-ridicatoare-xs1308-de-2-a.jpg) | Voltage Amplification | [1 x 4.99 RON](https://www.optimusdigital.ro/ro/surse-ridicatoare-reglabile/2255-sursa-de-tensiune-ridicatoare-xs1308-de-2-a.html?search_query=0104110000015396&results=1) |
-| [Breaboard Power Supply](https://static.optimusdigital.ro/50620-large_default/sursa-de-alimentare-pentru-breadboard.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
+| [5A Step-Up Voltage Source](https://static.optimusdigital.ro/55746-large_default/sursa-de-tensiune-ridicatoare-xs1308-de-2-a.jpg) | Voltage Amplification | [1 x 16.00 RON](https://www.navomag.ro/module-electronice/step-up-ridicator-tensiune-reglabil-placa-xl6019-5a-sursa-comutatie-modul-electronic.html) |
+| [Breaboard Power Supply](https://gomagcdn.ro/domains/navomag.ro/files/product/large/ridicator-tensiune-electronic-103-4499.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
 | [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
-| [Cooling Pad Frame] |  Frame That Holds Fans & Laptop | [not sure] |
-| **TOTAL** | - | [**175.53 RON**] |
+| [DIY Cooling Pad Frame](coolingpad.jpg) |  Frame That Holds Fans & Laptop | [50 RON] |
+| **TOTAL** | - | [**236.54 RON**] |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
@@ -108,11 +121,13 @@ The format is
 | [embassy-pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM driver for embassy | Controlling rotation speed of coolers |
 | [embassy-net](https://github.com/embassy-rs/embassy/tree/main/embassy-net) | Networking functionalities for embassy | Creating TCP connections with laptop |
 | [embedded-io-async](https://github.com/rust-embedded/embedded-hal/tree/master/embedded-io-async) | Async IO traits for embedded systems | Async writing to buffers |
+| [embassy_futures](https://github.com/embassy-rs/embassy/tree/main/embassy-futures) | No-std compatible futures | Event handling such as button presses or data received through wifi | 
+| [embassy_sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Synchronization data structures with async support | Creating MPMC channels for event handling |
 | [static_cell](https://github.com/embassy-rs/static-cell) | Statically allocated, initialized at runtime cell | Static variables intialized at runtime|
 | [cyw43_pio](https://docs.embassy.dev/cyw43-pio/git/default/index.html) | no-std Rust driver for cyw43 WIFI chip on RP Pico W| Connecting to WIFI network hosted by Laptop |
 | [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
-| [Custom Tkinter](https://github.com/TomSchimansky/CustomTkinter) | Python UI-library based on Tkinter | Building the UI of the desktop app |
-| [socket](https://docs.python.org/3/library/socket.html) | Low level networking interface for Python | Handling data exchanges and connections with Rp Pico W |
+| [TTKBootstrap](https://github.com/israel-dryer/ttkbootstrap) | Python UI-library based on Tkinter & Bootstrap CSS | Building the UI of the desktop app |
+| [socket](https://docs.python.org/3/library/socket.html) | Low level networking interface for Python | Handling data exchanges and connections with RP Pico W |
 
 ## Links
 
