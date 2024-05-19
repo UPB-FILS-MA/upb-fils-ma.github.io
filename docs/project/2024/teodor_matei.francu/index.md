@@ -56,8 +56,10 @@ The microcontroller, depending on what is happening in game, will tell the buzze
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+-In this week I have written the index.md and created a rough sketch of the project itself. 
 
 ### Week 7 - 19 May
+-In this week I have finished the hardware part of the project and created the Kicad Schematic.
 
 ### Week 20 - 26 May
 
@@ -67,7 +69,7 @@ This will be filled in at a later date, when I am more confident in what parts a
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicad](Kicad_Scheme.png)
 
 ### Bill of Materials
 
