@@ -4,7 +4,7 @@ Smart Weather Clock with Alarm and Temperature Sensor
 :::info 
 
 **Author**: Nica Alexia-Stefania \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-alexianicaa)
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-alexianicaa
 
 :::
 
