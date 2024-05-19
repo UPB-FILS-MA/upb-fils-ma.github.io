@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.253b29b0.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0132827c.js" defer="defer"></script>
 <script src="/assets/js/main.bfe96e87.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -34,7 +34,9 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<p>We finished the KiCad schematic.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<p>We finished the hardware and started working on the software.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <ul>
@@ -42,9 +44,15 @@
 <li>The infrared sensors: used for the line detection.</li>
 <li>The ultrasonic sensor: used to detect distances and to avoid the obstacles.</li>
 <li>The 3-6 V dc motors with reducers are used to move and steer the robot.</li>
-<li>The L293D Motor Control Shield: controlling the speed and direction of each motor independently.</li>
-<li>The battery storage case for the power supply (AAA batteries)</li>
+<li>The L293D Motor Control Shield: quadruple half h driver, controls the speed and direction of each motor independently (supplies more voltage as well), used instead of the usual dual full h L298N driver that can not control 4 independent motors</li>
+<li>The battery storage case for driver (4 AA batteries)
+-The battery storage case for the pico (3 AA batteries)</li>
+<li>4 wheels</li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="hardware1" src="/assets/images/hardware1-f3fad52319d3c6937940179b426d790d.jpg" width="1200" height="1600" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="hardware2" src="/assets/images/hardware2-ef1a75b0816122f1eaee2d610900d2ae.jpg" width="1600" height="1200" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="hardware3" src="/assets/images/hardware3-6ec585ce6e35544e8b6f60032ceaf65a.jpg" width="1200" height="1600" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="hardware4" src="/assets/images/hardware4-67a91e0115052047d8a23519bedb8da9.jpg" width="1600" height="1200" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="kicad" src="/assets/images/kicad-56a014476078eba1f159ad217e1fc229.jpg" width="1176" height="847" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
