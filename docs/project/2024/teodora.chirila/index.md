@@ -6,13 +6,9 @@ You can play music just by moving your fingers through air.
 :::info
 
 **Author**: Chirila Teodora \
-**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-ChirilaTeodoraAuthor: Chirila Teodora
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-ChirilaTeodora
 
 :::
-
-GitHub Project Link: https://github.com/UPB-FILS-MA/project-ChirilaTeodora
-
-
 
 ## Description
 
