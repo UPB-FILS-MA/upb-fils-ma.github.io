@@ -58,6 +58,7 @@ TP4056 - is a module we use for charging the battery
 
 This is the final product simulation in 3DCAD made in Fusion:
 ![3D_simulation](./3D_simulation.gif)
+
 This is the current internal circuit of the project( not mounted with the frame and coolers for easy code debuging)
 ![circuit_1](./hardware_internal_circuit1.jpeg)
 ![circuit_2](./hardware_internal_circuit2.jpeg)
