@@ -25,12 +25,16 @@ c.	Bottle of water
 -	The water bottle acts as the reservoir for supplying water to the plants. It is connected to the servo motor, and its controlled release ensures precise watering based on humidity levels.
 d.	The module with soil moisture sensor
 -	The sensor module measures the moisture content of the soil. It provides data to the Raspberry Pi Pico, allowing it to determine when watering is required based on preset thresholds.
-e.	LED
--	The LED serves as an indicator that the system is watering the plant
-f.	Power Supply
+e.	LED RGB
+-	The LED RGB serves as an indicator that the system is watering the plant
+f.  Voltage divider
+-   The voltage divider recives 9V from the battery and realise 5V to power the servo motor
+g.	Power Supply
 
 
 ## Log
+
+Introducing my smart plant watering system: a combination of automation and efficient plant care. This system uses a soil humidity sensor to monitor moisture levels, activating a servo motor to release water from a bottle when needed. Power is managed through a voltage divider that provides a stable 5V from a battery. An RGB LED indicates the plant's status, glowing red when it needs watering and green when it is sufficiently hydrated. This project not only simplifies plant maintenance but also ensures optimal hydration for healthy growth.
 
 <!-- write every week your progress here -->
 
@@ -46,6 +50,8 @@ The humidity sensor will read the percentage of the soil. If it is under 60%, th
 
 ### Schematics
 
+![Kicad Schematics](Kicad.png)
+
 Place your KiCAD schematics here.
 
 ### Bill of Materials
@@ -58,10 +64,10 @@ Place your KiCAD schematics here.
 | Breadboard 400 | Breadboard | [3.34 RON](https://ardushop.ro/ro/electronica/34-breadboard-400.html?search_query=breadboard+400&results=156) |
 | Modul cu sensor de umiditate | Humidity sensor for the plant | [7.04 RON](https://www.emag.ro/modul-cu-senzor-umiditate-sol-cl73/pd/D5ZZ5JBBM/?utm_campaign=share%20product&utm_medium=ios&utm_source=mobile%20app) |
 | Wires | For connecting the components | [5.96 RON](https://ardushop.ro/ro/electronica/24-40-x-fire-dupont-tata-mama-10-cm2.html?search_query=fire+tata+tata&results=439) |
-| Red LED | It lights up when the system is watering the plant| [0.28 RON](https://ardushop.ro/ro/electronica/79-led-3mm.html?search_query=led+red&results=470#/10-culoare-rou)|
-| Motor Servo MG996 12kg | Opening the bottle cap | [38.08](https://www.emag.ro/motor-servo-mg996-12kg-180grade-cl846/pd/DCSHBRBBM/?utm_source=mobile%20app&utm_medium=ios&utm_campaign=share%20product)|
+| LED RGB | It glowing red when it needs watering and green when it is sufficiently hydrated | [0.99 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/484-led-rgb-anod-comun.html?search_query=LED+RGB&results=113)|
+| Motor Servo MG996 12kg | Opening the bottle cap | [38.08 RON](https://www.emag.ro/motor-servo-mg996-12kg-180grade-cl846/pd/DCSHBRBBM/?utm_source=mobile%20app&utm_medium=ios&utm_campaign=share%20product)|
+| Modul DC-DC Step Down LM2596S |  Voltage divider | [12.99 RON](https://www.optimusdigital.ro/ro/surse-coboratoare-reglabile/1108-modul-dc-dc-step-down-lm2596hv.html)|
  
-
 ## Software
 
 | Library | Description | Usage |
