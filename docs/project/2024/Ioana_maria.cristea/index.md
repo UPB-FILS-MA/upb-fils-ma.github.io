@@ -53,8 +53,10 @@ A **DC Motor** that controls the fan
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I uploaded the necessary project documentation, making sure everything was in order. Then, I began working on the schematics, carefully mapping out the design. Additionally, I started developing some of the software. Each step brought the project closer to realization.
 
 ### Week 7 - 19 May
+In the following week, I completed the hardware and assembled the makeshift arm, which presented a few challenges. However, I managed to resolve them successfully. Additionally, I made further progress on the software development.
 
 ### Week 20 - 26 May
 

@@ -47,7 +47,8 @@ The main parts of this robot are:
   
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad](./kicad.jpg)
+
 
 ### Bill of Materials
 
