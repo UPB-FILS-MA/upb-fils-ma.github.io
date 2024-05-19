@@ -1,8 +1,12 @@
 # PicoW Garden Monitor
  A Raspberry Pi Pico project for monitoring and optimizing plant growth conditions.
 
+:::info
+
 **Author**: JERCĂU Hadasa-Ștefana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-hadassahj
+
+:::
 
 ## Description
 
@@ -46,15 +50,16 @@ By developing the PicoW Garden Monitor, the goal is to create a reliable and int
 
 
 ![Project Diagram](Diagram.jpg)
-
+![Kicad Diagram](projectki.png)
+![ProjectStatus](ProjectStatus.jpeg)
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+I ordered the components and connected them on the breadboard.
 ### Week 7 - 19 May
-
+I started writing the code and testing the desired functionalities.
 ### Week 20 - 26 May
 
 ## Hardware

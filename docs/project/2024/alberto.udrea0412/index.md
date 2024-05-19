@@ -1,6 +1,6 @@
 # Weather Station
 
-Rust-powered environmetal monitoring station
+Rust-powered environmental monitoring station
 
 :::info 
 
@@ -23,11 +23,18 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 ## Log
 
-<!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+[Implemented the software baseline](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/b76fcde81a6b80d8a26ecc948acc6462a66c3757)
+
+The work in this phase involved the creation of the crates, the assimilation of the necessary resources and the implementation of communication between the components at a grassroots level.
 
 ### Week 7 - 19 May
+[Added the network stack onto the software](https://github.com/UPB-FILS-MA/project-UdrAlberto/commit/ddab361e172beedbbc50cb34c979435d62d4cf54)
+
+Here we fixed (most of) the bugs left over from the previous stage of our development and added the network part of the code, which deals with the transmission of the data collected in the network, to the host device of the web application.
+
+We also made progress in the hardware part of the project, basically grounding the physical side of the project
 
 ### Week 20 - 26 May
 
@@ -35,25 +42,46 @@ Building a Raspberry Pi Pico W weather station with embassy-rs combined my inter
 
 We will use a BME280 in order to gather environmental data. The Pico will process this gathered data in order to print meaningful graphics on the provided display. We will also use several push buttons in order to switch between the available data
 
-### Schematics
+### Schematics and Photos
+[For the KiCad schematic files, click here](https://github.com/UPB-FILS-MA/project-UdrAlberto/tree/main/schematics)
 
-Place your KiCAD schematics here.
+<table>
+<tr>
+ <th>Schematics</th>
+<td>
+ 
+![KiCad schematic](schematics/kicad.png)
+
+</td>
+
+<td>
+ 
+![Simpler KiCad schematic](schematics/simple_kicad.png)
+
+</td>
+</tr>
+
+<tr>
+ <th>Photos</th>
+ <td>
+  
+![photo1](schematics/photo1.jpg)
+
+</td>
+<td>
+ 
+![photo2](schematics/photo2.jpg)
+
+</td>
+</tr>
+</table>
+
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html) |
+| [Raspberry Pi Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html) |
 | [BME280](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) | Temperature, pressure and humidity sensor | [74 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/5649-modul-senzor-barometric-de-presiune-bme280.html) |
 | [LED Display](https://ardushop.ro/8014-thickbox_default/modul-lcd-spi-128x160.jpg) | Display | [39 RON](https://ardushop.ro/ro/home/2818-modul-lcd-spi-128x160.html) |
 | [Breadboard](https://www.yamanelectronics.com/wp-content/uploads/2020/06/basics-of-breadboard.jpg) | The physical base of the project | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
@@ -65,14 +93,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | The embassy-rp HAL targets the Raspberry Pi RP2040 microcontroller. The HAL implements both blocking and async APIs for many peripherals. |  The utilised HAL  |
+| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
 | [BME 280 Rust Library](https://github.com/VersBinarii/bme280-rs)| BME280 Sensor library | Used for communicating with the sensor |
 
 ## Links
-
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
 
 1. [Idea](https://www.hackster.io/jotrinelectronics/building-a-weather-station-with-raspberry-pi-pico-rp2040-9d5cbb)
 2. [Arduino BME280 Library (not Rust, but it will be useful as a conceptual insight)](https://github.com/finitespace/BME280)
