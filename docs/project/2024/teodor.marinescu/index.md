@@ -36,9 +36,9 @@ The potentiometer sends the desired intensity to the Pico board.
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Planed the architecture of the project and bought all the required components.
 ### Week 7 - 19 May
-
+The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit which was further used as a guide for when I assembled the project on a physical breadboard.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -49,8 +49,15 @@ A potentiometer is an adjustable electronic component used for controlling elect
 
 ### Schematics
 
-Place your KiCAD schematics here.
+Here is the KiCAD schematic for my project. 
+![KiCAD schematic](./Kicad_sch.png)
 
+I used a sound sensor that it was not supported by KiCAD so I made my own representation of it.
+![Sound Sensor KiCAD schematic](./Sound_sensor.png)
+This is the hardware all put together.
+![First Hardware photo](./Hardware1.jpeg)
+
+![Second Hardware photo](./Hardware2.jpeg)
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
