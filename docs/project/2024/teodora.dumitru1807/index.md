@@ -119,8 +119,6 @@ Place your KiCAD schematics here.
 
 ### Block diagram
 
-[block diagram](image.png)
-
 UPDATE:
 
 ![Block_diagram](BLOCK_DIAGRAM.png)
