@@ -43,7 +43,7 @@ Here are images of the hardware :
 ![image2](hw2.png)
 ### Schematics
 
-![schematics](schematics.png)
+![kicad](kicad.png)
 
 ### Bill of Materials
 
