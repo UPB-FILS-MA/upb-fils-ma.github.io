@@ -70,7 +70,7 @@ Attacker Pico:
 ![Wiring for the Attacker Pico](Photos/Attack_PICO.jpg)
 Facility Pico:
 ![Wiring for the Facility Pico](Photos/Facility_PICO_1.jpg)
-![Wiring for the Facility Pico](Phots/Facility_PICO_2.jpg)
+![Wiring for the Facility Pico](Photos/Facility_PICO_2.jpg)
 
 ### Schematics
 
