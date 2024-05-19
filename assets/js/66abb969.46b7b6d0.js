@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[840],{80190:e=>{e.exports=JSON.parse('{"title":"Lab","description":"The lab materials","slug":"/category/lab","permalink":"/docs/category/lab","navigation":{"previous":{"title":"09 - Memory Protection","permalink":"/docs/lecture/09"},"next":{"title":"00 - Rust","permalink":"/docs/lab/00"}}}')}}]);
