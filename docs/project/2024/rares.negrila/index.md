@@ -100,9 +100,11 @@ Full breadboard prototype:
 ![hardware_on_breadboard](assets/hardware_1.JPG)
 
 Laser processing:
+
 ![hardware_on_breadboard](assets/hardware_2.JPG)
 
 Analog signal processing:
+
 [hardware_on_breadboard](assets/hardware_3.JPG)
 
 
