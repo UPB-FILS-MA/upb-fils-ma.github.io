@@ -1,5 +1,5 @@
 # WAV-player & more
-WAV-player with adjustable volume, LCD and wireless light.
+WAV-player with adjustable volume, LED and wireless light.
 
 :::info 
 
