@@ -23,8 +23,8 @@ For this project, I aimed to create something both fun and intricate. Merely cre
 - _Mobile website_: This site features a simple 3x3 grid design, acting as the control interface for the player. Inputs are transmitted to the microcontroller via Wi-Fi.
 - _Robotic arm_: After the microcontroller decides on a move, the robotic arm points to one of the nine grid positions. Both servos adjust continuously to ensure accuracy. The lower servo is equipped with an L-shaped component to enable slight rotation, while the upper servo has a longer attachment to ensure it can reach all positions.
 
-![Block Diagram](img/FrontViewRoboticArm.jpg)
-![Block Diagram](img/SideViewRoboticArm.jpg)
+![Block Diagram](img/renderup.png)
+![Block Diagram](img/renderside.png)
 ![Block Diagram](img/schematic.jpg)
 
 ## Log
