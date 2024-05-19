@@ -62,12 +62,10 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
 I made the documentation of the project.
 I procured the hardware components.
 
 ### Week 13 - 19 May
-
 I added KiCAD Schematics.
 I assembled the initial rendition of this robot for the purposes of showing a rough initial image.
 
@@ -84,13 +82,15 @@ I assembled the initial rendition of this robot for the purposes of showing a ro
 **Breadboard:** It's used to connect every pin on the hardware components.
 **Raspberry Pi Pico:** It serves as the robot's microcontroller, analyzing all sensory input, managing motor operations, and handling communications. It activates the software that analyzes ultrasonic data to find openings and obstacles and then controls the motor controllers and servo to steer the robot in the appropriate direction.
 
-Here are some photos of the SmartBot Navigator
+Here are some photos of the robot
 ![photo1](./1.jpeg)
+
 ![photo2](./2.jpeg)
+
 ![photo3](./3.jpeg)
+
 ![photo4](./4.jpeg)
-![photo5](./5.jpeg)
-![photo6](./6.jpeg)
+
 ![photo7](./7.jpeg)
 
 ### Schematics
