@@ -23,9 +23,9 @@ Students will have to build and showcase the hardware with the running software 
 
 ## Hardware Rules
 
-1. Projects have to use a microcontroller (MCU) that is capable of running Rust code. Examples of MCUs are *nRF52*, *RP2024*, *ESP32* (RISC-V version). 
+1. Projects have to use a microcontroller (MCU) that is capable of running Rust code. Examples of MCUs are *nRF52*, *RP2040*, *ESP32* (RISC-V version). 
 2. Usage of a development board is encouraged, but not required, a custom PCB can be built. Example of development boards are:
-  - [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) (RP2024) or [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) for WiFi
+  - [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) (RP2040) or [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) for WiFi
   - [Adafruit Trinkey QT2040](https://www.adafruit.com/product/5056) (RP2040)
   - [Arduino Nano RP2040 Connect](https://store.arduino.cc/products/arduino-nano-rp2040-connect) (RP2040) - ⚠️ [^arduino_nano_rp2040_connect]
   - [micro:bit v2](https://microbit.org/) (nRF52833)
