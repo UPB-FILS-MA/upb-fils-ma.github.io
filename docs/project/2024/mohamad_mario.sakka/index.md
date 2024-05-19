@@ -61,9 +61,6 @@ I connected the step-up voltage to the motor driver and the fans to the motor dr
 
 * **Motor Driver:** Providing enough current to the fans.
 
-* **Step-Up Voltage Source:** Raising voltage to power motor driver.
-
-* **Breadboard Power Supply:** Powering setup from wall socket or laptop usb port.
 ### Schematics
 
 * **The KiCAD schematic:**
@@ -74,8 +71,6 @@ I connected the step-up voltage to the motor driver and the fans to the motor dr
 ![hardware pic 1](Pic1.jpg)
 
 ![hardware pic 2](Pic2.jpg)
-
-![hardware pic 3](Pic3.jpg)
 
 ### Bill of Materials
 
@@ -103,9 +98,6 @@ The format is
 | [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [1 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
 | [Set of Rigid Jumper Wires](https://static.optimusdigital.ro/55063-large_default/set-de-fire-pentru-breadboard-rigide.jpg) | Connectivity | [1 x 12.49 RON](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=fire+rigide&results=2) |
 | [Set of Resistors](https://ardushop.ro/7381-thickbox_default/set-rezistente-14w-600buc30-valori-10r-1m.jpg) | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
-| [5A Step-Up Voltage Source](https://static.optimusdigital.ro/55746-large_default/sursa-de-tensiune-ridicatoare-xs1308-de-2-a.jpg) | Voltage Amplification | [1 x 16.00 RON](https://www.navomag.ro/module-electronice/step-up-ridicator-tensiune-reglabil-placa-xl6019-5a-sursa-comutatie-modul-electronic.html) |
-| [Breaboard Power Supply](https://gomagcdn.ro/domains/navomag.ro/files/product/large/ridicator-tensiune-electronic-103-4499.jpg) | Powering Circuit | [1 x 4.69 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-stabilizatoare-liniare/61-sursa-de-alimentare-pentru-breadboard.html) |
-| [AC-DC 9V Adaptor](https://static.optimusdigital.ro/5950-thickbox_default/alimentator-de-9-v-1-a.jpg) | Powering Circuit | [1 x 9.99 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-alimentatoare-priza/264-alimentator-de-9-v-1-a.html) |
 | [DIY Cooling Pad Frame](coolingpad.jpg) |  Frame That Holds Fans & Laptop | [50 RON] |
 | **TOTAL** | - | [**236.54 RON**] |
 ## Software
