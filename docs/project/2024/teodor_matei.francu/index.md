@@ -85,7 +85,7 @@ The format is
 
 | Device | Usage | Price | \
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | \
-| Display | Displays the game | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/12392-modul-lcd-de-18-cu-spi-i-controller-st7735-128x160-px.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYW_FcUUf-veHQYVdumHZVaVkLbAsaFEqVJjGCpSuVWwelo4iq26zUQaAlL_EALw_wcB) | \
+| [Display](file:///C:/Users/matei/Downloads/1.44''%20SPI%20LCD%20Datasheet.pdf) | Displays the game | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/12392-modul-lcd-de-18-cu-spi-i-controller-st7735-128x160-px.html?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYW_FcUUf-veHQYVdumHZVaVkLbAsaFEqVJjGCpSuVWwelo4iq26zUQaAlL_EALw_wcB) | \
 | Bredboard | Connecting the components | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) | \
 | Wires | Connecting the components | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/888-set-fire-tata-tata-40p-20-cm.html?search_query=fire&results=437) | \
 | Resistances | Needed in order to not damage the components | [5 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) | \
