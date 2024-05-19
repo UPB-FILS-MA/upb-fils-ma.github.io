@@ -32,12 +32,11 @@ The chassis is the physical structure of the robot, which houses the DC motors, 
 The line-following sensor array consists of two IR sensors that detect the line for the robot to follow. It is connected to the Raspberry Pi board via the GPIO pins and provides sensor data to the Raspberry Pi board for processing.
 
 
+
 ## Log
-
-<!--write every week your progress here -->
-
 ### Week 6 - 12 May
 During this week, I built a general idea of how I wanted the project to look like and how the hardware components should be connected. After that, I started to assemble the chassis and worked on the KiCad schematics of the electronic components.
+
 ### Week 7 - 19 May
 After several issues regarding the soldering of the wires to the DC motors, I continued to assemble the chassis and to connect the DC motors to the L298N Motor Driver, the IR sensors to the Pico, the motor driver to the Pico, and, finally, I added the power supply to the Motor Driver and the board.
 Below are some pictures taken at the beginning of the process:
@@ -83,6 +82,7 @@ The format is
 | [Car](https://cdn.ozdisan.com/ETicaret_Dosya/729231_182181.pdf) | The chasis | [75 RON](https://www.sigmanortec.ro/Kit-sasiu-Smart-Car-4WD-p136281803) |
 | [L298N Dual H-Bridge Motor Driver](https://components101.com/sites/default/files/component_datasheet/L298N-Motor-Driver-Datasheet.pdf) | The motor driver | [9 RON](https://www.optimusdigital.ro/ro/drivere-de-motoare-cu-perii/145-driver-de-motoare-dual-l298n.html?search_query=l298n&results=4)
 | [IR sensor modules](https://www.circuits-diy.com/hw201-infrared-ir-sensor-module/) | The infrared sensors | [7 RON](https://www.optimusdigital.ro/ro/senzori-senzori-optici/4514-senzor-infrarosu-de-obstacole.html?search_query=senzor+infrarosu&results=121)
+
 
 ## Software
 
