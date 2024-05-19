@@ -28,11 +28,13 @@ This project's architecture revolves around the Raspberry Pi Pico W as the micro
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+
 I've started to assemble the hardware and to work on the KiCAD schematic, as well as starting to write the code, by using the Bevy framework.
 
 ### Week 7 - 19 May
 
 I've done the KiCAD schematic and because I couldn't find the symbol for the 1602 I2C display in the given KiCAD libraries, I've created one for the project.
+
 ### Week 20 - 26 May
 
 ## Hardware
@@ -47,8 +49,6 @@ I've done the KiCAD schematic and because I couldn't find the symbol for the 160
 In this project, Raspberry Pi Pico W runs the game code, while the LCD screen 1602 module displays the game. An LED indicates power status, and buttons control velocity and movement. A breadboard and jumper wires connect the components for testing and construction.
 
 ### Schematics
-
-Place your KiCAD schematics here.
 
 ![KiCAD Schematic](photos/kicad_schematic.png)
 
@@ -94,4 +94,3 @@ TOTAL : 126.69 RON
 4. [understanding and starting to use wasmi](https://blog.knoldus.com/hosting-wasm-modules-in-rust-easily-using-wasmi/#hosting-in-rust)
 5. [book on how to create a game with Rust and WebAssembly](https://www2.irb.hr/korisnici/zskoda/hoffmanWasmRust.pdf)
 6. [libraries for Rust and Bevy(in case I'm using Bevy I've decided to put all the info for Wasmi & Bevy too)](https://lib.rs/game-development)
-...
