@@ -84,8 +84,8 @@ I chose this project because it seems like a pretty practical idea in the day-to
 ### Schematics
 
 ![KiCad](kicad.png)
-![Schematics1](1.png)
-![Schematics2](2.png)
+![Schematics1](1.jpg)
+![Schematics2](2.jpg)
 
 ### Bill of Materials
 
