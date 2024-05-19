@@ -82,6 +82,9 @@ I assembled the initial rendition of this robot for the purposes of showing a ro
 **Breadboard:** It's used to connect every pin on the hardware components.
 **Raspberry Pi Pico:** It serves as the robot's microcontroller, analyzing all sensory input, managing motor operations, and handling communications. It activates the software that analyzes ultrasonic data to find openings and obstacles and then controls the motor controllers and servo to steer the robot in the appropriate direction.
 
+![Photo1](./1.jpeg)
+![Photo7](./7.jpeg)
+
 ### Schematics
 
 ![Kicad schematics](./SmartBot-Navigator_schematics.jpeg)
