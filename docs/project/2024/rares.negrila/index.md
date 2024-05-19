@@ -46,7 +46,7 @@ I encountered many problems with SD / microSD cards in embassy-rs.
 
 While the setup initially used matched the Raspberry Pi Pico embedded-hal example from rp-rs using the embedded-sdmmc-rs crate, it did not behave as expected. The SD card itself failed to be read in any way, shape, or form. Even when manually sending CMD0, CMD1, and CMD8 commands, the response was not within the expected parameters.
 
-In the end, I and a colleague ([Mihai Smarandache](https://github.com/Mihai1803)) who also used microSD cards to store data, came up with a solution. We created a blocking::spi::SpiDevice using embassy_embedded_hal. For initialization, we had to give the program ownership over a phantom CS pin—a CS pin that could not be used and would no longer need to be used in the case of microSDs.
+In the end, I found a solution. I created a blocking::spi::SpiDevice using embassy_embedded_hal. For initialization, I had to give the program ownership over a phantom CS pin—a CS pin that could not be used and would no longer need to be used in the case of microSDs.
 
 ![code_1](assets/cs.JPG)
 
@@ -94,6 +94,18 @@ Two RC low-pass filters are employed, each with 1780 kΩ resistors.
 One filter uses a 0.1 µF capacitor, while the other uses a 0.22 µF capacitor.
 
 The amplifier is connected to the opposite port of the stereo potentiometer, and the speaker is connected to the output of the amplifier through an audio jack module.
+
+Full breadboard prototype:
+
+![hardware_on_breadboard](assets/hardware_1.JPG)
+
+Laser processing:
+![hardware_on_breadboard](assets/hardware_2.JPG)
+
+Analog signal processing:
+[hardware_on_breadboard](assets/hardware_3.JPG)
+
+
 
 ### Schematics
 
