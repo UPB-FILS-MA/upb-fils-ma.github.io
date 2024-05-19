@@ -5,7 +5,7 @@ An autonomous indoor robot equipped with a 180-degree rotating ultrasonic sensor
 :::info 
 
 **Author**: Mihaela-Raluca Dorobanțu \
-**GitHub Project Link**: https://github.com/Raluca3012/upb-fils-ma.github.io
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Raluca3012
 
 :::
 
@@ -86,11 +86,13 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 
 Here are some photos of the SmartBot Navigator
 ![photo1](./1.jpeg)
+
 ![photo2](./2.jpeg)
+
 ![photo3](./3.jpeg)
+
 ![photo4](./4.jpeg)
-![photo5](./5.jpeg)
-![photo6](./6.jpeg)
+
 ![photo7](./7.jpeg)
 
 ### Schematics
