@@ -54,9 +54,24 @@ Connection overview :
 
 In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. I've also integrated a 4x4 Matrix Keypad for user input, a servo motor for secure locking, and a buzzer for audible alarms. Each component is chosen with care to ensure a dependable system for safeguarding valuables.
 
+
+This picture shows the project from the above.
+
+![Above photo](./Above.jpeg)
+
+Here I took a picture from the front for a better view.
+
+![Front photo](./Front.jpeg)
+
+This is how my project less or more will look like.
+
+![Connections photo](./Connections.jpeg)
+
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicad schematics photo](./KiCad_schematic.png)
+
 
 ### Bill of Materials
 
@@ -101,4 +116,3 @@ The format is
 1. [Project of a student from past years](https://ocw.cs.pub.ro/courses/pm/prj2022/arosca/rfid-lock)
 2. [Door Lock](https://www.youtube.com/watch?v=kGyQS3B1IwU&t=19s&ab_channel=SriTuHobby)
 3. [Anti-theft lock](https://www.youtube.com/watch?v=Jg0W165iHYk&t=32s&ab_channel=svsembedded)
-...
