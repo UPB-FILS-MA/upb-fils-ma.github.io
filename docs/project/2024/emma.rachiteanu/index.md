@@ -33,8 +33,10 @@ For this project, I aimed to create something both fun and intricate. Merely cre
 
 ### Week 6 - 12 May
 In the first week, I focused on figuring out the hardware and getting started on the tic tac toe code.
+
 ### Week 7 - 19 May
 I finished the STL files for the robotic arm and finished the hardware part.
+
 ### Week 20 - 26 May
 
 ## Hardware
