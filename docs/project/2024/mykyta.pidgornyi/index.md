@@ -61,9 +61,12 @@ PICO EXPLORER BASE - The base for the clock with a display, buttons and a breadb
 This is my whole digikey order:
 ![[Pasted_image_20240504182423.png]]
 
+This is assembled real-life schematic:
+![[Real_life.jpg]]
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![[KiCad.png]]
 
 ### Bill of Materials
 
