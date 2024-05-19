@@ -54,7 +54,7 @@ src: ./mpu/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Memory Mapped I/O
 - Exceptions
