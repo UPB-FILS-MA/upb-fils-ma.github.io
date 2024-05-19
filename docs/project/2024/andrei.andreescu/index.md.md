@@ -44,7 +44,7 @@ Buzzer: Electromechanical component that produces sound when activated, usually 
 
 ### Schematics
 
-![kicad schematics](kicad.jpg)
+![kicad schematics](kicad.jfif)
 
 ### Bill of Materials
 
