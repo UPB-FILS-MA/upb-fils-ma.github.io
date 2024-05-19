@@ -42,18 +42,25 @@ The circuit features an on/off button that allows users to power the system up o
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+The hardware components arrived.
 ### Week 7 - 19 May
-
+Changed the power supply method, and came up with a new solution to power up the pico w.
+Continued to develop the software part, with focus on the onewire communication protocol with the temperature sensor.
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+MT3608 28V 2A - is a voltage regulator that we use to amplify the current given by the battery to power the fans
+DS18B20 (TO-92) - is a digital temperature sensor with adjustable accuracy from 9 bit to 12 bit readings
+2n2222 NPN BJT - are cheap bipolar transistor that we use as a switch to power the fans
+TP4056 - is a module we use for charging the battery
 
 ### Schematics
 
-Place your KiCAD schematics here.
+ ![KiCAD_schematic](./hardware_schematic1.png)
+  ![KiCAD_schematic](./hardware_schematic2.png)
+
+
 
 ### Bill of Materials
 
@@ -81,6 +88,7 @@ The format is
 | [2n2222 NPN BJT](https://pdf1.alldatasheet.com/datasheet-pdf/view/15067/PHILIPS/2N2222.html) | NPN BJT Transistors for current amplification | [2 RON](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=2n2222&results=9) |
 | [TP4056](https://pdf1.alldatasheet.com/datasheet-pdf/view/1487471/ETC2/TP4056.html) | Charging module for the battery | [6 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-incarcatoare/7534-incarcator-tp4056-cu-micro-usb-pt-baterie-lipo-1a-cu-protectie-pentru-circuite.html?search_query=modul+incarcator+&results=37) |
 | [18650 LI-ION Battery 3200mA 10A Panasonic](https://www.keeppower.com.cn/products_detail.php?id=580) |  Battery | [23 RON](https://www.emag.ro/acumulator-18650-li-ion-3200ma-10a-panasonic-lincr18650bd/pd/DL86WWBBM/) |
+| [Kit Powerbank 1S, 18650, 5V](https://components101.com/modules/power-bank-module-t6845c-datasheet-specifications) | Power Supply | [13 RON](https://www.sigmanortec.ro/kit-powerbank-1s-18650-5v?gad_source=1&gclid=CjwKCAjwo6GyBhBwEiwAzQTmc0hIOvBpkTSUBJ7S-j4w4NVuZLqWm4JrvdA0o2tr5zMtMWuXsB2O_xoCr_0QAvD_BwE) |
 
 <!-- | []() |  | []() | -->
 
