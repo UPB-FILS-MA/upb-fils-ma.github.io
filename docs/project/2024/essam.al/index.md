@@ -45,14 +45,14 @@ so there are 3 main parts beside the microcontroller 1.servo motor ,2.nfc ,3.ult
 the servo motor opens the door only from the input taken from the nfc and closes the door with the input taken from the senzor.
 there are also 2 leds one lights green when the door is open and when not the other lights red.
 
-![Hardware_pic1](WhatsApp_Image_2024-05-19_at_16.45.18.jpeg)
-![Hardware_pic2](WhatsApp_Image_2024-05-19_at_16.45.21.jpeg)
-![Hardware_pic3](WhatsApp_Image_2024-05-19_at_16.45.21_(1).jpeg)
-![Hardware_pic4](WhatsApp_Image_2024-05-19_at_16.45.21_(2).jpeg)
-![Hardware_pic5](WhatsApp_Image_2024-05-19_at_16.45.21_(3).jpeg)
-![Hardware_pic6](WhatsApp_Image_2024-05-19_at_16.45.22.jpeg)
-![Hardware_pic7](WhatsApp_Image_2024-05-19_at_16.45.22_(1).jpeg)
-![Hardware_pic8](WhatsApp_Image_2024-05-19_at_16.45.22_(2).jpeg)
+![Hardware_pic1](hardware_image2.jpeg)
+![Hardware_pic2](hardware_image3.jpeg)
+![Hardware_pic3](hardware_image4.jpeg)
+![Hardware_pic4](hardware_image5.jpeg)
+![Hardware_pic5](hardware_image6.jpeg)
+![Hardware_pic6](hardware_image7.jpeg)
+![Hardware_pic7](hardware_image8.jpeg)
+![Hardware_pic8](hardware_image9.jpeg)
 
 
 ### Schematics
