@@ -6,7 +6,7 @@ A clock-in machine used to keep track of attendance.
 :::info
 
 **Author**: Oblu Alexandra \
-**GitHub Project Link**: [Clock-in](https://github.com/UPB-FILS-MA/project-alexandra214)
+**GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-alexandra214)
 
 :::
 
