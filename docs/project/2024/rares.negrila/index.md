@@ -97,15 +97,15 @@ The amplifier is connected to the opposite port of the stereo potentiometer, and
 
 Full breadboard prototype:
 
-![hardware_on_breadboard](assets/hardware_1.JPG)
+![hardware_on_breadboard](assets/hardware_1.jpeg)
 
 Laser processing:
 
-![hardware_on_breadboard](assets/hardware_2.JPG)
+![hardware_on_breadboard](assets/hardware_2.jpeg)
 
 Analog signal processing:
 
-[hardware_on_breadboard](assets/hardware_3.JPG)
+[hardware_on_breadboard](assets/hardware_3.jpeg)
 
 
 
