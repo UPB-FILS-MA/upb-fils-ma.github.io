@@ -19,7 +19,7 @@ Creating a Snake game with Rust on a Raspberry Pi and LED matrix blends nostalgi
 
 ## Architecture
 
-![Architecture.jpg](https://github.com/AlkhatibHoda/upb-fils-ma.github.io/assets/163418706/9adce84e-7836-41bc-a30b-dc0bfab75834)
+![Architecture.jpg](./Arhitecture.jpg)
 
 
 Game Engine:
