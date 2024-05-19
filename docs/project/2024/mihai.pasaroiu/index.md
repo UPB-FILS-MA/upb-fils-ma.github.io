@@ -1,5 +1,5 @@
 # Music Player
-This project is a compact music player built with a Raspberry Pi Pico W, using Rust for development. It retrieves songs from a microSD card and outputs them to a speaker. 
+Compact music player with microSD input, outputting to a speaker, featuring controls for play, pause, skip, and volume.
 
 :::info 
 

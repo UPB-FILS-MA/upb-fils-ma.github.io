@@ -90,7 +90,7 @@ The format is
 | [embassy_sync](https://docs.embassy.dev/embassy-sync/git/default/index.html) | Synchronization primitives and data structures with async support | Used for communicating through different tasks |
 | [embassy-executor](https://crates.io/crates/embassy-executor) | An async/await executor designed for embedded usage | Used for task execution |
 | [ag_lcd](https://docs.rs/ag-lcd/0.2.0/ag_lcd//) | Library that allows developers to control a HITACHI HD44780 LCD screen with one or two 16-character lines| Used to operate the LCD|
-| [port_expander](https://docs.rs/heapless/0.8.0/heapless/) | Abstraction for I2C port-expanders | Used for handling the Pcf8574 I/O Expander|
+| [port_expander](https://docs.rs/port-expander/0.6.1/port_expander/) | Abstraction for I2C port-expanders | Used for handling the Pcf8574 I/O Expander|
 
 
 
