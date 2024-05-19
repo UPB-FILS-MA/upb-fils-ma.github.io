@@ -32,8 +32,10 @@ I decided on this idea because of its real world applications. This project is a
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I managed to make the HC-SR04 ultrasonic sensor work properly. I also managed to make the LED turn on and remain lit when the distance between an object and the sensor is less than or equal to 60 cm, and the LED turns off when the object goes beyond 60 cm away from the sensor.
 
 ### Week 7 - 19 May
+I was able to make the buzzer start buzzing, and keep the LED lit on, when the distance between an object and the sensor is less than or equal to 45 cm. Now when the object is more than 45 cm away from the sensor and is less than or equal to 60 cm away from the sensor, the buzzer stops buzzing, but the LED remains lit and the LED functionalities are intact. I managed to make the LCD 1602 I2C work but I need to integrate the LCD into my project.
 
 ### Week 20 - 26 May
 
@@ -49,9 +51,13 @@ I decided on this idea because of its real world applications. This project is a
 
   - The complete system can be powered on a 9V battery, which makes the system portable and independent.
 
+These are images of the physical hardware and connections
+![Hardware1](Project_Hardware_Image_1.jpg)
+![Hardware2](Project_Hardware_Image_2.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](KiCad_Project_Schematic_Image.png)
 
 ### Bill of Materials
 
