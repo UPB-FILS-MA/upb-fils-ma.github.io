@@ -82,7 +82,7 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| LCD SPI Display | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196) |
+| [LCD SPI Display](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196) | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/870-modul-lcd-144.html) |
 | 3.3V Buzzer | Buzzers for sound effects and background music | [2 RON / Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
 | Buttons | 4 Buttons for the movement buttons + 1 Button for ON switch | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
 | Wires | Wires for connecting the hardware | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html) |
@@ -101,3 +101,5 @@ The format is
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Snake (Video Game)](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
+2. [Snake - Code for C++](https://www.geeksforgeeks.org/snake-code-cpp/)
+3. 
