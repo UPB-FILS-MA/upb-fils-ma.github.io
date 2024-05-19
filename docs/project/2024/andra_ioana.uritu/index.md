@@ -38,14 +38,28 @@ The system consists of the following main components:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+In this week I bought the last of the necessary components and configured the NanoBeacon to emmit a certain UUID, and also tested the RSSI values to see which values correspond to certain distances from the beacon scanner (I used my phone for scanning beacons initially). 
 
 ### Week 7 - 19 May
+In this period I configured the HM-10 module to scan beacons and find the one I had programmed, and it successfully did so in PowerShell. However, the code is still in progress in Embassy, where I am trying to put all functionalities together (the beacon scanning, motion sensing and operating the servomotor accordingly). I did the KiCad schematics and an initial, basic prototype of the door (mounted, for now, on a cardboard, using tape). 
 
 ### Week 20 - 26 May
 
 ## Hardware
+
+The circuitry:
+![Circuitry](circuitry.png)
+
+When an authorized pet (carying the BLE beacon) is at the door (the servomotor moves to horizontal position to allow access):
+![Access Permitted](access_permitted.png)
+
+When an unauthorized pet is trying to enter (the servomotor remains vertical, stopping the flap door from being pushed):
+![Access Denied](access_denied.png)
+
+
 - **Raspberry Pi Pico W**: The microcontroller, coordinating all device interactions.
 - **NanoBeacon IN100**: Worn by the cat, programmed with a unique UUID for door access.
+- **CR1225**: 3V Lithium Coin Battery which powers the NanoBeacon on the cat's collar after it has been configured. 
 - **CP2102 USB-to-Serial Module**: Used in initial setup for programming the NanoBeacon.
 - **Infrared Sensor**: Detects motion near the door to activate the system.
 - **HM-10 BLE Module**: Enables Bluetooth communication to scan for the beacon on the cat.
@@ -54,9 +68,10 @@ The system consists of the following main components:
 - **Power Supply**: An external battery to keep the system running independently.
 
 
-### Schematics
+### Schematics\
+This is the KiCad schematic:
+![Schematic](kicad_schematic.png)
 
-Place your KiCAD schematics here.
 
 ### Bill of Materials
 
@@ -88,7 +103,6 @@ The format is
 |[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
 |[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |
 | [serialport](https://github.com/serialport/serialport-rs) | A Rust library for working with serial ports. | Used to communicate with the HM-10 BLE module for beacon scanning and Bluetooth communication. |
-| [rppal](https://docs.rs/rppal/latest/rppal/) | Raspberry Pi peripheral access library for Rust. | Utilizes GPIO, I2C, and PWM interfaces on the Raspberry Pi Pico W for interacting with sensors and the servomotor. |
 | [HMSoft V540](http://www.jnhuamao.cn/download_rom_en.asp?id=) | The firmware download files for the HM-10 BLE module. | I will try to use the  HM-10 HMSoft CC2541 WeChat Airsync V540 firmware upgrade file [2016-11]. |
 | [NanoBeacon Config tool](https://inplay-tech.com/nanobeacon-config-tool) | The tool to configure the NanoBeacon's UUID and characteristics. | I will set up the IN-100 using this and then search for the specific configurations with the HM-10 module. |
 
