@@ -96,7 +96,7 @@ Some of the parts were either created by me as they did not have a publicly avai
 
 In this case I couldn't find the Laser Receiver Symbol and the MicroSd card reader module. 
 
-![schematics](assets/KiCad.JPG)
+
 
 
 ### Bill of Materials
