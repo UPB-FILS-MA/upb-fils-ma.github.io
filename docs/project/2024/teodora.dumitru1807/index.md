@@ -27,7 +27,7 @@ This is my block diagram:
 
 UPDATE:
 
-![BLOCK DIAGRAM](<BLOCK DIAGRAM.png>)
+![BLOCK DIAGRAM](<BLOCK_DIAGRAM.png>)
 
 I will attach here photos of my project, i intend to style it more before the final presentation.
 
