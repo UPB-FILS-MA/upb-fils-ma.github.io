@@ -11,18 +11,18 @@ An autonomous indoor robot equipped with a 180-degree rotating ultrasonic sensor
 
 ## Description
 
-The SmartBot Navigator is an innovative autonomous robot designed to navigate indoor environments without physical contact, ensuring efficient and precise movement throughout the area. It leverages sensors such as the HC-SR04 ultrasonic sensor to measure distances and navigate around obstacles efficiently. The sensor, mounted on an MG995 servo motor, provides a sweeping 180-degree view, enabling comprehensive spatial analysis. Here are the core features of the SmartBot Navigator based on environmental conditions it detects:
+The SmartBot Navigator is an innovative autonomous robot designed to navigate indoor environments without physical contact, ensuring efficient and precise movement throughout the area. It leverages sensors such as the HC-SR04 ultrasonic sensor to measure distances and navigate around obstacles efficiently. The sensor, mounted on an MG995 servo motor, provides a sweeping 180-degree view, enabling comprehensive spatial analysis. Here are the core features of the SmartBot Navigator based on the environmental conditions it detects:
 
 - **Obstacle Detected**: When the robot encounters an obstacle, signaling the need to reroute.
 - **Path Clear**: When there are no obstructions in its path, indicating safe passage.
 - **Narrow Passage**: When the robot navigates through tight spaces.
 - **Recharge Needed**: When the battery level is low, indicating the need to return to its charging station.
 
-This autonomous robot includes a Bluetooth module for real-time data transmission to a PC, allowing users to monitor and control the robot remotely. The design prioritizes efficiency, activating sensors and navigation systems only when necessary to conserve power and extend operational periods.
+This autonomous robot includes a Bluetooth module for real-time data transmission to a PC, allowing users to monitor the robot remotely. The design prioritizes efficiency, activating sensors and navigation systems only when necessary to conserve power and extend operational periods.
 
 ## Motivation
 
-The motivation behind the SmartBot Navigator is to advance the capability of autonomous robots in accurately understanding and navigating indoor spaces. This robot serves as a valuable tool in fields requiring detailed spatial awareness, such as robotics research and advanced automation.
+The motivation behind the SmartBot Navigator is to advance the capability of autonomous robots to accurately understand and navigate indoor spaces. This robot serves as a valuable tool in fields requiring detailed spatial awareness, such as robotics research and advanced automation.
 
 
 ## Architecture 
@@ -50,7 +50,7 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
 7. **Power Supply:**
    - Two separate battery blocks power the system:
      - One battery pack powers the Raspberry Pi Pico, ensuring that the central computing resources are maintained.
-     - The second battery pack supplies power to the motor controller and servo, which require higher current for operation.
+     - The second battery pack supplies power to the motor controller and servo, which require a higher current for operation.
 
 8. **Chassis with 3 Wheels and 2 Motors:**
    - Provides the physical structure and mobility for the SmartBot. The chassis is designed with three wheels, two for propulsion and one for stability, allowing agile and precise movements within complex indoor environments.
@@ -63,17 +63,31 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 
 ### Week 6 - 12 May
 
-### Week 7 - 19 May
+I made the documentation of the project.
+I procured the hardware components.
+
+### Week 13 - 19 May
+
+I added KiCAD Schematics.
+I assembled the initial rendition of this robot for the purpose of showing a rough initial image.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+**Power Supply:** I chose to use it because it helps me in the debugging process, as I can switch from 3.3V to 5V on the fly without worrying about overvolting my components.
+**HC-SR04 Ultrasonic Sensor:** It sends out ultrasonic waves and times how long it takes for the echo to come back. To avoid accidents while navigating around objects, the robot needs to be able to calculate their distance. This data assists in this process.
+**MG995 Servo Motor:** The HC-SR04 ultrasonic sensor's angle is operated by the MG995 servo motor. The servo allows the SmartBot to scan a large area in front of it and provide a thorough overview of its surroundings by turning the sensor up to 180 degrees. 
+**L298N Dual H Bridge Motor Controller:** The wheels of the SmartBot are controlled by the L298N controller. It permits the robot to modify its motors' speed and direction in response to navigational commands that can be obtained by sensor inputs. This part makes sure the robot moves smoothly and reacts correctly to the environment it encounters.
+**Bluetooth Module HC-05:** The SmartBot Navigator may interact wirelessly with a PC or other Bluetooth-enabled devices due to the HC-05 Bluetooth module. 
+**Chassis with 3 Wheels and 2 Motors:** The SmartBot's mobility and physical structure are provided by the chassis. It facilitates accurate movements in indoor spaces with two powered wheels and one caster wheel for stability. 
+**Breadboard:** It's used to connect every pin on the hardware components.
+**Raspberry Pi Pico:** It serves as the robot's microcontroller, analyzing all sensory input, managing motor operations, and handling communications. It activates the software that analyzes ultrasonic data to find openings and obstacles and then controls the motor controllers and servo to steer the robot in the appropriate direction.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicad schematics](./SmartBot-Navigator_schematics.jpeg)
+
 
 ### Bill of Materials
 
