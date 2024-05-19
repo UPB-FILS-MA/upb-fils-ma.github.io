@@ -151,9 +151,9 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [Embassy-rs](https://github.com/embassy-rs/embassy) | Motor driver implementation | Modern embedded framework, using Rust and async. |
 | [L298N](https://docs.rs/l298n/latest/l298n/struct.L298N.html) | Motor driver implementation | Used for speed and direction control |
 | [PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM | Used to control the intensity of the sound of the buzzer |
-| [Embassy](https://github.com/embassy-rs/embassy) | Embassy | Modern embedded framework, using Rust and async |
 | [cyw43](https://docs.embassy.dev/cyw43/git/default/index.html)| Rust driver for the CYW43439 wifi chip | Used for the connection to an existing network and create a server |
 
 
