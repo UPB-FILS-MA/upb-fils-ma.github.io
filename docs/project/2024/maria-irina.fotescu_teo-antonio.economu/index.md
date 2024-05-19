@@ -32,6 +32,9 @@ So far, we managed to do everything related to the hardware part and almost find
 
 The hardware utilized includes a Raspberry Pi Pico microcontroller, a breadboard as the main board, an LCD 1602 with I2C Interface for display, a Barometric BMP280 GY pressure sensor, a buzzer, and various connectors along with an 80mm cooler.
 
+![](0.jpg)
+![](1.jpg)
+
 ### Schematics
 
 ![Schematic](KiCad_Schematic.png)
