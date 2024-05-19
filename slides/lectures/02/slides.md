@@ -67,7 +67,7 @@ src: ./embassy-rs/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Memory Mapped IO
 - RP2040 GPIO
