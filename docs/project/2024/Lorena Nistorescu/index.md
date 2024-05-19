@@ -62,18 +62,18 @@ In this week, I finally finished the hardware part, including the kicad schemati
 
 ### Schematics
 
-Shortly, I am going to admit that the KICAD schematics took me with all the coffee breaks included, somewehere around 16-20h :) 
+Shortly, I am going to admit that the KICAD schematics took me with all the coffee breaks included, somewehere around 16-20h :) ;
 Also, I tried to make the schematics clearer and maybe, help me to notice, if u notice some other mistakes.
 
 Legend of the KICAD schematics:
-U1  represents the RFID
-U2  represents the SENSOR TOUCH
-U4  represents the LM5296S
-U6  represents the POWER SUPPLY
-U7  represents the LOCK
-U8  represents the RELAY MODULE
+U1  represents the RFID;
+U2  represents the SENSOR TOUCH;
+U4  represents the LM5296S;
+U6  represents the POWER SUPPLY;
+U7  represents the LOCK;
+U8  represents the RELAY MODULE;
 
-Q1 is NPN transistor 2N2222
+Q1 is NPN transistor 2N2222.
 
 
 
