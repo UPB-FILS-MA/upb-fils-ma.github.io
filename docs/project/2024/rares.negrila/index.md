@@ -46,7 +46,9 @@ I encountered many problems with SD / microSD cards in embassy-rs.
 
 While the setup initially used matched the Raspberry Pi Pico embedded-hal example from rp-rs using the embedded-sdmmc-rs crate, it did not behave as expected. The SD card itself failed to be read in any way, shape, or form. Even when manually sending CMD0, CMD1, and CMD8 commands, the response was not within the expected parameters.
 
-In the end, I found a solution. I created a blocking::spi::SpiDevice using embassy_embedded_hal. For initialization, I had to give the program ownership over a phantom CS pin—a CS pin that could not be used and would no longer need to be used in the case of microSDs.
+In the end, I found a solution. I created a blocking::spi::SpiDevice using embassy_embedded_hal. 
+
+For initialization, I had to give the program ownership over a phantom CS pin—a CS pin that could not be used and would no longer need to be used in the case of microSDs.
 
 ![code_1](assets/cs.JPG)
 
