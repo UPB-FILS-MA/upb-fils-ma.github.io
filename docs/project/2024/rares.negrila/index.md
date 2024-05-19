@@ -81,22 +81,27 @@ To Be Continued - PCB work and final touches + packageing
 
 ## Hardware
 
-Using leds as settings indicators.
-Buttons and a stereo potentiometer for octave and volume respectively.
-7 Laser diodes placed at an angle in order to continuously shine on the laser receivers.
-An SD card reader with a 16GB SD card (the card has to use the W95 FAT32 (LBA) format).
-A Dac for processing the data and a amplifier for keeping the signal at a desireable level.
-Two RC low pass filters with 1780 kΩ resistors. One uses a 0.1 µF capacitor, while the other uses a 0.22 µF capacitor.
-The amplifer will connect to the opposite port of the stereo potentiometer.
-And the speaker will be connected to the output of the amplifier through an audio jack module.
+Using LEDs as settings indicators, buttons and a stereo potentiometer for octave and volume respectively.
+
+Seven laser diodes are placed at an angle to continuously shine on the laser receivers.
+
+An SD card reader is used with a 16GB SD card (the card has to use the W95 FAT32 (LBA) format). 
+
+A DAC is used for processing the data and an amplifier is used to keep the signal at a desirable level.
+
+Two RC low-pass filters are employed, each with 1780 kΩ resistors.
+
+One filter uses a 0.1 µF capacitor, while the other uses a 0.22 µF capacitor.
+
+The amplifier is connected to the opposite port of the stereo potentiometer, and the speaker is connected to the output of the amplifier through an audio jack module.
 
 ### Schematics
 
 Some of the parts were either created by me as they did not have a publicly available schematic but most of the more detailed schemas for the modules used can be found in their datasheet.
 
-In this case I couldn't find the Laser Receiver Symbol and the MicroSd card reader module. 
+In this case I couldn't find the Laser Receiver Symbol, the SD card reader module, the LM386 module and the audio jack module with the portable speaker. 
 
-
+![schematics](assets/KiCad.JPG)
 
 
 ### Bill of Materials
