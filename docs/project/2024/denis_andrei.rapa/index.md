@@ -56,15 +56,15 @@ In my project, the Raspberry Pi Pico microcontroller serves as the central proce
 
 This picture shows the project from the above.
 
-![Above photo](./Above.png)
+![Above photo](./Above.jpeg)
 
 Here I took a picture from the front for a better view.
 
-![Front photo](./Front.png)
+![Front photo](./Front.jpeg)
 
 This is how my project less or more will look like.
 
-![Connections photo](./Connections.png)
+![Connections photo](./Connections.jpeg)
 
 
 ### Schematics
