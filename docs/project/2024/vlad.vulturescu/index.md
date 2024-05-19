@@ -51,7 +51,7 @@ The Motion-based Alarm System leverages essential electronic components designed
 
 ![Device Image 1](project_picture_1.png)
 
-![Device Image 2](project_image_2.png)
+![Device Image 2](project_picture_2.png)
 
 ### Schematics
 
