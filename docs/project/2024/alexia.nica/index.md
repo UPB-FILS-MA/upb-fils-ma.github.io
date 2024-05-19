@@ -23,13 +23,11 @@ The motivation behind this project is to create a multifunctional clock that not
 
   **1-Rasberry Pi Pico:** Microcontroller unit responsible for managing all operations.
   
-  **2-Temperature Sensor:** Monitors ambient temperature and communicates with the Rasberry Pi Pico
+  **2-LCD Display:** Shows the current temperature in Celcius.
   
-  **3-LCD Display:** Shows the current temperature in Celcius.
+  **3-Buzzer:** Acts as the audible alarm.
   
-  **4-Buzzer:** Acts as the audible alarm.
-  
-  **5-RTC Module:** Real time clock module used for accurate timekeeping
+  **4-RTC Module:** Real time clock module used for accurate timekeeping
 
 ## Log
 
