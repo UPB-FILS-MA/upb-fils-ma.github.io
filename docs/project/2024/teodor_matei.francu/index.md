@@ -12,8 +12,7 @@ This project aims to emulate the popular game Tic-Tac_Toe on a Rapspberry Pi.
 ## Description
 
 
-In this project I will try to recreate simplified version of a game console of the 1990's. The controller for playing the game will be composed of 5 buttons, 4 of which for navigating the game itself (up down left right) and the last for inputting your move. The game will be displayed using a small LCD display that will run using Embedded-graphics, thereby giving the user a simple yet effective interface for playing the game. To emulate the feel of retro games, a buzzer (or more, if need be) will be used to play a simple 8-bit styled theme and specific sounds for inputting moves and losing or winning the game.
-The game will be played against a bot that is coded using some simple checks and ifs or against another player (haven't decided yet)
+In this project I will try to recreate simplified version of a game console of the 1990's. The controller for playing the game will be composed of 5 buttons, 4 of which for navigating the game itself (up down left right) and the last for inputting your move. The game will be displayed using a small LCD display that will run using Embedded-graphics, thereby giving the user a simple yet effective interface for playing the game. To emulate the feel of retro games, a buzzer (or more, if need be) will be used to play a simple 8-bit styled theme and specific sounds for inputting moves and losing or winning the game. The game will be played against  another player.
 
 
 ## Motivation
