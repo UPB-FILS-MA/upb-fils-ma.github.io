@@ -4,7 +4,7 @@ Smart Weather Clock with Alarm and Temperature Sensor
 :::info 
 
 **Author**: Nica Alexia-Stefania \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-alexianicaa)
 
 :::
 
@@ -18,6 +18,18 @@ The motivation behind this project is to create a multifunctional clock that not
 
 ## Architecture 
 ![Architecture diagram](./architecture.png)
+
+*Main Components used in the WeatherSmart Clock project:*
+
+  **1-Rasberry Pi Pico:** Microcontroller unit responsible for managing all operations.
+  
+  **2-Temperature Sensor:** Monitors ambient temperature and communicates with the Rasberry Pi Pico
+  
+  **3-LCD Display:** Shows the current temperature in Celcius.
+  
+  **4-Buzzer:** Acts as the audible alarm.
+  
+  **5-RTC Module:** Real time clock module used for accurate timekeeping
 
 ## Log
 
@@ -33,9 +45,11 @@ I drew the Kicad schematics and I began writing the code.
 
 ## Hardware
 
-Detail in a few words the hardware used.
+In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. It also reads data and time from the DS3231 real time clock module, and displays them, while also being able to send electrical signals to a buzzer for an alarm effect.
+
 
 ### Schematics
+![Kicad Schematics](./schematics.png)
 ![Circuit](./1.jpg)
 ![Front look](./2.jpg)
 ![Breadboard connections](./3.jpg)
@@ -66,7 +80,10 @@ The format is
 ## Software
 
 | Library | Description | Usage |
-|---------|-------------|-------|
+|--------|--------|-------|
+|[DHT11](https://docs.rs/dht11/latest/dht11/)|DHT11 rust library|Used to interact with DHT11 temperature sensor|
+|[DS323x](https://lib.rs/crates/ds323x)|DS3231 rust library|Used to interact with DS3231 RTC module|
+|[Embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)|Peripheral access library|Used for accessing the peripherals|
 
 
 ## Links
