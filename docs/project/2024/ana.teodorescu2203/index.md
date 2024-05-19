@@ -15,7 +15,7 @@ The project represents a tower crane designed and build using metal parts. In or
 
 Especially for the trolley movement, 2 photoelectric sensors are placed at both ends of the jib, in order to detect the presence of the oncoming trolley and redirecting it back. This ensures a continuously motion, without the risks of falling over the edge or getting stuck at the end.
 
-There is also a buzzer that emits sounds whenever the crane is moving. All of these functionalities are ensured by the use of the Raspberry Pi Pico microcontroller and controlled by switches.
+There is also a buzzer that emits sounds whenever the crane is moving. All of these functionalities are ensured by the use of the Raspberry Pi Pico microcontroller and controlled by buttons.
 
 
 ## Motivation
@@ -36,13 +36,14 @@ Micro Motors with reducer: Powers the movements of rotation, trolley and hook - 
 
 Photoelectric sensors: Detects the oncoming trolley
 
-Active Buzzer: Emits a sound when the crane is moving
 
-3-position switches: The user can control the direction of the motor (up, down, static).
+Passive Buzzer: Emits a sound when the crane is moving
+
+Buttons: The user can control the direction of the motor (up, down, static).
 
 Power supply for all of the components
 
-The sensors sends data to the Pico, which controls the motors through the motor drivers. The Pico connects to the buzzer when the motors are working. There are also 3 switches connected to the Pico for giving the movement commands.
+The sensors sends data to the Pico, which controls the motors through the motor drivers. The Pico connects to the buzzer when the motors are working. There are also 6 buttons connected to the Pico for giving the movement commands.
 
 ## Log
 
@@ -50,7 +51,11 @@ The sensors sends data to the Pico, which controls the motors through the motor 
 
 ### Week 6 - 12 May
 
-### Week 7 - 19 May
+In this week I build the skeleton of the tower crane with all the srews and bolts and I bought the final components, as I found out that it required some new parts. 
+
+### Week 13 - 19 May
+
+In this week I made the kicad schematic and I connected all the hardware components on the breadboard and on the crane. I continued working on the mechanical part of the project, focusing on the movements (rotational, hook and trolley). I placed the sensors on the ends of the jib, the motors and the rotational mechanism with the plastic gears, also the string for the hook.
 
 ### Week 20 - 26 May
 
@@ -65,13 +70,21 @@ Micro Motor GA12-N20 with reducer 1:200 with 10 mm Long Shaft: for the hook
 
 2 Miniature U-Shape Photoelectric Sensor: detects the trolley
 
-Active Buzzer SFM-20B (3-24V): emits a sound 
+Passive Buzzer 3.3V or 3V: emits a sound 
 
-Battery Holder 4 x R6 for power supply
+Battery Holder 3 x R6 for power supply
+
+Plastic gears (different diameters) for rotational movement
+
+![macara](macara.jpg)
+![hardware1](hardware1.jpg)
+![hardware2](hardware2.jpg)
+![hardware3](hardware3.jpg)
+![breadboard](breadboard.jpg)
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad](kicad.jpg)
 
 ### Bill of Materials
 
@@ -92,10 +105,12 @@ The format is
 | 2x JA12-N20 | Micro Motor | [90 RON](https://www.optimusdigital.ro/ro/motoare-micro-motoare-cu-reductor/237-motor-cu-reductor-ja12-n20-.html?search_query=Micro+Motor+cu+Reductor+JA12-N20+1%3A298&results=2) |
 | [Dual Motor Driver L9110s](https://www.laskakit.cz/user/related_files/l9110_2_channel_motor_driver.pdf) | 2x Motor driver | [8 RON](https://www.optimusdigital.ro/ro/drivere-de-motoare-cu-perii/480-driver-de-motoare-l9110s.html?search_query=Driver+de+Motoare+Dual+L9110S&results=2) |
 | [2x U Shape Photoelectric Sensor](https://datasheet.octopart.com/PM-L54-Panasonic-datasheet-33007024.pdf)| Sensors | [14 RON](https://www.optimusdigital.ro/en/optical-sensors/599-senzor-fotoelectric-in-miniatura-in-forma-de-u.html) |
-| [Active Buzzer](https://components101.com/misc/buzzer-pinout-working-datasheet) | Active Buzzer | [4 RON](https://www.optimusdigital.ro/ro/audio-buzzere/8177-buzzer-activ-sfm-20b-3-24-v.html?search_query=Buzzer+Activ+SFM-20B+%283+-+24+V%29&results=1) |
+| [Passive Buzzer](https://components101.com/misc/buzzer-pinout-working-datasheet) | Passive Buzzer | [2 RON](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
 | 10x Pulley Wheel | Pulley Wheel | [10 RON](https://www.optimusdigital.ro/ro/mecanica-roti-scripete/406-roata-scripete-de-93-mm.html?search_query=Roata+Scripete+Alba+%CE%A69.3-2A&results=1) |
-| 4x Switch | Switch | [4 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1120-comutator-in-miniatura.html?search_query=Comutator+in+Miniatura&results=1) |
-| Battery Holder 4xR6 | Battery Holder | [9 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/2806-suport-baterii-4-x-r6.html?search_query=Suport+baterii+4+x+R6&results=63) |
+| Plastic Gear small | Plastic Gear | [2 RON](https://www.optimusdigital.ro/ro/mecanica-roti-dintate/2477-roata-dinata-din-plastic-m05-pentru-ax-d-de-3-mm.html?search_query=Roata+Din%C8%9Bata+din+Plastic+M0.5+pentru+Ax+D+de+3+mm&results=3) |
+| Plastic Gear big| Plastic Gear | [3 RON](https://www.optimusdigital.ro/ro/mecanica-roti-dintate/980-roata-dinata-din-plastic-78-25a.html?search_query=Roata+Din%C8%9Bata+din+Plastic+78-2.5A&results=1) |
+| 6x Buttons | Button | [3 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=Buton+6x6x6&results=1) |
+| Battery Holder 3xR6 | Battery Holder | [4 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/1090-suport-baterii-3-x-r6.html?search_query=Suport+baterii+3xR6&results=1) |
 | [Male to male jumper wires](https://media.digikey.com/pdf/Data%20Sheets/Digi-Key%20PDFs/Jumper_Wire_Kits.pdf) | Wires | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=Fire+Colorate+Tata-Tata+%2840p%2C+10+cm%29&results=10) |
 
 
