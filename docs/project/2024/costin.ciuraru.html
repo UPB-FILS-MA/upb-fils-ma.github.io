@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.1145e5a3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.070ef642.js" defer="defer"></script>
 <script src="/assets/js/main.bfe96e87.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -35,11 +35,19 @@ embedded systems and multiple mechanical and electrical parts, which are crucial
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<p>Changeed from using a stepper motor to a servo-motor.
+| <a href="http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf" target="_blank" rel="noopener noreferrer">Servo Motor</a> | The servo motor | <a href="https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&amp;results=196" target="_blank" rel="noopener noreferrer">14 RON</a> |</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <p>In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. The LCD Screen will show what preset will be used, in function of the button pressed, the stepper motor will rise the ramp to a specified angle.</p>
+<p>This is a picture that shows the connections of the rasberry pi pico to the components:
+<img decoding="async" loading="lazy" alt="Connections" src="/assets/images/conexiuni-6ca8db564312a52df6cf2a36ebc00fb0.jpeg" width="1200" height="1600" class="img_ev3q"></p>
+<p>This is a picture that shows the breadbord from behind:
+<img decoding="async" loading="lazy" alt="Above" src="/assets/images/deasupra-a9b81d27e619e8b7d0cb5c4877151d29.jpeg" width="1600" height="1200" class="img_ev3q"></p>
+<p>This is from above:
+<img decoding="async" loading="lazy" alt="Behind" src="/assets/images/spate-b7842c7c4408fe6dd995e0ce100a6ad9.jpeg" width="1600" height="1200" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p>Place your KiCAD schematics here.</p>
+<p><img decoding="async" loading="lazy" alt="kicad_schematic" src="/assets/images/kicad_schema-fecb3dd6b740b83d48239c2dd8e635e4.png" width="826" height="601" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td><a href="https://www.waveshare.com/datasheet/LCD_en_PDF/LCD1602.pdf" target="_blank" rel="noopener noreferrer">LCD Display</a></td><td>LCD Display</td><td><a href="https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd+1602&amp;results=17" target="_blank" rel="noopener noreferrer">30 RON</a></td></tr><tr><td><a href="https://pages.pbclinear.com/rs/909-BFY-775/images/Data-Sheet-Stepper-Motor-Support.pdf" target="_blank" rel="noopener noreferrer">Stepper Motor</a></td><td>The motor</td><td><a href="https://www.optimusdigital.ro/ro/motoare-motoare-pas-cu-pas/3912-motor-pas-cu-pas-42hb34f08ab.html?search_query=stepper+motor&amp;results=48" target="_blank" rel="noopener noreferrer">48,99 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
