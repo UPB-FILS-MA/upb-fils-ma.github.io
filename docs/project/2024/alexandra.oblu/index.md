@@ -6,7 +6,7 @@ A clock-in machine used to keep track of attendance.
 :::info
 
 **Author**: Oblu Alexandra \
-**GitHub Project Link**: [link_to_github](https://github.com/UPB-FILS-MA/project-alexandra214)
+**GitHub Project Link**: (https://github.com/UPB-FILS-MA/project-alexandra214)
 
 :::
 
@@ -45,15 +45,29 @@ This clock-in device is designed to simplify attendance tracking, addressing the
 
 ### Week 6 - 12 May
 
+Got the needed parts and checked if the project was doable. This step involved understanding what each part does and planning how to put them together.
+
 ### Week 7 - 19 May
+
+Put all the parts together and connected the wires. This step required following the schematics closely and testing the setup to make sure everything worked properly.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
+Hardware Diagram
+
+![Diagram](./diagram.jpg)
+
+Completed Robot
+
+![Robot](./robot.jpg)
+
 ### Schematics
 
-Not ready yet.
+KiCad Schematic
+
+![Kicad schematic](./kicad.png)
 
 ### Bill of Materials
 
