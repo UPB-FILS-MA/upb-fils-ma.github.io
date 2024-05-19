@@ -37,6 +37,7 @@ Subcomponents:
 - Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
 
 
+
 ![Architecture diagram](image.png)
 
 ## Log
