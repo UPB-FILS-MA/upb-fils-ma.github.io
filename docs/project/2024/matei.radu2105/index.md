@@ -41,9 +41,12 @@ hardware is not really my specialty, I will do my best to make the best game I c
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+ - created index.md
+ - made a prototype of the KiCad schematic
 ### Week 7 - 19 May
-
+ - ordered the physical pieces
+ - assembled them on a breadboard
+ - finalized KiCad schematic
 ### Week 20 - 26 May
 
 ## Hardware
@@ -62,7 +65,7 @@ These are used to control the snake - they are put in a N/W/S/E formation and re
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](./KiCad.png)
 
 ### Bill of Materials
 
@@ -79,7 +82,7 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| LCD SPI Display | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/1312-modul-lcd-spi-de-144-128x128-ili9163-negru.html) |
+| LCD SPI Display | The display - ST7735 | [30 RON]([https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/1312-modul-lcd-spi-de-144-128x128-ili9163-negru.html](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196)) |
 | 3.3V Buzzer | Buzzers for sound effects and background music | [2 RON / Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
 | Buttons | 4 Buttons for the movement buttons + 1 Button for ON switch | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
 | Wires | Wires for connecting the hardware | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html) |
