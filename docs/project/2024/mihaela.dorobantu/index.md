@@ -62,10 +62,12 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+
 I made the documentation of the project.
 I procured the hardware components.
 
 ### Week 13 - 19 May
+
 I added KiCAD Schematics.
 I assembled the initial rendition of this robot for the purposes of showing a rough initial image.
 
