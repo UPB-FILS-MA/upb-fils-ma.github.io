@@ -44,9 +44,11 @@ Add here the schematics with the architecture of your project. Make sure to incl
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-Accepted the hardware.
+Accepted the hardware. Assembled the scheme to make sure all components work properly.
 
 ### Week 7 - 19 May
+Found the proper way of connecting components by using proper drivers, 
+had to connect GPS tracker by doing I2C hardcode because it had no drivers.
 
 ### Week 20 - 26 May
 
