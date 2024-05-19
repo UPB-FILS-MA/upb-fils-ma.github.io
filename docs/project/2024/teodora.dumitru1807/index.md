@@ -72,6 +72,8 @@ In conclusion: I have added a on/off switch to preserve the life of the batterie
 
 ### Week 20 - 26 May
 
+
+
 ## Hardware
 
 The robot will have a microcontroller board like Pico w which support Wi-Fi and is connected to a Wi-Fi module or module with the Wi-Fi function integrated, that allows the car to connect to a Wi-Fi network and receive data from a smartphone. I am going to use the pico w microcontroller, a motor driver module, 2 motors, 4 rechargeable batteries but only 2 used simutaneous,a battery charger and a battery holder, the skelet of the car(2 big wheels + a small one for the front,the platform) , jumper wires and also a switch so that the battery can last longer. I will also design a web interface to make possible the automatic movement of the car. For the assembly part i will use screws for the skeleton of the care and fludor for the components that need to be glued.
@@ -114,8 +116,6 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 ![3D VIEW](PCB1.png)
 ![3D VIEW](PCB2.png)
 
-=======
-Place your KiCAD schematics here.
 
 ### Block diagram
 
