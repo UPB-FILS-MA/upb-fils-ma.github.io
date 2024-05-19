@@ -26,13 +26,13 @@ I want to put in use everything that i learned until now and to learn new things
 Add here the schematics with the architecture of your project. Make sure to include:
  - what are the main components (architecture components, not hardware components)
  - how they connect with each other
-
+![Block diagram](image-1.png)
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+In this week i've constructed the project itself on the breadboard. At first , it was kinda difficult to figure out how all those componets should be put on the breadboard but eventually with some research i found out how to do it. I also had to buy another LCD because mine did not have the I2C interface and i couldn't use it without that interface.
 ### Week 7 - 19 May
 
 ### Week 20 - 26 May
@@ -47,7 +47,16 @@ The idea is simple : someone who drinks alcohol(a beer for example) blows into t
 
 Place your KiCAD schematics here.
 
-![Block diagram](image-1.png)
+
+![Kicad Schematic](schematic.png)
+
+![Photo of the project](irl_schematic.png)
+
+![Led's](led.png)
+
+![Buzzer and MQ-3 sensor](buzzer_mq-3.png)
+
+![LCD](LCD.png)
 
 
 ### Bill of Materials
