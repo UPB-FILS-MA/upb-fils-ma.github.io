@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.aac3c8a9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a76a9b76.js" defer="defer"></script>
 <script src="/assets/js/main.48bacdb5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,12 +26,23 @@
 <p><img decoding="async" loading="lazy" alt="arhitecture_project" src="/assets/images/arhitecture_project-ce259fb644c728b843dec2c01a9e3aae.jpg" width="784" height="445" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<ul>
+<li><strong>Documentation</strong></li>
+<li><strong>Architecture for the project</strong></li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
-<p>Detail in a few words the hardware used.</p>
+<ul>
+<li><strong>MPU-9250 sensor</strong> is used for recognizing hand gestures and also to register them</li>
+<li><strong>Raspberry Pi Pico W</strong> there are 2 in our project, the main components (microcontrollers), are responsible for processing and transmitting input data, one is used for the remote and one for the game screen</li>
+<li><strong>LCD_ILI9341</strong> is used to play the game and show how the pictogram is going to move</li>
+<li><strong>Breadboard</strong> is used for connecting every pin of the hardware components</li>
+<li><strong>Wires</strong> used for connecting the components</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p>Place your KiCAD schematics here.</p>
+<p><img decoding="async" loading="lazy" alt="pacman_game" src="/assets/images/pacman_game-203ed18b9b602a5653e2b81f460d4b85.svg" width="1123" height="794" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="remote_game" src="/assets/images/remote_game-dd390a093e73af90a1e28639d1536c4c.svg" width="1123" height="794" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
 <table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W *2</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">70 RON</a></td></tr><tr><td><a href="https://docs.nanoframework.net/devicesdetails/Mpu9250/README.html" target="_blank" rel="noopener noreferrer">Modul Accelerometru și Giroscop MPU6500 GY</a></td><td>The gyroscope</td><td><a href="https://www.optimusdigital.ro/ro/senzori-senzori-inertiali/1672-modul-accelerometru-i-giroscop-mpu6500-gy.html?search_query=giroscop&amp;results=49" target="_blank" rel="noopener noreferrer">20 RON</a></td></tr><tr><td><a href="https://docs.rs/lcd-ili9341/0.1.0/lcd_ili9341/" target="_blank" rel="noopener noreferrer">Modul LCD de 2.8&#x27;&#x27; cu SPI și Controller ILI9341</a></td><td>LCD screen</td><td><a href="https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/3550-modul-lcd-de-28-cu-spi-i-controller-ili9341-240x320-px.html?search_query=Lcd&amp;results=209" target="_blank" rel="noopener noreferrer">70 RON</a></td></tr><tr><td><a href="https://os.mbed.com/handbook/Breadboard" target="_blank" rel="noopener noreferrer">Breadboard HQ</a></td><td>A breadboard for the remote</td><td><a href="https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/44-breadboard-400-points.html?search_query=Breadboard+hq+400&amp;results=23" target="_blank" rel="noopener noreferrer">5 RON</a></td></tr><tr><td>Kit Plusivo</td><td>Wires and resistors</td><td><a href="https://www.optimusdigital.ro/ro/kituri/12026-kit-plusivo-pentru-introducere-in-electronica-0721248990075.html?search_query=%09Kit+Plusivo+pentru+Introducere+in+Electronica&amp;results=3" target="_blank" rel="noopener noreferrer">50 RON</a></td></tr><tr><td>Micro USB wire *2</td><td>USB wires for the pico w</td><td><a href="https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/497-cablu-micro-usb-1-m-negru.html?search_query=cablu+usb+mic+usb+mare&amp;results=42" target="_blank" rel="noopener noreferrer">14 RON</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
