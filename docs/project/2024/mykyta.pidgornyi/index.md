@@ -44,6 +44,7 @@ Add here the schematics with the architecture of your project. Make sure to incl
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+Accepted the hardware.
 
 ### Week 7 - 19 May
 
