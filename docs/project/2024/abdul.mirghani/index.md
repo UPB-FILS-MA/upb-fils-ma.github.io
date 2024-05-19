@@ -1,9 +1,9 @@
 # Object Detection and Alert System
-:::info 
+Automated Surveillance and Notification Interface.
 
+:::info 
 **Author**: Mahmoud Mirghani Abdelrahman \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Abd210
-
 :::
 
 ## Description
@@ -23,6 +23,10 @@ This project effectively combines ultrasonic sensing, servo control, and audio a
 I chose this project to create a functional radar-like system for obstacle detection and range measurement, utilizing my skills in ultrasonic sensing, servo control, and real-time feedback. I was also inspired by a YouTube video on similar technology.
 
 ## Architecture 
+
+![Architecture Scheme](Architecture.png)
+
+```
     Components:
 Sensor Module: The HC-SR04 ultrasonic sensor measures the distance to nearby objects.
 
@@ -34,7 +38,7 @@ Alert Module:
 
 Display Module:
     An LCD screen provides real-time feedback, displaying the distance to the detected object and the angle of the servo motor.
-
+```
     Connections:
 ```
 LCD Screen: 
@@ -64,9 +68,20 @@ Servo Motor:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I purchased the components for my project and tested them individually to ensure they worked properly. This initial testing phase helped me plan how to implement the code effectively.
+
+I created the initial KiCad schematic and decided which pins to use for each component. During this process, I received assistance from the lab teachers for the servo motor because it wasn't functioning properly and it worked at the end.
+
+By working step-by-step, I successfully managed to make all the components work independently. Each part performed as expected when tested on its own.
+
+Now, I just needed to put everything together and finish the coding. Combining the individual codes and making sure everything worked together was the final step.
 
 ### Week 7 - 19 May
+Despite the initial setup, I connected everything to the Pico and modified the initial KiCad schematic to change some pins. This involved careful adjustments to ensure all connections were accurate.
 
+I tried to integrate the code for all the components. The components I managed to combine were the LCD, ultrasonic sensor, and buzzer. Each of these worked perfectly when tested together.Everything worked except for the servo, which did not function. 
+
+I connected the pins and took photos of the hardware setup. I used my kicad schematic to do this.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -83,10 +98,15 @@ The hardware used includes:
 5. LCD Screen: Displays real-time feedback on the distance to detected objects and the angle of the servo motor.
 Detail in a few words the hardware used.
 
-### Schematics
 
-Place your KiCAD schematics here.
-![Kicad schematic](Kicad.png)
+This is what the project looks like:
+![Hardware picture](Hardware_pic1.jpg)
+This is an upclose picture of the wiring:
+![Upclose Hardware picture](Hardware_pic2.jpg)
+
+### Schematics
+![Kicad schematic](Kicad_picture.jpg)
+
 
 ### Bill of Materials
 
@@ -113,7 +133,7 @@ Place your KiCAD schematics here.
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
 |[HC-SR04](https://github.com/Benehiko/pico-ultrasonic-rs.git) |HC-SR04 manipulation| 
 Used for controlling the ultrasonic sensor|
-## Links
 
+## Links
 1. [DIY Radar with Ultrasonic Sensor](https://youtube.com/shorts/o7DMHJKhpws?si=-lUkMuV3EGYiiGDN)
 

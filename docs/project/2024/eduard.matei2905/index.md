@@ -40,15 +40,30 @@ The motivation behind this project was to create a simple yet effective robot th
 
 ### Week 6 - 12 May
 
+Acquired the required parts and researched the feasibility of the project. This phase involved understanding the specifications of each component and planning the integration.
+
 ### Week 7 - 19 May
+
+Assembled all the parts and wired everything up. This step involved careful connection of the components according to the schematics and initial power-up testing to ensure all parts were functional. 
 
 ### Week 20 - 26 May
 
 ## Hardware
 
+Hardware Diagram
+
+![Diagram](./diagram.jpg)
+
+Completed Robot
+
+![Robot](./robot.jpg)
+
 ### Schematics
 
----> Not ready yet
+KiCad Schematic
+
+![Kicad schematic](./kicad.png)
+
 
 ### Bill of Materials
 
@@ -61,8 +76,11 @@ The motivation behind this project was to create a simple yet effective robot th
 
 ## Software
 
-| Library             | Description             | Usage                                       |
-|---------------------|-------------------------|---------------------------------------------|
+| Library                          | Description              | Usage              |
+|---------------------------------|--------------------|--------------------|
+| [embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
+| [L298N](https://crates.io/crates/l298n) | Rust crate for L298N | Used for driving the motors |
+| [HC-SR04](https://crates.io/crates/hc-sr04) | Rust crate for HC-SR04 distance sensor | Used for calculating the distance to the object in front |
 
 
 ## Links
