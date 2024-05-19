@@ -65,6 +65,14 @@ These are used for background music and sound effects when dying, gaining score 
 - Buttons \
 These are used to control the snake - they are put in a N/W/S/E formation and represent every movement that the player can do; the fifth button is just for starting the game - these send signals to the microcontroller
 
+This is the current prototype of my project, changes are 100% going to happen - a mask is going to be put to hide the hardware and the screen + the buttons will be moved to a separate breadboard to be more easily accessed for the user:
+
+![Project_seen_from_above](./Project_up.jpg)
+
+![Project_seen_from_one_side](./Project_Right.jpg)
+
+![Project_seen_from_the_other_side](./Project_Left.jpg)
+
 ### Schematics
 
 ![KiCad](./KiCad.png)
