@@ -49,10 +49,10 @@ I wanted to create the Smart Piggy Bank to merge traditional savings methods wit
 
 5. Buzzer: An electronic device that produces sound when voltage is applied; used here to emit a beep or tune each time a coin is detected, providing auditory confirmation of a successful deposit.
 
-![Hardware Photo 1](hardware1.jpg)
-![Hardware Photo 2](hardware2.jpg)
-![Hardware Photo 3](hardware3.jpg)
-![Hardware Photo 4](hardware4.jpg)
+![Hardware Photo 1](images/hardware1.jpg)
+![Hardware Photo 2](images/hardware2.jpg)
+![Hardware Photo 3](images/hardware3.jpg)
+![Hardware Photo 4](images/hardware4.jpg)
 
 ### Schematics
 
