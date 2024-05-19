@@ -1,5 +1,6 @@
 # Object Detection and Alert System
 Automated Surveillance and Notification Interface.
+
 :::info 
 **Author**: Mahmoud Mirghani Abdelrahman \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-Abd210
@@ -67,9 +68,20 @@ Servo Motor:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I purchased the components for my project and tested them individually to ensure they worked properly. This initial testing phase helped me plan how to implement the code effectively.
+
+I created the initial KiCad schematic and decided which pins to use for each component. During this process, I received assistance from the lab teachers for the servo motor because it wasn't functioning properly and it worked at the end.
+
+By working step-by-step, I successfully managed to make all the components work independently. Each part performed as expected when tested on its own.
+
+Now, I just needed to put everything together and finish the coding. Combining the individual codes and making sure everything worked together was the final step.
 
 ### Week 7 - 19 May
+Despite the initial setup, I connected everything to the Pico and modified the initial KiCad schematic to change some pins. This involved careful adjustments to ensure all connections were accurate.
 
+I tried to integrate the code for all the components. The components I managed to combine were the LCD, ultrasonic sensor, and buzzer. Each of these worked perfectly when tested together.Everything worked except for the servo, which did not function. 
+
+I connected the pins and took photos of the hardware setup. I used my kicad schematic to do this.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -86,8 +98,15 @@ The hardware used includes:
 5. LCD Screen: Displays real-time feedback on the distance to detected objects and the angle of the servo motor.
 Detail in a few words the hardware used.
 
+
+This is what the project looks like:
+![Hardware picture](Hardware_pic1.jpg)
+This is an upclose picture of the wiring:
+![Upclose Hardware picture](Hardware_pic2.jpg)
+
 ### Schematics
-![Kicad schematic](Kicad.png)
+![Kicad schematic](Kicad_picture.jpg)
+
 
 ### Bill of Materials
 
