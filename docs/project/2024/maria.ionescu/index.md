@@ -35,7 +35,6 @@ This project is a smart car using a Raspberry Pi Pico W and various sensors and 
 
 
 ## Log
-
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
