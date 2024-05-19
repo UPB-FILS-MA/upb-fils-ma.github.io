@@ -3,6 +3,7 @@
 You can play music just by moving your fingers through air.
 
 
+
 :::info
 
 **Author**: Chirila Teodora \
@@ -15,8 +16,7 @@ You can play music just by moving your fingers through air.
 This project constructs a musical instrument resembling a piano, but utilizing proximity sensors instead
 of physical keys. The Raspberry Pi Pico W detects the distance of a user’s fingers from the ultrasonic
 sensor using ultrasonic waves. This detected distance is then translated into visual feedback via LEDs
-and sound generation on the buzzers. The project offers the possibility of recording the user’s ”playing”
-for later playback.
+and sound generation on the buzzers. The project offers the possibility of recording the user’s ”playing” for later playback.
 
 ## Motivation
 
