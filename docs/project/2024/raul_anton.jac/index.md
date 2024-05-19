@@ -57,13 +57,13 @@ I uploaded the KiCad schematics and the photos with components connected on brea
 
 I used the Pico RP2040 W as the "brain" of the entire project, a MicroSD Card Reader for playing the songs connected through SPI. I also have a potentiometer for controlling the volume of the mp3 player, an IR receiver for the remote control (used to control the player and the LED strip). For the outputs I have an OLED Screen (0.91 inch) where I will display the song title and the artist. Also for the output i have an audio amplifier connected to a speaker.
 
-![Hardware photo](./KiCad/sch1.jpg)
-![Hardware photo](./KiCad/sch1.jpg)
+![Hardware photo](./sch1.jpg)
+![Hardware photo](./sch2.jpg)
 
 ### Schematics
 
 The KiCad Schematics with all components connected.
-![KiCad Schematics photo](./KiCad/KiCad.png)
+![KiCad Schematics photo](./KiCad.png)
 
 
 ### Bill of Materials
@@ -72,18 +72,18 @@ The KiCad Schematics with all components connected.
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [Display OLED 0.91 Inch](https://www.optimusdigital.ro/en/lcds/62-1602-lcd-with-i2c-interface-and-yellow-green-backlight.html) | LCD Screen for artist & song| [15 RON](https://robopiesa.ro/products/display-oled-lcd-0-91-inch-128x32?variant=46461636280662&currency=RON&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOopEj7zm9Ic7SDohv6ZHu2yxmUXJXWGerMoRqk_GPwhuHlWpKSD75TA) |
-| [WS2812 RGB LED Bar (8 LEDs)](https://www.optimusdigital.ro/en/led-bars/753-bara-de-led-uri-rgb-ws2812-cu-8-led-uri.html) | LED bar for ambient | [6 RON](https://www.optimusdigital.ro/en/led-bars/753-bara-de-led-uri-rgb-ws2812-cu-8-led-uri.html) |
-| [2 x 20p 2.54 mm Male Pin Header](https://www.optimusdigital.ro/en/pin-headers/8445-20-x-2p-254-mm-male-pin-header.html) | Pins for PICO | [1 RON](https://www.optimusdigital.ro/en/pin-headers/8445-20-x-2p-254-mm-male-pin-header.html) |
-| [MicroSD Card Slot Module](https://www.optimusdigital.ro/en/memories/1516-microsd-card-slot-module.html) | MicroSD reader for songs | [5 RON](https://www.optimusdigital.ro/en/memories/1516-microsd-card-slot-module.html)|
-| [100k Mono Potentiometer](https://www.optimusdigital.ro/en/potentiometers/1887-100k-mono-potentiometer.html?search_query=potentio&results=223) | Controlling the volume of player | [2 RON](https://www.optimusdigital.ro/en/potentiometers/1887-100k-mono-potentiometer.html?search_query=potentio&results=223)|
-| [Infrared Remote Receiver Module](https://www.optimusdigital.ro/en/others/755-modul-receptor-telecomanda-infrarou.html) | Infrared sensor for remote control | [9 RON](https://www.optimusdigital.ro/en/others/755-modul-receptor-telecomanda-infrarou.html)|
-| [Mini Infrared Remote](https://www.optimusdigital.ro/en/others/11-mini-infrared-remote.html) | Remote Control for player and led bar color and modes| [4 RON](https://www.optimusdigital.ro/en/others/11-mini-infrared-remote.html)|
-| [Plusivo Resistor Kit 250 pcs](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=resistors&results=184) | Used for Voltage Divider | [15 RON](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=resistors&results=184)|
-| [Breadboard Jumper Wires Set](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=561) | Connecting components | [8 RON](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=561)|
-| [2 x Breadboard HQ (830 points)](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html) | Base for the project | [20 RON](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html)|
-| [Amplifier Audio Mono XPT8871](https://www.optimusdigital.ro/ro/audio-amplificatoare-audio/8348-amplificator-audio-mono-xpt8871-5-w.html) | Amplifies the audio signal | [5 RON](https://www.optimusdigital.ro/ro/audio-amplificatoare-audio/8348-amplificator-audio-mono-xpt8871-5-w.html)|
-| [Speaker ](https://www.emag.ro/difuzor-mini-3-wati-8-ohmi-pentru-arduino-diy-ai1702/pd/DF0ZDDYBM/?ref=fp_growth_atc_1_1&provider=rec&recid=rec_74_c9f04ca83f0bc58c1133face9f24fff43981cc74b43976796129ba02ad6997dd_1714765523&scenario_ID=74) | The output of the mp3 player | [16 RON](https://www.emag.ro/difuzor-mini-3-wati-8-ohmi-pentru-arduino-diy-ai1702/pd/DF0ZDDYBM/?ref=fp_growth_atc_1_1&provider=rec&recid=rec_74_c9f04ca83f0bc58c1133face9f24fff43981cc74b43976796129ba02ad6997dd_1714765523&scenario_ID=74)|
+| Display OLED 0.91 Inch | LCD Screen for artist & song| [20 RON](https://robopiesa.ro/products/display-oled-lcd-0-91-inch-128x32?variant=46461636280662&currency=RON&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOopEj7zm9Ic7SDohv6ZHu2yxmUXJXWGerMoRqk_GPwhuHlWpKSD75TA) |
+| WS2812 RGB LED Bar (8 LEDs) | LED bar for ambient | [6 RON](https://www.optimusdigital.ro/en/led-bars/753-bara-de-led-uri-rgb-ws2812-cu-8-led-uri.html) |
+| 2 x 20p 2.54 mm Male Pin Header | Pins for PICO | [1 RON](https://www.optimusdigital.ro/en/pin-headers/8445-20-x-2p-254-mm-male-pin-header.html) |
+|MicroSD Card Slot Module | MicroSD reader for songs | [5 RON](https://www.optimusdigital.ro/en/memories/1516-microsd-card-slot-module.html)|
+| 100k Mono Potentiometer | Controlling the volume of player | [2 RON](https://www.optimusdigital.ro/en/potentiometers/1887-100k-mono-potentiometer.html?search_query=potentio&results=223)|
+| Infrared Remote Receiver Module| Infrared sensor for remote control | [9 RON](https://www.optimusdigital.ro/en/others/755-modul-receptor-telecomanda-infrarou.html)|
+| Mini Infrared Remote | Remote Control for player and led bar color and modes| [4 RON](https://www.optimusdigital.ro/en/others/11-mini-infrared-remote.html)|
+| Plusivo Resistor Kit 250 pcs | Used for Voltage Divider | [15 RON](https://www.optimusdigital.ro/en/resistors/10928-250-pcs-plusivo-resistor-kit.html?search_query=resistors&results=184)|
+| Breadboard Jumper Wires Set | Connecting components | [8 RON](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=561)|
+| 2 x Breadboard HQ (830 points) | Base for the project | [20 RON](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html)|
+| Amplifier Audio Mono XPT8871| Amplifies the audio signal | [5 RON](https://www.optimusdigital.ro/ro/audio-amplificatoare-audio/8348-amplificator-audio-mono-xpt8871-5-w.html)|
+| Speaker | The output of the mp3 player | [16 RON](https://www.emag.ro/difuzor-mini-3-wati-8-ohmi-pentru-arduino-diy-ai1702/pd/DF0ZDDYBM/?ref=fp_growth_atc_1_1&provider=rec&recid=rec_74_c9f04ca83f0bc58c1133face9f24fff43981cc74b43976796129ba02ad6997dd_1714765523&scenario_ID=74)|
 
 
 ## Software
