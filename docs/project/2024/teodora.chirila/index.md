@@ -40,6 +40,9 @@ Subcomponents:
 
 - Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
 
+
+![Architecture diagram](image.png)
+
 ## Log
 
 <!-- write every week your progress here -->
@@ -66,10 +69,12 @@ This project utilizes the following hardware components:
 
 - Jumper Wires: Connect components to the breadboard and Raspberry Pi Pico.
 
+
 ### Schematics
 
-![Architecture diagram](image.png)
+![Kicad](KiCad(project).png)
 
+![alt text](picture-project.jpeg)
 
 ### Bill of Materials
 
