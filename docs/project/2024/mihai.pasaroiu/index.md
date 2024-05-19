@@ -28,7 +28,7 @@ Building a music player with a Raspberry Pi Pico W using Rust allowed me to work
 ### Week 6 - 12 May
 Make the hardware part and work for the software.
 ### Week 7 - 19 May
-
+Continue developing the software part.
 ### Week 20 - 26 May
 
 ## Hardware
