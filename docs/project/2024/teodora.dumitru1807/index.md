@@ -38,6 +38,7 @@ I will attach here photos of my project, i intend to style it more before the fi
 ![Driver](Driver1.jpg)
 ![Buzzer](BUZZER.jpg)
 
+
 I am going to connect the 2 motors to the 2 big wheels.
 The motor driver module is going to be connected to the pico_w microcontroller and the module is going to be powered by the 2 batteries.
 In addition, i intend to add a buzzer to the whole robot to copy the sound of a honk.
@@ -68,7 +69,6 @@ I have done all the connections from driver to pico.
 I studied the ways of conntrolling the motors and their logical inputs.
 
 In conclusion: I have added a on/off switch to preserve the life of the batteries.
-
 
 ### Week 20 - 26 May
 
@@ -114,6 +114,8 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 ![3D VIEW](PCB1.png)
 ![3D VIEW](PCB2.png)
 
+=======
+Place your KiCAD schematics here.
 
 ### Block diagram
 

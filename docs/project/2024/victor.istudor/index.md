@@ -4,7 +4,7 @@ A robot that follows a black line on a white background.
 :::info
 
 **Author**: Istudor Victor Mihai \
-**GitHub Project Link**: link_to_github
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-istudormihai
 
 :::
 
@@ -29,9 +29,11 @@ I chose this project because i started to have a passion for robotics. Being a m
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+My parts order arrived and i started to think about the way i can build this robot.
+Looked up on the internet for some Rust libraries that could help me write the software.
 ### Week 7 - 19 May
-
+Finished the KiCad schematic and built the robot.
+Started working on the software.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -39,11 +41,27 @@ I chose this project because i started to have a passion for robotics. Being a m
 The "brain" of this robot will be the Raspberry Pi Pico microcontroller. The IR sensors and motor driver will be connected to it. The batteries will be able to power the motor driver and the Pico. All 4 of the 3V-6V DC motors will be hooked-up to the H-bridge.
 
 These are the components that i will use:
+
 ![Components](./Components.jpg)
+
+
+Soldering:
+
+![Solder](./soldering.jpg)
+
+The final product!
+
+![Robot](./robot.jpg)
+
+I added some stickers.
+
+![Stickers1](./robot_stickers1.jpg)
+
+![Stickers2](./robot_stickers2.jpg)
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Schematic](./kicad_schematic.png)
 
 ### Bill of Materials
 
@@ -73,11 +91,16 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [embassy](https://github.com/embassy-rs/embassy) | Framework | Used for building embedded applications in Rust |
+| [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | General-purpose Input/Output (GPIO) module | Used to control GPIO pins |
 | [infrared](https://docs.rs/infrared/latest/infrared/) | Infrared sensor library | Used for the sensors that will track the line |
+| [syact](https://docs.rs/syact/latest/syact/) | Motor control library | Used for controlling the DC motors |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [How IR sensors work.](https://robu.in/ir-sensor-working/)
-2. [How the L298N motor driver works.](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/)
+1. [Principle Operation of a Line Follower Robot.](https://www.opastpublishers.com/open-access-articles/principle-operation-of-a-line-follower-robot.pdf)
+2. [How IR sensors work.](https://robu.in/ir-sensor-working/)
+3. [How the L298N motor driver works.](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/)
+4. [IR Sensor Module Circuit.](https://www.instructables.com/DIY-IR-Module/)

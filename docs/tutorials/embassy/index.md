@@ -26,9 +26,9 @@ This downloads and runs `rustup-init.sh`, which in turn downloads and runs the c
 
 :::info 
 
-Before installing elf2uf2-rs, you might need an additional package, called `libudev`. You can get it by running the following in your terminal. 
+Before installing elf2uf2-rs, you need to install  `pkg-config` and `libudev`. You can get it by running the following in your terminal. 
 ```shell
-sudo apt-get install libudev-dev
+sudo apt-get install pkg-config libudev-dev
 ```
 
 :::
@@ -210,6 +210,16 @@ targets = ["thumbv6m-none-eabi"]
 # The additional componets to be installed along the Rust toolchain
 components = ["rust-src", "rustfmt", "llvm-tools", "clippy"]
 ```
+
+:::tip
+
+Please make sure that you install the Rust ARMv6-M target (thumbv6m-none-eabi).
+
+```bash
+rustup target add thumbv6m-none-eabi
+```
+
+:::
 
 #### Memory layout
 
