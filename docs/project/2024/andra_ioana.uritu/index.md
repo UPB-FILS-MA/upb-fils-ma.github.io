@@ -3,7 +3,7 @@ A smart pet door that unlocks automatically when a registered pet approaches.
 
 :::info 
 
-**Author**: Uritu Andra-Ioana
+**Author**: Uritu Andra-Ioana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-andrauritu
 
 :::
