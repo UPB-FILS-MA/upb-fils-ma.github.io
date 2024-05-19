@@ -62,13 +62,13 @@ Making the schematic.
 ### Week 20 - 26 May
 
 ## Hardware
-![Hardware](./Hardware) 
+![Hardware](./Hardware.jpg) 
 
 My hardware setup comprises a Raspberry Pi Pico microcontroller, a breadboard serving as the main board, an 8×8 LED matrix module, a passive buzzer, a joystick module, and various wires for connection, a LED , a resistor.
 
 ### Schematics
 
-![Schematic](./Schematic)
+![Schematic](./Schematic.jpg)
 
 The Raspberry Pi is positioned at the center, serving as the main controller.
 Components are arranged in a clear and organized manner around the Raspberry Pi.
