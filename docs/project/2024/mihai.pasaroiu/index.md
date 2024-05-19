@@ -37,7 +37,10 @@ This project utilizes a Raspberry Pi Pico to facilitate digital audio playback f
 
 ### Schematics
 
-![kicad](kicad.png)
+  ![kicad](kicad.png)
+  ![kicad](hardware_1.jpg)
+  ![kicad](hardware_2.jpg)
+  ![kicad](hardware_3.jpg)
 
 ### Bill of Materials
 
