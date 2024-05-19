@@ -34,7 +34,6 @@ The project has the following architecture:
 
 ![Architecture](arch_light.png#gh-light-mode-only)![Architecture](arch_dark.png#gh-dark-mode-only)
 
-
 ## Log
 
 <!-- write every week your progress here -->
@@ -45,6 +44,7 @@ Received first hardware parts. The Tesla Coil did not work so I ordered another 
 Received the second Tesla Coil, which, after some fixes from the lab teacher, started working but had a very low visual and acustical intensity. Decided to order other components and shift the project's focus a bit. After an intensive code testing session I decided to use two Pico microcontroller for two separate purposes. The microcontrollers will both be placed on the same breadboard.
 ### Week 20 - 26 May
 To be written.
+
 ## Hardware
 
 I am using a Pico MCU in order to decode and send audio to a speaker, a potentiometer for adjustable volume, a secondary Pico MCU in order to process and send potentiometer's resistance value to a 4 digit display. Also, I will display a Tesla Coil which powers on a fluorescent neon tube wirelessly.
@@ -91,9 +91,6 @@ The format is
 | Power Source | Powers the Tesla Coil | [60 RON](https://www.emag.ro/alimentator-24v-2a-112653/pd/D7VWPNBBM/) |
 | Powerbank | Powers the Microcontrollers | [Already Owned](https://www.emag.ro/acumulator-extern-a-10-000-mah-quick-charge-3-0-pd-18w-port-usb-conectivitate-type-c-pbxwall1/pd/DTNV17MBM/) |
 | Fluorescent Neon Tube | Lightens from the Tesla Coil | [6 RON](https://www.emag.ro/tub-neon-fluorescent-t4-12-w-lumina-rece-dan2934/pd/DGS55MMBM/) |
-
-
-
 
 ## Software
 
