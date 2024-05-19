@@ -17,8 +17,8 @@ It uses a potentiometer with leds to adjust and show volume,
 and 7 laser diodes and laser receivers that act as the piano keys.
 
 
-The plan is to take the sound data from a microsd card and give it to a dac that will give the analog output to a speaker.
-It uses an LM386 audio amplifier module to keep the signal clear.
+The plan is to take the sound data from an sd card and give it to a dac that will give the analog output to a audio jack module the is connected to a portable speaker.
+It uses an LM386 audio amplifier module and 2 RC low pass filters to keep the signal clear and to a reasonable level.
 
 
 ## Motivation
@@ -42,13 +42,24 @@ as well as understand the conversion of digital code into analog sound.
 
 ### Week 6 - 12 May
 
+Encountered many problems with sd / microsd cards in embassy-rs.
+
+While the setup used initially matched the raspberry pi pico embedded-hal example from the embedded-sdmmc-rs crate, 
+it did not behave in an expected manner, the sd card itself failed to be read in any way shape or form,
+and while manually giving it the cmd0, cmd1, and cmd8 had a reaction it was not within the expected parameters.
+
+In the end the solution me and a colegue([Mihai Smarandache](https://github.com/Mihai1803)), who also used microsd to store data, came up with was to create a blocking::spi:SpiDevice using embassy_embedded_hal, where we had to give the program ownership over a phantom cs pin for initialization, a cs pin that could not be used and would no longer need to be used in the case of microsds.
+
+![code_1](assets/cs.JPG)
+
+I opted for a normal sd card in the end where i could still connect the second cs pin.
+
+
 ### Week 7 - 19 May
 
 ### Week 20 - 26 May
 
 ## Hardware
-
-Detail in a few words the hardware used.
 
 Using leds as settings indicators.
 Buttons and a stereo potentiometer for octave and volume respectively.
