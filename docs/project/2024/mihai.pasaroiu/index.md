@@ -26,18 +26,21 @@ Building a music player with a Raspberry Pi Pico W using Rust allowed me to work
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Make the hardware part and work for the software.
 ### Week 7 - 19 May
-
+Continue developing the software part.
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+This project utilizes a Raspberry Pi Pico to facilitate digital audio playback from a 32GB microSD card formatted in FAT32, interfaced via SPI protocol. The audio output is delivered through a 1W speaker powered by a PAM8403 Class D Stereo Mini Amplifier, enhanced by an RC filter comprising a 680-ohm resistor and a 10nF capacitor, which filters frequencies above 23.4kHz. Visual augmentation is achieved through four LEDs, controlled by PWM signals that vary in intensity corresponding to the audio output's duty cycle, providing a dynamic representation of sound intensity. User interaction is managed through a 1602 LCD display, operating on the I2C protocol, which displays the current song title. The system also incorporates three push-buttons connected to the microcontroller's GPIO pins with 10k-ohm pull-up resistors, assigned to play/pause functionality and navigation between tracks. Additionally, a potentiometer is integrated for volume control, offering user-adjustable audio output levels.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+  ![kicad](kicad.png)
+  ![hardware image 1](hardware_1.jpg)
+  ![hardware image 2](hardware_2.jpg)
+  ![hardware image 3](hardware_3.jpg)
 
 ### Bill of Materials
 
@@ -68,12 +71,13 @@ The format is
 
 
 
+
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embedded-sdmmc-rs](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
-| [HD44780-driver](https://github.com/JohnDoneth/hd44780-driver) | LCD display driver | Used for displaying the name of the song playing |
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | LCD display driver | Used for displaying the name of the song playing |
 
 ## Links
 

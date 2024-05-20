@@ -3,6 +3,7 @@
 You can play music just by moving your fingers through air.
 
 
+
 :::info
 
 **Author**: Chirila Teodora \
@@ -15,8 +16,7 @@ You can play music just by moving your fingers through air.
 This project constructs a musical instrument resembling a piano, but utilizing proximity sensors instead
 of physical keys. The Raspberry Pi Pico W detects the distance of a user’s fingers from the ultrasonic
 sensor using ultrasonic waves. This detected distance is then translated into visual feedback via LEDs
-and sound generation on the buzzers. The project offers the possibility of recording the user’s ”playing”
-for later playback.
+and sound generation on the buzzers. The project offers the possibility of recording the user’s ”playing” for later playback.
 
 ## Motivation
 
@@ -35,6 +35,10 @@ Subcomponents:
 - LED Control: Controls the three LEDs based on the detected distance.
 
 - Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
+
+
+
+![Architecture diagram](image.png)
 
 ## Log
 
@@ -62,10 +66,12 @@ This project utilizes the following hardware components:
 
 - Jumper Wires: Connect components to the breadboard and Raspberry Pi Pico.
 
+
 ### Schematics
 
-![Architecture diagram](image.png)
+![Kicad](KiCad(project).png)
 
+![alt text](picture-project.jpeg)
 
 ### Bill of Materials
 
@@ -91,14 +97,13 @@ The format is
 | [Green LED](https://www.optimusdigital.ro/en/leds/38-5-mm-green-led-with-difused-lens.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/38-5-mm-green-led-with-difused-lens.html?search_query=led&results=2179)                                                                                                                                                                                                                                                       |
 | [Ultrasonic Distance Sensor](https://www.optimusdigital.ro/en/distance-sensors/8150-hc-sr04p-ultrasonic-distance-sensor-3-55-v.html)                                                                         | Measure distances        | [7 lei](https://www.optimusdigital.ro/en/distance-sensors/8150-hc-sr04p-ultrasonic-distance-sensor-3-55-v.html)                                                                                                                                                                                                                                                      |
 | [Resistors](https://www.optimusdigital.ro/en/resistors/33-025w-resistor-set-20-values-20-pcs-each.html)                                                                         | For LED's        | [7 lei](https://www.optimusdigital.ro/en/resistors/33-025w-resistor-set-20-values-20-pcs-each.html)                                                                                                                                                                                                                                                     |
-| [Micro USB Cable](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)                                                                         | For LED's        | [3 lei](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)
+| [Micro USB Cable](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)                                                                         | For LED's        | [3 lei](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516) |
 
 ## Software
-
-| Library                                  | Description                        | Usage                              |
-| ---------------------------------------- | ---------------------------------- | ----------------------------------|
-| [Embassy](https://github.com/embassy-rs/embassy)       | A Rust-based framework designed specifically for embedded programming.                | It's for programming the Raspberry Pi Pico and simplifying embedded concepts.              |                         
-| [embassy-hal](https://github.com/embassy-rs/embassy)        | Hardware                | Provides access to Raspberry Pi Pico W specific hardware functionalities.              |
+| Library | Description | Usage |
+|---------|-------------|-------|
+| [Embassy](https://github.com/embassy-rs/embassy) | A Rust-based framework designed specifically for embedded programming. | It's for programming the Raspberry Pi Pico and simplifying embedded concepts. |                         
+| [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware | Provides access to Raspberry Pi Pico W specific hardware functionalities. |
 
 
 
