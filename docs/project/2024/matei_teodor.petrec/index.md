@@ -68,11 +68,11 @@ Wires: Conduct electrical connections between components (Female-to-Male, Female
 Resistors: Control and limit the flow of electrical current to other components, protecting them from damage (10KΩ joystick / 220Ω LEDs).
 Micro USB Cable: Connects the Raspberry Pi Pico W to a power supply.
 
-![Schematic](hardware1.png)
+![Schematic](hardware1.jpg)
 
-![Schematic](hardware2.png)
+![Schematic](hardware2.jpg)
 
-![Schematic](hardware3.png)
+![Schematic](hardware3.jpg)
 
 ### Schematics
 
