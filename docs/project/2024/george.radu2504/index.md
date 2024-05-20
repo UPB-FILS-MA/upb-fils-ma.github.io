@@ -42,10 +42,10 @@ Main components:
 
 ### Week 6 - 12 May
 
-### Week 7 - 19 May
+I completed the project Kicad schematic, ensuring all components are properly connected.
 
 ### Week 20 - 26 May
-
+I used the project schematic as a template when putting together the hardware on the breadboard.
 ## Hardware
 
 - Raspberry Pi Pico W: The microcontroller serves as the main processing unit, coordinating the functions of the entire system.
