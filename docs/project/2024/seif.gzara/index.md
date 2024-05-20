@@ -47,7 +47,7 @@ Micro-USB Cable: Used for powering and connecting devices like the Raspberry Pi 
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](KiCAD.png)
 
 ### Bill of Materials
 
