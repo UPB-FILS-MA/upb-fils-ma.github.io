@@ -61,7 +61,7 @@ src: ./communication/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Preemptive & Cooperative Concurrency
 - Asynchronous Executor
