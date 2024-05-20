@@ -1,6 +1,6 @@
 # Smart Door Lock System
 Smart door lock: Keyless security for your space.
-
+:::info
 Author: Nistorescu Maria-Lorena
 GitHub Project Link*: (https://github.com/LolitaMary/SmartDoorLockSystem)
 
