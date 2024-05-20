@@ -63,7 +63,7 @@ Micro USB Cable: Connects the Raspberry Pi Pico W to a power supply.
 
 ### Schematics
 
-![Schematic](kicadproject.png)
+![Schematic](kicadschematic.png)
 
 ### Bill of Materials
 
