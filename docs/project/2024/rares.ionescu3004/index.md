@@ -25,8 +25,10 @@ My interest in cybersecurity stems from its technical complexity and the direct 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+This past week, I focused on gathering the essential components for my project, successfully acquiring most of the items needed. In addition to sourcing materials, I dedicated time to researching online, seeking inspiration to refine my concept. After careful consideration and exploration of various ideas, I finalized the project idea that I plan to implement. This dual approach of preparation and planning has set a solid foundation for the next stages of my project.
 
 ### Week 7 - 19 May
+In the second week of my project, I completed several key tasks. I gathered all necessary materials and created multiple KiCad schematics. I developed a detailed schematic with wiring for the facility Pico, a cleaner schematic showing only port connections, and a fully wired schematic for the attacker Pico. I also constructed the hardware components on breadboards and the Pico Explorer board, allowing for real-life testing and refinement of the designs. Also, I have created the ST7789 driver symbol for the attacker Pico, added the HC-SR04 symbol and footprint and modified a symbol for the 4 digit 7 segment display in order to match the one I have.
 
 ### Week 20 - 26 May
 
@@ -61,9 +63,25 @@ Additional Components
 7-Segment Display: To display numerical data
 Buttons: For user input or interaction.
 
+Up next, here are presented some pictures of the hardware:
+Wiring for both Picos:
+![Wiring for both Picos](Photos/Both_PICOs.jpg)
+Attacker Pico:
+![Wiring for the Attacker Pico](Photos/Attack_PICO.jpg)
+Facility Pico:
+![Wiring for the Facility Pico](Photos/Facility_PICO_1.jpg)
+![Wiring for the Facility Pico](Photos/Facility_PICO_2.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+Here are presented the KiCAD Schematics
+
+The Attacker:
+![Attacker Pico](KiCad_Attacker_PICO.jpg)
+The Facility:
+![Facility Pico](KiCad_Facilty_PICO.jpg)
+The Facility(created for a cleaner design):
+![Facility Pico clean](KiCad_Facility_PICO_Clean.jpg)
 
 ### Bill of Materials
 
