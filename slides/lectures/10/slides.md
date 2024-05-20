@@ -59,7 +59,7 @@ src: ./tock/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - The purpose of an operating system
   - Abstractions

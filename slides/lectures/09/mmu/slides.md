@@ -31,7 +31,7 @@ The processor works in at least two modes:
   - restricts access to some registers 
   - accesses virtual addresses through Memory Protection (*if machine mode exists*)
 - **user** mode 
-  - allows only ALU and memory load ans store
+  - allows only ALU and memory load and store
   - accesses memory access through the Memory Management Unit (*MMU*)
 
 :: right ::
@@ -71,7 +71,7 @@ page to frame
 
 the logic address is divided in two parts:
 - *page index*
-- *offset* withing the page
+- *offset* within the page
 
 the MMU translates every logic address into a physical address using a *page table*
 

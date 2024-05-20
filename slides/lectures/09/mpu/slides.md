@@ -146,7 +146,7 @@ $$ region\_size = min\lparen256, 2^{size}\rparen $$
 $$ base\_address = region\_size \times N $$
 $$ subregion\_size = \frac{region\_size}{8} $$
 
-- a 5K region is not allows (5K is not a power of 2)
+- a 5K region is not allowed (5K is not a power of 2)
 - use two 4K regions back to back
 - disable 6 of the subregions (subregion is 512B)
 
