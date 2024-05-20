@@ -74,7 +74,8 @@ The hardware I am using  Raspberry Pi using a joystick for control and an SSD130
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Hardware1](Hardware 1.jpeg)
+![Hardware2](Hardware2.jpeg)
 
 ### Bill of Materials
 
@@ -91,13 +92,17 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [Joystick Breakout Board](https://www.optimusdigital.ro/en/touch-sensors/742-ps2-joystick-breakout.html) | The Controler | [5.35 RON](https://www.optimusdigital.ro/en/) |
-| [SSD1306 OLED Display](https://www.optimusdigital.ro/en/lcds/194-yellow-and-blue-096-oled-module-128x64-px.html) | The Display | [23.79 RON](https://www.optimusdigital.ro/en/) |
-
+| [Joystick Breakout Board](https://www.optimusdigital.ro/en/touch-sensors/742-ps2-joystick-breakout.html) | The Controler | [5,35 RON](https://www.optimusdigital.ro/en/) |
+| [SSD1306 OLED Display](https://www.optimusdigital.ro/en/lcds/194-yellow-and-blue-096-oled-module-128x64-px.html) | The Display | [23,79 RON](https://www.optimusdigital.ro/en/) |
+| [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html) | The Breadbord | [9,98 RON](https://www.optimusdigital.ro/en/) |
+| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html) | [7,99 RON](https://www.optimusdigital.ro/en/) |
+| [Male-Female Wires](https://www.optimusdigital.ro/en/wires-with-connectors/879-30-cm-male-female-wires-10p.html) | [5,79 RON](https://www.optimusdigital.ro/en/) |
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+|[embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
+| TBD | TBD | TBD |
 
 ## Links
 
