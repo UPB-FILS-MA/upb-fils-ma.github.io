@@ -47,8 +47,6 @@ The motivation behind this project is driven by the need to enhance vehicle safe
 
 ### Week 20 - 26 May
 
-## Hardware
-
 
 
 
