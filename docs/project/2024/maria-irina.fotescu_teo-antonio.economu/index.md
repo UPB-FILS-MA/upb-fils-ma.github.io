@@ -2,10 +2,12 @@
 
 Temperature alert system using the Kalman Filter for perfect accuracy
 
-_Author_: Fotescu Maria-Irina, Economu Teo-Antonio
+:::info
 
-_GitHub Project Link_: https://github.com/UPB-FILS-MA/project-economuteo
+**Author**: Fotescu Maria-Irina, Economu Teo-Antonio \
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-economuteo
 
+:::
 
 ## Description
 
@@ -36,13 +38,16 @@ So far, we managed to do everything related to the hardware part and almost find
 ## Hardware
 
 ### Short description
+
 The hardware utilized includes a Raspberry Pi Pico microcontroller, a breadboard as the main board, an LCD 1602 with I2C Interface for display, a Barometric BMP280 GY pressure sensor, a buzzer, and various connectors along with an 80mm cooler.
 
 ### Gallery
+
 ![](0.jpg)
 ![](1.jpg)
 
 ### Schematic
+
 ![Schematic](KiCad_Schematic.png)
 
 ### Bill of Materials
