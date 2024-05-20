@@ -38,7 +38,7 @@ I made a laptop pad out of a wood planck, cut 2 holes for the fans and glued the
 
 ### Week 7 - 19 May
 
-I assembled a mini remote with 4 buttons and LEDs that respond to the tactile input or show the status of the circuit, then I connected the mcu to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done, I managed to set a hostname for the pico so it's easier to find it on whatever network it will connect to and I created the UI for the Python app on the laptop to control the fans through WIFI.
+I assembled a tactile user interface with 4 buttons and LEDs that respond to the tactile input or show the status of the circuit, then I connected the mcu to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done, I managed to set a hostname for the pico so it's easier to find it on whatever network it will connect to and I created the UI for the Python app on the laptop to control the fans through WIFI. Data exchange between the laptop and MCU, but handling disconnections still needs some rework.
 
 ### Week 20 - 26 May
 
