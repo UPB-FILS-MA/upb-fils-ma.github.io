@@ -63,7 +63,7 @@ The motivation behind this project is driven by the need to enhance vehicle safe
 
 Schematic of the project on KiCad Application.
 
-![Schematic of the project with using KiCad]()
+![Schematic of the project with using KiCad](kicad.png)
 
 
 
@@ -82,7 +82,7 @@ The format is
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico WH]([https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html](https://ardushop.ro/en/home/2819-raspberry-pi-pico-wh.html)) | The microcontroller | [56.23 RON]|
+| [Rapspberry Pi Pico WH]([https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html](https://ardushop.ro/en/home/2819-raspberry-pi-pico-wh.html]) | The microcontroller | [56.23 RON]|
 | [LCD 1602] ([https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd&results=211])|lcd screen To display distance information| [14.99 RON]|
 | [LED RGB] ([https://www.optimusdigital.ro/ro/optoelectronice-led-uri/484-led-rgb-anod-comun.html?search_query=rgb&results=126&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fro%2Fcautare%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Drgb%26submit_search%3D])|For visual indication of distance.|[0.99RON]|
 |[Digital Infrared Obstacle Sensor Module] ([https://www.optimusdigital.ro/ro/senzori-senzori-optici/4347-modul-senzor-de-obstacole-digital-cu-infrarosu-reglabil-3-100-cm.html?search_query=senzor+infrarosu&results=121&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fro%2Fcautare%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dsenzor%2Binfrarosu%26submit_search%3D])|distance measurement|[19.99 RON]|
