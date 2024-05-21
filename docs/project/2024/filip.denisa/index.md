@@ -1,4 +1,6 @@
-# Project Name
+# Parking Sensor
+
+Rust-Powered Parking Sensor with using Rasberry Pi Pico
 
 
 
