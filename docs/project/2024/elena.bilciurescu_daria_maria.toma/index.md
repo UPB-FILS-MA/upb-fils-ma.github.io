@@ -1,4 +1,4 @@
-Rusty the Robot
+## Rusty the Robot
 Line follower and obstacle avoiding robot
 
 :::info 
