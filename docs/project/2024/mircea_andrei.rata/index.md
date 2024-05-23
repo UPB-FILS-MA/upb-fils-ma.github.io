@@ -71,7 +71,8 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
       VCC to pin VBUS
       GND to pin GND
       SDA to pin GP12
-      SCL to pin GP13</pre>
+      SCL to pin GP13
+</pre>
 
 <p>
 <em><em class="u">PIR MOTION SENSOR</em></em>: 
@@ -80,7 +81,7 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
        VCC to pin  VSYS
        GND to pin GND
        OUT to pin GP3 
-                </pre>
+</pre>
 
 <p>
 <em><em class="u">KEYPAD</em></em>: 
@@ -90,7 +91,8 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
       COL1 to pin GP4
       COL2 to pin GP5
       COL3 to pin GP6
-      COL4 to pin GP7 </pre>
+      COL4 to pin GP7
+</pre>
 
 <p>
 <em><em class="u">BUZZER</em></em>: 
@@ -98,7 +100,7 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 <pre class="code">      
       POSITIVE to pin GP1
       NEGATIVE to GND   
-      </pre>
+</pre>
 
 <p>
 <em><em class="u">LEDS</em></em>: 
@@ -106,7 +108,8 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 <pre class="code">      
       RED to pin GP16
       GREEN to pin GP17
-      BLUE to pin GP18</pre>
+      BLUE to pin GP18
+</pre>
 
 
 ![kicadschematic](kicad1.png)
