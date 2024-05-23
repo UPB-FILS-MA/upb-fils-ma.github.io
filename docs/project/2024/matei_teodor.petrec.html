@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.82cc0993.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0af3b3d1.js" defer="defer"></script>
 <script src="/assets/js/main.97b2c94c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -48,7 +48,16 @@ The inclusion of the CYW43439 allows the game to have connectivity feature to tr
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
+<ul>
+<li>I ordered all components for the hardware prototype, I needed a joystick and a couple of resistors.</li>
+<li>Started the Kicad Schematic, did some research on the joystick voltage use, since it was using a pin for 5V, I had to come up with an idea to power it separately from the rest of the componenets which were using 3.3V.</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
+<ul>
+<li>I managed to make the hardware part more cleaner, rearranging the components on the breadboard and pico explorer and simplify the wiring of the connections.</li>
+<li>I began to code the software for the tictactoe game, work still in progress but making small achievements along the way testing each component individually to see if it works.</li>
+<li>I solved the issue with the power supply of the joystick by connecting a battery trough a mini power supply (HW-131) such that I can power up it up at 5V, also added some voltage dividers for the VRX, VRY, SW pins of the joystick to connect to the pico explorer base at the overall voltage of the circuit (3.3V).</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <p>Raspberry Pi Pico W: Manages all game operations and processes inputs and outputs.
@@ -60,6 +69,9 @@ Breadboard: Platform for assembling and connecting electronic components.
 Wires: Conduct electrical connections between components (Female-to-Male, Female-to-Female, and Male-to-Male).
 Resistors: Control and limit the flow of electrical current to other components, protecting them from damage (10KΩ joystick / 220Ω LEDs).
 Micro USB Cable: Connects the Raspberry Pi Pico W to a power supply.</p>
+<p><img decoding="async" loading="lazy" alt="Schematic" src="/assets/images/hardware1-0aa39e4457165401ee13708907a6283c.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Schematic" src="/assets/images/hardware2-c71f57059a31682496a74fcce3e01edf.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Schematic" src="/assets/images/hardware3-aac699650d7895affa3a608a8aadcb3e.jpg" width="4032" height="3024" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="Schematic" src="/assets/images/kicadschematic-4c30350fe5e0f954002eee002c39e512.png" width="1273" height="816" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
