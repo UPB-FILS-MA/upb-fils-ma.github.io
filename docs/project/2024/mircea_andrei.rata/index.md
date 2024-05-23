@@ -30,7 +30,7 @@ The motivation behind this project stems from a desire to enhance home and prope
 
 ## Architecture 
 
-![System Diagram](arhitecture.png)
+![System Diagram](arhitecture1.png)
 
 ## Log
 
@@ -109,7 +109,7 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
       BLUE to pin GP18</pre>
 
 
-![kicadschematic](kicad.png)
+![kicadschematic](kicad1.png)
 
 # Here are also a few pictures of the actual project :
 
