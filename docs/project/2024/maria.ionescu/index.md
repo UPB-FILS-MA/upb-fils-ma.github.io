@@ -35,20 +35,28 @@ This project is a smart car using a Raspberry Pi Pico W and various sensors and 
 
 
 ## Log
-
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I uploaded the project documentation. Then, I received the order for the parts and started working on the car. Also, I began working on the Kicad schematic. 
 
 ### Week 7 - 19 May
-
+I finished the car, I soldered wires to the motors, connected the pico with the other parts and added the driver, Mr. Duckerson. Furthermore, I started to work at the software.
 ### Week 20 - 26 May
 
 ## Hardware
-Rapspberry Pi Pico W, Four wheels, Four TT Motors, Four AA batteries (1.5V) + mounting device, HC-SR04 ultrasonic distance sensor + mounting bracket, SG90 Servo motor, Two IR sensors FC-123, Pololu QTRX-HD-06A, Reflective IR Sensor, L298N Motor Driver, Mini Breadboard, Active Buzzer Module, Male-female, male-male, female-female wires, Switch l Insulating electrical tape, Double-sided adhesive white tape, Connectors and screws, Chassis, Pin headers
+Rapspberry Pi Pico W, Four wheels, Four TT Motors, Four AA batteries (1.5V) + mounting device, HC-SR04 ultrasonic distance sensor + mounting bracket, SG90 Servo motor, Two IR sensors FC-123, Pololu QTRX-HD-06A, Reflective IR Sensor, L298N Motor Driver, Mini Breadboard, Active Buzzer Module, Male-female, male-male, female-female wires, Switch l Insulating electrical tape, Double-sided adhesive white tape, Connectors and screws, Chassis, Pin headers.
+
+[Photo1](img1.jpeg)
+[Photo2](img2.jpeg)
+[Photo3](img3.jpeg)
+[Photo4](img4.jpeg)
+[Photo5](img5.jpeg)
 
 ### Schematics
 Place your KiCAD schematics here.
+
+![Schematic](Kicad.png)
 
 ### Bill of Materials
 | Device | Usage | Price |
