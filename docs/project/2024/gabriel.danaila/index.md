@@ -72,6 +72,7 @@ I am using two Pico MCUs because the code snippets and code parts that I use are
 
 ![HDW3](hardware_schematics/hardware3.png)
 
+</td>
 </tr>
 </table>
 <table>
@@ -90,6 +91,7 @@ I am using two Pico MCUs because the code snippets and code parts that I use are
 
 ![HDW6](hardware_schematics/hardware6.png)
 
+</td>
 </tr>
 </table>
 
