@@ -43,7 +43,7 @@ Received first hardware parts. The Tesla Coil did not work so I ordered another 
 ### Week 7 - 19 May
 Received the second Tesla Coil, which, after some fixes from the lab teacher, started working but had a very low visual and acustical intensity. Decided to order other components and shift the project's focus a bit. After an intensive code testing session I decided to use two Pico microcontrollers for two separate purposes. The microcontrollers will both be placed on the same breadboard.
 ### Week 20 - 26 May
-This week I finally received and assembled the last pieces of hardware. I have also realized that the potentiometer used had to be a logarithmic one, not linear. I also replaced the default beep.wav file with a longer audio file. I have replaced the hardware pictures, with newer, up to date, pictures. Updated the software library.
+This week I finally received and assembled the last pieces of hardware. I have also realized that the potentiometer used had to be a logarithmic one, not linear. I also replaced the default beep.wav file with a longer audio file. I have replaced the hardware pictures, with newer, up to date, pictures. Updated the software library. Added an explanation for as why I have used 2 Raspberry Pi Pico.
 
 ## Hardware
 
