@@ -22,7 +22,7 @@ Raspberry Pi Pico W: The Raspberry Pi Pico W serves as the central microcontroll
 Jumper Wires: These are used to make the connections between the Raspberry Pi Pico W, the LCD display, and any other components on the breadboard. They're essential for establishing temporary electrical connections.
 Breadboard: The breadboard provides a platform for mounting and connecting the various components. The Raspberry Pi Pico W can be placed on the breadboard, and jumper wires can be used to connect its GPIO pins to the appropriate rows and columns on the breadboard. Other components can also be connected to the breadboard using jumper wires as needed.
 Micro-USB Cable: This is used to power the Raspberry Pi Pico W and establish a connection with a computer or power source for programming and data transfer. The cable connects to the micro-USB port on the Pico W and the USB port on the computer or power adapter.
-
+![Diagram](Block_Diagram.png)
 ## Log
 
 <!-- write every week your progress here -->
@@ -47,7 +47,7 @@ Micro-USB Cable: Used for powering and connecting devices like the Raspberry Pi 
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](KiCAD.png)
 
 ### Bill of Materials
 
