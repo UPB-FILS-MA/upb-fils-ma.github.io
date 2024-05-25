@@ -1,6 +1,6 @@
 # Security Door
 
-This project creates a password-protected automatic door system using a Raspberry Pi, microcontroller, and sensor.
+This project creates a nfc-protected automatic door system using a Raspberry Pi, microcontroller, and sensor.
 
 :::info
 
@@ -11,7 +11,7 @@ This project creates a password-protected automatic door system using a Raspberr
 
 ## Description
 
-This project is designed to create an automated door system that operates based on a password input through a keypad. Once the correct password is entered, the door will open using a servo motor. An integrated sensor ensures the door remains open only as long as needed and closes securely after entry is detected. The system is built around a Raspberry Pi and a separate microcontroller, combining robust processing capabilities with efficient real-time control.
+This project is designed to create an automated door system that operates based on a nfc input. The door will open using a servo motor. An integrated sensor ensures the door remains open only as long as needed and closes securely after entry is detected. The system is built around a Raspberry Pi and a separate microcontroller, combining robust processing capabilities with efficient real-time control.
 
 ## Motivation
 
@@ -34,18 +34,30 @@ Add here the schematics with the architecture of your project. Make sure to incl
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+managed to make the ultra somic work,the servo motor had some problems so i ordered a new one, changed the inout for openning the door from a password keypad to a nfc
 ### Week 7 - 19 May
-
+the nfc and the new servo motor arrived and managed to make them work properly with the senzor, added to leds one lights green when the door is open and the other lights red when door closed
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+so there are 3 main parts beside the microcontroller 1.servo motor ,2.nfc ,3.ultrasonic senzor.
+the servo motor opens the door only from the input taken from the nfc and closes the door with the input taken from the senzor.
+there are also 2 leds one lights green when the door is open and when not the other lights red.
+
+![Hardware_pic1](hardware_image2.jpeg)
+![Hardware_pic2](hardware_image3.jpeg)
+![Hardware_pic3](hardware_image4.jpeg)
+![Hardware_pic4](hardware_image5.jpeg)
+![Hardware_pic5](hardware_image6.jpeg)
+![Hardware_pic6](hardware_image7.jpeg)
+![Hardware_pic7](hardware_image8.jpeg)
+![Hardware_pic8](hardware_image9.jpeg)
+
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](image.png)
 
 ### Bill of Materials
 
@@ -67,9 +79,9 @@ The format is
 | [5mm LEDs](https://ardushop.ro/605-thickbox_default/led-5mm.jpg) | lights green when door open and red when closed| [10 x 0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=GIISED_LED5_red&results=286#/10-culoare-rou) | 
 | [Micro USB Cable](https://static.optimusdigital.ro/31356-large_default/cablu-micro-usb-1-m-alb.jpg) | micro usb cable | [RON](https://www.optimusdigital.ro/ro/cabluri-cabluri-usb/498-cablu-micro-usb-1-m-alb.html?search_query=0104210000002362&results=1) | 
 | [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | male-male wires | [1 x 2.85 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=0104210000009040&results=1) | 
-| [Movement Sensor](https://static.optimusdigital.ro/8703-large_default/modul-senzor-pir-hc-sr501.jpg) | to see when te person has entered to close the door | [1 x 5.99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-pir/106-modul-senzor-pir-hc-sr501.html?search_query=0104110000000132&results=1) | 
+| [ultrasonic Sensor](https://www.optimusdigital.ro/ro/senzori-senzori-ultrasonici/2328-senzor-ultrasonic-de-distana-hc-sr04-compatibil-33-v-i-5-v.html?search_query=hc-sr0&results=35) | to see when te person has entered to close the door | [1 x 14.99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-ultrasonici/2328-senzor-ultrasonic-de-distana-hc-sr04-compatibil-33-v-i-5-v.html?search_query=hc-sr0&results=35) | 
 | [SG90 Servomotor](https://static.optimusdigital.ro/54859-large_default/micro-servomotor-sg90.jpg) | open amd closes the door | [1 x 13.99 RON](https://www.optimusdigital.ro/ro/motoare-servomotoare/26-micro-servomotor-sg90.html?search_query=0104110000001368&results=1) | 
-| [4x4 Matrix Keypad](https://static.optimusdigital.ro/23301-large_default/tastatura-matriceala-4x4-cu-conector-pin-de-tip-mama.jpg) | to introduce the password to unlock the door | [1 x 6.99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/470-tastatura-matriceala-4x4-cu-conector-pin-de-tip-mama.html?search_query=0104110000002747&results=1) | 
+| [NFC](https://www.optimusdigital.ro/ro/altele/1590-modul-nfc-pn532.html?search_query=nfc&results=22) | to introduce the password to unlock the door | [1 x 59.99 RON](https://www.optimusdigital.ro/ro/altele/1590-modul-nfc-pn532.html?search_query=nfc&results=22) | 
 | [Set of Female-Male Wires](https://static.optimusdigital.ro/54998-large_default/set-fire-mama-tata-10p-30-cm.jpg) | female-male wires | [2 x 5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=0104210000008999&results=1) | 
 
 ## Software

@@ -59,7 +59,11 @@ Breadboard and Jumper Wires: For prototyping and connecting the components toget
 
 ### Schematics
 
+ project_documentation
+![KiCad schematics](./KiCad_pic.png)
+
 Place your KiCAD schematics here.
+ main
 
 ### Bill of Materials
 

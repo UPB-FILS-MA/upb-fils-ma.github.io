@@ -34,7 +34,6 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
   - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 19).
   - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 20).
 
-
 - **Sensors**:
   - **Infrared Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
   - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
