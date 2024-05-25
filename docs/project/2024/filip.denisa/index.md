@@ -51,7 +51,11 @@ The motivation behind this project is driven by the need to enhance vehicle safe
 
 
 
-
+### Hardware
+[hardware](hardware(1).jpeg)
+[hardware](hardware(2).jpeg)
+[hardware](hardware(3).jpeg)
+[hardware](hardware(4).jpeg)
   
 
   
