@@ -10,7 +10,7 @@ This project aims to deliver a working Xbox One Controller through the official 
 
 ## Description
 
-The controller is a breadboard with 16 buttons and two thumbsticks that will connect to the PC and be recognized by Windows 10 and 11 as an Xbox One Controller by making use of official Windows API. This prototype will be tested in various games that range from FPSs to racing and 3rd person action-adventure. The display of the Pico will be used to display debug information such as the buttons pressed and the X and Y coordinates of the joysticks when in use.
+The controller is a breadboard with 16 buttons and two thumbsticks that will connect to the PC and be recognized by Windows 10 and 11 as an Xbox One Controller by making use of official Windows API. This prototype will be tested in various games that range from FPSs to racing and 3rd person action-adventure.
 
 ## Motivation
 
@@ -36,7 +36,7 @@ This controller uses a Raspberry Pi Pico, 16 buttons and two thumbsticks.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![schematic](Kicad.png)
 
 ### Bill of Materials
 
@@ -63,7 +63,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display(and a small image, a logo maybe, when the controller is plugged in for the first time) |
 | [GameInput](https://learn.microsoft.com/en-us/gaming/gdk/_content/gc/input/overviews/input-overview) | A new input API from Microsoft that aims to bring XInput, DirectInput, etc under a single roof | Used for handling the buttons and the joysticks |
 
 ## Links
