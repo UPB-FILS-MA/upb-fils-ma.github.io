@@ -45,11 +45,35 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 - Finished the whole project
 
 ## Hardware
-
+### Pictures
+<table>
+<tr>
+<td>
+  
 ![opened](assets/hardware/Opened.jpg)
+
+</td>
+<td>
+  
 ![game](assets/hardware/Game.jpg)
+
+</td>
+</tr>
+<tr>
+<td>
+  
 ![gameover](assets/hardware/GameOver.jpg)
+
+  </td>
+<td>
+  
 ![sprofile](assets/hardware/SideProfile.jpg)
+
+</td>
+</tr>
+</table>
+
+### Usage of components
 
 - **Joystick Module** is used for controlling the snake (interacting with the game) and it's connected to ADC pins such that the analog voltage is converted to digital values.
 - **Passive Buzzer** is used for *beeping* in various situations (sound feedback from the game).
