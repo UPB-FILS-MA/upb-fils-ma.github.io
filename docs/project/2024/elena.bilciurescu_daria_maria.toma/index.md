@@ -31,9 +31,9 @@ The main parts of this robot are:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+We finished the KiCad schematic.
 ### Week 7 - 19 May
-
+We finished the hardware and started working on the software.
 ### Week 20 - 26 May
 
 ## Hardware
@@ -42,12 +42,19 @@ The main parts of this robot are:
 - The infrared sensors: used for the line detection.
 - The ultrasonic sensor: used to detect distances and to avoid the obstacles.
 - The 3-6 V dc motors with reducers are used to move and steer the robot.
-- The L293D Motor Control Shield: controlling the speed and direction of each motor independently.
-- The battery storage case for the power supply (AAA batteries)
+- The L293D Motor Control Shield: quadruple half h driver, controls the speed and direction of each motor independently (supplies more voltage as well), used instead of the usual dual full h L298N driver that can not control 4 independent motors
+- The battery storage case for driver (4 AA batteries)
+-The battery storage case for the pico (3 AA batteries)
+- 4 wheels
   
+![hardware1](./hardware1.jpg) 
+![hardware2](./hardware2.jpg) 
+![hardware3](./hardware3.jpg) 
+![hardware4](./hardware4.jpg) 
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad](./kicad.jpg)
+
 
 ### Bill of Materials
 

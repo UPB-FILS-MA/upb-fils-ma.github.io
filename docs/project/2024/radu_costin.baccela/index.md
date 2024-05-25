@@ -21,7 +21,6 @@ I chose the solar tracker project after reviewing a variety of engaging projects
 
 ![Solar Tracker System Diagram](diagram.png)
 
-
 The architecture of the RustFlower consists of the following main components:
 
 - **Control Unit**:
@@ -54,17 +53,29 @@ Connectivity of the main components:
 
 ### Week 6 - 12 May
 
+Ordered all necessary components for the project.
+
 ### Week 7 - 19 May
+
+Uploaded files for 3D printing and received the printed parts.
+Created the KiCad schematic diagram for the project.
+Assembled the hardware components of the project.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-The primary hardware foundation of the RustFlower project centers around the Raspberry Pi Pico W, a central processing unit known for its low power consumption and ability to manage multiple inputs and outputs simultaneously. Servomotors are integrated to adjust the photovoltaic panel’s orientation for optimal solar alignment, enhancing energy efficiency. Photoresistors serve as the main sensory apparatus, detecting sunlight intensity from various angles to guide the servomotors' adjustments. The photovoltaic panel captures solar energy, central to demonstrating the conversion process. The INA219 current sensor measures voltage and current from the photovoltaic panel, crucial for calculating real-time power production. Finally, a small LCD display provides immediate feedback on the system’s performance, including energy generation and system status.
+The primary hardware foundation of the RustFlower project centers around the Raspberry Pi Pico W, a central processing unit known for its low power consumption and ability to manage multiple inputs and outputs simultaneously. Servomotors are integrated to adjust the photovoltaic panel’s orientation for optimal solar alignment, enhancing energy efficiency. Photoresistors serve as the main sensory apparatus, detecting sunlight intensity from various angles to guide the servomotors' adjustments. The MCP3008 provides additional ADC ports necessary for the project. The photovoltaic panel captures solar energy, central to demonstrating the conversion process. The INA219 current sensor measures voltage and current from the photovoltaic panel, crucial for calculating real-time power production. Finally, a small LCD display provides immediate feedback on the system’s performance, including energy generation and system status.
+
+![First image of the assembled hardware](RustFlower1.jpeg)
+
+![Second image of the assembled hardware](RustFlower2.jpeg)
 
 ### Schematics
 
-Place your KiCAD schematics here.
+KiCad schematic of the RustFlower project:
+
+![KiCAD schematic](RustFlowerKicad.png)
 
 ### Bill of Materials
 
@@ -81,6 +92,7 @@ Place your KiCAD schematics here.
 | [Male-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) | Connects components to the breadboard | [5 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) |
 | [Female-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) | Used for extending connections between components | [3 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) |
 | [Resistors](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) | Controls current flow and voltage levels | [15 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) |
+| [MCP3008](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) | Creates aditional ADC ports | [15 RON](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) |
 
 ## Software
 
