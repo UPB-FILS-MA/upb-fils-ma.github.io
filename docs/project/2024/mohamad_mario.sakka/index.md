@@ -66,7 +66,7 @@ I fixed a bug which did not allow the laptop and MCU to disconnect properly, now
 
 * **The KiCAD schematic:**
 
-![kicad_schematic](kicad_schematic22.png)
+![kicad_schematic](kicad_schematic222.png)
 
 * **In Reality:**
 ![hardware pic 1](Pic_1.jpg)
