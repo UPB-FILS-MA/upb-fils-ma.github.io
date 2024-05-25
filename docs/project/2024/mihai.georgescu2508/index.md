@@ -9,11 +9,11 @@ A RC Car controlled by a Web Application
 
 ## Description
 
-+Using the Raspberry Pi Pico W microcontroller, I built a remote-controlled car, operated via a web application.
++ Using the Raspberry Pi Pico W microcontroller, I built a remote-controlled car, operated via a web application.
 
-+The connection is realized with Pico’s integrated Wi-Fi capabilities, since it is ten times faster than using Bluetooth and is easier to control via a web browser on an iPhone.
++ The connection is realized with Pico’s integrated Wi-Fi capabilities, since it is ten times faster than using Bluetooth and is easier to control via a web browser on an iPhone.
 
-+On the bonnet, an ultrasonic sensor is placed to provide distance information to the user, allowing them to control the car even if it is out of sight.
++ On the bonnet, an ultrasonic sensor is placed to provide distance information to the user, allowing them to control the car even if it is out of sight.
 
 ## Motivation
 
@@ -29,17 +29,67 @@ The motivation behind my RC Car project comes from my desire to play, create and
 
 ### Week 6 - 12 May
 
++ I placed the orders for the components, and I started to plan on how the car will look and function.
+
 ### Week 7 - 19 May
+
++ Started to assembly the car components.
++ Did the KiCad schematic for the car.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
++ Raspberry Pi Pico W:
+
+Description: A microcontroller board based on the Raspberry Pi RP2040 chip, featuring Wi-Fi connectivity.
+Function: Serves as the central control unit for the RC car, processing inputs and controlling outputs to various components.
+
+
++ L298N Motor Driver:
+
+Description: A dual H-bridge motor driver module capable of controlling the speed and direction of two DC motors.
+Function: Interfaces between the Raspberry Pi Pico W and the motors, allowing for control of motor operations through GPIO pins.
+
+
++ Servomotors:
+
+Description: Rotary actuators that allow for precise control of angular position, typically used for steering and other precise movements.
+Function: Used for controlling the direction of the RC car.
+
+
++ Ultrasonic Sensor:
+
+Description: A sensor that uses ultrasonic waves to measure the distance to an object.
+Function: Mounted on a servo motor to scan the environment and detect obstacles, providing data for obstacle avoidance.
+
+
++ LEDs:
+
+Description: Light-emitting diodes used as headlights.
+Function: Provide illumination and visual feedback, connected to GPIO pins GP7 and GP8.
+
+
++ Buzzer:
+
+Description: An electronic device that produces sound.
+Function: Used for auditory signals or alerts.
+
+
++ Aluminum Chassis:
+
+Description: The structural frame of the RC car made from aluminum.
+Function: Provides a sturdy and lightweight structure to mount all the components.
+
+
++ Shopping Cart Wheel:
+
+Description: A free-spinning wheel similar to those found on shopping carts.
+Function: Provides stability and support to the rear of the RC car.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![image](kicad.png)
 
 ### Bill of Materials
 
