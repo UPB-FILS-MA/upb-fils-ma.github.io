@@ -42,7 +42,7 @@ I assembled a mini remote with 4 buttons and LEDs that respond to the tactile in
 I connected the MCU to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done and I created the UI for the Python app on the laptop to control the fans through WIFI.
 
 ### Week 20 - 26 May
-I fixed a bug which did not allow the laptop and MCU to disconnect properly, now the TCP connection can be broken from any of the two sides without any issue, and I've set up the shortcuts for increasing and decreasing the power for the laptop's app, they are set as Left CTRL + I or + D for increasing and decreasing the power. I also moved all the buttons and LEDs on the same breadboard which the MCU sits on to save up space. Finally, I have changed the way the currently set power is displayed, I created 3 levels of power (low, medium , high) instead of showing percentages.
+I fixed a bug which did not allow the laptop and MCU to disconnect properly, now the TCP connection can be broken from any of the two sides without any issue, and I've set up the shortcuts for increasing and decreasing the power for the laptop's app, they are set as Left CTRL + I or D for increasing and decreasing the power. I also moved all the buttons and LEDs on the same breadboard which the MCU sits on to save up space. Finally, I have changed the way the currently set power is displayed, I created 3 levels of power (low, medium , high) instead of showing percentages.
 
 ## Hardware
 
