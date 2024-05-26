@@ -72,6 +72,8 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 - I assembled the initial rendition of this robot for the purposes of showing a rough initial image.
 
 ### Week 20 - 26 May
+- I have done the software.
+- I have added some libraries.
 
 ## Hardware
 
@@ -130,8 +132,12 @@ The format is
 |---------|-------------|-------|
 | [rp2040-hal](https://github.com/rp-rs/rp-hal) | RP2040 microcontroller support | Enables control of GPIOs and PWM, essential for interfacing with sensors and motors |
 | [embedded-hal](https://github.com/rust-embedded/embedded-hal) | A Hardware Abstraction Layer (HAL) for embedded systems | Offers interfaces for digital input and output, useful for managing sensor signals |
-| [defmt](https://github.com/knurling-rs/defmt) | Efficient logging for embedded systems | Enables detailed logging for system diagnostics and debugging during development |
-| [embassy](https://github.com/embassy-rs/embassy) | Asynchronous runtime for embedded systems | Supports non-blocking tasks, improving efficiency in managing multiple operations like sensor reading and motor control |
+| [cortex-m](https://) |Cortex-M support| Provides low-level access to Cortex-M microcontroller features |
+| [cortex-m-rt](https://) | Runtime for Cortex-M microcontrollers | Ensures proper setup and entry point for Cortex-M programs |
+| [panic-halt](https://) | Panic handler | Halts the program on panic, useful for debugging |
+| [rp2040-boot2](https://) | Bootloader support for RP2040 | Manages boot sequence for RP2040 microcontrollerHalts the program on panic, useful for debugging |
+| [critical-section](https://) | Critical section implementation | Ensures exclusive access to shared resources in a single-core environment |
+
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
