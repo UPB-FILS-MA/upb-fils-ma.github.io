@@ -42,7 +42,7 @@ src: ./exceptions/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Exceptions
 - Interrupts
