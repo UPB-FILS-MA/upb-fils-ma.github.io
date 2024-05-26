@@ -63,8 +63,8 @@ For the last week of this project, as was previously mentioned the blackjack log
 
 The first and easiest part was the webiste that runs on an HTTP Node server, it was done very minimaslistically, just focusing on the bare minimum: the buttons for the player choices, which was, of course a statement regarding my preference of the aforementioned style, and definitely not because i only had 3 days to finish the project. Anyhow, the network configuration is as follows:
 
-- We have an HTTP server for the website on port 3001
-- An UDP server running on port 3000
+- We have an HTTP server for the website on port 3001 (used express to handle the POST requests from the server) 
+- An UDP server running on port 3000 ( used dgram since UDP uses datagram packets/sockets)
 - Pico is binded on port 3002
 
 The webiste send a POST request for the player choices with the buttons, wrapped in a JSON which is handled server-side and has its data passed to the UDP server, which in turn, will send it to the pico on port 3002, in the form of bytes passed in a buffer.
@@ -73,7 +73,9 @@ Then the Pico hadles logic as per the rules of the Blackjack game, and requests 
 
 The 1st problem encountered was that, due to the non-static ipv4 configuration of my laptop for the wifi, i had to change the ip on wich the server runs on, everytime my wifi closed/reopened, anf sometimes, on different IPs the communciation to the Pico would fail no matter what, the solution of "turn it off and back on again" eventually worked the 3rd time.
 
-Another problem was that, the bigger the code, the less likely the logger was to display aything in the console. This lead to a lot of confusion for me, as i thoyght that i had a problem with my code's logic ,but after trying to us ethe LCD to print when the logger would stop working.
+Another problem was that, the bigger the code, the less likely the logger was to display aything in the console. This lead to a lot of confusion for me, as i thoyght that i had a problem with my code's logic ,but after trying to us ethe LCD to print when the logger would stop working theis issue would vanish quickly.
+
+Other than these, I haven't had any major roadblocks and were able to complete the software part after many and many hours of coding and testing.
 
 
 ## Hardware
@@ -189,6 +191,13 @@ The format is
 | [embassy-executor](https://crates.io/crates/embassy-executor) | An async/await executor designed for embedded usage | Used for task execution |
 | [ag_lcd](https://docs.rs/ag-lcd/0.2.0/ag_lcd//) | Library that allows developers to control a HITACHI HD44780 LCD screen with one or two 16-character lines| Used to operate the LCD|
 | [port_expander](https://docs.rs/port-expander/0.6.1/port_expander/) | Abstraction for I2C port-expanders | Used for handling the Pcf8574 I/O Expander|
+| [embassy_time](https://docs.rs/embassy-time/0.3.0/embassy_time/) | Timekeeping, delays and timeouts. | Used for delays |
+| [byte_slice_cast](https://docs.rs/byte-slice-cast/1.2.2/byte_slice_cast/) | Cast bytes slices from/to slices of built-in fundamental numeric types | Used for byte handling |
+| [cyw43_pio](https://docs.embassy.dev/cyw43-pio/git/default/index.html) | RP2040 PIO driver for the SPI used in the Pico W. | Used for controlling the wifi chip |
+| [embassy_futures](https://docs.rs/embassy-futures/0.1.1/embassy_futures/) | Utilities for working with futures. | Used for handling futures |
+| [embassy_net](https://docs.rs/embassy-net/0.4.0/embassy_net/) | Async network stack. | Used for communciating through WiFi |
+| [static_cell](https://docs.rs/static_cell/2.1.0/static_cell/) | Statically allocated, initialized at runtime cell. | Used for reservig memory at compile time for a value, but initialize it at runtime, and get a 'static reference to it. |
+
 
 
 
