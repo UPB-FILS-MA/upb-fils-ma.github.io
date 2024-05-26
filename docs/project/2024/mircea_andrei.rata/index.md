@@ -186,14 +186,6 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 </tr>
 </table>
 
-![kicadschematic](kicad.png)
-
- **Here are also a few pictures of the actual project** :
- 
-![Hardware1](Hardware1.jpeg)
-![Hardware2](Hardware2.jpeg)
-
-
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
