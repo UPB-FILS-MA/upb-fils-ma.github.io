@@ -79,8 +79,6 @@ Despite the 8-bit sound quality, the sound can now be differentiated between key
 
 ### Week 20 - 26 May
 
-To Be Continued - PCB work and final touches + packageing
-
 The project ended up working perfectly on the breadboards as a prototype.
 
 Sadly after putting the final version together, soldering everything on some prototype pcbs and putting everything in a wooden casing, I have lost a lot of the sound quality due to interference from the solder of the pcb.
