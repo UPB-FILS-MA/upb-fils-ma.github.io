@@ -60,7 +60,7 @@ I fixed a bug which did not allow the laptop and MCU to disconnect properly, now
 
 * **Cooling Fans:** Used to cool down the laptop.
 
-* **Motor Driver:** Providing enough current to the fans.
+* **Motor Driver:** Setting the power of the fans through PWM.
 
 ### Schematics
 
