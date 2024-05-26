@@ -85,7 +85,6 @@ The format is
 
 
 ## Software
-
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Framework | Developing embedded applications in Rust |
