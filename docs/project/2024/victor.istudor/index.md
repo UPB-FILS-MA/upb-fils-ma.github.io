@@ -10,7 +10,7 @@ A robot that follows a black line on a white background.
 
 ## Description
 
-This robot will be capable of following a trajectory given by a black line on a white background, with the help of two infrared sensors placed in the front. The robot will be powered by 4 AA batteries that will give current to 4 DC motors connected to a L298N motor driver. 
+This robot will be capable of following a trajectory given by a black line on a white background, with the help of two infrared sensors placed in the front. The robot will be powered by 9V battery that will give current to 4 DC motors connected to a L298N motor driver. 
 
 ## Motivation
 
@@ -23,22 +23,33 @@ I chose this project because i started to have a passion for robotics. Being a m
  - how they connect with each other -->
 
  ![Robot Architecture](./Schematics.drawio.png)
+ 
+
+## Instructions
+*Compiling*: cargo build --release --target thumbv6m-none-eabi
+
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-My parts order arrived and i started to think about the way i can build this robot.
-Looked up on the internet for some Rust libraries that could help me write the software.
+- My parts order arrived and i started to think about the way i can build this robot.
+- Looked up on the internet for some Rust libraries that could help me write the software.
 ### Week 7 - 19 May
-Finished the KiCad schematic and built the robot.
-Started working on the software.
+- Finished the KiCad schematic and built the robot.
+- Started working on the software.
 ### Week 20 - 26 May
+- As i was working on the software, i realised that the sensors are sending analog values and i have to convert them to digital values, so i moved the sensors from pins GP2 and GP3 to pins GP26 and GP27 (respectively ADC0 and ADC1). As the EN_A and EN_B pins on the L298N are used for enabling and controlling the speed of the motor, i set them as PWM pins. This also meant that i did not have to use additional crates for the L298N or the DC motors.
+- Worked on the functions for the motors and the logic that the robot will have to use.
+- Finished the software.
+- Created a track that the robot will have to follow.
+- Updated the documentation.
+
 
 ## Hardware
 
-The "brain" of this robot will be the Raspberry Pi Pico microcontroller. The IR sensors and motor driver will be connected to it. The batteries will be able to power the motor driver and the Pico. All 4 of the 3V-6V DC motors will be hooked-up to the H-bridge.
+The "brain" of this robot will be the Raspberry Pi Pico microcontroller. The IR sensors and motor driver will be connected to it. The battery will be able to power the motor driver and the Pico. All 4 of the 3V-6V DC motors will be hooked-up to the H-bridge.
 
 These are the components that i will use:
 
@@ -61,7 +72,7 @@ I added some stickers.
 
 ### Schematics
 
-![Schematic](./kicad_schematic.png)
+![Schematic](./kicad_schematic_2.png)
 
 ### Bill of Materials
 
@@ -93,8 +104,7 @@ The format is
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Framework | Used for building embedded applications in Rust |
 | [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | General-purpose Input/Output (GPIO) module | Used to control GPIO pins |
-| [infrared](https://docs.rs/infrared/latest/infrared/) | Infrared sensor library | Used for the sensors that will track the line |
-| [syact](https://docs.rs/syact/latest/syact/) | Motor control library | Used for controlling the DC motors |
+| [ADC](https://docs.embassy.dev/embassy-rp/git/rp2040/adc/index.html) | Analog-to-digial converter module | Used to control ADC pins |
 
 ## Links
 
