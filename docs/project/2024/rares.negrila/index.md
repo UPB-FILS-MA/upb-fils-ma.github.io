@@ -81,6 +81,16 @@ Despite the 8-bit sound quality, the sound can now be differentiated between key
 
 To Be Continued - PCB work and final touches + packageing
 
+The project ended up working perfectly on the breadboards as a prototype.
+
+Sadly after putting the final version together, soldering everything on some prototype pcbs and putting everything in a wooden casing, I have lost a lot of the sound quality due to interference from the solder of the pcb.
+
+Everything still functions ok.
+
+The sound leaves a bit more to be desired when compared to the breadboard version.
+
+This has been a lesson to me about analog waves and soldering, without experience, they don't go well together.
+
 ## Hardware
 
 Using LEDs as settings indicators, buttons and a stereo potentiometer for octave and volume respectively.
@@ -159,10 +169,12 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [SD card Crate](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | Crate for the SD card reader | Used for reading pcm from wav files |
-| [MCP4725 Crate](https://github.com/mendelt/mcp4725) | Crate for the MCP4725 DAC | Used to send the data received from the microsd card to the digital to analog converter |
+| [MCP4725 Crate](https://github.com/vgasparyan/mcp4725-rs) | Crate for the MCP4725 DAC | Used to send the data received from the microsd card to the digital to analog converter |
 | [Framework used in project](https://github.com/embassy-rs/embassy)| Rust framework for embedded programming | Used to program the behaviour of the raspberry pi pico and used to simplify certain concepts of embedded programming |
 | [Log](https://docs.rs/log/latest/log/)| Rust Crate for data displaying | Used to display data throught the usb in the terminal of the computer when interacting with the device as a manufacturer |
-
+| [embassy-embedded-hal](https://docs.embassy.dev/embassy-embedded-hal/git/default/index.html)| Collection of utilities to use embedded-hal and embedded-storage traits with Embassy | Used to solve some sd card problems |
+| [embassy-time](https://docs.rs/embassy-time/latest/embassy_time/)| Timekeeping, delays and timeouts. | Used to make time constraints and awaits. |
+| [embassy-futures](https://docs.rs/embassy-futures/latest/embassy_futures/)| Utilities for working with futures, compatible with no_std and not using alloc. Optimized for code size, ideal for embedded systems. | Used to make await input actions. |
 
 
 ## Links
