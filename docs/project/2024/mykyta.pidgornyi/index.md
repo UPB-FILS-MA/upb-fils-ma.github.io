@@ -51,6 +51,9 @@ Found the proper way of connecting components by using proper drivers,
 had to connect GPS tracker by doing I2C hardcode because it had no drivers.
 
 ### Week 20 - 26 May
+Add software to the project repo. It is now possible to connect PC to the PICO and see all 
+it's vitals and time on PICO's display. TCP via wifi in the local network is accomplished by using
+PICO's cw43 WIFI module
 
 ## Hardware
 
