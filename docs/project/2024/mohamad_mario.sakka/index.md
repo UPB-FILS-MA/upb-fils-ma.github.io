@@ -69,11 +69,11 @@ I fixed a bug which did not allow the laptop and MCU to disconnect properly, now
 ![kicad_schematic](hardware_pics/kicad_schematic222.png)
 
 * **In Reality:**
-![hardware pic 1](hardware_pics/Pic_1.jpg)
+![hardware pic 1](hardware_pics/pic_1.jpg)
 
-![hardware pic 2](hardware_pics/Pic_2.jpg)
+![hardware pic 2](hardware_pics/pic_2.jpg)
 
-![hardware_pic 3](hardware_pics/Pic3.jpg)
+![hardware_pic 3](hardware_pics/pic3.jpg)
 
 ### Bill of Materials
 
