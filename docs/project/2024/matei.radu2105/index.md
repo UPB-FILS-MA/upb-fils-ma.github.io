@@ -41,9 +41,14 @@ hardware is not really my specialty, I will do my best to make the best game I c
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+ - created index.md
+ - made a prototype of the KiCad schematic
+ - starting to experiment with cardboard boxes and other things that could be used as a cover for the wiring and the hardware
 ### Week 7 - 19 May
-
+ - ordered the physical pieces
+ - assembled them on a breadboard
+ - didn't find my LCD as a KiCad component, not even with Mouser's site, so made my own custom LCD using KiCad
+ - finalized KiCad schematic
 ### Week 20 - 26 May
 
 ## Hardware
@@ -60,9 +65,17 @@ These are used for background music and sound effects when dying, gaining score 
 - Buttons \
 These are used to control the snake - they are put in a N/W/S/E formation and represent every movement that the player can do; the fifth button is just for starting the game - these send signals to the microcontroller
 
+This is the current prototype of my project, changes are 100% going to happen - a mask is going to be put to hide the hardware and the screen + the buttons will be moved to a separate breadboard to be more easily accessed for the user:
+
+![Project_seen_from_above](./Project_up.jpg)
+
+![Project_seen_from_one_side](./Project_Right.jpg)
+
+![Project_seen_from_the_other_side](./Project_Left.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](./KiCad.png)
 
 ### Bill of Materials
 
@@ -79,8 +92,8 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| LCD SPI Display | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/1312-modul-lcd-spi-de-144-128x128-ili9163-negru.html) |
-| 3.3V Buzzer | Buzzers for sound effects and background music | [2 RON / Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
+| [LCD SPI Display](https://www.optimusdigital.ro/ro/index.php?controller=attachment&id_attachment=196) | The display - ST7735 | [30 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/870-modul-lcd-144.html) |
+| [3.3V Buzzer](https://components101.com/misc/buzzer-pinout-working-datasheet) | Buzzers for sound effects and background music | [2 RON / Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html) |
 | Buttons | 4 Buttons for the movement buttons + 1 Button for ON switch | [2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
 | Wires | Wires for connecting the hardware | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html) |
 | Bredboard | Bredboard for connecting the hardware | [10 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html) |
@@ -98,3 +111,5 @@ The format is
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Snake (Video Game)](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
+2. [Snake - Code for C++](https://www.geeksforgeeks.org/snake-code-cpp/)
+3. [Youtube link for custom KiCad schematic](https://www.youtube.com/watch?v=7tRxwx7hZnQ)

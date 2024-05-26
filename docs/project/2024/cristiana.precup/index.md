@@ -76,6 +76,7 @@ This is what the wiring looks like:
 |------------|------------|
 | ![Hardware 1](./Hardware1.jpg) | ![Hardware 2](./Hardware2.jpg) |
 
+
 This is the prototype:
 
 ![Hardware3](./Hardware3.jpg)
@@ -85,7 +86,6 @@ This is how final project looks:
 | | |
 |------------|------------|
 | ![Final project](./Final_project1.jpg) | ![Final project](./Final_project2.jpg) |
-
 
 ### Schematics
 
