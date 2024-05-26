@@ -36,19 +36,20 @@ Subcomponents:
 
 - Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
 
-
-
-![Architecture diagram](image.png)
+![Architecture diagram](architecture.png)
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I uploaded the project documentation, detailing my reasons for choosing this project, the materials I used, and the connections between the components.
 
 ### Week 7 - 19 May
+I uploaded the KiCad schematics along with photos showing the components connected on breadboards.
 
 ### Week 20 - 26 May
+This week is for the code part.
 
 ## Hardware
 
@@ -66,10 +67,11 @@ This project utilizes the following hardware components:
 
 - Jumper Wires: Connect components to the breadboard and Raspberry Pi Pico.
 
+![Hardware picture](picture-project.jpeg)
 
 ### Schematics
-
-![Kicad](KiCad(project).png)
+This is the schematic in KiCad for the project.
+![KiCad](KiCad(project).png)
 
 ![alt text](picture-project.jpeg)
 
@@ -89,8 +91,7 @@ The format is
 |-|-|-|
 | [Raspberry Pi Pico](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | The microcontroller | [39 lei](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                                                                                                                                                                                        |
 | [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                          | Main board          | [10 lei](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                                                                                                                                                                                          |
-| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)|   Connecting      | [8 lei ](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)                                                                                                                                                                    |
-| [Passive Buzzer](https://www.optimusdigital.ro/en/buzzers/634-5v-passive-buzzer.html?search_query=buzzer&results=88)                                                                | Alert    | [1,40 lei](https://www.optimusdigital.ro/en/buzzers/634-5v-passive-buzzer.html?search_query=buzzer&results=88)                                                                                                                         |
+| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)|   Connecting      | [8 lei ](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D) |
 | [Active Buzzer](https://www.optimusdigital.ro/en/buzzers/635-3v-active-buzzer.html?search_query=buzzer&results=88)                                                                                              | Alert              | [1,49 lei](https://www.optimusdigital.ro/en/buzzers/635-3v-active-buzzer.html?search_query=buzzer&results=88)                                                                                                                                                                                                                                                       |
 | [Red LED](https://www.optimusdigital.ro/en/leds/29-5-mm-red-led-with-difused-lens.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/29-5-mm-red-led-with-difused-lens.html?search_query=led&results=2179)                                                                                                                                                                                                                                                          |
 | [Yellow LED](https://www.optimusdigital.ro/en/leds/698-led-galben-de-3-mm-cu-lentile-difuze.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/698-led-galben-de-3-mm-cu-lentile-difuze.html?search_query=led&results=2179)                                                                                                                                                                                                                                                       |
@@ -112,3 +113,5 @@ The format is
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Air piano(not rust)](https://www.youtube.com/watch?v=vuxi6i8_HHA)
+2. [How the Ultrasonic Sensor works](https://maxbotix.com/blogs/blog/how-ultrasonic-sensors-work)
+3. [How to make music with pico](https://www.youtube.com/watch?v=fdtbp2r6a1U)
