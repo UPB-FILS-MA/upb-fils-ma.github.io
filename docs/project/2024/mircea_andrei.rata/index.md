@@ -19,7 +19,7 @@ For this project, we have developed a comprehensive alarm system utilizing a ran
 
 The system is equipped with a Passive Infrared (PIR) sensor, which is designed to detect motion in its vicinity. When the PIR sensor registers movement, it triggers an immediate response from the system: LEDs and a buzzer are activated, alerting those nearby of potential activity. 
 
-Additionally, the system includes a keypad and an LCD screen. Once motion is detected and the alarm is activated, the person present must input the correct password into the keypad to deactivate the alarm. The password prompt is displayed on the LCD screen for easy reference, ensuring a seamless user experience and an added layer of security.Once the whole project starts, it displays on the LCD screen some information for configuration of the alarm. It takes like 8 seconds to initialize, then it will show you what to do to set this system. Basically once started, the user can self-input a custom password, and when motion is detected, it guides you to enter the password and disarm the alarm for a few seconds, enough time if you are the owner and not the intruder :), then it starts again. Additionally, a game of lights is starting when it checks if the password is correct. If the password is correct, after the game of lights, the green LED will remain on until it finish writing the messages on the LCD. After, the alarm is again initialized. It also has another function, if you enter the wrong password 3 times, you will need to wait an additional 5 seconds before entering it again. Also, if the password is wrong, after the game of lights, the red LED will remain on.
+Additionally, the system includes a keypad and an LCD screen. Once motion is detected and the alarm is activated, the person present must input the correct password into the keypad to deactivate the alarm. The password prompt is displayed on the LCD screen for easy reference, ensuring a seamless user experience and an added layer of security.Once the whole project starts, it displays on the LCD screen some information for configuration of the alarm. It takes like 8 seconds to initialize, then it will show you what to do to set this system. Basically once started, the user can self-input a custom password, and when motion is detected, it guides you to enter the password and disarm the alarm for a few seconds, enough time if you are the owner and not the intruder :), then it starts again. Additionally, a game of lights is starting when it checks if the password is correct. If the password is correct, after the game of lights,a small music will start for 3 seconds , and the green LED will remain on until it finish writing the messages on the LCD. After, the alarm is again initialized. It also has another function, if you enter the wrong password 3 times, you will need to wait an additional 5 seconds before entering it again. Also, if the password is wrong, after the game of lights, the red LED will remain on.
 
 This combination of hardware and functionality results in a sophisticated yet user-friendly alarm system that offers reliable security for a variety of settings. It provides users with real-time alerts and control over the system, making it a valuable asset for safeguarding properties and ensuring peace of mind.
 
@@ -50,6 +50,9 @@ The motivation behind this project stems from a desire to enhance home and prope
 ### 13.05-17.05
     I am  the software part,with small steps trying to learn how to do it.
     I'm still trying to improve as mush as I can, and find new ideas to implement for this project.
+    
+### 20.04-25.04
+    I finished everything on the project,the software milestone and also the design and fix all the errors.
 
 ## Hardware
 
@@ -115,13 +118,65 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 ![kicadschematic](kicad1.png)
 
 # Here are also a few pictures of the actual project :
-
+<table>
+<tr>
+<td>
 
 ![Hardware1](top.jpeg)
+
+</td>
+<td>
+
 ![Hardware2](side1.jpeg)
-![Hardware3](side2.jpeg)
+
+</td>
+</tr>
+
+<tr> 
+<td>
+
+![Hardware3](side2.jpeg) 
+
+</td>
+
+<td>
+
 ![Hardware4](front.jpeg)
 
+</td>
+</table>
+
+
+# The final project pictures: 
+
+
+<table>
+<tr>
+<td>
+
+![Design](Finalinside.jpeg)
+
+</td>
+<td>
+
+![Design2](Finalinside2.jpeg)
+
+</td>
+</tr>
+<tr>
+
+<td>
+
+![Design3](FinalTop.jpeg)
+
+</td>
+<td>
+
+![Design4](FinalTop2.jpeg)
+
+</td>
+</tr>
+</table>
 
 ### Bill of Materials
 
@@ -145,8 +200,10 @@ The format is
 | [PIR](http://wiki.sunfounder.cc/index.php?title=HC-SR501_Human_Body_Pyroelectricity_Infrared_Sensor_Module) | Sensor | [9 RON](https://ardushop.ro/ro/electronica/45-modul-pir-senzor-de-prezenta-miscare.html?search_query=PIR&results=54) |
 | [Keypad](https://www.tinytronics.nl/en/switches/manual-switches/keypads/keypad-1x4-matrix) | User input| [4 RON](https://ardushop.ro/ro/home/1003-tastatura-cu-4-intrari.html?search_query=TASTATURA&results=29)|
  
-## Software
+## Software :
 
+
+    
 | Library | Description | Usage |
 |---------|-------------|-------|
 |[embassy-rp](https://crates.io/crates/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
@@ -158,9 +215,113 @@ The format is
 | [rp2040-hal](https://crates.io/crates/rp2040-hal) | A Rust Embedded-HAL impl for the rp2040 microcontroller | Used for implementation of the embedded-hal traits for the RP2040 microcontroller  |
 | [embassy-usb](https://crates.io/crates/embassy-usb) | A rust library | Used for Async USB device stack for embedded devices in Rust |
 | [log](https://crates.io/crates/log) | A lightweight logging facade for Rust | Used for excluding messages with a lower priority |
-| TBD | TBD | TBD |
-| TBD | TBD | TBD |
+| [cortex-m](https://crates.io/crates/cortex-m) | ARM Cortex-M Processor Support | Used for accessing Cortex-M peripherals |
+| [embassy-time](https://crates.io/crates/embassy-time) | Time and Timer Utilities | Provides duration and timer utilities |
+| [embassy-usb-logger](https://crates.io/crates/embassy-usb-logger) | USB Logging Utility | Used for logging via USB |
+| [ufmt](https://crates.io/crates/ufmt) | Microcontroller-Friendly Formatting | Provides lightweight formatting utilities |
 
+<h2>Software Explanation</h2>
+
+<h3><strong>Project Power-Up and Initialization</strong></h3>
+
+<p><strong>1. Power-Up:</strong></p>
+<p>When you power up the Raspberry Pi Pico, the program begins execution starting from the main function, which is an asynchronous function denoted by #[embassy_executor::main].</p>
+
+<p><strong>2. Peripheral Initialization:</strong></p>
+<p>The first step is initializing the hardware peripherals:</p>
+<ul>
+    <li>The GPIO pins are set up for the LEDs, buzzer, PIR sensor, and keypad.</li>
+    <li>The I2C bus is initialized for communication with the LCD.</li>
+    <li>PWM configuration is set up for the buzzer to control its sound.</li>
+</ul>
+
+<h3><strong>LCD and LED Initialization Sequence</strong></h3>
+
+<p><strong>3. LCD Welcome Message:</strong></p>
+<p>The LCD displays the initial message "Burglar alarm" followed by "Calibrating PIR" and "Please wait...". This informs the user that the system is booting up and calibrating the PIR sensor.</p>
+
+<p><strong>4. LED Visual Game:</strong></p>
+<p>Simultaneously, the LEDs perform a visual game to indicate the system is initializing. This involves blinking LEDs in a sequence (RED -> GREEN -> BLUE) to provide a visual countdown.</p>
+
+<h3><strong>PIR Sensor Calibration</strong></h3>
+
+<p><strong>5. Calibration Countdown:</strong></p>
+<p>The LCD displays a countdown from 5 to 1, indicating the time left for PIR sensor calibration. During this countdown:</p>
+<ul>
+    <li>LEDs continue their visual game, providing a dynamic visual feedback by flashing in sequence.</li>
+</ul>
+
+<h3><strong>Initialization Complete</strong></h3>
+
+<p><strong>6. Initialization Complete Message:</strong></p>
+<p>After the PIR sensor is calibrated, the LCD shows "Initializing software..." and then a countdown message from 5 to 1 again with the same LED visual game.</p>
+
+<h3><strong>Main Functionality - Alarm Armed</strong></h3>
+
+<p><strong>7. Alarm Armed Message:</strong></p>
+<p>The LCD displays "Alarm armed!" indicating the system is now active. The blue LED is turned on to show that the alarm is armed.</p>
+
+<p><strong>8. Prompt for Password Setup:</strong></p>
+<p>The LCD asks the user to "Enter custom password:". The user enters a custom 4-digit password using the keypad. Each entered digit is displayed on the LCD, and a short buzzer sound is played for feedback.</p>
+
+<h3><strong>Main Loop - Motion Detection and Alarm Activation</strong></h3>
+
+<p><strong>9. Waiting for Motion:</strong></p>
+<p>The system enters the main loop, where it waits for motion detection from the PIR sensor. The blue LED remains on, indicating the system is armed and in standby mode.</p>
+
+<p><strong>10. Motion Detected:</strong></p>
+<p>When motion is detected:</p>
+<ul>
+    <li>The buzzer sounds, and the LEDs flash in sequence to alert the user.</li>
+    <li>The LCD displays "Motion alert!!!" for 2 seconds.</li>
+</ul>
+
+<h3><strong>Password Entry to Disarm the Alarm</strong></h3>
+
+<p><strong>11. Password Entry Prompt:</strong></p>
+<p>The LCD prompts "Enter password:" for the user to disarm the alarm. The user enters the 4-digit password using the keypad.</p>
+
+<p><strong>Password Validation:</strong></p>
+<ul>
+    <li>If the password is correct:
+        <ul>
+            <li>The LEDs flash in sequence, and the green LED is turned on.</li>
+            <li>The LCD displays "Password correct".</li>
+            <li>A melody is played using the buzzer.</li>
+            <li>The LCD then shows "Alarm disarmed".</li>
+        </ul>
+    </li>
+    <li>If the password is incorrect:
+        <ul>
+            <li>The incorrect attempt counter increments.</li>
+            <li>The LEDs flash to indicate an incorrect password, and the red LED is turned on.</li>
+            <li>The LCD displays "Password incorrect".</li>
+        </ul>
+    </li>
+</ul>
+
+<h3><strong>Handling Incorrect Password Attempts</strong></h3>
+
+<p><strong>13. Max Incorrect Attempts:</strong></p>
+<p>If the maximum number of incorrect attempts is reached:</p>
+<ul>
+    <li>The system locks for a period, showing a countdown on the LCD.</li>
+    <li>The LEDs flash in a warning sequence.</li>
+    <li>After the lock period, the system resets the incorrect attempt counter and prompts the user to enter the password again.</li>
+</ul>
+
+<h3><strong>Main Loop Continuation</strong></h3>
+
+<p><strong>14. Resuming Main Loop:</strong></p>
+<p>After disarming the alarm or handling incorrect attempts, the system re-enters the main loop to wait for motion detection again. The blue LED is turned on, indicating the system is armed.</p>
+
+<h3><strong>Panic Handler</strong></h3>
+
+<p><strong>Panic Handler:</strong></p>
+<p>If the program encounters a critical error, it enters an infinite loop to halt further execution, preventing undefined behavior.</p>
+
+<h2>Project Demo</h2>
+<p>Here's the link to the project demo: <a href="https://www.youtube.com/watch?v=KWH8gEB5uHQ">Project Demo</a></p>    
 
 ## Links
 
@@ -171,5 +332,4 @@ The format is
 3. [Lab 8](https://embedded-rust-101.wyliodrin.com/docs/lab/04)
 4. [Rust tutorials ](https://www.alexdwilson.dev/learning-in-public/how-to-program-a-raspberry-pi-pico)
 5. [The concept](https://electrocredible.com/raspberry-pi-pico-motion-sensor-email-micropython/)
-6. TBD
-...
+
