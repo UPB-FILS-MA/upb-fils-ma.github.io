@@ -31,12 +31,12 @@ The processor works in at least two modes:
   - restricts access to some registers 
   - accesses virtual addresses through Memory Protection (*if machine mode exists*)
 - **user** mode 
-  - allows only ALU and memory load ans store
+  - allows only ALU and memory load and store
   - accesses memory access through the Memory Management Unit (*MMU*)
 
 :: right ::
 
-<img src="/mmu/mmu.svg" class="w-120">
+<img src="/mmu/mmu.svg" class="w-120 rounded">
 
 ---
 layout: two-cols
@@ -61,7 +61,7 @@ the **page table** is located in the **physical memory**
 
 :: right ::
 
-<img src="/mmu/paging.svg" class="w-170">
+<img src="/mmu/paging.svg" class="w-170 rounded">
 
 ---
 layout: two-cols
@@ -71,7 +71,7 @@ page to frame
 
 the logic address is divided in two parts:
 - *page index*
-- *offset* withing the page
+- *offset* within the page
 
 the MMU translates every logic address into a physical address using a *page table*
 
@@ -84,7 +84,7 @@ the MMU translates every logic address into a physical address using a *page tab
 :: right ::
 
 <div align="center">
-    <img src="/mmu/page_translation.svg" class="w-170">
+    <img src="/mmu/page_translation.svg" class="w-170 rounded">
 </div>
 
 ---
@@ -138,7 +138,7 @@ RAM was counted in MB when paging started being used
 :: right ::
 
 <div align="center">
-    <img src="/mmu/page_directory.svg" class="w-170">
+    <img src="/mmu/page_directory.svg" class="w-170 rounded">
 </div>
 
 <div align="center">
@@ -151,6 +151,12 @@ two levels, page directory and table, usually used for 32 bits systems
 # Page Table Entry 
 for x86 - 32 bits
 
+<style>
+img {
+  background: #ffffff;
+}
+</style>
+
 this is one entry of the page table
 - **P** - is the page's frame present in RAM?
 - **R/W** - read only or read write access
@@ -159,7 +165,7 @@ this is one entry of the page table
 - **AVL** - bits available for the OS to use, ignored by MMU
 
 <div align="center">
-    <img src="/mmu/page_entry_x86.svg">
+    <img src="/mmu/page_entry_x86.svg" class="rounded">
 </div>
 
 ---
@@ -167,10 +173,16 @@ this is one entry of the page table
 # Page Table Entry
 for x86 - 32 bits with PAE
 
+<style>
+img {
+  background: #ffffff;
+}
+</style>
+
 this is one entry of the page table using Physical Address Extension (*PAE*)
 - **XD** - eXecute Disable (aka *DEP*), if set triggers a fault if an instruction is read from the page
 - **PK** - Protection Keys, allows user mode to set protection (64 bit only)
 
 <div align="center">
-    <img src="/mmu/page_entry_x86pae.svg">
+    <img src="/mmu/page_entry_x86pae.svg" class="rounded">
 </div>

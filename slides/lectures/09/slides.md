@@ -76,7 +76,7 @@ General purpose, for PC & workstations
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Memory Protection Unit
 - Memory Management Unit
