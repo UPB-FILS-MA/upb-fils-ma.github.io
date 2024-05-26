@@ -299,13 +299,16 @@ The format is
             <li>A melody is played using the buzzer.</li>
             <li>The LCD then shows "Alarm disarmed".</li>
         </ul>
+</ul>
 <p><strong>Password Validation</strong></p>
+<ul>
     <li>If the password is incorrect:</li>
         <ul>
             <li>The incorrect attempt counter increments.</li>
             <li>The LEDs flash to indicate an incorrect password, and the red LED is turned on.</li>
             <li>The LCD displays "Password incorrect".</li>
         </ul>
+</ul>        
 
 <h3><strong>Handling Incorrect Password Attempts</strong></h3>
 
