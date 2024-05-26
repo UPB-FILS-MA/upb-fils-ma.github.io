@@ -69,7 +69,7 @@ This is the current internal circuit of the project( not mounted with the frame 
 
 ### Schematics
 
- ![KiCAD_schematic](./hardware_schematic1.png)
+ ![KiCAD_schematic](./hardware_schematic1.jpeg)
   ![KiCAD_schematic](./hardware_schematic2.png)
 
 
