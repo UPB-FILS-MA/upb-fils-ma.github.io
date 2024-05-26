@@ -61,7 +61,7 @@ src: ./adc/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Counters
 - SysTick
