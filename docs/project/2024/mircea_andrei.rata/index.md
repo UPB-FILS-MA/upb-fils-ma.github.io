@@ -126,6 +126,7 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 ![kicadschematic](kicad1.png)
 
 # Here are also a few pictures of the actual project :
+
 <table>
 <tr>
 <td>
@@ -156,7 +157,6 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 
 
 # The final project pictures: 
-
 
 <table>
 <tr>
