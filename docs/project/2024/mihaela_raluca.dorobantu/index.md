@@ -72,6 +72,7 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 - I assembled the initial rendition of this robot for the purposes of showing a rough initial image.
 
 ### Week 20 - 26 May
+- I have done the software
 
 ## Hardware
 
