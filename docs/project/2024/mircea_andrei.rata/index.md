@@ -60,6 +60,14 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 - **Raspberry Pi Pico W** is the microcontroller,the brain of this project.
 - **Passive Infrared (PIR) sensor**  is used to detect movement.
 - **LEDs** are used to provide visual alerts when motion is detected.
+    I am am the software part,with small steps trying to learn how to do it.
+
+## Hardware
+
+The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion detection, an LED for visual alerts, a buzzer for audio alerts, an LCD screen for display, and a keypad for user input and password authentication.
+- **Raspberry Pi Pico W** is the microcontroller,the brain of this project.
+- **Passive Infrared (PIR) sensor**  is used to detect movement.
+- **LED** is used to provide visual alerts when motion is detected.
 - **Passive Buzzer** is used for making sound when the alarm is triggered.
 - **LCD with I2C MODULE** is used for displaying the information on lcd.
 - **Matrix keypad** allows users to input a password for authentication and disarm the alarm system.
@@ -177,6 +185,14 @@ The hardware includes a Raspberry Pi Pico W for control, a PIR sensor for motion
 </td>
 </tr>
 </table>
+
+![kicadschematic](kicad.png)
+
+ **Here are also a few pictures of the actual project** :
+ 
+![Hardware1](Hardware1.jpeg)
+![Hardware2](Hardware2.jpeg)
+
 
 ### Bill of Materials
 
@@ -322,6 +338,7 @@ The format is
 
 <h2>Project Demo</h2>
 <p>Here's the link to the project demo: <a href="https://www.youtube.com/watch?v=KWH8gEB5uHQ">Project Demo</a></p>    
+
 
 ## Links
 
