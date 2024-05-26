@@ -83,7 +83,9 @@ I chose this project because it seems like a pretty practical idea in the day-to
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](kicad.png)
+![Schematics1](1.jpg)
+![Schematics2](2.jpg)
 
 ### Bill of Materials
 
