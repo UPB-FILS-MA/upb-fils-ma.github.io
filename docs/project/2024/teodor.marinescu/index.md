@@ -55,9 +55,11 @@ Here is the KiCAD schematic for my project.
 I used a sound sensor that it was not supported by KiCAD so I made my own representation of it.
 ![Sound Sensor KiCAD schematic](./Sound_sensor.png)
 This is the hardware all put together.
-![First Hardware photo](./Hardware1.jpeg)
 
-![Second Hardware photo](./Hardware2.jpeg)
+![First Hardware photo](./HW1.jpeg)
+
+![Second Hardware photo](./HW2.jpeg)
+
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.

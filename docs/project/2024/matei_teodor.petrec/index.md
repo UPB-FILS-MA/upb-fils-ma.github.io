@@ -45,7 +45,14 @@ The inclusion of the CYW43439 allows the game to have connectivity feature to tr
 
 ### Week 6 - 12 May
 
+- I ordered all components for the hardware prototype, I needed a joystick and a couple of resistors.
+- Started the Kicad Schematic, did some research on the joystick voltage use, since it was using a pin for 5V, I had to come up with an idea to power it separately from the rest of the componenets which were using 3.3V.
+
 ### Week 7 - 19 May
+
+- I managed to make the hardware part more cleaner, rearranging the components on the breadboard and pico explorer and simplify the wiring of the connections.
+- I began to code the software for the tictactoe game, work still in progress but making small achievements along the way testing each component individually to see if it works.
+- I solved the issue with the power supply of the joystick by connecting a battery trough a mini power supply (HW-131) such that I can power up it up at 5V, also added some voltage dividers for the VRX, VRY, SW pins of the joystick to connect to the pico explorer base at the overall voltage of the circuit (3.3V).
 
 ### Week 20 - 26 May
 
@@ -61,9 +68,15 @@ Wires: Conduct electrical connections between components (Female-to-Male, Female
 Resistors: Control and limit the flow of electrical current to other components, protecting them from damage (10KΩ joystick / 220Ω LEDs).
 Micro USB Cable: Connects the Raspberry Pi Pico W to a power supply.
 
+![Schematic](hardware1.jpg)
+
+![Schematic](hardware2.jpg)
+
+![Schematic](hardware3.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![Schematic](kicadschematic.png)
 
 ### Bill of Materials
 
