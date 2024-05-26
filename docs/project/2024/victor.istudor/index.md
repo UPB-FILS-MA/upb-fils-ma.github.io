@@ -10,7 +10,7 @@ A robot that follows a black line on a white background.
 
 ## Description
 
-This robot will be capable of following a trajectory given by a black line on a white background, with the help of two infrared sensors placed in the front. The robot will be powered by 9V battery that will give current to 4 DC motors connected to a L298N motor driver. 
+This robot will be capable of following a trajectory given by a black line on a white background, with the help of two infrared sensors placed in the front. The robot will be powered by a 9V battery that will give current to 4 DC motors connected to a L298N motor driver. 
 
 ## Motivation
 
