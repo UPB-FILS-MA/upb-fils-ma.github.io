@@ -73,7 +73,7 @@ I fixed a bug which did not allow the laptop and MCU to disconnect properly, now
 
 ![hardware pic 2](hardware_pics/pic_2.jpg)
 
-![hardware_pic 3](hardware_pics/pic3.jpg)
+![hardware_pic 3](hardware_pics/pic_3.jpg)
 
 ### Bill of Materials
 
