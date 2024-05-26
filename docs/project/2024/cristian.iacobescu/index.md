@@ -59,6 +59,23 @@ After this, a lot more information was revealed about the scanner (which unfortu
 
 ### Week 20 - 26 May
 
+For the last week of this project, as was previously mentioned the blackjack logic and the socket communication + website were left. The "only" in my previous log was underestimating the work put behind this 3 parts of the project massively.
+
+The first and easiest part was the webiste that runs on an HTTP Node server, it was done very minimaslistically, just focusing on the bare minimum: the buttons for the player choices, which was, of course a statement regarding my preference of the aforementioned style, and definitely not because i only had 3 days to finish the project. Anyhow, the network configuration is as follows:
+
+- We have an HTTP server for the website on port 3001
+- An UDP server running on port 3000
+- Pico is binded on port 3002
+
+The webiste send a POST request for the player choices with the buttons, wrapped in a JSON which is handled server-side and has its data passed to the UDP server, which in turn, will send it to the pico on port 3002, in the form of bytes passed in a buffer.
+
+Then the Pico hadles logic as per the rules of the Blackjack game, and requests to recieve data from the server only happen when needed.
+
+The 1st problem encountered was that, due to the non-static ipv4 configuration of my laptop for the wifi, i had to change the ip on wich the server runs on, everytime my wifi closed/reopened, anf sometimes, on different IPs the communciation to the Pico would fail no matter what, the solution of "turn it off and back on again" eventually worked the 3rd time.
+
+Another problem was that, the bigger the code, the less likely the logger was to display aything in the console. This lead to a lot of confusion for me, as i thoyght that i had a problem with my code's logic ,but after trying to us ethe LCD to print when the logger would stop working.
+
+
 ## Hardware
 
 We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is used for getting the player's 'bet', and a push button used to confirm the bet (an RC Filter will be used to ensure no switch bounce happens).
@@ -66,6 +83,7 @@ We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is use
 The main piece of hardware for this project is the barcode scanner, which scans the barcodes from the playing cards and facilitates a way to connect the real-life events to the microcontroller for handling the logic behind the game. It sends the barcodes encoded using the UTF-8 encoding standard.
 
 An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
+
 
 
 Bird's Eye View
