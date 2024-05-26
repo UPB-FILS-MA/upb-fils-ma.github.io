@@ -293,6 +293,7 @@ The format is
 <p><strong>Password Validation:</strong></p>
 <ul>
     <li>If the password is correct:
+        <p>Actions when password is correct:</p>
         <ul>
             <li>The LEDs flash in sequence, and the green LED is turned on.</li>
             <li>The LCD displays "Password correct".</li>
@@ -301,6 +302,7 @@ The format is
         </ul>
     </li>
     <li>If the password is incorrect:
+        <p>Actions when the password is incorrect:</p>
         <ul>
             <li>The incorrect attempt counter increments.</li>
             <li>The LEDs flash to indicate an incorrect password, and the red LED is turned on.</li>
