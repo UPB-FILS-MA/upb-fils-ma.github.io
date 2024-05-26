@@ -123,6 +123,7 @@ The format is
 | [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
 | [TTKBootstrap](https://github.com/israel-dryer/ttkbootstrap) | Python UI-library based on Tkinter & Bootstrap CSS | Building the UI of the desktop app |
 | [socket](https://docs.python.org/3/library/socket.html) | Low level networking interface for Python | Handling data exchanges and connections with RP Pico W |
+| [keyboard](https://github.com/boppreh/keyboard) | Python library for hooking global keyboard events | Detecting if the shortcuts for increasing or decreasing the power were used |
 
 ## Links
 
