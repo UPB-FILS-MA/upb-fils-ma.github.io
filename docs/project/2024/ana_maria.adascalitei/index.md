@@ -48,17 +48,41 @@ The microcontroller is connected to a power supply so we can continuously receiv
 
 ### Week 6 - 12 May
 
+
+This week was dedicated to advancing the GreenGuardian project. After thorough research to gather inspiration, I meticulously selected the necessary components and acquired a suitable plant for testing. Additionally, I commenced the schematic design using KiCad, a pivotal step towards materializing the project.
+
 ### Week 7 - 19 May
+
+
+However this week, during the implementation phase, an unforeseen challenge arose. Upon realization that the Raspberry Pi Pico W lacked the required pins to connect to the breadboard, I promptly took corrective action by procuring the correct microcontroller. Despite proactive measures, there was a delay in the delivery of essential wires, which were expected to arrive by May 14th but were unfortunately still pending.
+
+This setback necessitated a pause in the physical execution of the project, as the absence of crucial components hindered progress. Nonetheless, this period provided an opportunity for reevaluation and meticulous planning to ensure seamless project execution once all components are available.
+
+
+### Week 7 - 19 May
+
 
 ### Week 20 - 26 May
 
 ## Hardware
+
+
+The hardware setup for the GreenGuardian project encompasses a comprehensive array of components tailored to ensure effective plant monitoring. 
+
+Key components include various sensors responsible for monitoring critical parameters such as soil moisture, temperature, humidity, atmospheric pressure, ambient light, and vibrations. These sensors, in conjunction with the Raspberry Pi Pico W microcontroller, form the backbone of the monitoring system.
+
+Additionally, a dedicated power supply unit is incorporated to ensure uninterrupted operation of the system. This power supply is meticulously designed to provide continuous power, enabling real-time updates and notifications regarding the plant's health status. Whether it's alerting about the need for watering or detecting potential pest intrusions, the power supply ensures that the system remains operational around the clock, safeguarding the well-being of the plant.
+
+### Schematics
+
+![KiCad photo](./kicad.jpeg)
 
 Detail in a few words the hardware used.
 
 ### Schematics
 
 Place your KiCAD schematics here.
+
 
 ### Bill of Materials
 

@@ -49,8 +49,8 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
 
 7. **Power Supply:**
    - Two separate battery blocks power the system:
-     - One battery pack powers the Raspberry Pi Pico, ensuring that the central computing resources are maintained.
-     - The second battery pack supplies power to the motor controller and servo, which require higher current for operation.
+      One battery pack powers the Raspberry Pi Pico, ensuring that the central computing resources are maintained.
+      The second battery pack supplies power to the motor controller and servo, which require higher current for operation.
 
 8. **Chassis with 3 Wheels and 2 Motors:**
    - Provides the physical structure and mobility for the SmartBot. The chassis is designed with three wheels, two for propulsion and one for stability, allowing agile and precise movements within complex indoor environments.
@@ -62,10 +62,12 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+
 - I made the documentation of the project.
 - I procured the hardware components.
 
 ### Week 13 - 19 May
+
 - I added KiCAD Schematics.
 - I assembled the initial rendition of this robot for the purposes of showing a rough initial image.
 
@@ -82,7 +84,7 @@ The architecture of the SmartBot Navigator is designed to ensure robust operatio
 - **Breadboard:** It's used to connect every pin on the hardware components.
 - **Raspberry Pi Pico:** It serves as the robot's microcontroller, analyzing all sensory input, managing motor operations, and handling communications. It activates the software that analyzes ultrasonic data to find openings and obstacles and then controls the motor controllers and servo to steer the robot in the appropriate direction.
 
-Here are some photos of the robot
+Here are some photos of the SmartBot Navigator
 ![photo1](./1.jpeg)
 
 ![photo2](./2.jpeg)

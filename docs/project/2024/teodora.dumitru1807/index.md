@@ -15,6 +15,8 @@ A robot car that can be controlled through a website accessed from the mobile ph
 
 Welcome to the documentation for a Wi-Fi robot car, powered by the Pico W microcontroller and programmed using the Rust programming language. This comprehensive guide will present, at the final deadline, the assembly, setup, and programming of a Wi-Fi-enabled robot car. In this project, I aim to build a Wi-Fi robot car. The robot car will be capable of wireless communication over a Wi-Fi network, enabling remote control and autonomous operation. This project, if everything works at the end, can be stilized with specific components(like a proper car kit) for a more stylished look.
 
+I am going to create a website using html, css and phython. The web page will have a controller for direction which is going to action the car by using the microcontroller and respecting the pins used to connect the pico_w to the driver. The pico is going to be connected to my wifi using the knowledge from the last lab. Also i hope that i succeed to control the speed by using a slider . 
+
 ## Motivation
 
 When I was little, besides dolls and legos , i liked remote controlled cars or even helicopters so this is more like an ambition for me.
@@ -23,12 +25,29 @@ When I was little, besides dolls and legos , i liked remote controlled cars or e
 
 This is my block diagram:
 
-[block diagram](image.png)
+UPDATE:
+
+![BLOCK DIAGRAM](<BLOCK_DIAGRAM.png>)
+
+I will attach here photos of my project, i intend to style it more before the final presentation.
+
+![Below](Below.jpg)
+![Above](Above_car.jpg)
+![Circ](Circ1.jpg)
+![Driver](Driver.jpg)
+![Driver](Driver1.jpg)
+![Buzzer](BUZZER.jpg)
+
 
 I am going to connect the 2 motors to the 2 big wheels.
 The motor driver module is going to be connected to the pico_w microcontroller and the module is going to be powered by the 2 batteries.
 In addition, i intend to add a buzzer to the whole robot to copy the sound of a honk.
 All of the components will be attached to the skeleton which is a piece of wood with round corners with space for the wheels the hard components and equipped with an on/off button if desired.
+
+Update: I have connected the motors in this way : 
+
+M1 OUT1 and OUT2; 
+M2 OUT3 and OUT4;
 
 
 ## Log
@@ -37,9 +56,23 @@ All of the components will be attached to the skeleton which is a piece of wood 
 
 ### Week 6 - 12 May
 
+I have started to work on the car. I made a kicad schematic to visualize everything. I have done some research to find out one of the most important things from the hardware part : the type of voltage pin i should connect the Vcc. I found out that Vsys is the right one for the battery power supply type of circuits. 
+ 
 ### Week 7 - 19 May
 
+I have connected the motors as said above, glued the battery holder and the buzzer to the car and screw the driver module. I have soldered the OUTs for the motors to the driver, the wires to the buzzer and also the minus and plus pins of the on/off SPST switch to the driver and the battery holder as shown in the kicad scheme.
+
+I finished the kicad scheme, PCB without errors and screenshot the 3D viewer.
+
+I have done all the connections from driver to pico. 
+
+I studied the ways of conntrolling the motors and their logical inputs.
+
+In conclusion: I have added a on/off switch to preserve the life of the batteries.
+
 ### Week 20 - 26 May
+
+
 
 ## Hardware
 
@@ -78,11 +111,17 @@ Putting a battery charger on a robot car is essential for several reasons: Batte
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicadscheme](Kicad-scheme.png)
+![PCB](PCB.png)
+![3D VIEW](PCB1.png)
+![3D VIEW](PCB2.png)
+
 
 ### Block diagram
 
-[block diagram](image.png)
+UPDATE:
+
+![Block_diagram](BLOCK_DIAGRAM.png)
 
 ### Bill of Materials
 
@@ -99,7 +138,7 @@ The format is
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| 2 wheels,1 small wheel, 2 motors, platform  | The kit | 15 RON |
+| 2 wheels,1 small wheel, 2 motors, platform  | The kit ; is second hand i dont have a link | 15 RON |
 | Battery Charger for 2 | To recharge the used batteries | [24,99 RON](https://www.optimusdigital.ro/ro/incarcatoare-de-baterii/11021-incarcator-1865026650-dublu-cu-cablu-usb-pentru-baterii-cu-litiu-ion.html) |
 | 4 x Batteries | The power source of the whole project | [68 RON](https://www.dedeman.ro/ro/acumulator-li-ion-well-18650-3-7v-2200-mah/p/1050265) |
 | Battery holder for 2 | ensure reliable power supply | [4.99 RON](https://www.optimusdigital.ro/ro/suporturi-de-baterii/941-suport-de-baterii-2-x-18650.html) 
@@ -112,8 +151,11 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
+| [Embassy-rs](https://github.com/embassy-rs/embassy) | Motor driver implementation | Modern embedded framework, using Rust and async. |
 | [L298N](https://docs.rs/l298n/latest/l298n/struct.L298N.html) | Motor driver implementation | Used for speed and direction control |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html) | PWM | Used to control the intensity of the sound of the buzzer |
+| [cyw43](https://docs.embassy.dev/cyw43/git/default/index.html)| Rust driver for the CYW43439 wifi chip | Used for the connection to an existing network and create a server |
+
 
 ## Links
 
