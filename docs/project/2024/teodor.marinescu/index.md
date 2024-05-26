@@ -10,7 +10,7 @@ Smart light that can be controlled just by the clapping of your hands.
 
 ## Description
 
-IntelliGlow is a device that wants to implement physical and sound commands into everyday usage of normal lighting equipment. As the most important features the user can clap one time to change the color of the lightbulb, two times to light it or shut it, and additionally, we have a potentiometer that can change the light intensity to whatever intensity you want.
+IntelliGlow is a device that wants to implement physical and sound commands into the everyday usage of normal lighting equipment. As the most important feature, the user can clap one time to change the color of the lightbulb, two times to light it or shut it, and additionally, we have a potentiometer that can change the light intensity to whatever intensity you want.
 
 ## Motivation
 
@@ -26,24 +26,24 @@ For the diagram above here is a brief breakdown:
 
 The Raspberry Pi Pico W is the computing component of the IntelliGlow. It processes the signal from the sound sensor and the potentiometer and decides what to do next.
 
-The sound sensor checks if there are any high frequency noises(mostly claps) around him, it sends a signal to the microcontroller, the computer starts to listen for the next clap, if there was no clapping sound in the next 2 seconds the RBB LED changes color, but in the instance that there was another clapping noise the computer turns ON/OFF the RGB.
+The sound sensor checks if there are any high-frequency noises(mostly claps) around him, it sends a signal to the microcontroller, and the computer starts to listen for the next clap, if there is no clapping sound in the next 2 seconds the RBB LED changes color, but in the instance that there was another clapping noise the computer turns ON/OFF the RGB.
 
 The potentiometer sends the desired intensity to the Pico board.
 
 
 ## Log
 
-<!-- write every week your progress here -->
+<!-- Write every week your progress here -->
 
 ### Week 6 - 12 May
-Planed the architecture of the project and bought all the required components.
+Planned the architecture of the project and bought all the required components.
 ### Week 7 - 19 May
 The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit which was further used as a guide for when I assembled the project on a physical breadboard.
 ### Week 20 - 26 May
-
+I started to implement the code when I ran into a problem because I could not use two adc pins so I started a task that used both adc pins and just printed the values to the console from there. Overall I used 3 tasks that ran asynchronously and influenced the hardware accordingly.
 ## Hardware
 
-A sound sensor detects sound waves and converts them into electrical signals. It's used in noise monitoring, voice recognition, security systems, and more. For this device we need to tune the sound sensor so that it only detects high frequency sounds.
+A sound sensor detects sound waves and converts them into electrical signals. It's used in noise monitoring, voice recognition, security systems, and more. For this device, we need to tune the sound sensor so that it only detects high-frequency sounds.
 
 A potentiometer is an adjustable electronic component used for controlling electrical signals by varying resistance. It consists of a resistive element and a movable wiper, allowing for precise adjustment of voltage or current.
 
