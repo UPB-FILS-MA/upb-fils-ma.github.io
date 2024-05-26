@@ -292,8 +292,7 @@ The format is
 
 <p><strong>Password Validation:</strong></p>
 <ul>
-    <li>If the password is correct:</li>
-        <p>Actions when password is correct:</p>
+    <li>If the password is correct:
         <ul>
             <li>The LEDs flash in sequence, and the green LED is turned on.</li>
             <li>The LCD displays "Password correct".</li>
@@ -302,7 +301,6 @@ The format is
         </ul>
     </li>
     <li>If the password is incorrect:
-        <p>Actions when the password is incorrect:</p>
         <ul>
             <li>The incorrect attempt counter increments.</li>
             <li>The LEDs flash to indicate an incorrect password, and the red LED is turned on.</li>
@@ -330,6 +328,7 @@ The format is
 
 <p><strong>Panic Handler:</strong></p>
 <p>If the program encounters a critical error, it enters an infinite loop to halt further execution, preventing undefined behavior.</p>
+
 
 <h2>Project Demo</h2>
 <p>Here's the link to the project demo: <a href="https://www.youtube.com/watch?v=KWH8gEB5uHQ">Project Demo</a></p>    
