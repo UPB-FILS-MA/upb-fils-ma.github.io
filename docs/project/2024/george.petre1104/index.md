@@ -109,7 +109,7 @@ The format is
 |[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
 |[embassy-net](https://github.com/embassy-rs/embassy) | Networking library | Manages Wi-Fi communications |
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
-|[cyw43]([[https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html]|CYW43 |Used for interacting with the wi-fi chip of the pico |
+|[cyw43](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|CYW43 |Used for interacting with the wi-fi chip of the pico |
 
 
 
