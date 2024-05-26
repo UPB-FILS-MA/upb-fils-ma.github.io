@@ -292,7 +292,7 @@ The format is
 
 <p><strong>Password Validation:</strong></p>
 <ul>
-    <li>If the password is correct:
+    <li>If the password is correct:</li>
         <p>Actions when password is correct:</p>
         <ul>
             <li>The LEDs flash in sequence, and the green LED is turned on.</li>
