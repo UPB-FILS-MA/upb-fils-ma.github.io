@@ -24,9 +24,15 @@ I've always taken a big interest in the game development area, and thought it wo
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+ - Placed an order for the necessary components and picked them up from the shop.
+ - Made a prototype of my project using schematics and started to play around with the hardware part, figuring out the places of my components.
+   
 ### Week 7 - 19 May
-
+ - This week I was able to finish the Hardware of my project and create the schematics of it using Kicad.
+ - I started working on the software part of my project.
+ - desgined the schematics of the LCD and the Keypad in kicad.
+ - Started designing a shell in which I would be able to place my hardware and make it look more appealing to the public, by hiding the wires and the components such as the pico and buzzers.
+   
 ### Week 20 - 26 May
 
 ## Hardware
@@ -36,14 +42,19 @@ I've always taken a big interest in the game development area, and thought it wo
  - Wires mother-mother: Female-to-female jumper wires for connecting components on a breadboard or elsewhere.
  - Buzzer: An audio output device that emits sound when activated once the player loses all the lives.
  - Keypad: A 4x4 matrix keypad for inputting the letters.
- - Potentiometer: A stereo potentiometer used for adjusting analog signals.
  - Breadboard: A breadboard for prototyping the circuit necessary for the project.
  - 3 LEDs: 3 red LEDs with diffused lens for visual indication.
  - Buton 6x6x6: A tactile push button for manual control or input.
 
+ ![ProjectImage1](./ProjectImg1.jpg)
+
+ ![ProjectImage2](./ProjectImg2.jpg)
+
+ ![ProjectImage3](./ProjectImg3.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+ ![Kicad](./ProjectImg4.png)
 
 ### Bill of Materials
 
@@ -64,8 +75,7 @@ The format is
 | Wires father-father | The Wires Father-Father | [6,99 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire&results=437) |
 | Wires mother-mother | The Wires Mother-Mother | [7,73 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/652-fire-colorate-mama-mama-40p-10-cm.html?search_query=fire&results=437) |
 | Buzzer | The Buzzer | [1,95 RON](https://www.optimusdigital.ro/ro/audio-buzzere/12247-buzzer-pasiv-de-33v-sau-3v.html?search_query=buzzer&results=62) |
-| Keypad | The Keypad | [3,99 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/2894-lcd-cu-interfata-i2c-si-backlight-albastru.html) |
-| Potentiometer | The Potentiometer | [1,99 RON](https://www.optimusdigital.ro/ro/componente-electronice-potentiometre/1886-potentiometru-stereo-10k.html?search_query=Potentiometru+stereo+10k&results=2) |
+| Keypad | The Keypad | [3,99 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/2441-tastatura-matriceala-4x4-cu-butoane.html?search_query=matriceala&results=2) |
 | Breadboard | The Breadboard | [9,98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard&results=145) |
 | 3 Red LEDs | The LEDs | [0,39 RON](https://www.optimusdigital.ro/ro/optoelectronice-led-uri/696-led-rou-de-3-mm-cu-lentile-difuze.html?search_query=LED&results=818) |
 | Button 6x6x6 | The On/Off Button | [0,36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html) |
@@ -77,7 +87,6 @@ The format is
 |---------|-------------|-------|
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [AG-LCD](https://github.com/mjhouse/ag-lcd) | | This is a rust port of the LiquidCrystal library |
 
 
 ## Links

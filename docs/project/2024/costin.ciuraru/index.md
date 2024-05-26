@@ -42,15 +42,29 @@ The **stepper-motor** is connected to an improvised ramp that will be raised in 
 
 ### Week 7 - 19 May
 
+Changeed from using a stepper motor to a servo-motor.
+| [Servo Motor](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf) | The servo motor | [14 RON](https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&results=196) |
+
+
 ### Week 20 - 26 May
 
 ## Hardware
 
 In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. The LCD Screen will show what preset will be used, in function of the button pressed, the stepper motor will rise the ramp to a specified angle.
 
-### Schematics
 
-Place your KiCAD schematics here.
+This is a picture that shows the connections of the rasberry pi pico to the components:
+![Connections](./conexiuni.jpeg)
+
+This is a picture that shows the breadbord from behind:
+![Above](./deasupra.jpeg)
+
+This is from above:
+![Behind](./spate.jpeg)
+
+### Schematics
+![kicad_schematic](./kicad_schema.png)
+
 
 ### Bill of Materials
 

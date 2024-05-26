@@ -25,18 +25,18 @@ While researching for project ideas, I came across a parking sensor and a distan
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Got the components for the project and made the documentation part.
 ### Week 7 - 19 May
-
+I did some more research for the hardware and made the KiCad schematics.
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+I am using a Pico MCU to recieve the distance measured by the HR-SC04 proximity sensor, while sending the data to an LCD screen. Additionally, the buzzer is connected to the sensor, changing its intensity based on the distance from the outside object.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](kicad_schematic.png)
 
 ### Bill of Materials
 
