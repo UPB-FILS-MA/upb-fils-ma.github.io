@@ -71,9 +71,9 @@ The hardware I am using  Raspberry Pi using a joystick for control and an SSD130
 
 ### Schematics
 
-![Hardware1](Hardware 1.jpeg)
+![Hardware1](Hardware1.jpeg)
 ![Hardware2](Hardware2.jpeg)
-
+![Hardware3](Hardware3.jpeg)
 ### Bill of Materials
 
 <!-- Fill out this table with all the hardware components that you might need.
@@ -91,15 +91,14 @@ The format is
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [Joystick Breakout Board](https://www.optimusdigital.ro/en/touch-sensors/742-ps2-joystick-breakout.html) | The Controler | [5,35 RON](https://www.optimusdigital.ro/en/) |
 | [SSD1306 OLED Display](https://www.optimusdigital.ro/en/lcds/194-yellow-and-blue-096-oled-module-128x64-px.html) | The Display | [23,79 RON](https://www.optimusdigital.ro/en/) |
-| [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html) | The Breadbord | [9,98 RON](https://www.optimusdigital.ro/en/) |
-| [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html) | [7,99 RON](https://www.optimusdigital.ro/en/) |
+| [Breadboard HQ 400 Points](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/44-breadboard-400-points.html?search_query=breadboard&results=151) | Breadboard for all other connections | [4,56](https://www.optimusdigital.ro/ro/) |
 | [Male-Female Wires](https://www.optimusdigital.ro/en/wires-with-connectors/879-30-cm-male-female-wires-10p.html) | [5,79 RON](https://www.optimusdigital.ro/en/) |
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
 |[embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
-| TBD | TBD | TBD |
+
 
 ## Links
 
@@ -107,4 +106,5 @@ The format is
 
 1. [lab 0](https://embedded-rust-101.wyliodrin.com/docs/lab/00)
 2. [lab 2](https://embedded-rust-101.wyliodrin.com/docs/lab/02)
+3. [Tutorials](https://embedded-rust-101.wyliodrin.com/docs/tutorials/embassy)
 ...
