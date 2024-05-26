@@ -52,6 +52,10 @@ Final assembled the components on the breadboard. \
 Assembled the box structure, ensuring stability and correct dimensions. 
 
 ### Week 20 - 26 May
+I developed the software needed for the project. \
+This part of the project turned out to be the most challenging due to the technical aspects of establishing network connections and server communication. \
+ Additionally, I encountered challenges with the servomotor, which lacked sufficient power to perform as needed. 
+
 
 ## Hardware
 
@@ -72,9 +76,16 @@ This is what the wiring looks like:
 |------------|------------|
 | ![Hardware 1](./Hardware1.jpg) | ![Hardware 2](./Hardware2.jpg) |
 
-This is the final product as of yet:
+This is the prototype:
 
 ![Hardware3](./Hardware3.jpg)
+
+This is how final project looks:
+
+| | |
+|------------|------------|
+| ![Final project](./Final_project1.jpg) | ![Final project](./Final_project2.jpg) |
+
 
 ### Schematics
 
@@ -122,6 +133,10 @@ The format is
 | [embassy-time](https://docs.rs/embassy-time/latest/embassy_time/) | Timing module | Provides timing functions for operations |
 | [embassy-net](https://docs.rs/embassy-net/latest/embassy_net/) | Networking library | Manages Wi-Fi communications |
 | [embassy-gpio](https://docs.rs/embassy-gpio/latest/embassy_gpio/) | GPIO management | Controls GPIO pins for devices and inputs |
+| [embassy-sync](https://docs.rs/embassy-sync/latest/embassy_sync/) | Synchronization primitives | Provides channels, mutexes, and other synchronization tools for concurrent tasks |
+| [embassy-usb](https://docs.rs/embassy-usb/latest/embassy_usb/) | USB device management | Manages USB connections and operations |
+| [embassy-pwm](https://docs.rs/embassy-pwm/latest/embassy_pwm/) | Pulse Width Modulation (PWM) control | Controls PWM outputs for motor control and LEDs |
+| [embassy-pio](https://docs.rs/embassy-pio/latest/embassy_pio/) | Programmable I/O management | Facilitates complex I/O operations programmatically |
 
 ## Links
 
