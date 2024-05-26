@@ -116,10 +116,13 @@ The format is
 | [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals 
 | [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
 | [embassy-hal](https://docs.rs/embassy-hal/latest/embassy_hal/) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 | [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
-| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+| [embassy-net](https://crates.io/crates/embassy-net)| Network stack |Manages network connections and tasks, such as DHCP and UDP communications |
+| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)| Pulse-width modulation | Used for controlling the buzzer's sound intensity |
+| [cyw43](https://github.com/embassy-rs/cyw43)| Wi-Fi driver | Manages Wi-Fi connections and communication with the CYW43 Wi-Fi chip |
+| [ag_lcd](https://docs.rs/ag-lcd/latest/ag_lcd/)| LCD display handling | Provides functionality to interface with and control an LCD display via I2C |
+| [heapless](https://github.com/rust-embedded/heapless)| Data structures for embedded systems| Provides 'Vec' and 'String' types that do not rely on the standard library, suitable for no_std environments |
 
 ## Links
 
