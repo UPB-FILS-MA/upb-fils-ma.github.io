@@ -28,14 +28,18 @@ I choose this project because I wanted to have an RC car that I could control wi
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+- started buying the components for the project
+- tested to see that all the components work properly
+
+### Week 7 - 19 May
 - started building the project
 - soldered wires to the motors
 - made the connection between the Pico, L289N and the Motors
 
-### Week 7 - 19 May
-
 ### Week 20 - 26 May
-
+- started the software milestone for the project
+- first, made a code that moves the car 2 seconds in all directions
+- then added the functions to move to lab 8 so that I can control the car using Wi-Fi.
 ## Hardware
 
 The main components of the hardware that I used are:
@@ -105,7 +109,7 @@ The format is
 |[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
 |[embassy-net](https://github.com/embassy-rs/embassy) | Networking library | Manages Wi-Fi communications |
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
-|[cyw43](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|CYW43 |Used for interacting with the wi-fi chip of the pico |
+|[cyw43]([https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html](https://github.com/embassy-rs/embassy/tree/main/cyw43-firmware))|CYW43 |Used for interacting with the wi-fi chip of the pico |
 
 
 
