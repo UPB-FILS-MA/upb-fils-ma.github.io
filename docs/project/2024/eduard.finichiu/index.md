@@ -61,13 +61,21 @@ This architecture ensures seamless interaction between the components, allowing 
 
 ### Week 6 - 12 May
 
+Bought hardware parts.
+Mounted PICO on bread board. Wrote the code for barometric sensor. Tested PWM for servo.
+
 ### Week 7 - 19 May
+
+Started hating PWM and put the whole thing together.
+I did the KICAD schematic.
 
 ### Week 20 - 26 May
 
+Implementing water level sensor and writing code for the rest of the hardware.
+
 ## Hardware
 
-Pico W - brain of the Pet Feeder 
+Pico W - brain of the Pet Feeder
 
 Motor - delivers food
 
@@ -77,36 +85,44 @@ OV7670 - captures images
 
 Water Level sensor - no water, no current continuity
 
-Power Supply - 4 * R6 1.5V battery and a voltage divider to go at 5V
+Power Supply - 4 \* R6 1.5V battery and a voltage divider to go at 5V
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![schematics](kicad.png)
+
+Kicad project also atached here in the folder and in the project repo.
+
+Here are some pictures IRL:
+
+![picture1](pic1.jpg)
+
+![picture2](pic2.jpg)
+
+![picture3](pic3.jpg)
 
 ### Bill of Materials
 
-| Device | Usage | Price |
-|---|---|---|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [BMP280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf) | The barometric sensor | [9 RON](https://www.optimusdigital.ro/en/pressure-sensors/1666-modul-senzor-de-presiune-barometric-bmp280.html) |
-| [OV7670 Camera](https://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf) | Camera | [16 RON](https://www.optimusdigital.ro/en/optical-sensors/624-modul-camera-ov7670.html) |
-| [Servo Motor](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf) | The servo motor | [14 RON](https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&results=196) |
-| [Water level sensor](https://circuitdigest.com/microcontroller-projects/interfacing-water-level-sensor-with-arduino) | The water level sensor | [2 RON](https://www.optimusdigital.ro/en/others/272-senzor-de-nivel-al-apei.html) |
+| Device                                                                                                               | Usage                  | Price                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)            | The microcontroller    | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                              |
+| [BMP280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf)                                           | The barometric sensor  | [9 RON](https://www.optimusdigital.ro/en/pressure-sensors/1666-modul-senzor-de-presiune-barometric-bmp280.html)            |
+| [OV7670 Camera](https://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf)                                           | Camera                 | [16 RON](https://www.optimusdigital.ro/en/optical-sensors/624-modul-camera-ov7670.html)                                    |
+| [Servo Motor](http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf)                              | The servo motor        | [14 RON](https://www.optimusdigital.ro/en/servomotors/26-sg90-micro-servo-motor.html?search_query=servo+motor&results=196) |
+| [Water level sensor](https://circuitdigest.com/microcontroller-projects/interfacing-water-level-sensor-with-arduino) | The water level sensor | [2 RON](https://www.optimusdigital.ro/en/others/272-senzor-de-nivel-al-apei.html)                                          |
 
 ## Software
 
-| Library | Description | Usage |
-|---|---|---|
-| [bmp280](https://crates.io/crates/bmp280) | BMP280 sensor | Barometric sensor will be used to calculate pressure and temperature. |
-| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/) | Pulse-width modulation | Traits for the RP2040 microcontroller used for controlling the servo motor. |
-| [embassy](https://github.com/embassy-rs/embassy) | Embassy | Asynchronous executor and HAL (Hardware Abstraction Layer) for building embedded applications in Rust. |
-| [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network | Networking library for the Embassy asynchronous executor, enabling network communication in embedded Rust applications. |
-| [image](https://crates.io/crates/image) | Image Processing | Library for handling image manipulation tasks such as resizing, cropping, or object detection. |
-| [rtc-pcf8523](https://crates.io/crates/rtc-pcf8523) | Real-Time Clock (RTC) | API for interacting with the PCF8523 real-time clock module for keeping track of time. |
+| Library                                                          | Description            | Usage                                                                                                                   |
+| ---------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [bmp280](https://crates.io/crates/bmp280)                        | BMP280 sensor          | Barometric sensor will be used to calculate pressure and temperature.                                                   |
+| [pwm](https://docs.rs/pwm-pca9685/latest/pwm_pca9685/)           | Pulse-width modulation | Traits for the RP2040 microcontroller used for controlling the servo motor.                                             |
+| [embassy](https://github.com/embassy-rs/embassy)                 | Embassy                | Asynchronous executor and HAL (Hardware Abstraction Layer) for building embedded applications in Rust.                  |
+| [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network        | Networking library for the Embassy asynchronous executor, enabling network communication in embedded Rust applications. |
+| [image](https://crates.io/crates/image)                          | Image Processing       | Library for handling image manipulation tasks such as resizing, cropping, or object detection.                          |
+| [rtc-pcf8523](https://crates.io/crates/rtc-pcf8523)              | Real-Time Clock (RTC)  | API for interacting with the PCF8523 real-time clock module for keeping track of time.                                  |
 
 ## Links
-
-
 
 1. [Top 5 Pet Feeders](https://www.youtube.com/watch?v=vKdQXICO-r0&ab_channel=MrFlashPick)
 2. [Project Inspiration](https://www.youtube.com/watch?v=U7KqqlYaXgY&ab_channel=NicoleZhang)

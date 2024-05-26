@@ -62,7 +62,7 @@ src: ./sensors/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Direct Memory Access
 - Buses

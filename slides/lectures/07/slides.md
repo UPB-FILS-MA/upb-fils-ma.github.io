@@ -54,7 +54,7 @@ src: ./sensors/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - Buses
   - Inter-Integrated Circuit

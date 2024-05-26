@@ -30,16 +30,20 @@ That's when I remembered one of my favourite games from my childhood, chicken in
 ### Week 6 - 12 May
 
 ### Week 7 - 19 May
+Created Kicad schematics for the project.
+Connected all of the hardware components.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
 We will use a Joystick for movement and push buttons for game settings (reset,options etc).The game will be displayed on a OLED Display
-
+Here are images of the hardware :
+![image1](hw1.png)
+![image2](hw2.png)
 ### Schematics
 
-Place your KiCAD schematics here.
+![kicad](kicad.png)
 
 ### Bill of Materials
 
