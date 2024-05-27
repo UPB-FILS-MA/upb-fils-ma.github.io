@@ -43,7 +43,7 @@ I uploaded the documentation where I explained a little bit about my project.
 ### Week 7 - 19 May
 I added the KiCad shematics and pictures of the project.
 ### Week 20 - 26 May
-
+I added the software files for the project.
 ## Hardware:
 
 1. Raspberry Pi Pico Board – 1
