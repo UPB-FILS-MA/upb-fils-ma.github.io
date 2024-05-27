@@ -3,7 +3,6 @@
 You can play music just by moving your fingers through air.
 
 
-
 :::info
 
 **Author**: Chirila Teodora \
@@ -16,7 +15,7 @@ You can play music just by moving your fingers through air.
 This project constructs a musical instrument resembling a piano, but utilizing proximity sensors instead
 of physical keys. The Raspberry Pi Pico W detects the distance of a user’s fingers from the ultrasonic
 sensor using ultrasonic waves. This detected distance is then translated into visual feedback via LEDs
-and sound generation on the buzzers. The project offers the possibility of recording the user’s ”playing” for later playback.
+and sound generation on the buzzers.
 
 ## Motivation
 
@@ -34,7 +33,7 @@ Subcomponents:
 
 - LED Control: Controls the three LEDs based on the detected distance.
 
-- Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. (Potential addition: Recording functionality to store and playback user input.)
+- Buzzer Control: Generates tones on the buzzers corresponding to ”played” notes. 
 
 ![Architecture diagram](architecture.png)
 
@@ -49,7 +48,7 @@ I uploaded the project documentation, detailing my reasons for choosing this pro
 I uploaded the KiCad schematics along with photos showing the components connected on breadboards.
 
 ### Week 20 - 26 May
-This week is for the code part.
+I have been working on making the code and completing the other milestones so far to correspond with the current status of the project.
 
 ## Hardware
 
@@ -61,7 +60,7 @@ This project utilizes the following hardware components:
 
 - Three LEDs: Provide visual feedback based on the detected distance.
 
-- Two Buzzers (Active or Passive): Generate sound for the piano functionality.
+- One passive buzzer: Generate sound for the piano functionality.
 
 - Breadboard: Facilitates easy connection between components.
 
@@ -71,9 +70,7 @@ This project utilizes the following hardware components:
 
 ### Schematics
 This is the schematic in KiCad for the project.
-![KiCad](KiCad(project).png)
-
-![alt text](picture-project.jpeg)
+![KiCad](KiCad-schematic.png)
 
 ### Bill of Materials
 
@@ -92,21 +89,22 @@ The format is
 | [Raspberry Pi Pico](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) | The microcontroller | [39 lei](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html)                                                                                                                                                                                        |
 | [Breadboard](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                          | Main board          | [10 lei](https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&results=422)                                                                                                                                                                                                                                                          |
 | [Jumper Wires](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D)|   Connecting      | [8 lei ](https://www.optimusdigital.ro/en/wires-with-connectors/12-breadboard-jumper-wire-set.html?search_query=wires&results=567&HTTP_REFERER=https%3A%2F%2Fwww.optimusdigital.ro%2Fen%2Fsearch%3Fcontroller%3Dsearch%26orderby%3Dposition%26orderway%3Ddesc%26search_query%3Dwires%26submit_search%3D) |
-| [Active Buzzer](https://www.optimusdigital.ro/en/buzzers/635-3v-active-buzzer.html?search_query=buzzer&results=88)                                                                                              | Alert              | [1,49 lei](https://www.optimusdigital.ro/en/buzzers/635-3v-active-buzzer.html?search_query=buzzer&results=88)                                                                                                                                                                                                                                                       |
+| [Passive Buzzer](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html)                                                                                              | Alert              | [1,40 lei](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html)                                                                                                                                                                                                                                                       |
 | [Red LED](https://www.optimusdigital.ro/en/leds/29-5-mm-red-led-with-difused-lens.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/29-5-mm-red-led-with-difused-lens.html?search_query=led&results=2179)                                                                                                                                                                                                                                                          |
 | [Yellow LED](https://www.optimusdigital.ro/en/leds/698-led-galben-de-3-mm-cu-lentile-difuze.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/698-led-galben-de-3-mm-cu-lentile-difuze.html?search_query=led&results=2179)                                                                                                                                                                                                                                                       |
 | [Green LED](https://www.optimusdigital.ro/en/leds/38-5-mm-green-led-with-difused-lens.html?search_query=led&results=2179)                                                                         | It lights up         | [0,39 lei](https://www.optimusdigital.ro/en/leds/38-5-mm-green-led-with-difused-lens.html?search_query=led&results=2179)                                                                                                                                                                                                                                                       |
 | [Ultrasonic Distance Sensor](https://www.optimusdigital.ro/en/distance-sensors/8150-hc-sr04p-ultrasonic-distance-sensor-3-55-v.html)                                                                         | Measure distances        | [7 lei](https://www.optimusdigital.ro/en/distance-sensors/8150-hc-sr04p-ultrasonic-distance-sensor-3-55-v.html)                                                                                                                                                                                                                                                      |
 | [Resistors](https://www.optimusdigital.ro/en/resistors/33-025w-resistor-set-20-values-20-pcs-each.html)                                                                         | For LED's        | [7 lei](https://www.optimusdigital.ro/en/resistors/33-025w-resistor-set-20-values-20-pcs-each.html)                                                                                                                                                                                                                                                     |
-| [Micro USB Cable](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)                                                                         | For LED's        | [3 lei](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516) |
+| [Micro USB Cable](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)                                                                         | To supply the Raspberrry plate        | [3 lei](https://www.optimusdigital.ro/en/usb-cables/4576-cablu-albastru-micro-usb.html?search_query=usb+to+micro+usb&results=516)
 
 ## Software
-| Library | Description | Usage |
-|---------|-------------|-------|
-| [Embassy](https://github.com/embassy-rs/embassy) | A Rust-based framework designed specifically for embedded programming. | It's for programming the Raspberry Pi Pico and simplifying embedded concepts. |                         
-| [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware | Provides access to Raspberry Pi Pico W specific hardware functionalities. |
 
-
+| Library                                  | Description                        | Usage                              |
+| ---------------------------------------- | ---------------------------------- | ----------------------------------|
+| [Embassy](https://github.com/embassy-rs/embassy)       | A Rust-based framework designed specifically for embedded programming                | It's for programming the Raspberry Pi Pico and simplifying embedded concepts              |                         
+| [embassy-hal](https://github.com/embassy-rs/embassy)        | Hardware                | Provides access to Raspberry Pi Pico W specific hardware functionalities              |
+| [pico-ultrasonic-rs](https://github.com/Benehiko/pico-ultrasonic-rs)        | Raspberry Pi Pico + HC-SR04 sensor     | Sending data from the sensor to pico              |
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp)        | For using the hardware capabilities     | Implements both blocking and async APIs for many peripherals              |
 
 ## Links
 
