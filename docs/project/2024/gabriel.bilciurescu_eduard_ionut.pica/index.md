@@ -55,6 +55,18 @@ DS18B20 (TO-92) - is a digital temperature sensor with adjustable accuracy from 
 2n2222 NPN BJT - are cheap bipolar transistor that we use as a switch to power the fans
 TP4056 - is a module we use for charging the battery
 
+
+This is the final product simulation made in Fusion:
+![3D_simulation](./3D_simulation.gif)
+
+This is the current internal circuit of the project( not mounted with the frame and coolers for easy code debuging)
+![circuit_1](./hardware_internal_circuit1.jpeg)
+![circuit_2](./hardware_internal_circuit2.jpeg)
+
+ This is the 3D printed frame with mounted fans :
+![3D_CAD](./3D_cad.jpeg)
+
+
 ### Schematics
 
  ![KiCAD_schematic](./hardware_schematic1.png)
