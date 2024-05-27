@@ -46,7 +46,15 @@ Connection overview :
 
 ### Week 6 - 12 May
 
-### Week 7 - 19 May
+- I did the hardware the best way possible. I had a prototype before that was messier, and now I managed to make it more understandable and cleaner.
+- With the hardware part done, I also completed my KiCad design.
+- I improved the software part. It's not finished yet, but I’m making good progress so far.
+
+### Week 13 - 19 May
+
+- I changed from the 4x4 keypad to an RFID RC522 module.
+- I’m almost finished with the code. It still has some errors, but I am working hard on them. Most likely, one or two more days of work and everything will be smooth.
+- I ordered an active buzzer instead of a passive one for better accuracy related to the alarm, as the sound is louder and more explicit for its use.
 
 ### Week 20 - 26 May
 
@@ -54,9 +62,24 @@ Connection overview :
 
 In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. I've also integrated a 4x4 Matrix Keypad for user input, a servo motor for secure locking, and a buzzer for audible alarms. Each component is chosen with care to ensure a dependable system for safeguarding valuables.
 
+
+This picture shows the project from the above.
+
+![Above photo](./Above.jpeg)
+
+Here I took a picture from the front for a better view.
+
+![Front photo](./Front.jpeg)
+
+This is how my project less or more will look like.
+
+![Connections photo](./Connections.jpeg)
+
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![Kicad schematics photo](./KiCad_schematic.png)
+
 
 ### Bill of Materials
 
@@ -101,4 +124,3 @@ The format is
 1. [Project of a student from past years](https://ocw.cs.pub.ro/courses/pm/prj2022/arosca/rfid-lock)
 2. [Door Lock](https://www.youtube.com/watch?v=kGyQS3B1IwU&t=19s&ab_channel=SriTuHobby)
 3. [Anti-theft lock](https://www.youtube.com/watch?v=Jg0W165iHYk&t=32s&ab_channel=svsembedded)
-...

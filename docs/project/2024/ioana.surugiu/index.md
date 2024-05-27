@@ -52,8 +52,10 @@ I started the software and finished it, while also doing final improvements to m
 ![Circuit picture 2](circuit1.jpg)
 ![Circuit picture 3](circuit2.jpg)
 
+
 ### Final Look
 ![Final look](scena_final.jpg)
+
 
 ### Bill of Materials
 
