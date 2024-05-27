@@ -59,9 +59,15 @@ a.k.a *I square C*
 </div>
 
 ---
----
+
 # Transmission Example
 7 bit address
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 <div grid="~ cols-2 gap-5">
 
@@ -109,9 +115,15 @@ Transmission
 
 
 ---
----
+
 # Transmission Example
 10 bit address
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 <div grid="~ cols-2 gap-5">
 
@@ -152,6 +164,7 @@ Transmission
 </div>
 
 **controller** writes each bit when `CLK` is `LOW`, **target** samples every bit when `CLK` is `HIGH`
+
 
 ---
 ---
