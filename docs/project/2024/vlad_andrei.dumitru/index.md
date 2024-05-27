@@ -35,7 +35,12 @@ Worked mostly on hardware components and connections, testing the best way of co
 ### Week 7 - 19 May
 Managed to fully integrate the spinning roulette with the LEDs, and also managed to make the LEDs stop on a random number. I also completed the LCD display software and hardware, which will display the current odds and game information. Moreover, the push-button switch was integrated to trigger the game, and the potentiometer was connected to select the desired number. The buzzer was also added to emit a sound when the LEDs are spinning.
 ### Week 20 - 26 May
-What remains is to try and solder the LEDs on a PCB, make the final adjustments to the software and additionaly, build a box for the project. I also plan to add a few more features to the game, such as betting on colors, and adding a few more sounds to the buzzer.
+On this week, I spent most of the time focusing on hardware, as my software and logic were already done. The only software addon was that I implemented a system of betting. I built a box for the project and gave everything I had to make it look okay. I finished the project on the 26th. Here are some pictures of the final project:
+![Final1](./Final1.jpeg)
+![Final2](./Final2.jpeg)
+
+
+
 
 ## Hardware
 
@@ -44,13 +49,13 @@ What remains is to try and solder the LEDs on a PCB, make the final adjustments 
 3. **LCD 1602 module**: Display for showing current odds and game information.
 4. **Buzzer**: Emmits a sound when the leds are spinning.
 5. **Push-button switch**: Trigger for starting the game.
-6. **Potentiometer**: Control for selecting the winning number.
-7. **Breadboard**: Platform for prototyping and connecting components.
-8. **Jumper wires**: Connectors for establishing electrical connections on the breadboard.
-9. **Shift Registers**: Reduce the number of wires needed to connect the LEDs.
-10. **PCB Board**: For soldering the LEDs and making the roulette shape.
+6. **Potentiometer**: Control for selecting the winning color.
+7. **Potentiometer 2**: Control for selecting the value of the bet.
+8. **Breadboard**: Platform for prototyping and connecting components.
+9. **Jumper wires**: Connectors for establishing electrical connections on the breadboard.
+10. **Shift Registers**: Reduce the number of wires needed to connect the LEDs.
 
-In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize the spinning motion of the roulette values, the LCD 1602 module displays game information, the push-button switch triggers the game, and the potentiometer selects the winning number. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
+In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualize the spinning motion of the roulette values, the LCD 1602 module displays game information, the push-button switch triggers the game, and 1 potentiometer selects the winning color, anothr the value of your desired bet. These components are connected using a breadboard and jumper wires for prototyping and experimentation.
 
 Here are some pictures of the current state of the project`s hardware:
 ![Hardware1](./Hard1.jpg)
@@ -104,6 +109,9 @@ The format is
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [micro-rand](https://crates.io/crates/micro_rand) | A tiny, no STD library for generating (pseudo) random numbers. | Used to generate the winning number |
+| [LCD1602](https://github.com/mihai1803/1602lcd) | A library for interfacing with the LCD1602 module. | Used to display game information |
+
+For the software part, the only library I used was micro-rand, which is a tiny, no STD library for generating (pseudo) random numbers. This library was used to generate the winning number in the game. Otherwise, the game logic works on basic asynchronous tasks and loops from Embassy.
 
 ## Links
 [Inspiration](https://github.com/WoXy-Sensei/casino-arduino)
