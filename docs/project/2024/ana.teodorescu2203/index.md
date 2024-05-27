@@ -58,6 +58,8 @@ In this week I made the kicad schematic and I connected all the hardware compone
 
 ### Week 20 - 26 May
 
+In this week I started working at the software part and finished it. I attached the tower crane to a metal platform, also the breadboard and the motor drivers to achieve a more organized final look.
+
 ## Hardware
 
 Raspberry Pi Pico W: main processing unit
@@ -80,6 +82,10 @@ Plastic gears (different diameters) for rotational movement
 ![hardware2](hardware2.jpg)
 ![hardware3](hardware3.jpg)
 ![breadboard](breadboard.jpg)
+
+The final look of the Tower Crane, presented at the PM Fair:
+
+![macara_final](macara_final.jpg)
 
 ### Schematics
 
