@@ -58,6 +58,10 @@ Connection overview :
 
 ### Week 20 - 26 May
 
+- I finished the whole code after many hours of debugging.
+- I put the hardware in a box and game it the look of a safe box.
+
+
 ## Hardware
 
 In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. I've also integrated a 4x4 Matrix Keypad for user input, a servo motor for secure locking, and a buzzer for audible alarms. Each component is chosen with care to ensure a dependable system for safeguarding valuables.
@@ -74,6 +78,10 @@ Here I took a picture from the front for a better view.
 This is how my project less or more will look like.
 
 ![Connections photo](./Connections.jpeg)
+
+Final look of the project
+
+![Final look](./poza.jpg)
 
 
 ### Schematics
