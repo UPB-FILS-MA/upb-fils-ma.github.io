@@ -36,6 +36,7 @@ Micro Motors with reducer: Powers the movements of rotation, trolley and hook - 
 
 Photoelectric sensors: Detects the oncoming trolley
 
+
 Passive Buzzer: Emits a sound when the crane is moving
 
 Buttons: The user can control the direction of the motor (up, down, static).
