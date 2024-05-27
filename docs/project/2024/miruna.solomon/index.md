@@ -44,7 +44,9 @@ The development of this motion-controlled remote is driven by a desire to revolu
 
 ![remote_game](remote_game.svg)
 
+![remote_pac](remote_pac.jpg)
 
+![display_game](display_game.jpg)
 
 ### Bill of Materials
 
