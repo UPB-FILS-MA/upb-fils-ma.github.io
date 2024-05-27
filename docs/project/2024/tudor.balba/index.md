@@ -26,9 +26,10 @@ This project combines elements of retro gaming, embedded systems development, an
 - **Documentation**
 - **Architecture for the project**
 ### Week 7 - 19 May
-
+- **Hardware milestone**
 ### Week 20 - 26 May
-
+- **Software milestone**
+- **PM fair**
 ## Hardware
 
 - **MPU-9250 sensor** is used for recognizing hand gestures and also to register them
