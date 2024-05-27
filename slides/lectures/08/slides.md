@@ -67,7 +67,7 @@ src: ./protocols/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - OSI Network Stack
 - Wi-Fi

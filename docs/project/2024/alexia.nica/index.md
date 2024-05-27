@@ -17,37 +17,43 @@ I'll design a user-friendly alarm clock with a real-time clock (RTC) module, LCD
 The motivation behind this project is to create a multifunctional clock that not only provides accurate timekeeping and customizable alarms but also offers real-time weather information in a fun and intuitive way. I chose this project because the clock is essential in our lives; whether you need to go to work, attend an appointment, or manage your daily tasks, knowing the time is crucial. Additionally, the weather function helps a lot when you want to know how to dress yourself.
 
 ## Architecture 
-![Architecture diagram](./architecture_diagram.png)
+
+![Architecture diagram](./architecture.png)
+=======
 
 *Main Components used in the WeatherSmart Clock project:*
 
   **1-Rasberry Pi Pico:** Microcontroller unit responsible for managing all operations.
   
-  **2-Temperature Sensor:** Monitors ambient temperature and communicates with the Rasberry Pi Pico
+  **2-LCD Display:** Shows the current temperature in Celcius.
   
-  **3-LCD Display:** Shows the current temperature in Celcius.
+  **3-Buzzer:** Acts as the audible alarm.
   
-  **4-Buzzer:** Acts as the audible alarm.
-  
-  **5-RTC Module:** Real time clock module used for accurate timekeeping
+  **4-RTC Module:** Real time clock module used for accurate timekeeping
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I started by buying the components I needed, then I connected them together.
 
 ### Week 7 - 19 May
+I drew the Kicad schematics and I began writing the code.
 
 ### Week 20 - 26 May
 
 ## Hardware
+In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. It also reads data and time from the DS3231 real time clock module, and displays them, while also being able to send electrical signals to a buzzer for an alarm effect.
 
-In my project, the Raspberry Pi Pico microcontroller serves as the central processing unit, mandated for the task. Its low power consumption ensures efficiency throughout. In this project, it reads data from the DHT11 temperature sensor and the time from the DS3231 real time clock module, and displays them, while also being able to send electrical signals to a buzzer for an alarm effect.
-  
+
 ### Schematics
+![Kicad Schematics](./schematics.png)
+![Circuit](./1.jpg)
+![Front look](./2.jpg)
+![Breadboard connections](./3.jpg)
+![Buttons connections](./4.jpg)
 
-Place your KiCAD schematics here.
 
 ### Bill of Materials
 
@@ -63,13 +69,13 @@ The format is
 
 | Device | Usage | Price |
 |--------|--------|-------|
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [39 RON](https://www.optimusdigital.ro/ro/placi-raspberry-pi/12395-raspberry-pi-pico-wh.html?search_query=raspberry+pi+pico+wh&results=24) |
 | [Buzzer Pasiv de 5 V](https://components101.com/misc/buzzer-pinout-working-datasheet) |Passive buzzer | [1.40 RON](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html?search_query=buzzer+pasiv&results=15)|
-| [LCD Display](https://circuitdigest.com/article/16x2-lcd-display-module-pinout-datasheet)|Display|[9.83 RON](https://ardushop.ro/ro/electronica/36-lcd-1602.html?search_query=lcd+display&results=138)|
-| [Push Button](https://components101.com/switches/push-button)|Push button|[0.63 RON](https://ardushop.ro/ro/home/97-buton-mic-push-button-trough-hole.html?search_query=buton&results=157)|
-| [Temperature sensor](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)|Temperature sensor|[14.30 RON](https://ardushop.ro/ro/home/121-modul-senzor-temperatura-i-umiditate-digital-dht11.html?search_query=dht11&results=3)|
-| [RTC Module](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231.pdf)|Real time clock module|[23.56 RON](https://ardushop.ro/ro/electronica/231-modul-rtc-de-precizie-ds3231-i2c.html?search_query=ds3231&results=1)|
-| Breadboard|Breadboard|[10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31)|
+| [LCD Display](https://circuitdigest.com/article/16x2-lcd-display-module-pinout-datasheet)|Display|[15 RON](https://www.optimusdigital.ro/ro/optoelectronice-lcd-uri/62-lcd-1602-cu-interfata-i2c-si-backlight-galben-verde.html?search_query=lcd+1602+i2c&results=4)|
+| [Push Button](https://components101.com/switches/push-button)|Push button|[2 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1114-buton-cu-capac-rotund-rou.html?search_query=buton&results=222)|
+| [RTC Module](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231.pdf)|Real time clock module|[15.98 RON](https://www.optimusdigital.ro/ro/altele/12402-modul-cu-ceas-in-timp-real-ds3231.html?search_query=ds3231&results=5)|
+| Breadboard|Breadboard|[9.98 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=breadboard&results=145)|
+
 
 ## Software
 
