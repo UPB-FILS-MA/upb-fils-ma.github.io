@@ -46,9 +46,20 @@ Connection overview :
 
 ### Week 6 - 12 May
 
-### Week 7 - 19 May
+- I did the hardware the best way possible. I had a prototype before that was messier, and now I managed to make it more understandable and cleaner.
+- With the hardware part done, I also completed my KiCad design.
+- I improved the software part. It's not finished yet, but I’m making good progress so far.
+
+### Week 13 - 19 May
+
+- I changed from the 4x4 keypad to an RFID RC522 module.
+- I’m almost finished with the code. It still has some errors, but I am working hard on them. Most likely, one or two more days of work and everything will be smooth.
+- I ordered an active buzzer instead of a passive one for better accuracy related to the alarm, as the sound is louder and more explicit for its use.
 
 ### Week 20 - 26 May
+
+- I finished the whole code after many hours of debugging.
+- I put the hardware in a box and gave it the look of a safe box.
 
 ## Hardware
 
@@ -66,6 +77,10 @@ Here I took a picture from the front for a better view.
 This is how my project less or more will look like.
 
 ![Connections photo](./Connections.jpeg)
+
+This is the final version of the project
+
+![Connections photo](./poza.jpg)
 
 
 ### Schematics
