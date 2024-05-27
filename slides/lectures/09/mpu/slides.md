@@ -36,15 +36,14 @@ The processor works in three modes:
 
 :: right ::
 
-<img src="/mpu/memory_protection.svg" class="w-120">
+<img src="/mpu/memory_protection.svg" class="w-120 rounded">
 
 ---
 layout: two-cols
 ---
 # MPU for RP2040
-Cortex-M0+
+Cortex-M0+ works in three modes
 
-The processor works in three modes:
 - **handler** mode - *no restrictions* - used while executing ISRs and Exception Handlers
 - **thread** mode
   - **privileged** *no restrictions* - usually used for the operating system
@@ -56,7 +55,7 @@ MPU allows 8 regions
 
 :: right ::
 
-<img src="/mpu/mpu_rp2040.svg" class="w-120">
+<img src="/mpu/mpu_rp2040.svg" class="w-120 rounded">
 
 
 ---
@@ -71,7 +70,7 @@ Cortex-M MPU
 }
 </style>
 
-<img src="/mpu/mpu.svg" class="w-120">
+<img src="/mpu/mpu.svg" class="w-120 rounded">
 
 - allows the definition of *memory regions*
 - regions can overlap, *highest region number* takes *priority*
@@ -82,7 +81,7 @@ $$ base\_address = region\_size \times N $$
 
 :: right ::
 
-<img src="/mpu/mpu_regions.svg" class="w-70 m-5">
+<img src="/mpu/mpu_regions.svg" class="w-70 m-5 rounded">
 
 ---
 layout: two-cols
@@ -90,7 +89,7 @@ layout: two-cols
 # Memory Protection Unit
 Access Protection
 
-<img src="/mpu/mpu.svg" class="w-120">
+<img src="/mpu/mpu.svg" class="w-120 rounded">
 
 **AP** Access Protection
 
@@ -125,11 +124,11 @@ layout: two-cols
 - each bit in `Subregion Disable` disables a subregion
 - a disabled subregion triggers a fault if accessed
 
-<img src="/mpu/mpu.svg" class="w-120">
+<img src="/mpu/mpu.svg" class="w-120 rounded">
 
 :: right ::
 
-<img src="/mpu/subregions.svg" class="w-70">
+<img src="/mpu/subregions.svg" class="w-70 rounded">
 
 ---
 layout: two-cols
@@ -147,13 +146,13 @@ $$ region\_size = min\lparen256, 2^{size}\rparen $$
 $$ base\_address = region\_size \times N $$
 $$ subregion\_size = \frac{region\_size}{8} $$
 
-- a 5K region is not allows (5K is not a power of 2)
+- a 5K region is not allowed (5K is not a power of 2)
 - use two 4K regions back to back
 - disable 6 of the subregions (subregion is 512B)
 
 :: right ::
 
-<img src="/mpu/regions_and_subregions.svg" class="w-70">
+<img src="/mpu/regions_and_subregions.svg" class="w-70 rounded">
 
 ---
 layout: two-cols
@@ -183,4 +182,4 @@ protection
 
 :: right ::
 
-<img src="/mpu/layout.svg" class="w-64">
+<img src="/mpu/layout.svg" class="w-64 rounded">

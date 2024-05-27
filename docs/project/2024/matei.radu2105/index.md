@@ -122,4 +122,4 @@ The format is
 2. [Snake - Code for C++](https://www.geeksforgeeks.org/snake-code-cpp/)
 3. [Youtube link for custom KiCad schematic](https://www.youtube.com/watch?v=7tRxwx7hZnQ)
 4. [Greatly helped with frequencies for all music notes](https://auditoryneuroscience.com/pitch/fundamental-frequencies-notes-western-music)
-5. [VS Code shortcuts - made my life way easier :) ](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+5. [VS Code shortcuts - made my life way easier](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)

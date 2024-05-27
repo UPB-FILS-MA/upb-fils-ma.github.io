@@ -68,7 +68,7 @@ When an unauthorized pet is trying to enter (the servomotor remains vertical, st
 - **Power Supply**: An external battery to keep the system running independently.
 
 
-### Schematics\
+### Schematics
 This is the KiCad schematic:
 ![Schematic](kicad_schematic.png)
 

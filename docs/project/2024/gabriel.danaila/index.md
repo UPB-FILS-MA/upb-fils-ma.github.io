@@ -41,21 +41,63 @@ The project has the following architecture:
 ### Week 6 - 12 May
 Received first hardware parts. The Tesla Coil did not work so I ordered another one. First succesful tests with the PWM Audio code.
 ### Week 7 - 19 May
-Received the second Tesla Coil, which, after some fixes from the lab teacher, started working but had a very low visual and acustical intensity. Decided to order other components and shift the project's focus a bit. After an intensive code testing session I decided to use two Pico microcontroller for two separate purposes. The microcontrollers will both be placed on the same breadboard.
+Received the second Tesla Coil, which, after some fixes from the lab teacher, started working but had a very low visual and acustical intensity. Decided to order other components and shift the project's focus a bit. After an intensive code testing session I decided to use two Pico microcontrollers for two separate purposes. The microcontrollers will both be placed on the same breadboard.
 ### Week 20 - 26 May
-To be written.
+This week I finally received and assembled the last pieces of hardware. I have also realized that the potentiometer used had to be a logarithmic one, not linear. I also replaced the default beep.wav file with a longer audio file. I have replaced the hardware pictures, with newer, up to date, pictures. Updated the software library. Added an explanation for as why I have used 2 Raspberry Pi Pico.
 
 ## Hardware
 
 I am using a Pico MCU in order to decode and send audio to a speaker, a potentiometer for adjustable volume, a secondary Pico MCU in order to process and send potentiometer's resistance value to a 4 digit display. Also, I will display a Tesla Coil which powers on a fluorescent neon tube wirelessly.
 
-![HDW1](hardware1.png)
-![HDW2](hardware2.png)
-![HDW3](hardware3.png)
+:::info 
+
+I am using two Pico MCUs because the code snippets and code parts that I use are made for either `embassy-rp` or `embedded-hal` specifically. This, on its own it is not the problem. The issue is that `embassy-rp`, at its core, is actually based on `embedded-hal`, both using one or more of the same packages. The pieces of code can be put together as one, without issues from `rust-analyzer`, but with issues from the compiler, which can't compile the same package twice. Theoretically, if all the code would be made to use only one `HAL Implementation`, it would work, but, the PWM audio, being written in bare metal, using unsafe methods, would be hard to switch into `embassy-rp`. On the other hand, switching the LED part of the code (which is in embassy-rp) would be equally as hard, if we would want to keep the same functionalities. These being said, the most optimal way I found was to `split` the code based on the implementation used, with the PWM Audio being based on bare metal `embedded-hal` and the LED->ADC part being based on `embassy-rp`. As such, the Pico MCUs, each run its own `HAL Implementation`.
+
+:::
+
+**Pictures**
+<table>
+<tr>
+ <td>
+  
+![HDW1](hardware_schematics/hardware1.png)
+
+</td>
+<td>
+ 
+![HDW2](hardware_schematics/hardware2.png)
+
+</td>
+<td>
+
+![HDW3](hardware_schematics/hardware3.png)
+
+</td>
+</tr>
+</table>
+<table>
+<tr>
+ <td>
+  
+![HDW4](hardware_schematics/hardware4.png)
+
+</td>
+<td>
+ 
+![HDW5](hardware_schematics/hardware5.png)
+
+</td>
+<td>
+
+![HDW6](hardware_schematics/hardware6.png)
+
+</td>
+</tr>
+</table>
 
 ### Schematics
 
-![KiCad](kicad_schematic.png)
+![KiCad](hardware_schematics/kicad_schematic.png)
 
 ### Bill of Materials
 
@@ -73,7 +115,7 @@ The format is
 |--------|--------|-------|
 | [2x Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontrollers | [70 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [Kit DIY Mini Speaker Tesla Coil 15-24V](https://s3.amazonaws.com/images.ecwid.com/images/wysiwyg/product/15692267/128673850/1594028694571-1078299868/tesla_schema_PNG) | Speaker/EMF generator for powering nearby bulbs/neon tubs | [45 RON](https://www.sigmanortec.ro/Kit-Bobina-Speaker-Mini-Tesla-p128673850) |
-| [4 digits Display](https://components101.com/sites/default/files/component_datasheet/TM1637%20Display%20Module%20Datasheet.pdf) | Displays the potentiometer's resistance | [12 RON](https://www.emag.ro/modul-led-display-ceas-cl281/pd/DR966JBBM/) |
+| [4 Digits LED Display](https://components101.com/sites/default/files/component_datasheet/TM1637%20Display%20Module%20Datasheet.pdf) | Displays the potentiometer's resistance | [12 RON](https://www.emag.ro/modul-led-display-ceas-cl281/pd/DR966JBBM/) |
 | 2x Power and Data Cable | Micro-USB to USB-A cable | [16 RON](https://www.emag.ro/cablu-alimentare-si-date-ugreen-fast-charging-usb-la-micro-usb-nickel-plating-pvc-1-5m-negru-6957303861378/pd/DV7CCBYBM/) |
 | 2x Header Pins for Pi Pico W | Header Pins | 8 RON |
 | Electronic Components Starting Kit | Kit with Electronic components | [100 RON](https://www.emag.ro/kit-start-componente-electronice-ai777/pd/DXRJ4TMBM/) |
@@ -98,10 +140,15 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embassy-rp](https://crates.io/crates/embassy-rp) | The embassy-rp HAL targets the Raspberry Pi RP2040 microcontroller. The HAL implements both blocking and async APIs for many peripherals. | Reading, processing and sending data over ADC to multiple peripherals |
+| [embassy-rp](https://crates.io/crates/embassy-rp) | The embassy-rp HAL targets the Raspberry Pi RP2040 microcontroller. The HAL implements both `blocking` and `async` APIs for many peripherals. | Reading, processing and sending data over ADC to multiple peripherals |
+| [embassy-embedded-hal](https://crates.io/crates/embassy-embedded-hal) | Collection of utilities to use `embedded-hal` and `embedded-storage` traits with Embassy. | Dependency of `embassy-rp` used for adding `embedded-hal`/`rp2040-hal` traits to `embassy` |
+| [embassy-time](https://crates.io/crates/embassy-time) | Instant and Duration for embedded no-std systems, with async timer support | Sets the code execution on an `await` state for a number of seconds/miliseconds (stops code execution for a predefined time period)| 
+| [embassy-sync](https://crates.io/crates/embassy-sync) | no-std, no-alloc synchronization primitives with async support | Establishes `channels` used for reading and passing data `over ADC`|
+| [embassy-executor](https://crates.io/crates/embassy-executor/) | async/await executor designed for embedded usage | Used for spawning/tasking asynchronous functions like `main` or `read_adc_value` |
 | [rp2040-hal](https://crates.io/crates/rp2040-hal)| High-level Rust drivers for the Raspberry Silicon RP2040 Microcontroller | Sending PWM Audio over GPIO |
-| [defmt](https://crates.io/crates/defmt) | defmt ("de format", short for "deferred formatting") is a highly efficient logging framework that targets resource-constrained devices, like microcontrollers. | Logging and Debugging code |
-| [embedded-time](https://crates.io/crates/embedded-time) | Fully defined, inter-operable, ergonomic, and fast human-time units (both duration and rate types) with hardware timer abstraction and software timers. | Used for defining the PWM wave's frequency change rate |
+| [defmt](https://crates.io/crates/defmt) | defmt ("de format", short for "deferred formatting") is a highly efficient `logging framework` that targets resource-constrained devices, like microcontrollers. | Logging and Debugging code |
+| [embedded-time](https://crates.io/crates/embedded-time) | Fully defined, inter-operable, ergonomic, and fast human-time units (both duration and rate types) with `hardware timer abstraction` and software timers. | Used for defining the PWM wave's `frequency change rate` |
+
 
 ## Links
 
