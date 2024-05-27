@@ -27,9 +27,10 @@ The development of this motion-controlled remote is driven by a desire to revolu
 - **Documentation**
 - **Architecture for the project**
 ### Week 7 - 19 May
-
+-**Hardware milestone**
 ### Week 20 - 26 May
-
+-**Software milestone**
+-**PM Fair**
 ## Hardware
 
 - **MPU-9250 sensor** is used for recognizing hand gestures and also to register them
