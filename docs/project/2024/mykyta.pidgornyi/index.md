@@ -37,15 +37,18 @@ Add here the schematics with the architecture of your project. Make sure to incl
 
 
 
-![[Pasted_image_20240504200734.png]]
+![Graph](Pasted_image_20240504200734.png)
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+Accepted the hardware. Assembled the scheme to make sure all components work properly.
 
 ### Week 7 - 19 May
+Found the proper way of connecting components by using proper drivers, 
+had to connect GPS tracker by doing I2C hardcode because it had no drivers.
 
 ### Week 20 - 26 May
 
@@ -56,11 +59,14 @@ DFRobot GNSS - GPS Module
 PICO EXPLORER BASE - The base for the clock with a display, buttons and a breadboard 
 
 This is my whole digikey order:
-![[Pasted_image_20240504182423.png]]
+![order](Pasted_image_20240504182423.png)
+
+This is assembled real-life schematic:
+![Schematic](Real_life.jpg)
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](KiCad.png)
 
 ### Bill of Materials
 

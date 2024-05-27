@@ -88,6 +88,7 @@ The final look of the Tower Crane, presented at the PM Fair:
 
 ![macara_final](macara_final.jpg)
 
+
 ### Schematics
 
 ![kicad](kicad.jpg)
