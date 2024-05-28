@@ -19,7 +19,7 @@ I chose the solar tracker project after reviewing a variety of engaging projects
 
 ## Architecture 
 
-![Solar Tracker System Diagram](diagram_new.png)
+![Solar Tracker System Diagram](diagram.png)
 
 The architecture of the RustFlower consists of the following main components:
 
