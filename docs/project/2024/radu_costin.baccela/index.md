@@ -19,7 +19,7 @@ I chose the solar tracker project after reviewing a variety of engaging projects
 
 ## Architecture 
 
-![Solar Tracker System Diagram](diagram.png)
+![Solar Tracker System Diagram](diagram_new.png)
 
 The architecture of the RustFlower consists of the following main components:
 
@@ -63,19 +63,26 @@ Assembled the hardware components of the project.
 
 ### Week 20 - 26 May
 
+Created the software for the project.
+Gave the final touch to the project hardware by fixing the supports for the servo motors and replace any cardboard with plastic.
+
+### Day 27 May
+
+Presented the project at PM Fair.
+
 ## Hardware
 
 The primary hardware foundation of the RustFlower project centers around the Raspberry Pi Pico W, a central processing unit known for its low power consumption and ability to manage multiple inputs and outputs simultaneously. Servomotors are integrated to adjust the photovoltaic panel’s orientation for optimal solar alignment, enhancing energy efficiency. Photoresistors serve as the main sensory apparatus, detecting sunlight intensity from various angles to guide the servomotors' adjustments. The MCP3008 provides additional ADC ports necessary for the project. The photovoltaic panel captures solar energy, central to demonstrating the conversion process. The INA219 current sensor measures voltage and current from the photovoltaic panel, crucial for calculating real-time power production. Finally, a small LCD display provides immediate feedback on the system’s performance, including energy generation and system status.
 
-![First image of the assembled hardware](RustFlower1.jpeg)
+![First image of the assembled hardware](RustFlower1_new.jpeg)
 
-![Second image of the assembled hardware](RustFlower2.jpeg)
+![Second image of the assembled hardware](RustFlower2_new.jpeg)
 
 ### Schematics
 
 KiCad schematic of the RustFlower project:
 
-![KiCAD schematic](RustFlowerKicad.png)
+![KiCAD schematic](RustFlowerKicad_new.png)
 
 ### Bill of Materials
 
