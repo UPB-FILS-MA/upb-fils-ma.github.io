@@ -47,7 +47,7 @@ I started to add the components on the breadboard, then I will also connect the 
 ### Week 20 - 26 May
 
 This week I improved my code adding more functionalities: the money system and also some LED light show. I gave up on the PCB because I couldn't manage to solder it properly so I resumed to a easier solution: soldering the LEDs directly on my box:
-![LEDS soldering](./LEDS_soldering.jpg)
+![LEDS soldering](./LEDs_soldering.jpg)
 I know it looks a bit messy, but was easier to connect the LEDs in the shape of an airplane like this rather than using a PCB (also I connected all LEDs' grounds together so that I don't have to use 24 wires for the ground).
 
 
