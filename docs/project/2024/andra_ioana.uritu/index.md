@@ -61,7 +61,6 @@ Final look from the PM Faire stand:
 ![Final Product](final_product.jpg)
 
 
-
 - **Raspberry Pi Pico W**: The microcontroller, coordinating all device interactions.
 - **NanoBeacon IN100**: Worn by the cat, programmed with a unique UUID for door access.
 - **CR1225**: 3V Lithium Coin Battery which powers the NanoBeacon on the cat's collar after it has been configured. 
@@ -73,7 +72,8 @@ Final look from the PM Faire stand:
 - **Power Supply**: An external battery to keep the system running independently.
 
 
-### Schematics\
+
+### Schematics
 This is the KiCad schematic:
 ![Schematic](kicad_schematic.png)
 

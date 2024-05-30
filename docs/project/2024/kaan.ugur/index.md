@@ -128,17 +128,29 @@ Project will look more or less like the following diagram:
   
   ![Picture of Hardware](hardware.jpg)
 
-  From front                             | From top
-  :--------------------------------------|--------------------------------------:
-  <img src="hardware_front.jpg" width="700" height="500"/> | <img src="hardware_top.jpg" width="700" height="500"/>
+  Picture of hardware from above:
+
+  ![From Above](hardware_top.jpg)
+
+  Picture of hardware from front:
+
+  ![Picture of Hardware](hardware_front.jpg)
+
+ 
 
   **Additional Pictures of the prototype**
 
   This is just a unprofessionally prototype to show the **main idea.** I am still working on it.
 
-  Prototype from side                                             | Prototype from front
-  :-----------------------------------------------------|-----------------------------------------------------:
-<img src="prototype_side.jpg" width="500" height="500"/> | <img src="prototype_front.jpg" width="500" height="500"/>
+**Picture of the prototype:**
+
+Prototype from side:
+
+![Picture of Prototype](prototype_side.jpg)
+
+Prototype from front:
+
+![Picture of Prototype](prototype_front.jpg)
 
 **After submitting the prototype to show the main idea, I worked on the project more and I have the final looking under below!**
 

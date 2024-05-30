@@ -39,7 +39,11 @@ The subcomponents are the LCD that is showcasing the interface and the animated 
 
 ### Week 6 - 12 May
 
+I purchased the components needed for the project and drew the initial Kicad design.
+
 ### Week 7 - 19 May
+
+I designed the interface, drawing icons for each interaction and editing a sprite of my favorite Pokemon, Quagsire, to act as my pet. I also made an animation for it by looping two sprites.
 
 ### Week 20 - 26 May
 
@@ -49,7 +53,7 @@ Detail in a few words the hardware used.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![schematic](schematic.PNG)
 
 ### Bill of Materials
 
