@@ -49,9 +49,11 @@ The Motion-based Alarm System leverages essential electronic components designed
 - Breadboard and Jumper Wires: Provide platform for prototyping the circuit, facilitating easy setup and adjustments.
 - Resistors: Ensure proper functioning of the circuit, as well as protect sensitive components from excessive current and manage voltage levels.
 
+![Device Image 1](project_picture_1.png)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad Schematic](project_schematic.png)
 
 ### Bill of Materials
 
