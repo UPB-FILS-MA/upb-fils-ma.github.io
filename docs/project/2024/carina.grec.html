@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.12fa2673.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3883d1c8.js" defer="defer"></script>
 <script src="/assets/js/main.97b2c94c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -66,6 +66,8 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
+<p>The main idea of the project was to create a house thermometer to read the room temperature. Throughout the development, ideas changed based on the difficulties that i had to overcome. For this, i had to use a DS18B20 sensor connected to the Raspberry Pi Pico WH by the wire and a resistor. In addition to this, i connected 3 leds, each with a different utility: a green one that always turns on when the Raspberry is working, a blue one tha turns on only when the temperature is lower than 20 degrees Celsius and a red one that only turns on when the temperature is greater than 20 degrees Celsius. In teh end i didn&#x27;t manage to connect the volatile memory or the screen to display the temperature because i ended up creating a website that automatically displays the temperature, the state of the led and also updates.
+To buils and flash the code, i had to do the following steps: cargo build  --target thumbv6m-none-eabi --release and elf2uf2-rs -d -s .\target\thumbv6m-none-eabi\release\house_thermometer</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
 <ol>
 <li>
