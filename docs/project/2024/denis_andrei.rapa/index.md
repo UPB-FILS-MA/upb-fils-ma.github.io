@@ -78,6 +78,7 @@ This is how my project less or more will look like.
 
 ![Connections photo](./Connections.jpeg)
 
+
 This is the final version of the project
 
 ![Connections photo](./poza.jpg)

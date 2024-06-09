@@ -41,11 +41,14 @@ Main components:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
 I completed the project Kicad schematic, ensuring all components are properly connected.
 
-### Week 20 - 26 May
+### Week 7 - 19 May
 I used the project schematic as a template when putting together the hardware on the breadboard.
+
+### Week 20 - 26 May
+I implemented the software for the hardware using PWM on the photoresitor and read the value of the motion sensor using the adc pins. After that I've run the code and flashed it on the pico.
+
 ## Hardware
 
 - Raspberry Pi Pico W: The microcontroller serves as the main processing unit, coordinating the functions of the entire system.

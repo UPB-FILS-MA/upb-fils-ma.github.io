@@ -84,6 +84,12 @@ I tried to integrate the code for all the components. The components I managed t
 I connected the pins and took photos of the hardware setup. I used my kicad schematic to do this.
 ### Week 20 - 26 May
 
+I successfully resolved most of the bugs in my code and managed to integrate the servo motor. Initially, the servo motor was not functioning correctly.
+
+With the assistance of my lab teacher, we were able to troubleshoot the issue. Together, we modified the code to ensure the servo motor operated as intended.
+
+Additionally, I attached the servo motor and the ultrasonic sensor, enhancing both the functionality and the overall appearance of the project.
+
 ## Hardware
 The hardware used includes:
 
