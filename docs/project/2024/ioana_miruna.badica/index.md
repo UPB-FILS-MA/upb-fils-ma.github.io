@@ -17,7 +17,6 @@ The project consists of a LED that turns on the light automatically when it dete
 I have chosen this project because I wanted to implement something that could turn into a bigger project later such as using a real lamp instead of a LED, or implementing new functions like (if I were to use a RGB LED) to add a remote controller to switch the colors of the light from far away.
 
 ## Architecture 
-
 Components \
   -> Raspberry Pi Pico W: Microcontroller \
   -> Mini PIR HC-SR505 Sensor: Detects movement around the sensor \
@@ -34,18 +33,28 @@ Connections \
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+Managed to get all the components for the project and searched for documentation for each component.
 
 ### Week 7 - 19 May
+Assembled all the hardware components together, did the KiCad schematic and started the software rust program.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-in progress...
+Diagram of Hardware components
+
+![Diagram](./ProjectHardwareSchematic.jpeg)
+
+Picture of hardware components 
+
+![Hardware](./rustProjectPic1.jpeg)
 
 ### Schematics
 
-in progress...
+KiCad Schematic
+
+![KiCad Schematic](./SmartLampKicadSchematic.jpeg)
 
 ### Bill of Materials
 
@@ -74,7 +83,10 @@ The format is
 ## Software
 
 | Library | Description | Usage |
-|---------|-------------|-------|
+|--------|--------|-------|
+| [pir-motion-sensor](https://github.com/mateusz-szczyrzyca/pir-motion-sensor) | Library for the PIR sensor | Used to simplify the process of reading data from the PIR sensor and to avoid having to write low-level code to interact with the sensor |
+| [embassy-rs](https://github.com/embassy-rs/embassy) | Embassy-rs framework | Used to simplify bare-metal rust |
+
 
 ## Links
 
@@ -82,4 +94,5 @@ The format is
 
 1. [Motion Detection with a Raspberry Pi Pico](https://www.youtube.com/watch?v=h0eotQQlndI)
 2. [How to make a Light Sensor Circuit using a Photoresistor and a Raspberry Pi](https://www.youtube.com/watch?v=IOyYQ34C2y0)
+3. [Turn on an LED using a button](https://www.youtube.com/watch?v=NWdvy4TF5oQ&list=PL2FhPdFCh6gw2PUhPNx3PkhFGsIyIAs5V&index=4)
 

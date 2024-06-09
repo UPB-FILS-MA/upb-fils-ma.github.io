@@ -40,11 +40,10 @@ This project combines elements of retro gaming, embedded systems development, an
 
 ### Schematics
 ![pacman_game](pacman_game.svg)
-
 ![remote_game](remote_game.svg)
 ![remote_pac](remote_pac.jpg)
-
 ![display_game](display_game.jpg)
+
 
 ### Bill of Materials
 
