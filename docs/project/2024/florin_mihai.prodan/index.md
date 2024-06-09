@@ -46,6 +46,11 @@ I started to add the components on the breadboard, then I will also connect the 
 
 ### Week 20 - 26 May
 
+This week I improved my code adding more functionalities: the money system and also some LED light show. I gave up on the PCB because I couldn't manage to solder it properly so I resumed to a easier solution: soldering the LEDs directly on my box:
+![LEDS soldering](./LEDs_soldering.jpg)
+I know it looks a bit messy, but was easier to connect the LEDs in the shape of an airplane like this rather than using a PCB (also I connected all LEDs' grounds together so that I don't have to use 24 wires for the ground).
+
+
 ## Hardware
 
 1. **Raspberry Pi Pico W**: Microcontroller board for running the game logic.
@@ -60,6 +65,19 @@ In the project, the Raspberry Pi Pico W runs the game logic, while LEDs visualiz
 
 Here is my hardware setup:
 ![Hardware Setup](./hardware.jpg)
+
+
+My final project is looking like this:
+<!-- create a table with two columns and one row -->
+
+| Front view | Side view |
+|------------|------------|
+| ![Front view](./front_view_final_project.jpg) | ![Side view](./side_view_final_project.jpg) |
+
+
+#### Demo
+Please click the photo below to see the project in action:\
+[![Project video](./video_thumbnail.png)](https://youtube.com/shorts/bxZ65pR0FiY?feature=share "Project demonstration")
 
 ### Schematics
 
@@ -106,9 +124,38 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [cortex-m](https://crates.io/crates/cortex-m) | Low-level access to Cortex-M processors | Provides low-level access and inline assembly support |
+| [cortex-m-rt](https://crates.io/crates/cortex-m-rt) | Cortex-M runtime support | Provides runtime support for Cortex-M microcontrollers |
+| [embassy-embedded-hal](https://github.com/embassy-rs/embassy) | Embedded HAL implementation for Embassy | Provides hardware abstraction layer for Embassy |
+| [embassy-executor](https://github.com/embassy-rs/embassy) | Async task executor for Embassy | Manages asynchronous task execution |
+| [embassy-rp](https://github.com/embassy-rs/embassy) | Embassy support for Raspberry Pi RP2040 | Provides RP2040 support for Embassy |
+| [embassy-usb-logger](https://github.com/embassy-rs/embassy) | USB logging support for Embassy | Enables logging over USB for debugging purposes |
+| [log](https://crates.io/crates/log) | Logging facade for Rust | Provides a logging framework for Rust applications |
+| [embedded-io-async](https://crates.io/crates/embedded-io-async) | Asynchronous I/O traits for embedded systems | Defines async I/O traits for embedded development |
+| [embassy-time](https://github.com/embassy-rs/embassy) | Timing utilities for Embassy | Provides timing and delay functionalities |
+| [static_cell](https://crates.io/crates/static_cell) | Static allocation utilities | Provides static memory cell utilities, useful for no-std environments |
+| [heapless](https://crates.io/crates/heapless) | Heapless data structures | Provides data structures that do not require dynamic memory allocation |
+| [embassy-futures](https://github.com/embassy-rs/embassy) | Async futures for Embassy | Provides utilities for working with async futures in Embassy |
+| [futures](https://crates.io/crates/futures) | Asynchronous programming library | Provides async/await support and other async utilities |
+| [embassy-sync](https://github.com/embassy-rs/embassy) | Synchronization primitives for Embassy | Provides synchronization primitives like mutexes and semaphores |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [micro-rand](https://crates.io/crates/micro_rand) | A tiny, no STD library for generating (pseudo) random numbers. | Used to generate when the airplane will crash |
+| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
+| [display-interface](https://crates.io/crates/display-interface) | Generic display interface traits | Provides generic traits for display interfaces |
+| [byte-slice-cast](https://crates.io/crates/byte-slice-cast) | Casting between byte slices and arrays | Provides utilities for casting between byte slices and arrays |
+| [embedded-hal-1](https://crates.io/crates/embedded-hal) | Hardware abstraction layer for embedded systems | Provides HAL traits for embedded systems |
+| [embedded-hal-async](https://crates.io/crates/embedded-hal-async) | Asynchronous hardware abstraction layer | Provides async HAL traits for embedded systems |
+| [embedded-hal-bus](https://crates.io/crates/embedded-hal-bus) | Bus abstractions for embedded HAL | Provides bus abstractions with async support |
+| [embassy-usb](https://crates.io/crates/embassy-usb) | USB support for Embassy | Provides USB device support for Embassy |
+| [micro-rand](https://crates.io/crates/micro-rand) | Tiny, no-std random number generator | Used to generate when the airplane will crash |
+| [ag-lcd](https://crates.io/crates/ag-lcd) | LCD driver library | Provides support for LCD displays, including I2C interface |
+| [port-expander](https://crates.io/crates/port-expander) | Port expander driver library | Provides support for port expanders |
+| [panic-halt](https://crates.io/crates/panic-halt) | Halting panic handler | Provides a panic handler that halts execution |
+| [shared-bus](https://crates.io/crates/shared-bus) | Shared bus manager | Manages shared bus resources |
+| [no_std_strings](https://crates.io/crates/no_std_strings) | String handling for no-std environments | Provides string handling utilities for no-std environments |
+
+
+For the software part, everything was pretty straightforward. I used [this](https://github.com/Mihai1803/1602LCD) repository for the LCD display. The flawless functionality of the game is ensured by using asynchronous tasks and custom channels from embassy.
+
 
 ## Links
 
