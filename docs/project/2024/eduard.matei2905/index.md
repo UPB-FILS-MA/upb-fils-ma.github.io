@@ -48,6 +48,8 @@ Assembled all the parts and wired everything up. This step involved careful conn
 
 ### Week 20 - 26 May
 
+Writing the software for the robot and testing
+
 ## Hardware
 
 Hardware Diagram
