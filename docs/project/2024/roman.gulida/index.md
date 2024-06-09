@@ -50,6 +50,10 @@ I received the hardware package, verified its contents, and started assembling t
 ### Week 7 - 19 May
 I completed the hardware assembly. I finished the KiCad schematic and began developing the software. This involved work with LCD and creating structs CoinData and MarketData.
 ### Week 20 - 26 May
+I decided to change the API from CoinMarketCap to CoinGecko, which would be more comfortable and would not have limitations.
+
+On a software part, I have implemented a switch button, buzzer, LCD initialization and established Wi-Fi connection on a raspberry pi. I have wrote code for fetching data about bitcoin and ethereum from CoinGecko and displaying on the screen, also if the switch button would be pressed, we would see a switch between displaying currency.   
+
 
 ## Hardware
 
@@ -100,12 +104,21 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7735](https://github.com/scholtzan/st7735-rs) | Display driver for ST7735 | Used for the display for the Pico WH |
+| [embedded-hal](https://github.com/rust-embedded/embedded-hal) | A Hardware Abstraction Layer (HAL) for embedded systems | Interaction with LCD using SPI |
 | [reqwless](https://github.com/drogue-iot/reqwless) | HTTP Client | Retrieve cryptocurrency prices and other relevant data from a remote server |
+| [embassy-rs](https://github.com/embassy-rs/embassy) | Modern embedded framework, using Rust and async. | GPIO, PWM, Concurrency and Synchronization, Networking, Peripheral Interfaces |
+| [heapless](https://github.com/rust-embedded/heapless) | Heapless, `static` friendly data structures | Buffers for Network Data, collections to manage data |
+| [defmt](https://github.com/knurling-rs/defmt) | Efficient, deferred formatting for logging on embedded systems | Initialization and Setup Logs,Periodic Updates, Error Handling |
+| [serde](https://github.com/serde-rs/serde) | Serialization framework for Rust | Define Rust structs to match the JSON structure expected from the API responses |
+| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | A no_std graphics library for embedded applications | Display data about crypto on LCD |
+
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [CoinMarketCap API](https://coinmarketcap.com/api/)
-2. [Idea](https://youtu.be/A0a5Z3-OPsM?si=p2yMHpqUisFPEZ5q)
+1. [CoinGecko Bitcoin API](https://api.coingecko.com/api/v3/coins/bitcoin)
+2. [CoinGecko Ethereum API](https://api.coingecko.com/api/v3/coins/ethereum)
+3. [Idea](https://youtu.be/A0a5Z3-OPsM?si=p2yMHpqUisFPEZ5q)
+4. [Inspiration](https://youtu.be/hHtGN_JzoP8?si=PXXfVYSGVjHWPlea)
+5. [CoinMarketCap API](https://coinmarketcap.com/api/)
