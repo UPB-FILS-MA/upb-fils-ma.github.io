@@ -86,7 +86,7 @@ Designed the hardware on the breadboard, applied the voltage dividers to the cir
 ### Week 7 - 19 May
 Finished up the hardware on the breadboard + final version on KiCad. Should start with software now.
 ### Week 20 - 26 May
-TBD
+Software is finished. Windows detects the Pico W as a generic xbox 360 controller and responds to inputs. Code is in project repo.
 ## Hardware
 
 The controller has 16 buttons, 2 vibration motors, 2 joysticks, resistances of 220 ohms to not blow up the circuit. Pico will process all the inputs from the buttons and will translate it for the XInput app. 
@@ -132,7 +132,7 @@ The format is
 | Buttons ( 12-15 ) | Input for controller | [5 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
 | Resistances | To not fry the circuit | [5 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) |
 | 2x JoySticks | Move and aim with the controller | [10 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-atingere/742-modul-joystick-ps2-biaxial-negru-cu-5-pini.html?search_query=joystick&results=42) |
-| 2x Vibration Motors | Response from game using Windows API | [5 RON](https://www.optimusdigital.ro/ro/motoare-motoare-cu-vibratii/693-motor-cu-vibratii-a1027.html?gad_source=1&gclid=Cj0KCQjwir2xBhC_ARIsAMTXk87DxwQMGCCtCEbpkpSU_Mpx-jXCLmP0dDQwEzAGgiDgH0d1KsIc7isaAvvcEALw_wcB) |
+
 
 ## Software
 
@@ -141,7 +141,7 @@ The format is
 | [rusty_xinput](https://docs.rs/rusty-xinput/latest/rusty_xinput/#) | Crate for Rust | Implements Xinput .dll in Rust, has several functions |
 | [gilrs](https://docs.rs/gilrs/latest/gilrs/) | GilRs - Game Input Library for Rust | GilRs abstract platform specific APIs to provide unified interfaces for working with gamepads |
 | [Xinput](https://learn.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) | Bread and butter of this project (main driver) | Xinput, comes with Windows |
-| [embassy_rs](https://github.com/embassy-rs/embassy) | Embassy framework for embedded systems| Implement specifically USB module, ADC converter, I2C/SPi crates |
+| [embassy_rs](https://github.com/embassy-rs/embassy) | Embassy framework for embedded systems| Implement specifically USB module, ADC converter, UDP Wi-fi |
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
