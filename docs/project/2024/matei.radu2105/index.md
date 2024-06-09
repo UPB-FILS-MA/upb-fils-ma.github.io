@@ -50,7 +50,11 @@ hardware is not really my specialty, I will do my best to make the best game I c
  - didn't find my LCD as a KiCad component, not even with Mouser's site, so made my own custom LCD using KiCad
  - finalized KiCad schematic
 ### Week 20 - 26 May
-
+ - went through 4 iterations of code
+ - slowly but surely managed to get through every problem
+ - optimized everything I could
+ - added background music and *stunning* visuals
+ - put LCD and buttons on a smaller breadboard for easier access
 ## Hardware
 
  - Raspberry Pi Pico W \
@@ -103,8 +107,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [ST7735](https://github.com/sajattack/st7735-lcd-rs) | Display driver for ST7735 | Used for the display for the Pico Explorer Base |
+| [ST7789](https://github.com/almindor/st7789/tree/master) | Display driver for ST7789 | Used for the display |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
+| [embassy-time](https://crates.io/crates/embassy-time) | Time delay library | Used for timing of music and creating RNG |
+| [embassy-embedded-hal](https://crates.io/crates/embassy-embedded-hal) | SPI and I2C library | Used for actually configuring the SPI lcd |
+| [embassy-rp](https://crates.io/crates/embassy-rp) | Closest to a default library | Used for SPI, GPIO pins and peripherals |
+
 
 ## Links
 
@@ -113,3 +121,5 @@ The format is
 1. [Snake (Video Game)](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
 2. [Snake - Code for C++](https://www.geeksforgeeks.org/snake-code-cpp/)
 3. [Youtube link for custom KiCad schematic](https://www.youtube.com/watch?v=7tRxwx7hZnQ)
+4. [Greatly helped with frequencies for all music notes](https://auditoryneuroscience.com/pitch/fundamental-frequencies-notes-western-music)
+5. [VS Code shortcuts - made my life way easier](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
