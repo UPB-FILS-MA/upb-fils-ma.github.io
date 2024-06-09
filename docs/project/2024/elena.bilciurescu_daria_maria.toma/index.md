@@ -1,4 +1,4 @@
-# Project Name
+# Rusty the Robot
 Line follower and obstacle avoiding robot
 
 :::info 
