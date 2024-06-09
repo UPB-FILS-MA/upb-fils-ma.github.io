@@ -10,7 +10,7 @@ Interactive Text-to-Morse Translator with Multi-Sensory Feedback
 
 ## Description
 
-This project aims to seamlessly translate text input into Morse code, providing both visual and auditory feedback in real-time. Through the integration of an LCD screen, users can visually observe the Morse code representation of their text. Meanwhile, a buzzer emits distinct sounds for each Morse code symbol, allowing users to hear the translation simultaneously. Additionally, the RGB LED serves to provide visual feedback and indicate the status of the Morse code translation process, contributing to a more interactive and informative user experience.
+This project aims to seamlessly translate text input received from the server through Wi-Fi into Morse code, providing both visual and auditory feedback in real-time. Through the integration of an LCD screen, users can visually observe the Morse code representation of their text. Meanwhile, a buzzer emits distinct sounds for each Morse code symbol, allowing users to hear the translation simultaneously. Additionally, the RGB LED serves to provide visual feedback and indicate the status of the Morse code translation process, contributing to a more interactive and informative user experience.
 
 ## Motivation
 
@@ -18,7 +18,7 @@ I chose this project because of its relevance in various emergency aspects, such
 
 ## Architecture 
 
-1) Text Input Provided to the System: The user enters text input through a connected input device, such as a keyboard. The input text is then passed to the Morse code translator for conversion.
+1) Text Input Provided to the System: The user enters text input on a server, which is then transmitted through a Wi-Fi connection to the system. The input text is then passed to the Morse Code Translator for conversion.
 2) Morse Code Translator Converts Text into Morse Code Symbols: The Morse code translator receives the input text. It processes the text character by character, converting each character into its corresponding Morse code symbol. Special characters and spaces are also translated into their respective Morse code equivalents.
 3) Raspberry Pi Pico Controls the LCD Display, Buzzer, and RGB LED: The Raspberry Pi Pico receives the translated Morse code symbols from the Morse code translator. It controls the operation of the connected hardware components:
  -The Raspberry Pi Pico sends commands to the LCD display to update its content with the translated Morse code symbols.
@@ -29,7 +29,7 @@ LCD Display Visually Represents the Morse Code Symbols:
 5) Buzzer Emits Sound Signals Corresponding to Each Morse Code Symbol: The buzzer receives signals from the Raspberry Pi Pico to emit sound signals. Depending on the Morse code symbol being transmitted, the buzzer generates corresponding audio tones, providing auditory feedback.
 6) RGB LED Changes Colors to Provide Visual Feedback: The RGB LED receives signals from the Raspberry Pi Pico to change colors. It dynamically changes colors based on the Morse code symbols being transmitted, offering visual feedback for the translation process.
 
- ![architecture](./Architecture.jpg)
+ ![architecture](./Architecture.png)
 
 ## Log
 
@@ -45,9 +45,11 @@ I've successfully assembled all the components and created the KiCad schematics,
 
 ### Week 20 - 26 May
 
+I completely finished the software part of the project and added all the final details. Now, the Morse Code Translator is ready!
+
 ## Hardware
 
-Raspberry Pi Pico WH (Wireless+Headers) - This is the main microcontroller board for the project. It will handle the processing tasks, GPIO interfacing, and control of peripherals.
+Raspberry Pi Pico WH (Wireless+Headers) - This is the main microcontroller board for the project. It will handle the processing tasks, transmission via Wi-Fi, GPIO interfacing, and control of peripherals.
 
 Buzzer - An audio output device. It can produce sound signals corresponding to Morse code symbols when activated by the microcontroller.
 
@@ -114,10 +116,13 @@ The format is
 | [embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing the peripherals 
 | [embassy-gpio](https://github.com/embassy-rs/embassy) | GPIO management | Controls GPIO pins for devices and inputs |
 | [embassy-hal](https://docs.rs/embassy-hal/latest/embassy_hal/) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D Graphics Library | Used for drawing to the display |
 | [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
 | [embassy_time](https://github.com/embassy-rs/embassy) | For time-related functionality | Schedule tasks to run at specific times |
-| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+| [embassy-net](https://crates.io/crates/embassy-net)| Network stack |Manages network connections and tasks, such as DHCP and UDP communications |
+| [pwm](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)| Pulse-width modulation | Used for controlling the buzzer's sound intensity |
+| [cyw43](https://github.com/embassy-rs/cyw43)| Wi-Fi driver | Manages Wi-Fi connections and communication with the CYW43 Wi-Fi chip |
+| [ag_lcd](https://docs.rs/ag-lcd/latest/ag_lcd/)| LCD display handling | Provides functionality to interface with and control an LCD display via I2C |
+| [heapless](https://github.com/rust-embedded/heapless)| Data structures for embedded systems| Provides 'Vec' and 'String' types that do not rely on the standard library, suitable for no_std environments |
 
 ## Links
 

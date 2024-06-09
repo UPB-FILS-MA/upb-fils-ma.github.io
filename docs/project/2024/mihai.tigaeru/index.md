@@ -10,7 +10,7 @@ A game in rust that resembles the classic Snake Game from the Nokia 5110 phones 
 
 ## Description
 
-This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food" or walls, there is a buzzer which will play a sound. If you hit yourself or a wall, it's game over and you have to start again. The game itself is displayed on an actual Nokia 5110 LCD display. Good luck and enjoy!
+This projects resembles the classic Snake Game from the old Nokia phones, having the same rules and mechanics. You control the Snake using a 2-axis joystick. Your score is updated live on a 4 digit display, that goes until 9999. For every interaction with "food", there is a buzzer which will play a sound. If you hit yourself, it's game over and you have to start again. You can also pass through walls. The game itself is displayed on an actual Nokia 5110 LCD display. Good luck and enjoy!
 
 ## Motivation
 
@@ -38,13 +38,42 @@ I've chosen this project mainly because I've always wanted to create a fully fun
 
 ### Week 20 - 26 May
 
-TBD 
+- Modified new libraries needed for this project
+- Finished Software
+- Took new hardware pictures with working game
+- Updated the final documentation
+- Finished the whole project
 
 ## Hardware
-
+### Pictures
+<table>
+<tr>
+<td>
+  
 ![opened](assets/hardware/Opened.jpg)
-![fprofile](assets/hardware/FrontProfile.jpg)
+
+</td>
+<td>
+  
+![game](assets/hardware/Game.jpg)
+
+</td>
+</tr>
+<tr>
+<td>
+  
+![gameover](assets/hardware/GameOver.jpg)
+
+  </td>
+<td>
+  
 ![sprofile](assets/hardware/SideProfile.jpg)
+
+</td>
+</tr>
+</table>
+
+### Usage of components
 
 - **Joystick Module** is used for controlling the snake (interacting with the game) and it's connected to ADC pins such that the analog voltage is converted to digital values.
 - **Passive Buzzer** is used for *beeping* in various situations (sound feedback from the game).
@@ -77,11 +106,11 @@ TBD
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming |  Used for writing correct, safe and asynchronous code, particularly targeted at embedded systems |
-| [pcd8544](https://crates.io/crates/pcd8544) | Rust crate for PCD8544 displays | Used for initiliazing and writing on the PCD8544 display |
+| [pcd8544 (modified)](https://github.com/septimium/pcd8544-embassy-rp) | Rust crate for PCD8544 displays forked and modified so it is compatible with embedded-graphics | Used for initiliazing and writing on the PCD8544 display |
 | [tm1637-embedded-hal](https://crates.io/crates/tm1637-embedded-hal) | Rust crate for TM1637 microcontroller | Used for controlling the TM1637 module |
-| TBD | TBD | TBD |
-| TBD | TBD | TBD |
-| TBD | TBD | TBD |
+| [embedded-snake (modified)](https://github.com/septimium/embedded-snake-rs) | Rust crate for Snake Game mechanics forked and modified so it has more functions | Used for implementation of the proper Snake Game |
+| [rand](https://crates.io/crates/rand) | Rust crate for random number generating | Used for creating a random position for the "food" |
+| [embedded-graphics](https://crates.io/crates/embedded-graphics) | Rust crate for drawing graphics on small displays | Used for displaying the game |
 
 ## Links
 

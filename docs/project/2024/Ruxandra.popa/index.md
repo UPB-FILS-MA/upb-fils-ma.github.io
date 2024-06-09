@@ -71,13 +71,24 @@ A schematic diagram is provided to illustrate the connections and layout of the 
 
 ### Week 6 - 12 May
 
-The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit.
+The schematic for the project has been successfully created using KiCad. This schematic includes all necessary components and connections for the electronic circuit. Detailed component selection was finalized, and precise connections were established to ensure optimal functionality.
 
 ### Week 7 - 19 May
 
-A 3D model of the project enclosure has been designed using Tinkercad. The box is tailored to fit all components securely and includes cutouts for the buttons, display, RGB led and speaker.
+A 3D model of the project enclosure has been designed using Tinkercad. The box is tailored to fit all components securely and includes cutouts for the buttons, display, RGB LED, and speaker. Special attention was given to the layout to ensure ease of assembly and accessibility for future maintenance.
 
 ### Week 20 - 26 May
+
+   The software development phase began. The microcontroller was programmed to interface with and control the various components of the project. Initial tests were conducted to ensure basic functionality.
+
+   User interface enhancements were implemented. Additional testing and debugging were carried out to ensure seamless interaction between all components.
+
+   Comprehensive documentation was created, covering the design, assembly, and software integration processes. The project was prepared for the final review and deployment.
+
+
+   ![](project_final.png)
+
+   
 
 ## Hardware
 
@@ -118,10 +129,15 @@ In the second picture I have used net labels to represent connections, for a cle
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display for the Pico Explorer Base |
-| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [TinyUSB](https://github.com/nviennot/tinyusb-sys-rs) | An open-source USB library for embedded systems that handles USB device and host functionality | Provides USB communication capabilities for the RustPlayer, enabling potential future expansions such as connecting USB-based audio devices |
-| [FatFs](https://github.com/rafalh/rust-fatfs) | A lightweight file system library for embedded systems, compatible with FAT32, FAT16, and FAT12 | Handles reading and writing audio files to and from the microSD card efficiently |
+| [embedded-hal](https://github.com/rust-embedded/embedded-hal) | Hardware Abstraction Layer for embedded systems | Used for SPI and GPIO control |
+| [rppal](https://github.com/golemparts/rppal) | Raspberry Pi Peripheral Access Library | Used for GPIO and SPI communication on the Raspberry Pi |
+| [embassy](https://github.com/embassy-rs/embassy) | Modern, lightweight, and safe async framework for embedded systems | Used for async task handling and peripheral management |
+| [ssd1306](https://github.com/jamwaffles/ssd1306) | Driver for SSD1306 OLED displays | Used to control the OLED display |
+| [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library for embedded systems | Used for rendering graphics and text on the display |
+| [log](https://github.com/rust-lang/log) | Logging facade for Rust | Used for logging debug and informational messages |
+| [panic-probe](https://crates.io/crates/panic-probe/) | A panic handler for embedded systems | Used for handling panics and debugging |
+| [static-cell](https://github.com/embassy-rs/static-celll) | Provides safe, static storage for data that outlives the main function | Used for managing static data |
+| [fixed](https://crates.io/crates/fixed) | Fixed-point arithmetic library | Used for precise timing calculations |
 
 ## Links
 

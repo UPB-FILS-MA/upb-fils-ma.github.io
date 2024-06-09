@@ -35,18 +35,33 @@ The architecture components are the following:
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I started implementing the ideas of the project, starting with the hardware. The actual hardware build took me one day. I got started on writing the software as well, by testing different microphone modules and deciding which type of signal output should I use: the analog or digital output (AO or DO) and setting up the LCD. I had spent a lot of time searching for signal processing crates that could make my life easier, but none were no_std, so I let go of the idea and stuck to implementing lots of mathematics.
 
 ### Week 7 - 19 May
+This week was the hardest, as I was battling choosing the most facile and efficient algorithm for signal processing and beetween Fast Fourier Transform and Autocorellation, I had chosen the latter. Why? Because it allowed me to remove the DC component (the baseline noise) of a signal and retreive its periodicty, which made my computations easier in order to detect the fundamental frequency of the signal.
 
 ### Week 20 - 26 May
+During the previous week I had encountered many errors, most of which were related to data type miscorrelations, and this week I tackled these issues. Here, Rust was not merciful on me, but with patience I had managed to surpass these problems. Additionally, most intensive testing was done during this last week before the PM Fair Presentation, as I was trying to make the pitch detection as accurate as possible, but in the end it did not turn out quite as expected. This is due to the the fact that audio signals can have harmonic components (multiples of the fundamental frequency) and these harmonics can introduce secondary peaks in the autocorrelation function, leading to ambiguity in identifying the correct fundamental frequency. However, when I played the note C via a piano app on my phone, for example, the pitch detector displayed the note D, which is right next to C. So, even though it is not very accurate, it is pretty close.
 
 ## Hardware
 
 The Raspberry Pi Pico microcontroller is perfect for this Pitch Detection project, as it requires a lot of computational power due to the signal processing. The Ky-038 microphone sound sensor module is used for capturing the sounds, emitted by a Piano App, through some PC Speakers. Although the hardware part of this project is not complex, as this technological endeavour does not rely on the hardware part, but rather on the software one, I believe it is still a challenging programming project that will help me develop my technical skills needed for my carrer.
 
+The whole setup
+![Pic3](hardware/pic3.jpeg)
+
+The LCD 1602 I2C Module
+![Pic1](hardware/pic1.jpeg)
+
+The Ky-038 Sound Sensor Module
+![Pic2](hardware/pic2.jpeg)
+
+
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCAD Schematic1](KiCad/Pitch_Detector_Setup.png) 
+![KiCAD Schematic2](KiCad/Ky-038_Sound_Sensor.png)
+
 
 ### Bill of Materials
 
@@ -74,10 +89,12 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [Embassy-rs](https://github.com/embassy-rs/embassy) | Rust framework for embedded programming | Used for programming the behavior of the Raspberry Pi Pico and for streamlining specific concepts within embedded programming |
+|[embassy-rs](https://github.com/embassy-rs/embassy)| Rust framework for embedded programming | Used for programming the behavior of the Raspberry Pi Pico and for streamlining specific concepts within embedded programming |
+|[embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Asynchronous executor for Rust embedded systems| Used for task scheduling and asynchronous programming|
+|[embassy-time](https://embassy.dev/book/dev/time_keeping.html)|Time management library  |Used for time-based operations such as delays |
+|[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |
 | [ag-lcd](https://github.com/mjhouse/ag-lcd) | Rust port of the LiquidCrystal library | Used for writing to the lcd1602 |
-| [pitch_detector](https://docs.rs/pitch-detector/latest/pitch_detector/) | Rust library for pitch and note detection | Used to detect the predominant frequency of a signal |
-| [pitch-detection](https://github.com/alesgenova/pitch-detection) | Musical note detector library | Used to determine the pitch of a sound sample |
+
 
 ## Links
 
