@@ -56,6 +56,9 @@ The inclusion of the CYW43439 allows the game to have connectivity feature to tr
 
 ### Week 20 - 26 May
 
+- I finished the code in fully and tested it intensively.
+- I made the hardware part more cleaner for a better view of the components and their connections.
+
 ## Hardware
 
 Raspberry Pi Pico W: Manages all game operations and processes inputs and outputs.
