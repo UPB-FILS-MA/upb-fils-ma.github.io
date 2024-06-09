@@ -59,6 +59,7 @@ I uploaded the necessary project documentation, making sure everything was in or
 In the following week, I completed the hardware and assembled the makeshift arm, which presented a few challenges. However, I managed to resolve them successfully. Additionally, I made further progress on the software development.
 
 ### Week 20 - 26 May
+In the final week, I successfully completed the software development and thoroughly tested its functionality to ensure it met all project requirements. Additionally, I finalized the hardware components, ensuring they were perfectly integrated with the software. The design was also polished to achieve a cohesive and professional look. 
 
 ## Hardware
 
@@ -140,6 +141,7 @@ The format is
 | [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display Library | Used for I2C LCD Display |
 | [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
 | [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) | Time Library | Used for Timeouts and Delays |
+| [Heapless](https://github.com/rust-embedded/heapless) | String Library | Used to making strings for writiing to the lcd |
 
 ## Links
 
