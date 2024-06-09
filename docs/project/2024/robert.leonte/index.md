@@ -25,10 +25,11 @@ I have an Xbox One X console with two controllers. A friend of mine borrowed one
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Kicad schematic complete. Waiting on parts.
 ### Week 7 - 19 May
-
+Made three versions of the hardware.
 ### Week 20 - 26 May
+Final version of the hardware completed. Started working on the software. Lots of issues with embassy.
 
 ## Hardware
 
