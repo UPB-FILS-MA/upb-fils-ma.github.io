@@ -38,7 +38,7 @@ managed to make the ultra somic work,the servo motor had some problems so i orde
 ### Week 7 - 19 May
 the nfc and the new servo motor arrived and managed to make them work properly with the senzor, added to leds one lights green when the door is open and the other lights red when door closed
 ### Week 20 - 26 May
-
+I fixed issues with the NFC not being able to detect the card, and I cut out a room out of cardboard, did some cable management, made a door out of a cardboard and fixed some bugs.
 ## Hardware
 
 so there are 3 main parts beside the microcontroller 1.servo motor ,2.nfc ,3.ultrasonic senzor.
