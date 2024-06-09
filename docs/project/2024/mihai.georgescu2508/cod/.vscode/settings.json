@@ -1,4 +1,0 @@
-{
-    "rust-analyzer.check.allTargets": false,
-    "rust-analyzer.cargo.target": "thumbv6m-none-eabi"
-}
