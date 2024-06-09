@@ -39,17 +39,113 @@ What pushed me to choose this project was that, while observing a similar approa
 
 ### Week 6 - 12 May
 
+This period marks the start of the project, where the task at hand was to define a clear outline and path going forward. The LCD was the first major component to be tested.
+
+After thoroughly reading the datasheet, I figured out what commands to send for each instruction using the I2C module. However, as I would soon find out, the commands after turning the display on, making the cursor appear on the screen, and making the cursor blink were not doing anything. This led me to try to send the commands 4 bits at a time instead of 8, but after that did not work, I pinned the problem down to a timing issue for the commands. After a lengthy process of trial and error, I still could not determine the correct timing needed for the commands that wrote characters to the screen. This, of course, led to using a Rust library to operate the LCD, which massively simplified the process for anything related to the display.
+
+Next on the list was choosing the structure of the Blackjack game logic. The paradigm that made the most sense for this project was Object-Oriented Programming, as its rules and fundamental concepts fit a Blackjack game perfectly. A deck is comprised of cards that have a suit and a rank, which are used to add to the player’s or dealer's score, then, this score is then used to determine the winner of a round, etc.
+
+With this objective in mind, I set out to create the mold for the Pico-side Blackjack logic. This was done quite quickly and allowed me to move on to the next part of the project, and the most important: the scanner, which will be taken care of in the next week or so.
+
+
 ### Week 7 - 19 May
+
+
+Up until this point, I had completed the basic structure of the blackjack game on the software side and tested the LCD. During this period, my main goal was setting up the scanner module and writing the code needed to operate it. At first, the setup seemed to be more difficult than expected: the `blocking_read` function was returning a BREAK error.
+
+After some research, I quickly found out that this error signifies that the line stays in a low state for longer than expected, which led me to find out that the baud rate in the default UART config did not match that of my scanner. Embassy uses the default baud rate of 115200 and the scanner uses 9600. This issue was solved relatively quickly and the setup was ready to go since the scanner uses 8 data bits, one stop bit, and no parity (same as the default config in Embassy).
+
+After this, a lot more information was revealed about the scanner (which unfortunately was not available in the datasheet as the datasheet itself doesn't exist): it turns itself off automatically after approximately 4 seconds as a form of protection, as it heats up very quickly, it uses UTF-8 encoding, the stop bit is 13 (which in ASCII is CARRIAGE_RETURN - represents the action of moving the cursor or print head back to the beginning of a line). This all led to a successful integration of the scanner into the project and after finishing the rest of the small hardware setup, only the blackjack logic and the socket communication + website are left for the upcoming weeks.
 
 ### Week 20 - 26 May
 
+For the last week of this project, as was previously mentioned the blackjack logic and the socket communication + website were left. The "only" in my previous log was underestimating the work put behind this 3 parts of the project massively.
+
+The first and easiest part was the webiste that runs on an HTTP Node server, it was done very minimaslistically, just focusing on the bare minimum: the buttons for the player choices, which was, of course a statement regarding my preference of the aforementioned style, and definitely not because i only had 3 days to finish the project. Anyhow, the network configuration is as follows:
+
+- We have an HTTP server for the website on port 3001 (used express to handle the POST requests from the server) 
+- An UDP server running on port 3000 ( used dgram since UDP uses datagram packets/sockets)
+- Pico is binded on port 3002
+
+The webiste send a POST request for the player choices with the buttons, wrapped in a JSON which is handled server-side and has its data passed to the UDP server, which in turn, will send it to the pico on port 3002, in the form of bytes passed in a buffer.
+
+Then the Pico hadles logic as per the rules of the Blackjack game, and requests to recieve data from the server only happen when needed.
+
+The 1st problem encountered was that, due to the non-static ipv4 configuration of my laptop for the wifi, i had to change the ip on wich the server runs on, everytime my wifi closed/reopened, anf sometimes, on different IPs the communciation to the Pico would fail no matter what, the solution of "turn it off and back on again" eventually worked the 3rd time.
+
+Another problem was that, the bigger the code, the less likely the logger was to display aything in the console. This lead to a lot of confusion for me, as i thoyght that i had a problem with my code's logic ,but after trying to us ethe LCD to print when the logger would stop working theis issue would vanish quickly.
+
+Other than these, I haven't had any major roadblocks and were able to complete the software part after many and many hours of coding and testing.
+
+
 ## Hardware
 
-We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is used for getting the player's 'bet', and a push used to confirm the bet (an RC Filter will be used to ensure no switch bounce happens). The main piece of this project is the barcode scanner, which scans the barcodes from the playing cards and facilitates a way to connect the real-life events to the microcontroller for handling the logic behind the game. An adaptor is needed for it since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
+We will use a Raspberry Pi Pico W as the microcontroller. A potentiometer is used for getting the player's 'bet', and a push button used to confirm the bet (an RC Filter will be used to ensure no switch bounce happens).
+
+The main piece of hardware for this project is the barcode scanner, which scans the barcodes from the playing cards and facilitates a way to connect the real-life events to the microcontroller for handling the logic behind the game. It sends the barcodes encoded using the UTF-8 encoding standard.
+
+An adaptor (RS232 -> TTL) is needed for the scanner since it uses RS232 communication, which is not supported by the Pico. We also use an LCD to display relevant information, and the RGB LEDs and buzzer to react to game events.
+
+
+
+Bird's Eye View
+
+![BEV Project](pics/bev.jpg)
+
+
+
+Scanner 
+
+![Scanner](pics/scanner.jpg)
+
+
+
+LCD 
+
+![LCD](pics/lcd.jpg)
+
+
+
+Buzzer
+
+![Buzzer](pics/buzzer.jpg)
+
+
+
+Potentiometer
+
+![Potentiometer](pics/pot.jpg)
+
+
+
+Push Button with physical pull-down resistor
+
+![Push Button](pics/push_pull_down.jpg)
+
+
+
+Resistive Capacitive Filter
+
+![RC](pics/RC.jpg)
+
+
+
+RGB LEDs
+
+![rgb](pics/leds.jpg)
+
+
+
+
+Pico Close-Up
+
+![Pico](pics/pico.jpg)
+
+
 
 ### Schematics
 
-![KiCAD Schematic](kicad.PNG)
+![KiCAD Schematic](FINAL_KICAD.PNG)
 
 ### Bill of Materials
 
@@ -75,7 +171,11 @@ The format is
 | Buzzer Module (Passive) | React to game events | [4 RON](https://ardushop.ro/ro/home/89-modul-buzzer.html#/63-tip-pasiv) |
 | Mini Breadboard | Breadboard for the LEDs | [3 x 4 RON](https://ardushop.ro/ro/electronica/35-breadboard-170-puncte.html#/8-culoare-alb) |
 | [1602 LCD Screen with I2C Interface](https://ardushop.ro/ro/index.php?controller=attachment&id_attachment=53) | Display game details | [15 RON](https://www.optimusdigital.ro/en/lcds/62-1602-lcd-with-i2c-interface-and-yellow-green-backlight.html) |
-| Capacitor (1 uF) | Debounce button to avoid unwanted input | [0.25 RON](https://ardushop.ro/ro/home/2708-condensator-electrolitic-alege-valoarea.html?gad_source=1&gclid=CjwKCAjw57exBhAsEiwAaIxaZpg3s-VVKIPilWtcM-0Po90QrGbxYJy50oCzWjlC8kihEiA7bCG7GBoCudMQAvD_BwE) |
+| Capacitor (0.1 uF) | Debounce button to avoid unwanted input | [0.25 RON](https://ardushop.ro/ro/home/2708-condensator-electrolitic-alege-valoarea.html?gad_source=1&gclid=CjwKCAjw57exBhAsEiwAaIxaZpg3s-VVKIPilWtcM-0Po90QrGbxYJy50oCzWjlC8kihEiA7bCG7GBoCudMQAvD_BwE) |
+| Jumper wires | Connect components | [20 RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLPhrybjljA9A3xgsd4vbqVUmO--VsbFIENcQA4Tjibbs8TRelUL_48aAqHuEALw_wcB) |
+| Male-Female Cables | Connect components | [5 RON](https://ardushop.ro/ro/home/226-10-x-fire-dupont-mama-tata-20cm.html?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLNSME8SlCdnLyn600SAGHKZJEvZYQEyryAc1VL_2S_HwYl7dAun4FYaArNrEALw_wcB) |
+| Female-Female Cables | Connect components | [15 RON](https://www.tme.eu/ro/details/mikroe-511-kpl/accesorii-pentru-kituri-de-dezvoltare/mikroe/wire-jumper-female-to-female-10pcs/?brutto=1&currency=RON&gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLOw0Q8iHwvKr86T1EtKf0cCaMHjvixeEiZcaa4Qs0aYY1qpzcNQTgIaAl5bEALw_wcB) |
+| Resistors | Regulates voltage for components | [22 RON](https://www.sigmanortec.ro/kit-rezistori-30-valori-20-bucati?gad_source=1&gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLN9VAEYdEySVc1yxKakLE6hFED_pJPGWr9zKog2hp0IfI0_-HhANn0aAoP5EALw_wcB) |
 
 
 
@@ -91,6 +191,13 @@ The format is
 | [embassy-executor](https://crates.io/crates/embassy-executor) | An async/await executor designed for embedded usage | Used for task execution |
 | [ag_lcd](https://docs.rs/ag-lcd/0.2.0/ag_lcd//) | Library that allows developers to control a HITACHI HD44780 LCD screen with one or two 16-character lines| Used to operate the LCD|
 | [port_expander](https://docs.rs/port-expander/0.6.1/port_expander/) | Abstraction for I2C port-expanders | Used for handling the Pcf8574 I/O Expander|
+| [embassy_time](https://docs.rs/embassy-time/0.3.0/embassy_time/) | Timekeeping, delays and timeouts. | Used for delays |
+| [byte_slice_cast](https://docs.rs/byte-slice-cast/1.2.2/byte_slice_cast/) | Cast bytes slices from/to slices of built-in fundamental numeric types | Used for byte handling |
+| [cyw43_pio](https://docs.embassy.dev/cyw43-pio/git/default/index.html) | RP2040 PIO driver for the SPI used in the Pico W. | Used for controlling the wifi chip |
+| [embassy_futures](https://docs.rs/embassy-futures/0.1.1/embassy_futures/) | Utilities for working with futures. | Used for handling futures |
+| [embassy_net](https://docs.rs/embassy-net/0.4.0/embassy_net/) | Async network stack. | Used for communciating through WiFi |
+| [static_cell](https://docs.rs/static_cell/2.1.0/static_cell/) | Statically allocated, initialized at runtime cell. | Used for reservig memory at compile time for a value, but initialize it at runtime, and get a 'static reference to it. |
+
 
 
 

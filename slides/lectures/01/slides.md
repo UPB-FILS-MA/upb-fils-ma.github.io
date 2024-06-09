@@ -83,7 +83,7 @@ src: ./rp2040/slides.md
 ---
 ---
 # Conclusion
-we discussed about
+we talked about
 
 - How a processor functions
 - Microcontrollers (MCU) / Microprocessors (CPU)

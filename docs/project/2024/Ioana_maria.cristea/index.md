@@ -42,7 +42,7 @@ The **buzzer**, when the temperature threshold is surpassed, emits an  alarm, ac
 
 The **pressure and temperature** sensor detects changes in temperature and pressure, supplying input to the Pico.
 
-A **DC Motors** that controls the fan
+A **DC Motor** that controls the fan
 
 ![diagram](proiectma.jpg)
 
@@ -53,18 +53,61 @@ A **DC Motors** that controls the fan
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I uploaded the necessary project documentation, making sure everything was in order. Then, I began working on the schematics, carefully mapping out the design. Additionally, I started developing some of the software. Each step brought the project closer to realization.
 
 ### Week 7 - 19 May
+In the following week, I completed the hardware and assembled the makeshift arm, which presented a few challenges. However, I managed to resolve them successfully. Additionally, I made further progress on the software development.
 
 ### Week 20 - 26 May
 
 ## Hardware
 
-Detail in a few words the hardware used.
+1. **Raspberry Pi Pico**:
+- **Purpose**: Controls all components.
+- **Function**: Acts as the main controller, coordinating the operations of sensors, motors, buzzers, and the LCD display.
+
+2. **Temperature and Pressure Sensor**:
+- **Purpose**: Detects changes in temperature and pressure.
+- **Function**: Continuously monitors the environment and sends data regarding temperature and pressure to the Raspberry Pi Pico.
+
+3. **Active Buzzer**:
+- **Purpose**: Emits sound alerts.
+- **Function**: Activates when the temperature exceeds the preset threshold, providing an audible warning.
+
+4. **DC Motor with Fan**:
+- **Purpose**: Provides cooling.
+- **Function**: Activates when the temperature exceeds the preset threshold, turning on the fan to help reduce temperature.
+
+5. **Servomotor with Makeshift Arm**:
+- **Purpose**: Performs mechanical action for signaling or other purposes.
+- **Function**: Activates when the temperature exceeds the preset threshold, moving the arm 90 degrees to each side.
+
+6. **LCD Display**:
+- **Purpose**: Displays real-time data.
+- **Function**: Shows the current temperature and pressure readings, allowing for easy monitoring of environmental changes.
+
+### Hardware Overview:
+- The **Raspberry Pi Pico** controls and coordinates all components.
+- The **Temperature and Pressure Sensor** continuously monitors the environment.
+- When the temperature exceeds the set threshold:
+- The **Active Buzzer** sounds an alert.
+- The **DC Motor** activates the fan to cool the area.
+- The **Servomotor** moves the makeshift arm 90 degrees to each side as a physical signal.
+- The **LCD Display** provides real-time updates of temperature and pressure, ensuring that the changes are visible and trackable.
+
+
+
+
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![diagram](newkicad_fan.jpg)
+![diagram](pic1.2.jpg)
+![diagram](pic2.jpg)
+![diagram](pic3.jpg)
+![diagram](pic4.jpg)
+![diagram](pic5.jpg)
+
 
 ### Bill of Materials
 
@@ -94,12 +137,14 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display Library | Used for I2C LCD Display |
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 Peripherals | Used for accessing the peripherals|
+| [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) | Time Library | Used for Timeouts and Delays |
 
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [link](https://www.youtube.com/watch?v=8kfROSQYDWI)
-2. [link](https://www.youtube.com/watch?v=OdqcJoFi_Bk)
+1. [Raspberry Pi Pico Temperature Controlled Fan Speed | PWM](https://www.youtube.com/watch?v=8kfROSQYDWI)
+2. [Interfacing BMP280 sensor with Raspberry Pi Pico W](https://www.youtube.com/watch?v=OdqcJoFi_Bk)
 
