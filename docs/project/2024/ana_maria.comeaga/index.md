@@ -56,6 +56,7 @@ I made the connections between the sensors and the Raspberry Pi Pico and placed 
 I discovered how the water pump should be modified in order to be controlled from the Pico and based on humidity sensor. I made a part of the necessary modification into its internal part, but still needs to be linked to a relay module. 
 
 ### Week 20 - 26 May
+This week I made the necessary small changes in pins and write the entire cod for making the project functional. I connected the relay and set it for managing efficiently the water pump. I made the display to show frames and look like a gif. Made the final adjustments in all the wires and connections, set the code to work properly for all the components. So, the project is done is FloraMood is alive. 
 
 ## Hardware
 
