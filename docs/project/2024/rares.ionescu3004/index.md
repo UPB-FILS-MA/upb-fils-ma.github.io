@@ -126,11 +126,11 @@ The format is
 | [cyw43](https://github.com/embassy-rs/embassy/tree/main/cyw43) | Rust driver for the CYW43439 wifi chip, used in the Raspberry Pi Pico W. | Used to help using the wifi chip |
 | [embassy_executor](https://github.com/embassy-rs/embassy) | The Embassy executor is an async/await executor designed for embedded usage along with support functionality for interrupts and timers. | Manage asynchronous operations |
 | [embassy_time](https://docs.embassy.dev/embassy-time/git/default/index.html) | Provides Instant, Duration and Timer types that are globally available and never overflow. | Timekeeping, delays and timeouts. |
-| [embassy_net](https://docs.embassy.dev/embassy-time/git/default/index.html) | A no-std no-alloc async network stack, designed for embedded systems. | Netwroking functionality |
-| [static_cell](https://docs.rs/static_cell/latest/static_cell/) | rovides a no-std-compatible, no-alloc way to reserve memory at compile time for a value. | Statically allocated, initialized at runtime cell. |
+| [embassy_net](https://docs.embassy.dev/embassy-time/git/default/index.html) | A no-std no-alloc async network stack, designed for embedded systems. | Networking functionality |
+| [static_cell](https://docs.rs/static_cell/latest/static_cell/) | Provides a no-std-compatible, no-alloc way to reserve memory at compile time for a value. | Statically allocated, initialized at runtime cell. |
 | [cyw43_pio](https://crates.io/crates/cyw43-pio) | RP2040 PIO driver for the nonstandard half-duplex SPI used in the Pico W. | The PIO driver offloads SPI communication with the WiFi chip and improves throughput. |
 | [log](https://docs.rs/log/latest/log/) | The log crate provides a single logging API that abstracts over the actual logging implementation. | A lightweight logging facade. |
-| [core](https://doc.rust-lang.org/core/) | Portable glue between the language and its libraries defining the intrinsic and primitive building blocks of all Rust code | The Rust Core Library is the dependency-free1 foundation of The Rust Standard Library. |
+| [core](https://doc.rust-lang.org/core/) | Portable glue between the language and its libraries defining the intrinsic and primitive building blocks of all Rust code | The Rust Core Library is the dependency-free foundation of The Rust Standard Library. |
 
 ## Links
 
