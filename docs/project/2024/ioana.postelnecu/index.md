@@ -37,6 +37,7 @@ I've done the KiCAD schematic and because I couldn't find the symbol for the 160
 
 ### Week 20 - 26 May
 
+I've started to work on the embedded software, while the Dino game was done with ggez, glam and oorandom. Because it was made initially for the playing on the computer and then modified for the i2c display. I encountered some difficulties, which requiered me to change a bit the idea of the project, meaning using the display for writing "game over" when you would've hit the dino and the buttons for controling the game. In order to do that, by having two Rust projects, I've had to create a Rust Workspace. 
 ## Hardware
 
 1. **Raspberry Pi Pico W**: Microcontroller board used for running the code
