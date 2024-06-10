@@ -11,15 +11,15 @@ A useful device for physically impaired people
 
 ## Description
 
-Pico wand is useful device for physically impaired people. It uses a MPU6050 gyroscope that detects hand movements and interacts with the objects in the house. </br>
-When pressing a push button it starts collecting the movement of your wand.</br>
-It collects movements such as:</br>
-  - **moving the wand** and pressing the button raises the curtain</br>
-  - **holding the wand still** and pressing the button lowers the curtains</br>
-All this information is then shown on a ST7789 display.</br>
-This device could be used in relation to common use objects for people with disabilities.</br>
-Example of usage: </br>
-Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and move the wand, then PicoW connected to an adjusted curtain will pick up the signal and move up the curtain. This sort of implementation could be done on other objects as well: a door, a light bulb and so on.</br>
+Pico wand is useful device for physically impaired people. It uses a MPU6050 gyroscope that detects hand movements and interacts with the objects in the house. <br />
+When pressing a push button it starts collecting the movement of your wand.<br />
+It collects movements such as:<br />
+  - **moving the wand** and pressing the button raises the curtain<br />
+  - **holding the wand still** and pressing the button lowers the curtains<br />
+All this information is then shown on a ST7789 display.<br />
+This device could be used in relation to common use objects for people with disabilities.<br />
+Example of usage:<br />
+Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and move the wand, then PicoW connected to an adjusted curtain will pick up the signal and move up the curtain. This sort of implementation could be done on other objects as well: a door, a light bulb and so on.<br />
 My project is made in colaboration with my coleague Naomi Lita. [Link to her GitHub](https://github.com/UPB-FILS-MA/project-nimintz)
 
 ## Example of usage
