@@ -33,9 +33,25 @@ I wanted to create the Smart Piggy Bank to merge traditional savings methods wit
 
 ### Week 6 - 12 May
 
+This week was focused on documenting the initial concept and design of the Smart Piggy Bank. Key tasks accomplished:
+
+    - Drafted a detailed project description outlining the purpose, functionality, and motivation behind the Smart Piggy Bank.
+    - Created initial architecture schematics and diagrams to visualize the hardware and software components.
+    - Compiled a bill of materials (BOM) listing all necessary hardware components with their respective prices and usage.
+
 ### Week 7 - 19 May
 
+During this week, the focus was on designing the KiCad schematic and assembling the hardware components. Achievements included:
+
+    - Created a detailed KiCad schematic to guide the assembly of the hardware components.
+    - Assembled the Raspberry Pi Pico with the necessary components, including the LCD screen, infrared sensors, motion sensor, and buzzer.
+    - Verified the proper connection of all components and ensured that they are correctly interfaced with the Raspberry Pi Pico.
+
+Challenges faced included ensuring the accuracy of the KiCad schematic and troubleshooting initial connectivity issues during the assembly process.
+
 ### Week 20 - 26 May
+
+This week was dedicated to developing and testing the software components.
 
 ## Hardware
 
