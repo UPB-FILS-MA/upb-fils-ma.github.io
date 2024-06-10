@@ -35,20 +35,29 @@ This project is a smart car using a Raspberry Pi Pico W and various sensors and 
 
 
 ## Log
-
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
+I uploaded the project documentation. Then, I received the order for the parts and started working on the car. Also, I began working on the Kicad schematic. 
 
 ### Week 7 - 19 May
-
+I finished the car, I soldered wires to the motors, connected the pico with the other parts and added the driver, Mr. Duckerson. Furthermore, I started to work at the software.
 ### Week 20 - 26 May
+I worked very hard for the software, I barely finished and build it on 25th and I flashed it on the PICO. The car follows the line and detects obstacles. I created the route for the car and now Mr. Duckerson can drive in his Ferrari Car, following the black car.
 
 ## Hardware
-Rapspberry Pi Pico W, Four wheels, Four TT Motors, Four AA batteries (1.5V) + mounting device, HC-SR04 ultrasonic distance sensor + mounting bracket, SG90 Servo motor, Two IR sensors FC-123, Pololu QTRX-HD-06A, Reflective IR Sensor, L298N Motor Driver, Mini Breadboard, Active Buzzer Module, Male-female, male-male, female-female wires, Switch l Insulating electrical tape, Double-sided adhesive white tape, Connectors and screws, Chassis, Pin headers
+Rapspberry Pi Pico W, Four wheels, Four TT Motors, Four AA batteries (1.5V) + mounting device, HC-SR04 ultrasonic distance sensor + mounting bracket, SG90 Servo motor, Two IR sensors FC-123, Pololu QTRX-HD-06A, Reflective IR Sensor, L298N Motor Driver, Mini Breadboard, Active Buzzer Module, Male-female, male-male, female-female wires, Switch l Insulating electrical tape, Double-sided adhesive white tape, Connectors and screws, Chassis, Pin headers.
+
+[Photo1](img1.jpeg)
+[Photo2](img2.jpeg)
+[Photo3](img3.jpeg)
+[Photo4](img4.jpeg)
+[Photo5](img5.jpeg)
 
 ### Schematics
 Place your KiCAD schematics here.
+
+![Schematic](Kicad.png)
 
 ### Bill of Materials
 | Device | Usage | Price |
@@ -72,8 +81,8 @@ Place your KiCAD schematics here.
 |[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Peripheral access library |Used for initializing and interacting with peripherals |
 |[log](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|Logging facade |Used for logging messages |
 |[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
-|[embassy-net](https://github.com/embassy-rs/embassy) | Networking library | Manages Wi-Fi communications |
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
+|[pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the distance sensor|
 
 
 

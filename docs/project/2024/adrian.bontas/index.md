@@ -29,9 +29,15 @@ This project diagram illustrates the connectivity of the system utilizing a Rasp
 
 ### Week 6 - 12 May
 
+After extensive research and careful consideration, I successfully gathered all the necessary components for my electronic car project. The collection includes the essential L289N motor driver, a reliable breadboard, and the versatile Raspberry Pi Pico W. Each part was meticulously chosen to ensure compatibility and optimal performance, setting the stage for a well-functioning and innovative build.
+
 ### Week 7 - 19 May
 
+With all components in hand, I assembled the project into a sleek and visually appealing model resembling a police Porsche 911. The connections were made seamlessly, integrating the motor driver and microcontroller to bring the car to life. The final result is a high-tech, impressive-looking car that not only functions well but also captures the iconic aesthetic of a classic police cruiser.
+
 ### Week 20 - 26 May
+
+In the final week of my electronic car project, I coded the car's functions. Rust proved to be a robust and efficient choice for handling the L298N motor driver and the Raspberry Pi Pico W. After some effort, I successfully wrote and deployed the code that allows the car to move using Wi-Fi!
 
 ## Hardware
 
@@ -49,9 +55,20 @@ This project diagram illustrates the connectivity of the system utilizing a Rasp
 
 1x Power Supply 
 
+Here are some pictures of the project car:
+
+![1](photos/1.jpg)
+
+![2](photos/2.jpg)
+
+![3](photos/3.jpg)
+
+![4](photos/4.jpg)
+
 ### Schematics
 
-Place your KiCAD schematics here.
+Here is presented the KiCad schematic:
+![KiCad](KiCad.JPG)
 
 
 ### Bill of Materials
@@ -74,12 +91,15 @@ Place your KiCAD schematics here.
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Embassy | An asynchronous executor and Hardware Abstraction Layer (HAL) designed for constructing embedded applications in Rust. |
 | [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network | A networking library designed for use with the Embassy asynchronous executor, facilitating network communication within embedded Rust applications. |
-| [PWM](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Embassy Executor | Used for task scheduling and asynchronous programming|
+|[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Embassy RP | Used for initializing and interacting with peripherals |
+|[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO |Used for interacting with GPIO pins |
+|[cyw43](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|CYW43 | Used for interacting with the wi-fi chip of the pico |
 | [HC-SR04](https://github.com/Benehiko/pico-ultrasonic-rs.git) |HC-SR04 manipulation| Used for controlling the ultrasonic sensor|
+
 
 ## Links
 
 1. [Freenove 4WD Car Kit for Raspberry Pi Pico](https://www.youtube.com/watch?v=JimfJCyrK44)
 2. [Raspberry Pi Pico - Bluetooth Controlled Car Project](https://www.youtube.com/watch?v=U4unGGNjFBg)
 3. [NerdCave](https://nerdcave.xyz/)
-...

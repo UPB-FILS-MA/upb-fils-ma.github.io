@@ -53,7 +53,8 @@ I chose this project because it seems like a pretty practical idea in the day-to
 ### Week 7 - 19 May
 
 ### Week 20 - 26 May
-
+The main idea of the project was to create a house thermometer to read the room temperature. Throughout the development, ideas changed based on the difficulties that i had to overcome. For this, i had to use a DS18B20 sensor connected to the Raspberry Pi Pico WH by the wire and a resistor. In addition to this, i connected 3 leds, each with a different utility: a green one that always turns on when the Raspberry is working, a blue one tha turns on only when the temperature is lower than 20 degrees Celsius and a red one that only turns on when the temperature is greater than 20 degrees Celsius. In teh end i didn't manage to connect the volatile memory or the screen to display the temperature because i ended up creating a website that automatically displays the temperature, the state of the led and also updates.
+To buils and flash the code, i had to do the following steps: cargo build  --target thumbv6m-none-eabi --release and elf2uf2-rs -d -s .\target\thumbv6m-none-eabi\release\house_thermometer
 ## Hardware
 
 1. **Raspberry Pi Pico W**
@@ -83,7 +84,9 @@ I chose this project because it seems like a pretty practical idea in the day-to
 
 ### Schematics
 
-Place your KiCAD schematics here.
+![KiCad](kicad.png)
+![Schematics1](1.jpg)
+![Schematics2](2.jpg)
 
 ### Bill of Materials
 

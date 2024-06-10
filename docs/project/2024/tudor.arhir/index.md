@@ -34,8 +34,11 @@ Add here the schematics with the architecture of your project. Make sure to incl
 ### Week 6 - 12 May
 In this week i've constructed the project itself on the breadboard. At first , it was kinda difficult to figure out how all those componets should be put on the breadboard but eventually with some research i found out how to do it. I also had to buy another LCD because mine did not have the I2C interface and i couldn't use it without that interface.
 ### Week 7 - 19 May
-
+In this week I started to work on the code. I had some misunderstandings on how to do this part, but fortunately I managed to make it happen. The only problem was that the project did not work I didn't know how to fix it.
 ### Week 20 - 26 May
+In the last week, I found the problem to my project. The MQ-3 sensor had to be connected to 5V and I found out about this when searching for a formula on how to calculate the alcohol concentration(I still didn't manage to find any mathematical formula for this so I remained with the raw values that the senzor reads.). I also had a small problem with my buzzer, but I quickly managed to fix it.Regarding the 3D printed case, I didn't manage to do it because the friend of mine that had the 3D printer told me that too much material would have been wasted. In the end, I made a case from cardboard which I think it's a pretty good alternative to what I had in mind.
+The project is finished and ready to be presented.
+I had fun building this project. It made me get out of my comfort zone and to finally see how hard it really is to make something like this. In the future, with the knowledge I've aquired throught this semester, I will surely build something even bigger than this.
 
 ## Hardware
 
@@ -50,13 +53,13 @@ Place your KiCAD schematics here.
 
 ![Kicad Schematic](schematic.png)
 
-![Photo of the project](irl_schematic.png)
+![Photo of the project](case.jpeg)
 
-![Led's](led.png)
+![Led's](inside.jpeg)
 
-![Buzzer and MQ-3 sensor](buzzer_mq-3.png)
+![MQ-3 sensor](sensor.jpeg)
 
-![LCD](LCD.png)
+![alcohol detected](alc_detected.jpeg)
 
 
 ### Bill of Materials
@@ -68,9 +71,8 @@ Place your KiCAD schematics here.
 | MQ-3 | The alcohol sensor| [15 lei](https://www.optimusdigital.ro/en/gas-sensors/1125-modul-senzor-de-gaz-mq-3.html) |
 | Buzzer | Emits sound if you pass the alcohol limit | from an arduino kid |
 | Jumper cables | To cable things | from an arduino kit |
-| Button | To reset the breathalyzer | from an arduino kit |
 | 2 LED's | Used for signaling when the limit was passed | from an arduino kit |
-| 3D Printed case | To make it more practical | tbd |
+| Cardboard case | To make it more practical | found it in my house |
 
 
 ## Software
@@ -78,7 +80,11 @@ Place your KiCAD schematics here.
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 peripherals | Used for accessing the peripherals of the Pico W |
-| Work in progress | To be updated | TBA |
+| [LCD-1602_driver](https://crates.io/crates/lcd1602-driver) | A LCD1602 driver | To use the display |
+| [embassy-executor](https://crates.io/crates/embassy-executor) | async/await executor designed for embedded usage | Used for spawning asynschronous functions like `main` and `read_adc_value` |
+| [embassy-time](https://crates.io/crates/embassy-time) | Instant and Duration for embedded no-std systems, with async timer support | Stops code execution for a predefined time period |
+| [rp2040-hal](https://crates.io/crates/rp2040-hal) | A Rust Embedded-HAL impl for the rp2040 microcontroller| Used as a dependencie for the LCD|
+| [heapless](https://crates.io/crates/heapless) | `static` friendly data structures that don't require dynamic memory allocation| Used to convert values to `strings` |
 
 
 ## Links

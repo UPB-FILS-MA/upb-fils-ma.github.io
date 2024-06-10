@@ -58,6 +58,9 @@ The project has the following architecture:
  - Continued developing the software
 
 ### Week 20 - 26 May
+ - Made adjustments to the code to implement all desired features
+ - Completed the software and uploaded it to the project repository
+ - Tested the software and hardware to ensure that everything works properly
 
 ## Hardware
 
