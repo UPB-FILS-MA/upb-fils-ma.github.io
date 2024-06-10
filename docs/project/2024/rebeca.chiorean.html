@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.037d2e5c.css">
-<script src="/assets/js/runtime~main.ea94be28.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.95bc47b1.js" defer="defer"></script>
 <script src="/assets/js/main.97b2c94c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -20,32 +20,36 @@
 <strong>My GitHub Project Link</strong>: <a href="https://github.com/UPB-FILS-MA/project-ChioreanRebeca" target="_blank" rel="noopener noreferrer">Chiorean Rebeca</a><br>
 <strong>Coleague GitHub Link</strong>: <a href="https://github.com/UPB-FILS-MA/project-nimintz" target="_blank" rel="noopener noreferrer">Naomi Lita</a></p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="description">Description<a href="#description" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description">​</a></h2>
-<p>Pico wand is useful device for physically impaired people. It uses a gyroscope that detects hand movements and interacts with objects around the house. <br>
+<p>Pico wand is useful device for physically impaired people. It uses a MPU6050 gyroscope that detects hand movements and interacts with the objects in the house. <br>
 When pressing a push button it starts collecting the movement of your wand.<br>
-It collects movements such as:<br>
-•	Up and down<br>
-•	Back and fourth<br>
-•	Left to right<br>
-•	Circular motion<br>
-All this information is then shown on a OLED display.<br>
-This device could be used in relation to smart objects. This idea is further expanded upon by my coleague <a href="https://github.com/UPB-FILS-MA/project-nimintz" target="_blank" rel="noopener noreferrer">Naomi Lita</a>.<br></p>
+It collects movements such as:<br></p>
+<ul>
+<li><strong>moving the wand</strong> and pressing the button raises the curtain<br></li>
+<li><strong>holding the wand still</strong> and pressing the button lowers the curtains<br>
+All this information is then shown on a ST7789 display.<br>
+This device could be used in relation to common use objects for people with disabilities.<br>
+Example of usage:<br>
+Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and move the wand, then PicoW connected to an adjusted curtain will pick up the signal and move up the curtain. This sort of implementation could be done on other objects as well: a door, a light bulb and so on.<br>
+My project is made in colaboration with my coleague Naomi Lita. <a href="https://github.com/UPB-FILS-MA/project-nimintz" target="_blank" rel="noopener noreferrer">Link to her GitHub</a></li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="example-of-usage">Example of usage<a href="#example-of-usage" class="hash-link" aria-label="Direct link to Example of usage" title="Direct link to Example of usage">​</a></h2>
-<p>Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and do a left to right motion. Our curtain will pick up the signal and adjust accordingly.<br>
+<p>Let’s imagine someone that is bed bound and needs to adjust their smart curtains. They will pick up the Pico Wand, press the button and motion the wand. Our curtain will pick up the signal and adjust accordingly.<br>
 For adjusting the intensity of a lightbulb we could implement our Pico Wand to collect circular movement.
 If they make a circular movement to the left the light will dim and if it is to the right we could raise the intensity.<br>
 This sort of implementation could be done on other objects as well: a door, the room temperature and so on.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="motivation">Motivation<a href="#motivation" class="hash-link" aria-label="Direct link to Motivation" title="Direct link to Motivation">​</a></h2>
-<p>This project aims to help people with disabilities gain some of their autonomy by being able to interact with objects around them. It ensures that they have the same opportunities to perform everyday tasks as those that aren&#x27;t faced with the same challenges. Engaging in efforts that make a tangible difference in people’s lives can be incredibly rewarding. My motivation comes from knowing that my work has directly improved someone’s ability to live independently.</p>
+<p>This project aims to help people with disabilities gain some of their autonomy by being able to interact with objects around them. It optimizes a normal remote by using fewer buttons with multiple functionalities, thus making a fully automated home&#x27;s remote control more practical and comfortable to hold. My motivation comes from knowing that my work has directly improved someone’s ability to live independently.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="architecture">Architecture<a href="#architecture" class="hash-link" aria-label="Direct link to Architecture" title="Direct link to Architecture">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="architecture" src="/assets/images/architecture_ChioreanRebeca_LitaNaomi-976937b5e48d2ab7f9f67748c04ee4b3.png" width="2894" height="3435" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="architecture" src="/assets/images/architecture_ChioreanRebeca_LitaNaomi-3e1346e541c2a1fab7705d4706a7cb04.png" width="2894" height="3435" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="log">Log<a href="#log" class="hash-link" aria-label="Direct link to Log" title="Direct link to Log">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-6---12-may">Week 6 - 12 May<a href="#week-6---12-may" class="hash-link" aria-label="Direct link to Week 6 - 12 May" title="Direct link to Week 6 - 12 May">​</a></h3>
 <p>I created the documentation of the project. I prototyped the hardware and the software and I experimented with the MPU6050 sensor module. I also looked for any additional components that were needed.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-7---19-may">Week 7 - 19 May<a href="#week-7---19-may" class="hash-link" aria-label="Direct link to Week 7 - 19 May" title="Direct link to Week 7 - 19 May">​</a></h3>
 <p>I completed the hardware connections and the KiCad schematic. In addition, I revised the project documentation (the architecture schematic and its content). I trained an Edge Impulse model for the MPU6050 and exported it as a C++ library and tested it in C++ code.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="week-20---26-may">Week 20 - 26 May<a href="#week-20---26-may" class="hash-link" aria-label="Direct link to Week 20 - 26 May" title="Direct link to Week 20 - 26 May">​</a></h3>
+<p>I made changes to the final project. I substituted the SSD1306 for a ST7789 display, and I excluded the Edge Impulse model and instead used the get_motion_detected(&amp;mut self) function of the MPU6050 crate. This week we also finished setting up the WiFi connection and the 3D printed scale model of the roller blinds.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware">Hardware<a href="#hardware" class="hash-link" aria-label="Direct link to Hardware" title="Direct link to Hardware">​</a></h2>
-<p>The MPU6050 Accelerometer and Gyroscope sensor takes the wand movement input. When the pushbutton is pressed, our PicoW takes the provided input and understands the nature of the movement. The direction of the movement is then sent to the SSD1360 display that prints it. The PicoW also sends the movement information to another PicoW connected to it by wifi. The second PicoW is the one connected to smart devices and will interact with them.<br></p>
+<p>The MPU6050 Accelerometer and Gyroscope sensor takes the wand movement input. When the pushbutton is pressed, our PicoW takes the provided input and it detects movement. The PicoW also sends the movement information to another PicoW connected to it by wifi. If movement is detected then it sends the message for the roller blinds to roll upwards. If there is no movement detected when the button is pressed then my PicoW sends the message for the roller blinds to roll down. The second PicoW is the one connected to smart devices and will interact with them.<br></p>
 <p>The <strong>pushbutton</strong> signals the start of the data reading process from the MPU6050 sensor. It uses a simple GPIO connection, as follows:<br></p>
 <ul>
 <li><strong>not pressed</strong> -&gt; GP20 is HIGH</li>
@@ -56,27 +60,35 @@ It is connected using a pull-up resistor(of 10kΩ) between the input pin and Vcc
 <ul>
 <li><strong>SDA</strong> -&gt; GP0</li>
 <li><strong>SCL</strong> -&gt; GP1 <br>
-The data sent is then interpretetd by our PicoW with the help of our ML Edge Impulse model. <a href="https://studio.edgeimpulse.com/studio/395280" target="_blank" rel="noopener noreferrer">Edge Impulse Model</a>.<br></li>
+The data sent is then interpretetd by our PicoW with the help of the get_motion_detected(&amp;mut self) function of the MPU6050 crate.<br></li>
 </ul>
-<p>The <strong>SSD1306</strong> shows the direction of our movement after it has been interpreted by our PicoW. It uses I2C connection as follows:<br></p>
+<p>The <strong>ST7789</strong> shows the direction of the roller blinds after it has been interpreted by our PicoW. It uses SPI connection as follows:<br></p>
 <ul>
-<li><strong>SDA</strong> -&gt; GP2</li>
-<li><strong>SCL</strong> -&gt; GP3<br>
+<li><strong>MISO</strong> -&gt; GP4</li>
+<li><strong>MOSI</strong> -&gt; GP19</li>
+<li><strong>CLK</strong>  -&gt; GP18</li>
+<li><strong>CS</strong>   -&gt; GP17</li>
+<li><strong>rst</strong>  -&gt; GP0</li>
+<li><strong>dc</strong>   -&gt; GP16<br>
 The information is then sent through WiFi connection to a second PicoW (Naomi&#x27;s project).</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="schematics">Schematics<a href="#schematics" class="hash-link" aria-label="Direct link to Schematics" title="Direct link to Schematics">​</a></h3>
-<p><img decoding="async" loading="lazy" alt="KiCad schematic" src="/assets/images/ChioreanRebeca_PicoWand-f95ed431cfd1d6b5ec8e755256c8c0de.svg" width="1123" height="794" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="KiCad schematic" src="/assets/images/ChioreanRebeca_PicoWand-06d5ffe8df80c25f37545de432cb6f54.svg" width="1123" height="794" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="pictures-of-hardware">Pictures of hardware<a href="#pictures-of-hardware" class="hash-link" aria-label="Direct link to Pictures of hardware" title="Direct link to Pictures of hardware">​</a></h3>
-<p>This shows the hardware until now. The display shows &quot;IDLE&quot; when the Pico Wand is not moving. It can also sense &quot;left-right&quot; movement and &quot;up-down&quot;.<br><br>
-<img decoding="async" loading="lazy" alt="PicoWand hardware picture idle" src="/assets/images/picture_of_hardware-772a1f91a14a65aaf12101a4a5414abd.png" width="4000" height="1840" class="img_ev3q">
-<img decoding="async" loading="lazy" alt="PicoWand hardware picture left right" src="/assets/images/picture_of_hardware_leftright-5c848f4895339936690f8d4f7c7ccdaf.png" width="4000" height="1840" class="img_ev3q">
-<img decoding="async" loading="lazy" alt="PicoWand hardware picture up down" src="/assets/images/picture_of_hardware_updown-b4a80ecb32bbcf36b16a7b373f360457.png" width="4000" height="1840" class="img_ev3q">
-Note that in the picture, the positions for &quot;up-down&quot; and &quot;left-right&quot; look inverted, that is because PicoWand is supposed to be held as a remote.</p>
+<p>This shows the finished hardware as presented at PM Fair. The display shows an &quot;Welcome&quot; message when it starts up and finishes connecting to WiFi. It also displays messages such as &quot;Rolling Up&quot; and &quot;Rolled Up!&quot; and the pair of &quot;Rolling Down&quot; and &quot;Rolled Down!&quot;.<br><br>
+<img decoding="async" loading="lazy" alt="PicoWand hardware picture" src="/assets/images/pico_wand-867c81ea0fae4c57a630eda03aebc4a6.jpg" width="4000" height="1840" class="img_ev3q"></p>
+<br>
+<p>The following image shows the 3D printed model that we used.</p>
+<br>
+<p><img decoding="async" loading="lazy" alt="3D printed design" src="/assets/images/3D_printed_model-e8d440d408956e320f9a16b59b80be02.jpg" width="3840" height="5120" class="img_ev3q"></p>
+<br>
+<p>This is the final product presented at PM Fair.</p>
+<br>
+<p><img decoding="async" loading="lazy" alt="Full project" src="/assets/images/full_project-7ee56a007f64e396ddba19eacfea45bf.jpg" width="5120" height="3840" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bill-of-materials">Bill of Materials<a href="#bill-of-materials" class="hash-link" aria-label="Direct link to Bill of Materials" title="Direct link to Bill of Materials">​</a></h3>
-<table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td><a href="https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank" rel="noopener noreferrer">MPU6050 Accelerometer and Gyroscope Module</a></td><td>Accelerometer sensor</td><td><a href="https://www.optimusdigital.ro/en/inertial-sensors/96-mpu6050-accelerometer-and-gyroscope-module.html" target="_blank" rel="noopener noreferrer">15,49 lei</a></td></tr><tr><td><a href="https://components101.com/sites/default/files/component_datasheet/SSD1306-OLED-Display-Datasheet.pdf" target="_blank" rel="noopener noreferrer">0.96&#x27;&#x27; OLED Module</a></td><td>Display</td><td><a href="https://www.optimusdigital.ro/en/lcds/194-yellow-and-blue-096-oled-module-128x64-px.html?search_query=OLED+Display+&amp;results=73" target="_blank" rel="noopener noreferrer">23,79 lei</a></td></tr><tr><td>Breadboard</td><td>Prototyping</td><td><a href="https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&amp;results=420" target="_blank" rel="noopener noreferrer">9,98 lei</a></td></tr><tr><td>Jumper Wires</td><td>Connecting components</td><td><a href="https://www.optimusdigital.ro/en/wires-with-connectors/889-set-fire-tata-tata-10p-20-cm.html?search_query=jumper+wires&amp;results=101" target="_blank" rel="noopener noreferrer">4,99 lei</a></td></tr><tr><td>Pushbutton switch 12mm</td><td>Signals the begining of the data collecting process</td><td><a href="https://www.optimusdigital.ro/en/others/1118-blue-round-button-with-cover.html?search_query=button&amp;results=510" target="_blank" rel="noopener noreferrer">1,99 lei</a></td></tr></tbody></table>
+<table><thead><tr><th>Device</th><th>Usage</th><th>Price</th></tr></thead><tbody><tr><td><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html" target="_blank" rel="noopener noreferrer">Rapspberry Pi Pico W</a></td><td>The microcontroller</td><td><a href="https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html" target="_blank" rel="noopener noreferrer">35 RON</a></td></tr><tr><td><a href="https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf" target="_blank" rel="noopener noreferrer">MPU6050 Accelerometer and Gyroscope Module</a></td><td>Accelerometer sensor</td><td><a href="https://www.optimusdigital.ro/en/inertial-sensors/96-mpu6050-accelerometer-and-gyroscope-module.html" target="_blank" rel="noopener noreferrer">15,49 lei</a></td></tr><tr><td><a href="https://www.rhydolabz.com/documents/33/ST7789.pdf" target="_blank" rel="noopener noreferrer">LCD ST7789</a></td><td>Display</td><td><a href="https://www.optimusdigital.ro/en/lcds/5345-adafruit-154-240x240-wide-angle-tft-lcd-display-with-microsd-st7789.html" target="_blank" rel="noopener noreferrer">149,00 lei</a></td></tr><tr><td>Breadboard</td><td>Prototyping</td><td><a href="https://www.optimusdigital.ro/en/breadboards/8-breadboard-hq-830-points.html?search_query=bread+board&amp;results=420" target="_blank" rel="noopener noreferrer">9,98 lei</a></td></tr><tr><td>Jumper Wires</td><td>Connecting components</td><td><a href="https://www.optimusdigital.ro/en/wires-with-connectors/889-set-fire-tata-tata-10p-20-cm.html?search_query=jumper+wires&amp;results=101" target="_blank" rel="noopener noreferrer">4,99 lei</a></td></tr><tr><td>Pushbutton switch 12mm</td><td>Signals the begining of the data collecting process</td><td><a href="https://www.optimusdigital.ro/en/others/1118-blue-round-button-with-cover.html?search_query=button&amp;results=510" target="_blank" rel="noopener noreferrer">1,99 lei</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="software">Software<a href="#software" class="hash-link" aria-label="Direct link to Software" title="Direct link to Software">​</a></h2>
-<table><thead><tr><th>Library</th><th>Description</th><th>Usage</th></tr></thead><tbody><tr><td><a href="https://github.com/jamwaffles/ssd1306" target="_blank" rel="noopener noreferrer">ssd1306</a></td><td>Display driver for SSSD1306</td><td>Used for the display</td></tr><tr><td><a href="https://github.com/embedded-graphics/embedded-graphics" target="_blank" rel="noopener noreferrer">embedded-graphics</a></td><td>2D graphics library</td><td>Used for drawing to the display</td></tr></tbody></table>
-<table><thead><tr><th>Other Software Tools</th><th>Description</th><th>Usage</th></tr></thead><tbody><tr><td><a href="https://edgeimpulse.com" target="_blank" rel="noopener noreferrer">Edge Impulse</a></td><td>Edge Impulse website</td><td>Used to build datasets the will be imported as C library and interfaced by the use of FFI</td></tr></tbody></table>
+<table><thead><tr><th>Library</th><th>Description</th><th>Usage</th></tr></thead><tbody><tr><td><a href="https://github.com/almindor/st7789" target="_blank" rel="noopener noreferrer">ST7789</a></td><td>Display driver for ST7789</td><td>Used for the display</td></tr><tr><td><a href="https://github.com/embedded-graphics/embedded-graphics" target="_blank" rel="noopener noreferrer">embedded-graphics</a></td><td>2D graphics library</td><td>Used for drawing to the display</td></tr><tr><td><a href="https://github.com/juliangaal/mpu6050" target="_blank" rel="noopener noreferrer">MPU6050</a></td><td>Platform agnostic driver for MPU6050 6-axis IMU</td><td>Used for reading the accelerometer and gyroscope</td></tr><tr><td><a href="https://github.com/embassy-rs/embassy/tree/main/cyw43" target="_blank" rel="noopener noreferrer">cyw43</a></td><td>Rust driver for the CYW43439 wifi chip</td><td>Used for the WiFi implementation</td></tr><tr><td><a href="https://github.com/embassy-rs/embassy/tree/main/cyw43-pio" target="_blank" rel="noopener noreferrer">cyw43-pio</a></td><td>Driver for the nonstandard half-duplex SPI used in the PicoW</td><td>Used for the WiFi implementation</td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="links">Links<a href="#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links">​</a></h2>
 <ol>
 <li><a href="https://medium.com/@subirmaity/hand-gesture-recognition-for-numbers-using-tinyml-323d2a524c3e" target="_blank" rel="noopener noreferrer">Hand Gesture Recognition for Numbers using TinyML</a></li>
