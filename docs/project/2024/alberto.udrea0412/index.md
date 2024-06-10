@@ -38,22 +38,47 @@ We also made progress in the hardware part of the project, basically grounding t
 
 ### Week 20 - 26 May
 
+The project was finished during this week, with various fixes and new added features varying from calculations methods (meant to compensate for the ADC values transmitted by the sensor, so that we get meaningful measurements in units that we understand), to programming the display and network stack, polishing the hardware and, most importantly, making sure everything works harmoniously.
+
+Also, the web app was developed entirely during this week.
+
 ## Hardware
 
 We will use a BME280 in order to gather environmental data. The Pico will process this gathered data in order to print meaningful graphics on the provided display. We will also use several push buttons in order to switch between the available data
 
-### Schematics
+### Schematics and Photos
 [For the KiCad schematic files, click here](https://github.com/UPB-FILS-MA/project-UdrAlberto/tree/main/schematics)
 
-
+<table>
+<tr>
+ <th>Schematics</th>
+<td>
+ 
 ![KiCad schematic](schematics/kicad.png)
 
-### Photos
+</td>
 
-<p float="left">
-  <img src="schematics/photo1.jpg" width="49%" />
-  <img src="schematics/photo2.jpg" width="49%" />
-</p>
+<td>
+ 
+![Simpler KiCad schematic](schematics/simple_kicad.png)
+
+</td>
+</tr>
+
+<tr>
+ <th>Photos</th>
+ <td>
+  
+![photo1](schematics/photo1.jpg)
+
+</td>
+<td>
+ 
+![photo2](schematics/photo2.jpg)
+
+</td>
+</tr>
+</table>
 
 
 ### Bill of Materials
@@ -73,13 +98,14 @@ We will use a BME280 in order to gather environmental data. The Pico will proces
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | The embassy-rp HAL targets the Raspberry Pi RP2040 microcontroller. The HAL implements both blocking and async APIs for many peripherals. |  The utilised HAL  |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | An Embassy project| Used for mutexes and sending and receiving data over channels |
+| [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) | An Embassy project | Used for organising the flow of the program via Timer:: |
+| [embassy-embedded-hal](https://github.com/embassy-rs/embassy/tree/main/embassy-embedded-hal) | Collection of utilities to use `embedded-hal` and `embedded-storage` traits with Embassy. | Used for the SPI config |
+| [embassy-futures](https://github.com/embassy-rs/embassy/tree/main/embassy-futures) | An Embassy project | Used for working with futures during asynchronous development |
 | [st7789](https://github.com/almindor/st7789) | Display driver for ST7789 | Used for the display |
 | [embedded-graphics](https://github.com/embedded-graphics/embedded-graphics) | 2D graphics library | Used for drawing to the display |
-| [BME 280 Rust Library](https://github.com/VersBinarii/bme280-rs)| BME280 Sensor library | Used for communicating with the sensor |
 
 ## Links
 
 1. [Idea](https://www.hackster.io/jotrinelectronics/building-a-weather-station-with-raspberry-pi-pico-rp2040-9d5cbb)
-2. [Arduino BME280 Library (not Rust, but it will be useful as a conceptual insight)](https://github.com/finitespace/BME280)
-3. [Web app framework](https://yew.rs)
-4. [Might be useful for the web app implementation](https://github.com/rustwasm/wasm-bindgen)
+2. [Arduino BME280 Library (not Rust, but it was useful as a conceptual insight)](https://github.com/finitespace/BME280)

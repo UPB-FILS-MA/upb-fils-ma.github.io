@@ -42,18 +42,40 @@ The circuit features an on/off button that allows users to power the system up o
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+The hardware components arrived.
 ### Week 7 - 19 May
-
+Changed the power supply method, and came up with a new solution to power up the pico w.
+Continued to develop the software part, with focus on the onewire communication protocol with the temperature sensor.
+Changed the aproach for thermal readings and switched to analog sensors.
 ### Week 20 - 26 May
+Implemented the cross platform desktop aplication witch connects with the device via WIFI to send relevant data and analitics and customize the user experience of the device.
+Successfully completed the final testing phase of the product, ensuring all components function harmoniously. Conducted a comprehensive review and debugging session, resulting in a robust, fully operational device.
 
 ## Hardware
 
-Detail in a few words the hardware used.
+MT3608 28V 2A - is a voltage regulator that we use to amplify the current given by the battery to power the fans
+DS18B20 (TO-92) - is a digital temperature sensor with adjustable accuracy from 9 bit to 12 bit readings
+2n2222 NPN BJT - are cheap bipolar transistor that we use as a switch to power the fans
+TP4056 - is a module we use for charging the battery
+
+
+This is the final product simulation made in Fusion:
+![3D_simulation](./3D_simulation.gif)
+
+This is the current internal circuit of the project( not mounted with the frame and coolers for easy code debuging)
+![circuit_1](./hardware_internal_circuit1.jpeg)
+![circuit_2](./hardware_internal_circuit2.jpeg)
+
+ This is the 3D printed frame with mounted fans :
+![3D_CAD](./3D_cad.jpeg)
+
 
 ### Schematics
 
-Place your KiCAD schematics here.
+ ![KiCAD_schematic](./hardware_schematic1.jpeg)
+  ![KiCAD_schematic](./hardware_schematic2.png)
+
+
 
 ### Bill of Materials
 
@@ -72,7 +94,7 @@ The format is
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [Fans](https://www.optimusdigital.ro/ro/accesorii-altele/7964-ventilator-cy204a-12-v-92x92x25-mm.html?search_query=ventilator+92x92&results=2) |  For cooling | [40 RON](https://www.optimusdigital.ro/ro/accesorii-altele/7964-ventilator-cy204a-12-v-92x92x25-mm.html?search_query=ventilator+92x92&results=2) |
 | [MT3608 28V 2A](https://ardushop.ro/ro/home/2263-mt3608boost.html?gad_source=1&gclid=CjwKCAjwt-OwBhBnEiwAgwzrUlvN5ijgoJgMqP_spVlZZMsu35QR1tdPDWzCjgjwklNRfOzatvnhlhoCqC4QAvD_BwE) | Voltage regulator | [23 RON](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=MT3608+28V+2A&submit_search=) |
-| [DS18B20 (TO-92)](https://www.alldatasheet.com/datasheet-pdf/pdf/58557/DALLAS/DS18B20.html) | Digital temperature sensor | [14 RON](https://www.optimusdigital.ro/ro/senzori/1465-senzor-de-temperatura-ds18b20-to-92.html?search_query=senzori+temperatura&results=227) |
+| [DS18B20 (TO-92)](https://www.tme.eu/Document/9d2eb9f3eda897a378e818dbe183c915/NTCM-10K-B3380.pdf) | Ultra thin thermistor | [20 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-temperatura/8374-senzor-de-temperatura-ultra-subire-cu-termistor-ntc-de-10-k-25-mm.html?search_query=Senzor+temperatura&results=275) |
 | [Switch](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/8031-intrerupator-patrat-push-cu-retinere.html?search_query=intrerupator&results=58) | On/off button | [3 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/8031-intrerupator-patrat-push-cu-retinere.html?search_query=intrerupator&results=58) |
 | [Resistors](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=resistor&results=9) | The resistors | [15 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=resistor&results=9) |
 | [Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire+tata+tata&results=79) | The wires | [7 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=fire+tata+tata&results=79) |
@@ -81,6 +103,7 @@ The format is
 | [2n2222 NPN BJT](https://pdf1.alldatasheet.com/datasheet-pdf/view/15067/PHILIPS/2N2222.html) | NPN BJT Transistors for current amplification | [2 RON](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=2n2222&results=9) |
 | [TP4056](https://pdf1.alldatasheet.com/datasheet-pdf/view/1487471/ETC2/TP4056.html) | Charging module for the battery | [6 RON](https://www.optimusdigital.ro/ro/electronica-de-putere-incarcatoare/7534-incarcator-tp4056-cu-micro-usb-pt-baterie-lipo-1a-cu-protectie-pentru-circuite.html?search_query=modul+incarcator+&results=37) |
 | [18650 LI-ION Battery 3200mA 10A Panasonic](https://www.keeppower.com.cn/products_detail.php?id=580) |  Battery | [23 RON](https://www.emag.ro/acumulator-18650-li-ion-3200ma-10a-panasonic-lincr18650bd/pd/DL86WWBBM/) |
+| [Kit Powerbank 1S, 18650, 5V](https://components101.com/modules/power-bank-module-t6845c-datasheet-specifications) | Power Supply | [13 RON](https://www.sigmanortec.ro/kit-powerbank-1s-18650-5v?gad_source=1&gclid=CjwKCAjwo6GyBhBwEiwAzQTmc0hIOvBpkTSUBJ7S-j4w4NVuZLqWm4JrvdA0o2tr5zMtMWuXsB2O_xoCr_0QAvD_BwE) |
 
 <!-- | []() |  | []() | -->
 
@@ -88,7 +111,6 @@ The format is
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [OneWire](https://github.com/kellerkindt/onewire) | One Wire protocol | Protocol for gathering data from the sensors |
 | [embassy_rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html) | Embassy Hardware Abstraction Layer (HAL) for the Raspberry Pi RP2040 microcontroller | Used to program the Pico |
 | [embassy_sync](https://docs.embassy.dev/embassy-sync/git/default/index.html) | Synchronization primitives and data structures with async support | Used for communicating through different tasks |
 | [embassy-executor](https://crates.io/crates/embassy-executor) | An async/await executor designed for embedded usage | Used for task execution |
@@ -107,3 +129,6 @@ The format is
 5. [Beginners Guide to 3D Printing](https://www.youtube.com/watch?v=b2Od4YHcLAQ)
 6. [TP4056 Charging Module](https://www.youtube.com/watch?v=jE0O8PP-wsw)
 ...
+## Final Project 
+![GUI_interface](./interface.jpeg)
+![hardware_final](./final_hardware.jpeg)

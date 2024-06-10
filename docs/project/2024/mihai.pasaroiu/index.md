@@ -26,18 +26,22 @@ Building a music player with a Raspberry Pi Pico W using Rust allowed me to work
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-
+Make the hardware part and work for the software.
 ### Week 7 - 19 May
-
+Continue developing and debugging software.
 ### Week 20 - 26 May
+Finished the software and made the case for the project.
 
 ## Hardware
 
-Detail in a few words the hardware used.
+This project utilizes a Raspberry Pi Pico to facilitate digital audio playback from a 32GB microSD card formatted in FAT32, interfaced via SPI protocol. The audio output is delivered through a 1W speaker powered by a PAM8403 Class D Stereo Mini Amplifier, enhanced by an RC filter comprising a 680-ohm resistor and a 10nF capacitor, which filters frequencies above 23.4kHz. Visual augmentation is achieved through four LEDs, controlled by PWM signals that vary in intensity corresponding to the audio output's duty cycle, providing a dynamic representation of sound intensity. User interaction is managed through a 1602 LCD display, operating on the I2C protocol, which displays the current song title. The system also incorporates three push-buttons connected to the microcontroller's GPIO pins with 10k-ohm pull-up resistors, assigned to play/pause functionality and navigation between tracks. Additionally, a potentiometer is integrated for volume control, offering user-adjustable audio output levels.
 
 ### Schematics
 
-Place your KiCAD schematics here.
+  ![kicad](kicad.png)
+  ![hardware image 1](hardware_1.jpg)
+  ![hardware image 2](hardware_2.jpg)
+  ![hardware image 3](hardware_3.jpg)
 
 ### Bill of Materials
 
@@ -68,12 +72,23 @@ The format is
 
 
 
+
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
 | [embedded-sdmmc-rs](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
-| [HD44780-driver](https://github.com/JohnDoneth/hd44780-driver) | LCD display driver | Used for displaying the name of the song playing |
+| [ag-lcd](https://github.com/mjhouse/ag-lcd) | LCD display driver | Used for displaying the name of the song playing |
+| [port-expander](https://github.com/rahix/port-expander) | Management and use of I/O expander chips | Manage the PCF8574 I/O expander for controlling LCD display via the I2C bus |
+| [cortex-m](https://github.com/rust-embedded/cortex-m) |  Provides low-level APIs for ARM Cortex-M processors | Interrupt handling and system control |
+| [embassy-executor](https://github.com/embassy-rs/embassy/tree/main/embassy-executor) | Manages asynchronous tasks | Handles logging over USB in an asynchronous manner |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Provides synchronization primitives for use in async tasks | Used to protect shared resources using mutexes |
+| [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) |  Provides time-related utilities | Managing delays and scheduling tasks |
+| [heapless](https://github.com/rust-embedded/heapless) | Enables the use of fixed-size data structures that do not require heap memory | Managing strings and vectors that have a fixed capacity |
+| [log](https://github.com/rust-lang/log) | Facilitates logging |Output debug and information messages |
+| [microfft](https://gitlab.com/teskje/microfft-rs) | Provides fast Fourier transform (FFT) calculations | Performing FFT on audio data to analyze frequencies and amplitudes |
+| [bytemuck](https://github.com/Lokathor/bytemuck) |  Offers safe casting between data types | Used to safely cast slices of bytes to slices of other types |
+| [fixed](https://gitlab.com/tspiteri/fixed) | Implements fixed-point arithmetic types | Transform bytes in FixedU16 |
 
 ## Links
 
