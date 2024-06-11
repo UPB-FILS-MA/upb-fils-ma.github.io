@@ -4,7 +4,7 @@ SentinelGuard
 :::info 
 
 **Author**: Andreescu Andrei-Vlad
-**GitHub Project Link**: https://github.com/AndreiAndreescu/upb-fils-ma.github.io
+**GitHub Project Link**: https://github.com/UPB-FILS-MA/project-AndreiAndreescu
 
 :::
 
