@@ -82,6 +82,16 @@ The `main.rs` file is way to complicated, a `menuconfig` like system would be gr
 
 ---
 ---
+# Configurator Demo
+
+The `main.rs` file is way to complicated, a `menuconfig` like system would be great
+
+<center>
+<img src="/tock/demo2.gif" class="w-150">
+</center>
+
+---
+---
 # `async`/`.await` support for libtock-rs
 it is easier to write asynchronous apps
 
