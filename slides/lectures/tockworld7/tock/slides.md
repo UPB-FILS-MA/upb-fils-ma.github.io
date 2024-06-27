@@ -97,7 +97,7 @@ it is easier to write asynchronous apps
 
 **Work in progress**
 - add Tock as a backend to `embassy-executor`
-- define `async` APIs in `libtock-rs` [#949](https://github.com/tock/libtock-rs/issues/494)
+- define `async` APIs in `libtock-rs` [#494](https://github.com/tock/libtock-rs/issues/494)
 
 **TODOs**
 - might be tricky to add async, due to the way in which `scope` works

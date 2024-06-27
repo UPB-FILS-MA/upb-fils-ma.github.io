@@ -91,3 +91,15 @@ Tock could be the standard for embedded systems courses
 - There is a lof of work to do
 - We have 5 interns for the summer that will work on this
 - Try to teach common courses or at least parts of them
+
+---
+---
+# x86 port?
+we want to use it in a OS design course
+
+- 4th year
+- mostly a driver design course
+
+@microsoft:
+- How fast can be this upstreamed?
+- Can we help to speed this up?
