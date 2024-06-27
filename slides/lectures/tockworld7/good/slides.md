@@ -30,3 +30,34 @@ some say *do not use `async`/`.await` for beginners
 ![executor](/good/executor.svg)
 
 </center>
+
+---
+---
+# Laser Piano
+a piano with laser keys - [project page](https://embedded-rust-101.wyliodrin.com/docs/project/2024/rares.negrila)
+
+<div align="center">
+<img src="/good/piano.jpeg" class="w-120">
+</div>
+
+---
+---
+# Tower Crane
+[project page](https://embedded-rust-101.wyliodrin.com/docs/project/2024/ana.teodorescu2203)
+
+<div align="center">
+<img src="/good/crane.jpeg" class="w-70">
+</div>
+
+---
+---
+# Roulette
+casino roulette - [project page](https://embedded-rust-101.wyliodrin.com/docs/project/2024/vlad_andrei.dumitru)
+
+<div grid="~ cols-2 gap-3" align="center">
+
+<img src="/good/roulette_1.jpeg" class="w-70">
+<img src="/good/roulette_2.jpeg" class="w-70">
+
+
+</div>

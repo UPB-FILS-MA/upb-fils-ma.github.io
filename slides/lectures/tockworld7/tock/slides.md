@@ -17,6 +17,7 @@ use as main the tool embedded systems course teaching
   - App IDs
   - System call filter
 - *Development* - students can you several languages to write projects
+- *No Dependencies* - there are not dependencies that break
 
 ---
 layout: section
@@ -48,8 +49,9 @@ Thread is not great is you do need gateways that students do not have at home
 
 The USB stack is broken, at least serial port jams frequently
 
-**Work inprogress**
-- refactor the USB stack (Ionut)
+**Issues**
+- the issue [#4011](https://github.com/tock/tock/issues/4011)
+- refactor the USB stack
 
 **TODOs**
 - add the USB IAD for MS Windows
@@ -61,12 +63,22 @@ The USB stack is broken, at least serial port jams frequently
 
 The `main.rs` file is way to complicated, a `menuconfig` like system would be great
 
+<div grid="~ cols-2 gap-5">
+
+<div>
+
 **Work in progress**
 - Write a configurator (OxidOS / Irina)
 - Tweedegolf is happy to help
 
 **TODOs**
 - a lot of feedback is needed
+
+</div>
+
+<img src="/tock/demo.gif" class="w-100">
+
+</div>
 
 ---
 ---
@@ -123,8 +135,12 @@ safely expose devices to userspace
 everyone has different hardware platforms
 
 **Requirements**
-- be able to build it with off-the0-shelf components
+- be able to build it with off-the-shelf components
 - cost under $50
 - debugger!
 
 **Work in progress**
+- lab board
+  - RP2040 as a debuger
+  - Pico W SMD mounted (cheaper than bying the components)
+  - buttons, LEDs, screen, buzzer and extension sockets
