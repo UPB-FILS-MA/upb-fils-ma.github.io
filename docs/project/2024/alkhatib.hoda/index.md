@@ -1,6 +1,6 @@
 
-# Snake game project 
-The game 'Snake', displayed on an 8×8 LED Matrix module 
+# Date and thermometer clock 
+Display temperature, pressure, clock, and date on the LCD screen module.
 
 :::info
 
@@ -11,69 +11,64 @@ The game 'Snake', displayed on an 8×8 LED Matrix module
 
 ## Description
 
-My project is a recreation of the popular game 'Snake,' displayed on an 8×8 LED Matrix module using a Raspberry Pi.My aim is to create something that appears simple but holds many memories of my childhood and provides enjoyable entertainment.
+This project features an advanced digital clock displaying the current date, time, temperature, and atmospheric pressure on the LCD screen module aiding in daily organization. 
 
 ## Motivation
 
-Creating a Snake game with Rust on a Raspberry Pi and LED matrix blends nostalgia with technical challenge, fostering both creativity and learning.
+To create a practical device that aids daily planning and making informed decisions based on environmental conditions with real-time information on time, date, temperature, and pressure, while also providing a valuable learning experience in electronics and programming.
 
 ## Architecture
+Here is a clear architecture image:
 
-![Architecture.jpg](./Arhitecture.jpg)
+![arh.png](./arh.png)
 
+According to the image here is an explanation about what each component does:
 
-Game Engine:
-Manages game state and logic.
-Controls snake movement, food generation, and scoring.
-Input Handling:
-Interprets joystick input for controlling the snake.
-Ensures responsive and accurate gameplay.
-Display Management:
-Controls LED matrix to represent the game grid.
-Updates display in real-time based on game state.
-Audio Feedback:
-Uses buzzers to provide sound effects for game events.
-Enhances player experience with auditory cues.
-Game State Management:
-Maintains current game state and information.
-Facilitates communication between components.
-User Interface (UI):
-Provides visual indicators and feedback.
-Enhances player engagement and experience.
+| The component | What is it  | Why do we need it |
+| --- | --- | --- |
+| `Raspberry Pi Pico W` | A microcontroller board with built-in Wi-Fi. |  The Pico W is the brain of your project. It controls all the other components and handles communication with the internet to get the current date and time.|
+| `BMP280` | A device that measures the temperature and atmospheric pressure of its environment. |To monitor and display the temperature and pressure as part of your project. |
+| `LCD screen` | A screen that shows information in a readable format. | To present the temperature, pressure, date, and time in a way that you can easily see and understand. It acts as the output interface of your project.|
+| `Buzzer` | A small device that makes noise. |To provide audio feedback or alerts. For example, it could beep when the temperature or pressure reaches a certain threshold, or simply to signal that the system is active.|
+| [`API Through Wifi`]((http://worldtimeapi.org/api/timezone/Europe/Bucharest)) |A web service that provides date and time information. |To get the current time and date from the internet.This way your project has accurate and up-to-date time information without needing a separate real-time clock module and can ensure your time information is always accurate.|
 
--   how they connect with each other
-
-The Raspberry Pi is positioned at the center, serving as the main controller.
-Components are arranged in a clear and organized manner around the Raspberry Pi.
-Arrows indicate the direction of data flow or connection from the components to the Raspberry Pi.
-Each component is labeled for clarity.
 
 ## Log
 
 <!-- write every week your progress here -->
 
 ### Week 6 - 12 May
-I tested the code for each component.
+I bought the components .
 
 ### Week 7 - 19 May
-Assembled the components on the breadboard. \
-Making the schematic.
+Tested codes for my project.
 
 ### Week 20 - 26 May
+Worked on the documentation and posted my project.
 
 ## Hardware
-![Hardware](./Hardware.jpg) 
+![Hardware](./) 
 
-My hardware setup comprises a Raspberry Pi Pico microcontroller, a breadboard serving as the main board, an 8×8 LED matrix module, a passive buzzer, a joystick module, and various wires for connection, a LED , a resistor.
+Coming soon
 
 ### Schematics
 
-![Schematic](./Schematic.jpg)
+![Schematic](./schem.jpg)
 
-The Raspberry Pi is positioned at the center, serving as the main controller.
-Components are arranged in a clear and organized manner around the Raspberry Pi.
-Arrows indicate the direction of data flow or connection from the components to the Raspberry Pi.
-Each component is labeled for clarity.
+The schematic image shows a clearer connection for the components , using the online simulator [*Wokwie*](https://wokwi.com/).\
+note: the lcd screen is connected by default to the pico explorer base .\
+the buzzer is connected (with a resistance) to GPIO 1.\
+here is the BMP280 connection table
+| PIN | connection |
+| --- | --- |
+| `VCC` | power source (3V3)|
+| `GND` | ground |
+| `SCL` | 	`CLK` line |
+| `SDA` | `MOSI` line |
+| `CSB` | `CS` line (GPIO 3)|
+ |`SDO`|	`MISO` line |
+
+
 
 
 
@@ -85,16 +80,15 @@ The format is
 -->
 
 | Device                                                                                                  | Usage               | Price                                                                                                                                                                                                                                                                                |
-|-|-|-|
-| [Raspberry Pi Pico WH, Wireless+Headers](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | 56,23 RON                                                                                                                                                                                       |
-| [Breadboard](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=breadboard&results=31) | Main board          | 10,15 RON                                                                                                                                                                                                                                                   
-| [L8x8 LED matrix + control circuit](https://ardushop.ro/ro/home/95-matrice-led-uri-8x8-circuit-de-control.html?search_query=matrix&results=8)     | a screen to Display | 14,87 RON                                                                                                                                                      |
-| [Passive Buzzer](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16)                                                                                       | Buzzer              | 3,97 RON                                                                                                                        |
-| [Joystick mode](https://ardushop.ro/ro/electronica/127-modul-joystick.html?search_query=joystick&results=4)                                                                                        | control the game    | 3,60 RON                                                                                                                                                                                                                                                        |
-| A LED                                                    | turns on when starting | 0 RON-I borrowed it                                                                                                                                                                                                                                                       |
-| A resistor                                       | current-limiting resistor| 0 RON-I borrowed it                                                                                                                                                                                                                                                        |
-| [65 x Fire Jumper](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=fir&results=286)           | connection           | 11,86  RON |
-| [40 x Dupont Yarn Mother-Father 10cm](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=fir&results=286)                     | connection           | 5,18  RON|
+| ------------------------------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Raspberry Pi Pico WH, Wireless+Headers](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [56 RON](https://ardushop.ro/ro/home/2819-raspberry-pi-pico-wh.html?search_query=pico&results=14) |
+| [Pico Explorer Base](https://shop.pimoroni.com/products/pico-explorer-base?variant=32369514315859)                                                                   |functional Base for components | [160 RON](https://www.optimusdigital.ro/en/others/12148-pico-explorer-base.html) |
+| [Passive Buzzer](https://projects.raspberrypi.org/en/projects/introduction-to-the-pico/9)                                                                                      | Buzzer              | [4 RON ](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16) |
+| [BMP280](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)                                                                                       | Digital pressure and temperature sensor     | [17 RON ](https://www.emag.ro/modul-senzor-de-presiune-atmosferica-bmp280-cl214/pd/DGKX6JBBM/) |
+| [A resistor](https://components101.com/resistors/resistor)                                                                                          | current-limiting resistor| [2 RON]() |
+| [65 x Fire Jumper](https://www.digikey.com/en/htmldatasheets/production/5367683/0/0/1/20ul1015strbla250)                                                                                    | connection           | [12  RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=fir&results=286) |
+| [40 x Dupont Yarn Mother-Father 10cm](https://www.digikey.com/en/htmldatasheets/production/5367683/0/0/1/20ul1015strbla250)                                                                 | connection           | [5 RON](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=fir&results=286) |
+          
 
 ## Software
 
@@ -109,4 +103,4 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. From last year projects: [project](https://ocw.cs.pub.ro/courses/pm/prj2023/apredescu/gameofsnake)
+1. [Inspiration project](https://www.youtube.com/watch?v=gBofy7MMdIY)
