@@ -47,11 +47,14 @@ Tested codes for my project.
 Worked on the documentation and posted my project.
 
 ## Hardware
-![Hardware](./) 
+When connected :
+![Hardware](./hardW1.jpg)
 
-Coming soon
+A closer look to the connection:
+![Hardware](./hardW2.jpg) 
 
-### Schematics
+
+### Schematics:
 
 ![Schematic](./schem.jpg)
 
@@ -65,8 +68,7 @@ here is the BMP280 connection table
 | `GND` | ground |
 | `SCL` | 	`CLK` line |
 | `SDA` | `MOSI` line |
-| `CSB` | `CS` line (GPIO 3)|
- |`SDO`|	`MISO` line |
+
 
 
 
@@ -85,7 +87,6 @@ The format is
 | [Pico Explorer Base](https://shop.pimoroni.com/products/pico-explorer-base?variant=32369514315859)                                                                   |functional Base for components | [160 RON](https://www.optimusdigital.ro/en/others/12148-pico-explorer-base.html) |
 | [Passive Buzzer](https://projects.raspberrypi.org/en/projects/introduction-to-the-pico/9)                                                                                      | Buzzer              | [4 RON ](https://ardushop.ro/ro/electronica/194-buzzer.html?search_query=buzzer&results=16) |
 | [BMP280](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf)                                                                                       | Digital pressure and temperature sensor     | [17 RON ](https://www.emag.ro/modul-senzor-de-presiune-atmosferica-bmp280-cl214/pd/DGKX6JBBM/) |
-| [A resistor](https://components101.com/resistors/resistor)                                                                                          | current-limiting resistor| [2 RON]() |
 | [65 x Fire Jumper](https://www.digikey.com/en/htmldatasheets/production/5367683/0/0/1/20ul1015strbla250)                                                                                    | connection           | [12  RON](https://ardushop.ro/ro/electronica/28-65-x-jumper-wires.html?search_query=fir&results=286) |
 | [40 x Dupont Yarn Mother-Father 10cm](https://www.digikey.com/en/htmldatasheets/production/5367683/0/0/1/20ul1015strbla250)                                                                 | connection           | [5 RON](https://ardushop.ro/ro/electronica/23-40-x-dupont-cables-female-male-10cm.html?search_query=fir&results=286) |
           
