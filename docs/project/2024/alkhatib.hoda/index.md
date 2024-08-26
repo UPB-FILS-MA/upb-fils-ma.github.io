@@ -53,6 +53,8 @@ When connected :
 A closer look to the connection:
 ![Hardware](./hardW2.jpg) 
 
+ I tried to make a 3D model here :) :
+![3Dmodel](./3D.png).
 
 ### Schematics:
 
