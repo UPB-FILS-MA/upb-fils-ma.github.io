@@ -1,53 +1,104 @@
-# Game Console
- A compact game console for user-friendly games like Snake or the Chrome dinosaur game, designed for offline entertainment.
+# Cooling Station
+ Adjustable fan that is powered by a smart thermostat
+
 :::info 
 
-**Author**: POSTELNECU Ioana \
+**Author**: Postelnecu Ioana \
 **GitHub Project Link**: https://github.com/UPB-FILS-MA/project-IoanaP0711
 
 :::
 
 ## Description
 
-My idea is to have the ability to play user-friendly games-such as Snake or the one with the dinosaur on Chrome, when you don't have a connection- on a tiny and simple game console. It consists in a breadboard, where's attached the Raspberry Pi, a LCD screen, a LED to show if the console is powered on or off and the buttons. There's one for the velocity and four for left/right/up/down, similarly to a regular gaming console or just one for going up(based on what game I'm going to write I'll either put one button or four). 
+Cooling station is a practical way to cool-off on a hot summer day. Made to stand on your desk with a big fan to cool off any programmer. With an easy and fast Rust powered software can be easily reprogrammed in order to cool-off your room, no matter how hot it is. It is powered with two bright LEDs and a Buzzer that will let you know when the temperature gets to the set threshold. No more need of desk fans or thermometers when you can use the Cooling Station to automatically keep you cool.
 
 ## Motivation
 
-I've decided to choose this project, because ever since I was a kid, I've used to play video games and I've told myself that I'll learn how to make one from scratch. On top of that, for many years my desire for playing has been decreasing, because even though I like the games, I'm getting bored of them, so I want to create one at some point, that keeps me playing it. To sum up, I want to make this as my project, because I want to understand the basics of game development, in order to actually start designing and developing my own game. 
+This idea came to be on a hot summer day, when I was sitting at my desk working on my laptop, thinking... what if there was a fun way to build a fan that can cool you off whenever the temperature gets too high. Knowing that my laptop generates a lot of heat, and that my desk is right in the way of the radiating hot sun, I knew this was the right idea of a project.
 
 ## Architecture 
 
-![Architechture Diagram](photos/Arhitechture.JPG)
+1. **Raspberry Pi Pico W**: Microcontroller board used for processing and sending the data to all devices
+2. **LCD screen 1602 module**: Used for displaying the live temperature and usage instructions
+3. **LED**: Shows when the temperature is lower than the threshold or over it (blinks when approaching limit temperature)
+4. **Buttons**: Used for controlling fan speed once the temperature is above certain threshold
+5. **Buzzer**: Beeps louder and louder when temperature is rising until the threshold
+6. **Breadboard**: Needed for building and testing the circuit
+7. **Jumper wires**: Needed for connecting the components
 
-This project's architecture revolves around the Raspberry Pi Pico W as the microcontroller, executing the game code. The LCD screen 1602 module serves as the display interface for the game graphics. An LED is integrated to signify the console's power status. User input is facilitated through buttons, with one controlling velocity and the other managing movement. To construct and test the circuit, a breadboard and jumper wires are employed, allowing seamless connectivity between components. Here are some photos of the actual hardware:
-![Hardware](photos/hardware1.jpeg)
-![Hardware1](photos/hardware2.jpeg)
+&nbsp;
+
+![Architecture Diagram](photos/architecture.png)
 
 ## Log
 
 <!-- write every week your progress here -->
 
-### Week 6 - 12 May
+### Week 12 - 18 Aug
 
-I've started to assemble the hardware and to work on the KiCAD schematic, as well as starting to write the code, by using the Bevy framework.
+I came with the idea, ordered the pieces and started looking into potential software implementations.
 
-### Week 7 - 19 May
+### Week 19 - 25 Aug
 
-I've done the KiCAD schematic and because I couldn't find the symbol for the 1602 I2C display in the given KiCAD libraries, I've created one for the project.
+Put the hardware together and started initial software testing. Made the KiCad schematic.
 
-### Week 20 - 26 May
+### Week 26 - 1 Sep
 
-I've started to work on the embedded software, while the Dino game was done with ggez, glam and oorandom. Because it was made initially for the playing on the computer and then modified for the i2c display. I encountered some difficulties, which requiered me to change a bit the idea of the project, meaning using the display for writing "game over" when you would've hit the dino and the buttons for controling the game. In order to do that, by having two Rust projects, I've had to create a Rust Workspace. 
+Finished hardware, and did the last few touches to the software code done in Rust. Also, started writing the journey of getting this idea, turned to a real, functional thing, into the documentation you are reading right now.
+
 ## Hardware
 
-1. **Raspberry Pi Pico W**: Microcontroller board used for running the code
-2. **LCD screen 1602 module**: used for displaying the actual game
-3. **LED**: shows when the console is on or off
-4. **Buttons**: one for velocity and one for up and down
-5. **Breadboard**: needed for building and testing the circuit
-6. **Jumper wires**: needed for connecting the components
+The project is based on the Raspberry Pi Pico W, which is the brain of the whole operation. Together with the BMP280 temperature sensor, the two LEDs used for visual temperature warnings, the buzzer for acoustic warnings, and the LCD for written instructions and live temperature, while the fan has the role of the cooler agent.
 
-In this project, Raspberry Pi Pico W runs the game code, while the LCD screen 1602 module displays the game. An LED indicates power status, and buttons control velocity and movement. A breadboard and jumper wires connect the components for testing and construction.
+:::info 
+
+In this project, Raspberry Pi Pico W is used for `processing` the `temperature data`, and depending on it, the MCU will `power on` the component assembly `accordingly`. This results in proper temperature `announcements` and a good cooling when `necessary`.
+The board will not power the fan at first, unless the threshold is `reached`, doing a `regulated` cool of the temperature, `adjusting` the fan `speeds` depending on `ambiental temperature`. If the temperature is `near` or `above` the threshold and the user does not consider the cooling good enough or that is too fast, the `button` can also be used for `manual adjustments` that are `saved` while the temperature is `oscillating` between the `alert` values.
+
+:::
+
+**Pictures**
+
+Here are some photos of the actual hardware:
+
+<table>
+<tr>
+ <td>
+  
+![HDW1](photos/hardware1.png)
+
+</td>
+<td>
+ 
+![HDW2](photos/hardware2.png)
+
+</td>
+<td>
+
+![HDW3](photos/hardware3.png)
+
+</td>
+</tr>
+</table>
+<table>
+<tr>
+ <td>
+  
+![HDW4](photos/hardware4.png)
+
+</td>
+<td>
+ 
+![HDW5](photos/hardware5.png)
+
+</td>
+<td>
+
+![HDW6](photos/hardware6.png)
+
+</td>
+</tr>
+</table>
 
 ### Schematics
 
@@ -55,43 +106,39 @@ In this project, Raspberry Pi Pico W runs the game code, while the LCD screen 16
 
 ### Bill of Materials
 
-<!-- Fill out this table with all the hardware components that you might need.
-
-The format is 
-```
-| [Device](link://to/device) | This is used ... | [price](link://to/store) |
-
-```
-
--->
-
 | Device | Usage | Price |
 |--------|--------|-------|
 | [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
 | [1602 LCD](https://www.optimusdigital.ro/en/lcds/2894-1602-lcd-with-i2c-interface-and-blue-backlight.html) | LCD Screen | [16.34 RON](https://www.optimusdigital.ro/en/lcds/2894-1602-lcd-with-i2c-interface-and-blue-backlight.html) |
 | [ Button 6x6x6](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=butoane+&results=197) | Buttons for controls | [0.36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=butoane+&results=197) |
-| [Breadboard, Wires](https://kits.plusivo.com/microcontroller-starter-kit/claim.html) |Breadboard with 830 points, Wires | [74.99 RON](https://www.optimusdigital.ro/ro/kituri/12333-kit-plusivo-microcontroller-starter.html?search_query=plusivo+microcontroller+starter+kit&results=3) |
-TOTAL : 126.69 RON 
+| [Electronic Components Starting Kit](https://kits.plusivo.com/microcontroller-starter-kit/claim.html) |Kit with electronical components | [74.99 RON](https://www.optimusdigital.ro/ro/kituri/12333-kit-plusivo-microcontroller-starter.html?search_query=plusivo+microcontroller+starter+kit&results=3) |
+| Breadboard with 830 points | Connects components | In-Kit |
+| Buzzer | Connects components | In-Kit |
+| LED x 2| Electrical Component | In-Kit |
+| 220KΩ x 2| Electrical Component | In-Kit |
+| Wires | Connects components | In-Kit |
+| [Pressure sensor Barometric BMP280 GY](https://components101.com/sensors/gy-bmp280-module) | Pressure Sensor | [8.49 RON](https://www.optimusdigital.ro/ro/senzori-senzori-de-presiune/1666-modul-senzor-de-presiune-barometric-bmp280.html?search_query=BMP280&results=11) |
+| [120x120 PWM Fan](https://www.arctic.de/media/8c/5d/bd/1693305992/Spec_Sheet_P12_PWM_EN.pdf) | Fan | [26.99 RON](https://www.emag.ro/ventilator-arctic-p12-pwm-black-black-120mm-acfan00119a/pd/DZT5RTMBM/) |
+| [5-12 Power Source](https://www.arctic.de/media/8c/5d/bd/1693305992/Spec_Sheet_P12_PWM_EN.pdf) | Power Source | [10.41 RON](https://www.emag.ro/sursa-de-alimentare-12v-1a/pd/DFMG13BBM/?ref=history-shopping_374985296_18482_1) |
+ 
 
 ## Software
 
 | Library | Description | Usage |
 |---------|-------------|-------|
-| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp) | RP2040 peripherals | Used for accessing the peripherals of the microcontroller  |
-| [embassy-hal](https://github.com/embassy-rs/embassy) | Hardware Abstraction Layer | Interfaces with Raspberry Pi Pico W hardware |
-| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Synchronization primitives | Used for syncronizing asynchronous tasks |
-| [ag-lcd](https://github.com/mjhouse/ag-lcd) | Display library | Used for writing to the display |
-| [wasmi](https://github.com/wasmi-labs/wasmi) | Game Framework | Game Engine used for the development of the game/ WebAssembly Interpreter |
+| [embassy-rp](https://crates.io/crates/embassy-rp) | Embassy Hardware Abstraction Layer (HAL) for the Raspberry Pi RP2040 microcontroller | Used for `initializing` hardware PINs and protocols used by devices such as the Display, Buzzer, LCDs, Fan and Sensor. |
+| [embassy-embedded-hal](https://crates.io/crates/embassy-embedded-hal) | Collection of utilities to use `embedded-hal` and `embedded-storage` traits with Embassy. | Dependency of `embassy-rp` used for adding `embedded-hal` traits to embassy |
+| [embassy-time](https://embassy.dev/) | Instant and Duration for embedded no-std systems, with async timer support | Stops code execution for a definite time period |
+| [embassy-executor](https://crates.io./crates/embassy-executor) | async/await executor designed for embedded usage | Used for spawning/tasking asynchronous functions like `main` and tasking functions like `logger-task` |
+| [lcd1602-driver](https://crates.io/crates/lcd1602-driver) | An embedded-hal based driver for the LCD1602 display | Used for defining and customizing display's `traits` and `features` |
+| [heapless](https://crates.io/crates/heapless) | `static` friendly data structures that don't require dynamic memory allocation | Used for variables `unsigned` to `String` conversion |
+
 
 
 
 ## Links
 
-<!-- Add a few links that inspired you and that you think you will use for your project -->
-
-1. [tutorials for creating a game + libraries](https://arewegameyet.rs/) 
-2. [game engine that works with Rust and WebAssembly](https://github.com/bevyengine/bevy/tree/latest)
-3. [step by step tutorial on how to create a game by using Rust and Bevy](https://www.youtube.com/watch?v=E9SzRc9HkOg)
-4. [understanding and starting to use wasmi](https://blog.knoldus.com/hosting-wasm-modules-in-rust-easily-using-wasmi/#hosting-in-rust)
-5. [book on how to create a game with Rust and WebAssembly](https://www2.irb.hr/korisnici/zskoda/hoffmanWasmRust.pdf)
-6. [libraries for Rust and Bevy(in case I'm using Bevy I've decided to put all the info for Wasmi & Bevy too)](https://lib.rs/game-development)
+1. [How to use BMP280 GY over SPI with a Pico Microcontroller using Rust](https://embedded-rust-101.wyliodrin.com/docs/lab/06)
+2. [How to make Temperature Controlled Fan Using Arduino and DHT11](https://www.youtube.com/watch?v=eg8AlYlV0PM)
+3. [How to Use the Adafruit BMP280 Sensor](https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/)
+4. [BMP280: Measure Temperature, Pressure and Altitude](https://projecthub.arduino.cc/SurtrTech/bmp280-measure-temperature-pressure-and-altitude-6002cd)
