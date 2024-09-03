@@ -64,15 +64,16 @@ The schematic image shows a clearer connection for the components , using the on
 note: the lcd screen is connected by default to the pico explorer base .\
 the buzzer is connected (with a resistance) to GPIO 1.\
 here is the BMP280 connection table
-| PIN | connection |
+| PIN | connection with pico explorer ~ pico PIN|
 | --- | --- |
 | `VCC` | power source (3V3)|
 | `GND` | ground |
-| `SCL` | 	`CLK` line |
-| `SDA` | `MOSI` line |
+| `SCL` | 	`12SCL` line ~ GP21 |
+| `SDA` | `12SDA` line ~ GP20 |
+| `CSB` | not used  |
+| `SDO` | not used  |
 
-
-
+note:On the Pico Explorer base, the I2C pins are marked for simple use.
 
 
 
