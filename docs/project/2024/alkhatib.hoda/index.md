@@ -50,6 +50,8 @@ Worked on the documentation and posted my project.
 When connected :
 ![Hardware](./hardW1.jpg)
 
+About those two circles… I hope you didn’t notice them. But if you did, just keep going—they were supposed to be a heart, but let’s just say they’re cherry emojis 🍒. Or maybe a broken heart 💔, because let’s face it, time can be a bit of a heartbreaker.
+
 A closer look to the connection:
 ![Hardware](./hardW2.jpg) 
 
