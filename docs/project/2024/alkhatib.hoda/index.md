@@ -60,8 +60,11 @@ A closer look to the connection:
 
 ![Schematic](./schem.jpg)
 
-The schematic image shows a clearer connection for the components , using the online simulator [*Wokwie*](https://wokwi.com/).\
-note: the lcd screen is connected by default to the pico explorer base .\
+The schematic image shows a clearer connection for the components , using the online simulator [*Wokwie*](https://wokwi.com/).
+
+> [!NOTE]  
+> the lcd screen is connected by default to the pico explorer base .
+
 the buzzer is connected (with a resistance) to GPIO 1.\
 here is the BMP280 connection table
 | PIN | connection with pico explorer ~ pico PIN|
@@ -73,8 +76,9 @@ here is the BMP280 connection table
 | `CSB` | not used  |
 | `SDO` | not used  |
 
-note:On the Pico Explorer base, the I2C pins are marked for simple use.
 
+> [!TIP]  
+> On the Pico Explorer base, the I2C pins are marked for simple use. You can check the back of the base to see which pins of the Raspberry Pi Pico they are tied to.
 
 
 ### Bill of Materials
