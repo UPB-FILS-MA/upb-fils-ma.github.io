@@ -97,13 +97,17 @@ The format is
 
 | Library                                  | Description                        | Usage                              |
 | ---------------------------------------- | ---------------------------------- | ---------------------------------- |
-| [VsCode](https://code.visualstudio.com/) | Integrated Development Environment | Integrated Development Environment |
-| [Rust](https://www.rust-lang.org/)       | Programming Language               | Programming Language               |
 | [Embassy](https://embassy.dev/)          | Framework                          | Framework                          |
-
-
+| [Embedded-graphics](https://github.com/embedded-graphics/embedded-graphics)          | for drawing 2D graphics                          | for rendering graphics on displays |
+| [embassy-rp](https://github.com/embassy-rs/embassy/tree/main/embassy-rp)          | HAL for Raspberry Pi RP2040, supporting both blocking and async APIs for various peripherals.                       | Simplifies peripheral control on RP2040 with async support. |
+| [embassy-executor](https://github.com/embassy-rs/embassy/tree/main/embassy-executor)       | An async executor for embedded systems, part of the Embassy ecosystem.               | Manages asynchronous tasks in embedded applications.               |
+| [embedded-hal](https://github.com/rust-embedded/embedded-hal)       | Programming Language               | Programming Language               |
+| [cyw43_pio](https://github.com/rp-rs/rp-hal/tree/main/boards/pico/cyw43_pio)          |A library to control the Cypress CYW43 Wi-Fi chip using the Raspberry Pi Pico PIO.                        | Manages Wi-Fi connectivity for Raspberry Pi Pico.                      |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync)          |Provides synchronization primitives like mutexes and channels for async code in embedded environments.                        |Enables safe concurrency in embedded applications.                     |
+| [st7789](https://github.com/almindor/st7789)          |A Rust driver for controlling ST7789 displays, compatible with embedded-hal.                      | 	Enables control and rendering on ST7789-based displays.                          |
 ## Links
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
 1. [Inspiration project](https://www.youtube.com/watch?v=gBofy7MMdIY)
+2. [YT video](https://www.youtube.com/watch?v=1INA9AmaDtQ&t=650s)
