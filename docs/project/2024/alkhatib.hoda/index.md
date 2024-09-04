@@ -47,13 +47,12 @@ Tested codes for my project.
 Worked on the documentation and posted my project.
 
 ## Hardware
-When connected :
-![Hardware](./hardW1.jpg)
+| When connected  | A closer look to the connection: |
+| ------------- | ------------- |
+| ![Hardware](./hardW1.jpg)  | ![Hardware](./hardW2.jpg)   |
+
 
 About those two circles… I hope you didn’t notice them. But if you did, just keep going—they were supposed to be a heart, but let’s just say they’re cherry emojis 🍒. Or maybe a broken heart 💔, because let’s face it, time can be a bit of a heartbreaker.
-
-A closer look to the connection:
-![Hardware](./hardW2.jpg) 
 
  I tried to make a 3D model here :) :
 ![3Dmodel](./3D.png).
