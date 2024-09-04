@@ -39,6 +39,7 @@ Managed to get all the components for the project and searched for documentation
 Assembled all the hardware components together, did the KiCad schematic and started the software rust program.
 
 ### Week 20 - 26 May
+In the last week, I made significant progress on the project software by implementing all the functionalities I wanted in the beginning. Lastly, I have added on GitHub the project and completed the Software Milestone.
 
 ## Hardware
 

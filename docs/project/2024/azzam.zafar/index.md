@@ -38,6 +38,7 @@ I managed to make the HC-SR04 ultrasonic sensor work properly. I also managed to
 I was able to make the buzzer start buzzing, and keep the LED lit on, when the distance between an object and the sensor is less than or equal to 45 cm. Now when the object is more than 45 cm away from the sensor and is less than or equal to 60 cm away from the sensor, the buzzer stops buzzing, but the LED remains lit and the LED functionalities are intact. I managed to make the LCD 1602 I2C work but I need to integrate the LCD into my project.
 
 ### Week 20 - 26 May
+I managed to make the LCD work with my project and it now displays in real-time how far away an object is from the sensor. I also successfully integrated both servo motors into my project. So when an object is less than 30 cm away from the sensor, one servo motor will rotate 90 degrees clockwise and the other servo motor will rotate 90 degrees anti-clockwise. And when the object goes beyond 30 cm away from the sensor, both servo motors will go back to their initial state. The project is now complete. 
 
 ## Hardware
 

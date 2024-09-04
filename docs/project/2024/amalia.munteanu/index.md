@@ -34,7 +34,8 @@ I've always taken a big interest in the game development area, and thought it wo
  - Started designing a shell in which I would be able to place my hardware and make it look more appealing to the public, by hiding the wires and the components such as the pico and buzzers.
    
 ### Week 20 - 26 May
-
+ - Finished the software and due to a faulty component had to remake the whole hardware design and software.
+   
 ## Hardware
  - Raspberry Pi Pico W: A microcontroller board for the embedded project.
  - LCD Display: A 16x2 character LCD display with I2C interface and blue backlight.

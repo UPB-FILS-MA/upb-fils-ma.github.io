@@ -72,7 +72,11 @@ In conclusion: I have added a on/off switch to preserve the life of the batterie
 
 ### Week 20 - 26 May
 
+I created a website for controlling the car by creating a socket website file which contains the css, html and js files with the client interface and also the connections with the web server. I didnt managed to make it work. On the rust part i managed to connect the pico to wifi and create a server with port 5500, the website with 5501 and pico 5502 but i could not tie them corectly, so i put aside the part with server and wifi and decide to make the car work on a loop.
 
+As a second plan, i programmed the car to move forward, right, left, backwards and stop, wait 2 seconds and then start again. In the waiting time after a second the buzzer starts for a half a second and then after half a second the loop starts again.
+
+I did a case for the car to look prettier.
 
 ## Hardware
 

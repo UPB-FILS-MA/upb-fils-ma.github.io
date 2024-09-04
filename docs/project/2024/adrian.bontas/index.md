@@ -37,6 +37,8 @@ With all components in hand, I assembled the project into a sleek and visually a
 
 ### Week 20 - 26 May
 
+In the final week of my electronic car project, I coded the car's functions. Rust proved to be a robust and efficient choice for handling the L298N motor driver and the Raspberry Pi Pico W. After some effort, I successfully wrote and deployed the code that allows the car to move using Wi-Fi!
+
 ## Hardware
 
 1x Raspberry Pi Pico W: acts as the primary processing unit, equipped with Wi-Fi capabilities.
@@ -89,11 +91,15 @@ Here is presented the KiCad schematic:
 |---------|-------------|-------|
 | [embassy](https://github.com/embassy-rs/embassy) | Embassy | An asynchronous executor and Hardware Abstraction Layer (HAL) designed for constructing embedded applications in Rust. |
 | [embassy-network](https://github.com/embassy-rs/embassy-network) | Embassy Network | A networking library designed for use with the Embassy asynchronous executor, facilitating network communication within embedded Rust applications. |
+| [embassy-executor](https://docs.embassy.dev/embassy-executor/git/std/index.html)|Embassy Executor | Used for task scheduling and asynchronous programming|
+|[embassy-rp](https://docs.embassy.dev/embassy-rp/git/rp2040/index.html)| Embassy RP | Used for initializing and interacting with peripherals |
+|[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO |Used for interacting with GPIO pins |
+|[cyw43](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|CYW43 | Used for interacting with the wi-fi chip of the pico |
 | [HC-SR04](https://github.com/Benehiko/pico-ultrasonic-rs.git) |HC-SR04 manipulation| Used for controlling the ultrasonic sensor|
+
 
 ## Links
 
 1. [Freenove 4WD Car Kit for Raspberry Pi Pico](https://www.youtube.com/watch?v=JimfJCyrK44)
 2. [Raspberry Pi Pico - Bluetooth Controlled Car Project](https://www.youtube.com/watch?v=U4unGGNjFBg)
 3. [NerdCave](https://nerdcave.xyz/)
-...

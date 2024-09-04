@@ -63,19 +63,26 @@ Assembled the hardware components of the project.
 
 ### Week 20 - 26 May
 
+Created the software for the project.
+Gave the final touch to the project hardware by fixing the supports for the servo motors and replace any cardboard with plastic.
+
+### Day 27 May
+
+Presented the project at PM Fair.
+
 ## Hardware
 
 The primary hardware foundation of the RustFlower project centers around the Raspberry Pi Pico W, a central processing unit known for its low power consumption and ability to manage multiple inputs and outputs simultaneously. Servomotors are integrated to adjust the photovoltaic panel’s orientation for optimal solar alignment, enhancing energy efficiency. Photoresistors serve as the main sensory apparatus, detecting sunlight intensity from various angles to guide the servomotors' adjustments. The MCP3008 provides additional ADC ports necessary for the project. The photovoltaic panel captures solar energy, central to demonstrating the conversion process. The INA219 current sensor measures voltage and current from the photovoltaic panel, crucial for calculating real-time power production. Finally, a small LCD display provides immediate feedback on the system’s performance, including energy generation and system status.
 
-![First image of the assembled hardware](RustFlower1.jpeg)
+![First image of the assembled hardware](RustFlower1_new.jpeg)
 
-![Second image of the assembled hardware](RustFlower2.jpeg)
+![Second image of the assembled hardware](RustFlower2_new.jpeg)
 
 ### Schematics
 
 KiCad schematic of the RustFlower project:
 
-![KiCAD schematic](RustFlowerKicad.png)
+![KiCAD schematic](RustFlowerKicad_new.png)
 
 ### Bill of Materials
 
@@ -92,7 +99,7 @@ KiCad schematic of the RustFlower project:
 | [Male-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) | Connects components to the breadboard | [5 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/653-fire-colorate-mama-tata-40p-10-cm.html?search_query=Fire+Colorate+Mama-Tata+%2840p%29+10+cm&results=5) |
 | [Female-Female Wires](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) | Used for extending connections between components | [3 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/880-fire-colorate-mama-mama-10p-10-cm.html?search_query=Fire+Colorate+Mama-Mama+%2810p%29+10+cm&results=11) |
 | [Resistors](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) | Controls current flow and voltage levels | [15 RON](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/33-rezistoare-set.html?search_query=Set+de+Rezistoare+0.25W+20+de+valori+cate+20+buc.+fiecare&results=1) |
-| [MCP3008](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) | Creates aditional ADC ports | [15 RON](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) |
+| [MCP3008](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) | Created aditional ADC ports | [15 RON](https://ro.farnell.com/microchip/mcp3008-i-p/10bit-adc-2-7v-8ch-spi-16dip/dp/1627174) |
 
 ## Software
 
@@ -100,10 +107,20 @@ KiCad schematic of the RustFlower project:
 |---------|-------------|-------|
 | [rp-hal](https://github.com/rp-rs/rp-hal) | Hardware Abstraction Layer for RP2040 microcontrollers. | Manages GPIO, I2C, SPI, and other peripherals on the Raspberry Pi Pico W. |
 | [embedded-hal](https://github.com/rust-embedded/embedded-hal) | Hardware Abstraction Layer traits for embedded systems. | Provides abstractions for digital I/O and analog readings, crucial for interfacing with sensors and actuators. |
-| [uom](https://github.com/iliekturtles/uom) | Library for safely handling units of measurement. | Ensures that all calculations involving electrical measurements (voltage, current, power) are accurate and unit-safe. |
 | [cortex-m-rt](https://github.com/rust-embedded/cortex-m-rt) | Runtime for ARM Cortex-M microcontrollers. | Facilitates low-level device initialization and setup for real-time operations. |
 | [INA219](https://crates.io/crates/ina219) | Library for interfacing with the INA219 sensor over I2C. | Used to measure voltage, current, and calculate power production from the photovoltaic panel. |
-
+| [hd44780-driver](https://crates.io/crates/hd44780-driver) | Library for interfacing with HD44780 LCD displays. | Used to control the LCD display over I2C. |
+| [embedded-hal-async](https://github.com/rust-embedded/embedded-hal) | Asynchronous Hardware Abstraction Layer traits for embedded systems. | Enables async operations for embedded-hal traits. |
+| [defmt-rtt](https://crates.io/crates/defmt-rtt) | Real-time transfer logging for embedded systems. | Provides efficient logging capabilities for debugging. |
+| [fugit](https://crates.io/crates/defmt-rtt) | Timing library for embedded systems. | Provides abstractions for time-based operations. |
+| [embassy-executor](https://github.com/embassy-rs/embassy) | Async executor for embedded systems. | Manages asynchronous tasks in the project. |
+| [embassy-time](https://github.com/embassy-rs/embassy) | Time abstractions for Embassy async framework. | Provides timing utilities for async tasks. |
+| [embassy-rp](https://github.com/embassy-rs/embassy) | Embassy support for RP2040. | Provides async drivers and peripherals specific to the RP2040. |
+| [log](https://crates.io/crates/log) | Logging facade for Rust. | Enables logging in the application. |
+| [embassy-usb-logger](https://github.com/embassy-rs/embassy) | USB logging for embedded systems. | Provides USB-based logging capabilities. |
+| [panic-halt](https://crates.io/crates/panic-halt) | Halts the microcontroller on panic. | Used as a panic handler in `no_std` environments. |
+| [panic-probe](https://crates.io/crates/panic-probe) | Probe panic handler for debugging. | Provides detailed panic information for debugging. |
+| [embedded-alloc](https://crates.io/crates/embedded-alloc) | A heap allocator for `no_std` environments. | Manages dynamic memory allocation in the project. |
 
 ## Links
 

@@ -49,8 +49,8 @@ The motivation behind the SmartBot Navigator is to advance the capability of aut
 
 7. **Power Supply:**
    - Two separate battery blocks power the system:
-     - One battery pack powers the Raspberry Pi Pico, ensuring that the central computing resources are maintained.
-     - The second battery pack supplies power to the motor controller and servo, which require higher current for operation.
+      One battery pack powers the Raspberry Pi Pico, ensuring that the central computing resources are maintained.
+      The second battery pack supplies power to the motor controller and servo, which require higher current for operation.
 
 8. **Chassis with 3 Wheels and 2 Motors:**
    - Provides the physical structure and mobility for the SmartBot. The chassis is designed with three wheels, two for propulsion and one for stability, allowing agile and precise movements within complex indoor environments.

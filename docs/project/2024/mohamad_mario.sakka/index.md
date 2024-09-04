@@ -17,7 +17,7 @@ There are 2 possible ways of using it:
 
 ## Motivation
 
-The average temperature around the globe has been on the rise for quite a while, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. After a while I realised that, because I use my laptop for long periods of time doing multiple things including gaming, I also wanted to cool down my laptop's since its keyboard gets pretty hot sometimes when playing games, so I've moved on to this idea. I also wanted the coolers to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that I set from the app and I could have the app running in the background.
+The average temperature around the globe has been on the rise for quite a while, and personally I'm very sensitive to heat, so the first thing that came to my mind was making a fan. After a while I realised that, because I use my laptop for long periods of time doing multiple things including gaming, I also wanted to cool down my laptop's since its keyboard gets pretty hot sometimes when playing games, so I've moved on to this idea. I also wanted the coolers to be controlled using an app on my laptop through wireless connection, without necessarily having to open it, instead I could use key bindings that are preset for the app and I could have the app running in the background.
 
 ## Architecture
 
@@ -26,7 +26,7 @@ program running on the RP Pico W will be written using the *embassy-rs* framewor
 
 * The physical UI (buttons & LCD) will be used to establish the connection, increase or decrease fan speed, power on or off the setup, with all necessary info being displayed on the LCD.
 
-![example](MA_project_architecture_2.png)  
+![architecture](MA_project_architecture_2.png)  
 
 ## Log
 
@@ -34,14 +34,15 @@ program running on the RP Pico W will be written using the *embassy-rs* framewor
 
 ### Week 6 - 12 May
 
-I made a laptop pad out of a wood planck, cut 2 holes for the fans and glued the fans into it. I also tested some code that made communication between the RP Pico W & my laptop possible through TCP, and I tested the motor driver.
+I made a laptop pad out of a wood planck, cut 2 holes for the fans and glued the fans into it. I also tested some code that made communication between the RP Pico W & my laptop possible through TCP, and I tested the motor driver. I also tested the firmware for controling the LCD.
 
 ### Week 7 - 19 May
 
 I assembled a mini remote with 4 buttons and LEDs that respond to the tactile input or show the status of the circuit, then
-I connected the step-up voltage to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done, I managed to set a hostname for the pico so it's easier to find it on whatever network it will connect to and I created the UI for the Python app on the laptop to control the fans through WIFI.
+I connected the MCU to the motor driver and the fans to the motor driver. I wrote the firmware that handles the tactile input and implemented a debouncer for the push buttons, I also wrote the part of the firmware which displays text on the LCD & controls the motors using PWM. The TCP connection part was partially done and I created the UI for the Python app on the laptop to control the fans through WIFI.
 
 ### Week 20 - 26 May
+I fixed a bug which did not allow the laptop and MCU to disconnect properly, now the TCP connection can be broken from any of the two sides without any issue, and I've set up the shortcuts for increasing and decreasing the power for the laptop's app, they are set as Left CTRL + I or D for increasing and decreasing the power. I also moved all the buttons and LEDs on the same breadboard which the MCU sits on to save up space. Finally, I have changed the way the currently set power is displayed, I created 3 levels of power (low, medium , high) instead of showing percentages.
 
 ## Hardware
 
@@ -59,18 +60,20 @@ I connected the step-up voltage to the motor driver and the fans to the motor dr
 
 * **Cooling Fans:** Used to cool down the laptop.
 
-* **Motor Driver:** Providing enough current to the fans.
+* **Motor Driver:** Setting the power of the fans through PWM.
 
 ### Schematics
 
 * **The KiCAD schematic:**
 
-![kicad_schematic](kicad_schematic22.png)
+![kicad_schematic](hardware_pics/kicad_schematic222.png)
 
 * **In Reality:**
-![hardware pic 1](Pic_1.jpg)
+![hardware pic 1](hardware_pics/pic_1.jpg)
 
-![hardware pic 2](Pic_2.jpg)
+![hardware pic 2](hardware_pics/pic_2.jpg)
+
+![hardware_pic 3](hardware_pics/pic_3.jpg)
 
 ### Bill of Materials
 
@@ -94,13 +97,12 @@ The format is
 | [6x6x6 Push Buttons](https://static.optimusdigital.ro/7679-large_default/buton-6x6x6.jpg) | Physical User Interface | [4 x 0.36 RON](https://www.optimusdigital.ro/ro/butoane-i-comutatoare/1119-buton-6x6x6.html?search_query=buton&results=222) |
 | [5mm LEDs](https://ardushop.ro/605-thickbox_default/led-5mm.jpg) | Physical User Interface | [4 x 0.45 RON](https://ardushop.ro/ro/electronica/299-led-5mm.html?search_query=GIISED_LED5_red&results=286#/10-culoare-rou) |
 | [830 Points Breadboard](https://static.optimusdigital.ro/54847-large_default/breadboard-830-points.jpg) | Connectivity | [1 x 10.14 RON](https://ardushop.ro/ro/electronica/33-breadboard-830.html?search_query=Breadboard+830+puncte+MB-102%09&results=584) |
-| [400 Points Breadboard](https://static.optimusdigital.ro/10048-large_default/breadboard-400-points.jpg) | Tactile Interface | [1 x 4.56 RON](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/44-breadboard-400-points.html?search_query=0104110000000156&results=1)|
 | [Set of Female-Male Wires](https://static.optimusdigital.ro/48492-large_default/set-fire-mama-tata-10p-30-cm.jpg) | Connectivity | [1 x 5.79 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/879-set-fire-mama-tata-10p-30-cm.html?search_query=Fire+Colorate+Mama-Tata+%2810p%2C+30+cm%29%09&results=6) |
-| [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [1 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
+| [Set of Male-Male Wires](https://static.optimusdigital.ro/48477-large_default/set-fire-tata-tata-10p-10-cm.jpg) | Connectivity | [2 x 2.69 RON](https://www.optimusdigital.ro/ro/fire-fire-mufate/885-set-fire-tata-tata-10p-10-cm.html?search_query=Tata-Tata&results=722) |
 | [Set of Rigid Jumper Wires](https://static.optimusdigital.ro/55063-large_default/set-de-fire-pentru-breadboard-rigide.jpg) | Connectivity | [1 x 12.49 RON](https://www.optimusdigital.ro/ro/fire-fire-nemufate/899-set-de-fire-pentru-breadboard-rigide.html?search_query=fire+rigide&results=2) |
 | [Set of Resistors](https://ardushop.ro/7381-thickbox_default/set-rezistente-14w-600buc30-valori-10r-1m.jpg) | Current Modulation | [1 x 12.29 RON](https://ardushop.ro/ro/electronica/212-set-rezistente-14w-600buc30-valori-10r-1m.html?search_query=SET+rezistori+1%2F4W+600buc%2F30+valori+10R-1M%09&results=893) |
-| [DIY Cooling Pad Frame](coolingpad.jpg) |  Frame That Holds Fans & Laptop | [50 RON] |
-| **TOTAL** | - | [**210.42 RON**] |
+| [DIY Cooling Pad Frame](hardware_pics/coolingpad.jpg) |  Frame That Holds Fans & Laptop | [50 RON] |
+| **TOTAL** | - | [**208.55 RON**] |
 ## Software
 
 | Library                                                                     | Description               | Usage                                           |
@@ -121,6 +123,7 @@ The format is
 | [heapless](https://github.com/rust-embedded/heapless) | Heapless data structures | Creating strings that will be displayed on the LCD |
 | [TTKBootstrap](https://github.com/israel-dryer/ttkbootstrap) | Python UI-library based on Tkinter & Bootstrap CSS | Building the UI of the desktop app |
 | [socket](https://docs.python.org/3/library/socket.html) | Low level networking interface for Python | Handling data exchanges and connections with RP Pico W |
+| [keyboard](https://github.com/boppreh/keyboard) | Python library for hooking global keyboard events | Detecting if the shortcuts for increasing or decreasing the power were used |
 
 ## Links
 
@@ -128,3 +131,4 @@ The format is
 * [RP Pico Controlling DC Motor](https://www.tomshardware.com/how-to/dc-motors-raspberry-pi-pico)
 * [WebApp Hosted on RP Pico W Used to Control Cooler Through PWM](https://www.youtube.com/watch?v=oDCNkxCHNNQ)
 * [embassy-rs wifi server with TCP example](https://github.com/embassy-rs/embassy/blob/main/examples/rp/src/bin/wifi_tcp_server.rs)
+* [embassy-rs debouncer struct example](https://github.com/embassy-rs/embassy/blob/main/examples/rp/src/bin/debounce.rs)

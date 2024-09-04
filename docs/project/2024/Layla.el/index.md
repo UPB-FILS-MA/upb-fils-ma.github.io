@@ -8,7 +8,7 @@ A parking system utilizing infrared sensors, RFID, and Raspberry Pi Pico W for e
 :::
 
 ## Description
-The project revolves around a multi-storey parking lot. At the entrance, an infrared sensor will detect the presence of vehicles. After the detection of a vehicle a servomotor barrier will allow its entry. Infrared sensors will be implanted at each parking lot to monitor occupation.There will be green leds indicating available parking spaces, and red ones indicating occupancy.The second floor will be designated for authorized vehicles only.To make this happen, an RFID system will be utilized. In case an unauthorized vehicle tries to access, a buzzer will be activated alerting security personnel. When an authorized vehicle is detected, an LED light will turn on. The exit will also implement an infrared sensor and a servomotor barrier. A flame sensor will indicate the presence of fire, in case of fire a buzzer will be activated and the servomotors will automatically open to enable evacuation procedures.
+The project revolves around a multi-storey parking lot. At the entrance, an infrared sensor will detect the presence of vehicles. After the detection of a vehicle a servomotor barrier will allow its entry. Infrared sensors will be implanted at each parking lot to monitor occupation.There will be green leds indicating available parking spaces, and red ones indicating occupancy.The second floor will be designated for authorized vehicles only.To make this happen, an RFID system will be utilized. In case an unauthorized vehicle tries to access, a buzzer will be activated alerting security personnel. When an authorized vehicle is detected, an LED light will turn on. The exit will also implement an infrared sensor and a servomotor barrier. A flame sensor will indicate the presence of fire, in case of fire a buzzer will be activated to enable evacuation procedures.
 
 ## Motivation
 These days, cars have become a necessity rather than a luxury. People rely on them for their everyday activities, whether it's going to work, running errands, or simply enjoying some leisure time. One major concern for them is finding a place to park wherever they go. Whether it's for work, fun, or shopping, having a convenient and safe parking space is crucial for their comfort and peace of mind.
@@ -35,12 +35,6 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
   - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 20).
 
 - **Sensors**:
-  - **Infrared Sensors**: 5 sensors (PIR 6 to PIR 10) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
-  - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 5.
-  - **Entrance Gate**: Controlled by **Servomotor 1** (connected to GPIO pin 1).
-  - **Exit Gate**: Controlled by **Servomotor 2** (connected to GPIO pin 2).
-
-- **Sensors**:
   - **Infrared Sensors**: 5 sensors (PIR 1 to PIR 5) monitoring vehicle movements, connected to GPIO pins 6-10. 3 senzors indicate if a car is parked in a parking space, while 2 of them are used to indicate cars for gates (servomotors) to open.
   - **IR Flame Sensor**: Detects fire and triggers a buzzer, connected to GPIO pin 3.
 
@@ -54,11 +48,8 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
    - **MOSI**: GPIO 3
    - **CS**: GPIO 1
    - **RST**: GPIO 0
-   - **SCK**: GPIO 18
-   - **MISO**: GPIO 16
-   - **MOSI**: GPIO 19
-   - **CS**: GPIO 17
   - **LED Light**: Indicates access status.
+  - -**Buzzer**: Indicates unauthorised access.
 
 ### Connectivity
 
@@ -79,7 +70,6 @@ This project utilizes a Raspberry Pi Pico W to create a smart parking system, ho
 
 ## Log
 
-<!-- write every week your progress here -->
 
 ### Week 6 - 12 May
 I searched for a suitably sized cardboard box that could fit all my components. I purchased cars that could be detected by the infrared sensors and ordered the missing components. 
@@ -95,6 +85,7 @@ I assembled all the components, secured them in their positions within the cardb
 Additionally, I updated the original KiCad design by adding a few more components and modifying some pin connections. Initially, I tried to get the RFID to work using SPI without a driver. Later, at the laboratory, I received help to get the RFID functioning correctly and using the driver, then I coded it to recognize specific UIDs. The only component that still needs work is the servo. I also need to decorate the cardboard further, as it is currently just plain blue. 
 
 ### Week 20 - 26 May
+I've completed the decoration of the cardboard. With  guidance from our laboratory assistant and course instructor, I finally understood how servomotors operate. I was able to configure the servos to function as intended. Moreover, I have uploaded the software to GitHub. 
 
 ## Hardware
 - *Infrared Flame sensor*: I used this to detect any nearby fires.
@@ -148,6 +139,7 @@ This is the kicad schematic.
 |[embassy-usb-logger](https://docs.embassy.dev/embassy-usb-logger/git/default/index.html)|USB logger implementation for embassy  |Used for logging messages over USB  |
 |[gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html)|GPIO manipulation |Used for interacting with GPIO pins |
 |[pwm](https://docs.embassy.dev/embassy-nrf/git/nrf52840/pwm/index.html)|Pulse-width modulation |Used for controlling the buzzer's sound intensity |
+|[Mfrc522](https://docs.rs/mfrc522/latest/mfrc522/)|Mfrc rfid reader| Used for initialization or rfid522 and for reading cards/UIDs|
 
 
 ## Links

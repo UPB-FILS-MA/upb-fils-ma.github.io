@@ -44,7 +44,7 @@ Below are some pictures taken at the beginning of the process:
 ![](process.png)
 
 ### Week 20 - 26 May
-
+I finished the final hardware adjustments, then worked on the line follower's code and started debugging the cargo.
 ## Hardware
 
 The Raspberry Pi Pico W board is a versatile computer, that serves as the central control unit of the line following the car project. It processes data from the IR sensors to detect the line on the track and sends commands to the motor driver to adjust the car's movement accordingly. Its GPIO pins facilitate communication with peripheral devices, such as the motor driver and IR sensors.
@@ -85,10 +85,12 @@ The format is
 
 
 ## Software
-
 | Library | Description | Usage |
 |---------|-------------|-------|
-
+| [embassy](https://github.com/embassy-rs/embassy) | Framework | Developing embedded applications in Rust |
+| [gpio](https://docs.embassy.dev/embassy-stm32/git/stm32c011d6/gpio/index.html) | General-purpose Input/Output module | Used for managing the GPIO pins  |
+| [infrared](https://docs.rs/infrared/latest/infrared/) | Infrared sensor library | Used for tracking the line with sensors  |
+| [syact](https://docs.rs/syact/latest/syact/) | DC Motor control library | Used when giving instructions to the DC motors |
 
 ## Links
 

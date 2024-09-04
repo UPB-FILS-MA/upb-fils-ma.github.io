@@ -28,8 +28,9 @@ Building a music player with a Raspberry Pi Pico W using Rust allowed me to work
 ### Week 6 - 12 May
 Make the hardware part and work for the software.
 ### Week 7 - 19 May
-Continue developing the software part.
+Continue developing and debugging software.
 ### Week 20 - 26 May
+Finished the software and made the case for the project.
 
 ## Hardware
 
@@ -78,6 +79,16 @@ The format is
 |---------|-------------|-------|
 | [embedded-sdmmc-rs](https://github.com/rust-embedded-community/embedded-sdmmc-rs) | MicroSD card management | Used for reading the files from microSD |
 | [ag-lcd](https://github.com/mjhouse/ag-lcd) | LCD display driver | Used for displaying the name of the song playing |
+| [port-expander](https://github.com/rahix/port-expander) | Management and use of I/O expander chips | Manage the PCF8574 I/O expander for controlling LCD display via the I2C bus |
+| [cortex-m](https://github.com/rust-embedded/cortex-m) |  Provides low-level APIs for ARM Cortex-M processors | Interrupt handling and system control |
+| [embassy-executor](https://github.com/embassy-rs/embassy/tree/main/embassy-executor) | Manages asynchronous tasks | Handles logging over USB in an asynchronous manner |
+| [embassy-sync](https://github.com/embassy-rs/embassy/tree/main/embassy-sync) | Provides synchronization primitives for use in async tasks | Used to protect shared resources using mutexes |
+| [embassy-time](https://github.com/embassy-rs/embassy/tree/main/embassy-time) |  Provides time-related utilities | Managing delays and scheduling tasks |
+| [heapless](https://github.com/rust-embedded/heapless) | Enables the use of fixed-size data structures that do not require heap memory | Managing strings and vectors that have a fixed capacity |
+| [log](https://github.com/rust-lang/log) | Facilitates logging |Output debug and information messages |
+| [microfft](https://gitlab.com/teskje/microfft-rs) | Provides fast Fourier transform (FFT) calculations | Performing FFT on audio data to analyze frequencies and amplitudes |
+| [bytemuck](https://github.com/Lokathor/bytemuck) |  Offers safe casting between data types | Used to safely cast slices of bytes to slices of other types |
+| [fixed](https://gitlab.com/tspiteri/fixed) | Implements fixed-point arithmetic types | Transform bytes in FixedU16 |
 
 ## Links
 

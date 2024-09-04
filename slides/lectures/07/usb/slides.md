@@ -85,9 +85,15 @@ layout: two-cols
 </div>
 
 ---
----
+
 # USB Packet
 the smallest element of data transmission
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 Token
 <div align="center">
@@ -104,10 +110,17 @@ Handshake
 <img src="/usb/usb_packet_handshake.svg" class="rounded">
 </div>
 
+
 ---
----
+
 # Token Packet
 usually asks for a data transmission
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 | Type | PID | Description |
 |-|-|-|
@@ -121,10 +134,17 @@ Address: `ADDR`:`ENDP`
 <img src="/usb/usb_packet_token.svg" class="rounded">
 </div>
 
+
 ---
----
+
 # Data Packet
 transmits data
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 | Type | PID | Description |
 |-|-|-|
@@ -137,10 +157,17 @@ Data can be between 0 and 1024 bytes
 <img src="/usb/usb_packet_data.svg" class="rounded">
 </div>
 
+
 ---
----
+
 # Handshake Packet
 acknowledges data
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 | Type | PID | Description |
 |-|-|-|
@@ -151,6 +178,7 @@ acknowledges data
 <div align="center">
 <img src="/usb/usb_packet_handshake.svg" class="rounded">
 </div>
+
 
 ---
 ---
@@ -298,7 +326,6 @@ flowchart LR
 </div>
 
 ---
----
 
 # Control
 used to control a device - send data
@@ -310,7 +337,7 @@ used to control a device - send data
 <v-click>
 
 **Setup** - send a command (*SET_ADDRESS*, ...)
-```mermaid {scale: 0.8}
+```mermaid {scale: 0.75}
 flowchart LR
 	I(Idle) --> S
 	S(Token
@@ -340,7 +367,7 @@ flowchart LR
 <v-click>
 
 **Data** - *optional* several transfers, device transfers the requested data
-```mermaid {scale: 0.8}
+```mermaid {scale: 0.75}
 flowchart LR
 	I(Idle) --> S
 	S(Token
@@ -432,6 +459,7 @@ flowchart LR
 
 </div>
 </div>
+
 
 ---
 ---
@@ -709,7 +737,14 @@ configuration, interfaces, endpoints
 ---
 layout: two-cols
 ---
+
 # Connection
+
+<style>
+img {
+  background: #ffffff;
+}
+</style>
 
 ```mermaid {scale: 0.45}
 sequenceDiagram
@@ -751,6 +786,7 @@ The DATA packet of the SETUP Control Transfer
 <div align="center">
 <img src="/usb/usb_bmrequest.svg" class="rounded">
 </div>
+
 
 ---
 ---
@@ -864,4 +900,3 @@ async fn echo<'d, T: Instance + 'd>(class: &mut CdcAcmClass<'d, Driver<'d, T>>) 
 }
 
 ```
-

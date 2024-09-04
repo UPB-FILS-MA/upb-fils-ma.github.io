@@ -44,6 +44,7 @@ In this week I bought the last of the necessary components and configured the Na
 In this period I configured the HM-10 module to scan beacons and find the one I had programmed, and it successfully did so in PowerShell. However, the code is still in progress in Embassy, where I am trying to put all functionalities together (the beacon scanning, motion sensing and operating the servomotor accordingly). I did the KiCad schematics and an initial, basic prototype of the door (mounted, for now, on a cardboard, using tape). 
 
 ### Week 20 - 26 May
+In this week we succeeded to make the code work in Embassy with all the needed functionalities (even distance recognition, so that the door does not unlock if the cat is just nearby but not at the door) and I also decorated the prototype a bit. After this week we had the PM Faire where I had the chance to present my project to others and everything went smoothly. 
 
 ## Hardware
 
@@ -55,6 +56,9 @@ When an authorized pet (carying the BLE beacon) is at the door (the servomotor m
 
 When an unauthorized pet is trying to enter (the servomotor remains vertical, stopping the flap door from being pushed):
 ![Access Denied](access_denied.png)
+
+Final look from the PM Faire stand:
+![Final Product](final_product.jpg)
 
 
 - **Raspberry Pi Pico W**: The microcontroller, coordinating all device interactions.
@@ -68,7 +72,8 @@ When an unauthorized pet is trying to enter (the servomotor remains vertical, st
 - **Power Supply**: An external battery to keep the system running independently.
 
 
-### Schematics\
+
+### Schematics
 This is the KiCad schematic:
 ![Schematic](kicad_schematic.png)
 
