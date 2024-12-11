@@ -89,30 +89,39 @@ The format is
 
 -->
 
-| Device | Usage | Price |
-|--------|--------|-------|
 
-| [Rapspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
-| [Electronic Door Lock 12V](https://cleste.ro/incuietoare-electrica-12v.html) | [30,74 RON] 
-| [Module RFID RC522,similary with MFRC522](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=Modul+RFID+RC522+%28similar+cu+MFRC522%29&submit_search= )| [  9.99 RON ] |
-| [Buzzer Pasive 5 V](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html?search_query=Buzzer+Pasiv+de+5+V%09+%09&results=15)| [ 1,40 RON ] |
-| [Coloured wires mom-mom (40p, 30 cm)](https://www.optimusdigital.ro/ro/fire-fire-mufate/881-set-fire-mama-mama-40p-15-cm.html?search_query=%09Fire+Colorate+Mama-Mama+%2840p%2C+30+cm%29+%09&results=10) | [ 6.98RON ] |
-| [Coloured wires father-father (40p, 15 cm)]( https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=%09Fire+Colorate+Tata-Tata+%2840p%2C+15+cm%29&results=10) | [ 6.99 RON  ] |
-| [Resistor 0.25W 22KΩ](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120 ) | [  0,10 RON ] |
-| [Transistor NPN 2n2222 TO-92](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=Tranzistor+NPN+2n2222+TO-92&results=9) | [ 0,34 RON]
-| [Module with 4 Relays, Blue]( https://www.optimusdigital.ro/ro/electronica-de-putere-module-cu-releu/478-modul-releu-cu-4-canale-albastru.html?search_query=Modul+cu+4+Relee%2C+Albastru&results=3) | [ 13,88RON]
-| [Breadboard HQ (830 Puncte)](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard+HQ+%28830+Puncte%29&results=12)|  [ 9.98 RON ] |
-| [Cablaj de test 50 x 70 mm](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=Cablaj+de+test+50+x+70+mm&submit_search=) | [ 2,49 RON  ]|
-| [Button with one touch, TTP223, with pins, 3 V, MulticoloR](https://www.emag.ro/buton-cu-o-singura-atingere-ttp223-cu-pini-3-v-multicolor-ttp223-mod-1ch/pd/DC6798MBM/)| IT IS USED FOR UNLOCKING THE DOOR| [18,33 RON] shipping more expensive than the component |
-| [Module DC-DC Step Down LM2596S]|[13 RON]
-| [Power Supply]|[16RON]
+| **Device** | **Usage** | **Price** |
+|------------|-----------|-----------|
+| [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) | The microcontroller | [35 RON](https://www.optimusdigital.ro/en/raspberry-pi-boards/12394-raspberry-pi-pico-w.html) |
+| [Electronic Door Lock 12V](https://cleste.ro/incuietoare-electrica-12v.html) | Door locking mechanism | 30,74 RON |
+| [Module RFID RC522 (similar with MFRC522)](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=Modul+RFID+RC522+%28similar+cu+MFRC522%29&submit_search=) | RFID module for authentication | 9,99 RON |
+| [Buzzer Passive 5V](https://www.optimusdigital.ro/ro/audio-buzzere/634-buzzer-pasiv-de-5-v.html?search_query=Buzzer+Pasiv+de+5+V%09+%09&results=15) | Sound alert | 1,40 RON |
+| [Coloured Wires Mom-Mom (40p, 30 cm)](https://www.optimusdigital.ro/ro/fire-fire-mufate/881-set-fire-mama-mama-40p-15-cm.html?search_query=%09Fire+Colorate+Mama-Mama+%2840p%2C+30+cm%29+%09&results=10) | Jumper wires | 6,98 RON |
+| [Coloured Wires Father-Father (40p, 15 cm)](https://www.optimusdigital.ro/ro/fire-fire-mufate/884-set-fire-tata-tata-40p-10-cm.html?search_query=%09Fire+Colorate+Tata-Tata+%2840p%2C+15+cm%29&results=10) | Jumper wires | 6,99 RON |
+| [Resistor 0.25W 22KΩ](https://www.optimusdigital.ro/ro/componente-electronice-rezistoare/858-rezistor-025w-18k.html?search_query=rezistor&results=120) | Current-limiting resistor | 0,10 RON |
+| [Transistor NPN 2N2222 TO-92](https://www.optimusdigital.ro/ro/componente-electronice-tranzistoare/935-tranzistor-s9013-npn-50-pcs-set.html?search_query=Tranzistor+NPN+2n2222+TO-92&results=9) | Switching component | 0,34 RON |
+| [Module with 4 Relays, Blue](https://www.optimusdigital.ro/ro/electronica-de-putere-module-cu-releu/478-modul-releu-cu-4-canale-albastru.html?search_query=Modul+cu+4+Relee%2C+Albastru&results=3) | Control for high-power devices | 13,88 RON |
+| [Breadboard HQ (830 Points)](https://www.optimusdigital.ro/ro/prototipare-breadboard-uri/8-breadboard-830-points.html?search_query=Breadboard+HQ+%28830+Puncte%29&results=12) | Prototyping circuit board | 9,98 RON |
+| [Cablaj de Test 50 x 70 mm](https://www.optimusdigital.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=Cablaj+de+test+50+x+70+mm&submit_search=) | Solderable prototyping board | 2,49 RON |
+| [Button with One Touch, TTP223, with Pins, 3V, Multicolor](https://www.emag.ro/buton-cu-o-singura-atingere-ttp223-cu-pini-3-v-multicolor-ttp223-mod-1ch/pd/DC6798MBM/) | Unlocking the door | 18,33 RON (shipping more expensive than the component) |
+| Module DC-DC Step Down LM2596S | Voltage regulation | 13 RON |
+| Power Supply | Power source | 16 RON |
 
+### Software
 
-## Software
+| **Library**        | **Description**                                           | **Usage**                                                                 |
+|--------------------|-----------------------------------------------------------|--------------------------------------------------------------------------|
+| **`machine`**      | MicroPython library for hardware interaction              | Controls pins for interfacing with components like relays, buzzers, and RFID modules. |
+| **`network`**      | MicroPython library for Wi-Fi connectivity                | Connects the Raspberry Pi Pico W to a Wi-Fi network for remote monitoring and control. |
+| **`time`**         | Standard Python library for time-based operations         | Manages delays, event timing, and scheduling tasks.                      |
+| **`urequests`**    | Lightweight HTTP library for MicroPython                  | Sends HTTP requests to APIs or servers for logging access attempts.      |
+| **`RFID`**         | Custom module for RFID reader integration                 | Handles reading and authenticating RFID tags for door access.            |
+| **`umqtt.simple`** | MQTT client library for MicroPython                       | Enables communication with an MQTT broker for remote door lock control.  |
+| **`buzzer`**       | Custom module for buzzer control                          | Manages audio alerts for successful or failed access attempts.           |
+| **`gpiozero`**     | Library for GPIO control on Raspberry Pi (standard Python)| Provides simplified control over GPIO pins for components like relays and buttons. |
+| **`pin`**          | Custom module for pin configuration                       | Sets up input/output pins for controlling the lock mechanism and sensors.|
 
-| Library | Description | Usage |
-|---------|-------------|-------|
-
+This table covers the essential Python libraries for interacting with hardware, connecting to networks, and enabling smart functionality in the door lock system.
 
 
 ## Links
