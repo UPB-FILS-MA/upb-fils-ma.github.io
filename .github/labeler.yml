@@ -1,19 +1,30 @@
+acs_cc:
+  - website/versioned_docs/version-acs_cc/**/*
+  - website/versioned_sidebars/version-acs_cc-sidebars.json
+
+file_en:
+  - website/versioned_docs/version-file_en/**/*
+  - website/versioned_sidebars/version-file_en-sidebars.json
+
 lecture:
-  - docs/lecture/**/*
+  - website/versioned_docs/*/lecture/**/*
 
 lab:
-  - docs/lab/**/*
+  - website/lab/**/*
+
+tutorial:
+  - website/tutorial/**/*
 
 project:
-  - docs/project/**/*
-  - docs/project.md
+  - website/versioned_docs/*/project/**/*
+  - website/versioned_docs/*/project.md
 
 workflow:
   - .github/**/*
 
 website:
-  - src/**/*
-  - static/**/*
+  - website/src/**/*
+  - website/static/**/*
   - '*.js'
   - '*.json'
   - '*.ts'

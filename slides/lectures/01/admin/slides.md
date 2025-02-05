@@ -1,5 +1,3 @@
----
----
 # Outline
 
 <div grid="~ cols-2 gap-5">

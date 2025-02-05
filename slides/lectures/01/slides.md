@@ -40,6 +40,7 @@ to the *Microprocessor Architecture* engineering class
 - ask a lot of questions
 
 <!-- Team -->
+
 ---
 src: ./team.md
 ---

@@ -18,10 +18,11 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
+        working-directory: website
         run: npm ci
       
       - name: Install dependencies (slides)
@@ -35,4 +36,5 @@ jobs:
         run: ./build.sh
 
       - name: Test build website
+        working-directory: website
         run: npm run build
