@@ -16,8 +16,10 @@ tutorial:
   - website/tutorial/**/*
 
 project:
-  - website/versioned_docs/*/project/**/*
-  - website/versioned_docs/*/project.md
+  - website/versioned_docs/version-acs_cc/project/**/*
+  - website/versioned_docs/version-acs_cc/project.md
+  - website/versioned_docs/version-fils_en/project/**/*
+  - website/versioned_docs/version-fils_en/project.md
 
 workflow:
   - .github/**/*
