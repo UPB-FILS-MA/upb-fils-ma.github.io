@@ -37,25 +37,25 @@ Lecture 4
 <!-- Timers -->
 
 ---
-src: ./timers/slides.md
+src: ../../resources/timers/slides.md
 ---
 
 <!-- Signals -->
 
 ---
-src: ./signals/slides.md
+src: ../../resources/signals/slides.md
 ---
 
 <!-- PWM -->
 
 ---
-src: ./pwm/slides.md
+src: ../../resources/pwm/slides.md
 ---
 
 <!-- ADC -->
 
 ---
-src: ./adc/slides.md
+src: ../../resources/adc/slides.md
 ---
 
 ---

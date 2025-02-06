@@ -37,31 +37,31 @@ Lecture 2
 <!-- MMIO -->
 
 ---
-src: ./mmio/slides.md
+src: ../../resources/mmio/slides.md
 ---
 
 <!-- Bitwise -->
 
 ---
-src: ./bitwise/slides.md
+src: ../../resources/bitwise/slides.md
 ---
 
 <!-- SIO -->
 
 ---
-src: ./sio/slides.md
+src: ../../resources/sio/slides.md
 ---
 
 <!-- rust-embedded -->
 
 ---
-src: ./rust-embedded/slides.md
+src: ../../resources/rust-embedded/slides.md
 ---
 
 <!-- embassy-rs -->
 
 ---
-src: ./embassy-rs/slides.md
+src: ../../resources/embassy-rs/slides.md
 ---
 
 ---

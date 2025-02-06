@@ -37,31 +37,31 @@ Lecture 8
 <!-- OSI -->
 
 ---
-src: ./osi/slides.md
+src: ../../resources/osi/slides.md
 ---
 
 <!-- WiFi -->
 
 ---
-src: ./wifi/slides.md
+src: ../../resources/wifi/slides.md
 ---
 
 <!-- TCP/IP -->
 
 ---
-src: ./tcp_ip/slides.md
+src: ../../resources/tcp_ip/slides.md
 ---
 
 <!-- Raspberry Pi Pico -->
 
 ---
-src: ./raspberry_pi_pico/slides.md
+src: ../../resources/raspberry_pi_pico/slides.md
 ---
 
 <!-- Protocols -->
 
 ---
-src: ./protocols/slides.md
+src: ../../resources/protocols/slides.md
 ---
 
 ---

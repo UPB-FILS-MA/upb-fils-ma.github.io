@@ -39,19 +39,19 @@ usually called RTOS
 <!-- os -->
 
 ---
-src: ./os/slides.md
+src: ../../resources/os/slides.md
 ---
 
 <!-- rtos -->
 
 ---
-src: ./rtos/slides.md
+src: ../../resources/rtos/slides.md
 ---
 
 <!-- tock -->
 
 ---
-src: ./tock/slides.md
+src: ../../resources/tock/slides.md
 ---
 
 

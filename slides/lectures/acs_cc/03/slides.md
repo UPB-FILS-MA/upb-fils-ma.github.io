@@ -36,7 +36,7 @@ used by RP2040
 <!-- Exceptions -->
 
 ---
-src: ./exceptions/slides.md
+src: ../../resources/exceptions/slides.md
 ---
 
 ---

@@ -35,13 +35,13 @@ Lecture 9
 <!-- mpu -->
 
 ---
-src: ./mpu/slides.md
+src: ../../resources/mpu/slides.md
 ---
 
 <!-- mmu -->
 
 ---
-src: ./mmu/slides.md
+src: ../../resources/mmu/slides.md
 ---
 
 ---
@@ -57,7 +57,7 @@ Integrated in embedded systems for certain tasks
 - costs $0.1 - $25
 - uses **Memory Protection Unit**
 
-<img src="/pico.jpg" class="m-5 h-30 rounded">
+<img src="./pico.jpg" class="m-5 h-30 rounded">
 
 
 :: right ::
@@ -71,7 +71,7 @@ General purpose, for PC & workstations
 - costs $75 - $500
 - uses **Memory Management Unit**
 
-<img src="/pi5.jpg" class="m-5 h-50 rounded">
+<img src="./pi5.jpg" class="m-5 h-50 rounded">
 
 ---
 ---

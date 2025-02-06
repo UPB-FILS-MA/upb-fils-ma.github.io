@@ -38,25 +38,25 @@ used by RP2040
 <!-- DMA -->
 
 ---
-src: ./dma/slides.md
+src: ../../resources/dma/slides.md
 ---
 
 <!-- UART -->
 
 ---
-src: ./uart/slides.md
+src: ../../resources/uart/slides.md
 ---
 
 <!-- SPI -->
 
 ---
-src: ./spi/slides.md
+src: ../../resources/spi/slides.md
 ---
 
 <!-- Sensors -->
 
 ---
-src: ./sensors/slides.md
+src: ../../resources/sensors/slides.md
 ---
 
 ---

@@ -14,6 +14,7 @@ function build {
     npm run build -- "lectures/$series/$slides/slides.md" --base /slides/$series/$slides --out "../../../$SLIDES_OUTPUT_FOLDER/$series/$slides"
     fail=$?
     rm "lectures/$series/$slides/global-bottom.vue"
+    return $fail
 }
 
 series=$1

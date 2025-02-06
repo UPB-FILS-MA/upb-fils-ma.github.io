@@ -37,25 +37,25 @@ Lecture 5
 <!-- Concurrency -->
 
 ---
-src: ./concurrency/slides.md
+src: ../../resources/concurrency/slides.md
 ---
 
 <!-- Executor -->
 
 ---
-src: ./executor/slides.md
+src: ../../resources/executor/slides.md
 ---
 
 <!-- Future -->
 
 ---
-src: ./future/slides.md
+src: ../../resources/future/slides.md
 ---
 
 <!-- Communication -->
 
 ---
-src: ./communication/slides.md
+src: ../../resources/communication/slides.md
 ---
 
 ---

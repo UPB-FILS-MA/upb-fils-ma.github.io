@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 cd slides
 npm install
 rm -rf ../website/static/slides
