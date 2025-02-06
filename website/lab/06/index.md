@@ -102,7 +102,7 @@ For example, if main wants to communicate with the second sub, it will:
 
 ## DMA
 
-When it comes to standard communication protocols that rely on [MMIO](/docs/lab/02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
+When it comes to standard communication protocols that rely on [MMIO](./02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
 
 ## SPI in Embassy
 

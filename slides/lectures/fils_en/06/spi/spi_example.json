@@ -1,0 +1,66 @@
+{
+    "signal": [
+        {
+            "name": "CS",
+            "wave": "1.0................1..|",
+            "data": [
+                "b7",
+                "b6",
+                "B5",
+                "b4",
+                "b3",
+                "b2",
+                "b1",
+                "b0"
+            ],
+            "period": 1
+        },
+        {
+            "name": "Clock",
+            "wave": "l.P|PPPPPPl|",
+            "phase": 1,
+            "period": 2
+        },
+        {
+            "name": "MOSI",
+            "wave": "zz6.6|6.6.6.6.6.6.zzzz|",
+            "data": [
+                "bN-1",
+                "b..",
+                "b5",
+                "b4",
+                "b3",
+                "b2",
+                "b1",
+                "b0"
+            ],
+            "period": 1
+        },
+        {
+            "name": "MISO",
+            "wave": "zz4.4|4.4.4.4.4.4.zzzz|",
+            "data": [
+                "bN-1",
+                "b..",
+                "b5",
+                "b4",
+                "b3",
+                "b2",
+                "b1",
+                "b0"
+            ],
+            "period": 1
+        },
+        {
+            "name": "data",
+            "wave": "xx5..|............xxxx|",
+            "data": [
+                "payload (N bits)"
+            ],
+            "period": 1
+        }
+    ],
+    "config": {
+        "skin": "narrow"
+    }
+}

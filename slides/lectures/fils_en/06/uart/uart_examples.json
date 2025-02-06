@@ -1,0 +1,91 @@
+{
+    "signal": [
+        {
+            "name": "Clock",
+            "wave": "PPPPPPPPPPPPPP|"
+        },
+        [
+            "8N1",
+            {
+                "name": "elecrical signal",
+                "wave": "h0222222221...|",
+                "data": [
+                    "b7",
+                    "b6",
+                    "B5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0"
+                ]
+            },
+            {
+                "name": "data",
+                "wave": "x34.......5xxx|",
+                "data": [
+                    "start",
+                    "payload",
+                    "stop"
+                ]
+            }
+        ],
+        [
+            "8P2",
+            {
+                "name": "elecrical signal",
+                "wave": "h02222222221..|",
+                "data": [
+                    "b7",
+                    "b6",
+                    "B5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0",
+                    "p"
+                ]
+            },
+            {
+                "name": "data",
+                "wave": "x34.......65.x|",
+                "data": [
+                    "start",
+                    "payload",
+                    "parity",
+                    "stop"
+                ]
+            }
+        ],
+        [
+            "9P1",
+            {
+                "name": "elecrical signal",
+                "wave": "h022222222221.|",
+                "data": [
+                    "b8",
+                    "b7",
+                    "b6",
+                    "B5",
+                    "b4",
+                    "b3",
+                    "b2",
+                    "b1",
+                    "b0",
+                    "p"
+                ]
+            },
+            {
+                "name": "data",
+                "wave": "x34........65x|",
+                "data": [
+                    "start",
+                    "payload",
+                    "parity",
+                    "stop"
+                ]
+            }
+        ]
+    ]
+}

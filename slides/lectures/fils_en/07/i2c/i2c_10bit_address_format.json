@@ -1,0 +1,37 @@
+{
+    "reg": [
+        {
+            "bits": 8,
+            "name": "lower address",
+            "type": 5,
+            "attr": [
+                "address"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "R/W",
+            "type": 3,
+            "attr": [
+                "1 - Read",
+                "0 - Write"
+            ]
+        },
+        {
+            "bits": 2,
+            "name": "upper address",
+            "type": 5,
+            "attr": [
+                "address"
+            ]
+        },
+        {
+            "bits": 5,
+            "name": 0x1e,
+            "type": 1,
+            "attr": [
+                "signal usage of 10 bit address"
+            ]
+        }
+    ]
+}

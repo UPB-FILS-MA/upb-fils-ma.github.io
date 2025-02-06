@@ -1,0 +1,58 @@
+{
+    "signal": [
+        {
+            "name": "CS",
+            "wave": "1.0...................................1..",
+            "period": 1
+        },
+        {
+            "name": "Clock",
+            "wave": "l.PPPPPPPPl.PPPPPPPPl",
+            "phase": 1,
+            "period": 2
+        },
+        {
+            "name": "MOSI",
+            "wave": "zz6.5.5.5.5.5.5.5.xxxx4.4.4.3.3.3.7.7.z..",
+            "data": [
+                "0",
+                "1",
+                "1",
+                "1",
+                "0",
+                "1",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0",
+                "1",
+                "1"
+            ],
+            "period": 1
+        },
+        {
+            "name": "MISO",
+            "wave": "zzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.zzz",
+            "period": 1
+        },
+        {
+            "name": "data",
+            "wave": "xx6.5.............xxxx4.....3.....7...xxx",
+            "data": [
+                "r/w",
+                "register address (ctrl_meas, 0xf4)",
+                "osrs_t",
+                "osrs_p",
+                "mode"
+            ],
+            "period": 1
+        }
+    ],
+    "config": {
+        "skin": "narrow"
+    }
+}

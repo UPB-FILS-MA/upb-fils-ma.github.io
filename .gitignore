@@ -23,7 +23,7 @@ yarn-error.log*
 Cargo.lock
 target
 
-static/slides
+website/static/slides
 
 # Slides
 node_modules
