@@ -2,8 +2,8 @@ acs_cc:
   - website/versioned_docs/version-acs_cc/**/*
   - website/versioned_sidebars/version-acs_cc-sidebars.json
 
-file_en:
-  - website/versioned_docs/version-file_en/**/*
+fils_en:
+  - website/versioned_docs/version-fils_en/**/*
   - website/versioned_sidebars/version-file_en-sidebars.json
 
 lecture:
