@@ -18,10 +18,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Install dependencies
-        working-directory: website
-        run: npm ci
       
       - name: Install dependencies (slides)
         working-directory: slides
@@ -29,9 +25,17 @@ jobs:
           npx -y playwright@^1.41.2 install chromium
           npm ci
 
-      - name: Build slides
+      - name: Build slides for ACS CC
         working-directory: slides
-        run: ./build.sh
+        run: SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh acs_cc 
+
+      - name: Build slides for FILS English
+        working-directory: slides
+        run: SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh fils_en 
+
+      - name: Install dependencies (website)
+        working-directory: website
+        run: npm ci
 
       - name: Test build website
         working-directory: website
