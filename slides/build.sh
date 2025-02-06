@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -z "$SLIDES_OUTPUT_FOLDER" ];
 then
