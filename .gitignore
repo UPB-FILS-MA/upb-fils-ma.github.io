@@ -1,8 +1,9 @@
 # Dependencies
-/node_modules
+node_modules
 
 # Production
-/build
+/website/build
+/slides/build
 
 # Generated files
 .docusaurus
@@ -22,4 +23,13 @@ yarn-error.log*
 Cargo.lock
 target
 
-static/slides
+website/static/slides
+
+# Slides
+node_modules
+.DS_Store
+dist
+*.local
+index.html
+.remote-assets
+components.d.ts

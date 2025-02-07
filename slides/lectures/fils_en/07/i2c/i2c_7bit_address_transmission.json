@@ -1,0 +1,43 @@
+{
+    "signal": [
+        {
+            "name": "SCL",
+            "wave": "h..01010101010101010101010101010101.."
+        },
+        {
+            "name": "SDA",
+            "wave": "1..0.4.4.4.4.4.4.4.7.2.9..|2.9..|2.01.",
+            "data": [
+                "a6",
+                "a5",
+                "a4",
+                "a3",
+                "a2",
+                "a1",
+                "a0",
+                "r/w",
+                "ack",
+                "byte 1     ",
+                "ack",
+                "byte 2     ",
+                "ack"
+            ],
+            "phase": 1.5
+        },
+        {
+            "name": "data",
+            "wave": "xx3.x4.............7.x.9.......|.xx5.x",
+            "data": [
+                "start",
+                "address",
+                "cmd",
+                "payload bytes",
+                "stop"
+            ],
+            "phase": 1.5
+        }
+    ],
+    "config": {
+        "skin": "narrow"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "reg": [
+    {
+      "bits": 1,
+      "name": "R/W",
+      "type": 3,
+      "attr": [
+        "1 - Read",
+        "0 - Write"
+      ]
+    },
+    {
+      "bits": 7,
+      "name": "7 bit address",
+      "type": 5,
+      "attr": [
+        "Address"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,14 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Welcome to the Microprocessor Architecture Slides
 
 To start the slide show:
-
 - `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+- `npm run dev --open -- lectures/<lecture_number>/slides.md`
 
-Edit the [slides.md](./slides.md) to see the changes.
+To build the pdf slides (must be built) run:
+- `./build.sh`
+or
+- `./build.sh <lecture_number>`
 
-Learn more about Slidev on [documentations](https://sli.dev/).
+## Build the website
+
+Run `./build.sh`.

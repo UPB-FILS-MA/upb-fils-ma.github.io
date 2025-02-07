@@ -1,0 +1,39 @@
+{
+    "reg": [
+        {
+            "bits": 5,
+            "name": "Recipient",
+            "type": 7,
+            "attr": [
+                "00000 - Device",
+                "00001 - Interface",
+                "00010 - Endpoint",
+                "00011 - Other",
+                "00100 - 11111 - Reserved"
+            ]
+        },
+        {
+            "bits": 2,
+            "name": "Type",
+            "type": 5,
+            "attr": [
+                "00 - Standard",
+                "01 - Class",
+                "10 - Vendor",
+                "11 - Reserved"
+            ]
+        },
+        {
+            "bits": 1,
+            "name": "Direction",
+            "type": 3,
+            "attr": [
+                "0 - Host to Device",
+                "1 - Device to Host"
+            ]
+        }
+    ],
+    "config": {
+        "hspace": 950
+    }
+}

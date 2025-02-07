@@ -20,11 +20,8 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           cache: npm
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Install dependencies (slides)
         working-directory: slides
@@ -32,11 +29,20 @@ jobs:
           npx -y playwright@^1.41.2 install chromium
           npm ci
       
-      - name: Build slides
+      - name: Build slides for ACS CC
         working-directory: slides
-        run: ./build.sh
+        run: SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh acs_cc 
+  
+      - name: Build slides for FILS English
+        working-directory: slides
+        run: SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh fils_en 
+
+      - name: Install dependencies (website)
+        working-directory: website
+        run: npm ci
       
       - name: Build website
+        working-directory: website
         run: npm run build
 
       # Popular action to deploy to GitHub Pages:
@@ -46,7 +52,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+          publish_dir: ./website/build
           cname: embedded-rust-101.wyliodrin.com
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
