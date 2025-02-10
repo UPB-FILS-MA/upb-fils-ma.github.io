@@ -52,13 +52,12 @@ layout: two-cols
 [^1]: Actually 2-wire serial interface
 
 ---
-layout: two-cols
+layout: image-right
+image: /img/328_pin.png
 ---
 
 # Pins
 have multiple functions
-
-<img src="/img/328_pin.png">
 
 ---
 layout: two-cols
