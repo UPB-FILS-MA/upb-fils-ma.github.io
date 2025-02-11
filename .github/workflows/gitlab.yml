@@ -1,0 +1,14 @@
+name: Push to GitLab
+on:
+  workflow_dispatch:
+jobs:
+    mirror:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Push to GitLab
+          run: |
+            git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.cs.pub.ro:pmrust/pmrust.pages.upb.ro.git
+            git push --force gitlab main

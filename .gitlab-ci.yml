@@ -1,0 +1,47 @@
+image: node:22-bullseye
+
+stages:
+  - test
+  - deploy
+
+cache:
+  key: modules
+  paths:
+    - website/node_modules/
+    - slides/node_modules/
+
+test:
+  stage: test
+  script:
+    - cd slides
+    - npx -y playwright@^1.41.2 install chromium
+    - npx playwright install-deps
+    - npm ci
+    - chmod a+x build.sh
+    - SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh acs_cc 
+    - SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh fils_en 
+    - cd ../website
+    - npm ci
+    - npm run build
+  rules:
+    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+
+pages:
+  stage: deploy
+  script:
+    - cd slides
+    - npx -y playwright@^1.41.2 install chromium
+    - npx playwright install-deps
+    - npm ci
+    - chmod a+x build.sh
+    - SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh acs_cc 
+    - SLIDES_OUTPUT_FOLDER=../website/static/slides ./build.sh fils_en 
+    - cd ../website
+    - npm ci
+    - npm run build
+    - mv ./build ../public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
