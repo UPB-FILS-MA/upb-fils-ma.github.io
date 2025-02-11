@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren"t using GitHub pages, you don"t need these.
-  organizationName: "UPB-FILS-MA", // Usually your GitHub org/user name.
-  projectName: "upb-fils-ma.github.io", // Usually your repo name.
+  organizationName: "UPB-PMRust", // Usually your GitHub org/user name.
+  projectName: "upb-pmrust.github.io", // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: "throw",
@@ -42,7 +42,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/UPB-FILS-MA/upb-fils-ma.github.io/edit/main",
+            "https://github.com/UPB-PMRust/upb-pmrust.github.io/edit/main/website",
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           versions: {
@@ -145,7 +145,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/UPB-FILS-MA/upb-fils-ma.github.io",
+          href: "https://github.com/UPB-PMRust/upb-pmrust.github.io",
           label: "GitHub",
           position: "right",
         },

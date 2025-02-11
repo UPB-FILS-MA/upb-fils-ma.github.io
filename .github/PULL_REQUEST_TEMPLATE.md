@@ -15,7 +15,7 @@ This pull request still needs...
 
 ### Build
 
-- [ ] Ran `npm build`.
+- [ ] Ran `./build.sh`.
 
 ### Author
 
