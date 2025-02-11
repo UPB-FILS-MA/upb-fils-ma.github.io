@@ -19,8 +19,8 @@ jobs:
           node-version: 22
           cache: 'npm'
           cache-dependency-path: |
-            "./website/package-lock.json"
-            "./slides/package-lock.json"
+            website/package-lock.json
+            slides/package-lock.json
       
       - name: Install dependencies (slides)
         working-directory: slides
