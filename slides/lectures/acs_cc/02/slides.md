@@ -95,9 +95,13 @@ src: ../../resources/embassy-rs/slides.md
 
 <!-- embassy-rs -->
 
----
-src: ../../resources/signals/digital_v2.md
+;---
+;src: ../../resources/signals/digital_v2.md
 
+;---
+
+---
+src: ../../resources/signals/slides.md
 ---
 
 ---

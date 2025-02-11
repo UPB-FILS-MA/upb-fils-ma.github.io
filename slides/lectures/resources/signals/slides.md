@@ -2,10 +2,10 @@
 layout: section
 ---
 # Signals
-Analog and Digital
+Digital Signals - Recap 
 
 ---
----
+
 # Signals
 Analog vs Digital
 
@@ -14,13 +14,13 @@ Analog vs Digital
 <div>
 
 - *analog signals* are *real* signals
-- *digital signals* are *a numerical representation* of an analog signal
-- hardware usually works with two-level digital signals
+- *digital signals* are *a numerical representation* of an analog signal (software level)
+- hardware usually works with two-level digital signals (hardware level)
 
 #### Exceptions
-- \>= 100Mbit Ethernet
-- WiFi
-- SSD storage
+- in wireless and in high-speed cable communication things get more complicated
+
+> for PCB level / between integrated circuits on the same board / inside the same chip - things are a "a little simpler" - as detailed in the following
 
 </div>
 
@@ -29,10 +29,8 @@ Analog vs Digital
 </div>
 
 ---
----
 
-# Why use digital?
-in computing
+# Why use digital in computing?
 
 <div grid="~ cols-2">
 
@@ -55,6 +53,8 @@ Signal that what we actually generate
 
 </div>
 
+> Why we sill use it? Because after passing through an IC or a gate inside an IC - the signal si "rebuilt" and if the "digital discipline" described in the following is respected - we can preserve the information after numerous "passes"
+
 ---
 ---
 # Noise Margin
@@ -67,21 +67,4 @@ Signal that what we actually generate
 
 ---
 
-# Prevent Errors
-using digital signals
-
-<div grid="~ cols-2">
-
-<div>
-
-- use higher voltage
-  - high noise margin 
-  - higher power consumption ...
-- lower noise by using better electronic circuits
-- every device *samples and regenerates* the signal
-
-</div>
-
-![RP2040](./rp2040_chip.png)
-
-</div>
+# How to connect ICs between them
