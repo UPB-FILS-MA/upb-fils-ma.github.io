@@ -14,5 +14,5 @@ jobs:
 
         - name: Push to GitLab
           run: |
-            git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.cs.pub.ro:pmrust/pmrust.pages.upb.ro.git
+            git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.cs.pub.ro/pmrust/pmrust.pages.upb.ro.git
             git push --force gitlab main
