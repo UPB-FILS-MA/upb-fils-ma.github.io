@@ -102,10 +102,10 @@ fn main() {
     print_binary("Mask_____", MASK);
     print_binary("Extracted", extracted_bits);
 }
-//RESULT
+/* RESULT
 Original_: 11001010111111000000111101101101
 Mask_____: 00000000000000000000111111111111
-Extracted: 00000000000000000000110010101111
+Extracted: 00000000000000000000110010101111 */
 
 ```
 
@@ -118,8 +118,8 @@ const MASK: u32 = 0b0000_0000_0000_0000_0000_1111_1111_1111;
 fn format_binary(num: u32) -> String {
     (0..32).rev()
         .map(|i| {
-            if i != 31 && i % 4 == 3 {
-                format!("_{}", (num >> i) & 1)
+            if i != 0 && i % 4 == 0 {
+                format!("{}_", (num >> i) & 1)
             } else {
                 format!("{}", (num >> i) & 1)
             }
@@ -131,11 +131,10 @@ fn print_binary(label: &str, num: u32) { println!("{}: {}", label, format_binary
 fn main() {
     let large_id: u32 = 0b1100_1010_1111_1100_0000_1111_0110_1101;
     let extracted_bits = (large_id >> 20) & MASK;
-    print_binary("Mask_____", MASK);
+    print_binary("Original_", large_id);
     print_binary("Extracted", extracted_bits);
 }
-// RESULTS:
+/* RESULTS:
 Original_: 1100_1010_1111_1100_0000_1111_0110_1101
-Mask_____: 0000_0000_0000_0000_0000_1111_1111_1111
-Extracted: 0000_0000_0000_0000_0000_1100_1010_1111
+Extracted: 0000_0000_0000_0000_0000_1100_1010_1111 */
 ```
