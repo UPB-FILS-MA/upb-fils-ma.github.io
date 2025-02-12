@@ -101,7 +101,11 @@ src: ../../resources/embassy-rs/slides.md
 ;---
 
 ---
-src: ../../resources/signals/slides.md
+src: ../../resources/signals/basic.md
+---
+
+---
+src: ../../resources/signals/extra.md
 ---
 
 ---
