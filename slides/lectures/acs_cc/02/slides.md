@@ -43,7 +43,11 @@ src: ../../resources/mmio/slides.md
 <!-- Bitwise -->
 
 ---
-src: ../../resources/bitwise/slides.md
+src: ../../resources/bitwise/rust.md
+---
+
+---
+src: ../../resources/bitwise/c.md
 ---
 
 <!-- SIO -->
