@@ -18,6 +18,16 @@ for this section
      - Section 2.19 - *GPIO* (except Interrupts)
 
 ---
+---
+# RP2040 GPIO Pins
+GPIO pins are connected to the processor pins through three peripherals
+
+<div align="center">
+<img src="./rp2040_gpio.svg" class="h-80 rounded" />
+</div>
+
+
+---
 layout: two-cols
 ---
 
@@ -27,8 +37,9 @@ layout: two-cols
 <img src="./rp2040_chip.png" class="h-80 rounded" />
 </div align="center">
 
+*SIO*: Set the pin as Input or Output\
 *IO Bank (GPIO)*: Use the correct MUX function (F5)\
-*SIO*: Set the pin as Input or Output
+*PAD*: Set the pin input and output parameters
 
 ::right::
 
@@ -40,7 +51,7 @@ layout: two-cols
 | GPIO | Multiplexes the functions of the GPIO pins |
 
 <img src="./pin_functions.png" class="rounded">
-<arrow x1="50" y1="180" x2="214" y2="220" color="#0060df" width="2" arrowSize="1" />
+<arrow x1="520" y1="220" x2="714" y2="270" color="#0060df" width="2" arrowSize="1" />
 
 
 ---

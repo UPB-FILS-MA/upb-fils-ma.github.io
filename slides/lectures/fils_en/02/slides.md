@@ -34,16 +34,17 @@ Lecture 2
 - Embedded Rust Stack
 - embassy-rs
 
-<!-- MMIO -->
-
----
-src: ../../resources/mmio/slides.md
----
 
 <!-- Bitwise -->
 
 ---
 src: ../../resources/bitwise/rust.md
+---
+
+<!-- MMIO -->
+
+---
+src: ../../resources/mmio/slides.md
 ---
 
 <!-- SIO -->
