@@ -40,12 +40,6 @@ Lecture 4
 src: ../../resources/timers/slides.md
 ---
 
-<!-- Signals -->
-
----
-src: ../../resources/signals/slides.md
----
-
 <!-- PWM -->
 
 ---
